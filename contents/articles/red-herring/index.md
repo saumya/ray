@@ -30,4 +30,5 @@ Or else the banana's will kill you and me.
 We must take up arms, and fight to the end.
 Because, believe it or not, a banana is not a friend.
 
+![a banana](http://lorempixel.com/400/200/)
 ![a banana](banana.png)

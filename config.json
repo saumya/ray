@@ -2,9 +2,9 @@
   "locals": {
     "url": "http://saumya.github.io/ray",
     "folder": "ray",
-    "name": "just",
-    "owner": "Someone",
-    "description": "demigod"
+    "name": "Saumya",
+    "owner": "saumya ray",
+    "description": "Where there is a will, there is a way."
   },
   "plugins": [
     "./plugins/paginator.coffee"

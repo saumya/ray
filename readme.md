@@ -1,4 +1,4 @@
+Personal Blog
+===
 
-# Blog
-
-The default [wintersmith](https://github.com/jnordberg/wintersmith) template
+My blog has been moved here.
