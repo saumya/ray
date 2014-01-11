@@ -4,61 +4,43 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width">
-    <title>Saumya
+    <title>The technology choice of the blog. - Saumya
     </title>
     <link rel="alternate" href="http://saumya.github.io/ray/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700,300">
     <link rel="stylesheet" href="http://saumya.github.io/ray/css/main.css">
   </head>
-  <body>
+  <body class="article-detail">
     <header class="header">
       <div class="content-wrap">
-        <div class="logo">
-          <h1><a href="http://saumya.github.io/ray">Saumya</a></h1>
-          <p class="description">Where there is a will, there is a way.</p>
-        </div>
+        <h1>The technology choice of the blog.</h1>
+        <p class="author">Written by <span class="author">saumya</span>
+        </p>
       </div>
     </header>
     <div id="content">
       <div class="content-wrap">
-        <article class="article intro">
-          <header>
-            <p class="date"><span>11. January 2014</span></p>
-            <h2><a href="http://saumya.github.io/ray/articles/5/">Finally added Disqus</a></h2>
-          </header>
-          <section class="content"><p>The final technical integration to <code>make the blog a conversation</code> engine, is done. Can not imagine how far the blogging has come and how easy now it is to setup things. Yes can feel the new internet now. Remembering the back days, when I created a static <span class="caps">HTML</span> page and served through internet. Its a full circle now. Though the generation of the static pages are automated, but the thing is we are back to decentralised&nbsp;internet.</p>
-<p>Cheers.</p>
-
-          </section>
-        </article>
-        <article class="article intro">
-          <header>
-            <p class="date"><span>11. January 2014</span></p>
-            <h2><a href="http://saumya.github.io/ray/articles/6/">The technology choice of the blog.</a></h2>
-          </header>
+        <article class="article">
           <section class="content"><p>First question to answer is <code>why I moved to a static page solution?</code>, there are a lot of answers to this.
 Here is a nice writeup by David Tucker. <a href="http://davidtucker.net/articles/move-to-static-site-generator/">The Need for a Static Site Generator.</a><br>Now, since we know a static page site is the need of the time, the technology choice is important too. Obviously the first thing, that comes to mind is <a href="http://jekyllrb.com/">Jekyll</a>, yeah, its simple and just works. Being in <span class="caps">MAC</span>, its even tempting to use <a href="http://jekyllrb.com/">Jekyll</a>, as <a href="https://www.ruby-lang.org/en/">Ruby</a> comes installed with the <span class="caps">OS</span>. Further more <a href="http://jekyllrb.com/">Jekyll</a> support is in-built with <a href="https://help.github.com/articles/using-jekyll-with-pages">GitHub Pages</a>. It could have been as simple as that.<br>I choose Javascript as the language of choice, since its exciting now, what we could do with it, so this blog would be one of my playgrounds for the work I do. I have already getting more and more familiar with <a href="http://jade-lang.com/">Jade</a> templating engine and <a href="http://nodejs.org/">nodeJS</a> workflows, <a href="http://nodejs.org/">wintersmith</a> is such a nice engine which works on <a href="http://nodejs.org/">nodeJS</a>. Just the matter of time, as how far Javascript has&nbsp;come!   </p>
 <p>Happy&nbsp;Coding</p>
-
-          </section>
-        </article>
-        <article class="article intro">
-          <header>
-            <p class="date"><span>10. January 2014</span></p>
-            <h2><a href="http://saumya.github.io/ray/articles/3/">The wait is over.</a></h2>
-          </header>
-          <section class="content"><p>After a week of searching, studying and re-searching things, finally landed up with this.
-Well, there is not much to <a href="https://github.com/jnordberg/wintersmith">wintersmith</a>, it 10 mins job at max if someone has a little experience in NodeJS.The main delay for me was to trying to produce a static site out of my old blog, which was running in <a href="http://wordpress.org/">WordPress</a>&nbsp;eninge.</p>
-<p>Cheers.</p>
-
-          </section>
+</section>
         </article>
       </div>
     </div>
     <footer>
       <div class="content-wrap">
-        <div class="nav"><a href="http://saumya.github.io/ray/archive.html">« Archives</a><a href="http://saumya.github.io/ray/page/2/">Next page »</a>
-        </div>
+        <div class="nav"><a href="http://saumya.github.io/ray/">« Full blog</a></div>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+          var disqus_shortname = 'saumya';
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
         <section class="about"><p><a href="http://saumya.github.com/">Saumya</a> believes in The God.</p>
 <p>A maker of things and curious about everything. Continuous learning is what fuels him. </p>
 <p>This blog itself, reflects one of many things he is trying at all the time.</p>

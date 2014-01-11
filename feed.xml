@@ -19,6 +19,17 @@
 </description>
     </item>
     <item>
+      <title>The technology choice of the blog.</title>
+      <link>http://saumya.github.io/ray/articles/6/</link>
+      <pubDate>Sat, 11 Jan 2014 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">http://saumya.github.io/ray/articles/6/</guid>
+      <author></author>
+      <description>&lt;p&gt;First question to answer is &lt;code&gt;why I moved to a static page solution?&lt;/code&gt;, there are a lot of answers to this.
+Here is a nice writeup by David Tucker. &lt;a href=&quot;http://davidtucker.net/articles/move-to-static-site-generator/&quot;&gt;The Need for a Static Site Generator.&lt;/a&gt;&lt;br&gt;Now, since we know a static page site is the need of the time, the technology choice is important too. Obviously the first thing, that comes to mind is &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;, yeah, its simple and just works. Being in MAC, its even tempting to use &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;, as &lt;a href=&quot;https://www.ruby-lang.org/en/&quot;&gt;Ruby&lt;/a&gt; comes installed with the OS. Further more &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; support is in-built with &lt;a href=&quot;https://help.github.com/articles/using-jekyll-with-pages&quot;&gt;GitHub Pages&lt;/a&gt;. It could have been as simple as that.&lt;br&gt;I choose Javascript as the language of choice, since its exciting now, what we could do with it, so this blog would be one of my playgrounds for the work I do. I have already getting more and more familiar with &lt;a href=&quot;http://jade-lang.com/&quot;&gt;Jade&lt;/a&gt; templating engine and &lt;a href=&quot;http://nodejs.org/&quot;&gt;nodeJS&lt;/a&gt; workflows, &lt;a href=&quot;http://nodejs.org/&quot;&gt;wintersmith&lt;/a&gt; is such a nice engine which works on &lt;a href=&quot;http://nodejs.org/&quot;&gt;nodeJS&lt;/a&gt;. Just the matter of time, as how far Javascript has come!   &lt;/p&gt;
+&lt;p&gt;Happy Coding&lt;/p&gt;
+</description>
+    </item>
+    <item>
       <title>The wait is over.</title>
       <link>http://saumya.github.io/ray/articles/3/</link>
       <pubDate>Fri, 10 Jan 2014 05:30:00 +0630</pubDate>
