@@ -21,5 +21,19 @@ block content
 block prepend footer
   div.nav
     a(href=locals.url+contents.index.url) « Full blog
-
-
+  
+  //- Disqus
+  div(id="disqus_thread")
+  script(type='text/javascript').
+    var disqus_shortname = 'saumya';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  noscript.
+    Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+  a.dsq-brlink(href="http://disqus.com") comments powered by 
+    span.logo-disqus.
+        Disqus
+  //- End Disqus
