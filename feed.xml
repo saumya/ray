@@ -5,9 +5,19 @@
     <atom:link href="http://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Fri, 10 Jan 2014 05:30:00 +0630</pubDate>
+    <pubDate>Sat, 11 Jan 2014 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Finally added Disqus</title>
+      <link>http://saumya.github.io/ray/articles/5/</link>
+      <pubDate>Sat, 11 Jan 2014 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">http://saumya.github.io/ray/articles/5/</guid>
+      <author></author>
+      <description>&lt;p&gt;The final technical integration to &lt;code&gt;make the blog a conversation&lt;/code&gt; engine, is done. Can not imagine how far the blogging has come and how easy now it is to setup things. Yes can feel the new internet now. Remembering the back days, when I created a static HTML page and served through internet. Its a full circle now. Though the generation of the static pages are automated, but the thing is we are back to decentralised internet.&lt;/p&gt;
+&lt;p&gt;Cheers.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>The wait is over.</title>
       <link>http://saumya.github.io/ray/articles/3/</link>
