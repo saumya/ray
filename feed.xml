@@ -5,9 +5,20 @@
     <atom:link href="http://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Sat, 11 Jan 2014 05:30:00 +0630</pubDate>
+    <pubDate>Sun, 12 Jan 2014 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Wintersmith configuration</title>
+      <link>http://saumya.github.io/ray/articles/7/</link>
+      <pubDate>Sun, 12 Jan 2014 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">http://saumya.github.io/ray/articles/7/</guid>
+      <author></author>
+      <description>&lt;p&gt;&lt;a href=&quot;https://github.com/jnordberg/wintersmith&quot;&gt;Wintersmith&lt;/a&gt; is perfect on creating a static site, but the problem arises when one needs to configure it to meet a particular need. I think, thats true for any framework.&lt;br&gt;The problem I encountered is, putting the static blog in any domain or sub-domain. &lt;a href=&quot;https://github.com/jnordberg/wintersmith&quot;&gt;Wintersmith&lt;/a&gt; generates urls which are default to root &lt;code&gt;/&lt;/code&gt; and to change it to any domain means one has to change it to the domain one wishes to put the site on. Thats as simple as that. Well, for most parts. Then, there are places where it creates a relative URL.    &lt;/p&gt;
+&lt;p&gt;To solve this, I looked inside the templates and configuration. &lt;a href=&quot;https://github.com/jnordberg/wintersmith&quot;&gt;Wintersmith&lt;/a&gt; reads from the &lt;code&gt;config.json&lt;/code&gt; file to get the base URL and make the other URLs. So I changed the &lt;code&gt;url&lt;/code&gt; to my desired URL and added another parameter to the &lt;code&gt;locals&lt;/code&gt; object of the &lt;code&gt;config.json&lt;/code&gt; named &lt;code&gt;folder&lt;/code&gt;, Then changed the URL in templates, from &lt;code&gt;/&lt;/code&gt; to &lt;code&gt;locals.url&lt;/code&gt; and at some places to &lt;code&gt;locals.url+&amp;#39;/&amp;#39;+locals.folder&lt;/code&gt; and thats it. Its now perfectly alright to take my site to wherever I want. All I need to do is change these variables and build the site again with &lt;a href=&quot;https://github.com/jnordberg/wintersmith&quot;&gt;Wintersmith&lt;/a&gt; build command.&lt;br&gt;Is this the rightway? Well, seriously I do not know, but it works.   &lt;/p&gt;
+&lt;p&gt;Happy Hacking ! &lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>Finally added Disqus</title>
       <link>http://saumya.github.io/ray/articles/5/</link>
