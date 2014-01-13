@@ -6,7 +6,11 @@ template: article.jade
 ---
 
 
-If you are developing for native Android, and creating a Facebook login, then the fist thing which will come to you, is a setting on Facebook console called "Key Hashes". <span class="more">While trying to do the Facebook suggested way, I lost some time and could not really get it working perfectly. Searching the internet told me that people had been in that path and that the solution is not working. Well, then I got a script to get the hash key. Finally this worked for me, all the time. So quickly I wrapped it in a function and put it here for anyone trying to fight the "key hash".    
+If you are developing for native Android, and creating a Facebook login, then the fist thing which will come to you, is a setting on Facebook console called "Key Hashes".
+
+<span class="more">
+
+While trying to do the Facebook suggested way, I lost some time and could not really get it working perfectly. Searching the internet told me that people had been in that path and that the solution is not working. Well, then I got a script to get the hash key. Finally this worked for me, all the time. So quickly I wrapped it in a function and put it here for anyone trying to fight the "key hash".    
 
 <script src="https://gist.github.com/saumya/8399013.js"></script>    
 
