@@ -14,8 +14,7 @@
       <pubDate>Mon, 13 Jan 2014 05:30:00 +0630</pubDate>
       <guid isPermaLink="true">http://saumya.github.io/ray/articles/8/</guid>
       <author></author>
-      <description>&lt;p&gt;If you are developing for native Android, and creating a Facebook login, then the fist thing which will come to you, is a setting on Facebook console called “Key Hashes”. While trying to do the Facebook suggested way, I lost some time and could not really get it working perfectly. Searching the internet told me that people had been in that path and that the solution is not working.&lt;br&gt;&lt;span class=&quot;more&quot;&gt;    &lt;/p&gt;
-&lt;p&gt;Well, then I got a script to get the hash key. Finally this worked for me, all the time. So quickly I wrapped it in a function and put it here for anyone trying to fight the “key hash”.    &lt;/p&gt;
+      <description>&lt;p&gt;If you are developing for native Android, and creating a Facebook login, then the fist thing which will come to you, is a setting on Facebook console called “Key Hashes”. &lt;span class=&quot;more&quot;&gt;While trying to do the Facebook suggested way, I lost some time and could not really get it working perfectly. Searching the internet told me that people had been in that path and that the solution is not working.&lt;br&gt;Well, then I got a script to get the hash key. Finally this worked for me, all the time. So quickly I wrapped it in a function and put it here for anyone trying to fight the “key hash”.    &lt;/p&gt;
 &lt;script src=&quot;https://gist.github.com/saumya/8399013.js&quot;&gt;&lt;/script&gt;    
 
 &lt;p&gt;Now, all that remains is, put this function on the first activity of your Android project and call the function with your package name as a string arguement on the onCreation method. That will print out the hash key on logCat window. Just copy-paste that code in Facebook console. Then you can remove that call to the function.    &lt;/p&gt;
