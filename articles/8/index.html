@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width">
-    <title>Native Android development and Getting Key Hash for FaceBook - Saumya
+    <title>Native Android development and getting Key Hash for FaceBook - Saumya
     </title>
     <link rel="alternate" href="http://saumya.github.io/ray/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700,300">
@@ -13,7 +13,7 @@
   <body class="article-detail">
     <header class="header">
       <div class="content-wrap">
-        <h1>Native Android development and Getting Key Hash for FaceBook</h1>
+        <h1>Native Android development and getting Key Hash for FaceBook</h1>
         <p class="author">Written by <span class="author">saumya</span>
         </p>
       </div>
@@ -21,7 +21,7 @@
     <div id="content">
       <div class="content-wrap">
         <article class="article">
-          <section class="content"><p>If you are developing for native Android, and creating a Facebook login, then the fist thing which will come to you, is a setting on Facebook console called “Key Hashes”. While trying to do the Facebook suggested way, I lost some time and could not really get it working perfectly. Searching the internet told me that people had been in that path and that the solution is not working.<br>Well, then I got a script to get the hash key. Finally this worked for me, all the time. So quickly I wrapped it in a function and put it here for anyone trying to fight the “key&nbsp;hash”.    </p>
+          <section class="content"><p>If you are developing for native Android, and creating a Facebook login, then the fist thing which will come to you, is a setting on Facebook console called “Key Hashes”. While trying to do the Facebook suggested way, I lost some time and could not really get it working perfectly. Searching the internet told me that people had been in that path and that the solution is not working.<br><span class="more"><br>Well, then I got a script to get the hash key. Finally this worked for me, all the time. So quickly I wrapped it in a function and put it here for anyone trying to fight the “key&nbsp;hash”.    </p>
 <script src="https://gist.github.com/saumya/8399013.js"></script>    
 
 <p>Now, all that remains is, put this function on the first activity of your Android project and call the function with your package name as a string arguement on the onCreation method. That will print out the hash key on logCat window. Just copy-paste that code in Facebook console. Then you can remove that call to the&nbsp;function.    </p>
