@@ -5,9 +5,24 @@
     <atom:link href="http://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Mon, 13 Jan 2014 05:30:00 +0630</pubDate>
+    <pubDate>Tue, 14 Jan 2014 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>HTML5, requestAnimationFrame</title>
+      <link>http://saumya.github.io/ray/articles/9/</link>
+      <pubDate>Tue, 14 Jan 2014 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">http://saumya.github.io/ray/articles/9/</guid>
+      <author></author>
+      <description>&lt;p&gt;Making a javascript application, at somepoint, involves use of &lt;code&gt;setTimeout&lt;/code&gt; and &lt;code&gt;setInterval&lt;/code&gt; functions. Well, the possibility increases even more, when one needs to animate elements. So we know what it means to use these two functions.&lt;br&gt;Fortunately we have a new method, called &lt;code&gt;requestAnimationFrame()&lt;/code&gt;, which is elegant and effective. Now animations will not eat up mobile battery life, but still be smooth. This is optimised to takecare of the host environment, such as mobile browser, desktop browser etc. It even minimises the repeat call, if the application using it, is not visible or scrolled out of view, sweet.&lt;br&gt;&lt;a href=&quot;http://caniuse.com/requestanimationframe&quot;&gt;Check, which browsers and versions support this function,&lt;/a&gt; just to make yourself clear.&lt;br&gt;Here are few links which explain &lt;code&gt;requestAnimationFrame&lt;/code&gt; function in more detail.    &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en/docs/Web/API/window.requestAnimationFrame&quot;&gt;mozilla&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.paulirish.com/2011/requestanimationframe-for-smart-animating/&quot;&gt;Paul Irish&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://creativejs.com/resources/requestanimationframe/&quot;&gt;Creative JS&lt;/a&gt;   &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Its kind of &lt;code&gt;saying bye bye&lt;/code&gt; to &lt;code&gt;setTimeout&lt;/code&gt; and &lt;code&gt;setInterval&lt;/code&gt;.&lt;br&gt;Happy Animating.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>Native Android development and getting Key Hash for Facebook</title>
       <link>http://saumya.github.io/ray/articles/8/</link>
