@@ -5,9 +5,29 @@
     <atom:link href="http://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Tue, 14 Jan 2014 05:30:00 +0630</pubDate>
+    <pubDate>Wed, 15 Jan 2014 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Distribute iOS app on your web site</title>
+      <link>http://saumya.github.io/ray/articles/10/</link>
+      <pubDate>Wed, 15 Jan 2014 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">http://saumya.github.io/ray/articles/10/</guid>
+      <author></author>
+      <description>&lt;p&gt;Its not that difficult as it sounds.&lt;br&gt;First of all, there are distribution services out there. I am not going to name them here, but they are available. A simple web search will show you that. 
+Now, the question is, how do they do it, or the more significant question is, can we do it ourselves. The answer is yes.&lt;br&gt;There are 3 basic things required for distribution.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;.ipa file ( iOS app )&lt;/li&gt;
+&lt;li&gt;.plist file ( manifest file for the app )&lt;/li&gt;
+&lt;li&gt;.html file ( html file for showing the link to the user )&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The iOS app must be compiled with the Ad-HOC distribution certificate with the device(where the app will be installed) UDIDs included. Thats the same procedure, as one would follow, while distributing through other stores. The manifest file defines the application meta data, if you go through the manifest file below, there is a place to point to the &lt;code&gt;.ipa&lt;/code&gt; file, make sure, you provide &lt;code&gt;full URL to .ipa&lt;/code&gt; file. The download link on HTML file will point to this manifest file. Here is the boilerplate for a typical manifest file (which is a .plist file). The HTML file, is simply  having a link pointing to the &lt;code&gt;.plist&lt;/code&gt; file.     &lt;/p&gt;
+&lt;p&gt;&lt;script src=&quot;https://gist.github.com/saumya/8440357.js&quot;&gt;&lt;/script&gt;&lt;br&gt;Now simply link to the plist file in the HTML file as below.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt; &amp;lt;a href=&amp;quot;itms-services://?action=download-manifest&amp;amp;url=https://myServer/iOS-dist/iOSAppDist.plist&amp;quot; class=&amp;quot;button&amp;quot;&amp;gt;Install My App&amp;lt;/a&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now visit the URL through iPhone, where your HTML file is stored. Once you click the link, it will download and install the iOS app.&lt;/p&gt;
+&lt;p&gt;Happy hacking.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>HTML5, requestAnimationFrame</title>
       <link>http://saumya.github.io/ray/articles/9/</link>
