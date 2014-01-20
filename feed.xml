@@ -22,7 +22,7 @@ onClick: &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quo
     &lt;span class=&quot;comment&quot;&gt;//Do something with the event&lt;/span&gt;
     &lt;span class=&quot;comment&quot;&gt;//or&lt;/span&gt;
     &lt;span class=&quot;comment&quot;&gt;//specifically do it for a target&lt;/span&gt;
-    &lt;span class=&quot;comment&quot;&gt;//var btnID = event.target.id;&lt;/span&gt;
+    &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; btnID = event.target.id;
     &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(btnID===&lt;span class=&quot;string&quot;&gt;'btn_one'&lt;/span&gt;){
         console.log(&lt;span class=&quot;string&quot;&gt;'TODO:'&lt;/span&gt;);
     }
