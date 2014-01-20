@@ -16,7 +16,7 @@ onClick: function(event){
 	//Do something with the event
 	//or
 	//specifically do it for a target
-	//var btnID = event.target.id;
+	var btnID = event.target.id;
 	if(btnID==='btn_one'){
 		console.log('TODO:');
 	}
