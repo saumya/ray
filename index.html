@@ -23,6 +23,36 @@
       <div class="content-wrap">
         <article class="article intro">
           <header>
+            <p class="date"><span>20. January 2014</span></p>
+            <h2><a href="http://saumya.github.io/ray/articles/11/">BackboneJS, view and its events</a></h2>
+          </header>
+          <section class="content"><p>Working in <a href="http://backbonejs.org/">BackboneJS</a> is fun and easy to begin with. Slowly but steadily it gets complicated as we move on and add more to the project. Being said that, <a href="http://backbonejs.org/">BackboneJS</a> is not at all opinionated. So there is no rightway of doing something. If your solution works for your project, then its good to go. Well, then there are certain things, which may help you, better organise your code. One of such things is <code>View Events</code>.<br>In a Backbone view, to listen to events and handle them, the general syntax is as&nbsp;this.</p>
+<pre><code class="lang-javascript">events:{
+        <span class="string">"click"</span>: <span class="string">"onClick"</span>
+        },
+onClick: <span class="function"><span class="keyword">function</span><span class="params">(event)</span>{</span>
+    <span class="comment">//Do something with the event</span>
+    <span class="comment">//or</span>
+    <span class="comment">//specifically do it for a target</span>
+    <span class="comment">//var btnID = event.target.id;</span>
+    <span class="keyword">if</span>(btnID===<span class="string">'btn_one'</span>){
+        console.log(<span class="string">'<span class="caps">TODO</span>:'</span>);
+    }
+}</code></pre>
+<p>Well, it may be easier at first, but we are listening for events for the whole view and then in the handler checking it. There is a way in <a href="http://backbonejs.org/">BackboneJS</a> that directly and listens for events for that particular target. The code looks as&nbsp;this.</p>
+<pre><code class="lang-javascript">events:{
+        <span class="string">"click #btn_one"</span>: <span class="string">"onClick"</span>
+        },
+onClick: <span class="function"><span class="keyword">function</span><span class="params">(event)</span>{</span>
+    <span class="comment">//btn_one is clicked</span>
+    <span class="comment">//Do something with the event</span>
+}</code></pre>
+<p>Happy&nbsp;coding.      </p>
+
+          </section>
+        </article>
+        <article class="article intro">
+          <header>
             <p class="date"><span>15. January 2014</span></p>
             <h2><a href="http://saumya.github.io/ray/articles/10/">Distribute iOS app on your web site</a></h2>
           </header>
@@ -55,16 +85,6 @@ There are 3 basic things required for&nbsp;distribution.</p>
 </ul>
 <p>Its kind of <code>saying bye bye</code> to <code>setTimeout</code> and <code>setInterval</code>.<br>Happy&nbsp;Animating.</p>
 
-          </section>
-        </article>
-        <article class="article intro">
-          <header>
-            <p class="date"><span>13. January 2014</span></p>
-            <h2><a href="http://saumya.github.io/ray/articles/8/">Native Android development and getting Key Hash for Facebook</a></h2>
-          </header>
-          <section class="content"><p>If you are developing for native Android, and creating a Facebook login, then the fist thing which will come to you, is a setting on Facebook console called “Key&nbsp;Hashes”.</p>
-<p>
-            <p class="more"><a href="http://saumya.github.io/ray/articles/8/">more</a></p>
           </section>
         </article>
       </div>

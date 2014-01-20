@@ -23,22 +23,22 @@
       <div class="content-wrap">
         <article class="article intro">
           <header>
+            <p class="date"><span>13. January 2014</span></p>
+            <h2><a href="http://saumya.github.io/ray/articles/8/">Native Android development and getting Key Hash for Facebook</a></h2>
+          </header>
+          <section class="content"><p>If you are developing for native Android, and creating a Facebook login, then the fist thing which will come to you, is a setting on Facebook console called “Key&nbsp;Hashes”.</p>
+<p>
+            <p class="more"><a href="http://saumya.github.io/ray/articles/8/">more</a></p>
+          </section>
+        </article>
+        <article class="article intro">
+          <header>
             <p class="date"><span>12. January 2014</span></p>
             <h2><a href="http://saumya.github.io/ray/articles/7/">Wintersmith configuration</a></h2>
           </header>
           <section class="content"><p><a href="https://github.com/jnordberg/wintersmith">Wintersmith</a> is perfect on creating a static site, but the problem arises when one needs to configure it to meet a particular need. I think, thats true for any framework.<br>The problem I encountered is, putting the static blog in any domain or sub-domain. <a href="https://github.com/jnordberg/wintersmith">Wintersmith</a> generates urls which are default to root <code>/</code> and to change it to any domain means one has to change it to the domain one wishes to put the site on. Thats as simple as that. Well, for most parts. Then, there are places where it creates a relative&nbsp;<span class="caps">URL</span>.    </p>
 <p>To solve this, I looked inside the templates and configuration. <a href="https://github.com/jnordberg/wintersmith">Wintersmith</a> reads from the <code>config.json</code> file to get the base <span class="caps">URL</span> and make the other URLs. So I changed the <code>url</code> to my desired <span class="caps">URL</span> and added another parameter to the <code>locals</code> object of the <code>config.json</code> named <code>folder</code>, Then changed the <span class="caps">URL</span> in templates, from <code>/</code> to <code>locals.url</code> and at some places to <code>locals.url+&#39;/&#39;+locals.folder</code> and thats it. Its now perfectly alright to take my site to wherever I want. All I need to do is change these variables and build the site again with <a href="https://github.com/jnordberg/wintersmith">Wintersmith</a> build command.<br>Is this the rightway? Well, seriously I do not know, but it&nbsp;works.   </p>
 <p>Happy Hacking&nbsp;! </p>
-
-          </section>
-        </article>
-        <article class="article intro">
-          <header>
-            <p class="date"><span>11. January 2014</span></p>
-            <h2><a href="http://saumya.github.io/ray/articles/5/">Finally added Disqus</a></h2>
-          </header>
-          <section class="content"><p>The final technical integration to <code>make the blog a conversation</code> engine, is done. Can not imagine how far the blogging has come and how easy now it is to setup things. Yes can feel the new internet now. Remembering the back days, when I created a static <span class="caps">HTML</span> page and served through internet. Its a full circle now. Though the generation of the static pages are automated, but the thing is we are back to decentralised&nbsp;internet.</p>
-<p>Cheers.</p>
 
           </section>
         </article>

@@ -5,9 +5,39 @@
     <atom:link href="http://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Wed, 15 Jan 2014 05:30:00 +0630</pubDate>
+    <pubDate>Mon, 20 Jan 2014 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>BackboneJS, view and its events</title>
+      <link>http://saumya.github.io/ray/articles/11/</link>
+      <pubDate>Mon, 20 Jan 2014 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">http://saumya.github.io/ray/articles/11/</guid>
+      <author></author>
+      <description>&lt;p&gt;Working in &lt;a href=&quot;http://backbonejs.org/&quot;&gt;BackboneJS&lt;/a&gt; is fun and easy to begin with. Slowly but steadily it gets complicated as we move on and add more to the project. Being said that, &lt;a href=&quot;http://backbonejs.org/&quot;&gt;BackboneJS&lt;/a&gt; is not at all opinionated. So there is no rightway of doing something. If your solution works for your project, then its good to go. Well, then there are certain things, which may help you, better organise your code. One of such things is &lt;code&gt;View Events&lt;/code&gt;.&lt;br&gt;In a Backbone view, to listen to events and handle them, the general syntax is as this.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;events:{
+        &lt;span class=&quot;string&quot;&gt;&quot;click&quot;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;onClick&quot;&lt;/span&gt;
+        },
+onClick: &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(event)&lt;/span&gt;{&lt;/span&gt;
+    &lt;span class=&quot;comment&quot;&gt;//Do something with the event&lt;/span&gt;
+    &lt;span class=&quot;comment&quot;&gt;//or&lt;/span&gt;
+    &lt;span class=&quot;comment&quot;&gt;//specifically do it for a target&lt;/span&gt;
+    &lt;span class=&quot;comment&quot;&gt;//var btnID = event.target.id;&lt;/span&gt;
+    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(btnID===&lt;span class=&quot;string&quot;&gt;'btn_one'&lt;/span&gt;){
+        console.log(&lt;span class=&quot;string&quot;&gt;'TODO:'&lt;/span&gt;);
+    }
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Well, it may be easier at first, but we are listening for events for the whole view and then in the handler checking it. There is a way in &lt;a href=&quot;http://backbonejs.org/&quot;&gt;BackboneJS&lt;/a&gt; that directly and listens for events for that particular target. The code looks as this.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;events:{
+        &lt;span class=&quot;string&quot;&gt;&quot;click #btn_one&quot;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;onClick&quot;&lt;/span&gt;
+        },
+onClick: &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(event)&lt;/span&gt;{&lt;/span&gt;
+    &lt;span class=&quot;comment&quot;&gt;//btn_one is clicked&lt;/span&gt;
+    &lt;span class=&quot;comment&quot;&gt;//Do something with the event&lt;/span&gt;
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Happy coding.      &lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>Distribute iOS app on your web site</title>
       <link>http://saumya.github.io/ray/articles/10/</link>
@@ -71,6 +101,17 @@ There are 3 basic things required for distribution.&lt;/p&gt;
 </description>
     </item>
     <item>
+      <title>The technology choice of the blog.</title>
+      <link>http://saumya.github.io/ray/articles/6/</link>
+      <pubDate>Sat, 11 Jan 2014 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">http://saumya.github.io/ray/articles/6/</guid>
+      <author></author>
+      <description>&lt;p&gt;First question to answer is &lt;code&gt;why I moved to a static page solution?&lt;/code&gt;, there are a lot of answers to this.
+Here is a nice writeup by David Tucker. &lt;a href=&quot;http://davidtucker.net/articles/move-to-static-site-generator/&quot;&gt;The Need for a Static Site Generator.&lt;/a&gt;&lt;br&gt;Now, since we know a static page site is the need of the time, the technology choice is important too. Obviously the first thing, that comes to mind is &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;, yeah, its simple and just works. Being in MAC, its even tempting to use &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;, as &lt;a href=&quot;https://www.ruby-lang.org/en/&quot;&gt;Ruby&lt;/a&gt; comes installed with the OS. Further more &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; support is in-built with &lt;a href=&quot;https://help.github.com/articles/using-jekyll-with-pages&quot;&gt;GitHub Pages&lt;/a&gt;. It could have been as simple as that.&lt;br&gt;I choose Javascript as the language of choice, since its exciting now, what we could do with it, so this blog would be one of my playgrounds for the work I do. I have already getting more and more familiar with &lt;a href=&quot;http://jade-lang.com/&quot;&gt;Jade&lt;/a&gt; templating engine and &lt;a href=&quot;http://nodejs.org/&quot;&gt;nodeJS&lt;/a&gt; workflows, &lt;a href=&quot;https://github.com/jnordberg/wintersmith&quot;&gt;wintersmith&lt;/a&gt; is such a nice engine which works on &lt;a href=&quot;http://nodejs.org/&quot;&gt;nodeJS&lt;/a&gt;. Just the matter of time, as how far Javascript has come!   &lt;/p&gt;
+&lt;p&gt;Happy Coding&lt;/p&gt;
+</description>
+    </item>
+    <item>
       <title>Finally added Disqus</title>
       <link>http://saumya.github.io/ray/articles/5/</link>
       <pubDate>Sat, 11 Jan 2014 05:30:00 +0630</pubDate>
@@ -81,14 +122,13 @@ There are 3 basic things required for distribution.&lt;/p&gt;
 </description>
     </item>
     <item>
-      <title>The technology choice of the blog.</title>
-      <link>http://saumya.github.io/ray/articles/6/</link>
-      <pubDate>Sat, 11 Jan 2014 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://saumya.github.io/ray/articles/6/</guid>
+      <title>Its moved to github now.</title>
+      <link>http://saumya.github.io/ray/articles/4/</link>
+      <pubDate>Fri, 10 Jan 2014 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">http://saumya.github.io/ray/articles/4/</guid>
       <author></author>
-      <description>&lt;p&gt;First question to answer is &lt;code&gt;why I moved to a static page solution?&lt;/code&gt;, there are a lot of answers to this.
-Here is a nice writeup by David Tucker. &lt;a href=&quot;http://davidtucker.net/articles/move-to-static-site-generator/&quot;&gt;The Need for a Static Site Generator.&lt;/a&gt;&lt;br&gt;Now, since we know a static page site is the need of the time, the technology choice is important too. Obviously the first thing, that comes to mind is &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;, yeah, its simple and just works. Being in MAC, its even tempting to use &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;, as &lt;a href=&quot;https://www.ruby-lang.org/en/&quot;&gt;Ruby&lt;/a&gt; comes installed with the OS. Further more &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; support is in-built with &lt;a href=&quot;https://help.github.com/articles/using-jekyll-with-pages&quot;&gt;GitHub Pages&lt;/a&gt;. It could have been as simple as that.&lt;br&gt;I choose Javascript as the language of choice, since its exciting now, what we could do with it, so this blog would be one of my playgrounds for the work I do. I have already getting more and more familiar with &lt;a href=&quot;http://jade-lang.com/&quot;&gt;Jade&lt;/a&gt; templating engine and &lt;a href=&quot;http://nodejs.org/&quot;&gt;nodeJS&lt;/a&gt; workflows, &lt;a href=&quot;https://github.com/jnordberg/wintersmith&quot;&gt;wintersmith&lt;/a&gt; is such a nice engine which works on &lt;a href=&quot;http://nodejs.org/&quot;&gt;nodeJS&lt;/a&gt;. Just the matter of time, as how far Javascript has come!   &lt;/p&gt;
-&lt;p&gt;Happy Coding&lt;/p&gt;
+      <description>&lt;p&gt;Do you notice ?! Now this blog is served from Github itself. The publishing was never excicting as this.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;How it works?&lt;/code&gt; Git commit and the post is out there.&lt;/p&gt;
 </description>
     </item>
     <item>
@@ -103,13 +143,17 @@ Well, there is not much to &lt;a href=&quot;https://github.com/jnordberg/winters
 </description>
     </item>
     <item>
-      <title>Its moved to github now.</title>
-      <link>http://saumya.github.io/ray/articles/4/</link>
-      <pubDate>Fri, 10 Jan 2014 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://saumya.github.io/ray/articles/4/</guid>
+      <title>Thanking wordpress.</title>
+      <link>http://saumya.github.io/ray/articles/2/</link>
+      <pubDate>Tue, 07 Jan 2014 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">http://saumya.github.io/ray/articles/2/</guid>
       <author></author>
-      <description>&lt;p&gt;Do you notice ?! Now this blog is served from Github itself. The publishing was never excicting as this.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;How it works?&lt;/code&gt; Git commit and the post is out there.&lt;/p&gt;
+      <description>&lt;p&gt;&lt;code&gt;Why?&lt;/code&gt; Thats for being there as a very solid option for blogging.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Its a pleasure to use &lt;a href=&quot;http://wordpress.com/&quot;&gt;Wordpress&lt;/a&gt; for such along time. In fact its the reason I started into blogging. I have a &lt;a href=&quot;http://saumyaray.wordpress.com/&quot;&gt;Wordpress&lt;/a&gt; hosted blog till now too. 
+This blog was using Wordpress as its blogging engine from 2010 and thats a beautiful engine, I must say.&lt;/p&gt;
+&lt;p&gt;The reason I moved this to &lt;a href=&quot;https://github.com/jnordberg/wintersmith&quot;&gt;Wintersmith&lt;/a&gt; is, I want to focus on javascript environment now, the same reason was there, with Wordpress. 
+I was focusing on PHP and MySql, those days. So its not that Wordpress is bad but seriously speaking Wordpress is now far beyound a blogging platform.&lt;/p&gt;
 </description>
     </item>
     <item>
@@ -127,20 +171,6 @@ Well, there is not much to &lt;a href=&quot;https://github.com/jnordberg/winters
 
 &lt;p&gt;&lt;code&gt;Thank you&lt;/code&gt; so much for stopping by.&lt;/p&gt;
 &lt;p&gt;Lets get started.&lt;/p&gt;
-</description>
-    </item>
-    <item>
-      <title>Thanking wordpress.</title>
-      <link>http://saumya.github.io/ray/articles/2/</link>
-      <pubDate>Tue, 07 Jan 2014 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://saumya.github.io/ray/articles/2/</guid>
-      <author></author>
-      <description>&lt;p&gt;&lt;code&gt;Why?&lt;/code&gt; Thats for being there as a very solid option for blogging.&lt;/p&gt;
-&lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Its a pleasure to use &lt;a href=&quot;http://wordpress.com/&quot;&gt;Wordpress&lt;/a&gt; for such along time. In fact its the reason I started into blogging. I have a &lt;a href=&quot;http://saumyaray.wordpress.com/&quot;&gt;Wordpress&lt;/a&gt; hosted blog till now too. 
-This blog was using Wordpress as its blogging engine from 2010 and thats a beautiful engine, I must say.&lt;/p&gt;
-&lt;p&gt;The reason I moved this to &lt;a href=&quot;https://github.com/jnordberg/wintersmith&quot;&gt;Wintersmith&lt;/a&gt; is, I want to focus on javascript environment now, the same reason was there, with Wordpress. 
-I was focusing on PHP and MySql, those days. So its not that Wordpress is bad but seriously speaking Wordpress is now far beyound a blogging platform.&lt;/p&gt;
 </description>
     </item>
   </channel>
