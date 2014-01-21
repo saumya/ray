@@ -5,9 +5,18 @@
     <atom:link href="http://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Mon, 20 Jan 2014 05:30:00 +0630</pubDate>
+    <pubDate>Tue, 21 Jan 2014 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Experience with Parse</title>
+      <link>http://saumya.github.io/ray/articles/12/</link>
+      <pubDate>Tue, 21 Jan 2014 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">http://saumya.github.io/ray/articles/12/</guid>
+      <author></author>
+      <description>&lt;p&gt;This is the &lt;code&gt;first time&lt;/code&gt;, I worked with &lt;a href=&quot;https://parse.com/&quot;&gt;Parse&lt;/a&gt; and must say its a nice to have tool for any web developer. &lt;a href=&quot;https://parse.com/&quot;&gt;Parse&lt;/a&gt; minimises the task a lot in terms of backend and hosting.&lt;br&gt;&lt;a href=&quot;https://parse.com/&quot;&gt;Parse&lt;/a&gt; has a lot of options to choose from and one can choose to use the only required ones.&lt;br&gt;Well, I started of with hosting only, for one of my &lt;a href=&quot;http://facebook.com/&quot;&gt;Facebook&lt;/a&gt; applications. They even have a SDK to integrate the &lt;a href=&quot;http://facebook.com/&quot;&gt;Facebook&lt;/a&gt; SDK with them. I have not yet implemented their SDK yet, but docs show its simplicity of use.&lt;br&gt;I have started working on a &lt;a href=&quot;http://backbonejs.org/&quot;&gt;BackboneJS&lt;/a&gt; application integrating &lt;a href=&quot;http://facebook.com/&quot;&gt;Facebook&lt;/a&gt; and hosting in &lt;a href=&quot;https://parse.com/&quot;&gt;Parse&lt;/a&gt;. That went quite smooth. Actually &lt;a href=&quot;https://parse.com/&quot;&gt;Parse&lt;/a&gt; &lt;code&gt;has extended&lt;/code&gt; &lt;a href=&quot;http://backbonejs.org/&quot;&gt;BackboneJS&lt;/a&gt; to provide another SDK of their own to create frontend applications.&lt;br&gt;Happy coding.      &lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>BackboneJS, view and its events</title>
       <link>http://saumya.github.io/ray/articles/11/</link>
