@@ -5,9 +5,22 @@
     <atom:link href="http://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Tue, 21 Jan 2014 05:30:00 +0630</pubDate>
+    <pubDate>Wed, 22 Jan 2014 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Author details on Wintersmith</title>
+      <link>http://saumya.github.io/ray/articles/13/</link>
+      <pubDate>Wed, 22 Jan 2014 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">http://saumya.github.io/ray/articles/13/</guid>
+      <author></author>
+      <description>&lt;p&gt;This is probably exciting and why I moved, to &lt;a href=&quot;https://github.com/jnordberg/wintersmith&quot;&gt;Wintersmith&lt;/a&gt;. Part of the blogging itself, is learning the engine and the &lt;a href=&quot;http://jade-lang.com/&quot;&gt;Jade template engine&lt;/a&gt;.      &lt;/p&gt;
+&lt;p&gt;Here is a tip to configure the author name.      &lt;/p&gt;
+&lt;p&gt;With every blog post, there is an author name, below the title, which reads as “written by author”. This comes from the blog itself as you probably know already. Thats fine and thats the default behaviour. If one needs to change it and which could be changed, here is the thing.      &lt;/p&gt;
+&lt;p&gt;The details are populated from the &lt;code&gt;authors&lt;/code&gt; folder. The &lt;code&gt;author&lt;/code&gt; name specified in the blog meta data,ie; the top section, when writing the blog, is mapped to a file with the &lt;code&gt;same name as author&lt;/code&gt;. So the file name is &lt;code&gt;author.json&lt;/code&gt; in the &lt;code&gt;authors&lt;/code&gt; folder, where &lt;code&gt;author&lt;/code&gt; is specified in the blog meta-data. If it finds the file, then the &lt;code&gt;author name&lt;/code&gt; below the &lt;code&gt;title&lt;/code&gt; of the post is updated with the new data from the file and an email link is attached with it which is also taken from the &lt;code&gt;.json&lt;/code&gt; file. This is interesting, if it does not find the file, simply the autor name from the blog meta data, is put out in the blog, without the email link.      &lt;/p&gt;
+&lt;p&gt;Happy hacking.      &lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>Experience with Parse</title>
       <link>http://saumya.github.io/ray/articles/12/</link>

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width">
-    <title>BackboneJS, view and its events - Saumya
+    <title>Author details on Wintersmith - Saumya
     </title>
     <link rel="alternate" href="http://saumya.github.io/ray/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700,300">
@@ -13,7 +13,7 @@
   <body class="article-detail">
     <header class="header">
       <div class="content-wrap">
-        <h1>BackboneJS, view and its events</h1>
+        <h1>Author details on Wintersmith</h1>
         <p class="author">Written by <span class="author"><a href="mailto:contact@saumyaray.com">Saumya</a></span>
         </p>
       </div>
@@ -21,28 +21,11 @@
     <div id="content">
       <div class="content-wrap">
         <article class="article">
-          <section class="content"><p>Working in <a href="http://backbonejs.org/">BackboneJS</a> is fun and easy to begin with. Slowly but steadily it gets complicated as we move on and add more to the project. Being said that, <a href="http://backbonejs.org/">BackboneJS</a> is not at all opinionated. So there is no rightway of doing something. If your solution works for your project, then its good to go. Well, then there are certain things, which may help you, better organise your code. One of such things is <code>View Events</code>.<br>In a Backbone view, to listen to events and handle them, the general syntax is as&nbsp;this.</p>
-<pre><code class="lang-javascript">events:{
-        <span class="string">"click"</span>: <span class="string">"onClick"</span>
-        },
-onClick: <span class="function"><span class="keyword">function</span><span class="params">(event)</span>{</span>
-    <span class="comment">//Do something with the event</span>
-    <span class="comment">//or</span>
-    <span class="comment">//specifically do it for a target</span>
-    <span class="keyword">var</span> btnID = event.target.id;
-    <span class="keyword">if</span>(btnID===<span class="string">'btn_one'</span>){
-        console.log(<span class="string">'<span class="caps">TODO</span>:'</span>);
-    }
-}</code></pre>
-<p>Well, it may be easier at first, but we are listening for events for the whole view and then in the handler checking it. There is a way in <a href="http://backbonejs.org/">BackboneJS</a> that directly and listens for events for that particular target. The code looks as&nbsp;this.</p>
-<pre><code class="lang-javascript">events:{
-        <span class="string">"click #btn_one"</span>: <span class="string">"onClick"</span>
-        },
-onClick: <span class="function"><span class="keyword">function</span><span class="params">(event)</span>{</span>
-    <span class="comment">//btn_one is clicked</span>
-    <span class="comment">//Do something with the event</span>
-}</code></pre>
-<p>Happy&nbsp;coding.      </p>
+          <section class="content"><p>This is probably exciting and why I moved, to <a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>. Part of the blogging itself, is learning the engine and the <a href="http://jade-lang.com/">Jade template engine</a>.      </p>
+<p>Here is a tip to configure the author&nbsp;name.      </p>
+<p>With every blog post, there is an author name, below the title, which reads as “written by author”. This comes from the blog itself as you probably know already. Thats fine and thats the default behaviour. If one needs to change it and which could be changed, here is the&nbsp;thing.      </p>
+<p>The details are populated from the <code>authors</code> folder. The <code>author</code> name specified in the blog meta data,ie; the top section, when writing the blog, is mapped to a file with the <code>same name as author</code>. So the file name is <code>author.json</code> in the <code>authors</code> folder, where <code>author</code> is specified in the blog meta-data. If it finds the file, then the <code>author name</code> below the <code>title</code> of the post is updated with the new data from the file and an email link is attached with it which is also taken from the <code>.json</code> file. This is interesting, if it does not find the file, simply the autor name from the blog meta data, is put out in the blog, without the email&nbsp;link.      </p>
+<p>Happy&nbsp;hacking.      </p>
 </section>
         </article>
       </div>
