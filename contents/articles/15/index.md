@@ -1,5 +1,5 @@
 ---
-title: Always work with Freshers or even younger
+title: Want excitement, work with Freshers or even younger.
 author: saumya
 date: 2014-01-24
 template: article.jade
@@ -18,8 +18,8 @@ They can bring one or all of below.
 - Less logical and more intuitional
 - Eager to learn     
 
-Well, I can go on and on. But the thing is, you have to be careful. Like all seniours are not helpful, not all young ones have the qualities.      
-If you are a good mentor, then make them conversant with the tools and `do not` tell them, `how to do`, at first. Ask them `what to do ?`, you will be surprised by the result.     
+Well, I can go on and on. But the thing is, you have to be careful. Like all seniors are not helpful, not all young ones have the qualities.      
+If you are a good mentor, then `make them conversant with the tools` and `do not` tell them, `how to do`, at first. Ask them `what to do ?`, you will be surprised by the results, they produce.     
 
 Happy Pair-Programming.
 
