@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <title>Phonegap, jQuery, jQueryMobile and AJAX caching - Saumya
+    </title>
+    <link rel="alternate" href="http://saumya.github.io/ray/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700,300">
+    <link rel="stylesheet" href="http://saumya.github.io/ray/css/main.css">
+  </head>
+  <body class="article-detail">
+    <header class="header">
+      <div class="content-wrap">
+        <h1>Phonegap, jQuery, jQueryMobile and AJAX caching</h1>
+        <p class="author">Written by <span class="author"><a href="mailto:contact@saumyaray.com">Saumya</a></span>
+        </p>
+      </div>
+    </header>
+    <div id="content">
+      <div class="content-wrap">
+        <article class="article">
+          <section class="content"><p>Developing for a fragmened landscape is not easy. Its even difficult if you choose to use a library or framework, which says <code>develop once and run everywhere</code> or something like <code>it makes your application look like native</code>.<br>First thing first. With every new release, we have another step addition to test. Contrary to the belief that, the new Operating System is obviously capable of running the old running application, it adds one more fragment to the already fragmented landscape. So if you are a mobile developer, keep this in mind that <code>new OS, is a new test step</code>. Well, lets add one more device to this equation. Lets just focus on <code>Apple</code> devices, considering there <code>so called, minimum number of device types</code>. An iDevice is suppose to run the latest vesion of the iOS. But in the development environment, you might not able to keep up with new device types or <span class="caps">OS</span> updates. And only this can break your application. So make sure, you have <code>latest device and latest OS</code>. Ok, then test your application in this device, chances are your application <code>may run</code> but chances are <code>it might not</code> too. So the point is <code>search arround</code> the internet from the beginning itself, if there are known problems with the exact <code>device and OS</code> combination.<span class="more"><br>Now just think to add up to more <span class="caps">OS</span> and more devices to the equation. Think of Android and the Windows mobile, you can imagine the complexity.
+Ok. Lets add a library to the equation. Now it becomes <code>device + OS + library</code> and then different vesions of the library. The new versions of the library should run the old running code, but thats an expectation, not reality. So make sure, you have gone through the combined equation search too.<br><code>And thats the start</code><br>Here is <code>just one of many</code> examples. <a href="http://cordova.com/">Phonegap(Cordova)</a> and <a href="http://jquery.com/">jQuery</a> together caches the <span class="caps">AJAX</span> calls. Now, thats happening in iOS6 for me. But there are evidences that it happens on other  environments&nbsp;too.  </p>
+<ul>
+<li><a href="http://stackoverflow.com/questions/12506897/is-safari-on-ios-6-caching-ajax-results">stackoverflow</a></li>
+<li><a href="http://www.sencha.com/forum/showthread.php?244076-PhoneGap-and-iOS-6-Ajax-calls-weirdness">sencha</a></li>
+<li><a href="http://www.einternals.com/blog/web-development/ios6-0-caching-ajax-post-requests">ios6-0-caching-ajax-post-requests</a></li>
+<li><a href="http://www.grobmeier.de/android-does-not-fire-ajax-reqests-because-they-are-caches-ajax-requests-at-least-on-jquery-mobile-10072011.html#.UuE5CBC6bcs">android&nbsp;issue</a></li>
+<li><a href="http://community.phonegap.com/nitobi/topics/avoid_android_application_caching_on_ajax_calls_option_cache_false">phonegap&nbsp;forum</a></li>
+</ul>
+<p>It took me sometime to understand, what the problem is?! It was working fine with iOS 4 and 5! Well, here is the tip which solved it. Make the configuraton option of <span class="caps">AJAX</span> call in <a href="http://jquery.com/">jQuery</a>, so that the <span class="caps">AJAX</span> call is not cached (else default is&nbsp;cache).</p>
+<pre><code class="lang-javascript">headers : { <span class="string">"cache-control"</span>: <span class="string">"no-cache"</span> },</code></pre>
+<p>The complete <span class="caps">AJAX</span> call will look somthing like&nbsp;this.</p>
+<pre><code class="lang-javascript">$.ajax({
+headers : { <span class="string">"cache-control"</span>: <span class="string">"no-cache"</span> },
+url : <span class="string">''</span>,
+success : <span class="function"><span class="keyword">function</span><span class="params">(result)</span> {</span>}
+})</code></pre>
+<p>Here is a <a href="http://www.einternals.com/blog/web-development/ios6-0-caching-ajax-post-requests">nice write up about how</a> you configure <a href="http://jquery.com/">jQuery</a> <span class="caps">AJAX</span> call, so that they are not&nbsp;cached.     </p>
+<p>Keep an eye and check serously for at leat&nbsp;these     </p>
+<ul>
+<li>Operating system&nbsp;update</li>
+<li>Have not tested on this device&nbsp;before </li>
+<li>use of particualr library and frameworks (and the problem they&nbsp;bring)</li>
+<li>used library does not update to the new&nbsp;<span class="caps">OS</span></li>
+<li>used library does not support this device
+It goes on and on. The matter of fact is, you can not ignore testing it in all the devices and&nbsp;OSs.</li>
+</ul>
+<p>Happy&nbsp;fixing.      </p>
+</section>
+        </article>
+      </div>
+    </div>
+    <footer>
+      <div class="content-wrap">
+        <div class="nav"><a href="http://saumya.github.io/ray/">« Full blog</a></div>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+          var disqus_shortname = 'saumya';
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        <section class="about"><p><a href="http://saumya.github.com/">Saumya</a> believes in The God.</p>
+<p>A maker of things and curious about everything. Continuous learning is what fuels him. </p>
+<p>This blog itself, reflects one of many things he is trying at all the time.</p>
+<p>Catch him up <a href="https://twitter.com/saumya">@saumya</a> on Twitter. </p>
+
+        </section>
+        <section class="copy">
+          <p>&copy; 2014 saumya ray &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>
+          </p>
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>
