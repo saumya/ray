@@ -6,9 +6,11 @@ template: article.jade
 ---
 
 
-Developing for a fragmened landscape is not easy. Its even difficult if you choose to use a library or framework, which says `develop once and run everywhere` or something like `it makes your application look like native`.    
+Developing for a fragmented landscape is not easy. Its even difficult, if you choose to use, a library or framework, which says `develop once and run everywhere` or something like `it makes your application look like native`.    
 First thing first. With every new release, we have another step addition to test. Contrary to the belief that, the new Operating System is obviously capable of running the old running application, it adds one more fragment to the already fragmented landscape. So if you are a mobile developer, keep this in mind that `new OS, is a new test step`. Well, lets add one more device to this equation. Lets just focus on `Apple` devices, considering there `so called, minimum number of device types`. An iDevice is suppose to run the latest vesion of the iOS. But in the development environment, you might not able to keep up with new device types or OS updates. And only this can break your application. So make sure, you have `latest device and latest OS`. Ok, then test your application in this device, chances are your application `may run` but chances are `it might not` too. So the point is `search arround` the internet from the beginning itself, if there are known problems with the exact `device and OS` combination.<span class="more">           
-Now just think to add up to more OS and more devices to the equation. Think of Android and the Windows mobile, you can imagine the complexity.
+
+
+Now, just think to add up to more OS, and more devices to the equation. Think of Android and the Windows mobile, you can imagine the complexity.
 Ok. Lets add a library to the equation. Now it becomes `device + OS + library` and then different vesions of the library. The new versions of the library should run the old running code, but thats an expectation, not reality. So make sure, you have gone through the combined equation search too.     
 `And thats the start`     
 Here is `just one of many` examples. [Phonegap(Cordova)][1] and [jQuery][2] together caches the AJAX calls. Now, thats happening in iOS6 for me. But there are evidences that it happens on other  environments too.  
