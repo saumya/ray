@@ -9,6 +9,7 @@
     <link rel="alternate" href="http://saumya.github.io/ray/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700,300">
     <link rel="stylesheet" href="http://saumya.github.io/ray/css/main.css">
+    <link rel="stylesheet" href="http://saumya.github.io/ray/css/saumya.css">
   </head>
   <body>
     <header class="header">
@@ -21,6 +22,27 @@
     </header>
     <div id="content">
       <div class="content-wrap">
+        <article class="article intro">
+          <header>
+            <p class="date"><span>15. January 2014</span></p>
+            <h2><a href="http://saumya.github.io/ray/articles/10/">Distribute iOS app on your web site</a></h2>
+          </header>
+          <section class="content"><p>Its not that difficult as it sounds.<br>First of all, there are distribution services out there. I am not going to name them here, but they are available. A simple web search will show you that. 
+Now, the question is, how do they do it, or the more significant question is, can we do it ourselves. The answer is yes.
+There are 3 basic things required for&nbsp;distribution.</p>
+<ul>
+<li>.ipa file ( iOS app&nbsp;)</li>
+<li>.plist file ( manifest file for the app&nbsp;)</li>
+<li>.html file ( html file for showing the link to the user&nbsp;)</li>
+</ul>
+<p>The iOS app must be compiled with the Ad-<span class="caps">HOC</span> distribution certificate with the device(where the app will be installed) UDIDs included. Thats the same procedure, as one would follow, while distributing through other stores. Once its compiled, you say <code>Archive for distribution</code> in XCode, which will create the <code>.ipa</code> file. The manifest file defines the application meta data, if you go through the manifest file below, there is a place to point to the <code>.ipa</code> file, make sure, you provide <code>full URL to .ipa</code> file. The download link on <span class="caps">HTML</span> file will point to this manifest file. Here is the boilerplate for a typical manifest file (which is a .plist file). The HTML file, is simply  having a link pointing to the <code>.plist</code> file.     </p>
+<p><script src="https://gist.github.com/saumya/8440357.js"></script><br>Now simply link to the plist file in the <span class="caps">HTML</span> file as&nbsp;below.</p>
+<pre><code> &lt;a href=&quot;itms-services://?action=download-manifest&amp;url=https://myServer/iOS-dist/iOSAppDist.plist&quot; class=&quot;button&quot;&gt;Install My App&lt;/a&gt;</code></pre>
+<p>Now visit the <span class="caps">URL</span> through iPhone, where your HTML file is stored. Once you click the link, it will download and install the iOS&nbsp;app.</p>
+<p>Happy&nbsp;hacking.</p>
+
+          </section>
+        </article>
         <article class="article intro">
           <header>
             <p class="date"><span>14. January 2014</span></p>
@@ -46,24 +68,13 @@
             <p class="more"><a href="http://saumya.github.io/ray/articles/8/">more</a></p>
           </section>
         </article>
-        <article class="article intro">
-          <header>
-            <p class="date"><span>12. January 2014</span></p>
-            <h2><a href="http://saumya.github.io/ray/articles/7/">Wintersmith configuration</a></h2>
-          </header>
-          <section class="content"><p><a href="https://github.com/jnordberg/wintersmith">Wintersmith</a> is perfect on creating a static site, but the problem arises when one needs to configure it to meet a particular need. I think, thats true for any framework.<br>The problem I encountered is, putting the static blog in any domain or sub-domain. <a href="https://github.com/jnordberg/wintersmith">Wintersmith</a> generates urls which are default to root <code>/</code> and to change it to any domain means one has to change it to the domain one wishes to put the site on. Thats as simple as that. Well, for most parts. Then, there are places where it creates a relative&nbsp;<span class="caps">URL</span>.    </p>
-<p>To solve this, I looked inside the templates and configuration. <a href="https://github.com/jnordberg/wintersmith">Wintersmith</a> reads from the <code>config.json</code> file to get the base <span class="caps">URL</span> and make the other URLs. So I changed the <code>url</code> to my desired <span class="caps">URL</span> and added another parameter to the <code>locals</code> object of the <code>config.json</code> named <code>folder</code>, Then changed the <span class="caps">URL</span> in templates, from <code>/</code> to <code>locals.url</code> and at some places to <code>locals.url+&#39;/&#39;+locals.folder</code> and thats it. Its now perfectly alright to take my site to wherever I want. All I need to do is change these variables and build the site again with <a href="https://github.com/jnordberg/wintersmith">Wintersmith</a> build command.<br>Is this the rightway? Well, seriously I do not know, but it&nbsp;works.   </p>
-<p>Happy Hacking&nbsp;! </p>
-
-          </section>
-        </article>
       </div>
     </div>
     <footer>
       <div class="content-wrap">
         <div class="nav"><a href="http://saumya.github.io/ray/page/2/">« Newer</a><a href="http://saumya.github.io/ray/page/4/">Next page »</a>
         </div>
-        <section class="about"><p><a href="http://saumya.github.com/">Saumya</a> believes in The God.</p>
+        <section class="about"><p><a href="http://www.saumyaray.com/">Saumya</a> believes in The God.</p>
 <p>A maker of things and curious about everything. Continuous learning is what fuels him. </p>
 <p>This blog itself, reflects one of many things he is trying at all the time.</p>
 <p>Catch him up <a href="https://twitter.com/saumya">@saumya</a> on Twitter. </p>

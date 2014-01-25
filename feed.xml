@@ -5,9 +5,31 @@
     <atom:link href="http://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Fri, 24 Jan 2014 05:30:00 +0630</pubDate>
+    <pubDate>Sat, 25 Jan 2014 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Getting started with Wintersmith themes</title>
+      <link>http://saumya.github.io/ray/articles/16/</link>
+      <pubDate>Sat, 25 Jan 2014 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">http://saumya.github.io/ray/articles/16/</guid>
+      <author></author>
+      <description>&lt;p&gt;I am getting more and more conversant with the &lt;a href=&quot;http://jade-lang.com/&quot;&gt;Jade&lt;/a&gt; templating engine and &lt;a href=&quot;https://github.com/jnordberg/wintersmith&quot;&gt;Wintersmith&lt;/a&gt;. Which I hope, is, what was one of the intentions, of moving from &lt;a href=&quot;http://wordpress.org/&quot;&gt;Wordpress&lt;/a&gt; to &lt;a href=&quot;https://github.com/jnordberg/wintersmith&quot;&gt;Wintersmith&lt;/a&gt;. Well, trying my hands on to customise the theme, I found its extemely easy to just add another CSS to the &lt;code&gt;layout&lt;/code&gt; template ie; &lt;code&gt;layout.jade&lt;/code&gt; and start putting in the styles there. It can not be simpler than this. The base style is taken from the style definition at &lt;code&gt;main.css&lt;/code&gt;. If you look at the &lt;code&gt;layout.jade&lt;/code&gt;, it will look something as this.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;link(rel=&lt;span class=&quot;string&quot;&gt;'stylesheet'&lt;/span&gt;, href=&lt;span class=&quot;string&quot;&gt;'/css/main.css'&lt;/span&gt;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If you are following this blog, I have mentioned previously how to configure &lt;a href=&quot;https://github.com/jnordberg/wintersmith&quot;&gt;Wintersmith&lt;/a&gt; so as to make it working from any domain or subdomain. So the &lt;code&gt;layout.jade&lt;/code&gt; in my case, looks as below.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;link(rel=&lt;span class=&quot;string&quot;&gt;'stylesheet'&lt;/span&gt;, href=locals.url+&lt;span class=&quot;string&quot;&gt;'/css/main.css'&lt;/span&gt;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Whatever the condition may be, whether you are using default settings or my settings, the point is, just add another CSS file(&lt;code&gt;theme.css&lt;/code&gt;) below the default CSS.
+So the default setting will be as this.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;link(rel=&lt;span class=&quot;string&quot;&gt;'stylesheet'&lt;/span&gt;, href=&lt;span class=&quot;string&quot;&gt;'/css/main.css'&lt;/span&gt;)
+link(rel=&lt;span class=&quot;string&quot;&gt;'stylesheet'&lt;/span&gt;, href=&lt;span class=&quot;string&quot;&gt;'/css/theme.css'&lt;/span&gt;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In my case, I am using a theme CSS file as &lt;code&gt;saumya.css&lt;/code&gt; and with my configuration change, it looks as this.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;link(rel=&lt;span class=&quot;string&quot;&gt;'stylesheet'&lt;/span&gt;, href=locals.url+&lt;span class=&quot;string&quot;&gt;'/css/main.css'&lt;/span&gt;)
+link(rel=&lt;span class=&quot;string&quot;&gt;'stylesheet'&lt;/span&gt;, href=locals.url+&lt;span class=&quot;string&quot;&gt;'/css/saumya.css'&lt;/span&gt;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now do the customisation in the &lt;code&gt;theme.css&lt;/code&gt;.     &lt;/p&gt;
+&lt;p&gt;Hope you understand &lt;code&gt;the best practice of overriding styles&lt;/code&gt; than manipulating directly the original CSS file.&lt;/p&gt;
+&lt;p&gt;Happy theming.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>Want excitement, work with Freshers or even younger.</title>
       <link>http://saumya.github.io/ray/articles/15/</link>
@@ -231,7 +253,7 @@ Well, there is not much to &lt;a href=&quot;https://github.com/jnordberg/winters
       <author></author>
       <description>&lt;p&gt;&lt;code&gt;Why?&lt;/code&gt; Thats for being there as a very solid option for blogging.&lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Its a pleasure to use &lt;a href=&quot;http://wordpress.com/&quot;&gt;Wordpress&lt;/a&gt; for such along time. In fact its the reason I started into blogging. I have a &lt;a href=&quot;http://saumyaray.wordpress.com/&quot;&gt;Wordpress&lt;/a&gt; hosted blog till now too. 
+&lt;p&gt;Its a pleasure to use &lt;a href=&quot;http://wordpress.org/&quot;&gt;Wordpress&lt;/a&gt; for such along time. In fact its the reason I started into blogging. I have a &lt;a href=&quot;http://saumyaray.wordpress.com/&quot;&gt;Wordpress&lt;/a&gt; hosted blog till now too. 
 This blog was using Wordpress as its blogging engine from 2010 and thats a beautiful engine, I must say.&lt;/p&gt;
 &lt;p&gt;The reason I moved this to &lt;a href=&quot;https://github.com/jnordberg/wintersmith&quot;&gt;Wintersmith&lt;/a&gt; is, I want to focus on javascript environment now, the same reason was there, with Wordpress. 
 I was focusing on PHP and MySql, those days. So its not that Wordpress is bad but seriously speaking Wordpress is now far beyound a blogging platform.&lt;/p&gt;
