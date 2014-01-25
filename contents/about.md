@@ -11,5 +11,5 @@ This blog itself, reflects one of many things he is trying at all the time.
 Catch him up [@saumya][2] on Twitter. 
 
 
-[1]: http://saumya.github.com
+[1]: http://www.saumyaray.com
 [2]: https://twitter.com/saumya

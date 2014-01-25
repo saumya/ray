@@ -17,6 +17,6 @@ The reason I moved this to [Wintersmith][3] is, I want to focus on javascript en
 I was focusing on PHP and MySql, those days. So its not that Wordpress is bad but seriously speaking Wordpress is now far beyound a blogging platform.
 
 
-[1]: http://wordpress.com/
+[1]: http://wordpress.org
 [2]: http://saumyaray.wordpress.com/
 [3]: https://github.com/jnordberg/wintersmith
