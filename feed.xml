@@ -5,9 +5,19 @@
     <atom:link href="http://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Sat, 25 Jan 2014 05:30:00 +0630</pubDate>
+    <pubDate>Sun, 26 Jan 2014 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>A theme for Indian republic day</title>
+      <link>http://saumya.github.io/ray/articles/17/</link>
+      <pubDate>Sun, 26 Jan 2014 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">http://saumya.github.io/ray/articles/17/</guid>
+      <author></author>
+      <description>&lt;p&gt;Since I have the know how to theme my blog, here is the &lt;code&gt;Indian Republic Day&lt;/code&gt; theme. Its &lt;code&gt;Open source&lt;/code&gt; and available &lt;code&gt;at my github repository&lt;/code&gt; &lt;a href=&quot;https://github.com/saumya/wintersmithThemes&quot;&gt;here&lt;/a&gt;. I will be &lt;code&gt;sharing my themes&lt;/code&gt; for &lt;a href=&quot;https://github.com/jnordberg/wintersmith&quot;&gt;Wintersmith&lt;/a&gt; at [this][2] repository.&lt;/p&gt;
+&lt;p&gt;Happy republic day.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>Getting started with Wintersmith themes</title>
       <link>http://saumya.github.io/ray/articles/16/</link>
