@@ -5,9 +5,22 @@
     <atom:link href="http://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Sun, 26 Jan 2014 05:30:00 +0630</pubDate>
+    <pubDate>Mon, 27 Jan 2014 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Git commit throws fatal error for line endings.</title>
+      <link>http://saumya.github.io/ray/articles/18/</link>
+      <pubDate>Mon, 27 Jan 2014 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">http://saumya.github.io/ray/articles/18/</guid>
+      <author></author>
+      <description>&lt;p&gt;This comes to me in a regular basis, thought it would be nice, to keep a note to me and anyone else dealing with same.     &lt;/p&gt;
+&lt;p&gt;The short answer to fix this is&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git config core.safecrlf warn&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;There are more descriptive answers available and &lt;a href=&quot;http://stackoverflow.com/questions/15467507/trying-to-commit-git-files-but-getting-fatal-lf-would-be-replaced-by-crlf-in&quot;&gt;here is a link to one of many solutions out there&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Happy hacking.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>A theme for Indian republic day</title>
       <link>http://saumya.github.io/ray/articles/17/</link>
