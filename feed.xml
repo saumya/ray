@@ -5,9 +5,19 @@
     <atom:link href="http://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Mon, 27 Jan 2014 05:30:00 +0630</pubDate>
+    <pubDate>Tue, 28 Jan 2014 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Theme, Simple.</title>
+      <link>http://saumya.github.io/ray/articles/19/</link>
+      <pubDate>Tue, 28 Jan 2014 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">http://saumya.github.io/ray/articles/19/</guid>
+      <author></author>
+      <description>&lt;p&gt;In order to get rid of the dependencies and make the site pure static, I re-wrote some of the CSS and font dependencies in the &lt;a href=&quot;https://github.com/jnordberg/wintersmith&quot;&gt;Wintesmith&lt;/a&gt;. I am releasing this &lt;a href=&quot;https://github.com/saumya/wintersmithThemes/tree/master/simple&quot;&gt;theme&lt;/a&gt; at github in my &lt;a href=&quot;https://github.com/saumya/wintersmithThemes&quot;&gt;Wintersmith Themes&lt;/a&gt; repository. The name of the theme is &lt;code&gt;Simple&lt;/code&gt;.&lt;br&gt;Its a free as in air theme, and encourage you to take it, hack it and use it, for whatever reason you may want it to use.&lt;br&gt;This blog today is using &lt;code&gt;Simple&lt;/code&gt; theme as an example of, what it looks like to use this theme.&lt;/p&gt;
+&lt;p&gt;Happy hacking.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>Git commit throws fatal error for line endings.</title>
       <link>http://saumya.github.io/ray/articles/18/</link>

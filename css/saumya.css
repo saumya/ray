@@ -8,3 +8,9 @@ a {
   color: #700000;
   display: inline-block;
 }
+footer .about{
+	font-size: 0.8em;
+}
+footer span.nav{
+	font-size: 1.2em;
+}
