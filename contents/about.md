@@ -6,7 +6,7 @@ view: none
 
 A maker of things and curious about everything. Continuous learning is, what fuels him. This blog itself, reflects one of many things he is trying at all the time.
 
-Catch him up [@saumya][2] on Twitter. 
+He is [@saumya][2] on Twitter. 
 
 
 [1]: http://www.saumyaray.com
