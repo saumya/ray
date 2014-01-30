@@ -5,9 +5,22 @@
     <atom:link href="http://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Thu, 30 Jan 2014 05:30:00 +0630</pubDate>
+    <pubDate>Fri, 31 Jan 2014 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Typography.</title>
+      <link>http://saumya.github.io/ray/articles/21/</link>
+      <pubDate>Fri, 31 Jan 2014 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">http://saumya.github.io/ray/articles/21/</guid>
+      <author></author>
+      <description>&lt;p&gt;Like many other things, there are a lot of nice typography available, which are free to use. There is no hidden spying on you or hidden charges or anything hidden, in the name of free.&lt;br&gt;I would like to mention, the two types, which are used in the theme &lt;a href=&quot;https://github.com/saumya/wintersmithThemes/tree/master/elegant&quot;&gt;Elegant&lt;/a&gt; for &lt;a href=&quot;https://github.com/jnordberg/wintersmith&quot;&gt;Wintersmith&lt;/a&gt;.     &lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.fontsquirrel.com/fonts/kaushan-script&quot;&gt;Kaushan Script&lt;/a&gt; and &lt;a href=&quot;http://www.fontsquirrel.com/fonts/TeX-Gyre-Adventor&quot;&gt;TeX Gyre Adventor&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I found these fonts at &lt;a href=&quot;http://www.fontsquirrel.com/&quot;&gt;fontsquirrel&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/saumya/wintersmithThemes/tree/master/elegant&quot;&gt;Elegant&lt;/a&gt; is a free as in air, theme, and encourage you to take it, hack it and use it, for whatever reason you may want it to use.     &lt;/p&gt;
+&lt;p&gt;Happy hacking.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>Theme, Elegant.</title>
       <link>http://saumya.github.io/ray/articles/20/</link>
