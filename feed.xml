@@ -14,7 +14,7 @@
       <pubDate>Sat, 01 Feb 2014 05:30:00 +0630</pubDate>
       <guid isPermaLink="true">http://saumya.github.io/ray/articles/22/</guid>
       <author></author>
-      <description>&lt;p&gt;Making Views, Collections and Models in &lt;a href=&quot;http://backbonejs.org/&quot;&gt;BackboneJS&lt;/a&gt; is simple as extending the raw &lt;a href=&quot;http://backbonejs.org/&quot;&gt;BackboneJS&lt;/a&gt; objects.&lt;/p&gt;
+      <description>&lt;p&gt;Making Views, Collections and Models in &lt;a href=&quot;http://backbonejs.org/&quot;&gt;BackboneJS&lt;/a&gt; is as simple as extending the raw &lt;a href=&quot;http://backbonejs.org/&quot;&gt;BackboneJS&lt;/a&gt; objects.&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; MyView = Backbone.View.extend({});&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Making a generic object and make it dispatch events is also kind of same, but then the syntax is a little different.&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; myUtilLib = _.extend({},Backbone.Events);&lt;/code&gt;&lt;/pre&gt;
