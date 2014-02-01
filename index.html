@@ -23,6 +23,23 @@
       <div class="content-wrap">
         <article class="article intro">
           <header>
+            <p class="date"><span>01. February 2014</span></p>
+            <h2><a href="http://saumya.github.io/ray/articles/22/">BackboneJS, making an event-dispatching Object.</a></h2>
+          </header>
+          <section class="content"><p>Making Views, Collections and Models in <a href="http://backbonejs.org/">BackboneJS</a> is simple as extending the raw <a href="http://backbonejs.org/">BackboneJS</a>&nbsp;objects.</p>
+<pre><code class="lang-javascript"><span class="keyword">var</span> MyView = Backbone.View.extend({});</code></pre>
+<p>Making a generic object and make it dispatch events is also kind of same, but then the syntax is a little&nbsp;different.</p>
+<pre><code class="lang-javascript"><span class="keyword">var</span> myUtilLib = _.extend({},Backbone.Events);</code></pre>
+<p>Everything else remains the same, but then, this little syntax change for an event dispatching object may come in your way, if you are new to <a href="http://backbonejs.org/">BackboneJS</a>.<br>Here is a detailed example of an utility class for <a href="http://backbonejs.org/">BackboneJS</a>.</p>
+<script src="https://gist.github.com/saumya/8755642.js"></script>
+
+
+<p>Happy&nbsp;coding.</p>
+
+          </section>
+        </article>
+        <article class="article intro">
+          <header>
             <p class="date"><span>31. January 2014</span></p>
             <h2><a href="http://saumya.github.io/ray/articles/21/">Typography.</a></h2>
           </header>
@@ -41,16 +58,6 @@
           </header>
           <section class="content"><p>Continuing to create themes, which are free of the dependencies, here is my next theme, <code>Elegant</code>. I am definitenly in love with <a href="https://github.com/jnordberg/wintersmith">Wintesmith</a>. My frequency of blogging has increased exponentially. I am releasing this <a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">theme</a> at github in my <a href="https://github.com/saumya/wintersmithThemes">Wintersmith Themes</a> repository. It adds some typography to the plain theme <a href="https://github.com/saumya/wintersmithThemes/tree/master/simple">Simple</a>.      </p>
 <p>Its a free as in air, theme, and encourage you to take it, hack it and use it, for whatever reason you may want it to&nbsp;use.     </p>
-<p>Happy&nbsp;hacking.</p>
-
-          </section>
-        </article>
-        <article class="article intro">
-          <header>
-            <p class="date"><span>28. January 2014</span></p>
-            <h2><a href="http://saumya.github.io/ray/articles/19/">Theme, Simple.</a></h2>
-          </header>
-          <section class="content"><p>In order to get rid of the dependencies and make the site pure static, I re-wrote some of the <span class="caps">CSS</span> and font dependencies in the <a href="https://github.com/jnordberg/wintersmith">Wintesmith</a>. I am releasing this <a href="https://github.com/saumya/wintersmithThemes/tree/master/simple">theme</a> at github in my <a href="https://github.com/saumya/wintersmithThemes">Wintersmith Themes</a> repository. The name of the theme is <code>Simple</code>.<br>Its a free as in air theme, and encourage you to take it, hack it and use it, for whatever reason you may want it to use.<br>This blog today is using <code>Simple</code> theme as an example of, what it looks like to use this&nbsp;theme.</p>
 <p>Happy&nbsp;hacking.</p>
 
           </section>

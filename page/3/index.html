@@ -23,6 +23,28 @@
       <div class="content-wrap">
         <article class="article intro">
           <header>
+            <p class="date"><span>25. January 2014</span></p>
+            <h2><a href="http://saumya.github.io/ray/articles/16/">Getting started with Wintersmith themes</a></h2>
+          </header>
+          <section class="content"><p>I am getting more and more conversant with the <a href="http://jade-lang.com/">Jade</a> templating engine and <a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>. Which I hope, is, what was one of the intentions, of moving from <a href="http://wordpress.org/">Wordpress</a> to <a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>. Well, trying my hands on to customise the theme, I found its extemely easy to just add another <span class="caps">CSS</span> to the <code>layout</code> template ie; <code>layout.jade</code> and start putting in the styles there. It can not be simpler than this. The base style is taken from the style definition at <code>main.css</code>. If you look at the <code>layout.jade</code>, it will look something as&nbsp;this.</p>
+<pre><code class="lang-javascript">link(rel=<span class="string">'stylesheet'</span>, href=<span class="string">'/css/main.css'</span>)</code></pre>
+<p>If you are following this blog, I have mentioned previously how to configure <a href="https://github.com/jnordberg/wintersmith">Wintersmith</a> so as to make it working from any domain or subdomain. So the <code>layout.jade</code> in my case, looks as&nbsp;below.</p>
+<pre><code class="lang-javascript">link(rel=<span class="string">'stylesheet'</span>, href=locals.url+<span class="string">'/css/main.css'</span>)</code></pre>
+<p>Whatever the condition may be, whether you are using default settings or my settings, the point is, just add another <span class="caps">CSS</span> file(<code>theme.css</code>) below the default <span class="caps">CSS</span>.
+So the default setting will be as&nbsp;this.</p>
+<pre><code class="lang-javascript">link(rel=<span class="string">'stylesheet'</span>, href=<span class="string">'/css/main.css'</span>)
+link(rel=<span class="string">'stylesheet'</span>, href=<span class="string">'/css/theme.css'</span>)</code></pre>
+<p>In my case, I am using a theme <span class="caps">CSS</span> file as <code>saumya.css</code> and with my configuration change, it looks as&nbsp;this.</p>
+<pre><code class="lang-javascript">link(rel=<span class="string">'stylesheet'</span>, href=locals.url+<span class="string">'/css/main.css'</span>)
+link(rel=<span class="string">'stylesheet'</span>, href=locals.url+<span class="string">'/css/saumya.css'</span>)</code></pre>
+<p>Now do the customisation in the <code>theme.css</code>.     </p>
+<p>Hope you understand <code>the best practice of overriding styles</code> than manipulating directly the original <span class="caps">CSS</span>&nbsp;file.</p>
+<p>Happy&nbsp;theming.</p>
+
+          </section>
+        </article>
+        <article class="article intro">
+          <header>
             <p class="date"><span>24. January 2014</span></p>
             <h2><a href="http://saumya.github.io/ray/articles/15/">Want excitement, work with Freshers or even younger.</a></h2>
           </header>
@@ -50,19 +72,6 @@
           </header>
           <section class="content"><p>Developing for a fragmented landscape is not easy. Its even difficult, if you choose to use, a library or framework, which says <code>develop once and run everywhere</code> or something like <code>it makes your application look like native</code>.<br>First thing first. With every new release, we have another step addition to test. Contrary to the belief that, the new Operating System is obviously capable of running the old running application, it adds one more fragment to the already fragmented landscape. So if you are a mobile developer, keep this in mind that <code>new OS, is a new test step</code>. Well, lets add one more device to this equation. Lets just focus on <code>Apple</code> devices, considering there <code>so called, minimum number of device types</code>. An iDevice is suppose to run the latest vesion of the iOS. But in the development environment, you might not able to keep up with new device types or <span class="caps">OS</span> updates. And only this can break your application. So make sure, you have <code>latest device and latest OS</code>. Ok, then test your application in this device, chances are your application <code>may run</code> but chances are <code>it might not</code> too. So the point is <code>search arround</code> the internet from the beginning itself, if there are known problems with the exact <code>device and OS</code> combination.
             <p class="more"><a href="http://saumya.github.io/ray/articles/14/">more</a></p>
-          </section>
-        </article>
-        <article class="article intro">
-          <header>
-            <p class="date"><span>22. January 2014</span></p>
-            <h2><a href="http://saumya.github.io/ray/articles/13/">Author details on Wintersmith</a></h2>
-          </header>
-          <section class="content"><p>This is probably exciting and why I moved, to <a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>. Part of the blogging itself, is learning the engine and the <a href="http://jade-lang.com/">Jade template engine</a>.      </p>
-<p>Here is a tip to configure the author&nbsp;name.      </p>
-<p>With every blog post, there is an author name, below the title, which reads as “written by author”. This comes from the blog itself as you probably know already. Thats fine and thats the default behaviour. If one needs to change it and which could be changed, here is the&nbsp;thing.      </p>
-<p>The details are populated from the <code>authors</code> folder. The <code>author</code> name specified in the blog meta data,ie; the top section, when writing the blog, is mapped to a file with the <code>same name as author</code>. So the file name is <code>author.json</code> in the <code>authors</code> folder, where <code>author</code> is specified in the blog meta-data. If it finds the file, then the <code>author name</code> below the <code>title</code> of the post is updated with the new data from the file and an email link is attached with it which is also taken from the <code>.json</code> file. This is interesting, if it does not find the file, simply the autor name from the blog meta data, is put out in the blog, without the email&nbsp;link.      </p>
-<p>Happy&nbsp;hacking.      </p>
-
           </section>
         </article>
       </div>

@@ -5,9 +5,26 @@
     <atom:link href="http://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Fri, 31 Jan 2014 05:30:00 +0630</pubDate>
+    <pubDate>Sat, 01 Feb 2014 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>BackboneJS, making an event-dispatching Object.</title>
+      <link>http://saumya.github.io/ray/articles/22/</link>
+      <pubDate>Sat, 01 Feb 2014 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">http://saumya.github.io/ray/articles/22/</guid>
+      <author></author>
+      <description>&lt;p&gt;Making Views, Collections and Models in &lt;a href=&quot;http://backbonejs.org/&quot;&gt;BackboneJS&lt;/a&gt; is simple as extending the raw &lt;a href=&quot;http://backbonejs.org/&quot;&gt;BackboneJS&lt;/a&gt; objects.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; MyView = Backbone.View.extend({});&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Making a generic object and make it dispatch events is also kind of same, but then the syntax is a little different.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; myUtilLib = _.extend({},Backbone.Events);&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Everything else remains the same, but then, this little syntax change for an event dispatching object may come in your way, if you are new to &lt;a href=&quot;http://backbonejs.org/&quot;&gt;BackboneJS&lt;/a&gt;.&lt;br&gt;Here is a detailed example of an utility class for &lt;a href=&quot;http://backbonejs.org/&quot;&gt;BackboneJS&lt;/a&gt;.&lt;/p&gt;
+&lt;script src=&quot;https://gist.github.com/saumya/8755642.js&quot;&gt;&lt;/script&gt;
+
+
+&lt;p&gt;Happy coding.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>Typography.</title>
       <link>http://saumya.github.io/ray/articles/21/</link>
