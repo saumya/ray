@@ -5,9 +5,25 @@
     <atom:link href="http://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Sat, 01 Feb 2014 05:30:00 +0630</pubDate>
+    <pubDate>Mon, 10 Feb 2014 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Making desktop applications, using NodeJS.</title>
+      <link>http://saumya.github.io/ray/articles/23/</link>
+      <pubDate>Mon, 10 Feb 2014 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">http://saumya.github.io/ray/articles/23/</guid>
+      <author></author>
+      <description>&lt;p&gt;I am suprised to see, how big the javascript community has become! And specifically &lt;a href=&quot;http://nodejs.org/&quot;&gt;NodeJS&lt;/a&gt; has some serious people in its community. I was trying to do a desktop application in javascript and without searching in the internet, I started out to do it all over again! After a couple of days, out of curiosity, did a search in internet to find, that &lt;a href=&quot;http://nodejs.org/&quot;&gt;NodeJS&lt;/a&gt; has plenty of options to do the stuff.&lt;br&gt;Evaluating some options, I settled with &lt;a href=&quot;https://github.com/rogerwang/node-webkit&quot;&gt;Node-Webkit&lt;/a&gt;. For now the best 3 in my opinion are;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/rogerwang/node-webkit&quot;&gt;Node-Webkit&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://appjs.com/&quot;&gt;AppJS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://hex.youdao.com/&quot;&gt;hex&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I must say, &lt;a href=&quot;http://nodejs.org/&quot;&gt;NodeJS&lt;/a&gt; has already revolutionised the internet. If at all, you think of doing something, search for a &lt;a href=&quot;http://nodejs.org/&quot;&gt;NodeJS&lt;/a&gt; solution and its possible that the solution is already there.&lt;/p&gt;
+&lt;p&gt;Happy coding.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>BackboneJS, making an event-dispatching Object.</title>
       <link>http://saumya.github.io/ray/articles/22/</link>
@@ -15,9 +31,11 @@
       <guid isPermaLink="true">http://saumya.github.io/ray/articles/22/</guid>
       <author></author>
       <description>&lt;p&gt;Making Views, Collections and Models in &lt;a href=&quot;http://backbonejs.org/&quot;&gt;BackboneJS&lt;/a&gt; is as simple as extending the raw &lt;a href=&quot;http://backbonejs.org/&quot;&gt;BackboneJS&lt;/a&gt; objects.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; MyView = Backbone.View.extend({});&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; MyView = Backbone.View.extend({});
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Making a generic object and make it dispatch events is also kind of same, but then the syntax is a little different.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; myUtilLib = _.extend({},Backbone.Events);&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; myUtilLib = _.extend({},Backbone.Events);
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Everything else remains the same, but then, this little syntax change for an event dispatching object may come in your way, if you are new to &lt;a href=&quot;http://backbonejs.org/&quot;&gt;BackboneJS&lt;/a&gt;.&lt;br&gt;Here is a detailed example of an utility class for &lt;a href=&quot;http://backbonejs.org/&quot;&gt;BackboneJS&lt;/a&gt;.&lt;/p&gt;
 &lt;script src=&quot;https://gist.github.com/saumya/8755642.js&quot;&gt;&lt;/script&gt;
 
@@ -67,8 +85,8 @@
       <author></author>
       <description>&lt;p&gt;This comes to me in a regular basis, thought it would be nice, to keep a note to me and anyone else dealing with same.     &lt;/p&gt;
 &lt;p&gt;The short answer to fix this is&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;git config core.safecrlf warn&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;There are more descriptive answers available and &lt;a href=&quot;http://stackoverflow.com/questions/15467507/trying-to-commit-git-files-but-getting-fatal-lf-would-be-replaced-by-crlf-in&quot;&gt;here is a link to one of many solutions out there&lt;/a&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git config core.safecrlf warn
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;There are more descriptive answers available and &lt;a href=&quot;http://stackoverflow.com/questions/15467507/trying-to-commit-git-files-but-getting-fatal-lf-would-be-replaced-by-crlf-in&quot;&gt;here is a link to one of many solutions out there&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Happy hacking.&lt;/p&gt;
 </description>
     </item>
@@ -89,16 +107,20 @@
       <guid isPermaLink="true">http://saumya.github.io/ray/articles/16/</guid>
       <author></author>
       <description>&lt;p&gt;I am getting more and more conversant with the &lt;a href=&quot;http://jade-lang.com/&quot;&gt;Jade&lt;/a&gt; templating engine and &lt;a href=&quot;https://github.com/jnordberg/wintersmith&quot;&gt;Wintersmith&lt;/a&gt;. Which I hope, is, what was one of the intentions, of moving from &lt;a href=&quot;http://wordpress.org/&quot;&gt;Wordpress&lt;/a&gt; to &lt;a href=&quot;https://github.com/jnordberg/wintersmith&quot;&gt;Wintersmith&lt;/a&gt;. Well, trying my hands on to customise the theme, I found its extemely easy to just add another CSS to the &lt;code&gt;layout&lt;/code&gt; template ie; &lt;code&gt;layout.jade&lt;/code&gt; and start putting in the styles there. It can not be simpler than this. The base style is taken from the style definition at &lt;code&gt;main.css&lt;/code&gt;. If you look at the &lt;code&gt;layout.jade&lt;/code&gt;, it will look something as this.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;link(rel=&lt;span class=&quot;string&quot;&gt;'stylesheet'&lt;/span&gt;, href=&lt;span class=&quot;string&quot;&gt;'/css/main.css'&lt;/span&gt;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;link(rel=&lt;span class=&quot;string&quot;&gt;'stylesheet'&lt;/span&gt;, href=&lt;span class=&quot;string&quot;&gt;'/css/main.css'&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;If you are following this blog, I have mentioned previously how to configure &lt;a href=&quot;https://github.com/jnordberg/wintersmith&quot;&gt;Wintersmith&lt;/a&gt; so as to make it working from any domain or subdomain. So the &lt;code&gt;layout.jade&lt;/code&gt; in my case, looks as below.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;link(rel=&lt;span class=&quot;string&quot;&gt;'stylesheet'&lt;/span&gt;, href=locals.url+&lt;span class=&quot;string&quot;&gt;'/css/main.css'&lt;/span&gt;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;link(rel=&lt;span class=&quot;string&quot;&gt;'stylesheet'&lt;/span&gt;, href=locals.url+&lt;span class=&quot;string&quot;&gt;'/css/main.css'&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Whatever the condition may be, whether you are using default settings or my settings, the point is, just add another CSS file(&lt;code&gt;theme.css&lt;/code&gt;) below the default CSS.
 So the default setting will be as this.&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;link(rel=&lt;span class=&quot;string&quot;&gt;'stylesheet'&lt;/span&gt;, href=&lt;span class=&quot;string&quot;&gt;'/css/main.css'&lt;/span&gt;)
-link(rel=&lt;span class=&quot;string&quot;&gt;'stylesheet'&lt;/span&gt;, href=&lt;span class=&quot;string&quot;&gt;'/css/theme.css'&lt;/span&gt;)&lt;/code&gt;&lt;/pre&gt;
+link(rel=&lt;span class=&quot;string&quot;&gt;'stylesheet'&lt;/span&gt;, href=&lt;span class=&quot;string&quot;&gt;'/css/theme.css'&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;In my case, I am using a theme CSS file as &lt;code&gt;saumya.css&lt;/code&gt; and with my configuration change, it looks as this.&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;link(rel=&lt;span class=&quot;string&quot;&gt;'stylesheet'&lt;/span&gt;, href=locals.url+&lt;span class=&quot;string&quot;&gt;'/css/main.css'&lt;/span&gt;)
-link(rel=&lt;span class=&quot;string&quot;&gt;'stylesheet'&lt;/span&gt;, href=locals.url+&lt;span class=&quot;string&quot;&gt;'/css/saumya.css'&lt;/span&gt;)&lt;/code&gt;&lt;/pre&gt;
+link(rel=&lt;span class=&quot;string&quot;&gt;'stylesheet'&lt;/span&gt;, href=locals.url+&lt;span class=&quot;string&quot;&gt;'/css/saumya.css'&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Now do the customisation in the &lt;code&gt;theme.css&lt;/code&gt;.     &lt;/p&gt;
 &lt;p&gt;Hope you understand &lt;code&gt;the best practice of overriding styles&lt;/code&gt; than manipulating directly the original CSS file.&lt;/p&gt;
 &lt;p&gt;Happy theming.&lt;/p&gt;
@@ -143,13 +165,15 @@ Ok. Lets add a library to the equation. Now it becomes &lt;code&gt;device + OS +
 &lt;li&gt;&lt;a href=&quot;http://community.phonegap.com/nitobi/topics/avoid_android_application_caching_on_ajax_calls_option_cache_false&quot;&gt;phonegap forum&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;It took me sometime to understand, what the problem is?! It was working fine with iOS 4 and 5! Well, here is the tip which solved it. Make the configuraton option of AJAX call in &lt;a href=&quot;http://jquery.com/&quot;&gt;jQuery&lt;/a&gt;, so that the AJAX call is not cached (else default is cache).&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;headers : { &lt;span class=&quot;string&quot;&gt;&quot;cache-control&quot;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;no-cache&quot;&lt;/span&gt; },&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;headers : { &lt;span class=&quot;string&quot;&gt;&quot;cache-control&quot;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;no-cache&quot;&lt;/span&gt; },
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The complete AJAX call will look somthing like this.&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;$.ajax({
 headers : { &lt;span class=&quot;string&quot;&gt;&quot;cache-control&quot;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;no-cache&quot;&lt;/span&gt; },
 url : &lt;span class=&quot;string&quot;&gt;''&lt;/span&gt;,
 success : &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(result)&lt;/span&gt; {&lt;/span&gt;}
-})&lt;/code&gt;&lt;/pre&gt;
+})
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Here is a &lt;a href=&quot;http://www.einternals.com/blog/web-development/ios6-0-caching-ajax-post-requests&quot;&gt;nice write up about how&lt;/a&gt; you configure &lt;a href=&quot;http://jquery.com/&quot;&gt;jQuery&lt;/a&gt; AJAX call, so that they are not cached.     &lt;/p&gt;
 &lt;p&gt;Keep an eye and check serously for at leat these     &lt;/p&gt;
 &lt;ul&gt;
@@ -203,7 +227,8 @@ onClick: &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quo
     &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(btnID===&lt;span class=&quot;string&quot;&gt;'btn_one'&lt;/span&gt;){
         console.log(&lt;span class=&quot;string&quot;&gt;'TODO:'&lt;/span&gt;);
     }
-}&lt;/code&gt;&lt;/pre&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Well, it may be easier at first, but we are listening for events for the whole view and then in the handler checking it. There is a way in &lt;a href=&quot;http://backbonejs.org/&quot;&gt;BackboneJS&lt;/a&gt; that directly and listens for events for that particular target. The code looks as this.&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;events:{
         &lt;span class=&quot;string&quot;&gt;&quot;click #btn_one&quot;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;onClick&quot;&lt;/span&gt;
@@ -211,7 +236,8 @@ onClick: &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quo
 onClick: &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(event)&lt;/span&gt;{&lt;/span&gt;
     &lt;span class=&quot;comment&quot;&gt;//btn_one is clicked&lt;/span&gt;
     &lt;span class=&quot;comment&quot;&gt;//Do something with the event&lt;/span&gt;
-}&lt;/code&gt;&lt;/pre&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Happy coding.      &lt;/p&gt;
 </description>
     </item>
@@ -231,8 +257,8 @@ There are 3 basic things required for distribution.&lt;/p&gt;
 &lt;/ul&gt;
 &lt;p&gt;The iOS app must be compiled with the Ad-HOC distribution certificate with the device(where the app will be installed) UDIDs included. Thats the same procedure, as one would follow, while distributing through other stores. Once its compiled, you say &lt;code&gt;Archive for distribution&lt;/code&gt; in XCode, which will create the &lt;code&gt;.ipa&lt;/code&gt; file. The manifest file defines the application meta data, if you go through the manifest file below, there is a place to point to the &lt;code&gt;.ipa&lt;/code&gt; file, make sure, you provide &lt;code&gt;full URL to .ipa&lt;/code&gt; file. The download link on HTML file will point to this manifest file. Here is the boilerplate for a typical manifest file (which is a .plist file). The HTML file, is simply  having a link pointing to the &lt;code&gt;.plist&lt;/code&gt; file.     &lt;/p&gt;
 &lt;p&gt;&lt;script src=&quot;https://gist.github.com/saumya/8440357.js&quot;&gt;&lt;/script&gt;&lt;br&gt;Now simply link to the plist file in the HTML file as below.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt; &amp;lt;a href=&amp;quot;itms-services://?action=download-manifest&amp;amp;url=https://myServer/iOS-dist/iOSAppDist.plist&amp;quot; class=&amp;quot;button&amp;quot;&amp;gt;Install My App&amp;lt;/a&amp;gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Now visit the URL through iPhone, where your HTML file is stored. Once you click the link, it will download and install the iOS app.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt; &amp;lt;a href=&amp;quot;itms-services://?action=download-manifest&amp;amp;url=https://myServer/iOS-dist/iOSAppDist.plist&amp;quot; class=&amp;quot;button&amp;quot;&amp;gt;Install My App&amp;lt;/a&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Now visit the URL through iPhone, where your HTML file is stored. Once you click the link, it will download and install the iOS app.&lt;/p&gt;
 &lt;p&gt;Happy hacking.&lt;/p&gt;
 </description>
     </item>
@@ -342,8 +368,8 @@ I was focusing on PHP and MySql, those days. So its not that Wordpress is bad bu
       <description>&lt;p&gt;&lt;code&gt;Why?&lt;/code&gt; Thats for learning.&lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;What?&lt;/code&gt; Life. Javascript, NodeJS, Express, Jade, Sass, Grunt and the list goes on.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;It&amp;#39;s learning till the end.&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&quot;so-why-wait-&quot;&gt;So why wait ?!&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;It&amp;#39;s learning till the end.
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;so-why-wait-&quot;&gt;So why wait ?!&lt;/h2&gt;
 &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//www.youtube-nocookie.com/embed/nql49wrkURY?rel=0&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
 
 &lt;p&gt;&lt;code&gt;Thank you&lt;/code&gt; so much for stopping by.&lt;/p&gt;

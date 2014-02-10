@@ -31,8 +31,8 @@ There are 3 basic things required for&nbsp;distribution.</p>
 </ul>
 <p>The iOS app must be compiled with the Ad-<span class="caps">HOC</span> distribution certificate with the device(where the app will be installed) UDIDs included. Thats the same procedure, as one would follow, while distributing through other stores. Once its compiled, you say <code>Archive for distribution</code> in XCode, which will create the <code>.ipa</code> file. The manifest file defines the application meta data, if you go through the manifest file below, there is a place to point to the <code>.ipa</code> file, make sure, you provide <code>full URL to .ipa</code> file. The download link on <span class="caps">HTML</span> file will point to this manifest file. Here is the boilerplate for a typical manifest file (which is a .plist file). The HTML file, is simply  having a link pointing to the <code>.plist</code> file.     </p>
 <p><script src="https://gist.github.com/saumya/8440357.js"></script><br>Now simply link to the plist file in the <span class="caps">HTML</span> file as&nbsp;below.</p>
-<pre><code> &lt;a href=&quot;itms-services://?action=download-manifest&amp;url=https://myServer/iOS-dist/iOSAppDist.plist&quot; class=&quot;button&quot;&gt;Install My App&lt;/a&gt;</code></pre>
-<p>Now visit the <span class="caps">URL</span> through iPhone, where your HTML file is stored. Once you click the link, it will download and install the iOS&nbsp;app.</p>
+<pre><code> &lt;a href=&quot;itms-services://?action=download-manifest&amp;url=https://myServer/iOS-dist/iOSAppDist.plist&quot; class=&quot;button&quot;&gt;Install My App&lt;/a&gt;
+</code></pre><p>Now visit the <span class="caps">URL</span> through iPhone, where your HTML file is stored. Once you click the link, it will download and install the iOS&nbsp;app.</p>
 <p>Happy&nbsp;hacking.</p>
 </section>
         </article>

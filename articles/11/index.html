@@ -33,7 +33,8 @@ onClick: <span class="function"><span class="keyword">function</span><span class
     <span class="keyword">if</span>(btnID===<span class="string">'btn_one'</span>){
         console.log(<span class="string">'<span class="caps">TODO</span>:'</span>);
     }
-}</code></pre>
+}
+</code></pre>
 <p>Well, it may be easier at first, but we are listening for events for the whole view and then in the handler checking it. There is a way in <a href="http://backbonejs.org/">BackboneJS</a> that directly and listens for events for that particular target. The code looks as&nbsp;this.</p>
 <pre><code class="lang-javascript">events:{
         <span class="string">"click #btn_one"</span>: <span class="string">"onClick"</span>
@@ -41,7 +42,8 @@ onClick: <span class="function"><span class="keyword">function</span><span class
 onClick: <span class="function"><span class="keyword">function</span><span class="params">(event)</span>{</span>
     <span class="comment">//btn_one is clicked</span>
     <span class="comment">//Do something with the event</span>
-}</code></pre>
+}
+</code></pre>
 <p>Happy&nbsp;coding.      </p>
 </section>
         </article>

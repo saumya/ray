@@ -22,9 +22,11 @@
       <div class="content-wrap">
         <article class="article">
           <section class="content"><p>Making Views, Collections and Models in <a href="http://backbonejs.org/">BackboneJS</a> is as simple as extending the raw <a href="http://backbonejs.org/">BackboneJS</a>&nbsp;objects.</p>
-<pre><code class="lang-javascript"><span class="keyword">var</span> MyView = Backbone.View.extend({});</code></pre>
+<pre><code class="lang-javascript"><span class="keyword">var</span> MyView = Backbone.View.extend({});
+</code></pre>
 <p>Making a generic object and make it dispatch events is also kind of same, but then the syntax is a little&nbsp;different.</p>
-<pre><code class="lang-javascript"><span class="keyword">var</span> myUtilLib = _.extend({},Backbone.Events);</code></pre>
+<pre><code class="lang-javascript"><span class="keyword">var</span> myUtilLib = _.extend({},Backbone.Events);
+</code></pre>
 <p>Everything else remains the same, but then, this little syntax change for an event dispatching object may come in your way, if you are new to <a href="http://backbonejs.org/">BackboneJS</a>.<br>Here is a detailed example of an utility class for <a href="http://backbonejs.org/">BackboneJS</a>.</p>
 <script src="https://gist.github.com/saumya/8755642.js"></script>
 

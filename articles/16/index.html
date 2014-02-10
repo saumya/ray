@@ -22,16 +22,20 @@
       <div class="content-wrap">
         <article class="article">
           <section class="content"><p>I am getting more and more conversant with the <a href="http://jade-lang.com/">Jade</a> templating engine and <a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>. Which I hope, is, what was one of the intentions, of moving from <a href="http://wordpress.org/">Wordpress</a> to <a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>. Well, trying my hands on to customise the theme, I found its extemely easy to just add another <span class="caps">CSS</span> to the <code>layout</code> template ie; <code>layout.jade</code> and start putting in the styles there. It can not be simpler than this. The base style is taken from the style definition at <code>main.css</code>. If you look at the <code>layout.jade</code>, it will look something as&nbsp;this.</p>
-<pre><code class="lang-javascript">link(rel=<span class="string">'stylesheet'</span>, href=<span class="string">'/css/main.css'</span>)</code></pre>
+<pre><code class="lang-javascript">link(rel=<span class="string">'stylesheet'</span>, href=<span class="string">'/css/main.css'</span>)
+</code></pre>
 <p>If you are following this blog, I have mentioned previously how to configure <a href="https://github.com/jnordberg/wintersmith">Wintersmith</a> so as to make it working from any domain or subdomain. So the <code>layout.jade</code> in my case, looks as&nbsp;below.</p>
-<pre><code class="lang-javascript">link(rel=<span class="string">'stylesheet'</span>, href=locals.url+<span class="string">'/css/main.css'</span>)</code></pre>
+<pre><code class="lang-javascript">link(rel=<span class="string">'stylesheet'</span>, href=locals.url+<span class="string">'/css/main.css'</span>)
+</code></pre>
 <p>Whatever the condition may be, whether you are using default settings or my settings, the point is, just add another <span class="caps">CSS</span> file(<code>theme.css</code>) below the default <span class="caps">CSS</span>.
 So the default setting will be as&nbsp;this.</p>
 <pre><code class="lang-javascript">link(rel=<span class="string">'stylesheet'</span>, href=<span class="string">'/css/main.css'</span>)
-link(rel=<span class="string">'stylesheet'</span>, href=<span class="string">'/css/theme.css'</span>)</code></pre>
+link(rel=<span class="string">'stylesheet'</span>, href=<span class="string">'/css/theme.css'</span>)
+</code></pre>
 <p>In my case, I am using a theme <span class="caps">CSS</span> file as <code>saumya.css</code> and with my configuration change, it looks as&nbsp;this.</p>
 <pre><code class="lang-javascript">link(rel=<span class="string">'stylesheet'</span>, href=locals.url+<span class="string">'/css/main.css'</span>)
-link(rel=<span class="string">'stylesheet'</span>, href=locals.url+<span class="string">'/css/saumya.css'</span>)</code></pre>
+link(rel=<span class="string">'stylesheet'</span>, href=locals.url+<span class="string">'/css/saumya.css'</span>)
+</code></pre>
 <p>Now do the customisation in the <code>theme.css</code>.     </p>
 <p>Hope you understand <code>the best practice of overriding styles</code> than manipulating directly the original <span class="caps">CSS</span>&nbsp;file.</p>
 <p>Happy&nbsp;theming.</p>
