@@ -5,9 +5,26 @@
     <atom:link href="http://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Mon, 10 Feb 2014 05:30:00 +0630</pubDate>
+    <pubDate>Tue, 11 Feb 2014 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>jQuerymobile, changePage is deprecated as of 1.4.0, will be removed in 1.5.0.</title>
+      <link>http://saumya.github.io/ray/articles/24/</link>
+      <pubDate>Tue, 11 Feb 2014 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">http://saumya.github.io/ray/articles/24/</guid>
+      <author></author>
+      <description>&lt;p&gt;This is really going to break things, if someone is updating the library to latest version. This is a very frequently used function and chances are, that, in a mobile web application its being used everywhere. Lets remind ourselves again that &lt;code&gt;jQuery.mobile.changePage&lt;/code&gt; is &lt;code&gt;deprecated as of 1.4.0&lt;/code&gt; and &lt;code&gt;will be removed in 1.5.0&lt;/code&gt;.&lt;br&gt;Now there are vaious ways to change page in a jQuerymobile application. Here are the 3 options to do the page change in the new API.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;$(&lt;span class=&quot;string&quot;&gt;&quot;:mobile-pagecontainer&quot;&lt;/span&gt;).pagecontainer(&lt;span class=&quot;string&quot;&gt;&quot;change&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;target&quot;&lt;/span&gt;, { options });
+&lt;span class=&quot;comment&quot;&gt;//or&lt;/span&gt;
+$.mobile.pageContainer.pagecontainer(&lt;span class=&quot;string&quot;&gt;&quot;change&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;target&quot;&lt;/span&gt;, { options });
+&lt;span class=&quot;comment&quot;&gt;//or&lt;/span&gt;
+$(&lt;span class=&quot;string&quot;&gt;&quot;body&quot;&lt;/span&gt;).pagecontainer(&lt;span class=&quot;string&quot;&gt;&quot;change&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;target&quot;&lt;/span&gt;, { options });
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;a href=&quot;http://api.jquerymobile.com/jQuery.mobile.changePage/&quot;&gt;Here is the official document for reference&lt;/a&gt;     &lt;/p&gt;
+&lt;p&gt;Happy coding.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>Making desktop applications, using NodeJS.</title>
       <link>http://saumya.github.io/ray/articles/23/</link>
