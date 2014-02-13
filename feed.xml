@@ -5,9 +5,26 @@
     <atom:link href="http://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Thu, 13 Feb 2014 05:30:00 +0630</pubDate>
+    <pubDate>Fri, 14 Feb 2014 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Amazon S3 Sync with NodeJS</title>
+      <link>http://saumya.github.io/ray/articles/27/</link>
+      <pubDate>Fri, 14 Feb 2014 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">http://saumya.github.io/ray/articles/27/</guid>
+      <author></author>
+      <description>&lt;p&gt;This is my first practical cross-platform desktop application written in &lt;a href=&quot;http://nodejs.org/&quot;&gt;NodeJS&lt;/a&gt;. The application is a simple desktop client to upload the changed files in a folder automatically to a bucket in &lt;a href=&quot;http://aws.amazon.com/s3/&quot;&gt;Amazon S3&lt;/a&gt;. The main components, which make this application, are     &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/rogerwang/node-webkit&quot;&gt;node-webkit&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://docs.aws.amazon.com/AWSJavaScriptSDK/guide/browser-intro.html&quot;&gt;Amazon S3 SDK for browser&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Well, there is a &lt;a href=&quot;http://nodejs.org/&quot;&gt;NodeJS&lt;/a&gt; module as well for the SDK, but I prefer to take it only browser way at the moment.     &lt;/p&gt;
+&lt;p&gt;The &lt;a href=&quot;https://github.com/saumya/amazonS3Sync&quot;&gt;source code&lt;/a&gt; is available here and to run it, get a copy of the &lt;a href=&quot;https://github.com/rogerwang/node-webkit&quot;&gt;node-webkit&lt;/a&gt; for your environment. And that makes a cross-platform application on &lt;a href=&quot;http://nodejs.org/&quot;&gt;NodeJS&lt;/a&gt;.     &lt;/p&gt;
+&lt;p&gt;Currently the application keeps an eye on a folder, you specify. Once a file is changed in that folder, is automatically uploaded to the ‘bucket’ you specify in the beginning of the application. Note, currently it just uploads the files, which are changed. It does not upload a new file in the folder or any existing file.&lt;/p&gt;
+&lt;p&gt;Happy synching.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>iOS, customising top and bottom bar inside UINavigationController</title>
       <link>http://saumya.github.io/ray/articles/26/</link>
