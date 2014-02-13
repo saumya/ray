@@ -36,6 +36,9 @@ h2{
   /*color: #ff3d01;*/
   font-family: kscript-regular;
 }
+.header .date{
+  text-align: center;
+}
 footer .about{
   /*color: #2a9400;*/
   font-family: kscript-regular;
