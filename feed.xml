@@ -5,9 +5,21 @@
     <atom:link href="http://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Fri, 14 Feb 2014 05:30:00 +0630</pubDate>
+    <pubDate>Sat, 15 Feb 2014 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>jQuery Mobile, making change page work.</title>
+      <link>http://saumya.github.io/ray/articles/28/</link>
+      <pubDate>Sat, 15 Feb 2014 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">http://saumya.github.io/ray/articles/28/</guid>
+      <author></author>
+      <description>&lt;p&gt;The &lt;a href=&quot;http://saumya.github.io/ray/articles/24/&quot;&gt;last post&lt;/a&gt; about the &lt;a href=&quot;http://saumya.github.io/ray/articles/24/&quot;&gt;change page&lt;/a&gt; API change of &lt;a href=&quot;http://jquerymobile.com/&quot;&gt;jQuery Mobile&lt;/a&gt; tells you as to, how to change a page, in the &lt;a href=&quot;http://api.jquerymobile.com/jQuery.mobile.changePage/&quot;&gt;new API&lt;/a&gt;. I was hoping thats the only change, but there seems, some kind of fix necessary to make a page, change properly. I mean, there is this bug, where the page change actually does this. It goes to the page mentioned by the change page and then it comes back to the page again, from where it was moved. So the effect is, the page is not chaged at all and the user looks at a screen, where the application simply moves to another screen and comesback to the original screen.&lt;br&gt;For me the fix that worked is send &lt;code&gt;changeHash:true&lt;/code&gt; in the options object of the API.     &lt;/p&gt;
+&lt;script src=&quot;https://gist.github.com/saumya/9015917.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Happy coding.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>Amazon S3 Sync with NodeJS</title>
       <link>http://saumya.github.io/ray/articles/27/</link>

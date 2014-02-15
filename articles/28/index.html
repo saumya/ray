@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <title>jQuery Mobile, making change page work. - Saumya
+    </title>
+    <link rel="alternate" href="http://saumya.github.io/ray/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
+    <link rel="stylesheet" href="http://saumya.github.io/ray/css/main.css">
+    <link rel="stylesheet" href="http://saumya.github.io/ray/css/saumya.css">
+  </head>
+  <body class="article-detail">
+    <header class="header">
+      <div class="content-wrap">
+        <h1>jQuery Mobile, making change page work.</h1>
+        <p class="author">Written by <span class="author"><a href="mailto:contact@saumyaray.com">Saumya</a></span>
+        </p>
+        <p class="date">15. February 2014</p>
+      </div>
+    </header>
+    <div id="content">
+      <div class="content-wrap">
+        <article class="article">
+          <section class="content"><p>The <a href="http://saumya.github.io/ray/articles/24/">last post</a> about the <a href="http://saumya.github.io/ray/articles/24/">change page</a> <span class="caps">API</span> change of <a href="http://jquerymobile.com/">jQuery Mobile</a> tells you as to, how to change a page, in the <a href="http://api.jquerymobile.com/jQuery.mobile.changePage/">new <span class="caps">API</span></a>. I was hoping thats the only change, but there seems, some kind of fix necessary to make a page, change properly. I mean, there is this bug, where the page change actually does this. It goes to the page mentioned by the change page and then it comes back to the page again, from where it was moved. So the effect is, the page is not chaged at all and the user looks at a screen, where the application simply moves to another screen and comesback to the original screen.<br>For me the fix that worked is send <code>changeHash:true</code> in the options object of the&nbsp;<span class="caps">API</span>.     </p>
+<script src="https://gist.github.com/saumya/9015917.js"></script>
+
+<p>Happy&nbsp;coding.</p>
+</section>
+        </article>
+      </div>
+    </div>
+    <footer>
+      <div class="content-wrap">
+        <div class="nav"><a href="http://saumya.github.io/ray/">« Full blog</a></div>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+          var disqus_shortname = 'saumya';
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        <section class="about"><p><a href="http://www.saumyaray.com/">Saumya</a> believes in The God.</p>
+<p>A maker of things and curious about everything. Continuous learning is, what fuels him. This blog itself, reflects one of many things he is trying at all the time.</p>
+<p>He is <a href="https://twitter.com/saumya">@saumya</a> on Twitter. </p>
+<span class="nav"><a href="http://saumya.github.io/ray/">Blog Home</a><a href="http://saumya.github.io/ray/archive.html">Archives</a></span>
+        </section>
+        <section class="copy">
+          <p>&copy; 2014 saumya ray &mdash; powered by&nbsp;     <a href="https://github.com/jnordberg/wintersmith">Wintersmith&nbsp;</a>
+            <p><a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
+          </p>
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>
