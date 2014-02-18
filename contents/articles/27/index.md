@@ -27,4 +27,4 @@ Happy synching.
 [2]: http://aws.amazon.com/s3/
 [3]: https://github.com/rogerwang/node-webkit
 [4]: http://docs.aws.amazon.com/AWSJavaScriptSDK/guide/browser-intro.html
-[5]: https://github.com/saumya/amazonS3Sync
+[5]: https://github.com/saumya/AmazonS3Sync
