@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width">
-    <title>Amazon S3 Sync with NodeJS - Saumya
+    <title>Amazon S3, file system. - Saumya
     </title>
     <link rel="alternate" href="http://saumya.github.io/ray/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
     <link rel="stylesheet" href="http://saumya.github.io/ray/css/main.css">
@@ -13,24 +13,17 @@
   <body class="article-detail">
     <header class="header">
       <div class="content-wrap">
-        <h1>Amazon S3 Sync with NodeJS</h1>
+        <h1>Amazon S3, file system.</h1>
         <p class="author">Written by <span class="author"><a href="mailto:contact@saumyaray.com">Saumya</a></span>
         </p>
-        <p class="date">14. February 2014</p>
+        <p class="date">19. February 2014</p>
       </div>
     </header>
     <div id="content">
       <div class="content-wrap">
         <article class="article">
-          <section class="content"><p>This is my first practical cross-platform desktop application written in <a href="http://nodejs.org/">NodeJS</a>. The application is a simple desktop client to upload the changed files in a folder automatically to a bucket in <a href="http://aws.amazon.com/s3/">Amazon S3</a>. The main components, which make this application,&nbsp;are     </p>
-<ul>
-<li><a href="https://github.com/rogerwang/node-webkit">node-webkit</a></li>
-<li><a href="http://docs.aws.amazon.com/AWSJavaScriptSDK/guide/browser-intro.html">Amazon S3 <span class="caps">SDK</span> for&nbsp;browser</a></li>
-</ul>
-<p>Well, there is a <a href="http://nodejs.org/">NodeJS</a> module as well for the <span class="caps">SDK</span>, but I prefer to take it only browser way at the&nbsp;moment.     </p>
-<p>The <a href="https://github.com/saumya/AmazonS3Sync">source code</a> is available here and to run it, get a copy of the <a href="https://github.com/rogerwang/node-webkit">node-webkit</a> for your environment. And that makes a cross-platform application on <a href="http://nodejs.org/">NodeJS</a>.     </p>
-<p>Currently the application keeps an eye on a folder, you specify. Once a file is changed in that folder, is automatically uploaded to the ‘bucket’ you specify in the beginning of the application. Note, currently it just uploads the files, which are changed. It does not upload a new file in the folder or any existing&nbsp;file.</p>
-<p>Happy&nbsp;synching.</p>
+          <section class="content"><p>I had my hands dirty for the first time, in last couple of days, with Amazon Simple Storage Service (S3). I was playing with the javascript <span class="caps">SDK</span> and getting to know the environment in general. The first impression is, it just stores the files and folders. But, digging deep inside and playing with its APIs, made me realise that its different than the traditional storage.<br><code>Everything is just a pointer</code>, well thats how I see it.<br>Amazon says, everything is a file. So that means a folder is a file with a different naming convention. Thats it, if you get that, then the <span class="caps">API</span> is straight forward. And I must say from the beginning of the computer era, one thing has been consistent and that is file system. Now, the way, new storage solutions are emerging, it’s not actually different from others’ offers, but definitely different from traditional file systems. The new era of the file systems or more generally we can say data storage systems are emerging and Amazon is no different in that regard. So, all in all, a new storage system with a very simple SDK is&nbsp;exciting.</p>
+<p>Happy&nbsp;coding.</p>
 </section>
         </article>
       </div>
