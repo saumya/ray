@@ -15,29 +15,33 @@
       <guid isPermaLink="true">http://saumya.github.io/ray/articles/31/</guid>
       <author></author>
       <description>&lt;p&gt;There might be chances that you are re-writing a project or simply maintainig an old codebase of a &lt;a href=&quot;https://cordova.apache.org/&quot;&gt;Cordova&lt;/a&gt;(phonegap) application. In both the cases, its ideal to go for the lastest version of the library. Being said that, its not that straight forward to migrate a phonegap 2.x application to Phonegap 3.x. And if, the project uses a 1.x version of &lt;a href=&quot;http://jquery.com/&quot;&gt;jQuery&lt;/a&gt; with &lt;a href=&quot;https://jqueryui.com/&quot;&gt;jQuerymobile&lt;/a&gt;, you might want to update that to 2.x too, which adds up to more confusion and work, than solution. I will be focusing on &lt;a href=&quot;https://cordova.apache.org/&quot;&gt;Cordova&lt;/a&gt; rather than &lt;a href=&quot;http://phonegap.com/&quot;&gt;Phonegap&lt;/a&gt; here. Yes, they are different! They are supposed to be the same but there are differences.      &lt;/p&gt;
-&lt;p&gt;Here is a checklist to keep things in perspective.      &lt;/p&gt;
-&lt;p&gt;Cordova&lt;/p&gt;
+&lt;h3 id=&quot;here-is-a-checklist-to-keep-things-in-perspective-&quot;&gt;Here is a checklist to keep things in perspective.&lt;/h3&gt;
+&lt;h3 id=&quot;cordova&quot;&gt;Cordova&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Getting used to &lt;a href=&quot;http://nodejs.org/&quot;&gt;NodeJS&lt;/a&gt;, yes, thats now mandatory to use.&lt;/li&gt;
-&lt;li&gt;Getting used to &lt;a href=&quot;https://cordova.apache.org/&quot;&gt;Cordova&lt;/a&gt; and &lt;a href=&quot;http://phonegap.com/&quot;&gt;Phonegap&lt;/a&gt;, they are different.&lt;/li&gt;
-&lt;li&gt;Know the difference between &lt;a href=&quot;https://cordova.apache.org/&quot;&gt;Cordova&lt;/a&gt; and &lt;a href=&quot;http://phonegap.com/&quot;&gt;Phonegap&lt;/a&gt;, at least what they do internally.&lt;/li&gt;
+&lt;li&gt;Get used to &lt;a href=&quot;http://nodejs.org/&quot;&gt;NodeJS&lt;/a&gt;. Yes, thats now mandatory to use.&lt;/li&gt;
+&lt;li&gt;Get used to &lt;a href=&quot;https://cordova.apache.org/&quot;&gt;Cordova&lt;/a&gt; and &lt;a href=&quot;http://phonegap.com/&quot;&gt;Phonegap&lt;/a&gt;, they are different.&lt;/li&gt;
+&lt;li&gt;Know the difference between &lt;a href=&quot;https://cordova.apache.org/&quot;&gt;Cordova&lt;/a&gt; and &lt;a href=&quot;http://phonegap.com/&quot;&gt;Phonegap&lt;/a&gt;, at-least what they do internally.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://cordova.apache.org/docs/en/3.4.0/guide_overview_index.md.html#Overview&quot;&gt;Read completely the getting started&lt;/a&gt; with &lt;a href=&quot;https://cordova.apache.org/&quot;&gt;Cordova&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;Do not confuse with &lt;a href=&quot;http://cordova.apache.org/docs/en/3.4.0/guide_overview_index.md.html#Overview_development_paths&quot;&gt;Web Project Dev&lt;/a&gt; work flow, if possible avoid it altogether.&lt;/li&gt;
 &lt;li&gt;Start with &lt;a href=&quot;http://cordova.apache.org/docs/en/3.4.0/guide_overview_index.md.html#Overview_development_paths&quot;&gt;Native Platform Dev&lt;/a&gt; workflow. This is the one, which is closer to the older version workflow.&lt;/li&gt;
 &lt;li&gt;Do not use &lt;a href=&quot;http://cordova.apache.org/docs/en/3.4.0/guide_cli_index.md.html#The%20Command-Line%20Interface&quot;&gt;CLI&lt;/a&gt; for creating project. You can download the &lt;a href=&quot;http://archive.apache.org/dist/cordova/&quot;&gt;whole archive for a version&lt;/a&gt; as you used to in the previous versions and still can create project with it.&lt;/li&gt;
-&lt;li&gt;Get used to &lt;a href=&quot;http://cordova.apache.org/docs/en/3.4.0/plugin_ref_plugman.md.html#Using%20Plugman%20to%20Manage%20Plugins&quot;&gt;Plugman&lt;/a&gt; to manage plugins. Everything is now a plugin. That means, a default project created is nothing more than a website. If you need to interact with a device, you have to add plugin. In &lt;a href=&quot;http://cordova.apache.org/docs/en/3.4.0/guide_overview_index.md.html#Overview_development_paths&quot;&gt;Native Platform Dev&lt;/a&gt;, these are managed by &lt;a href=&quot;http://cordova.apache.org/docs/en/3.4.0/plugin_ref_plugman.md.html#Using%20Plugman%20to%20Manage%20Plugins&quot;&gt;Plugman&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;For the first couple of trials, &lt;a href=&quot;http://cordova.apache.org/docs/en/3.4.0/plugin_ref_plugman.md.html#Using%20Plugman%20to%20Manage%20Plugins_installing_core_plugins&quot;&gt;add all the plugins&lt;/a&gt;. That will make the project, behave as the older version projects, where everything is set by default. The document to install plugin is misleading, use this
-instead of&lt;pre&gt;&lt;code&gt;plugman --platform --project --plugin org.apache.cordova.battery-status
-&lt;/code&gt;&lt;/pre&gt;use, the commands as below. The document is missing &lt;code&gt;--install&lt;/code&gt; from the command!&lt;pre&gt;&lt;code&gt;plugman --install --platform --project --plugin org.apache.cordova.battery-status
-&lt;/code&gt;&lt;/pre&gt;The actual code will look as&lt;pre&gt;&lt;code&gt;plugman --install --ios --path/to/project/folder --plugin org.apache.cordova.battery-status
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;Get used to &lt;a href=&quot;http://cordova.apache.org/docs/en/3.4.0/plugin_ref_plugman.md.html#Using%20Plugman%20to%20Manage%20Plugins&quot;&gt;Plugman&lt;/a&gt; to manage plugins. Everything is now a plugin. That means, a default project created, is nothing more than a website. If you need to interact with a device, you have to add plugin. In &lt;a href=&quot;http://cordova.apache.org/docs/en/3.4.0/guide_overview_index.md.html#Overview_development_paths&quot;&gt;Native Platform Dev&lt;/a&gt;, these are managed by &lt;a href=&quot;http://cordova.apache.org/docs/en/3.4.0/plugin_ref_plugman.md.html#Using%20Plugman%20to%20Manage%20Plugins&quot;&gt;Plugman&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;For the first couple of trials, &lt;a href=&quot;http://cordova.apache.org/docs/en/3.4.0/plugin_ref_plugman.md.html#Using%20Plugman%20to%20Manage%20Plugins_installing_core_plugins&quot;&gt;add all the plugins&lt;/a&gt;. That will make the project, behave as the older version projects, where everything is set by default. The document to install plugin is misleading.     &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;Instead&lt;/code&gt; of&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;plugman --platform --project --plugin org.apache.cordova.battery-status
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;code&gt;Use&lt;/code&gt;, the commands as below. The document is missing &lt;code&gt;--install&lt;/code&gt; from the command!&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;plugman --install --platform --project --plugin org.apache.cordova.battery-status
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The actual code will look as&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;plugman --install --ios --path/to/project/folder --plugin org.apache.cordova.battery-status
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
 &lt;li&gt;Get used to &lt;code&gt;config.xml&lt;/code&gt;, &lt;a href=&quot;http://cordova.apache.org/docs/en/3.4.0/config_ref_index.md.html#The%2520config.xml%2520File&quot;&gt;for configuring the whole project&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;jQuery and jQueryMobile&lt;/p&gt;
+&lt;h3 id=&quot;jquery-and-jquerymobile&quot;&gt;jQuery and jQueryMobile&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Update the &lt;a href=&quot;http://api.jquerymobile.com/jQuery.mobile.changePage/&quot;&gt;page change code&lt;/a&gt; to remove the deprecated one and use the new one.&lt;/li&gt;
 &lt;li&gt;Update the event listener code from deprecated &lt;a href=&quot;http://api.jquery.com/live/&quot;&gt;live()&lt;/a&gt; to &lt;a href=&quot;http://api.jquery.com/on/&quot;&gt;on()&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Keep and eye on all the &lt;a href=&quot;http://api.jquery.com/category/deprecated/&quot;&gt;deprecated&lt;/a&gt; APIs of jQuery&lt;/li&gt;
+&lt;li&gt;Keep an eye on all the &lt;a href=&quot;http://api.jquery.com/category/deprecated/&quot;&gt;deprecated&lt;/a&gt; APIs of jQuery&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;That should make you compile your old project in the new code.&lt;/p&gt;
 &lt;p&gt;Happy transitioning.&lt;/p&gt;

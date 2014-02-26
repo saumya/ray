@@ -27,29 +27,33 @@
             <h2><a href="http://saumya.github.io/ray/articles/31/">Migration checklist for Cordova(Phonegap) application from version 2.x to 3.x</a></h2>
           </header>
           <section class="content"><p>There might be chances that you are re-writing a project or simply maintainig an old codebase of a <a href="https://cordova.apache.org/">Cordova</a>(phonegap) application. In both the cases, its ideal to go for the lastest version of the library. Being said that, its not that straight forward to migrate a phonegap 2.x application to Phonegap 3.x. And if, the project uses a 1.x version of <a href="http://jquery.com/">jQuery</a> with <a href="https://jqueryui.com/">jQuerymobile</a>, you might want to update that to 2.x too, which adds up to more confusion and work, than solution. I will be focusing on <a href="https://cordova.apache.org/">Cordova</a> rather than <a href="http://phonegap.com/">Phonegap</a> here. Yes, they are different! They are supposed to be the same but there are&nbsp;differences.      </p>
-<p>Here is a checklist to keep things in&nbsp;perspective.      </p>
-<p>Cordova</p>
+<h3 id="here-is-a-checklist-to-keep-things-in-perspective-">Here is a checklist to keep things in&nbsp;perspective.</h3>
+<h3 id="cordova">Cordova</h3>
 <ul>
-<li>Getting used to <a href="http://nodejs.org/">NodeJS</a>, yes, thats now mandatory to&nbsp;use.</li>
-<li>Getting used to <a href="https://cordova.apache.org/">Cordova</a> and <a href="http://phonegap.com/">Phonegap</a>, they are&nbsp;different.</li>
-<li>Know the difference between <a href="https://cordova.apache.org/">Cordova</a> and <a href="http://phonegap.com/">Phonegap</a>, at least what they do&nbsp;internally.</li>
+<li>Get used to <a href="http://nodejs.org/">NodeJS</a>. Yes, thats now mandatory to&nbsp;use.</li>
+<li>Get used to <a href="https://cordova.apache.org/">Cordova</a> and <a href="http://phonegap.com/">Phonegap</a>, they are&nbsp;different.</li>
+<li>Know the difference between <a href="https://cordova.apache.org/">Cordova</a> and <a href="http://phonegap.com/">Phonegap</a>, at-least what they do&nbsp;internally.</li>
 <li><a href="http://cordova.apache.org/docs/en/3.4.0/guide_overview_index.md.html#Overview">Read completely the getting started</a> with <a href="https://cordova.apache.org/">Cordova</a>.</li>
 <li>Do not confuse with <a href="http://cordova.apache.org/docs/en/3.4.0/guide_overview_index.md.html#Overview_development_paths">Web Project Dev</a> work flow, if possible avoid it&nbsp;altogether.</li>
 <li>Start with <a href="http://cordova.apache.org/docs/en/3.4.0/guide_overview_index.md.html#Overview_development_paths">Native Platform Dev</a> workflow. This is the one, which is closer to the older version&nbsp;workflow.</li>
 <li>Do not use <a href="http://cordova.apache.org/docs/en/3.4.0/guide_cli_index.md.html#The%20Command-Line%20Interface"><span class="caps">CLI</span></a> for creating project. You can download the <a href="http://archive.apache.org/dist/cordova/">whole archive for a version</a> as you used to in the previous versions and still can create project with&nbsp;it.</li>
-<li>Get used to <a href="http://cordova.apache.org/docs/en/3.4.0/plugin_ref_plugman.md.html#Using%20Plugman%20to%20Manage%20Plugins">Plugman</a> to manage plugins. Everything is now a plugin. That means, a default project created is nothing more than a website. If you need to interact with a device, you have to add plugin. In <a href="http://cordova.apache.org/docs/en/3.4.0/guide_overview_index.md.html#Overview_development_paths">Native Platform Dev</a>, these are managed by <a href="http://cordova.apache.org/docs/en/3.4.0/plugin_ref_plugman.md.html#Using%20Plugman%20to%20Manage%20Plugins">Plugman</a>.</li>
-<li>For the first couple of trials, <a href="http://cordova.apache.org/docs/en/3.4.0/plugin_ref_plugman.md.html#Using%20Plugman%20to%20Manage%20Plugins_installing_core_plugins">add all the plugins</a>. That will make the project, behave as the older version projects, where everything is set by default. The document to install plugin is misleading, use this
-instead of<pre><code>plugman --platform --project --plugin org.apache.cordova.battery-status
-</code></pre>use, the commands as below. The document is missing <code>--install</code> from the command!<pre><code>plugman --install --platform --project --plugin org.apache.cordova.battery-status
-</code></pre>The actual code will look as<pre><code>plugman --install --ios --path/to/project/folder --plugin org.apache.cordova.battery-status
-</code></pre></li>
+<li>Get used to <a href="http://cordova.apache.org/docs/en/3.4.0/plugin_ref_plugman.md.html#Using%20Plugman%20to%20Manage%20Plugins">Plugman</a> to manage plugins. Everything is now a plugin. That means, a default project created, is nothing more than a website. If you need to interact with a device, you have to add plugin. In <a href="http://cordova.apache.org/docs/en/3.4.0/guide_overview_index.md.html#Overview_development_paths">Native Platform Dev</a>, these are managed by <a href="http://cordova.apache.org/docs/en/3.4.0/plugin_ref_plugman.md.html#Using%20Plugman%20to%20Manage%20Plugins">Plugman</a>.</li>
+<li>For the first couple of trials, <a href="http://cordova.apache.org/docs/en/3.4.0/plugin_ref_plugman.md.html#Using%20Plugman%20to%20Manage%20Plugins_installing_core_plugins">add all the plugins</a>. That will make the project, behave as the older version projects, where everything is set by default. The document to install plugin is&nbsp;misleading.     </li>
+</ul>
+<p><code>Instead</code> of</p>
+<pre><code>plugman --platform --project --plugin org.apache.cordova.battery-status
+</code></pre><p><code>Use</code>, the commands as below. The document is missing <code>--install</code> from the&nbsp;command!</p>
+<pre><code>plugman --install --platform --project --plugin org.apache.cordova.battery-status
+</code></pre><p>The actual code will look&nbsp;as</p>
+<pre><code>plugman --install --ios --path/to/project/folder --plugin org.apache.cordova.battery-status
+</code></pre><ul>
 <li>Get used to <code>config.xml</code>, <a href="http://cordova.apache.org/docs/en/3.4.0/config_ref_index.md.html#The%2520config.xml%2520File">for configuring the whole&nbsp;project</a></li>
 </ul>
-<p>jQuery and&nbsp;jQueryMobile</p>
+<h3 id="jquery-and-jquerymobile">jQuery and&nbsp;jQueryMobile</h3>
 <ul>
 <li>Update the <a href="http://api.jquerymobile.com/jQuery.mobile.changePage/">page change code</a> to remove the deprecated one and use the new&nbsp;one.</li>
 <li>Update the event listener code from deprecated <a href="http://api.jquery.com/live/">live()</a> to <a href="http://api.jquery.com/on/">on()</a>.</li>
-<li>Keep and eye on all the <a href="http://api.jquery.com/category/deprecated/">deprecated</a> APIs of&nbsp;jQuery</li>
+<li>Keep an eye on all the <a href="http://api.jquery.com/category/deprecated/">deprecated</a> APIs of&nbsp;jQuery</li>
 </ul>
 <p>That should make you compile your old project in the new&nbsp;code.</p>
 <p>Happy&nbsp;transitioning.</p>
