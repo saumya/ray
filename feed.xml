@@ -5,9 +5,23 @@
     <atom:link href="http://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Thu, 27 Feb 2014 05:30:00 +0630</pubDate>
+    <pubDate>Sat, 15 Mar 2014 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Back to Lime (OpenFL)</title>
+      <link>http://saumya.github.io/ray/articles/32/</link>
+      <pubDate>Sat, 15 Mar 2014 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">http://saumya.github.io/ray/articles/32/</guid>
+      <author></author>
+      <description>&lt;p&gt;Its almost 2 months, I did a project on &lt;a href=&quot;https://github.com/openfl/lime&quot;&gt;Lime&lt;/a&gt;(&lt;a href=&quot;http://www.openfl.org/&quot;&gt;OpneFL&lt;/a&gt;). Fortunately this weekend is the time and I started it. Well, first thing to mention is, there is a huge update to the whole tooling and many libraries of the &lt;a href=&quot;http://haxe.org/&quot;&gt;HAXE&lt;/a&gt;, Lime and OpenFL land. Allmost all the libs are updated.&lt;br&gt;Upon the develoment land on &lt;code&gt;mac&lt;/code&gt;, the first thing I noticed is, there is no need to type&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;haxelib run openfl test neko
+haxelib run lime test neko
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This is just as simple as calling directly as below.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;lime test neko
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Yeah. Thats good start. I thought to document it here, as I have used to the commands on &lt;code&gt;mac&lt;/code&gt; and suddenly its changed (though changed for good), a note would be a point of reference in the future to refer to.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>Migration checklist for Cordova(Phonegap) application from version 2.x to 3.x</title>
       <link>http://saumya.github.io/ray/articles/31/</link>
