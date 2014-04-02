@@ -5,9 +5,46 @@
     <atom:link href="http://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Sat, 15 Mar 2014 05:30:00 +0630</pubDate>
+    <pubDate>Thu, 03 Apr 2014 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>jQuery and fixing AJAX cache for GET calls</title>
+      <link>http://saumya.github.io/ray/articles/33/</link>
+      <pubDate>Thu, 03 Apr 2014 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">http://saumya.github.io/ray/articles/33/</guid>
+      <author></author>
+      <description>&lt;p&gt;It will come to you very soon, if you are trying to develop any decent webapp or phonegap mobile app using &lt;a href=&quot;http://jquery.com/&quot;&gt;jQuery&lt;/a&gt;.&lt;br&gt;The problem is, if we have the same &lt;code&gt;GET&lt;/code&gt; request multiple times, by default jQuery will cache the request. The end result is the response same as the first response!! Well, there is a setting in jQuery AJAX setup, where in we write &lt;code&gt;cache:false&lt;/code&gt; and that should work. Well, depending upon how the API is written on the server side, this call might not work! There are many reasons as to why it may not work, one simple reason is, to understand, how &lt;a href=&quot;http://jquery.com/&quot;&gt;jQuery&lt;/a&gt; behaves, when we set &lt;code&gt;cache:false&lt;/code&gt; as below.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; apiURL = &lt;span class=&quot;string&quot;&gt;&quot;my/api/server/URI&quot;&lt;/span&gt;;
+$.ajax({
+    url:apiURL,
+    cache: &lt;span class=&quot;literal&quot;&gt;false&lt;/span&gt;,
+    success:&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(result)&lt;/span&gt;{&lt;/span&gt;
+        &lt;span class=&quot;comment&quot;&gt;//&lt;/span&gt;
+    },
+    error:&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(data)&lt;/span&gt;{&lt;/span&gt;           
+        &lt;span class=&quot;comment&quot;&gt;//            &lt;/span&gt;
+    }   
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now, &lt;a href=&quot;http://jquery.com/&quot;&gt;jQuery&lt;/a&gt; will append &lt;code&gt;_={timestamp}&lt;/code&gt; to the GET parameters. Here is the &lt;a href=&quot;https://api.jquery.com/jQuery.ajax/&quot;&gt;official documentation&lt;/a&gt; of the same. The service call will fail, if this extra parameter is not handled properly. A little workarround, fixed this for me, which is appending the timestamp mannually by hand instead of setting &lt;code&gt;cache: false&lt;/code&gt; in AJAX setup of &lt;a href=&quot;http://jquery.com/&quot;&gt;jQuery&lt;/a&gt;. The modified code looks as this.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; timeStamp = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;Date&lt;/span&gt;().getTime();
+&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; apiURL = &lt;span class=&quot;string&quot;&gt;&quot;my/api/server/URI/&quot;&lt;/span&gt;+timeStamp;
+$.ajax({
+    url:apiURL,
+    &lt;span class=&quot;comment&quot;&gt;//cache: false,//not needed now&lt;/span&gt;
+    success:&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(result)&lt;/span&gt;{&lt;/span&gt;
+        &lt;span class=&quot;comment&quot;&gt;//&lt;/span&gt;
+    },
+    error:&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(data)&lt;/span&gt;{&lt;/span&gt;           
+        &lt;span class=&quot;comment&quot;&gt;//            &lt;/span&gt;
+    }   
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Well, that worked for me as my API end point was not handling ‘_’(underscore) properly, but could handle the extra parameters.&lt;br&gt;Depending upon the situations, find a right place and &lt;code&gt;add timestamp mannually&lt;/code&gt;, to fix the AJAX cache instead of setting it in the setup.     &lt;/p&gt;
+&lt;p&gt;Happy Coding.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>Back to Lime (OpenFL)</title>
       <link>http://saumya.github.io/ray/articles/32/</link>
