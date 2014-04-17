@@ -5,9 +5,65 @@
     <atom:link href="http://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Thu, 03 Apr 2014 05:30:00 +0630</pubDate>
+    <pubDate>Fri, 18 Apr 2014 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Understanding BackboneJS View Event, jQuery Event and trigger()</title>
+      <link>http://saumya.github.io/ray/articles/34/</link>
+      <pubDate>Fri, 18 Apr 2014 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">http://saumya.github.io/ray/articles/34/</guid>
+      <author></author>
+      <description>&lt;p&gt;The fun in working with &lt;a href=&quot;http://backbonejs.org/&quot;&gt;BackboneJS&lt;/a&gt; is freedom. The library is so decoupled that, one can really do any kind of architecture for an application. This freedom will come in your way if you do not know what is happening behind. We will be focusing on ‘Event’ here.&lt;br&gt;Working with &lt;a href=&quot;http://backbonejs.org/&quot;&gt;BackboneJS&lt;/a&gt; often involves working with &lt;a href=&quot;http://jquery.com/&quot;&gt;jQuery&lt;/a&gt; too as a DOM manupilation library. When we work on HTML and DOM, in terms of &lt;a href=&quot;http://backbonejs.org/&quot;&gt;BackboneJS&lt;/a&gt; we are working on View. At this point we must understand, that this BackboneView can dispatch event and the DOM we are dealing with also is capable of dispatching event. The point to note here is event dispatched through &lt;a href=&quot;http://backbonejs.org/&quot;&gt;BackboneJS&lt;/a&gt; framework, does not bubble. Where as the default DOM events bubble. Well, since we generally work with &lt;a href=&quot;http://jquery.com/&quot;&gt;jQuery&lt;/a&gt; for DOM manupilation, events fired through &lt;a href=&quot;http://jquery.com/&quot;&gt;jQuery&lt;/a&gt; also has the same effect as DOM events, they bubble. Working with a &lt;a href=&quot;http://backbonejs.org/&quot;&gt;BackboneJS&lt;/a&gt; ViewObject, we deal with &lt;code&gt;el&lt;/code&gt; of the ViewObject. &lt;a href=&quot;http://backbonejs.org/&quot;&gt;BackboneJS&lt;/a&gt; also provides a &lt;code&gt;$el&lt;/code&gt; on each view. Take a note of this &lt;code&gt;$el&lt;/code&gt;, which is a &lt;a href=&quot;http://jquery.com/&quot;&gt;jQuery&lt;/a&gt; object.&lt;br&gt;Dispatching an Event in &lt;a href=&quot;http://backbonejs.org/&quot;&gt;BackboneJS&lt;/a&gt; is done as&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//somewhere inside the View&lt;/span&gt;
+&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.trigger(&lt;span class=&quot;string&quot;&gt;'myEvent'&lt;/span&gt;,{&lt;span class=&quot;string&quot;&gt;'data'&lt;/span&gt;:&lt;span class=&quot;string&quot;&gt;'myValue'&lt;/span&gt;});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The basic syntax for &lt;a href=&quot;http://backbonejs.org/#Events-trigger&quot;&gt;dispatching an event in BackboneJS&lt;/a&gt; is&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;object.trigger(event, [*args])
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Remember that the &lt;code&gt;second parameter&lt;/code&gt; in the &lt;code&gt;trigger&lt;/code&gt; is &lt;code&gt;data&lt;/code&gt; to be passed to the event-handler. Registering the listener for the event will be as &lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.listenTo(&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.viewObject, &lt;span class=&quot;string&quot;&gt;'myEvent'&lt;/span&gt;, &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.onMyEvent);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now writing a handler for this event will look as&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//handler&lt;/span&gt;
+onMyEvent: &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(eventdata)&lt;/span&gt;{&lt;/span&gt;
+    console.log(eventdata);&lt;span class=&quot;comment&quot;&gt;//example: getting data from the event&lt;/span&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;So, we get the whole &lt;code&gt;data&lt;/code&gt; ( passed to the &lt;code&gt;trigger()&lt;/code&gt; method as second parameter ) , as the arguement to the handler. &lt;/p&gt;
+&lt;p&gt;Now lets focus on the DOM event for the same scenario.
+The dispatcher code will look as&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.$el.trigger(&lt;span class=&quot;string&quot;&gt;'myEvent'&lt;/span&gt;,{&lt;span class=&quot;string&quot;&gt;'data'&lt;/span&gt;:&lt;span class=&quot;string&quot;&gt;'myValue'&lt;/span&gt;});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Here, actually it seems that we are using &lt;a href=&quot;http://backbonejs.org/&quot;&gt;BackboneJS&lt;/a&gt; Event, but since we are dealing with &lt;code&gt;$el&lt;/code&gt;, we are actually &lt;a href=&quot;http://api.jquery.com/trigger/&quot;&gt;triggering a DOM event through jQuery&lt;/a&gt;. Since this is a DOM event, it has all the three phases in its life cycle; capture, target and bubble. So, we can really catch this event on a parent view of &lt;a href=&quot;http://backbonejs.org/&quot;&gt;BackboneJS&lt;/a&gt; and the code would be like &lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;events: {
+    &lt;span class=&quot;string&quot;&gt;'myEvent'&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;'onMyEvent'&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;//this is actually listening to DOM event&lt;/span&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The handler code will look as &lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;onMyEvent : &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(event,data)&lt;/span&gt;{&lt;/span&gt;
+    event.preventDefault();
+    &lt;span class=&quot;comment&quot;&gt;//code as required by application&lt;/span&gt;
+    &lt;span class=&quot;comment&quot;&gt;//But, see the second arguement is actually 'data', passed to 'trigger()'&lt;/span&gt;
+    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;false&lt;/span&gt;;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Note the difference in event handler here. We have now two arguements and the second arguement is the &lt;code&gt;data&lt;/code&gt; that is passed in to &lt;code&gt;trigger()&lt;/code&gt; call above.
+All that is to it is, how you &lt;code&gt;trigger&lt;/code&gt; the event, from the two ways below.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;From the [BackboneJS] View&lt;/li&gt;
+&lt;li&gt;From the DOM element     &lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;And then, writing a proper event-handler for the respective Event.     &lt;/p&gt;
+&lt;p&gt;In &lt;a href=&quot;http://backbonejs.org/&quot;&gt;BackboneJS&lt;/a&gt;, sometimes you need to deal with situations, where you just want to listen for events without knowing the other Views. That way de-coupling the application. There is Mediator design pattern to do a central event dispatching system for the whole &lt;a href=&quot;http://backbonejs.org/&quot;&gt;BackboneJS&lt;/a&gt; application. Then there is this little but powerful thing, called bubbling, already available to native DOM.      &lt;/p&gt;
+&lt;p&gt;Here are the links to the two trigger methods;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;http://api.jquery.com/trigger/&quot;&gt;jQuery trigger&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://backbonejs.org/#Events-trigger&quot;&gt;BackboneJS trigger&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Happy Bubbling.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>jQuery and fixing AJAX cache for GET calls</title>
       <link>http://saumya.github.io/ray/articles/33/</link>

@@ -4,28 +4,24 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width">
-    <title>Saumya
+    <title>Understanding BackboneJS View Event, jQuery Event and trigger() - Saumya
     </title>
     <link rel="alternate" href="http://saumya.github.io/ray/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
     <link rel="stylesheet" href="http://saumya.github.io/ray/css/main.css">
     <link rel="stylesheet" href="http://saumya.github.io/ray/css/saumya.css">
   </head>
-  <body>
+  <body class="article-detail">
     <header class="header">
       <div class="content-wrap">
-        <div class="logo">
-          <h1><a href="http://saumya.github.io/ray">Saumya</a></h1>
-          <p class="description">Where there is a will, there is a way.</p>
-        </div>
+        <h1>Understanding BackboneJS View Event, jQuery Event and trigger()</h1>
+        <p class="author">Written by <span class="author"><a href="mailto:contact@saumyaray.com">Saumya</a></span>
+        </p>
+        <p class="date">18. April 2014</p>
       </div>
     </header>
     <div id="content">
       <div class="content-wrap">
-        <article class="article intro">
-          <header>
-            <p class="date"><span>18. April 2014</span></p>
-            <h2><a href="http://saumya.github.io/ray/articles/34/">Understanding BackboneJS View Event, jQuery Event and trigger()</a></h2>
-          </header>
+        <article class="article">
           <section class="content"><p>The fun in working with <a href="http://backbonejs.org/">BackboneJS</a> is freedom. The library is so decoupled that, one can really do any kind of architecture for an application. This freedom will come in your way if you do not know what is happening behind. We will be focusing on ‘Event’ here.<br>Working with <a href="http://backbonejs.org/">BackboneJS</a> often involves working with <a href="http://jquery.com/">jQuery</a> too as a <span class="caps">DOM</span> manupilation library. When we work on HTML and DOM, in terms of <a href="http://backbonejs.org/">BackboneJS</a> we are working on View. At this point we must understand, that this BackboneView can dispatch event and the <span class="caps">DOM</span> we are dealing with also is capable of dispatching event. The point to note here is event dispatched through <a href="http://backbonejs.org/">BackboneJS</a> framework, does not bubble. Where as the default <span class="caps">DOM</span> events bubble. Well, since we generally work with <a href="http://jquery.com/">jQuery</a> for <span class="caps">DOM</span> manupilation, events fired through <a href="http://jquery.com/">jQuery</a> also has the same effect as <span class="caps">DOM</span> events, they bubble. Working with a <a href="http://backbonejs.org/">BackboneJS</a> ViewObject, we deal with <code>el</code> of the ViewObject. <a href="http://backbonejs.org/">BackboneJS</a> also provides a <code>$el</code> on each view. Take a note of this <code>$el</code>, which is a <a href="http://jquery.com/">jQuery</a> object.<br>Dispatching an Event in <a href="http://backbonejs.org/">BackboneJS</a> is done&nbsp;as</p>
 <pre><code class="lang-javascript"><span class="comment">//somewhere inside the View</span>
 <span class="keyword">this</span>.trigger(<span class="string">'myEvent'</span>,{<span class="string">'data'</span>:<span class="string">'myValue'</span>});
@@ -74,66 +70,23 @@ All that is to it is, how you <code>trigger</code> the event, from the two ways&
 <li><a href="http://backbonejs.org/#Events-trigger">BackboneJS&nbsp;trigger</a></li>
 </ol>
 <p>Happy&nbsp;Bubbling.</p>
-
-          </section>
-        </article>
-        <article class="article intro">
-          <header>
-            <p class="date"><span>03. April 2014</span></p>
-            <h2><a href="http://saumya.github.io/ray/articles/33/">jQuery and fixing AJAX cache for GET calls</a></h2>
-          </header>
-          <section class="content"><p>It will come to you very soon, if you are trying to develop any decent webapp or phonegap mobile app using <a href="http://jquery.com/">jQuery</a>.<br>The problem is, if we have the same <code>GET</code> request multiple times, by default jQuery will cache the request. The end result is the response same as the first response!! Well, there is a setting in jQuery <span class="caps">AJAX</span> setup, where in we write <code>cache:false</code> and that should work. Well, depending upon how the <span class="caps">API</span> is written on the server side, this call might not work! There are many reasons as to why it may not work, one simple reason is, to understand, how <a href="http://jquery.com/">jQuery</a> behaves, when we set <code>cache:false</code> as&nbsp;below.</p>
-<pre><code class="lang-javascript"><span class="keyword">var</span> apiURL = <span class="string">"my/api/server/<span class="caps">URI</span>"</span>;
-$.ajax({
-    url:apiURL,
-    cache: <span class="literal">false</span>,
-    success:<span class="function"><span class="keyword">function</span><span class="params">(result)</span>{</span>
-        <span class="comment">//</span>
-    },
-    error:<span class="function"><span class="keyword">function</span><span class="params">(data)</span>{</span>           
-        <span class="comment">//            </span>
-    }   
-});
-</code></pre>
-<p>Now, <a href="http://jquery.com/">jQuery</a> will append <code>_={timestamp}</code> to the <span class="caps">GET</span> parameters. Here is the <a href="https://api.jquery.com/jQuery.ajax/">official documentation</a> of the same. The service call will fail, if this extra parameter is not handled properly. A little workarround, fixed this for me, which is appending the timestamp mannually by hand instead of setting <code>cache: false</code> in <span class="caps">AJAX</span> setup of <a href="http://jquery.com/">jQuery</a>. The modified code looks as&nbsp;this.</p>
-<pre><code class="lang-javascript"><span class="keyword">var</span> timeStamp = <span class="keyword">new</span> <span class="built_in">Date</span>().getTime();
-<span class="keyword">var</span> apiURL = <span class="string">"my/api/server/<span class="caps">URI</span>/"</span>+timeStamp;
-$.ajax({
-    url:apiURL,
-    <span class="comment">//cache: false,//not needed now</span>
-    success:<span class="function"><span class="keyword">function</span><span class="params">(result)</span>{</span>
-        <span class="comment">//</span>
-    },
-    error:<span class="function"><span class="keyword">function</span><span class="params">(data)</span>{</span>           
-        <span class="comment">//            </span>
-    }   
-});
-</code></pre>
-<p>Well, that worked for me as my <span class="caps">API</span> end point was not handling ‘_’(underscore) properly, but could handle the extra parameters.<br>Depending upon the situations, find a right place and <code>add timestamp mannually</code>, to fix the <span class="caps">AJAX</span> cache instead of setting it in the&nbsp;setup.     </p>
-<p>Happy&nbsp;Coding.</p>
-
-          </section>
-        </article>
-        <article class="article intro">
-          <header>
-            <p class="date"><span>15. March 2014</span></p>
-            <h2><a href="http://saumya.github.io/ray/articles/32/">Back to Lime (OpenFL)</a></h2>
-          </header>
-          <section class="content"><p>Its almost 2 months, I did a project on <a href="https://github.com/openfl/lime">Lime</a>(<a href="http://www.openfl.org/">OpneFL</a>). Fortunately this weekend is the time and I started it. Well, first thing to mention is, there is a huge update to the whole tooling and many libraries of the <a href="http://haxe.org/"><span class="caps">HAXE</span></a>, Lime and OpenFL land. Allmost all the libs are updated.<br>Upon the develoment land on <code>mac</code>, the first thing I noticed is, there is no need to&nbsp;type</p>
-<pre><code>haxelib run openfl test neko
-haxelib run lime test neko
-</code></pre><p>This is just as simple as calling directly as&nbsp;below.</p>
-<pre><code>lime test neko
-</code></pre><p>Yeah. Thats good start. I thought to document it here, as I have used to the commands on <code>mac</code> and suddenly its changed (though changed for good), a note would be a point of reference in the future to refer&nbsp;to.</p>
-
-          </section>
+</section>
         </article>
       </div>
     </div>
     <footer>
       <div class="content-wrap">
-        <div class="nav"><a href="http://saumya.github.io/ray/archive.html">« Archives</a><a href="http://saumya.github.io/ray/page/2/">Next page »</a>
-        </div>
+        <div class="nav"><a href="http://saumya.github.io/ray/">« Full blog</a></div>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+          var disqus_shortname = 'saumya';
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
         <section class="about"><p><a href="http://www.saumyaray.com/">Saumya</a> believes in The God.</p>
 <p>A maker of things and curious about everything. Continuous learning is, what fuels him. This blog itself, reflects one of many things he is trying at all the time.</p>
 <p>He is <a href="https://twitter.com/saumya">@saumya</a> on Twitter. </p>
