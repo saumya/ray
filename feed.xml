@@ -9,9 +9,28 @@
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
     <item>
+      <title>Making a RESTful API with NodeJS and Express</title>
+      <link>http://saumya.github.io/ray/articles/36/</link>
+      <pubDate>Wed, 21 May 2014 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">http://saumya.github.io/ray/articles/36/</guid>
+      <author></author>
+      <description>&lt;p&gt;Here we will be making a basic REST API using the &lt;a href=&quot;http://expressjs.com/&quot;&gt;Express&lt;/a&gt; framework for &lt;a href=&quot;http://nodejs.org/&quot;&gt;NodeJS&lt;/a&gt;. I am not going in detail of how &lt;a href=&quot;http://expressjs.com/&quot;&gt;Express&lt;/a&gt; works, but straight to the code, which is as below. While this may look as a regular &lt;a href=&quot;http://expressjs.com/&quot;&gt;Express&lt;/a&gt; application, the important thing is the API can be called from any web server.      &lt;/p&gt;
+&lt;p&gt;&lt;script src=&quot;https://gist.github.com/saumya/402d2f035b23d7d08877.js&quot;&gt;&lt;/script&gt;
+While developing APIs, the first thing came to me is, how to call this from another server?! For thats the only reason we are exposing the API. And the answer is enable &lt;a href=&quot;http://enable-cors.org/&quot;&gt;CORS&lt;/a&gt;, cross-origin resource sharing. It simply means, make the API available or expose to these servers. we can specify the domain names individually or in this partcular case, we have exposed the API to any sever by specifying * .       &lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;app.all(&lt;span class=&quot;string&quot;&gt;'*'&lt;/span&gt;, &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(req, res, next)&lt;/span&gt; {&lt;/span&gt;
+  res.header(&lt;span class=&quot;string&quot;&gt;&quot;Access-Control-Allow-Origin&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;*&quot;&lt;/span&gt;);
+  res.header(&lt;span class=&quot;string&quot;&gt;&quot;Access-Control-Allow-Headers&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;X-Requested-With&quot;&lt;/span&gt;);
+  next();
+ });
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This means, upon any API call, add these headers first. And the header says, its allowed from any &lt;code&gt;*&lt;/code&gt; domain. So the result is, before the API call hits any route, it first comes into this &lt;code&gt;all&lt;/code&gt; binding and sets the values and then goes to the respective route.&lt;/p&gt;
+&lt;p&gt;Happy Noding.&lt;/p&gt;
+</description>
+    </item>
+    <item>
       <title>NodeJS, HTML5, JQuery and what you may come across in an interview</title>
       <link>http://saumya.github.io/ray/articles/35/</link>
-      <pubDate>Wed, 21 May 2014 05:30:00 +0630</pubDate>
+      <pubDate>Tue, 20 May 2014 05:30:00 +0630</pubDate>
       <guid isPermaLink="true">http://saumya.github.io/ray/articles/35/</guid>
       <author></author>
       <description>&lt;p&gt;This is not a surprise for me, but if you are new to the modern web development and working on Javascript stack, chances are that you come acrcoss these in everyday life. It may come from anywhere, your collegue, your senior, may be from an interviewer. But the cool thing is, you are right in those cases. All you have to do is ignore them and move on. I had seen this while working on Flash platform, when people were saying things about Flash and Flex. Now the platforms are changed but situation are same.          &lt;/p&gt;
