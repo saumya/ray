@@ -32,11 +32,14 @@ Once this step is done everything else is just normal [Ruby][1] update thing. Up
 ```
 rvm install ruby-2.1.1
 ```
-Now lets install a gem such as json, which can be done with the command below.
+Now lets install a gem such as json, which can be done with the command as follows. I was suggesting ~~sudo gem install json~~, but never do that. Instead use
 
 ```
-sudo gem install json
+gem install json
 ```
+It seems using `sudo` `is not advisable` to be used while using [rvm][2]. I got a reply in twitter for this blog post, from [@rvm_io][3] as 
+> looks good, the only hint - never use sudo with RVM, sudo "disables" RVM controlled ruby, the gem most likely is installed in system    
+
 Thats all to it. The important thing is, if we try to install the 2.x version of [Ruby][1] with old [rvm][2], it will not work. Actually, it does not show even in the known list of [Ruby][1].
 
 Happy upgrading.
@@ -49,3 +52,6 @@ Happy upgrading.
 
 [1]: https://www.ruby-lang.org/en/
 [2]: http://rvm.io/
+[3]: https://twitter.com/rvm_io
+
+
