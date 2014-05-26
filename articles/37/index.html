@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <title>Upgrading to Ruby 2.x from 1.x with rvm, on an upgrade from old OSX to Mavericks. - Saumya
+    </title>
+    <link rel="alternate" href="http://saumya.github.io/ray/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
+    <link rel="stylesheet" href="http://saumya.github.io/ray/css/main.css">
+    <link rel="stylesheet" href="http://saumya.github.io/ray/css/saumya.css">
+  </head>
+  <body class="article-detail">
+    <header class="header">
+      <div class="content-wrap">
+        <h1>Upgrading to Ruby 2.x from 1.x with rvm, on an upgrade from old OSX to Mavericks.</h1>
+        <p class="author">Written by <span class="author"><a href="mailto:contact@saumyaray.com">Saumya</a></span>
+        </p>
+        <p class="date">26. May 2014</p>
+      </div>
+    </header>
+    <div id="content">
+      <div class="content-wrap">
+        <article class="article">
+          <section class="content"><p>This is a situation when you have updated the <span class="caps">OS</span> from a previous version of Mac OSX to the latest version of the OSX Mavericks. Generally OSX ships with a version of <a href="https://www.ruby-lang.org/en/">Ruby</a>, which is latest by the time the <span class="caps">OS</span> is released. But when it comes to OSX upgrade and in this case particularly to OSX Mavericks, the operating system upgrade does not bring in the <a href="https://www.ruby-lang.org/en/">Ruby</a> upgrade. Rather, the old <a href="https://www.ruby-lang.org/en/">Ruby</a> lives on the new <span class="caps">OSX</span>. Well, if you have a decent understanding of managing <a href="https://www.ruby-lang.org/en/">Ruby</a> versions, you may be using one of the version management systems of <a href="https://www.ruby-lang.org/en/">Ruby</a>. I used to have <a href="http://rvm.io/">rvm</a>. Now I have an upgraded <span class="caps">OSX</span> but need to have the latest version of <a href="https://www.ruby-lang.org/en/">Ruby</a>. The steps are as&nbsp;below     </p>
+<ol>
+<li>Upgrade <a href="http://rvm.io/">rvm</a></li>
+<li>Upgrade <a href="https://www.ruby-lang.org/en/">Ruby</a></li>
+</ol>
+<p>Well, there are issues with these two steps as I found throughout the net. A simple search in the internet will make you aware of this fact. So the refined steps are as&nbsp;below.</p>
+<ol>
+<li>Install XCode Commandline&nbsp;tools</li>
+<li>Reinstall <a href="http://rvm.io/">rvm</a></li>
+<li>Upgrade <a href="https://www.ruby-lang.org/en/">Ruby</a></li>
+</ol>
+<p>In my case, I do not have to install the XCode commandline tools, probably because I am an iOS developer and always updates to the latest version of XCode along with the commandline tools. The thing to note here is with the <span class="caps">OSX</span> upgrade, the commandline tools of XCode is removed by the system. Even if, one installs the new <code>XCode</code>, the <code>commandline tools</code> are not included by default. All one has to do is <code>install</code> it (<code>again</code>).<br>Moving on, the next step is to upgrade the <a href="http://rvm.io/">rvm</a>. With the <span class="caps">OSX</span> upgrade, the normal <a href="http://rvm.io/">rvm</a> update does not&nbsp;work.</p>
+<pre><code>rvm get stable
+</code></pre><p>So, the fix is to <code>install rvm</code> (you can call it <code>again</code>) as&nbsp;below.</p>
+<pre><code>\curl -sSL https://get.rvm.io | bash -s stable
+</code></pre><p>Once this step is done everything else is just normal <a href="https://www.ruby-lang.org/en/">Ruby</a> update thing. Update <a href="https://www.ruby-lang.org/en/">Ruby</a> with the commad as&nbsp;below.</p>
+<pre><code>rvm install ruby-2.1.1
+</code></pre><p>Now lets install a gem such as json, which can be done with the command&nbsp;below.</p>
+<pre><code>sudo gem install json
+</code></pre><p>Thats all to it. The important thing is, if we try to install the 2.x version of <a href="https://www.ruby-lang.org/en/">Ruby</a> with old <a href="http://rvm.io/">rvm</a>, it will not work. Actually, it does not show even in the known list of <a href="https://www.ruby-lang.org/en/">Ruby</a>.</p>
+<p>Happy&nbsp;upgrading.</p>
+</section>
+        </article>
+      </div>
+    </div>
+    <footer>
+      <div class="content-wrap">
+        <div class="nav"><a href="http://saumya.github.io/ray/">« Full blog</a></div>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+          var disqus_shortname = 'saumya';
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        <section class="about"><p><a href="http://www.saumyaray.com/">Saumya</a> believes in The God.</p>
+<p>A maker of things and curious about everything. Continuous learning is, what fuels him. This blog itself, reflects one of many things he is trying at all the time.</p>
+<p>He is <a href="https://twitter.com/saumya">@saumya</a> on Twitter. </p>
+<span class="nav"><a href="http://saumya.github.io/ray/">Blog Home</a><a href="http://saumya.github.io/ray/archive.html">Archives</a></span>
+        </section>
+        <section class="copy">
+          <p>&copy; 2014 saumya ray &mdash; powered by&nbsp;     <a href="https://github.com/jnordberg/wintersmith">Wintersmith&nbsp;</a>
+            <p><a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
+          </p>
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>
