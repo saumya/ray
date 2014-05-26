@@ -43,9 +43,13 @@
 <pre><code>\curl -sSL https://get.rvm.io | bash -s stable
 </code></pre><p>Once this step is done everything else is just normal <a href="https://www.ruby-lang.org/en/">Ruby</a> update thing. Update <a href="https://www.ruby-lang.org/en/">Ruby</a> with the commad as&nbsp;below.</p>
 <pre><code>rvm install ruby-2.1.1
-</code></pre><p>Now lets install a gem such as json, which can be done with the command&nbsp;below.</p>
-<pre><code>sudo gem install json
-</code></pre><p>Thats all to it. The important thing is, if we try to install the 2.x version of <a href="https://www.ruby-lang.org/en/">Ruby</a> with old <a href="http://rvm.io/">rvm</a>, it will not work. Actually, it does not show even in the known list of <a href="https://www.ruby-lang.org/en/">Ruby</a>.</p>
+</code></pre><p>Now lets install a gem such as json, which can be done with the command as follows. I was suggesting <del>sudo gem install json</del>, but never do that. Instead&nbsp;use</p>
+<pre><code>gem install json
+</code></pre><p>It seems using <code>sudo</code> <code>is not advisable</code> to be used while using <a href="http://rvm.io/">rvm</a>. I got a reply in twitter for this blog post, from <a href="https://twitter.com/rvm_io">@rvm_io</a>&nbsp;as </p>
+<blockquote>
+<p>looks good, the only hint - never use sudo with <span class="caps">RVM</span>, sudo “disables” RVM controlled ruby, the gem most likely is installed in&nbsp;system    </p>
+</blockquote>
+<p>Thats all to it. The important thing is, if we try to install the 2.x version of <a href="https://www.ruby-lang.org/en/">Ruby</a> with old <a href="http://rvm.io/">rvm</a>, it will not work. Actually, it does not show even in the known list of <a href="https://www.ruby-lang.org/en/">Ruby</a>.</p>
 <p>Happy&nbsp;upgrading.</p>
 
           </section>

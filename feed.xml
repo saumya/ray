@@ -31,9 +31,13 @@
 &lt;pre&gt;&lt;code&gt;\curl -sSL https://get.rvm.io | bash -s stable
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Once this step is done everything else is just normal &lt;a href=&quot;https://www.ruby-lang.org/en/&quot;&gt;Ruby&lt;/a&gt; update thing. Update &lt;a href=&quot;https://www.ruby-lang.org/en/&quot;&gt;Ruby&lt;/a&gt; with the commad as below.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;rvm install ruby-2.1.1
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Now lets install a gem such as json, which can be done with the command below.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;sudo gem install json
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Thats all to it. The important thing is, if we try to install the 2.x version of &lt;a href=&quot;https://www.ruby-lang.org/en/&quot;&gt;Ruby&lt;/a&gt; with old &lt;a href=&quot;http://rvm.io/&quot;&gt;rvm&lt;/a&gt;, it will not work. Actually, it does not show even in the known list of &lt;a href=&quot;https://www.ruby-lang.org/en/&quot;&gt;Ruby&lt;/a&gt;.&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Now lets install a gem such as json, which can be done with the command as follows. I was suggesting &lt;del&gt;sudo gem install json&lt;/del&gt;, but never do that. Instead use&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;gem install json
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;It seems using &lt;code&gt;sudo&lt;/code&gt; &lt;code&gt;is not advisable&lt;/code&gt; to be used while using &lt;a href=&quot;http://rvm.io/&quot;&gt;rvm&lt;/a&gt;. I got a reply in twitter for this blog post, from &lt;a href=&quot;https://twitter.com/rvm_io&quot;&gt;@rvm_io&lt;/a&gt; as &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;looks good, the only hint - never use sudo with RVM, sudo “disables” RVM controlled ruby, the gem most likely is installed in system    &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Thats all to it. The important thing is, if we try to install the 2.x version of &lt;a href=&quot;https://www.ruby-lang.org/en/&quot;&gt;Ruby&lt;/a&gt; with old &lt;a href=&quot;http://rvm.io/&quot;&gt;rvm&lt;/a&gt;, it will not work. Actually, it does not show even in the known list of &lt;a href=&quot;https://www.ruby-lang.org/en/&quot;&gt;Ruby&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Happy upgrading.&lt;/p&gt;
 </description>
     </item>
