@@ -5,9 +5,25 @@
     <atom:link href="http://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Mon, 26 May 2014 05:30:00 +0630</pubDate>
+    <pubDate>Sat, 07 Jun 2014 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Looking at AngularJS</title>
+      <link>http://saumya.github.io/ray/articles/38/</link>
+      <pubDate>Sat, 07 Jun 2014 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">http://saumya.github.io/ray/articles/38/</guid>
+      <author></author>
+      <description>&lt;p&gt;I had seen &lt;a href=&quot;https://angularjs.org/&quot;&gt;AngularJS&lt;/a&gt; before, almost one year back. When I came back to have a look at it again now, I got surprised to see “How long it has really come!”. Well here, I am just introducing some of the libraries, frameworks and projects that have eveloved arround &lt;a href=&quot;https://angularjs.org/&quot;&gt;AngularJS&lt;/a&gt;.          &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://angularjs.org/&quot;&gt;AngularJS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.polymer-project.org/&quot;&gt;Polymer&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://angulardart.org/&quot;&gt;Angular Dart&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://ngcordova.com/&quot;&gt;ngCordova, Cordova powered by AngularJS.&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Happy Coding.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>Upgrading to Ruby 2.x from 1.x with rvm, on an upgrade from old OSX to Mavericks.</title>
       <link>http://saumya.github.io/ray/articles/37/</link>
