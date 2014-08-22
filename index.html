@@ -23,6 +23,31 @@
       <div class="content-wrap">
         <article class="article intro">
           <header>
+            <p class="date"><span>23. August 2014</span></p>
+            <h2><a href="http://saumya.github.io/ray/articles/40/">Checklist to join a corporate</a></h2>
+          </header>
+          <section class="content"><p>It is a surprise for me, to see the processes these companines follow to get a person on board. I am not talking about interview. The technical interview is kind of rounds after rounds of never ending interviews. But at least, these are ok-ish situation for a tech person.<br>The real pain starts, once you get through the interview. Now you are selected and need to serve the notice period at old organisation and move on to join the new one. The problem is, once you are through the interview, this new companies will call you at least 5 times a day. This is plain and simple irritating. They will force you (no one can force you, but at least they will talk like that) to join before the scheduled time. 
+If at all, you have joined them by keeping their words, there would be no respect at all for that. Once you come to join them, they will show how much process they follow! Really?!! If you follow all these, why you kept on calling a person who has not joined you? Where were your processes! Or is that a process of yours to trouble someone, who is not from your organisation! Simple stupid. So you make your own process, follow your own process and change that at will.<br>Well, just keep in mind that once you have come to join a new corporate, keep below things with you. These companies will not tell you, when they should have, that please bring all these with&nbsp;you.     </p>
+<ol>
+<li>Your own laptop (only windows with Internet&nbsp;Explorer)</li>
+<li>Your own datacard for&nbsp;internet</li>
+<li>Your phone with rooming&nbsp;activated   </li>
+</ol>
+<p>Once these are done, keep below things with&nbsp;you.</p>
+<ol>
+<li>Your cheque&nbsp;book</li>
+<li>Your father’s identity&nbsp;proof</li>
+<li>All your previous residing locations&nbsp;proof</li>
+<li>Two friends’ addresses and contact from each of all previous location and&nbsp;company</li>
+<li>Two local friends’ contacts and addresses (if they are not, create them&nbsp;!)</li>
+</ol>
+<p>Well last but most importantly keep “your common sense and simplicity” at home. Just rember that these are just mindless machines working for a factory which does not have and can not respect to have a&nbsp;brain.</p>
+<p>Never&nbsp;giveup.</p>
+
+          </section>
+        </article>
+        <article class="article intro">
+          <header>
             <p class="date"><span>24. June 2014</span></p>
             <h2><a href="http://saumya.github.io/ray/articles/39/">AngularJS 101</a></h2>
           </header>
@@ -58,46 +83,13 @@
 
           </section>
         </article>
-        <article class="article intro">
-          <header>
-            <p class="date"><span>26. May 2014</span></p>
-            <h2><a href="http://saumya.github.io/ray/articles/37/">Upgrading to Ruby 2.x from 1.x with rvm, on an upgrade from old OSX to Mavericks.</a></h2>
-          </header>
-          <section class="content"><p>This is a situation when you have updated the <span class="caps">OS</span> from a previous version of Mac OSX to the latest version of the OSX Mavericks. Generally OSX ships with a version of <a href="https://www.ruby-lang.org/en/">Ruby</a>, which is latest by the time the <span class="caps">OS</span> is released. But when it comes to OSX upgrade and in this case particularly to OSX Mavericks, the operating system upgrade does not bring in the <a href="https://www.ruby-lang.org/en/">Ruby</a> upgrade. Rather, the old <a href="https://www.ruby-lang.org/en/">Ruby</a> lives on the new <span class="caps">OSX</span>. Well, if you have a decent understanding of managing <a href="https://www.ruby-lang.org/en/">Ruby</a> versions, you may be using one of the version management systems of <a href="https://www.ruby-lang.org/en/">Ruby</a>. I used to have <a href="http://rvm.io/">rvm</a>. Now I have an upgraded <span class="caps">OSX</span> but need to have the latest version of <a href="https://www.ruby-lang.org/en/">Ruby</a>. The steps are as&nbsp;below     </p>
-<ol>
-<li>Upgrade <a href="http://rvm.io/">rvm</a></li>
-<li>Upgrade <a href="https://www.ruby-lang.org/en/">Ruby</a></li>
-</ol>
-<p>Well, there are issues with these two steps as I found throughout the net. A simple search in the internet will make you aware of this fact. So the refined steps are as&nbsp;below.</p>
-<ol>
-<li>Install XCode Commandline&nbsp;tools</li>
-<li>Reinstall <a href="http://rvm.io/">rvm</a></li>
-<li>Upgrade <a href="https://www.ruby-lang.org/en/">Ruby</a></li>
-</ol>
-<p>In my case, I do not have to install the XCode commandline tools, probably because I am an iOS developer and always updates to the latest version of XCode along with the commandline tools. The thing to note here is with the <span class="caps">OSX</span> upgrade, the commandline tools of XCode is removed by the system. Even if, one installs the new <code>XCode</code>, the <code>commandline tools</code> are not included by default. All one has to do is <code>install</code> it (<code>again</code>).<br>Moving on, the next step is to upgrade the <a href="http://rvm.io/">rvm</a>. With the <span class="caps">OSX</span> upgrade, the normal <a href="http://rvm.io/">rvm</a> update does not&nbsp;work.</p>
-<pre><code>rvm get stable
-</code></pre><p>So, the fix is to <code>install rvm</code> (you can call it <code>again</code>) as&nbsp;below.</p>
-<pre><code>\curl -sSL https://get.rvm.io | bash -s stable
-</code></pre><p>Once this step is done everything else is just normal <a href="https://www.ruby-lang.org/en/">Ruby</a> update thing. Update <a href="https://www.ruby-lang.org/en/">Ruby</a> with the commad as&nbsp;below.</p>
-<pre><code>rvm install ruby-2.1.1
-</code></pre><p>Now lets install a gem such as json, which can be done with the command as follows. I was suggesting <del>sudo gem install json</del>, but never do that. Instead&nbsp;use</p>
-<pre><code>gem install json
-</code></pre><p>It seems using <code>sudo</code> <code>is not advisable</code> to be used while using <a href="http://rvm.io/">rvm</a>. I got a reply in twitter for this blog post, from <a href="https://twitter.com/rvm_io">@rvm_io</a>&nbsp;as </p>
-<blockquote>
-<p>looks good, the only hint - never use sudo with <span class="caps">RVM</span>, sudo “disables” RVM controlled ruby, the gem most likely is installed in&nbsp;system    </p>
-</blockquote>
-<p>Thats all to it. The important thing is, if we try to install the 2.x version of <a href="https://www.ruby-lang.org/en/">Ruby</a> with old <a href="http://rvm.io/">rvm</a>, it will not work. Actually, it does not show even in the known list of <a href="https://www.ruby-lang.org/en/">Ruby</a>.</p>
-<p>Happy&nbsp;upgrading.</p>
-
-          </section>
-        </article>
       </div>
     </div>
     <footer>
       <div class="content-wrap">
         <div class="nav"><a href="http://saumya.github.io/ray/archive.html">« Archives</a><a href="http://saumya.github.io/ray/page/2/">Next page »</a>
         </div>
-        <section class="about"><p><a href="http://www.saumyaray.com/">Saumya</a> believes in The God.</p>
+        <section class="about"><p><a href="http://www.saumyaray.com">Saumya</a> believes in The God.</p>
 <p>A maker of things and curious about everything. Continuous learning is, what fuels him. This blog itself, reflects one of many things he is trying at all the time.</p>
 <p>He is <a href="https://twitter.com/saumya">@saumya</a> on Twitter. </p>
 <span class="nav"><a href="http://saumya.github.io/ray/">Blog Home</a><a href="http://saumya.github.io/ray/archive.html">Archives</a></span>
