@@ -14,7 +14,12 @@ To begin with, [Dojo Toolkit][1] or simply referred to as [Dojo][1] is one of ma
 - An Unit testing framework
 - A compiler to do the minification and optimisation
 
-A lot of javascript libraries try to implement the classical programming concepts and [Dojo][1] is another one of them. So, if you are a purist in Javascript, [Dojo][1] will dissapoint you. The functional nature of Javascript is also eliminated here. [Dojo][1] clearly disagrees to say that `function` is `a first class citizen`, which is again denying another nice feature of javascript. Well, but if you are coming from a classical programming background, that means from a programming language which is class based like Java, then [Dojo][1] will seem natural. 
+A lot of javascript libraries try to implement the classical programming concepts and [Dojo][1] is another one of them. So, if you are a purist in Javascript, [Dojo][1] will dissapoint you. The functional nature of Javascript is also eliminated here. [Dojo][1] clearly disagrees to say that `function` is `a first class citizen`, which is again denying another nice feature of javascript. Well, but if you are coming from a classical programming background, that means from a programming language which is class based like Java, then [Dojo][1] will seem natural. So, we will refer them in classical terms rather than Javascript terms.
+
+The core functionality of the toolkit is wrapped in a package called `dojo`. Everythig that runs in the toolkit depends on this basic package. Next is `dijit`, which can be called as a component library or in dojo's terms these are widgets. Now `dojox` is a package containing experimental widgets, which will eventually go into `dijit` , once they are stable enough. Since widgets have to live a life of their own, there is a flow of lifecycle events. It is now obvious that any application using these widgets have to abide to these lifecycle events and some rules as a whole. In Dojo's terms these are framework rules.
+
+
+Happy Coding.
 
 
 
