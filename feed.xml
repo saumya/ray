@@ -5,9 +5,27 @@
     <atom:link href="http://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Sat, 23  Aug 2014 05:30:00 +0630</pubDate>
+    <pubDate>Mon, 29 Sep 2014 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Getting started with, Dojo Toolkit</title>
+      <link>http://saumya.github.io/ray/articles/41/</link>
+      <pubDate>Mon, 29 Sep 2014 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">http://saumya.github.io/ray/articles/41/</guid>
+      <author></author>
+      <description>&lt;p&gt;To begin with, &lt;a href=&quot;http://dojotoolkit.org/&quot;&gt;Dojo Toolkit&lt;/a&gt; or simply referred to as &lt;a href=&quot;http://dojotoolkit.org/&quot;&gt;Dojo&lt;/a&gt; is one of many libraries in javascript. First thing to do is, like any other javascript libraries, make sure which version of library you are studying and using. &lt;a href=&quot;http://dojotoolkit.org/&quot;&gt;Dojo&lt;/a&gt; has gone through major upgrades and if you are trying to do things the new way of &lt;a href=&quot;http://dojotoolkit.org/&quot;&gt;Dojo&lt;/a&gt; then better get to know the &lt;a href=&quot;http://dojotoolkit.org/documentation/tutorials/1.10/modern_dojo/&quot;&gt;new version&lt;/a&gt;. We will be focusing on the new version only(currently &lt;code&gt;1.10&lt;/code&gt;) and referring to old one, wherever necessary.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://dojotoolkit.org/&quot;&gt;Dojo Toolkit&lt;/a&gt; has got a combination following&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A bare bone of functionality ( &lt;code&gt;dojo&lt;/code&gt; )&lt;/li&gt;
+&lt;li&gt;A widget library ( &lt;code&gt;dijit&lt;/code&gt; )&lt;/li&gt;
+&lt;li&gt;An experimental library ( &lt;code&gt;dojox&lt;/code&gt; )&lt;/li&gt;
+&lt;li&gt;An Unit testing framework&lt;/li&gt;
+&lt;li&gt;A compiler to do the minification and optimisation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;A lot of javascript libraries try to implement the classical programming concepts and &lt;a href=&quot;http://dojotoolkit.org/&quot;&gt;Dojo&lt;/a&gt; is another one of them. So, if you are a purist in Javascript, &lt;a href=&quot;http://dojotoolkit.org/&quot;&gt;Dojo&lt;/a&gt; will dissapoint you. The functional nature of Javascript is also eliminated here. &lt;a href=&quot;http://dojotoolkit.org/&quot;&gt;Dojo&lt;/a&gt; clearly disagrees to say that &lt;code&gt;function&lt;/code&gt; is &lt;code&gt;a first class citizen&lt;/code&gt;, which is again denying another nice feature of javascript. Well, but if you are coming from a classical programming background, that means from a programming language which is class based like Java, then &lt;a href=&quot;http://dojotoolkit.org/&quot;&gt;Dojo&lt;/a&gt; will seem natural. &lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>Checklist to join a corporate</title>
       <link>http://saumya.github.io/ray/articles/40/</link>
