@@ -5,9 +5,57 @@
     <atom:link href="http://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Mon, 29 Sep 2014 05:30:00 +0630</pubDate>
+    <pubDate>Tue, 30 Sep 2014 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Dojo Toolkit, Widget.</title>
+      <link>http://saumya.github.io/ray/articles/42/</link>
+      <pubDate>Tue, 30 Sep 2014 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">http://saumya.github.io/ray/articles/42/</guid>
+      <author></author>
+      <description>&lt;p&gt;&lt;a href=&quot;http://dojotoolkit.org/&quot;&gt;Dojo Toolkit&lt;/a&gt; has a component library named as &lt;code&gt;Dijit&lt;/code&gt;. Each component in this library is known as a &lt;code&gt;Widget&lt;/code&gt;. It is better to know the &lt;code&gt;dijit&lt;/code&gt; framework vocabulary before going further inside it. &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Normally each &lt;code&gt;.js&lt;/code&gt; file represents a &lt;code&gt;Class&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Each file, whose name starts with &lt;code&gt;_&lt;/code&gt; (underscore) is &lt;code&gt;not a concrete&lt;/code&gt; class. That means, this class is supposed to be extended to be used, &lt;code&gt;never directly used&lt;/code&gt; as is.&lt;/li&gt;
+&lt;li&gt;Members inside a class, properties and methods, whose name starts with &lt;code&gt;_&lt;/code&gt; (underscore) are &lt;code&gt;private&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;A class is defined by &lt;code&gt;declare()&lt;/code&gt; &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&quot;http://dojotoolkit.org/&quot;&gt;Dojo&lt;/a&gt; now supports AMD modules. So the module definition is pretty straight forward as in standard module definition. If you have ever used any other framework such as &lt;a href=&quot;http://backbonejs.org/&quot;&gt;BackboneJS&lt;/a&gt;, you already know, how to declare, extend, load and use a module and a class. &lt;/p&gt;
+&lt;p&gt;Now, lets see what &lt;code&gt;Widget&lt;/code&gt; brings to the rules table. Each Widget has a life-cycle of its own. The lifecycle methods are as below in sequence.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;constructor()&lt;/li&gt;
+&lt;li&gt;postMixInProperties()&lt;/li&gt;
+&lt;li&gt;buildRendering()&lt;/li&gt;
+&lt;li&gt;setters and getters, example is set(“myProperty”,value)&lt;/li&gt;
+&lt;li&gt;postCreate()&lt;/li&gt;
+&lt;li&gt;startup()&lt;/li&gt;
+&lt;li&gt;destroy()&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;There are few methods which also be called in some widgets, such as&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;resize()&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Each &lt;code&gt;Widget&lt;/code&gt; is supposed to &lt;code&gt;Extend&lt;/code&gt; the &lt;code&gt;_WidgetBase&lt;/code&gt; class defined in &lt;code&gt;dijit/_WidgetBase&lt;/code&gt; package. Sometimes, it is necessary to use template strings or templates inside a  Widget. In that case, the &lt;code&gt;Widget&lt;/code&gt; extends &lt;code&gt;_WidgetBase&lt;/code&gt; and &lt;code&gt;_TemplatedMixin&lt;/code&gt;, defined in &lt;code&gt;dijit/_WidgetBase&lt;/code&gt; and &lt;code&gt;dijit/_TemplatedMixin&lt;/code&gt; package respectively.&lt;/p&gt;
+&lt;p&gt;After creation of each child &lt;code&gt;Widget&lt;/code&gt; inside the parent Widget, its necessary to call the &lt;code&gt;startup()&lt;/code&gt; method of the child Widget. Since &lt;code&gt;startup()&lt;/code&gt; call goes through all the child widgets of a container Widget, its better to add all the child Widgets to the parent Widget and call parent’s &lt;code&gt;startup()&lt;/code&gt;, which will call &lt;code&gt;startup()&lt;/code&gt; of each child Widget.
+While writing a custom Widget, its necessary to override parent’s lifecycle methods. At the sametime, it is necessary to continue the lifecycle of the Widget. So a call to parent’s method is necessary. In most of all programming languages it is done with a &lt;code&gt;super()&lt;/code&gt; call. In &lt;code&gt;dijit&lt;/code&gt; framework its called as&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;this.inherited(arguments);&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;So inside each of the above life-cycle methods, a call to &lt;code&gt;this.inherited(arguments);&lt;/code&gt; is necessary, either in the beginning or as the last line of the method.&lt;/p&gt;
+&lt;p&gt;A custom &lt;code&gt;Widget&lt;/code&gt; has either of the 2 properties below or sometimes both, to add child widgets to  itself.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;this.domNode&lt;/li&gt;
+&lt;li&gt;this.containerNode&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Now to add child widgets to the parent widget there are methods like&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;addChild()&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Well, this post may seem a lot but the idea is to make you aware of the vocabulary and some background to &lt;code&gt;dijit&lt;/code&gt; infrastructure. For a basic and complete &lt;code&gt;example&lt;/code&gt; &lt;a href=&quot;https://github.com/saumya/dojo101/blob/master/dojo-release-1.10.0-src/myWidgets/rayWidget3.js&quot;&gt;have a look at this widget&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Happy Coding.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>Getting started with, Dojo Toolkit</title>
       <link>http://saumya.github.io/ray/articles/41/</link>
