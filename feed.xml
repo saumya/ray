@@ -5,9 +5,44 @@
     <atom:link href="http://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Thu, 23 Oct 2014 05:30:00 +0630</pubDate>
+    <pubDate>Mon, 17 Nov 2014 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>RequireJS, Load timeout for modules!</title>
+      <link>http://saumya.github.io/ray/articles/44/</link>
+      <pubDate>Mon, 17 Nov 2014 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">http://saumya.github.io/ray/articles/44/</guid>
+      <author></author>
+      <description>&lt;p&gt;Working with &lt;a href=&quot;http://backbonejs.org/&quot;&gt;BackboneJS&lt;/a&gt;, will make you work with &lt;a href=&quot;http://requirejs.org/&quot;&gt;RequireJS&lt;/a&gt;. And if you are working with &lt;a href=&quot;http://backbonejs.org/&quot;&gt;BackboneJS&lt;/a&gt; for a little time, then you probably know what I am talking about. Sometimes, the modules we are loading through &lt;a href=&quot;http://requirejs.org/&quot;&gt;RequireJS&lt;/a&gt; throw errors saying&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;Error&lt;/span&gt;: Load timeout &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; modules
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I will suggest to have a look at &lt;a href=&quot;http://requirejs.org/docs/errors.html&quot;&gt;RequireJS&lt;/a&gt; documentation for detailed explanation.&lt;br&gt;The most common and which may hit you in the begining is the &lt;code&gt;timeout&lt;/code&gt; for timeout itself. There are ways to fix this. The options are&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;increase the timeout limit&lt;/li&gt;
+&lt;li&gt;reload the page or the module on timeout error&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The &lt;a href=&quot;http://requirejs.org/&quot;&gt;RequireJS&lt;/a&gt; configuration has an option called &lt;code&gt;waitSeconds&lt;/code&gt;, which defaults to &lt;code&gt;7&lt;/code&gt;. Now if the module does not load in 7 seconds, it will giveup and throw the error. If &lt;code&gt;waitSeconds&lt;/code&gt; is set to &lt;code&gt;0&lt;/code&gt;, it will wait for &lt;code&gt;infinite&lt;/code&gt;. Well, along with that setting, set the &lt;code&gt;enforceDefine&lt;/code&gt; to &lt;code&gt;true&lt;/code&gt; for reliability in all browsers and scenarios. This setting will look as below.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;requirejs.config({
+    enforceDefine: &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt;,
+    waitSeconds: &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;,
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Thats a quickfix. But again, it may hit the performace of the application.&lt;br&gt;The otherway is &lt;a href=&quot;http://requirejs.org/docs/api.html#errbacks&quot;&gt;Errbacks&lt;/a&gt; as per &lt;a href=&quot;http://requirejs.org/&quot;&gt;RequireJS&lt;/a&gt;. so what are they. They are simply callbacks but since it happens in errors, its called &lt;code&gt;Errbacks&lt;/code&gt;. We can do stuff like reloading the whole application or the specified module or other error handling on these.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;require&lt;/span&gt;([&lt;span class=&quot;string&quot;&gt;'modules/one'&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;'modules/two'&lt;/span&gt;],
+           &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(One,Two)&lt;/span&gt;{&lt;/span&gt;
+            &lt;span class=&quot;comment&quot;&gt;//Application logic&lt;/span&gt;
+        },
+        &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(error)&lt;/span&gt;{&lt;/span&gt;
+            console.log(&lt;span class=&quot;string&quot;&gt;'Custom ERROR handler'&lt;/span&gt;,error);
+            &lt;span class=&quot;comment&quot;&gt;//error.requireModules : is Array of all failed modules&lt;/span&gt;
+            &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; failedId = error.requireModules &amp;amp;&amp;amp; error.requireModules[&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;];
+            console.log(failedId);
+            console.log(error.message);
+        });
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Happy Coding.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>Upgrading to Cordova 3.4 and above</title>
       <link>http://saumya.github.io/ray/articles/43/</link>
