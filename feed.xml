@@ -9,6 +9,39 @@
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
     <item>
+      <title>Cake and Coffee</title>
+      <link>http://saumya.github.io/ray/articles/46/</link>
+      <pubDate>Thu, 01 Jan 2015 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">http://saumya.github.io/ray/articles/46/</guid>
+      <author></author>
+      <description>&lt;p&gt;While working with &lt;a href=&quot;http://coffeescript.org/#top&quot;&gt;CoffeeScript&lt;/a&gt;, we generally tend to do the following,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;write something in a .coffee file&lt;/li&gt;
+&lt;li&gt;compile that file with coffee compiler to .js file         &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Well, if we are a little smarter, then use the following command to compile all the .coffee files in a particular folder to respective .js file in another folder.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-coffeescript&quot;&gt;coffee --compile --output outputFolder/ inputFolder/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;That may seem enough now, but actually there are a lot of things we could automate. The native way to do this in &lt;a href=&quot;http://coffeescript.org/#top&quot;&gt;CoffeeScript&lt;/a&gt; is called &lt;code&gt;Cake&lt;/code&gt;. We can look at it as a build system. Nice thing about this is, we can write every instruction in &lt;a href=&quot;http://coffeescript.org/#top&quot;&gt;CoffeeScript&lt;/a&gt; itself.         &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Cake is an utility comes with &lt;a href=&quot;http://coffeescript.org/#top&quot;&gt;CoffeeScript&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;its a task runner or build system&lt;/li&gt;
+&lt;li&gt;all the instructions are saved in a file with name &lt;code&gt;Cakefile&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Cakefile&lt;/code&gt; is the file name and there is no extension to it&lt;/li&gt;
+&lt;li&gt;Everything inside the &lt;code&gt;Cakefile&lt;/code&gt; is a &lt;a href=&quot;http://coffeescript.org/#top&quot;&gt;CoffeeScript&lt;/a&gt; expression         &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;To run the &lt;code&gt;Cake&lt;/code&gt; task runner, navigate to the folder, where our &lt;code&gt;Cakefile&lt;/code&gt; is residing and fire up the command as below.        &lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-coffeescript&quot;&gt;cake
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;That will display all the tasks available in that file to be run. To run a specific task, run&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-coffeescript&quot;&gt;cake taskName
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;While defining tasks, we can make a relation between tasks. That means we can say taskOne is dependent on taskTwo. The &lt;a href=&quot;https://github.com/saumya/CoffeeScript101&quot;&gt;basics of CoffeeScript project&lt;/a&gt; has a Cakefile for reference.        &lt;/p&gt;
+&lt;p&gt;The direct link to the sample &lt;code&gt;Cakefile&lt;/code&gt; &lt;a href=&quot;https://github.com/saumya/CoffeeScript101/blob/master/Cakefile&quot;&gt;is here&lt;/a&gt;. All the code are commented for easy reference.       &lt;/p&gt;
+&lt;p&gt;Happy Coding.&lt;/p&gt;
+</description>
+    </item>
+    <item>
       <title>CoffeeScript basics</title>
       <link>http://saumya.github.io/ray/articles/45/</link>
       <pubDate>Thu, 01 Jan 2015 05:30:00 +0630</pubDate>
