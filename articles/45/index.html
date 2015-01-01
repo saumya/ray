@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <title>CoffeeScript basics - Saumya
+    </title>
+    <link rel="alternate" href="http://saumya.github.io/ray/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
+    <link rel="stylesheet" href="http://saumya.github.io/ray/css/main.css">
+    <link rel="stylesheet" href="http://saumya.github.io/ray/css/saumya.css">
+  </head>
+  <body class="article-detail">
+    <header class="header">
+      <div class="content-wrap">
+        <h1>CoffeeScript basics</h1>
+        <p class="author">Written by <span class="author"><a href="mailto:contact@saumyaray.com">Saumya</a></span>
+        </p>
+        <p class="date">01. January 2015</p>
+      </div>
+    </header>
+    <div id="content">
+      <div class="content-wrap">
+        <article class="article">
+          <section class="content"><p>Just to set the expectations right, we need to know something before we begin&nbsp;here.         </p>
+<p>When I first heard about <code>Class</code> in <code>Javascript</code> it created curiosity on me and the expectation increased as to work like a <code>Classical</code> language(Where Classes are the root of everything) instead of <code>Prototypical</code> language(like Javascript). But then slowly I understood that its not <code>Javascript</code> but other languages on top of Javascript which create somekind of <code>Class</code> concept to mimic <code>Classical</code> languages. The point is everything boils down to <code>Javascript</code> if a language is written to compile or transpile to <code>Javascript</code> . Well, that may seem like a spoiler right now, but its actually not as we will see. Just keep these things in mind all the time, even if we are doing <a href="http://coffeescript.org/#top">CoffeeScript</a>.        </p>
+<p>Here is the direct link to the <a href="https://github.com/saumya/CoffeeScript101">Github</a> repository for the code reference to this&nbsp;post.       </p>
+<ul>
+<li>CoffeeScript is generally written in a <code>.coffee</code> file</li>
+<li>Each <code>.coffee</code> file is compiled to a <code>.js</code> file</li>
+<li>Each space (a blank space) in code has a meaning in the <code>.coffee</code> file</li>
+<li>Semicolons are optional and generally&nbsp;avoided</li>
+<li>In the beginning you may write more than one classes in a single <code>.coffee</code> file, and thats perfectly alright&nbsp;here</li>
+<li>By default the <a href="http://coffeescript.org/#top">CoffeeScript</a> Classes you write are&nbsp;private            </li>
+</ul>
+<p>When compiled to <span class="caps">JS</span>, the contents of each file, are put inside a self invoking function. This is intentional to not pollute the Global variables. So if the content has some classes inside them, then those classes will also be inside the self-invoking function, restricting the access from outside.<br>The classes in <a href="http://coffeescript.org/#top">CoffeeScript</a> are compiled to as usual <span class="caps">JS</span> functions and the inheritence is done through the prototypical inheritence concepts of Javascript. Since all this happens behind the scenes and as a <a href="http://coffeescript.org/#top">CoffeeScript</a> developer if you do not know, how its working, it would be a pain later to expect anything else from this&nbsp;language</p>
+<p>Thats all to start with the new year. Happy new&nbsp;year.         </p>
+<p>Happy&nbsp;Coding.</p>
+</section>
+        </article>
+      </div>
+    </div>
+    <footer>
+      <div class="content-wrap">
+        <div class="nav"><a href="http://saumya.github.io/ray/">« Full blog</a></div>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+          var disqus_shortname = 'saumya';
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        <section class="about"><p><a href="http://www.saumyaray.com">Saumya</a> believes in The God.</p>
+<p>A maker of things and curious about everything. Continuous learning is, what fuels him. This blog itself, reflects one of many things he is trying at all the time.</p>
+<p>He is <a href="https://twitter.com/saumya">@saumya</a> on Twitter. </p>
+<span class="nav"><a href="http://saumya.github.io/ray/">Blog Home</a><a href="http://saumya.github.io/ray/archive.html">Archives</a></span>
+        </section>
+        <section class="copy">
+          <p>&copy; 2015 saumya ray &mdash; powered by&nbsp;     <a href="https://github.com/jnordberg/wintersmith">Wintersmith&nbsp;</a>
+            <p><a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
+          </p>
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -23,6 +23,54 @@
       <div class="content-wrap">
         <article class="article intro">
           <header>
+            <p class="date"><span>30. September 2014</span></p>
+            <h2><a href="http://saumya.github.io/ray/articles/42/">Dojo Toolkit, Widget.</a></h2>
+          </header>
+          <section class="content"><p><a href="http://dojotoolkit.org/">Dojo Toolkit</a> has a component library named as <code>Dijit</code>. Each component in this library is known as a <code>Widget</code>. It is better to know the <code>dijit</code> framework vocabulary before going further inside&nbsp;it. </p>
+<ul>
+<li>Normally each <code>.js</code> file represents a <code>Class</code>.</li>
+<li>Each file, whose name starts with <code>_</code> (underscore) is <code>not a concrete</code> class. That means, this class is supposed to be extended to be used, <code>never directly used</code> as&nbsp;is.</li>
+<li>Members inside a class, properties and methods, whose name starts with <code>_</code> (underscore) are <code>private</code></li>
+<li>A class is defined by <code>declare()</code> </li>
+</ul>
+<p><a href="http://dojotoolkit.org/">Dojo</a> now supports <span class="caps">AMD</span> modules. So the module definition is pretty straight forward as in standard module definition. If you have ever used any other framework such as <a href="http://backbonejs.org/">BackboneJS</a>, you already know, how to declare, extend, load and use a module and a&nbsp;class. </p>
+<p>Now, lets see what <code>Widget</code> brings to the rules table. Each Widget has a life-cycle of its own. The lifecycle methods are as below in&nbsp;sequence.</p>
+<ul>
+<li>constructor()</li>
+<li>postMixInProperties()</li>
+<li>buildRendering()</li>
+<li>setters and getters, example is&nbsp;set(“myProperty”,value)</li>
+<li>postCreate()</li>
+<li>startup()</li>
+<li>destroy()</li>
+</ul>
+<p>There are few methods which also be called in some widgets, such&nbsp;as</p>
+<ul>
+<li>resize()</li>
+</ul>
+<p>Each <code>Widget</code> is supposed to <code>Extend</code> the <code>_WidgetBase</code> class defined in <code>dijit/_WidgetBase</code> package. Sometimes, it is necessary to use template strings or templates inside a  Widget. In that case, the <code>Widget</code> extends <code>_WidgetBase</code> and <code>_TemplatedMixin</code>, defined in <code>dijit/_WidgetBase</code> and <code>dijit/_TemplatedMixin</code> package&nbsp;respectively.</p>
+<p>After creation of each child <code>Widget</code> inside the parent Widget, its necessary to call the <code>startup()</code> method of the child Widget. Since <code>startup()</code> call goes through all the child widgets of a container Widget, its better to add all the child Widgets to the parent Widget and call parent’s <code>startup()</code>, which will call <code>startup()</code> of each child Widget.
+While writing a custom Widget, its necessary to override parent’s lifecycle methods. At the sametime, it is necessary to continue the lifecycle of the Widget. So a call to parent’s method is necessary. In most of all programming languages it is done with a <code>super()</code> call. In <code>dijit</code> framework its called&nbsp;as</p>
+<ul>
+<li>this.inherited(arguments);</li>
+</ul>
+<p>So inside each of the above life-cycle methods, a call to <code>this.inherited(arguments);</code> is necessary, either in the beginning or as the last line of the&nbsp;method.</p>
+<p>A custom <code>Widget</code> has either of the 2 properties below or sometimes both, to add child widgets to&nbsp;itself.</p>
+<ul>
+<li>this.domNode</li>
+<li>this.containerNode</li>
+</ul>
+<p>Now to add child widgets to the parent widget there are methods&nbsp;like</p>
+<ul>
+<li>addChild()</li>
+</ul>
+<p>Well, this post may seem a lot but the idea is to make you aware of the vocabulary and some background to <code>dijit</code> infrastructure. For a basic and complete <code>example</code> <a href="https://github.com/saumya/dojo101/blob/master/dojo-release-1.10.0-src/myWidgets/rayWidget3.js">have a look at this widget</a>.</p>
+<p>Happy&nbsp;Coding.</p>
+
+          </section>
+        </article>
+        <article class="article intro">
+          <header>
             <p class="date"><span>29. September 2014</span></p>
             <h2><a href="http://saumya.github.io/ray/articles/41/">Getting started with, Dojo Toolkit</a></h2>
           </header>
@@ -66,26 +114,6 @@ If at all, you have joined them by keeping their words, there would be no respec
 
           </section>
         </article>
-        <article class="article intro">
-          <header>
-            <p class="date"><span>24. June 2014</span></p>
-            <h2><a href="http://saumya.github.io/ray/articles/39/">AngularJS 101</a></h2>
-          </header>
-          <section class="content"><p>It took me sometime to make me comfortable in <a href="https://angularjs.org/">AngularJS</a>. There are a lot of tutorials, discussions and videos out there about <a href="https://angularjs.org/">AngularJS</a>. I would suggest, go through them and go through as many as you can, before jumping into code with this framework. We will be looking at the very basics of the framework here and for <code>version 1.3</code> and above, of the framework.<br>You must heard about <span class="caps">MVC</span> or Model-View-Controller architecture and <a href="https://angularjs.org/">AngularJS</a>. While thats true, lets keep that for a little late.<br>First of all, just remember that <code>$scope</code> is model object and sometimes referred to as <code>ViewModel</code>. Then there are <code>Views</code>, which are either <span class="caps">HTML</span> tags or full html files. And then <code>Controllers</code>, which are javascript files. At this point always remember that <a href="https://angularjs.org/">AngularJS</a> revolves arround these <code>View</code> and <code>Controller</code>. The data this <code>View</code> displays is the same as the data the <code>Controller</code> modifies and is available through <code>$scope</code>. No matter what, <code>$scope</code> remains in the middle as this<br><code>View &lt;---$scope---&gt; Controller</code><br>Now, since <a href="https://angularjs.org/">AngularJS</a> already uses <code>2-way data binding</code> any changes to data or <code>$scope</code> in <code>View</code> or <code>Controller</code> is reflected by each other.<br>An <a href="https://angularjs.org/">AngularJS</a> application begins with a module named <code>ng-app</code> and this <code>ng-app</code> is generally only one. So what is a module ? Module is kind of self contained small applications inside a big application. The special module <code>ng-app</code> is the only exception as its the big application and everything else in <a href="https://angularjs.org/">AngularJS</a> world happens inside it. All other modules generally go inside <code>ng-view</code>, have a look at <a href="https://github.com/saumya/ng-101/blob/master/index.html">this html page</a> for the reference.In terms of <a href="https://angularjs.org/">AngularJS</a>, a module is a combination of a <code>View-$scope-Controller</code>. Everytime you need to load this module, the View gets loaded in the <code>ng-view</code> and its Controller gets initialised along with the <code>$scope</code>. All these mapping are written in a <code>Route</code>, which maps <code>View with Controller</code>, <a href="https://github.com/saumya/ng-101/blob/master/js/saumyaApp.js">take a look at this</a>. Route is a separate module as of <a href="https://angularjs.org/">AngularJS</a> version 1.3. So, one need to include the <span class="caps">JS</span> file and the dependency. A quick reference of an <a href="https://angularjs.org/">AngularJS</a> application looks as&nbsp;below        </p>
-<ul>
-<li><span class="caps">HTML</span>&nbsp;page</li>
-<li>ng-app (root&nbsp;module)</li>
-<li>ng-view (sub modules load&nbsp;here)</li>
-<li>first <span class="caps">JS</span> file for Route and other&nbsp;things</li>
-<li>Route maps <span class="caps">URL</span> paths with sub-views and their&nbsp;controllers</li>
-<li>sub-views(<span class="caps">HTML</span> partials or pages) are loaded inside the ng-view and initialied with their&nbsp;controllers        </li>
-</ul>
-<p>So far we are good. The next thing is, we can still make it more modularised. <a href="https://angularjs.org/">AngularJS</a> allows, something called as <code>Directives</code>, you may think of it as components. Inside a <code>Module</code>, we can write our custom directives, which are <code>custom HTML tags</code> along with its <code>controller</code>. But always remember, <code>Directives</code> are part of <code>View</code>. So the <code>$scope</code> is also available to them. Now, there are different pre-built modules with <a href="https://angularjs.org/">AngularJS</a> for different job in hand, like <code>$http</code> is for interacting with <code>web services</code>.<br><a href="https://github.com/saumya/ng-101">Refer to the project here</a>, which I have created to better understand the basic of an <a href="https://angularjs.org/">AngularJS</a> application. Always remember, anything in <a href="https://angularjs.org/">AngularJS</a> that we write falls upon either <code>View</code> or <code>Controller</code> and there is always <code>$scope</code> available to both of&nbsp;these.        </p>
-<p>I would love to listen your inputs on this, please leave a comment for&nbsp;discussion.         </p>
-<p>Happy&nbsp;Coding.</p>
-
-          </section>
-        </article>
       </div>
     </div>
     <footer>
@@ -98,7 +126,7 @@ If at all, you have joined them by keeping their words, there would be no respec
 <span class="nav"><a href="http://saumya.github.io/ray/">Blog Home</a><a href="http://saumya.github.io/ray/archive.html">Archives</a></span>
         </section>
         <section class="copy">
-          <p>&copy; 2014 saumya ray &mdash; powered by&nbsp;     <a href="https://github.com/jnordberg/wintersmith">Wintersmith&nbsp;</a>
+          <p>&copy; 2015 saumya ray &mdash; powered by&nbsp;     <a href="https://github.com/jnordberg/wintersmith">Wintersmith&nbsp;</a>
             <p><a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
           </p>
         </section>
