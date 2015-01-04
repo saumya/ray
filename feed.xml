@@ -5,9 +5,34 @@
     <atom:link href="http://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Thu, 01 Jan 2015 05:30:00 +0630</pubDate>
+    <pubDate>Mon, 05 Jan 2015 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>HAXE JS 101</title>
+      <link>http://saumya.github.io/ray/articles/47/</link>
+      <pubDate>Mon, 05 Jan 2015 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">http://saumya.github.io/ray/articles/47/</guid>
+      <author></author>
+      <description>&lt;p&gt;Hope you know what is &lt;a href=&quot;http://haxe.org/&quot;&gt;HAXE&lt;/a&gt;, take a moment to go through the official &lt;a href=&quot;http://haxe.org/&quot;&gt;HAXE&lt;/a&gt; documentation. We will discuss how and what to consider while working with JS in &lt;a href=&quot;http://haxe.org/&quot;&gt;HAXE&lt;/a&gt;.&lt;br&gt;Generally other languages, which compile to JS, actually compile each specific file to a respective JS file. &lt;a href=&quot;http://haxe.org/&quot;&gt;HAXE&lt;/a&gt; actually compiles to one single JS file for our application. We can further take the generated JS file and minify it using popular JS minifiers.        &lt;/p&gt;
+&lt;p&gt;The work flow for &lt;a href=&quot;http://haxe.org/&quot;&gt;HAXE&lt;/a&gt; to JS is as simple as         &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Writing the normal &lt;a href=&quot;http://haxe.org/&quot;&gt;HAXE&lt;/a&gt; application&lt;/li&gt;
+&lt;li&gt;Use the package structure and class as usual&lt;/li&gt;
+&lt;li&gt;Make a .hxml file difining what would be the final JS file&lt;/li&gt;
+&lt;li&gt;Compile with &lt;a href=&quot;http://haxe.org/&quot;&gt;HAXE&lt;/a&gt; compiler to produce the JS file         &lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-haxe&quot;&gt;haxe compile.hxml
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The &lt;code&gt;.hxml&lt;/code&gt; file looks something like&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-haxe&quot;&gt;-main ApplicationEntry
+-js app.js
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Thats all to it. &lt;a href=&quot;http://haxe.org/&quot;&gt;HAXE&lt;/a&gt; will take care of the &lt;code&gt;import&lt;/code&gt; and &lt;code&gt;package&lt;/code&gt; and &lt;code&gt;class&lt;/code&gt; of the application. Finally the generted JS file is having everything our application needs. Include the JS file in the required HTML file and we are done.      &lt;/p&gt;
+&lt;p&gt;Here is a &lt;a href=&quot;https://github.com/saumya/HAXE-JS101&quot;&gt;sample basic application&lt;/a&gt; showing all there is to it.&lt;/p&gt;
+&lt;p&gt;Happy Coding.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>Cake and Coffee</title>
       <link>http://saumya.github.io/ray/articles/46/</link>
