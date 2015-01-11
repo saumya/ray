@@ -23,6 +23,43 @@
       <div class="content-wrap">
         <article class="article intro">
           <header>
+            <p class="date"><span>03. April 2014</span></p>
+            <h2><a href="http://saumya.github.io/ray/articles/33/">jQuery and fixing AJAX cache for GET calls</a></h2>
+          </header>
+          <section class="content"><p>It will come to you very soon, if you are trying to develop any decent webapp or phonegap mobile app using <a href="http://jquery.com/">jQuery</a>.<br>The problem is, if we have the same <code>GET</code> request multiple times, by default jQuery will cache the request. The end result is the response same as the first response!! Well, there is a setting in jQuery <span class="caps">AJAX</span> setup, where in we write <code>cache:false</code> and that should work. Well, depending upon how the <span class="caps">API</span> is written on the server side, this call might not work! There are many reasons as to why it may not work, one simple reason is, to understand, how <a href="http://jquery.com/">jQuery</a> behaves, when we set <code>cache:false</code> as&nbsp;below.</p>
+<pre><code class="lang-javascript"><span class="keyword">var</span> apiURL = <span class="string">"my/api/server/<span class="caps">URI</span>"</span>;
+$.ajax({
+    url:apiURL,
+    cache: <span class="literal">false</span>,
+    success:<span class="function"><span class="keyword">function</span><span class="params">(result)</span>{</span>
+        <span class="comment">//</span>
+    },
+    error:<span class="function"><span class="keyword">function</span><span class="params">(data)</span>{</span>           
+        <span class="comment">//            </span>
+    }   
+});
+</code></pre>
+<p>Now, <a href="http://jquery.com/">jQuery</a> will append <code>_={timestamp}</code> to the <span class="caps">GET</span> parameters. Here is the <a href="https://api.jquery.com/jQuery.ajax/">official documentation</a> of the same. The service call will fail, if this extra parameter is not handled properly. A little workarround, fixed this for me, which is appending the timestamp mannually by hand instead of setting <code>cache: false</code> in <span class="caps">AJAX</span> setup of <a href="http://jquery.com/">jQuery</a>. The modified code looks as&nbsp;this.</p>
+<pre><code class="lang-javascript"><span class="keyword">var</span> timeStamp = <span class="keyword">new</span> <span class="built_in">Date</span>().getTime();
+<span class="keyword">var</span> apiURL = <span class="string">"my/api/server/<span class="caps">URI</span>/"</span>+timeStamp;
+$.ajax({
+    url:apiURL,
+    <span class="comment">//cache: false,//not needed now</span>
+    success:<span class="function"><span class="keyword">function</span><span class="params">(result)</span>{</span>
+        <span class="comment">//</span>
+    },
+    error:<span class="function"><span class="keyword">function</span><span class="params">(data)</span>{</span>           
+        <span class="comment">//            </span>
+    }   
+});
+</code></pre>
+<p>Well, that worked for me as my <span class="caps">API</span> end point was not handling ‘_’(underscore) properly, but could handle the extra parameters.<br>Depending upon the situations, find a right place and <code>add timestamp mannually</code>, to fix the <span class="caps">AJAX</span> cache instead of setting it in the&nbsp;setup.     </p>
+<p>Happy&nbsp;Coding.</p>
+
+          </section>
+        </article>
+        <article class="article intro">
+          <header>
             <p class="date"><span>15. March 2014</span></p>
             <h2><a href="http://saumya.github.io/ray/articles/32/">Back to Lime (OpenFL)</a></h2>
           </header>
@@ -71,16 +108,6 @@ haxelib run lime test neko
 </ul>
 <p>That should make you compile your old project in the new&nbsp;code.</p>
 <p>Happy&nbsp;transitioning.</p>
-
-          </section>
-        </article>
-        <article class="article intro">
-          <header>
-            <p class="date"><span>22. February 2014</span></p>
-            <h2><a href="http://saumya.github.io/ray/articles/30/">Book Review, jQuery UI 1.10-The User Interface Library for jQuery.</a></h2>
-          </header>
-          <section class="content"><p>There is no doubt that <a href="http://jquery.com">jQuery</a> is being in use for almost all the projects. But when it comes to making the <span class="caps">UI</span>, there are a lot many options in the name of frameworks or libraries. By any chance, if you happen to choose <a href="https://jqueryui.com/">jQuery <span class="caps">UI</span></a> to create your <span class="caps">UI</span>, then <a href="http://www.packtpub.com/jquery-ui-1-10-user-interface-library/book">this book</a> is helpful.<br><a href="http://www.packtpub.com/jquery-ui-1-10-user-interface-library/book">This book</a> takes each of the components of <a href="https://jqueryui.com/">jQuery <span class="caps">UI</span></a> and describes about its customisation options in detail. Each chapter is dedicated to one of the components of the <a href="https://jqueryui.com/">jQuery <span class="caps">UI</span></a> library. So the book is lengthy but if you are getting started with the libray, then this is an advantage. The experienced ones also, will find its handy to get some tips.<br>All in all its a nice read and helpful, if you stick to <a href="https://jqueryui.com/">jQuery <span class="caps">UI</span></a> for the <span class="caps">UI</span>&nbsp;development. </p>
-<p>Happy&nbsp;reading.</p>
 
           </section>
         </article>

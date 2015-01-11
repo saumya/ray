@@ -5,9 +5,39 @@
     <atom:link href="http://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Mon, 05 Jan 2015 05:30:00 +0630</pubDate>
+    <pubDate>Mon, 12 Jan 2015 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>HAXE JS 102</title>
+      <link>http://saumya.github.io/ray/articles/48/</link>
+      <pubDate>Mon, 12 Jan 2015 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">http://saumya.github.io/ray/articles/48/</guid>
+      <author></author>
+      <description>&lt;p&gt;We are going good with &lt;a href=&quot;http://haxe.org/&quot;&gt;HAXE&lt;/a&gt;, take a moment to go through the official &lt;a href=&quot;http://haxe.org/&quot;&gt;HAXE&lt;/a&gt; documentation.&lt;br&gt;This is a follow-up post to the &lt;a href=&quot;http://saumya.github.io/ray/articles/47/&quot;&gt;Haxe JS 101&lt;/a&gt;. Its all about setting up the expectations from the language and the tool chain. Lets make some more things clear about the tooling and how the language works.          &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://haxe.org/&quot;&gt;HAXE&lt;/a&gt; will produce one single JS file&lt;/li&gt;
+&lt;li&gt;We can force it to create one JS file for one .hx file&lt;/li&gt;
+&lt;li&gt;The created JS file, is by no means is a module JS file as in CommonJS or AMD          &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The contents of &lt;code&gt;.hxml&lt;/code&gt; or the build file generally looks as        &lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-haxe&quot;&gt;-main ApplicationEntry
+-js app.js
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;While forcing each &lt;code&gt;.hx&lt;/code&gt; file for an individual &lt;code&gt;.js&lt;/code&gt; file, the build file would contain something as         &lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-haxe&quot;&gt;-js com/jungle/Tree.js 
+-cp src 
+com.jungle.Tree
+--next
+-js com/jungle/Animal.js 
+-cp src 
+com.jungle.Animal
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;For a sample project and the options, have a look at &lt;a href=&quot;https://github.com/saumya/HAXE-JS101&quot;&gt;this repo&lt;/a&gt; and the &lt;a href=&quot;https://github.com/saumya/HAXE-JS101/blob/master/compile.hxml&quot;&gt;sample .hxml&lt;/a&gt; file is here with all the possible options for &lt;code&gt;.js&lt;/code&gt; output.          &lt;/p&gt;
+&lt;p&gt;The important thing is to remember that finally every JS project is compiled to a single JS file and &lt;a href=&quot;http://haxe.org/&quot;&gt;HAXE&lt;/a&gt; does it in one go. It does not provide module export or any fancy things that other JS frameworks do to support JS look like a classical programming language. &lt;a href=&quot;http://haxe.org/&quot;&gt;HAXE&lt;/a&gt; works with its own tool chain and provides well made JS output. Do not fight it to mock JS libraries, &lt;a href=&quot;http://haxe.org/&quot;&gt;HAXE&lt;/a&gt; is more powerful than that. Even for NodeJS output, &lt;a href=&quot;http://haxe.org/&quot;&gt;HAXE&lt;/a&gt; produces the final JS output, just a single &lt;code&gt;.js&lt;/code&gt; file. Work with &lt;a href=&quot;http://haxe.org/&quot;&gt;HAXE&lt;/a&gt; packages and classes and then compile it to make the final output, no nothing in between.&lt;/p&gt;
+&lt;p&gt;Happy Haxing.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>HAXE JS 101</title>
       <link>http://saumya.github.io/ray/articles/47/</link>
@@ -30,6 +60,28 @@
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Thats all to it. &lt;a href=&quot;http://haxe.org/&quot;&gt;HAXE&lt;/a&gt; will take care of the &lt;code&gt;import&lt;/code&gt; and &lt;code&gt;package&lt;/code&gt; and &lt;code&gt;class&lt;/code&gt; of the application. Finally the generted JS file is having everything our application needs. Include the JS file in the required HTML file and we are done.      &lt;/p&gt;
 &lt;p&gt;Here is a &lt;a href=&quot;https://github.com/saumya/HAXE-JS101&quot;&gt;sample basic application&lt;/a&gt; showing all there is to it.&lt;/p&gt;
+&lt;p&gt;Happy Coding.&lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>CoffeeScript basics</title>
+      <link>http://saumya.github.io/ray/articles/45/</link>
+      <pubDate>Thu, 01 Jan 2015 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">http://saumya.github.io/ray/articles/45/</guid>
+      <author></author>
+      <description>&lt;p&gt;Just to set the expectations right, we need to know something before we begin here.         &lt;/p&gt;
+&lt;p&gt;When I first heard about &lt;code&gt;Class&lt;/code&gt; in &lt;code&gt;Javascript&lt;/code&gt; it created curiosity on me and the expectation increased as to work like a &lt;code&gt;Classical&lt;/code&gt; language(Where Classes are the root of everything) instead of &lt;code&gt;Prototypical&lt;/code&gt; language(like Javascript). But then slowly I understood that its not &lt;code&gt;Javascript&lt;/code&gt; but other languages on top of Javascript which create somekind of &lt;code&gt;Class&lt;/code&gt; concept to mimic &lt;code&gt;Classical&lt;/code&gt; languages. The point is everything boils down to &lt;code&gt;Javascript&lt;/code&gt; if a language is written to compile or transpile to &lt;code&gt;Javascript&lt;/code&gt; . Well, that may seem like a spoiler right now, but its actually not as we will see. Just keep these things in mind all the time, even if we are doing &lt;a href=&quot;http://coffeescript.org/#top&quot;&gt;CoffeeScript&lt;/a&gt;.        &lt;/p&gt;
+&lt;p&gt;Here is the direct link to the &lt;a href=&quot;https://github.com/saumya/CoffeeScript101&quot;&gt;Github&lt;/a&gt; repository for the code reference to this post.       &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;CoffeeScript is generally written in a &lt;code&gt;.coffee&lt;/code&gt; file&lt;/li&gt;
+&lt;li&gt;Each &lt;code&gt;.coffee&lt;/code&gt; file is compiled to a &lt;code&gt;.js&lt;/code&gt; file&lt;/li&gt;
+&lt;li&gt;Each space (a blank space) in code has a meaning in the &lt;code&gt;.coffee&lt;/code&gt; file&lt;/li&gt;
+&lt;li&gt;Semicolons are optional and generally avoided&lt;/li&gt;
+&lt;li&gt;In the beginning you may write more than one classes in a single &lt;code&gt;.coffee&lt;/code&gt; file, and thats perfectly alright here&lt;/li&gt;
+&lt;li&gt;By default the &lt;a href=&quot;http://coffeescript.org/#top&quot;&gt;CoffeeScript&lt;/a&gt; Classes you write are private            &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;When compiled to JS, the contents of each file, are put inside a self invoking function. This is intentional to not pollute the Global variables. So if the content has some classes inside them, then those classes will also be inside the self-invoking function, restricting the access from outside.&lt;br&gt;The classes in &lt;a href=&quot;http://coffeescript.org/#top&quot;&gt;CoffeeScript&lt;/a&gt; are compiled to as usual JS functions and the inheritence is done through the prototypical inheritence concepts of Javascript. Since all this happens behind the scenes and as a &lt;a href=&quot;http://coffeescript.org/#top&quot;&gt;CoffeeScript&lt;/a&gt; developer if you do not know, how its working, it would be a pain later to expect anything else from this language.          &lt;/p&gt;
+&lt;p&gt;Thats all to start with the new year. Happy new year.         &lt;/p&gt;
 &lt;p&gt;Happy Coding.&lt;/p&gt;
 </description>
     </item>
@@ -63,28 +115,6 @@
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;While defining tasks, we can make a relation between tasks. That means we can say taskOne is dependent on taskTwo. The &lt;a href=&quot;https://github.com/saumya/CoffeeScript101&quot;&gt;basics of CoffeeScript project&lt;/a&gt; has a Cakefile for reference.        &lt;/p&gt;
 &lt;p&gt;The direct link to the sample &lt;code&gt;Cakefile&lt;/code&gt; &lt;a href=&quot;https://github.com/saumya/CoffeeScript101/blob/master/Cakefile&quot;&gt;is here&lt;/a&gt;. All the code are commented for easy reference.       &lt;/p&gt;
-&lt;p&gt;Happy Coding.&lt;/p&gt;
-</description>
-    </item>
-    <item>
-      <title>CoffeeScript basics</title>
-      <link>http://saumya.github.io/ray/articles/45/</link>
-      <pubDate>Thu, 01 Jan 2015 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://saumya.github.io/ray/articles/45/</guid>
-      <author></author>
-      <description>&lt;p&gt;Just to set the expectations right, we need to know something before we begin here.         &lt;/p&gt;
-&lt;p&gt;When I first heard about &lt;code&gt;Class&lt;/code&gt; in &lt;code&gt;Javascript&lt;/code&gt; it created curiosity on me and the expectation increased as to work like a &lt;code&gt;Classical&lt;/code&gt; language(Where Classes are the root of everything) instead of &lt;code&gt;Prototypical&lt;/code&gt; language(like Javascript). But then slowly I understood that its not &lt;code&gt;Javascript&lt;/code&gt; but other languages on top of Javascript which create somekind of &lt;code&gt;Class&lt;/code&gt; concept to mimic &lt;code&gt;Classical&lt;/code&gt; languages. The point is everything boils down to &lt;code&gt;Javascript&lt;/code&gt; if a language is written to compile or transpile to &lt;code&gt;Javascript&lt;/code&gt; . Well, that may seem like a spoiler right now, but its actually not as we will see. Just keep these things in mind all the time, even if we are doing &lt;a href=&quot;http://coffeescript.org/#top&quot;&gt;CoffeeScript&lt;/a&gt;.        &lt;/p&gt;
-&lt;p&gt;Here is the direct link to the &lt;a href=&quot;https://github.com/saumya/CoffeeScript101&quot;&gt;Github&lt;/a&gt; repository for the code reference to this post.       &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;CoffeeScript is generally written in a &lt;code&gt;.coffee&lt;/code&gt; file&lt;/li&gt;
-&lt;li&gt;Each &lt;code&gt;.coffee&lt;/code&gt; file is compiled to a &lt;code&gt;.js&lt;/code&gt; file&lt;/li&gt;
-&lt;li&gt;Each space (a blank space) in code has a meaning in the &lt;code&gt;.coffee&lt;/code&gt; file&lt;/li&gt;
-&lt;li&gt;Semicolons are optional and generally avoided&lt;/li&gt;
-&lt;li&gt;In the beginning you may write more than one classes in a single &lt;code&gt;.coffee&lt;/code&gt; file, and thats perfectly alright here&lt;/li&gt;
-&lt;li&gt;By default the &lt;a href=&quot;http://coffeescript.org/#top&quot;&gt;CoffeeScript&lt;/a&gt; Classes you write are private            &lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;When compiled to JS, the contents of each file, are put inside a self invoking function. This is intentional to not pollute the Global variables. So if the content has some classes inside them, then those classes will also be inside the self-invoking function, restricting the access from outside.&lt;br&gt;The classes in &lt;a href=&quot;http://coffeescript.org/#top&quot;&gt;CoffeeScript&lt;/a&gt; are compiled to as usual JS functions and the inheritence is done through the prototypical inheritence concepts of Javascript. Since all this happens behind the scenes and as a &lt;a href=&quot;http://coffeescript.org/#top&quot;&gt;CoffeeScript&lt;/a&gt; developer if you do not know, how its working, it would be a pain later to expect anything else from this language.          &lt;/p&gt;
-&lt;p&gt;Thats all to start with the new year. Happy new year.         &lt;/p&gt;
 &lt;p&gt;Happy Coding.&lt;/p&gt;
 </description>
     </item>
