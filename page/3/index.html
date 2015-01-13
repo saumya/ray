@@ -23,6 +23,27 @@
       <div class="content-wrap">
         <article class="article intro">
           <header>
+            <p class="date"><span>23. October 2014</span></p>
+            <h2><a href="http://saumya.github.io/ray/articles/43/">Upgrading to Cordova 3.4 and above</a></h2>
+          </header>
+          <section class="content"><p>While trying to upgrade, one of my previous Cordova Android application, to latest <a href="http://cordova.apache.org/">Cordova</a> , noticed that <a href="http://cordova.apache.org/">Cordova</a> now makes it very difficult to switch to a native development workflow. Its not the flow itself, which is difficult, but the information about the flow and to get started with a project which is the problem. If you have ever worked with the native development flow of <a href="http://cordova.apache.org/">Cordova</a> , which I guess you must have, as that was the actual flow in the beginning. Then its exactly the same work flow, but the thing is, its not mentioned anywhere. And in between these, they had introduced a web development workflow and tried forcing to use it. Which itself is not clear and then combined the native workflow with it. Good that, that period is over. But its not clear at all from the docs.
+Well, first of all, <a href="http://cordova.apache.org/">Cordova</a> is saying its released the version 4 of the toolkit. When you go to <a href="http://cordova.apache.org/#download">download</a> section for native development workflow, you will <a href="https://www.apache.org/dist/cordova/">not find a version 4</a> ! So, you have to go inside <a href="https://www.apache.org/dist/cordova/platforms/">platforms</a>, there also you will not find version 4. So, I ended up downloading 3.6.4 for android and will suggest everyone to do that for the time being. After downloading the zipped file, extract it to a folder. Navigate to the folder and fireup the cordova create command to create a project.
+Next is adding the plugins, because now <a href="http://cordova.apache.org/">Cordova</a> does not include plugins by default. For that, one has to go back to Cordova <span class="caps">CLI</span> and that can be done with Node and NPM. But instead of running Cordova to add plugins, one has to run Plugman to install&nbsp;plugins.</p>
+<p>The flow&nbsp;is </p>
+<ul>
+<li>download Cordova Native development&nbsp;package</li>
+<li>download Node and&nbsp;<span class="caps">NPM</span></li>
+<li>install Cordova and Plugman through&nbsp;<span class="caps">NPM</span></li>
+<li>create project from inside the dowloaded Cordova&nbsp;folder</li>
+<li>navigate to the project&nbsp;folder</li>
+<li>run the Plugman command to add plugins to the&nbsp;project</li>
+</ul>
+<p>Happy&nbsp;Coding.</p>
+
+          </section>
+        </article>
+        <article class="article intro">
+          <header>
             <p class="date"><span>30. September 2014</span></p>
             <h2><a href="http://saumya.github.io/ray/articles/42/">Dojo Toolkit, Widget.</a></h2>
           </header>
@@ -86,31 +107,6 @@ While writing a custom Widget, its necessary to override parent’s lifecycle me
 <p>A lot of javascript libraries try to implement the classical programming concepts and <a href="http://dojotoolkit.org/">Dojo</a> is another one of them. So, if you are a purist in Javascript, <a href="http://dojotoolkit.org/">Dojo</a> will dissapoint you. The functional nature of Javascript is also eliminated here. <a href="http://dojotoolkit.org/">Dojo</a> clearly disagrees to say that <code>function</code> is <code>a first class citizen</code>, which is again denying another nice feature of javascript. Well, but if you are coming from a classical programming background, that means from a programming language which is class based like Java, then <a href="http://dojotoolkit.org/">Dojo</a> will seem natural. So, we will refer them in classical terms rather than Javascript&nbsp;terms.</p>
 <p>The core functionality of the toolkit is wrapped in a package called <code>dojo</code>. Everythig that runs in the toolkit depends on this basic package. Next is <code>dijit</code>, which can be called as a component library or in dojo’s terms these are widgets. Now <code>dojox</code> is a package containing experimental widgets, which will eventually go into <code>dijit</code> , once they are stable enough. Since widgets have to live a life of their own, there is a flow of lifecycle events. It is now obvious that any application using these widgets have to abide to these lifecycle events and some rules as a whole. In Dojo’s terms these are framework&nbsp;rules.</p>
 <p>Happy&nbsp;Coding.</p>
-
-          </section>
-        </article>
-        <article class="article intro">
-          <header>
-            <p class="date"><span>23. August 2014</span></p>
-            <h2><a href="http://saumya.github.io/ray/articles/40/">Checklist to join a corporate</a></h2>
-          </header>
-          <section class="content"><p>It is a surprise for me, to see the processes these companines follow to get a person on board. I am not talking about interview. The technical interview is kind of rounds after rounds of never ending interviews. But at least, these are ok-ish situation for a tech person.<br>The real pain starts, once you get through the interview. Now you are selected and need to serve the notice period at old organisation and move on to join the new one. The problem is, once you are through the interview, this new companies will call you at least 5 times a day. This is plain and simple irritating. They will force you (no one can force you, but at least they will talk like that) to join before the scheduled time. 
-If at all, you have joined them by keeping their words, there would be no respect at all for that. Once you come to join them, they will show how much process they follow! Really?!! If you follow all these, why you kept on calling a person who has not joined you? Where were your processes! Or is that a process of yours to trouble someone, who is not from your organisation! Simple stupid. So you make your own process, follow your own process and change that at will.<br>Well, just keep in mind that once you have come to join a new corporate, keep below things with you. These companies will not tell you, when they should have, that please bring all these with&nbsp;you.     </p>
-<ol>
-<li>Your own laptop (only windows with Internet&nbsp;Explorer)</li>
-<li>Your own datacard for&nbsp;internet</li>
-<li>Your phone with roaming&nbsp;activated   </li>
-</ol>
-<p>Once these are done, keep below things with&nbsp;you.</p>
-<ol>
-<li>Your cheque&nbsp;book</li>
-<li>Your father’s identity&nbsp;proof</li>
-<li>All your previous residing locations&nbsp;proof</li>
-<li>Two friends’ addresses and contact from each of all previous location and&nbsp;company</li>
-<li>Two local friends’ contacts and addresses (if they are not, create them&nbsp;!)</li>
-</ol>
-<p>Well last but most importantly keep “your common sense and simplicity” at home. Just rember that these are just mindless machines working for a factory which does not have and can not respect to have a&nbsp;brain.</p>
-<p>Never&nbsp;giveup.</p>
 
           </section>
         </article>

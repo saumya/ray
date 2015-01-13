@@ -5,9 +5,47 @@
     <atom:link href="http://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Mon, 12 Jan 2015 05:30:00 +0630</pubDate>
+    <pubDate>Wed, 14 Jan 2015 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Dojo Toolkit, require and events.</title>
+      <link>http://saumya.github.io/ray/articles/49/</link>
+      <pubDate>Wed, 14 Jan 2015 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">http://saumya.github.io/ray/articles/49/</guid>
+      <author></author>
+      <description>&lt;p&gt;Well, lets say this, if you are working on &lt;a href=&quot;http://dojotoolkit.org/&quot;&gt;Dojo Toolkit&lt;/a&gt;, you are working on a legacy application. Since &lt;a href=&quot;http://dojotoolkit.org/&quot;&gt;Dojo Toolkit&lt;/a&gt; is releasing its newer versions, you need to change your application to newer codebase. Currently &lt;a href=&quot;http://dojotoolkit.org/&quot;&gt;Dojo Toolkit&lt;/a&gt; is leveraging &lt;a href=&quot;http://requirejs.org/docs/whyamd.html#amd&quot;&gt;AMD&lt;/a&gt; for modules and Javascript files. Which is very new for this toolkit and veteran developers in this toolkit may find its very different.          &lt;/p&gt;
+&lt;p&gt;Previously, when we needed some JS code, its simply done by making a ‘require’ call.          &lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;dojo.require(&lt;span class=&quot;string&quot;&gt;&quot;dojo.string&quot;&lt;/span&gt;);
+&lt;span class=&quot;comment&quot;&gt;//then use it&lt;/span&gt;
+dojo.string.trim(&lt;span class=&quot;string&quot;&gt;&quot;  I Like Trim Strings &quot;&lt;/span&gt;);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now it looks as          &lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;require&lt;/span&gt;([&lt;span class=&quot;string&quot;&gt;&quot;dojo/string&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;dojo/domReady!&quot;&lt;/span&gt;], &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(string)&lt;/span&gt;{&lt;/span&gt;
+  string.trim(&lt;span class=&quot;string&quot;&gt;&quot;  I Like Trim Strings &quot;&lt;/span&gt;);
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Well that may seems fine now, but then what happens when we need something inside that &lt;code&gt;require&lt;/code&gt; itself? Actually, its simpler than it seems, we can have &lt;code&gt;require&lt;/code&gt; inside another require too.          &lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;require&lt;/span&gt;([&lt;span class=&quot;string&quot;&gt;&quot;dojo/domReady!&quot;&lt;/span&gt;], &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;{&lt;/span&gt;
+    &lt;span class=&quot;comment&quot;&gt;//DOM is ready, load another module&lt;/span&gt;
+    &lt;span class=&quot;built_in&quot;&gt;require&lt;/span&gt;([&lt;span class=&quot;string&quot;&gt;&quot;dojo/string&quot;&lt;/span&gt;], &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(string)&lt;/span&gt;{&lt;/span&gt;
+      string.trim(&lt;span class=&quot;string&quot;&gt;&quot;  I Like Trim Strings &quot;&lt;/span&gt;);
+    });
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Thats nice. Here &lt;a href=&quot;http://dojotoolkit.org/reference-guide/1.7/dojo/require.html&quot;&gt;is the official documentation&lt;/a&gt;. The introduction to &lt;a href=&quot;http://dojotoolkit.org/documentation/tutorials/1.10/modern_dojo/&quot;&gt;modern dojo&lt;/a&gt; is here.&lt;br&gt;Another nice utility is &lt;a href=&quot;http://dojotoolkit.org/reference-guide/1.10/dojo/topic.html&quot;&gt;topic&lt;/a&gt;. This is kind of central event dispatching and listening station. All one has to do is, dispatch events through &lt;a href=&quot;http://dojotoolkit.org/reference-guide/1.10/dojo/topic.html&quot;&gt;topic&lt;/a&gt; and listen through it too. These are called &lt;code&gt;publish&lt;/code&gt; and &lt;code&gt;subscribe&lt;/code&gt; of events.          &lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;require&lt;/span&gt;([&lt;span class=&quot;string&quot;&gt;&quot;dojo/topic&quot;&lt;/span&gt;], &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(topic)&lt;/span&gt;{&lt;/span&gt;
+    topic.subscribe(&lt;span class=&quot;string&quot;&gt;&quot;some/topic&quot;&lt;/span&gt;, &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(arguments)&lt;/span&gt;{&lt;/span&gt;
+        console.log(&lt;span class=&quot;string&quot;&gt;&quot;received:&quot;&lt;/span&gt;, &lt;span class=&quot;built_in&quot;&gt;arguments&lt;/span&gt;);
+    });
+    &lt;span class=&quot;comment&quot;&gt;// ...&lt;/span&gt;
+    topic.publish(&lt;span class=&quot;string&quot;&gt;&quot;some/topic&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;one&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;two&quot;&lt;/span&gt;);
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The other kind of events are DOM events and &lt;a href=&quot;http://dojotoolkit.org/reference-guide/1.10/dojo/on.html#dojo-on&quot;&gt;they are handled with the ‘on’&lt;/a&gt; module.          &lt;/p&gt;
+&lt;p&gt;Happy coding.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>HAXE JS 102</title>
       <link>http://saumya.github.io/ray/articles/48/</link>
@@ -64,28 +102,6 @@ com.jungle.Animal
 </description>
     </item>
     <item>
-      <title>CoffeeScript basics</title>
-      <link>http://saumya.github.io/ray/articles/45/</link>
-      <pubDate>Thu, 01 Jan 2015 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://saumya.github.io/ray/articles/45/</guid>
-      <author></author>
-      <description>&lt;p&gt;Just to set the expectations right, we need to know something before we begin here.         &lt;/p&gt;
-&lt;p&gt;When I first heard about &lt;code&gt;Class&lt;/code&gt; in &lt;code&gt;Javascript&lt;/code&gt; it created curiosity on me and the expectation increased as to work like a &lt;code&gt;Classical&lt;/code&gt; language(Where Classes are the root of everything) instead of &lt;code&gt;Prototypical&lt;/code&gt; language(like Javascript). But then slowly I understood that its not &lt;code&gt;Javascript&lt;/code&gt; but other languages on top of Javascript which create somekind of &lt;code&gt;Class&lt;/code&gt; concept to mimic &lt;code&gt;Classical&lt;/code&gt; languages. The point is everything boils down to &lt;code&gt;Javascript&lt;/code&gt; if a language is written to compile or transpile to &lt;code&gt;Javascript&lt;/code&gt; . Well, that may seem like a spoiler right now, but its actually not as we will see. Just keep these things in mind all the time, even if we are doing &lt;a href=&quot;http://coffeescript.org/#top&quot;&gt;CoffeeScript&lt;/a&gt;.        &lt;/p&gt;
-&lt;p&gt;Here is the direct link to the &lt;a href=&quot;https://github.com/saumya/CoffeeScript101&quot;&gt;Github&lt;/a&gt; repository for the code reference to this post.       &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;CoffeeScript is generally written in a &lt;code&gt;.coffee&lt;/code&gt; file&lt;/li&gt;
-&lt;li&gt;Each &lt;code&gt;.coffee&lt;/code&gt; file is compiled to a &lt;code&gt;.js&lt;/code&gt; file&lt;/li&gt;
-&lt;li&gt;Each space (a blank space) in code has a meaning in the &lt;code&gt;.coffee&lt;/code&gt; file&lt;/li&gt;
-&lt;li&gt;Semicolons are optional and generally avoided&lt;/li&gt;
-&lt;li&gt;In the beginning you may write more than one classes in a single &lt;code&gt;.coffee&lt;/code&gt; file, and thats perfectly alright here&lt;/li&gt;
-&lt;li&gt;By default the &lt;a href=&quot;http://coffeescript.org/#top&quot;&gt;CoffeeScript&lt;/a&gt; Classes you write are private            &lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;When compiled to JS, the contents of each file, are put inside a self invoking function. This is intentional to not pollute the Global variables. So if the content has some classes inside them, then those classes will also be inside the self-invoking function, restricting the access from outside.&lt;br&gt;The classes in &lt;a href=&quot;http://coffeescript.org/#top&quot;&gt;CoffeeScript&lt;/a&gt; are compiled to as usual JS functions and the inheritence is done through the prototypical inheritence concepts of Javascript. Since all this happens behind the scenes and as a &lt;a href=&quot;http://coffeescript.org/#top&quot;&gt;CoffeeScript&lt;/a&gt; developer if you do not know, how its working, it would be a pain later to expect anything else from this language.          &lt;/p&gt;
-&lt;p&gt;Thats all to start with the new year. Happy new year.         &lt;/p&gt;
-&lt;p&gt;Happy Coding.&lt;/p&gt;
-</description>
-    </item>
-    <item>
       <title>Cake and Coffee</title>
       <link>http://saumya.github.io/ray/articles/46/</link>
       <pubDate>Thu, 01 Jan 2015 05:30:00 +0630</pubDate>
@@ -115,6 +131,28 @@ com.jungle.Animal
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;While defining tasks, we can make a relation between tasks. That means we can say taskOne is dependent on taskTwo. The &lt;a href=&quot;https://github.com/saumya/CoffeeScript101&quot;&gt;basics of CoffeeScript project&lt;/a&gt; has a Cakefile for reference.        &lt;/p&gt;
 &lt;p&gt;The direct link to the sample &lt;code&gt;Cakefile&lt;/code&gt; &lt;a href=&quot;https://github.com/saumya/CoffeeScript101/blob/master/Cakefile&quot;&gt;is here&lt;/a&gt;. All the code are commented for easy reference.       &lt;/p&gt;
+&lt;p&gt;Happy Coding.&lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>CoffeeScript basics</title>
+      <link>http://saumya.github.io/ray/articles/45/</link>
+      <pubDate>Thu, 01 Jan 2015 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">http://saumya.github.io/ray/articles/45/</guid>
+      <author></author>
+      <description>&lt;p&gt;Just to set the expectations right, we need to know something before we begin here.         &lt;/p&gt;
+&lt;p&gt;When I first heard about &lt;code&gt;Class&lt;/code&gt; in &lt;code&gt;Javascript&lt;/code&gt; it created curiosity on me and the expectation increased as to work like a &lt;code&gt;Classical&lt;/code&gt; language(Where Classes are the root of everything) instead of &lt;code&gt;Prototypical&lt;/code&gt; language(like Javascript). But then slowly I understood that its not &lt;code&gt;Javascript&lt;/code&gt; but other languages on top of Javascript which create somekind of &lt;code&gt;Class&lt;/code&gt; concept to mimic &lt;code&gt;Classical&lt;/code&gt; languages. The point is everything boils down to &lt;code&gt;Javascript&lt;/code&gt; if a language is written to compile or transpile to &lt;code&gt;Javascript&lt;/code&gt; . Well, that may seem like a spoiler right now, but its actually not as we will see. Just keep these things in mind all the time, even if we are doing &lt;a href=&quot;http://coffeescript.org/#top&quot;&gt;CoffeeScript&lt;/a&gt;.        &lt;/p&gt;
+&lt;p&gt;Here is the direct link to the &lt;a href=&quot;https://github.com/saumya/CoffeeScript101&quot;&gt;Github&lt;/a&gt; repository for the code reference to this post.       &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;CoffeeScript is generally written in a &lt;code&gt;.coffee&lt;/code&gt; file&lt;/li&gt;
+&lt;li&gt;Each &lt;code&gt;.coffee&lt;/code&gt; file is compiled to a &lt;code&gt;.js&lt;/code&gt; file&lt;/li&gt;
+&lt;li&gt;Each space (a blank space) in code has a meaning in the &lt;code&gt;.coffee&lt;/code&gt; file&lt;/li&gt;
+&lt;li&gt;Semicolons are optional and generally avoided&lt;/li&gt;
+&lt;li&gt;In the beginning you may write more than one classes in a single &lt;code&gt;.coffee&lt;/code&gt; file, and thats perfectly alright here&lt;/li&gt;
+&lt;li&gt;By default the &lt;a href=&quot;http://coffeescript.org/#top&quot;&gt;CoffeeScript&lt;/a&gt; Classes you write are private            &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;When compiled to JS, the contents of each file, are put inside a self invoking function. This is intentional to not pollute the Global variables. So if the content has some classes inside them, then those classes will also be inside the self-invoking function, restricting the access from outside.&lt;br&gt;The classes in &lt;a href=&quot;http://coffeescript.org/#top&quot;&gt;CoffeeScript&lt;/a&gt; are compiled to as usual JS functions and the inheritence is done through the prototypical inheritence concepts of Javascript. Since all this happens behind the scenes and as a &lt;a href=&quot;http://coffeescript.org/#top&quot;&gt;CoffeeScript&lt;/a&gt; developer if you do not know, how its working, it would be a pain later to expect anything else from this language.          &lt;/p&gt;
+&lt;p&gt;Thats all to start with the new year. Happy new year.         &lt;/p&gt;
 &lt;p&gt;Happy Coding.&lt;/p&gt;
 </description>
     </item>

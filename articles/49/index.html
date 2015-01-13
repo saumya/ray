@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <title>Dojo Toolkit, require and events. - Saumya
+    </title>
+    <link rel="alternate" href="http://saumya.github.io/ray/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
+    <link rel="stylesheet" href="http://saumya.github.io/ray/css/main.css">
+    <link rel="stylesheet" href="http://saumya.github.io/ray/css/saumya.css">
+  </head>
+  <body class="article-detail">
+    <header class="header">
+      <div class="content-wrap">
+        <h1>Dojo Toolkit, require and events.</h1>
+        <p class="author">Written by <span class="author"><a href="mailto:contact@saumyaray.com">Saumya</a></span>
+        </p>
+        <p class="date">14. January 2015</p>
+      </div>
+    </header>
+    <div id="content">
+      <div class="content-wrap">
+        <article class="article">
+          <section class="content"><p>Well, lets say this, if you are working on <a href="http://dojotoolkit.org/">Dojo Toolkit</a>, you are working on a legacy application. Since <a href="http://dojotoolkit.org/">Dojo Toolkit</a> is releasing its newer versions, you need to change your application to newer codebase. Currently <a href="http://dojotoolkit.org/">Dojo Toolkit</a> is leveraging <a href="http://requirejs.org/docs/whyamd.html#amd"><span class="caps">AMD</span></a> for modules and Javascript files. Which is very new for this toolkit and veteran developers in this toolkit may find its very&nbsp;different.          </p>
+<p>Previously, when we needed some <span class="caps">JS</span> code, its simply done by making a ‘require’&nbsp;call.          </p>
+<pre><code class="lang-javascript">dojo.require(<span class="string">"dojo.string"</span>);
+<span class="comment">//then use it</span>
+dojo.string.trim(<span class="string">"  I Like Trim Strings "</span>);
+</code></pre>
+<p>Now it looks&nbsp;as          </p>
+<pre><code class="lang-javascript"><span class="built_in">require</span>([<span class="string">"dojo/string"</span>, <span class="string">"dojo/domReady!"</span>], <span class="function"><span class="keyword">function</span><span class="params">(string)</span>{</span>
+  string.trim(<span class="string">"  I Like Trim Strings "</span>);
+});
+</code></pre>
+<p>Well that may seems fine now, but then what happens when we need something inside that <code>require</code> itself? Actually, its simpler than it seems, we can have <code>require</code> inside another require&nbsp;too.          </p>
+<pre><code class="lang-javascript"><span class="built_in">require</span>([<span class="string">"dojo/domReady!"</span>], <span class="function"><span class="keyword">function</span><span class="params">()</span>{</span>
+    <span class="comment">//<span class="caps">DOM</span> is ready, load another module</span>
+    <span class="built_in">require</span>([<span class="string">"dojo/string"</span>], <span class="function"><span class="keyword">function</span><span class="params">(string)</span>{</span>
+      string.trim(<span class="string">"  I Like Trim Strings "</span>);
+    });
+});
+</code></pre>
+<p>Thats nice. Here <a href="http://dojotoolkit.org/reference-guide/1.7/dojo/require.html">is the official documentation</a>. The introduction to <a href="http://dojotoolkit.org/documentation/tutorials/1.10/modern_dojo/">modern dojo</a> is here.<br>Another nice utility is <a href="http://dojotoolkit.org/reference-guide/1.10/dojo/topic.html">topic</a>. This is kind of central event dispatching and listening station. All one has to do is, dispatch events through <a href="http://dojotoolkit.org/reference-guide/1.10/dojo/topic.html">topic</a> and listen through it too. These are called <code>publish</code> and <code>subscribe</code> of&nbsp;events.          </p>
+<pre><code class="lang-javascript"><span class="built_in">require</span>([<span class="string">"dojo/topic"</span>], <span class="function"><span class="keyword">function</span><span class="params">(topic)</span>{</span>
+    topic.subscribe(<span class="string">"some/topic"</span>, <span class="function"><span class="keyword">function</span><span class="params">(arguments)</span>{</span>
+        console.log(<span class="string">"received:"</span>, <span class="built_in">arguments</span>);
+    });
+    <span class="comment">// ...</span>
+    topic.publish(<span class="string">"some/topic"</span>, <span class="string">"one"</span>, <span class="string">"two"</span>);
+});
+</code></pre>
+<p>The other kind of events are <span class="caps">DOM</span> events and <a href="http://dojotoolkit.org/reference-guide/1.10/dojo/on.html#dojo-on">they are handled with the ‘on’</a>&nbsp;module.          </p>
+<p>Happy&nbsp;coding.</p>
+</section>
+        </article>
+      </div>
+    </div>
+    <footer>
+      <div class="content-wrap">
+        <div class="nav"><a href="http://saumya.github.io/ray/">« Full blog</a></div>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+          var disqus_shortname = 'saumya';
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        <section class="about"><p><a href="http://www.saumyaray.com">Saumya</a> believes in The God.</p>
+<p>A maker of things and curious about everything. Continuous learning is, what fuels him. This blog itself, reflects one of many things he is trying at all the time.</p>
+<p>He is <a href="https://twitter.com/saumya">@saumya</a> on Twitter. </p>
+<span class="nav"><a href="http://saumya.github.io/ray/">Blog Home</a><a href="http://saumya.github.io/ray/archive.html">Archives</a></span>
+        </section>
+        <section class="copy">
+          <p>&copy; 2015 saumya ray &mdash; powered by&nbsp;     <a href="https://github.com/jnordberg/wintersmith">Wintersmith&nbsp;</a>
+            <p><a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
+          </p>
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>
