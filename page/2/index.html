@@ -23,6 +23,31 @@
       <div class="content-wrap">
         <article class="article intro">
           <header>
+            <p class="date"><span>05. January 2015</span></p>
+            <h2><a href="http://saumya.github.io/ray/articles/47/">HAXE JS 101</a></h2>
+          </header>
+          <section class="content"><p>Hope you know what is <a href="http://haxe.org/"><span class="caps">HAXE</span></a>, take a moment to go through the official <a href="http://haxe.org/"><span class="caps">HAXE</span></a> documentation. We will discuss how and what to consider while working with <span class="caps">JS</span> in <a href="http://haxe.org/"><span class="caps">HAXE</span></a>.<br>Generally other languages, which compile to <span class="caps">JS</span>, actually compile each specific file to a respective JS file. <a href="http://haxe.org/"><span class="caps">HAXE</span></a> actually compiles to one single <span class="caps">JS</span> file for our application. We can further take the generated JS file and minify it using popular JS&nbsp;minifiers.        </p>
+<p>The work flow for <a href="http://haxe.org/"><span class="caps">HAXE</span></a> to <span class="caps">JS</span> is as simple&nbsp;as         </p>
+<ul>
+<li>Writing the normal <a href="http://haxe.org/"><span class="caps">HAXE</span></a>&nbsp;application</li>
+<li>Use the package structure and class as&nbsp;usual</li>
+<li>Make a .hxml file difining what would be the final <span class="caps">JS</span>&nbsp;file</li>
+<li>Compile with <a href="http://haxe.org/"><span class="caps">HAXE</span></a> compiler to produce the <span class="caps">JS</span>&nbsp;file         </li>
+</ul>
+<pre><code class="lang-haxe">haxe compile.hxml
+</code></pre>
+<p>The <code>.hxml</code> file looks something&nbsp;like</p>
+<pre><code class="lang-haxe">-main ApplicationEntry
+-js app.js
+</code></pre>
+<p>Thats all to it. <a href="http://haxe.org/"><span class="caps">HAXE</span></a> will take care of the <code>import</code> and <code>package</code> and <code>class</code> of the application. Finally the generted <span class="caps">JS</span> file is having everything our application needs. Include the JS file in the required HTML file and we are&nbsp;done.      </p>
+<p>Here is a <a href="https://github.com/saumya/HAXE-JS101">sample basic application</a> showing all there is to&nbsp;it.</p>
+<p>Happy&nbsp;Coding.</p>
+
+          </section>
+        </article>
+        <article class="article intro">
+          <header>
             <p class="date"><span>01. January 2015</span></p>
             <h2><a href="http://saumya.github.io/ray/articles/46/">Cake and Coffee</a></h2>
           </header>
@@ -72,41 +97,6 @@
 </ul>
 <p>When compiled to <span class="caps">JS</span>, the contents of each file, are put inside a self invoking function. This is intentional to not pollute the Global variables. So if the content has some classes inside them, then those classes will also be inside the self-invoking function, restricting the access from outside.<br>The classes in <a href="http://coffeescript.org/#top">CoffeeScript</a> are compiled to as usual <span class="caps">JS</span> functions and the inheritence is done through the prototypical inheritence concepts of Javascript. Since all this happens behind the scenes and as a <a href="http://coffeescript.org/#top">CoffeeScript</a> developer if you do not know, how its working, it would be a pain later to expect anything else from this&nbsp;language.          </p>
 <p>Thats all to start with the new year. Happy new&nbsp;year.         </p>
-<p>Happy&nbsp;Coding.</p>
-
-          </section>
-        </article>
-        <article class="article intro">
-          <header>
-            <p class="date"><span>17. November 2014</span></p>
-            <h2><a href="http://saumya.github.io/ray/articles/44/">RequireJS, Load timeout for modules!</a></h2>
-          </header>
-          <section class="content"><p>Working with <a href="http://backbonejs.org/">BackboneJS</a>, will make you work with <a href="http://requirejs.org/">RequireJS</a>. And if you are working with <a href="http://backbonejs.org/">BackboneJS</a> for a little time, then you probably know what I am talking about. Sometimes, the modules we are loading through <a href="http://requirejs.org/">RequireJS</a> throw errors&nbsp;saying</p>
-<pre><code class="lang-javascript"><span class="built_in">Error</span>: Load timeout <span class="keyword">for</span> modules
-</code></pre>
-<p>I will suggest to have a look at <a href="http://requirejs.org/docs/errors.html">RequireJS</a> documentation for detailed explanation.<br>The most common and which may hit you in the begining is the <code>timeout</code> for timeout itself. There are ways to fix this. The options&nbsp;are</p>
-<ul>
-<li>increase the timeout&nbsp;limit</li>
-<li>reload the page or the module on timeout&nbsp;error</li>
-</ul>
-<p>The <a href="http://requirejs.org/">RequireJS</a> configuration has an option called <code>waitSeconds</code>, which defaults to <code>7</code>. Now if the module does not load in 7 seconds, it will giveup and throw the error. If <code>waitSeconds</code> is set to <code>0</code>, it will wait for <code>infinite</code>. Well, along with that setting, set the <code>enforceDefine</code> to <code>true</code> for reliability in all browsers and scenarios. This setting will look as&nbsp;below.</p>
-<pre><code class="lang-javascript">requirejs.config({
-    enforceDefine: <span class="literal">true</span>,
-    waitSeconds: <span class="number">0</span>,
-</code></pre>
-<p>Thats a quickfix. But again, it may hit the performace of the application.<br>The otherway is <a href="http://requirejs.org/docs/api.html#errbacks">Errbacks</a> as per <a href="http://requirejs.org/">RequireJS</a>. so what are they. They are simply callbacks but since it happens in errors, its called <code>Errbacks</code>. We can do stuff like reloading the whole application or the specified module or other error handling on&nbsp;these.</p>
-<pre><code class="lang-javascript"><span class="built_in">require</span>([<span class="string">'modules/one'</span>,<span class="string">'modules/two'</span>],
-           <span class="function"><span class="keyword">function</span><span class="params">(One,Two)</span>{</span>
-            <span class="comment">//Application logic</span>
-        },
-        <span class="function"><span class="keyword">function</span><span class="params">(error)</span>{</span>
-            console.log(<span class="string">'Custom <span class="caps">ERROR</span> handler'</span>,error);
-            <span class="comment">//error.requireModules : is Array of all failed modules</span>
-            <span class="keyword">var</span> failedId = error.requireModules &amp;&amp; error.requireModules[<span class="number">0</span>];
-            console.log(failedId);
-            console.log(error.message);
-        });
-</code></pre>
 <p>Happy&nbsp;Coding.</p>
 
           </section>
