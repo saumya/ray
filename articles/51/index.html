@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <title>Making crossplatform CLI application with HAXE - Saumya
+    </title>
+    <link rel="alternate" href="http://saumya.github.io/ray/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
+    <link rel="stylesheet" href="http://saumya.github.io/ray/css/main.css">
+    <link rel="stylesheet" href="http://saumya.github.io/ray/css/saumya.css">
+  </head>
+  <body class="article-detail">
+    <header class="header">
+      <div class="content-wrap">
+        <h1>Making crossplatform CLI application with HAXE</h1>
+        <p class="author">Written by <span class="author"><a href="mailto:contact@saumyaray.com">Saumya</a></span>
+        </p>
+        <p class="date">19. January 2015</p>
+      </div>
+    </header>
+    <div id="content">
+      <div class="content-wrap">
+        <article class="article">
+          <section class="content"><p>When I first heard about <span class="caps">CLI</span> applications, I thought it might be shipping with the OS itself. Then I found that we can write our own CLI applications. At that point I assume that well, just a CLI application, means it runs everywhere. But actually CLI applications by default are not crossplatform! Yes, I realised it much later. In order to have a crossplatform CLI app, one needs all the required environment to compile to and compile for a particular&nbsp;OS.         </p>
+<p><a href="http://haxe.org/"><span class="caps">HAXE</span></a> comes in handy in this case. One can make a crossplatfom <span class="caps">CLI</span> app with just one code base. Ofcourse you need the required environment to compile to that particular environment. There is even a shorter way to this, compile for <a href="http://nekovm.org"><span class="caps">NEKO</span></a> virtual machine. This <a href="http://nekovm.org"><span class="caps">NEKO</span></a> <span class="caps">VM</span> ships with <a href="http://haxe.org/"><span class="caps">HAXE</span></a>. Once you compile to <a href="http://nekovm.org"><span class="caps">NEKO</span></a>, all you do is package all the <a href="http://nekovm.org"><span class="caps">NEKO</span></a> dependencies and there you have a crossplatform <span class="caps">CLI</span> for every OS. Here we will compile to <a href="http://nekovm.org"><span class="caps">NEKO</span></a> and run through <a href="http://nekovm.org"><span class="caps">NEKO</span></a>, but just keep in mind that the same code can be compiled to <span class="caps">CPP</span>(C++) to produce true native CLI.<br>Lets begin with the compiler settings or the build file. The <code>.hxml</code> file has the following&nbsp;content.</p>
+<pre><code class="lang-haxe"># HAXE build
+# Defining the application entry
+-main MyCliApp
+# NEKO : compilation
+-neko bin/myCliApp.n
+#
+# CPP : compilation
+#-cpp bin/cpp/
+</code></pre>
+<p>We are setting up for compiling to <a href="http://nekovm.org"><span class="caps">NEKO</span></a> but then we have the options commented out for compiling to <span class="caps">CPP</span>. If we want to compile for the C++ target, then comment out the <a href="http://nekovm.org"><span class="caps">NEKO</span></a> target and enable the <span class="caps">CPP</span>(C++) target. Well, this compilation will create a file named <code>myCliApp.n</code> inside the ‘bin’ folder. To run the file, we have to navigate to the ‘bin’ folder and run with <a href="http://nekovm.org"><span class="caps">NEKO</span></a> as&nbsp;below.  </p>
+<pre><code class="lang-haxe">neko ./myCliApp.n
+</code></pre>
+<p>Thats about compilation and running. Lets get back to coding. There is no surprise here as all we have to do is, get the right package and class from <a href="http://haxe.org/"><span class="caps">HAXE</span></a> and use it. Here is the <a href="https://github.com/saumya/HAXE-CLI-101">Git repo</a> for this example. The application entry initialises ‘PrintInfo’ Class. That class prints the information that we want to show to the user and finally asks the name of the use. As user inputs the name, it greets the user and moves to our defined command prompt. We have setup some commands to display. Depending upon user input the necessary commands are executed. All these are happening in <code>MyCli.hx</code>  Class. The <a href="https://github.com/saumya/HAXE-CLI-101/blob/master/com/saumya/cli/MyCli.hx">code is commented</a> for easy reference in <a href="https://github.com/saumya/HAXE-CLI-101">this repo</a>. Here is the <a href="https://github.com/saumya/HAXE-CLI-101/blob/master/com/saumya/cli/MyCli.hx">direct link</a> to the&nbsp;class. </p>
+<p>Happy&nbsp;coding.</p>
+</section>
+        </article>
+      </div>
+    </div>
+    <footer>
+      <div class="content-wrap">
+        <div class="nav"><a href="http://saumya.github.io/ray/">« Full blog</a></div>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+          var disqus_shortname = 'saumya';
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        <section class="about"><p><a href="http://www.saumyaray.com">Saumya</a> believes in The God.</p>
+<p>A maker of things and curious about everything. Continuous learning is, what fuels him. This blog itself, reflects one of many things he is trying at all the time.</p>
+<p>He is <a href="https://twitter.com/saumya">@saumya</a> on Twitter. </p>
+<span class="nav"><a href="http://saumya.github.io/ray/">Blog Home</a><a href="http://saumya.github.io/ray/archive.html">Archives</a></span>
+        </section>
+        <section class="copy">
+          <p>&copy; 2015 saumya ray &mdash; powered by&nbsp;     <a href="https://github.com/jnordberg/wintersmith">Wintersmith&nbsp;</a>
+            <p><a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
+          </p>
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>

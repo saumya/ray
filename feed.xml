@@ -5,9 +5,33 @@
     <atom:link href="http://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Sun, 18 Jan 2015 05:30:00 +0630</pubDate>
+    <pubDate>Mon, 19 Jan 2015 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Making crossplatform CLI application with HAXE</title>
+      <link>http://saumya.github.io/ray/articles/51/</link>
+      <pubDate>Mon, 19 Jan 2015 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">http://saumya.github.io/ray/articles/51/</guid>
+      <author></author>
+      <description>&lt;p&gt;When I first heard about CLI applications, I thought it might be shipping with the OS itself. Then I found that we can write our own CLI applications. At that point I assume that well, just a CLI application, means it runs everywhere. But actually CLI applications by default are not crossplatform! Yes, I realised it much later. In order to have a crossplatform CLI app, one needs all the required environment to compile to and compile for a particular OS.         &lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://haxe.org/&quot;&gt;HAXE&lt;/a&gt; comes in handy in this case. One can make a crossplatfom CLI app with just one code base. Ofcourse you need the required environment to compile to that particular environment. There is even a shorter way to this, compile for &lt;a href=&quot;http://nekovm.org&quot;&gt;NEKO&lt;/a&gt; virtual machine. This &lt;a href=&quot;http://nekovm.org&quot;&gt;NEKO&lt;/a&gt; VM ships with &lt;a href=&quot;http://haxe.org/&quot;&gt;HAXE&lt;/a&gt;. Once you compile to &lt;a href=&quot;http://nekovm.org&quot;&gt;NEKO&lt;/a&gt;, all you do is package all the &lt;a href=&quot;http://nekovm.org&quot;&gt;NEKO&lt;/a&gt; dependencies and there you have a crossplatform CLI for every OS. Here we will compile to &lt;a href=&quot;http://nekovm.org&quot;&gt;NEKO&lt;/a&gt; and run through &lt;a href=&quot;http://nekovm.org&quot;&gt;NEKO&lt;/a&gt;, but just keep in mind that the same code can be compiled to CPP(C++) to produce true native CLI.&lt;br&gt;Lets begin with the compiler settings or the build file. The &lt;code&gt;.hxml&lt;/code&gt; file has the following content.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-haxe&quot;&gt;# HAXE build
+# Defining the application entry
+-main MyCliApp
+# NEKO : compilation
+-neko bin/myCliApp.n
+#
+# CPP : compilation
+#-cpp bin/cpp/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We are setting up for compiling to &lt;a href=&quot;http://nekovm.org&quot;&gt;NEKO&lt;/a&gt; but then we have the options commented out for compiling to CPP. If we want to compile for the C++ target, then comment out the &lt;a href=&quot;http://nekovm.org&quot;&gt;NEKO&lt;/a&gt; target and enable the CPP(C++) target. Well, this compilation will create a file named &lt;code&gt;myCliApp.n&lt;/code&gt; inside the ‘bin’ folder. To run the file, we have to navigate to the ‘bin’ folder and run with &lt;a href=&quot;http://nekovm.org&quot;&gt;NEKO&lt;/a&gt; as below.  &lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-haxe&quot;&gt;neko ./myCliApp.n
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Thats about compilation and running. Lets get back to coding. There is no surprise here as all we have to do is, get the right package and class from &lt;a href=&quot;http://haxe.org/&quot;&gt;HAXE&lt;/a&gt; and use it. Here is the &lt;a href=&quot;https://github.com/saumya/HAXE-CLI-101&quot;&gt;Git repo&lt;/a&gt; for this example. The application entry initialises ‘PrintInfo’ Class. That class prints the information that we want to show to the user and finally asks the name of the use. As user inputs the name, it greets the user and moves to our defined command prompt. We have setup some commands to display. Depending upon user input the necessary commands are executed. All these are happening in &lt;code&gt;MyCli.hx&lt;/code&gt;  Class. The &lt;a href=&quot;https://github.com/saumya/HAXE-CLI-101/blob/master/com/saumya/cli/MyCli.hx&quot;&gt;code is commented&lt;/a&gt; for easy reference in &lt;a href=&quot;https://github.com/saumya/HAXE-CLI-101&quot;&gt;this repo&lt;/a&gt;. Here is the &lt;a href=&quot;https://github.com/saumya/HAXE-CLI-101/blob/master/com/saumya/cli/MyCli.hx&quot;&gt;direct link&lt;/a&gt; to the class. &lt;/p&gt;
+&lt;p&gt;Happy coding.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>HAXE and NodeJS</title>
       <link>http://saumya.github.io/ray/articles/50/</link>

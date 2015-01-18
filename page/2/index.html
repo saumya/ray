@@ -23,6 +23,36 @@
       <div class="content-wrap">
         <article class="article intro">
           <header>
+            <p class="date"><span>12. January 2015</span></p>
+            <h2><a href="http://saumya.github.io/ray/articles/48/">HAXE JS 102</a></h2>
+          </header>
+          <section class="content"><p>We are going good with <a href="http://haxe.org/"><span class="caps">HAXE</span></a>, take a moment to go through the official <a href="http://haxe.org/"><span class="caps">HAXE</span></a> documentation.<br>This is a follow-up post to the <a href="http://saumya.github.io/ray/articles/47/">Haxe <span class="caps">JS</span> 101</a>. Its all about setting up the expectations from the language and the tool chain. Lets make some more things clear about the tooling and how the language&nbsp;works.          </p>
+<ul>
+<li><a href="http://haxe.org/"><span class="caps">HAXE</span></a> will produce one single <span class="caps">JS</span>&nbsp;file</li>
+<li>We can force it to create one <span class="caps">JS</span> file for one .hx&nbsp;file</li>
+<li>The created <span class="caps">JS</span> file, is by no means is a module JS file as in CommonJS or&nbsp;AMD          </li>
+</ul>
+<p>The contents of <code>.hxml</code> or the build file generally looks&nbsp;as        </p>
+<pre><code class="lang-haxe">-main ApplicationEntry
+-js app.js
+</code></pre>
+<p>While forcing each <code>.hx</code> file for an individual <code>.js</code> file, the build file would contain something&nbsp;as         </p>
+<pre><code class="lang-haxe">-js com/jungle/Tree.js 
+-cp src 
+com.jungle.Tree
+--next
+-js com/jungle/Animal.js 
+-cp src 
+com.jungle.Animal
+</code></pre>
+<p>For a sample project and the options, have a look at <a href="https://github.com/saumya/HAXE-JS101">this repo</a> and the <a href="https://github.com/saumya/HAXE-JS101/blob/master/compile.hxml">sample .hxml</a> file is here with all the possible options for <code>.js</code> output.          </p>
+<p>The important thing is to remember that finally every <span class="caps">JS</span> project is compiled to a single JS file and <a href="http://haxe.org/"><span class="caps">HAXE</span></a> does it in one go. It does not provide module export or any fancy things that other <span class="caps">JS</span> frameworks do to support JS look like a classical programming language. <a href="http://haxe.org/"><span class="caps">HAXE</span></a> works with its own tool chain and provides well made <span class="caps">JS</span> output. Do not fight it to mock JS libraries, <a href="http://haxe.org/"><span class="caps">HAXE</span></a> is more powerful than that. Even for NodeJS output, <a href="http://haxe.org/"><span class="caps">HAXE</span></a> produces the final <span class="caps">JS</span> output, just a single <code>.js</code> file. Work with <a href="http://haxe.org/"><span class="caps">HAXE</span></a> packages and classes and then compile it to make the final output, no nothing in&nbsp;between.</p>
+<p>Happy&nbsp;Haxing.</p>
+
+          </section>
+        </article>
+        <article class="article intro">
+          <header>
             <p class="date"><span>05. January 2015</span></p>
             <h2><a href="http://saumya.github.io/ray/articles/47/">HAXE JS 101</a></h2>
           </header>
@@ -42,39 +72,6 @@
 </code></pre>
 <p>Thats all to it. <a href="http://haxe.org/"><span class="caps">HAXE</span></a> will take care of the <code>import</code> and <code>package</code> and <code>class</code> of the application. Finally the generted <span class="caps">JS</span> file is having everything our application needs. Include the JS file in the required HTML file and we are&nbsp;done.      </p>
 <p>Here is a <a href="https://github.com/saumya/HAXE-JS101">sample basic application</a> showing all there is to&nbsp;it.</p>
-<p>Happy&nbsp;Coding.</p>
-
-          </section>
-        </article>
-        <article class="article intro">
-          <header>
-            <p class="date"><span>01. January 2015</span></p>
-            <h2><a href="http://saumya.github.io/ray/articles/46/">Cake and Coffee</a></h2>
-          </header>
-          <section class="content"><p>While working with <a href="http://coffeescript.org/#top">CoffeeScript</a>, we generally tend to do the&nbsp;following,</p>
-<ul>
-<li>write something in a .coffee&nbsp;file</li>
-<li>compile that file with coffee compiler to .js&nbsp;file         </li>
-</ul>
-<p>Well, if we are a little smarter, then use the following command to compile all the .coffee files in a particular folder to respective .js file in another&nbsp;folder.</p>
-<pre><code class="lang-coffeescript">coffee --compile --output outputFolder/ inputFolder/
-</code></pre>
-<p>That may seem enough now, but actually there are a lot of things we could automate. The native way to do this in <a href="http://coffeescript.org/#top">CoffeeScript</a> is called <code>Cake</code>. We can look at it as a build system. Nice thing about this is, we can write every instruction in <a href="http://coffeescript.org/#top">CoffeeScript</a>&nbsp;itself.         </p>
-<ul>
-<li>Cake is an utility comes with <a href="http://coffeescript.org/#top">CoffeeScript</a></li>
-<li>its a task runner or build&nbsp;system</li>
-<li>all the instructions are saved in a file with name <code>Cakefile</code></li>
-<li><code>Cakefile</code> is the file name and there is no extension to&nbsp;it</li>
-<li>Everything inside the <code>Cakefile</code> is a <a href="http://coffeescript.org/#top">CoffeeScript</a>&nbsp;expression         </li>
-</ul>
-<p>To run the <code>Cake</code> task runner, navigate to the folder, where our <code>Cakefile</code> is residing and fire up the command as&nbsp;below.        </p>
-<pre><code class="lang-coffeescript">cake
-</code></pre>
-<p>That will display all the tasks available in that file to be run. To run a specific task,&nbsp;run</p>
-<pre><code class="lang-coffeescript">cake taskName
-</code></pre>
-<p>While defining tasks, we can make a relation between tasks. That means we can say taskOne is dependent on taskTwo. The <a href="https://github.com/saumya/CoffeeScript101">basics of CoffeeScript project</a> has a Cakefile for&nbsp;reference.        </p>
-<p>The direct link to the sample <code>Cakefile</code> <a href="https://github.com/saumya/CoffeeScript101/blob/master/Cakefile">is here</a>. All the code are commented for easy&nbsp;reference.       </p>
 <p>Happy&nbsp;Coding.</p>
 
           </section>

@@ -23,6 +23,39 @@
       <div class="content-wrap">
         <article class="article intro">
           <header>
+            <p class="date"><span>01. January 2015</span></p>
+            <h2><a href="http://saumya.github.io/ray/articles/46/">Cake and Coffee</a></h2>
+          </header>
+          <section class="content"><p>While working with <a href="http://coffeescript.org/#top">CoffeeScript</a>, we generally tend to do the&nbsp;following,</p>
+<ul>
+<li>write something in a .coffee&nbsp;file</li>
+<li>compile that file with coffee compiler to .js&nbsp;file         </li>
+</ul>
+<p>Well, if we are a little smarter, then use the following command to compile all the .coffee files in a particular folder to respective .js file in another&nbsp;folder.</p>
+<pre><code class="lang-coffeescript">coffee --compile --output outputFolder/ inputFolder/
+</code></pre>
+<p>That may seem enough now, but actually there are a lot of things we could automate. The native way to do this in <a href="http://coffeescript.org/#top">CoffeeScript</a> is called <code>Cake</code>. We can look at it as a build system. Nice thing about this is, we can write every instruction in <a href="http://coffeescript.org/#top">CoffeeScript</a>&nbsp;itself.         </p>
+<ul>
+<li>Cake is an utility comes with <a href="http://coffeescript.org/#top">CoffeeScript</a></li>
+<li>its a task runner or build&nbsp;system</li>
+<li>all the instructions are saved in a file with name <code>Cakefile</code></li>
+<li><code>Cakefile</code> is the file name and there is no extension to&nbsp;it</li>
+<li>Everything inside the <code>Cakefile</code> is a <a href="http://coffeescript.org/#top">CoffeeScript</a>&nbsp;expression         </li>
+</ul>
+<p>To run the <code>Cake</code> task runner, navigate to the folder, where our <code>Cakefile</code> is residing and fire up the command as&nbsp;below.        </p>
+<pre><code class="lang-coffeescript">cake
+</code></pre>
+<p>That will display all the tasks available in that file to be run. To run a specific task,&nbsp;run</p>
+<pre><code class="lang-coffeescript">cake taskName
+</code></pre>
+<p>While defining tasks, we can make a relation between tasks. That means we can say taskOne is dependent on taskTwo. The <a href="https://github.com/saumya/CoffeeScript101">basics of CoffeeScript project</a> has a Cakefile for&nbsp;reference.        </p>
+<p>The direct link to the sample <code>Cakefile</code> <a href="https://github.com/saumya/CoffeeScript101/blob/master/Cakefile">is here</a>. All the code are commented for easy&nbsp;reference.       </p>
+<p>Happy&nbsp;Coding.</p>
+
+          </section>
+        </article>
+        <article class="article intro">
+          <header>
             <p class="date"><span>17. November 2014</span></p>
             <h2><a href="http://saumya.github.io/ray/articles/44/">RequireJS, Load timeout for modules!</a></h2>
           </header>
@@ -73,54 +106,6 @@ Next is adding the plugins, because now <a href="http://cordova.apache.org/">Cor
 <li>navigate to the project&nbsp;folder</li>
 <li>run the Plugman command to add plugins to the&nbsp;project</li>
 </ul>
-<p>Happy&nbsp;Coding.</p>
-
-          </section>
-        </article>
-        <article class="article intro">
-          <header>
-            <p class="date"><span>30. September 2014</span></p>
-            <h2><a href="http://saumya.github.io/ray/articles/42/">Dojo Toolkit, Widget.</a></h2>
-          </header>
-          <section class="content"><p><a href="http://dojotoolkit.org/">Dojo Toolkit</a> has a component library named as <code>Dijit</code>. Each component in this library is known as a <code>Widget</code>. It is better to know the <code>dijit</code> framework vocabulary before going further inside&nbsp;it. </p>
-<ul>
-<li>Normally each <code>.js</code> file represents a <code>Class</code>.</li>
-<li>Each file, whose name starts with <code>_</code> (underscore) is <code>not a concrete</code> class. That means, this class is supposed to be extended to be used, <code>never directly used</code> as&nbsp;is.</li>
-<li>Members inside a class, properties and methods, whose name starts with <code>_</code> (underscore) are <code>private</code></li>
-<li>A class is defined by <code>declare()</code> </li>
-</ul>
-<p><a href="http://dojotoolkit.org/">Dojo</a> now supports <span class="caps">AMD</span> modules. So the module definition is pretty straight forward as in standard module definition. If you have ever used any other framework such as <a href="http://backbonejs.org/">BackboneJS</a>, you already know, how to declare, extend, load and use a module and a&nbsp;class. </p>
-<p>Now, lets see what <code>Widget</code> brings to the rules table. Each Widget has a life-cycle of its own. The lifecycle methods are as below in&nbsp;sequence.</p>
-<ul>
-<li>constructor()</li>
-<li>postMixInProperties()</li>
-<li>buildRendering()</li>
-<li>setters and getters, example is&nbsp;set(“myProperty”,value)</li>
-<li>postCreate()</li>
-<li>startup()</li>
-<li>destroy()</li>
-</ul>
-<p>There are few methods which also be called in some widgets, such&nbsp;as</p>
-<ul>
-<li>resize()</li>
-</ul>
-<p>Each <code>Widget</code> is supposed to <code>Extend</code> the <code>_WidgetBase</code> class defined in <code>dijit/_WidgetBase</code> package. Sometimes, it is necessary to use template strings or templates inside a  Widget. In that case, the <code>Widget</code> extends <code>_WidgetBase</code> and <code>_TemplatedMixin</code>, defined in <code>dijit/_WidgetBase</code> and <code>dijit/_TemplatedMixin</code> package&nbsp;respectively.</p>
-<p>After creation of each child <code>Widget</code> inside the parent Widget, its necessary to call the <code>startup()</code> method of the child Widget. Since <code>startup()</code> call goes through all the child widgets of a container Widget, its better to add all the child Widgets to the parent Widget and call parent’s <code>startup()</code>, which will call <code>startup()</code> of each child Widget.
-While writing a custom Widget, its necessary to override parent’s lifecycle methods. At the sametime, it is necessary to continue the lifecycle of the Widget. So a call to parent’s method is necessary. In most of all programming languages it is done with a <code>super()</code> call. In <code>dijit</code> framework its called&nbsp;as</p>
-<ul>
-<li>this.inherited(arguments);</li>
-</ul>
-<p>So inside each of the above life-cycle methods, a call to <code>this.inherited(arguments);</code> is necessary, either in the beginning or as the last line of the&nbsp;method.</p>
-<p>A custom <code>Widget</code> has either of the 2 properties below or sometimes both, to add child widgets to&nbsp;itself.</p>
-<ul>
-<li>this.domNode</li>
-<li>this.containerNode</li>
-</ul>
-<p>Now to add child widgets to the parent widget there are methods&nbsp;like</p>
-<ul>
-<li>addChild()</li>
-</ul>
-<p>Well, this post may seem a lot but the idea is to make you aware of the vocabulary and some background to <code>dijit</code> infrastructure. For a basic and complete <code>example</code> <a href="https://github.com/saumya/dojo101/blob/master/dojo-release-1.10.0-src/myWidgets/rayWidget3.js">have a look at this widget</a>.</p>
 <p>Happy&nbsp;Coding.</p>
 
           </section>
