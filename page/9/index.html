@@ -23,6 +23,18 @@
       <div class="content-wrap">
         <article class="article intro">
           <header>
+            <p class="date"><span>15. February 2014</span></p>
+            <h2><a href="http://saumya.github.io/ray/articles/28/">jQuery Mobile, making change page work.</a></h2>
+          </header>
+          <section class="content"><p>The <a href="http://saumya.github.io/ray/articles/24/">last post</a> about the <a href="http://saumya.github.io/ray/articles/24/">change page</a> <span class="caps">API</span> change of <a href="http://jquerymobile.com">jQuery Mobile</a> tells you as to, how to change a page, in the <a href="http://api.jquerymobile.com/jQuery.mobile.changePage/">new <span class="caps">API</span></a>. I was hoping thats the only change, but there seems, some kind of fix necessary to make a page, change properly. I mean, there is this bug, where the page change actually does this. It goes to the page mentioned by the change page and then it comes back to the page again, from where it was moved. So the effect is, the page is not chaged at all and the user looks at a screen, where the application simply moves to another screen and comesback to the original screen.<br>For me the fix that worked is send <code>changeHash:true</code> in the options object of the&nbsp;<span class="caps">API</span>.     </p>
+<script src="https://gist.github.com/saumya/9015917.js"></script>
+
+<p>Happy&nbsp;coding.</p>
+
+          </section>
+        </article>
+        <article class="article intro">
+          <header>
             <p class="date"><span>14. February 2014</span></p>
             <h2><a href="http://saumya.github.io/ray/articles/27/">Amazon S3 Sync with NodeJS</a></h2>
           </header>
@@ -54,16 +66,6 @@
 
           </section>
         </article>
-        <article class="article intro">
-          <header>
-            <p class="date"><span>12. February 2014</span></p>
-            <h2><a href="http://saumya.github.io/ray/articles/25/">iOS fragmentation and UI development</a></h2>
-          </header>
-          <section class="content"><p>It was not there 4 years back, when the iOS was just beginning its life. Whether you like it or not the truth is its fragmented now. There are all different versions of iOS, then different versions of the devices. These two itself bring a lot of different considerations, while developing for the platform now.<br>Its agreed that its less fragmented but then thats enough to bring in the pain to a frontend developer.<br>Now, to add to it, there are different device form factors. Starting with regular iPads, retina, air, mini, iphone, ipod touch and all have different specifications. So the point is, the XCode workflow allows one to <code>design</code> for all different devices, that does mean <code>design is multiplied</code> not <code>reduced</code>. While its good and freedom to the <span class="caps">UI</span> designer, as a frontend developer one must keep an eye on all these form fragmentations.
-Now the same code will produce, a different looking back button in an older iOS and a different looking one in the newer ones. The UI may hide some UI elements on a smaller heighted device and look perfect in a newer bigger iPhone/iPodTouch.<br>Thats doable but definitely increases time to implement <span class="caps">UI</span>, if its not designed, and well thought of, by people, who know what they are doing.<br>Happy&nbsp;designing.</p>
-
-          </section>
-        </article>
       </div>
     </div>
     <footer>
@@ -77,7 +79,7 @@ Now the same code will produce, a different looking back button in an older iOS 
         </section>
         <section class="copy">
           <p>&copy; 2015 saumya ray &mdash; powered by&nbsp;     <a href="https://github.com/jnordberg/wintersmith">Wintersmith&nbsp;</a>
-            <p><a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
+            <p> <a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
           </p>
         </section>
       </div>

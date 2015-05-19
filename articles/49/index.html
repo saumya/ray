@@ -29,22 +29,22 @@
 dojo.string.trim(<span class="string">"  I Like Trim Strings "</span>);
 </code></pre>
 <p>Now it looks&nbsp;as          </p>
-<pre><code class="lang-javascript"><span class="built_in">require</span>([<span class="string">"dojo/string"</span>, <span class="string">"dojo/domReady!"</span>], <span class="function"><span class="keyword">function</span><span class="params">(string)</span>{</span>
+<pre><code class="lang-javascript"><span class="built_in">require</span>([<span class="string">"dojo/string"</span>, <span class="string">"dojo/domReady!"</span>], <span class="function"><span class="keyword">function</span><span class="params">(string)</span></span>{
   string.trim(<span class="string">"  I Like Trim Strings "</span>);
 });
 </code></pre>
 <p>Well that may seems fine now, but then what happens when we need something inside that <code>require</code> itself? Actually, its simpler than it seems, we can have <code>require</code> inside another require&nbsp;too.          </p>
-<pre><code class="lang-javascript"><span class="built_in">require</span>([<span class="string">"dojo/domReady!"</span>], <span class="function"><span class="keyword">function</span><span class="params">()</span>{</span>
+<pre><code class="lang-javascript"><span class="built_in">require</span>([<span class="string">"dojo/domReady!"</span>], <span class="function"><span class="keyword">function</span><span class="params">()</span></span>{
     <span class="comment">//<span class="caps">DOM</span> is ready, load another module</span>
-    <span class="built_in">require</span>([<span class="string">"dojo/string"</span>], <span class="function"><span class="keyword">function</span><span class="params">(string)</span>{</span>
+    <span class="built_in">require</span>([<span class="string">"dojo/string"</span>], <span class="function"><span class="keyword">function</span><span class="params">(string)</span></span>{
       string.trim(<span class="string">"  I Like Trim Strings "</span>);
     });
 });
 </code></pre>
 <p>Thats nice. Here <a href="http://dojotoolkit.org/reference-guide/1.7/dojo/require.html">is the official documentation</a>. The introduction to <a href="http://dojotoolkit.org/documentation/tutorials/1.10/modern_dojo/">modern dojo</a> is here.<br>Another nice utility is <a href="http://dojotoolkit.org/reference-guide/1.10/dojo/topic.html">topic</a>. This is kind of central event dispatching and listening station. All one has to do is, dispatch events through <a href="http://dojotoolkit.org/reference-guide/1.10/dojo/topic.html">topic</a> and listen through it too. These are called <code>publish</code> and <code>subscribe</code> of&nbsp;events.          </p>
-<pre><code class="lang-javascript"><span class="built_in">require</span>([<span class="string">"dojo/topic"</span>], <span class="function"><span class="keyword">function</span><span class="params">(topic)</span>{</span>
-    topic.subscribe(<span class="string">"some/topic"</span>, <span class="function"><span class="keyword">function</span><span class="params">(arguments)</span>{</span>
-        console.log(<span class="string">"received:"</span>, <span class="built_in">arguments</span>);
+<pre><code class="lang-javascript"><span class="built_in">require</span>([<span class="string">"dojo/topic"</span>], <span class="function"><span class="keyword">function</span><span class="params">(topic)</span></span>{
+    topic.subscribe(<span class="string">"some/topic"</span>, <span class="function"><span class="keyword">function</span><span class="params">(arguments)</span></span>{
+        <span class="built_in">console</span>.log(<span class="string">"received:"</span>, <span class="built_in">arguments</span>);
     });
     <span class="comment">// ...</span>
     topic.publish(<span class="string">"some/topic"</span>, <span class="string">"one"</span>, <span class="string">"two"</span>);
@@ -76,7 +76,7 @@ dojo.string.trim(<span class="string">"  I Like Trim Strings "</span>);
         </section>
         <section class="copy">
           <p>&copy; 2015 saumya ray &mdash; powered by&nbsp;     <a href="https://github.com/jnordberg/wintersmith">Wintersmith&nbsp;</a>
-            <p><a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
+            <p> <a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
           </p>
         </section>
       </div>

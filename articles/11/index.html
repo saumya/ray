@@ -26,13 +26,13 @@
 <pre><code class="lang-javascript">events:{
         <span class="string">"click"</span>: <span class="string">"onClick"</span>
         },
-onClick: <span class="function"><span class="keyword">function</span><span class="params">(event)</span>{</span>
+onClick: <span class="function"><span class="keyword">function</span><span class="params">(event)</span></span>{
     <span class="comment">//Do something with the event</span>
     <span class="comment">//or</span>
     <span class="comment">//specifically do it for a target</span>
     <span class="keyword">var</span> btnID = event.target.id;
     <span class="keyword">if</span>(btnID===<span class="string">'btn_one'</span>){
-        console.log(<span class="string">'<span class="caps">TODO</span>:'</span>);
+        <span class="built_in">console</span>.log(<span class="string">'<span class="caps">TODO</span>:'</span>);
     }
 }
 </code></pre>
@@ -40,7 +40,7 @@ onClick: <span class="function"><span class="keyword">function</span><span class
 <pre><code class="lang-javascript">events:{
         <span class="string">"click #btn_one"</span>: <span class="string">"onClick"</span>
         },
-onClick: <span class="function"><span class="keyword">function</span><span class="params">(event)</span>{</span>
+onClick: <span class="function"><span class="keyword">function</span><span class="params">(event)</span></span>{
     <span class="comment">//btn_one is clicked</span>
     <span class="comment">//Do something with the event</span>
 }
@@ -70,7 +70,7 @@ onClick: <span class="function"><span class="keyword">function</span><span class
         </section>
         <section class="copy">
           <p>&copy; 2015 saumya ray &mdash; powered by&nbsp;     <a href="https://github.com/jnordberg/wintersmith">Wintersmith&nbsp;</a>
-            <p><a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
+            <p> <a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
           </p>
         </section>
       </div>

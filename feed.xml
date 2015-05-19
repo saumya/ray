@@ -5,9 +5,31 @@
     <atom:link href="http://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Mon, 19 Jan 2015 05:30:00 +0630</pubDate>
+    <pubDate>Tue, 19 May 2015 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Git, Forking and Syncing</title>
+      <link>http://saumya.github.io/ray/articles/52/</link>
+      <pubDate>Tue, 19 May 2015 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">http://saumya.github.io/ray/articles/52/</guid>
+      <author></author>
+      <description>&lt;p&gt;There are couple of things to understand before going to the commandline, just remember that we have assumed the name &lt;code&gt;UPSTREAM&lt;/code&gt; as the repository, from where we have forked the project and &lt;code&gt;master&lt;/code&gt; is our own remote repository where we save our changes.
+Well, another important thing is to &lt;a href=&quot;https://help.github.com/articles/configuring-a-remote-for-a-fork/&quot;&gt;configure&lt;/a&gt; the &lt;code&gt;UPSTREAM&lt;/code&gt; or simply configure a repository from where we want to sync.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-git&quot;&gt;git remote -v
+git remote add UPSTREAM https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;For syncing forked repository are as below.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-git&quot;&gt;git remote -v
+git fetch UPSTREAM
+git checkout maste
+git merge UPSTREAM/master
+git push origin master
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This is a direct &lt;a href=&quot;https://help.github.com/articles/syncing-a-fork/&quot;&gt;tutorial from github&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Happy syncing.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>Making crossplatform CLI application with HAXE</title>
       <link>http://saumya.github.io/ray/articles/51/</link>
@@ -16,14 +38,14 @@
       <author></author>
       <description>&lt;p&gt;When I first heard about CLI applications, I thought it might be shipping with the OS itself. Then I found that we can write our own CLI applications. At that point I assume that well, just a CLI application, means it runs everywhere. But actually CLI applications by default are not crossplatform! Yes, I realised it much later. In order to have a crossplatform CLI app, one needs all the required environment to compile to and compile for a particular OS.         &lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;http://haxe.org/&quot;&gt;HAXE&lt;/a&gt; comes in handy in this case. One can make a crossplatfom CLI app with just one code base. Ofcourse you need the required environment to compile to that particular environment. There is even a shorter way to this, compile for &lt;a href=&quot;http://nekovm.org&quot;&gt;NEKO&lt;/a&gt; virtual machine. This &lt;a href=&quot;http://nekovm.org&quot;&gt;NEKO&lt;/a&gt; VM ships with &lt;a href=&quot;http://haxe.org/&quot;&gt;HAXE&lt;/a&gt;. Once you compile to &lt;a href=&quot;http://nekovm.org&quot;&gt;NEKO&lt;/a&gt;, all you do is package all the &lt;a href=&quot;http://nekovm.org&quot;&gt;NEKO&lt;/a&gt; dependencies and there you have a crossplatform CLI for every OS. Here we will compile to &lt;a href=&quot;http://nekovm.org&quot;&gt;NEKO&lt;/a&gt; and run through &lt;a href=&quot;http://nekovm.org&quot;&gt;NEKO&lt;/a&gt;, but just keep in mind that the same code can be compiled to CPP(C++) to produce true native CLI.&lt;br&gt;Lets begin with the compiler settings or the build file. The &lt;code&gt;.hxml&lt;/code&gt; file has the following content.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;lang-haxe&quot;&gt;# HAXE build
-# Defining the application entry
+&lt;pre&gt;&lt;code class=&quot;lang-haxe&quot;&gt;&lt;span class=&quot;preprocessor&quot;&gt;# HAXE build&lt;/span&gt;
+&lt;span class=&quot;preprocessor&quot;&gt;# Defining the application entry&lt;/span&gt;
 -main MyCliApp
-# NEKO : compilation
+&lt;span class=&quot;preprocessor&quot;&gt;# NEKO : compilation&lt;/span&gt;
 -neko bin/myCliApp.n
-#
-# CPP : compilation
-#-cpp bin/cpp/
+&lt;span class=&quot;preprocessor&quot;&gt;#&lt;/span&gt;
+&lt;span class=&quot;preprocessor&quot;&gt;# CPP : compilation&lt;/span&gt;
+&lt;span class=&quot;preprocessor&quot;&gt;#-cpp bin/cpp/&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;We are setting up for compiling to &lt;a href=&quot;http://nekovm.org&quot;&gt;NEKO&lt;/a&gt; but then we have the options commented out for compiling to CPP. If we want to compile for the C++ target, then comment out the &lt;a href=&quot;http://nekovm.org&quot;&gt;NEKO&lt;/a&gt; target and enable the CPP(C++) target. Well, this compilation will create a file named &lt;code&gt;myCliApp.n&lt;/code&gt; inside the ‘bin’ folder. To run the file, we have to navigate to the ‘bin’ folder and run with &lt;a href=&quot;http://nekovm.org&quot;&gt;NEKO&lt;/a&gt; as below.  &lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;lang-haxe&quot;&gt;neko ./myCliApp.n
@@ -40,8 +62,8 @@
       <author></author>
       <description>&lt;p&gt;Continuing the sudy of javascript target of &lt;a href=&quot;http://haxe.org/&quot;&gt;HAXE&lt;/a&gt; we will focus on &lt;a href=&quot;http://nodejs.org/&quot;&gt;NodeJS&lt;/a&gt; this time. Before we move on, lets remind ourselves the things to expect from the &lt;a href=&quot;http://haxe.org/&quot;&gt;HAXE&lt;/a&gt; toolchain by going through the previous two introductions, here is the &lt;a href=&quot;http://saumya.github.io/ray/articles/47/&quot;&gt;first&lt;/a&gt; and the &lt;a href=&quot;http://saumya.github.io/ray/articles/48/&quot;&gt;second&lt;/a&gt; post.&lt;br&gt;Thats about &lt;a href=&quot;http://haxe.org/&quot;&gt;HAXE&lt;/a&gt;, now a little about &lt;a href=&quot;http://nodejs.org/&quot;&gt;NodeJS&lt;/a&gt;. In &lt;a href=&quot;http://nodejs.org/&quot;&gt;NodeJS&lt;/a&gt; the concept of modules is very common to make some re-usable code. In general, modules hide everything by default. In class based languages we can call them as &lt;code&gt;private&lt;/code&gt; elements. To make something &lt;code&gt;public&lt;/code&gt; , we have to use &lt;code&gt;exports&lt;/code&gt; keyword in &lt;a href=&quot;http://nodejs.org/&quot;&gt;NodeJS&lt;/a&gt;.           &lt;/p&gt;
 &lt;p&gt;For example, if we have a file names &lt;code&gt;one.js&lt;/code&gt; as&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;exports.publicFunction = &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt; {&lt;/span&gt;
-  console.log(&lt;span class=&quot;string&quot;&gt;'Hello World'&lt;/span&gt;);
+&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;exports.publicFunction = &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt; &lt;/span&gt;{
+  &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;string&quot;&gt;'Hello World'&lt;/span&gt;);
 }
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Now, in &lt;a href=&quot;http://nodejs.org/&quot;&gt;NodeJS&lt;/a&gt;, we can write something as          &lt;/p&gt;
@@ -49,21 +71,21 @@
 oneObj.publicFunction();
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Thats first kind of modules we have. There is another kind of modules in &lt;a href=&quot;http://nodejs.org/&quot;&gt;NodeJS&lt;/a&gt;, where instead of exposing each individual elements from the modules, it exposes a &lt;code&gt;Constructor&lt;/code&gt; function. This is done with &lt;code&gt;module.exports&lt;/code&gt; in stead of only &lt;code&gt;exports&lt;/code&gt;.          &lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;module.exports.MyObjConstructor = &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt; {&lt;/span&gt;
-  console.log(&lt;span class=&quot;string&quot;&gt;'New Object'&lt;/span&gt;);
+&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;module&lt;/span&gt;.exports.MyObjConstructor = &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt; &lt;/span&gt;{
+  &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;string&quot;&gt;'New Object'&lt;/span&gt;);
 }
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;This second one is looked at as classical concepts of programming, where each JS file is kind of a Class file.&lt;br&gt;The dynamic and fun nature of javascript allows us to use the first way of exposing individual elements to actually expose a constructor function too. Is not it ?! Why we think about that! Because &lt;a href=&quot;http://haxe.org/&quot;&gt;HAXE&lt;/a&gt; generated javascript is actually doing that. Smart.&lt;br&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;br&gt;Now, lets focus back in &lt;a href=&quot;http://haxe.org/&quot;&gt;HAXE&lt;/a&gt; and here is the companion &lt;a href=&quot;https://github.com/saumya/HAXENode&quot;&gt;Github project&lt;/a&gt;. We have three classes in &lt;code&gt;.hx&lt;/code&gt; as Animal, Jungle and Tree. But only Animal class is exposed by using &lt;code&gt;@:expose&lt;/code&gt; just before the class declaration as           &lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;lang-haxe&quot;&gt;@:expose(&amp;quot;Animal&amp;quot;)
-class Animal
+&lt;pre&gt;&lt;code class=&quot;lang-haxe&quot;&gt;@:expose(&lt;span class=&quot;string&quot;&gt;&quot;Animal&quot;&lt;/span&gt;)
+&lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Animal&lt;/span&gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The application entry class &lt;code&gt;ApplicationEntry.hx&lt;/code&gt; is actually using all these classes. Finally, we have the &lt;code&gt;.hxml&lt;/code&gt; file, we name it &lt;code&gt;compile.hxml&lt;/code&gt;, but could be given any name, to compile our application. Here is the code for quick reference.          &lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;lang-haxe&quot;&gt;# Generates one single application JS
+&lt;pre&gt;&lt;code class=&quot;lang-haxe&quot;&gt;&lt;span class=&quot;preprocessor&quot;&gt;# Generates one single application JS&lt;/span&gt;
 -main ApplicationEntry
 -js bin/hxApp.js
-#
+&lt;span class=&quot;preprocessor&quot;&gt;#&lt;/span&gt;
 --next
-# Generates JS file for individual hx files
+&lt;span class=&quot;preprocessor&quot;&gt;# Generates JS file for individual hx files&lt;/span&gt;
 -js bin/Tree.js 
 -cp src 
 com.jungle.Tree
@@ -75,14 +97,14 @@ com.jungle.Animal
 -js bin/Jungle.js 
 -cp src 
 com.jungle.Jungle
-#
+&lt;span class=&quot;preprocessor&quot;&gt;#&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Once we run the &lt;a href=&quot;http://haxe.org/&quot;&gt;HAXE&lt;/a&gt; compiler with&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;lang-haxe&quot;&gt;haxe compile.hxml
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;It generates a file with the name &lt;code&gt;hxApp.js&lt;/code&gt;, which is enough for the &lt;a href=&quot;http://nodejs.org/&quot;&gt;NodeJS&lt;/a&gt; experiements. But we have the other generted JS files just to see, what actually &lt;a href=&quot;http://haxe.org/&quot;&gt;HAXE&lt;/a&gt; is outputting. If you look at the &lt;code&gt;Animal.js&lt;/code&gt; its actually getting exported as &lt;code&gt;exports.Animal&lt;/code&gt; and thats exactly what we need to use as a &lt;a href=&quot;http://nodejs.org/&quot;&gt;NodeJS&lt;/a&gt; module.&lt;br&gt;Lets write a simple &lt;a href=&quot;http://nodejs.org/&quot;&gt;NodeJS&lt;/a&gt; application. Get into our &lt;code&gt;bin&lt;/code&gt; folder, where all the &lt;a href=&quot;http://haxe.org/&quot;&gt;HAXE&lt;/a&gt; compiled JS files are. There we create a node application as &lt;code&gt;nodeApp.js&lt;/code&gt; and the content of the file is &lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; app = &lt;span class=&quot;built_in&quot;&gt;require&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;'./hxApp.js'&lt;/span&gt;);
-console.log(app);
+&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(app);
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Now to run the &lt;a href=&quot;http://nodejs.org/&quot;&gt;NodeJS&lt;/a&gt; application, do this in commandline&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;node nodeApp.js
@@ -90,15 +112,15 @@ console.log(app);
 &lt;p&gt;You can see now all the logs in the commadline, which is actually being run from the application we generated from &lt;a href=&quot;http://haxe.org/&quot;&gt;HAXE&lt;/a&gt;. This is &lt;code&gt;the way&lt;/code&gt; &lt;a href=&quot;http://haxe.org/&quot;&gt;HAXE&lt;/a&gt; can be &lt;code&gt;used best&lt;/code&gt;. Do all the code in &lt;a href=&quot;http://haxe.org/&quot;&gt;HAXE&lt;/a&gt; and finally output to a single application javascript file. Then use the application file to launch the application.&lt;br&gt;Now, lets see what else we can do with the generated code. If you remember we have exposed the ‘Animal’ class with &lt;code&gt;@:expose&lt;/code&gt;. Lets modify our ‘nodeApp.js’ as&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; app = &lt;span class=&quot;built_in&quot;&gt;require&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;'./hxApp.js'&lt;/span&gt;);
 &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; animal_1 = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; app.Animal(&lt;span class=&quot;string&quot;&gt;'CAT'&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;9&lt;/span&gt;);
-console.log(animal_1);
+&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(animal_1);
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Now run the &lt;a href=&quot;http://nodejs.org/&quot;&gt;NodeJS&lt;/a&gt; application with the same command as &lt;code&gt;node nodeApp.js&lt;/code&gt;, this time if you look at the application log on the command promt, its actually created a new ‘Animal’. The fun has just begun, I hope. Well, we can go on modifying our code to look it more beautiful. &lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; app = &lt;span class=&quot;built_in&quot;&gt;require&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;'./hxApp.js'&lt;/span&gt;);
 &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; animal_1 = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; app.Animal(&lt;span class=&quot;string&quot;&gt;'CAT'&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;9&lt;/span&gt;);
-console.log(animal_1);
+&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(animal_1);
 &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; Animal = app.Animal; &lt;span class=&quot;comment&quot;&gt;// Store the Constructor&lt;/span&gt;
 &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; animal_2 = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Animal(&lt;span class=&quot;string&quot;&gt;'Tiger'&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;6&lt;/span&gt;); &lt;span class=&quot;comment&quot;&gt;// And use it&lt;/span&gt;
-console.log(animal_2);
+&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(animal_2);
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;We have a goodlooking constructor for ‘Animal’ in the name of ‘Animal’ now.&lt;/p&gt;
 &lt;p&gt;Thats all is happening from the only one generated Javascript file that is the final application javascript file. Lets see, what else we can do! If you remember we have actually generated all the resepective javascript files for individual &lt;code&gt;.hx&lt;/code&gt; files. This time, lets forget our final or application javascript file. Lets modify our &lt;a href=&quot;http://nodejs.org/&quot;&gt;NodeJS&lt;/a&gt; application file by removing everything else from it and adding the following code.&lt;/p&gt;
@@ -106,8 +128,8 @@ console.log(animal_2);
 &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; c = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; o.Animal(&lt;span class=&quot;string&quot;&gt;'Cat'&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;); &lt;span class=&quot;comment&quot;&gt;// Directly using constructor&lt;/span&gt;
 &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; Animal = o.Animal;&lt;span class=&quot;comment&quot;&gt;//storing the constructor&lt;/span&gt;
 &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; a2 = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Animal(&lt;span class=&quot;string&quot;&gt;'Tiger'&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;8&lt;/span&gt;);&lt;span class=&quot;comment&quot;&gt;//using constructor&lt;/span&gt;
-console.log(c);
-console.log(a2);
+&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(c);
+&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(a2);
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Now run the &lt;a href=&quot;http://nodejs.org/&quot;&gt;NodeJS&lt;/a&gt; application from command line as before. Sweat! That works too!         &lt;/p&gt;
 &lt;p&gt;Well, we now are ready for primetime &lt;a href=&quot;http://nodejs.org/&quot;&gt;NodeJS&lt;/a&gt; application using &lt;a href=&quot;http://haxe.org/&quot;&gt;HAXE&lt;/a&gt; toolchain. The reference application and haxe code is at &lt;a href=&quot;https://github.com/saumya/HAXENode&quot;&gt;this repo on Github&lt;/a&gt;.       &lt;/p&gt;
@@ -128,22 +150,22 @@ console.log(a2);
 dojo.string.trim(&lt;span class=&quot;string&quot;&gt;&quot;  I Like Trim Strings &quot;&lt;/span&gt;);
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Now it looks as          &lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;require&lt;/span&gt;([&lt;span class=&quot;string&quot;&gt;&quot;dojo/string&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;dojo/domReady!&quot;&lt;/span&gt;], &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(string)&lt;/span&gt;{&lt;/span&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;require&lt;/span&gt;([&lt;span class=&quot;string&quot;&gt;&quot;dojo/string&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;dojo/domReady!&quot;&lt;/span&gt;], &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(string)&lt;/span&gt;&lt;/span&gt;{
   string.trim(&lt;span class=&quot;string&quot;&gt;&quot;  I Like Trim Strings &quot;&lt;/span&gt;);
 });
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Well that may seems fine now, but then what happens when we need something inside that &lt;code&gt;require&lt;/code&gt; itself? Actually, its simpler than it seems, we can have &lt;code&gt;require&lt;/code&gt; inside another require too.          &lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;require&lt;/span&gt;([&lt;span class=&quot;string&quot;&gt;&quot;dojo/domReady!&quot;&lt;/span&gt;], &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;{&lt;/span&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;require&lt;/span&gt;([&lt;span class=&quot;string&quot;&gt;&quot;dojo/domReady!&quot;&lt;/span&gt;], &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;{
     &lt;span class=&quot;comment&quot;&gt;//DOM is ready, load another module&lt;/span&gt;
-    &lt;span class=&quot;built_in&quot;&gt;require&lt;/span&gt;([&lt;span class=&quot;string&quot;&gt;&quot;dojo/string&quot;&lt;/span&gt;], &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(string)&lt;/span&gt;{&lt;/span&gt;
+    &lt;span class=&quot;built_in&quot;&gt;require&lt;/span&gt;([&lt;span class=&quot;string&quot;&gt;&quot;dojo/string&quot;&lt;/span&gt;], &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(string)&lt;/span&gt;&lt;/span&gt;{
       string.trim(&lt;span class=&quot;string&quot;&gt;&quot;  I Like Trim Strings &quot;&lt;/span&gt;);
     });
 });
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Thats nice. Here &lt;a href=&quot;http://dojotoolkit.org/reference-guide/1.7/dojo/require.html&quot;&gt;is the official documentation&lt;/a&gt;. The introduction to &lt;a href=&quot;http://dojotoolkit.org/documentation/tutorials/1.10/modern_dojo/&quot;&gt;modern dojo&lt;/a&gt; is here.&lt;br&gt;Another nice utility is &lt;a href=&quot;http://dojotoolkit.org/reference-guide/1.10/dojo/topic.html&quot;&gt;topic&lt;/a&gt;. This is kind of central event dispatching and listening station. All one has to do is, dispatch events through &lt;a href=&quot;http://dojotoolkit.org/reference-guide/1.10/dojo/topic.html&quot;&gt;topic&lt;/a&gt; and listen through it too. These are called &lt;code&gt;publish&lt;/code&gt; and &lt;code&gt;subscribe&lt;/code&gt; of events.          &lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;require&lt;/span&gt;([&lt;span class=&quot;string&quot;&gt;&quot;dojo/topic&quot;&lt;/span&gt;], &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(topic)&lt;/span&gt;{&lt;/span&gt;
-    topic.subscribe(&lt;span class=&quot;string&quot;&gt;&quot;some/topic&quot;&lt;/span&gt;, &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(arguments)&lt;/span&gt;{&lt;/span&gt;
-        console.log(&lt;span class=&quot;string&quot;&gt;&quot;received:&quot;&lt;/span&gt;, &lt;span class=&quot;built_in&quot;&gt;arguments&lt;/span&gt;);
+&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;require&lt;/span&gt;([&lt;span class=&quot;string&quot;&gt;&quot;dojo/topic&quot;&lt;/span&gt;], &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(topic)&lt;/span&gt;&lt;/span&gt;{
+    topic.subscribe(&lt;span class=&quot;string&quot;&gt;&quot;some/topic&quot;&lt;/span&gt;, &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(arguments)&lt;/span&gt;&lt;/span&gt;{
+        &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;string&quot;&gt;&quot;received:&quot;&lt;/span&gt;, &lt;span class=&quot;built_in&quot;&gt;arguments&lt;/span&gt;);
     });
     &lt;span class=&quot;comment&quot;&gt;// ...&lt;/span&gt;
     topic.publish(&lt;span class=&quot;string&quot;&gt;&quot;some/topic&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;one&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;two&quot;&lt;/span&gt;);
@@ -284,15 +306,15 @@ com.jungle.Animal
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Thats a quickfix. But again, it may hit the performace of the application.&lt;br&gt;The otherway is &lt;a href=&quot;http://requirejs.org/docs/api.html#errbacks&quot;&gt;Errbacks&lt;/a&gt; as per &lt;a href=&quot;http://requirejs.org/&quot;&gt;RequireJS&lt;/a&gt;. so what are they. They are simply callbacks but since it happens in errors, its called &lt;code&gt;Errbacks&lt;/code&gt;. We can do stuff like reloading the whole application or the specified module or other error handling on these.&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;require&lt;/span&gt;([&lt;span class=&quot;string&quot;&gt;'modules/one'&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;'modules/two'&lt;/span&gt;],
-           &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(One,Two)&lt;/span&gt;{&lt;/span&gt;
+           &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(One,Two)&lt;/span&gt;&lt;/span&gt;{
             &lt;span class=&quot;comment&quot;&gt;//Application logic&lt;/span&gt;
         },
-        &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(error)&lt;/span&gt;{&lt;/span&gt;
-            console.log(&lt;span class=&quot;string&quot;&gt;'Custom ERROR handler'&lt;/span&gt;,error);
+        &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(error)&lt;/span&gt;&lt;/span&gt;{
+            &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;string&quot;&gt;'Custom ERROR handler'&lt;/span&gt;,error);
             &lt;span class=&quot;comment&quot;&gt;//error.requireModules : is Array of all failed modules&lt;/span&gt;
             &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; failedId = error.requireModules &amp;amp;&amp;amp; error.requireModules[&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;];
-            console.log(failedId);
-            console.log(error.message);
+            &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(failedId);
+            &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(error.message);
         });
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Happy Coding.&lt;/p&gt;
@@ -491,7 +513,7 @@ If at all, you have joined them by keeping their words, there would be no respec
       <description>&lt;p&gt;Here we will be making a basic REST API using the &lt;a href=&quot;http://expressjs.com/&quot;&gt;Express&lt;/a&gt; framework for &lt;a href=&quot;http://nodejs.org/&quot;&gt;NodeJS&lt;/a&gt;. I am not going in detail of how &lt;a href=&quot;http://expressjs.com/&quot;&gt;Express&lt;/a&gt; works, but straight to the code, which is as below. While this may look as a regular &lt;a href=&quot;http://expressjs.com/&quot;&gt;Express&lt;/a&gt; application, the important thing is the API can be called from any web server.      &lt;/p&gt;
 &lt;p&gt;&lt;script src=&quot;https://gist.github.com/saumya/402d2f035b23d7d08877.js&quot;&gt;&lt;/script&gt;
 While developing APIs, the first thing came to me is, how to call this from another server?! For thats the only reason we are exposing the API. And the answer is enable &lt;a href=&quot;http://enable-cors.org/&quot;&gt;CORS&lt;/a&gt;, cross-origin resource sharing. It simply means, make the API available or expose to these servers. we can specify the domain names individually or in this partcular case, we have exposed the API to any sever by specifying * .       &lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;app.all(&lt;span class=&quot;string&quot;&gt;'*'&lt;/span&gt;, &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(req, res, next)&lt;/span&gt; {&lt;/span&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;app.all(&lt;span class=&quot;string&quot;&gt;'*'&lt;/span&gt;, &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(req, res, next)&lt;/span&gt; &lt;/span&gt;{
   res.header(&lt;span class=&quot;string&quot;&gt;&quot;Access-Control-Allow-Origin&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;*&quot;&lt;/span&gt;);
   res.header(&lt;span class=&quot;string&quot;&gt;&quot;Access-Control-Allow-Headers&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;X-Requested-With&quot;&lt;/span&gt;);
   next();
@@ -541,8 +563,8 @@ While developing APIs, the first thing came to me is, how to call this from anot
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Now writing a handler for this event will look as&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//handler&lt;/span&gt;
-onMyEvent: &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(eventdata)&lt;/span&gt;{&lt;/span&gt;
-    console.log(eventdata);&lt;span class=&quot;comment&quot;&gt;//example: getting data from the event&lt;/span&gt;
+onMyEvent: &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(eventdata)&lt;/span&gt;&lt;/span&gt;{
+    &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(eventdata);&lt;span class=&quot;comment&quot;&gt;//example: getting data from the event&lt;/span&gt;
 }
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;So, we get the whole &lt;code&gt;data&lt;/code&gt; ( passed to the &lt;code&gt;trigger()&lt;/code&gt; method as second parameter ) , as the arguement to the handler. &lt;/p&gt;
@@ -556,7 +578,7 @@ The dispatcher code will look as&lt;/p&gt;
 }
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The handler code will look as &lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;onMyEvent : &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(event,data)&lt;/span&gt;{&lt;/span&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;onMyEvent : &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(event,data)&lt;/span&gt;&lt;/span&gt;{
     event.preventDefault();
     &lt;span class=&quot;comment&quot;&gt;//code as required by application&lt;/span&gt;
     &lt;span class=&quot;comment&quot;&gt;//But, see the second arguement is actually 'data', passed to 'trigger()'&lt;/span&gt;
@@ -590,10 +612,10 @@ All that is to it is, how you &lt;code&gt;trigger&lt;/code&gt; the event, from t
 $.ajax({
     url:apiURL,
     cache: &lt;span class=&quot;literal&quot;&gt;false&lt;/span&gt;,
-    success:&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(result)&lt;/span&gt;{&lt;/span&gt;
+    success:&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(result)&lt;/span&gt;&lt;/span&gt;{
         &lt;span class=&quot;comment&quot;&gt;//&lt;/span&gt;
     },
-    error:&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(data)&lt;/span&gt;{&lt;/span&gt;           
+    error:&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(data)&lt;/span&gt;&lt;/span&gt;{           
         &lt;span class=&quot;comment&quot;&gt;//            &lt;/span&gt;
     }   
 });
@@ -604,10 +626,10 @@ $.ajax({
 $.ajax({
     url:apiURL,
     &lt;span class=&quot;comment&quot;&gt;//cache: false,//not needed now&lt;/span&gt;
-    success:&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(result)&lt;/span&gt;{&lt;/span&gt;
+    success:&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(result)&lt;/span&gt;&lt;/span&gt;{
         &lt;span class=&quot;comment&quot;&gt;//&lt;/span&gt;
     },
-    error:&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(data)&lt;/span&gt;{&lt;/span&gt;           
+    error:&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(data)&lt;/span&gt;&lt;/span&gt;{           
         &lt;span class=&quot;comment&quot;&gt;//            &lt;/span&gt;
     }   
 });
@@ -924,7 +946,7 @@ Ok. Lets add a library to the equation. Now it becomes &lt;code&gt;device + OS +
 &lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;$.ajax({
 headers : { &lt;span class=&quot;string&quot;&gt;&quot;cache-control&quot;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;no-cache&quot;&lt;/span&gt; },
 url : &lt;span class=&quot;string&quot;&gt;''&lt;/span&gt;,
-success : &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(result)&lt;/span&gt; {&lt;/span&gt;}
+success : &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(result)&lt;/span&gt; &lt;/span&gt;{}
 })
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Here is a &lt;a href=&quot;http://www.einternals.com/blog/web-development/ios6-0-caching-ajax-post-requests&quot;&gt;nice write up about how&lt;/a&gt; you configure &lt;a href=&quot;http://jquery.com/&quot;&gt;jQuery&lt;/a&gt; AJAX call, so that they are not cached.     &lt;/p&gt;
@@ -972,13 +994,13 @@ It goes on and on. The matter of fact is, you can not ignore testing it in all t
 &lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;events:{
         &lt;span class=&quot;string&quot;&gt;&quot;click&quot;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;onClick&quot;&lt;/span&gt;
         },
-onClick: &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(event)&lt;/span&gt;{&lt;/span&gt;
+onClick: &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(event)&lt;/span&gt;&lt;/span&gt;{
     &lt;span class=&quot;comment&quot;&gt;//Do something with the event&lt;/span&gt;
     &lt;span class=&quot;comment&quot;&gt;//or&lt;/span&gt;
     &lt;span class=&quot;comment&quot;&gt;//specifically do it for a target&lt;/span&gt;
     &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; btnID = event.target.id;
     &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(btnID===&lt;span class=&quot;string&quot;&gt;'btn_one'&lt;/span&gt;){
-        console.log(&lt;span class=&quot;string&quot;&gt;'TODO:'&lt;/span&gt;);
+        &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;string&quot;&gt;'TODO:'&lt;/span&gt;);
     }
 }
 &lt;/code&gt;&lt;/pre&gt;
@@ -986,7 +1008,7 @@ onClick: &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quo
 &lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;events:{
         &lt;span class=&quot;string&quot;&gt;&quot;click #btn_one&quot;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;onClick&quot;&lt;/span&gt;
         },
-onClick: &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(event)&lt;/span&gt;{&lt;/span&gt;
+onClick: &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(event)&lt;/span&gt;&lt;/span&gt;{
     &lt;span class=&quot;comment&quot;&gt;//btn_one is clicked&lt;/span&gt;
     &lt;span class=&quot;comment&quot;&gt;//Do something with the event&lt;/span&gt;
 }

@@ -34,8 +34,8 @@
 </code></pre>
 <p>Now writing a handler for this event will look&nbsp;as</p>
 <pre><code class="lang-javascript"><span class="comment">//handler</span>
-onMyEvent: <span class="function"><span class="keyword">function</span><span class="params">(eventdata)</span>{</span>
-    console.log(eventdata);<span class="comment">//example: getting data from the event</span>
+onMyEvent: <span class="function"><span class="keyword">function</span><span class="params">(eventdata)</span></span>{
+    <span class="built_in">console</span>.log(eventdata);<span class="comment">//example: getting data from the event</span>
 }
 </code></pre>
 <p>So, we get the whole <code>data</code> ( passed to the <code>trigger()</code> method as second parameter ) , as the arguement to the&nbsp;handler. </p>
@@ -49,7 +49,7 @@ The dispatcher code will look&nbsp;as</p>
 }
 </code></pre>
 <p>The handler code will look&nbsp;as </p>
-<pre><code class="lang-javascript">onMyEvent : <span class="function"><span class="keyword">function</span><span class="params">(event,data)</span>{</span>
+<pre><code class="lang-javascript">onMyEvent : <span class="function"><span class="keyword">function</span><span class="params">(event,data)</span></span>{
     event.preventDefault();
     <span class="comment">//code as required by application</span>
     <span class="comment">//But, see the second arguement is actually 'data', passed to 'trigger()'</span>
@@ -94,7 +94,7 @@ All that is to it is, how you <code>trigger</code> the event, from the two ways&
         </section>
         <section class="copy">
           <p>&copy; 2015 saumya ray &mdash; powered by&nbsp;     <a href="https://github.com/jnordberg/wintersmith">Wintersmith&nbsp;</a>
-            <p><a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
+            <p> <a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
           </p>
         </section>
       </div>

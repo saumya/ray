@@ -37,15 +37,15 @@
 </code></pre>
 <p>Thats a quickfix. But again, it may hit the performace of the application.<br>The otherway is <a href="http://requirejs.org/docs/api.html#errbacks">Errbacks</a> as per <a href="http://requirejs.org/">RequireJS</a>. so what are they. They are simply callbacks but since it happens in errors, its called <code>Errbacks</code>. We can do stuff like reloading the whole application or the specified module or other error handling on&nbsp;these.</p>
 <pre><code class="lang-javascript"><span class="built_in">require</span>([<span class="string">'modules/one'</span>,<span class="string">'modules/two'</span>],
-           <span class="function"><span class="keyword">function</span><span class="params">(One,Two)</span>{</span>
+           <span class="function"><span class="keyword">function</span><span class="params">(One,Two)</span></span>{
             <span class="comment">//Application logic</span>
         },
-        <span class="function"><span class="keyword">function</span><span class="params">(error)</span>{</span>
-            console.log(<span class="string">'Custom <span class="caps">ERROR</span> handler'</span>,error);
+        <span class="function"><span class="keyword">function</span><span class="params">(error)</span></span>{
+            <span class="built_in">console</span>.log(<span class="string">'Custom <span class="caps">ERROR</span> handler'</span>,error);
             <span class="comment">//error.requireModules : is Array of all failed modules</span>
             <span class="keyword">var</span> failedId = error.requireModules &amp;&amp; error.requireModules[<span class="number">0</span>];
-            console.log(failedId);
-            console.log(error.message);
+            <span class="built_in">console</span>.log(failedId);
+            <span class="built_in">console</span>.log(error.message);
         });
 </code></pre>
 <p>Happy&nbsp;Coding.</p>
@@ -73,7 +73,7 @@
         </section>
         <section class="copy">
           <p>&copy; 2015 saumya ray &mdash; powered by&nbsp;     <a href="https://github.com/jnordberg/wintersmith">Wintersmith&nbsp;</a>
-            <p><a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
+            <p> <a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
           </p>
         </section>
       </div>

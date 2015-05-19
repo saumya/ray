@@ -25,7 +25,7 @@
           <section class="content"><p>Here we will be making a basic <span class="caps">REST</span> API using the <a href="http://expressjs.com/">Express</a> framework for <a href="http://nodejs.org/">NodeJS</a>. I am not going in detail of how <a href="http://expressjs.com/">Express</a> works, but straight to the code, which is as below. While this may look as a regular <a href="http://expressjs.com/">Express</a> application, the important thing is the <span class="caps">API</span> can be called from any web&nbsp;server.      </p>
 <p><script src="https://gist.github.com/saumya/402d2f035b23d7d08877.js"></script>
 While developing APIs, the first thing came to me is, how to call this from another server?! For thats the only reason we are exposing the <span class="caps">API</span>. And the answer is enable <a href="http://enable-cors.org/"><span class="caps">CORS</span></a>, cross-origin resource sharing. It simply means, make the <span class="caps">API</span> available or expose to these servers. we can specify the domain names individually or in this partcular case, we have exposed the API to any sever by specifying *&nbsp;.       </p>
-<pre><code class="lang-javascript">app.all(<span class="string">'*'</span>, <span class="function"><span class="keyword">function</span><span class="params">(req, res, next)</span> {</span>
+<pre><code class="lang-javascript">app.all(<span class="string">'*'</span>, <span class="function"><span class="keyword">function</span><span class="params">(req, res, next)</span> </span>{
   res.header(<span class="string">"Access-Control-Allow-Origin"</span>, <span class="string">"*"</span>);
   res.header(<span class="string">"Access-Control-Allow-Headers"</span>, <span class="string">"X-Requested-With"</span>);
   next();
@@ -57,7 +57,7 @@ While developing APIs, the first thing came to me is, how to call this from anot
         </section>
         <section class="copy">
           <p>&copy; 2015 saumya ray &mdash; powered by&nbsp;     <a href="https://github.com/jnordberg/wintersmith">Wintersmith&nbsp;</a>
-            <p><a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
+            <p> <a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
           </p>
         </section>
       </div>

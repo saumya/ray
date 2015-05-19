@@ -24,14 +24,14 @@
         <article class="article">
           <section class="content"><p>When I first heard about <span class="caps">CLI</span> applications, I thought it might be shipping with the OS itself. Then I found that we can write our own CLI applications. At that point I assume that well, just a CLI application, means it runs everywhere. But actually CLI applications by default are not crossplatform! Yes, I realised it much later. In order to have a crossplatform CLI app, one needs all the required environment to compile to and compile for a particular&nbsp;OS.         </p>
 <p><a href="http://haxe.org/"><span class="caps">HAXE</span></a> comes in handy in this case. One can make a crossplatfom <span class="caps">CLI</span> app with just one code base. Ofcourse you need the required environment to compile to that particular environment. There is even a shorter way to this, compile for <a href="http://nekovm.org"><span class="caps">NEKO</span></a> virtual machine. This <a href="http://nekovm.org"><span class="caps">NEKO</span></a> <span class="caps">VM</span> ships with <a href="http://haxe.org/"><span class="caps">HAXE</span></a>. Once you compile to <a href="http://nekovm.org"><span class="caps">NEKO</span></a>, all you do is package all the <a href="http://nekovm.org"><span class="caps">NEKO</span></a> dependencies and there you have a crossplatform <span class="caps">CLI</span> for every OS. Here we will compile to <a href="http://nekovm.org"><span class="caps">NEKO</span></a> and run through <a href="http://nekovm.org"><span class="caps">NEKO</span></a>, but just keep in mind that the same code can be compiled to <span class="caps">CPP</span>(C++) to produce true native CLI.<br>Lets begin with the compiler settings or the build file. The <code>.hxml</code> file has the following&nbsp;content.</p>
-<pre><code class="lang-haxe"># HAXE build
-# Defining the application entry
+<pre><code class="lang-haxe"><span class="preprocessor"># <span class="caps">HAXE</span> build</span>
+<span class="preprocessor"># Defining the application entry</span>
 -main MyCliApp
-# NEKO : compilation
+<span class="preprocessor"># <span class="caps">NEKO</span> : compilation</span>
 -neko bin/myCliApp.n
-#
-# CPP : compilation
-#-cpp bin/cpp/
+<span class="preprocessor">#</span>
+<span class="preprocessor"># <span class="caps">CPP</span> : compilation</span>
+<span class="preprocessor">#-cpp bin/cpp/</span>
 </code></pre>
 <p>We are setting up for compiling to <a href="http://nekovm.org"><span class="caps">NEKO</span></a> but then we have the options commented out for compiling to <span class="caps">CPP</span>. If we want to compile for the C++ target, then comment out the <a href="http://nekovm.org"><span class="caps">NEKO</span></a> target and enable the <span class="caps">CPP</span>(C++) target. Well, this compilation will create a file named <code>myCliApp.n</code> inside the ‘bin’ folder. To run the file, we have to navigate to the ‘bin’ folder and run with <a href="http://nekovm.org"><span class="caps">NEKO</span></a> as&nbsp;below.  </p>
 <pre><code class="lang-haxe">neko ./myCliApp.n
@@ -62,7 +62,7 @@
         </section>
         <section class="copy">
           <p>&copy; 2015 saumya ray &mdash; powered by&nbsp;     <a href="https://github.com/jnordberg/wintersmith">Wintersmith&nbsp;</a>
-            <p><a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
+            <p> <a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
           </p>
         </section>
       </div>
