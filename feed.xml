@@ -19,10 +19,10 @@ Well, another important thing is to &lt;a href=&quot;https://help.github.com/art
 &lt;pre&gt;&lt;code class=&quot;lang-git&quot;&gt;git remote -v
 git remote add UPSTREAM https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;For syncing forked repository are as below.&lt;/p&gt;
+&lt;p&gt;For syncing forked repository, the commands are as below.&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;lang-git&quot;&gt;git remote -v
 git fetch UPSTREAM
-git checkout maste
+git checkout master
 git merge UPSTREAM/master
 git push origin master
 &lt;/code&gt;&lt;/pre&gt;
