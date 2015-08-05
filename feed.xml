@@ -5,9 +5,53 @@
     <atom:link href="http://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Tue, 19 May 2015 05:30:00 +0630</pubDate>
+    <pubDate>Thu, 06  Aug 2015 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Vi/Vim comands</title>
+      <link>http://saumya.github.io/ray/articles/53/</link>
+      <pubDate>Thu, 06  Aug 2015 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">http://saumya.github.io/ray/articles/53/</guid>
+      <author></author>
+      <description>&lt;p&gt;First of all there are 2 modes. &lt;code&gt;Insert&lt;/code&gt; and &lt;code&gt;Command&lt;/code&gt; . By default one is in the command mode.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;i : to move to insert mode
+esc : to move out from insert mode
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Following is a set of commands I use in a regular basis.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;a : append : start after cursor
+i : insert : start before cursor
+
+w : move forward word by word
+b : move backwars word by word
+
+ctrl+F : scroll forward 1 screen
+ctrl+B : scroll backward 1 screen
+ctrl+D : scroll forward 1/2 screen
+ctrl+U : scroll backward 1/2 screen
+
+ctrl+E : scroll forward 1 line
+ctrl+Y : scroll backward 1 line
+
+ctrl+H : move to top line
+ctrl+M : move to middle line
+ctrl+L : move to last line
+
+/ : search for pattern : forward from cursor
+? : search for pattern : backwards from cursor
+
+f,F : search inline forward,backward
+t,T : move cursor to occurance of the character forwar,backward
+; , , : repear last find command forward and backward
+
+ctrl+G : print line info
+G : move the cursor by line number
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;code&gt;ctrl+L&lt;/code&gt; : Redraw the screen : &lt;code&gt;Remember the screen in just a buffer of texts&lt;/code&gt;
+Configuring vi :&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;set nu : show line numbers
+set nowrapscan : search does not wrap TOP or BOTTOM
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Happy editing.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>Git, Forking and Syncing</title>
       <link>http://saumya.github.io/ray/articles/52/</link>
@@ -62,7 +106,7 @@ git push origin master
       <author></author>
       <description>&lt;p&gt;Continuing the sudy of javascript target of &lt;a href=&quot;http://haxe.org/&quot;&gt;HAXE&lt;/a&gt; we will focus on &lt;a href=&quot;http://nodejs.org/&quot;&gt;NodeJS&lt;/a&gt; this time. Before we move on, lets remind ourselves the things to expect from the &lt;a href=&quot;http://haxe.org/&quot;&gt;HAXE&lt;/a&gt; toolchain by going through the previous two introductions, here is the &lt;a href=&quot;http://saumya.github.io/ray/articles/47/&quot;&gt;first&lt;/a&gt; and the &lt;a href=&quot;http://saumya.github.io/ray/articles/48/&quot;&gt;second&lt;/a&gt; post.&lt;br&gt;Thats about &lt;a href=&quot;http://haxe.org/&quot;&gt;HAXE&lt;/a&gt;, now a little about &lt;a href=&quot;http://nodejs.org/&quot;&gt;NodeJS&lt;/a&gt;. In &lt;a href=&quot;http://nodejs.org/&quot;&gt;NodeJS&lt;/a&gt; the concept of modules is very common to make some re-usable code. In general, modules hide everything by default. In class based languages we can call them as &lt;code&gt;private&lt;/code&gt; elements. To make something &lt;code&gt;public&lt;/code&gt; , we have to use &lt;code&gt;exports&lt;/code&gt; keyword in &lt;a href=&quot;http://nodejs.org/&quot;&gt;NodeJS&lt;/a&gt;.           &lt;/p&gt;
 &lt;p&gt;For example, if we have a file names &lt;code&gt;one.js&lt;/code&gt; as&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;exports.publicFunction = &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt; &lt;/span&gt;{
+&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;exports.publicFunction = &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;{
   &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;string&quot;&gt;'Hello World'&lt;/span&gt;);
 }
 &lt;/code&gt;&lt;/pre&gt;
@@ -71,7 +115,7 @@ git push origin master
 oneObj.publicFunction();
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Thats first kind of modules we have. There is another kind of modules in &lt;a href=&quot;http://nodejs.org/&quot;&gt;NodeJS&lt;/a&gt;, where instead of exposing each individual elements from the modules, it exposes a &lt;code&gt;Constructor&lt;/code&gt; function. This is done with &lt;code&gt;module.exports&lt;/code&gt; in stead of only &lt;code&gt;exports&lt;/code&gt;.          &lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;module&lt;/span&gt;.exports.MyObjConstructor = &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt; &lt;/span&gt;{
+&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;module&lt;/span&gt;.exports.MyObjConstructor = &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;{
   &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;string&quot;&gt;'New Object'&lt;/span&gt;);
 }
 &lt;/code&gt;&lt;/pre&gt;
@@ -150,21 +194,21 @@ com.jungle.Jungle
 dojo.string.trim(&lt;span class=&quot;string&quot;&gt;&quot;  I Like Trim Strings &quot;&lt;/span&gt;);
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Now it looks as          &lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;require&lt;/span&gt;([&lt;span class=&quot;string&quot;&gt;&quot;dojo/string&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;dojo/domReady!&quot;&lt;/span&gt;], &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(string)&lt;/span&gt;&lt;/span&gt;{
+&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;require&lt;/span&gt;([&lt;span class=&quot;string&quot;&gt;&quot;dojo/string&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;dojo/domReady!&quot;&lt;/span&gt;], &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;string&lt;/span&gt;)&lt;/span&gt;{
   string.trim(&lt;span class=&quot;string&quot;&gt;&quot;  I Like Trim Strings &quot;&lt;/span&gt;);
 });
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Well that may seems fine now, but then what happens when we need something inside that &lt;code&gt;require&lt;/code&gt; itself? Actually, its simpler than it seems, we can have &lt;code&gt;require&lt;/code&gt; inside another require too.          &lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;require&lt;/span&gt;([&lt;span class=&quot;string&quot;&gt;&quot;dojo/domReady!&quot;&lt;/span&gt;], &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;{
+&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;require&lt;/span&gt;([&lt;span class=&quot;string&quot;&gt;&quot;dojo/domReady!&quot;&lt;/span&gt;], &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;)&lt;/span&gt;{
     &lt;span class=&quot;comment&quot;&gt;//DOM is ready, load another module&lt;/span&gt;
-    &lt;span class=&quot;built_in&quot;&gt;require&lt;/span&gt;([&lt;span class=&quot;string&quot;&gt;&quot;dojo/string&quot;&lt;/span&gt;], &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(string)&lt;/span&gt;&lt;/span&gt;{
+    &lt;span class=&quot;built_in&quot;&gt;require&lt;/span&gt;([&lt;span class=&quot;string&quot;&gt;&quot;dojo/string&quot;&lt;/span&gt;], &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;string&lt;/span&gt;)&lt;/span&gt;{
       string.trim(&lt;span class=&quot;string&quot;&gt;&quot;  I Like Trim Strings &quot;&lt;/span&gt;);
     });
 });
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Thats nice. Here &lt;a href=&quot;http://dojotoolkit.org/reference-guide/1.7/dojo/require.html&quot;&gt;is the official documentation&lt;/a&gt;. The introduction to &lt;a href=&quot;http://dojotoolkit.org/documentation/tutorials/1.10/modern_dojo/&quot;&gt;modern dojo&lt;/a&gt; is here.&lt;br&gt;Another nice utility is &lt;a href=&quot;http://dojotoolkit.org/reference-guide/1.10/dojo/topic.html&quot;&gt;topic&lt;/a&gt;. This is kind of central event dispatching and listening station. All one has to do is, dispatch events through &lt;a href=&quot;http://dojotoolkit.org/reference-guide/1.10/dojo/topic.html&quot;&gt;topic&lt;/a&gt; and listen through it too. These are called &lt;code&gt;publish&lt;/code&gt; and &lt;code&gt;subscribe&lt;/code&gt; of events.          &lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;require&lt;/span&gt;([&lt;span class=&quot;string&quot;&gt;&quot;dojo/topic&quot;&lt;/span&gt;], &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(topic)&lt;/span&gt;&lt;/span&gt;{
-    topic.subscribe(&lt;span class=&quot;string&quot;&gt;&quot;some/topic&quot;&lt;/span&gt;, &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(arguments)&lt;/span&gt;&lt;/span&gt;{
+&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;require&lt;/span&gt;([&lt;span class=&quot;string&quot;&gt;&quot;dojo/topic&quot;&lt;/span&gt;], &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;topic&lt;/span&gt;)&lt;/span&gt;{
+    topic.subscribe(&lt;span class=&quot;string&quot;&gt;&quot;some/topic&quot;&lt;/span&gt;, &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;arguments&lt;/span&gt;)&lt;/span&gt;{
         &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;string&quot;&gt;&quot;received:&quot;&lt;/span&gt;, &lt;span class=&quot;built_in&quot;&gt;arguments&lt;/span&gt;);
     });
     &lt;span class=&quot;comment&quot;&gt;// ...&lt;/span&gt;
@@ -306,10 +350,10 @@ com.jungle.Animal
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Thats a quickfix. But again, it may hit the performace of the application.&lt;br&gt;The otherway is &lt;a href=&quot;http://requirejs.org/docs/api.html#errbacks&quot;&gt;Errbacks&lt;/a&gt; as per &lt;a href=&quot;http://requirejs.org/&quot;&gt;RequireJS&lt;/a&gt;. so what are they. They are simply callbacks but since it happens in errors, its called &lt;code&gt;Errbacks&lt;/code&gt;. We can do stuff like reloading the whole application or the specified module or other error handling on these.&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;require&lt;/span&gt;([&lt;span class=&quot;string&quot;&gt;'modules/one'&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;'modules/two'&lt;/span&gt;],
-           &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(One,Two)&lt;/span&gt;&lt;/span&gt;{
+           &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;One,Two&lt;/span&gt;)&lt;/span&gt;{
             &lt;span class=&quot;comment&quot;&gt;//Application logic&lt;/span&gt;
         },
-        &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(error)&lt;/span&gt;&lt;/span&gt;{
+        &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;error&lt;/span&gt;)&lt;/span&gt;{
             &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;string&quot;&gt;'Custom ERROR handler'&lt;/span&gt;,error);
             &lt;span class=&quot;comment&quot;&gt;//error.requireModules : is Array of all failed modules&lt;/span&gt;
             &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; failedId = error.requireModules &amp;amp;&amp;amp; error.requireModules[&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;];
@@ -513,7 +557,7 @@ If at all, you have joined them by keeping their words, there would be no respec
       <description>&lt;p&gt;Here we will be making a basic REST API using the &lt;a href=&quot;http://expressjs.com/&quot;&gt;Express&lt;/a&gt; framework for &lt;a href=&quot;http://nodejs.org/&quot;&gt;NodeJS&lt;/a&gt;. I am not going in detail of how &lt;a href=&quot;http://expressjs.com/&quot;&gt;Express&lt;/a&gt; works, but straight to the code, which is as below. While this may look as a regular &lt;a href=&quot;http://expressjs.com/&quot;&gt;Express&lt;/a&gt; application, the important thing is the API can be called from any web server.      &lt;/p&gt;
 &lt;p&gt;&lt;script src=&quot;https://gist.github.com/saumya/402d2f035b23d7d08877.js&quot;&gt;&lt;/script&gt;
 While developing APIs, the first thing came to me is, how to call this from another server?! For thats the only reason we are exposing the API. And the answer is enable &lt;a href=&quot;http://enable-cors.org/&quot;&gt;CORS&lt;/a&gt;, cross-origin resource sharing. It simply means, make the API available or expose to these servers. we can specify the domain names individually or in this partcular case, we have exposed the API to any sever by specifying * .       &lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;app.all(&lt;span class=&quot;string&quot;&gt;'*'&lt;/span&gt;, &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(req, res, next)&lt;/span&gt; &lt;/span&gt;{
+&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;app.all(&lt;span class=&quot;string&quot;&gt;'*'&lt;/span&gt;, &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;req, res, next&lt;/span&gt;) &lt;/span&gt;{
   res.header(&lt;span class=&quot;string&quot;&gt;&quot;Access-Control-Allow-Origin&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;*&quot;&lt;/span&gt;);
   res.header(&lt;span class=&quot;string&quot;&gt;&quot;Access-Control-Allow-Headers&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;X-Requested-With&quot;&lt;/span&gt;);
   next();
@@ -563,7 +607,7 @@ While developing APIs, the first thing came to me is, how to call this from anot
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Now writing a handler for this event will look as&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//handler&lt;/span&gt;
-onMyEvent: &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(eventdata)&lt;/span&gt;&lt;/span&gt;{
+onMyEvent: &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;eventdata&lt;/span&gt;)&lt;/span&gt;{
     &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(eventdata);&lt;span class=&quot;comment&quot;&gt;//example: getting data from the event&lt;/span&gt;
 }
 &lt;/code&gt;&lt;/pre&gt;
@@ -578,7 +622,7 @@ The dispatcher code will look as&lt;/p&gt;
 }
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The handler code will look as &lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;onMyEvent : &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(event,data)&lt;/span&gt;&lt;/span&gt;{
+&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;onMyEvent : &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;event,data&lt;/span&gt;)&lt;/span&gt;{
     event.preventDefault();
     &lt;span class=&quot;comment&quot;&gt;//code as required by application&lt;/span&gt;
     &lt;span class=&quot;comment&quot;&gt;//But, see the second arguement is actually 'data', passed to 'trigger()'&lt;/span&gt;
@@ -612,10 +656,10 @@ All that is to it is, how you &lt;code&gt;trigger&lt;/code&gt; the event, from t
 $.ajax({
     url:apiURL,
     cache: &lt;span class=&quot;literal&quot;&gt;false&lt;/span&gt;,
-    success:&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(result)&lt;/span&gt;&lt;/span&gt;{
+    success:&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;result&lt;/span&gt;)&lt;/span&gt;{
         &lt;span class=&quot;comment&quot;&gt;//&lt;/span&gt;
     },
-    error:&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(data)&lt;/span&gt;&lt;/span&gt;{           
+    error:&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;data&lt;/span&gt;)&lt;/span&gt;{           
         &lt;span class=&quot;comment&quot;&gt;//            &lt;/span&gt;
     }   
 });
@@ -626,10 +670,10 @@ $.ajax({
 $.ajax({
     url:apiURL,
     &lt;span class=&quot;comment&quot;&gt;//cache: false,//not needed now&lt;/span&gt;
-    success:&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(result)&lt;/span&gt;&lt;/span&gt;{
+    success:&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;result&lt;/span&gt;)&lt;/span&gt;{
         &lt;span class=&quot;comment&quot;&gt;//&lt;/span&gt;
     },
-    error:&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(data)&lt;/span&gt;&lt;/span&gt;{           
+    error:&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;data&lt;/span&gt;)&lt;/span&gt;{           
         &lt;span class=&quot;comment&quot;&gt;//            &lt;/span&gt;
     }   
 });
@@ -946,7 +990,7 @@ Ok. Lets add a library to the equation. Now it becomes &lt;code&gt;device + OS +
 &lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;$.ajax({
 headers : { &lt;span class=&quot;string&quot;&gt;&quot;cache-control&quot;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;no-cache&quot;&lt;/span&gt; },
 url : &lt;span class=&quot;string&quot;&gt;''&lt;/span&gt;,
-success : &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(result)&lt;/span&gt; &lt;/span&gt;{}
+success : &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;result&lt;/span&gt;) &lt;/span&gt;{}
 })
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Here is a &lt;a href=&quot;http://www.einternals.com/blog/web-development/ios6-0-caching-ajax-post-requests&quot;&gt;nice write up about how&lt;/a&gt; you configure &lt;a href=&quot;http://jquery.com/&quot;&gt;jQuery&lt;/a&gt; AJAX call, so that they are not cached.     &lt;/p&gt;
@@ -994,7 +1038,7 @@ It goes on and on. The matter of fact is, you can not ignore testing it in all t
 &lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;events:{
         &lt;span class=&quot;string&quot;&gt;&quot;click&quot;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;onClick&quot;&lt;/span&gt;
         },
-onClick: &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(event)&lt;/span&gt;&lt;/span&gt;{
+onClick: &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;event&lt;/span&gt;)&lt;/span&gt;{
     &lt;span class=&quot;comment&quot;&gt;//Do something with the event&lt;/span&gt;
     &lt;span class=&quot;comment&quot;&gt;//or&lt;/span&gt;
     &lt;span class=&quot;comment&quot;&gt;//specifically do it for a target&lt;/span&gt;
@@ -1008,7 +1052,7 @@ onClick: &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quo
 &lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;events:{
         &lt;span class=&quot;string&quot;&gt;&quot;click #btn_one&quot;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;onClick&quot;&lt;/span&gt;
         },
-onClick: &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(event)&lt;/span&gt;&lt;/span&gt;{
+onClick: &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;event&lt;/span&gt;)&lt;/span&gt;{
     &lt;span class=&quot;comment&quot;&gt;//btn_one is clicked&lt;/span&gt;
     &lt;span class=&quot;comment&quot;&gt;//Do something with the event&lt;/span&gt;
 }

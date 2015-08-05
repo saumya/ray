@@ -34,7 +34,7 @@
 </code></pre>
 <p>Now writing a handler for this event will look&nbsp;as</p>
 <pre><code class="lang-javascript"><span class="comment">//handler</span>
-onMyEvent: <span class="function"><span class="keyword">function</span><span class="params">(eventdata)</span></span>{
+onMyEvent: <span class="function"><span class="keyword">function</span>(<span class="params">eventdata</span>)</span>{
     <span class="built_in">console</span>.log(eventdata);<span class="comment">//example: getting data from the event</span>
 }
 </code></pre>
@@ -49,7 +49,7 @@ The dispatcher code will look&nbsp;as</p>
 }
 </code></pre>
 <p>The handler code will look&nbsp;as </p>
-<pre><code class="lang-javascript">onMyEvent : <span class="function"><span class="keyword">function</span><span class="params">(event,data)</span></span>{
+<pre><code class="lang-javascript">onMyEvent : <span class="function"><span class="keyword">function</span>(<span class="params">event,data</span>)</span>{
     event.preventDefault();
     <span class="comment">//code as required by application</span>
     <span class="comment">//But, see the second arguement is actually 'data', passed to 'trigger()'</span>

@@ -24,7 +24,7 @@
         <article class="article">
           <section class="content"><p>Continuing the sudy of javascript target of <a href="http://haxe.org/"><span class="caps">HAXE</span></a> we will focus on <a href="http://nodejs.org/">NodeJS</a> this time. Before we move on, lets remind ourselves the things to expect from the <a href="http://haxe.org/"><span class="caps">HAXE</span></a> toolchain by going through the previous two introductions, here is the <a href="http://saumya.github.io/ray/articles/47/">first</a> and the <a href="http://saumya.github.io/ray/articles/48/">second</a> post.<br>Thats about <a href="http://haxe.org/"><span class="caps">HAXE</span></a>, now a little about <a href="http://nodejs.org/">NodeJS</a>. In <a href="http://nodejs.org/">NodeJS</a> the concept of modules is very common to make some re-usable code. In general, modules hide everything by default. In class based languages we can call them as <code>private</code> elements. To make something <code>public</code> , we have to use <code>exports</code> keyword in <a href="http://nodejs.org/">NodeJS</a>.           </p>
 <p>For example, if we have a file names <code>one.js</code> as</p>
-<pre><code class="lang-javascript">exports.publicFunction = <span class="function"><span class="keyword">function</span><span class="params">()</span> </span>{
+<pre><code class="lang-javascript">exports.publicFunction = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{
   <span class="built_in">console</span>.log(<span class="string">'Hello World'</span>);
 }
 </code></pre>
@@ -33,7 +33,7 @@
 oneObj.publicFunction();
 </code></pre>
 <p>Thats first kind of modules we have. There is another kind of modules in <a href="http://nodejs.org/">NodeJS</a>, where instead of exposing each individual elements from the modules, it exposes a <code>Constructor</code> function. This is done with <code>module.exports</code> in stead of only <code>exports</code>.          </p>
-<pre><code class="lang-javascript"><span class="built_in">module</span>.exports.MyObjConstructor = <span class="function"><span class="keyword">function</span><span class="params">()</span> </span>{
+<pre><code class="lang-javascript"><span class="built_in">module</span>.exports.MyObjConstructor = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{
   <span class="built_in">console</span>.log(<span class="string">'New Object'</span>);
 }
 </code></pre>
