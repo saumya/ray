@@ -42,7 +42,7 @@ t,T : move cursor to occurance of the character forwar,backward
 ctrl+G : print line info
 G : move the cursor by line number
 ```     
-`ctrl+L` : Redraw the screen : `Remember the screen in just a buffer of texts`
+`ctrl+L` : Redraw the screen : `Remember the screen in just a buffer of texts`          
 Configuring vi :
 ```
 set nu : show line numbers
