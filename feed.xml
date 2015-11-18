@@ -5,9 +5,18 @@
     <atom:link href="http://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Thu, 06  Aug 2015 05:30:00 +0630</pubDate>
+    <pubDate>Wed, 18 Nov 2015 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>A year with DOJO Toolkit.</title>
+      <link>http://saumya.github.io/ray/articles/54/</link>
+      <pubDate>Wed, 18 Nov 2015 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">http://saumya.github.io/ray/articles/54/</guid>
+      <author></author>
+      <description>&lt;p&gt;There are a number of reasons to use a specific framework in a work environment. But sometimes it boils down to just the hype. For example in recent past almost all the companies are trying to implement &lt;a href=&quot;https://angularjs.org/&quot;&gt;AngularJS&lt;/a&gt; and before that time it was the time for &lt;a href=&quot;http://backbonejs.org/&quot;&gt;BackboneJS&lt;/a&gt; and the story goes on like that. It is always a good experience to work in very different kind of framework or for that matter its even better to work in different kind of languages altogether.&lt;br&gt;The last year was &lt;a href=&quot;https://dojotoolkit.org/&quot;&gt;DOJO Toolkit&lt;/a&gt; year for me. I must say I am impressed to see features it provides and now that its moving in the right direction. For a long time now, this toolkit was just stagnant but last year only they have started moving again. Well, if you come from a &lt;code&gt;pure Javascript&lt;/code&gt; background might not like it by the way it is designed and behaves. The UI layer of the &lt;a href=&quot;https://dojotoolkit.org/&quot;&gt;DOJO Toolkit&lt;/a&gt; named as Dijit will seem like Flex components (If you know what Flash and Flex is, you will get what I am saying). The framework itself is designed to make people comfortable, who are used to Classical programming languages like JAVA. The whole toolkit will show itself, as a class based toolkit. The average user will just think and use it as a Classical programming language, which is the root of all evil things in a project. Thats part of the team and how it works with this toolkit.&lt;br&gt;In general if we talk about the features this toolkit gives us, I would say its nice and efficient if we use it the way it is meant to. The next version is already on progress and they are moving to &lt;a href=&quot;http://www.typescriptlang.org/&quot;&gt;TypeScript&lt;/a&gt;, that a nice move. All in all its a nice experience working with this framework.     &lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>Vi/Vim comands</title>
       <link>http://saumya.github.io/ray/articles/53/</link>
@@ -274,6 +283,28 @@ com.jungle.Animal
 </description>
     </item>
     <item>
+      <title>CoffeeScript basics</title>
+      <link>http://saumya.github.io/ray/articles/45/</link>
+      <pubDate>Thu, 01 Jan 2015 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">http://saumya.github.io/ray/articles/45/</guid>
+      <author></author>
+      <description>&lt;p&gt;Just to set the expectations right, we need to know something before we begin here.         &lt;/p&gt;
+&lt;p&gt;When I first heard about &lt;code&gt;Class&lt;/code&gt; in &lt;code&gt;Javascript&lt;/code&gt; it created curiosity on me and the expectation increased as to work like a &lt;code&gt;Classical&lt;/code&gt; language(Where Classes are the root of everything) instead of &lt;code&gt;Prototypical&lt;/code&gt; language(like Javascript). But then slowly I understood that its not &lt;code&gt;Javascript&lt;/code&gt; but other languages on top of Javascript which create somekind of &lt;code&gt;Class&lt;/code&gt; concept to mimic &lt;code&gt;Classical&lt;/code&gt; languages. The point is everything boils down to &lt;code&gt;Javascript&lt;/code&gt; if a language is written to compile or transpile to &lt;code&gt;Javascript&lt;/code&gt; . Well, that may seem like a spoiler right now, but its actually not as we will see. Just keep these things in mind all the time, even if we are doing &lt;a href=&quot;http://coffeescript.org/#top&quot;&gt;CoffeeScript&lt;/a&gt;.        &lt;/p&gt;
+&lt;p&gt;Here is the direct link to the &lt;a href=&quot;https://github.com/saumya/CoffeeScript101&quot;&gt;Github&lt;/a&gt; repository for the code reference to this post.       &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;CoffeeScript is generally written in a &lt;code&gt;.coffee&lt;/code&gt; file&lt;/li&gt;
+&lt;li&gt;Each &lt;code&gt;.coffee&lt;/code&gt; file is compiled to a &lt;code&gt;.js&lt;/code&gt; file&lt;/li&gt;
+&lt;li&gt;Each space (a blank space) in code has a meaning in the &lt;code&gt;.coffee&lt;/code&gt; file&lt;/li&gt;
+&lt;li&gt;Semicolons are optional and generally avoided&lt;/li&gt;
+&lt;li&gt;In the beginning you may write more than one classes in a single &lt;code&gt;.coffee&lt;/code&gt; file, and thats perfectly alright here&lt;/li&gt;
+&lt;li&gt;By default the &lt;a href=&quot;http://coffeescript.org/#top&quot;&gt;CoffeeScript&lt;/a&gt; Classes you write are private            &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;When compiled to JS, the contents of each file, are put inside a self invoking function. This is intentional to not pollute the Global variables. So if the content has some classes inside them, then those classes will also be inside the self-invoking function, restricting the access from outside.&lt;br&gt;The classes in &lt;a href=&quot;http://coffeescript.org/#top&quot;&gt;CoffeeScript&lt;/a&gt; are compiled to as usual JS functions and the inheritence is done through the prototypical inheritence concepts of Javascript. Since all this happens behind the scenes and as a &lt;a href=&quot;http://coffeescript.org/#top&quot;&gt;CoffeeScript&lt;/a&gt; developer if you do not know, how its working, it would be a pain later to expect anything else from this language.          &lt;/p&gt;
+&lt;p&gt;Thats all to start with the new year. Happy new year.         &lt;/p&gt;
+&lt;p&gt;Happy Coding.&lt;/p&gt;
+</description>
+    </item>
+    <item>
       <title>Cake and Coffee</title>
       <link>http://saumya.github.io/ray/articles/46/</link>
       <pubDate>Thu, 01 Jan 2015 05:30:00 +0630</pubDate>
@@ -303,28 +334,6 @@ com.jungle.Animal
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;While defining tasks, we can make a relation between tasks. That means we can say taskOne is dependent on taskTwo. The &lt;a href=&quot;https://github.com/saumya/CoffeeScript101&quot;&gt;basics of CoffeeScript project&lt;/a&gt; has a Cakefile for reference.        &lt;/p&gt;
 &lt;p&gt;The direct link to the sample &lt;code&gt;Cakefile&lt;/code&gt; &lt;a href=&quot;https://github.com/saumya/CoffeeScript101/blob/master/Cakefile&quot;&gt;is here&lt;/a&gt;. All the code are commented for easy reference.       &lt;/p&gt;
-&lt;p&gt;Happy Coding.&lt;/p&gt;
-</description>
-    </item>
-    <item>
-      <title>CoffeeScript basics</title>
-      <link>http://saumya.github.io/ray/articles/45/</link>
-      <pubDate>Thu, 01 Jan 2015 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://saumya.github.io/ray/articles/45/</guid>
-      <author></author>
-      <description>&lt;p&gt;Just to set the expectations right, we need to know something before we begin here.         &lt;/p&gt;
-&lt;p&gt;When I first heard about &lt;code&gt;Class&lt;/code&gt; in &lt;code&gt;Javascript&lt;/code&gt; it created curiosity on me and the expectation increased as to work like a &lt;code&gt;Classical&lt;/code&gt; language(Where Classes are the root of everything) instead of &lt;code&gt;Prototypical&lt;/code&gt; language(like Javascript). But then slowly I understood that its not &lt;code&gt;Javascript&lt;/code&gt; but other languages on top of Javascript which create somekind of &lt;code&gt;Class&lt;/code&gt; concept to mimic &lt;code&gt;Classical&lt;/code&gt; languages. The point is everything boils down to &lt;code&gt;Javascript&lt;/code&gt; if a language is written to compile or transpile to &lt;code&gt;Javascript&lt;/code&gt; . Well, that may seem like a spoiler right now, but its actually not as we will see. Just keep these things in mind all the time, even if we are doing &lt;a href=&quot;http://coffeescript.org/#top&quot;&gt;CoffeeScript&lt;/a&gt;.        &lt;/p&gt;
-&lt;p&gt;Here is the direct link to the &lt;a href=&quot;https://github.com/saumya/CoffeeScript101&quot;&gt;Github&lt;/a&gt; repository for the code reference to this post.       &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;CoffeeScript is generally written in a &lt;code&gt;.coffee&lt;/code&gt; file&lt;/li&gt;
-&lt;li&gt;Each &lt;code&gt;.coffee&lt;/code&gt; file is compiled to a &lt;code&gt;.js&lt;/code&gt; file&lt;/li&gt;
-&lt;li&gt;Each space (a blank space) in code has a meaning in the &lt;code&gt;.coffee&lt;/code&gt; file&lt;/li&gt;
-&lt;li&gt;Semicolons are optional and generally avoided&lt;/li&gt;
-&lt;li&gt;In the beginning you may write more than one classes in a single &lt;code&gt;.coffee&lt;/code&gt; file, and thats perfectly alright here&lt;/li&gt;
-&lt;li&gt;By default the &lt;a href=&quot;http://coffeescript.org/#top&quot;&gt;CoffeeScript&lt;/a&gt; Classes you write are private            &lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;When compiled to JS, the contents of each file, are put inside a self invoking function. This is intentional to not pollute the Global variables. So if the content has some classes inside them, then those classes will also be inside the self-invoking function, restricting the access from outside.&lt;br&gt;The classes in &lt;a href=&quot;http://coffeescript.org/#top&quot;&gt;CoffeeScript&lt;/a&gt; are compiled to as usual JS functions and the inheritence is done through the prototypical inheritence concepts of Javascript. Since all this happens behind the scenes and as a &lt;a href=&quot;http://coffeescript.org/#top&quot;&gt;CoffeeScript&lt;/a&gt; developer if you do not know, how its working, it would be a pain later to expect anything else from this language.          &lt;/p&gt;
-&lt;p&gt;Thats all to start with the new year. Happy new year.         &lt;/p&gt;
 &lt;p&gt;Happy Coding.&lt;/p&gt;
 </description>
     </item>
