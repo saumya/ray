@@ -23,8 +23,8 @@
       <div class="content-wrap">
         <article class="article">
           <section class="content"><p>This is the part two of the study of <a href="https://angularjs.org/">AngularJS</a>. The first part is <a href="http://saumya.github.io/ray/articles/39/">AngularJS 101</a>.
-This is focused on the vary basic concepts of <a href="https://angularjs.org/">AngularJS</a> like how and where to write a <code>controller</code> or <code>directive</code> etc. The <a href="https://github.com/saumya/ng-102">sample project is here</a>.
-First thing first, as of any Javascript framework, the nature of <a href="https://angularjs.org/">AngularJS</a> is not different in terms of, where you should write what. This is understood, as Javascript itself is dynamic in nature. There are a lot of guidelines through out the web as to, which file to contain what. In the end it boils down to personal preference. So just go ahead and do some working samples of&nbsp;yours.</p>
+This is focused on the vary basic concepts of <a href="https://angularjs.org/">AngularJS</a> like how and where to write a <code>controller</code> or <code>directive</code> etc. The <a href="https://github.com/saumya/ng-102">sample project is here</a>.          </p>
+<p>First thing first, as of any Javascript framework, the nature of <a href="https://angularjs.org/">AngularJS</a> is not different in terms of, where you should write what. This is understood, as Javascript itself is dynamic in nature. There are a lot of guidelines through out the web as to, which file to contain what. In the end it boils down to personal preference. So just go ahead and do some working samples of&nbsp;yours.</p>
 <ul>
 <li>The first thing you need is <code>index.html</code> or some <code>.html</code> file, which will be your entry point to the&nbsp;project.</li>
 <li>Include all the Javascript files in this <code>index.html</code> file as&nbsp;needed</li>
@@ -41,12 +41,13 @@ First thing first, as of any Javascript framework, the nature of <a href="https:
 <span class="keyword">var</span> appModule = angular.module(<span class="string">'app.Main'</span>,[<span class="string">"ngRoute"</span>,<span class="string">"ngResource"</span>]);
 })();
 </code></pre>
-<p>The general convention is to wrap each module inside an immediately invoking function, just not to pollute the global space of the Javascript. Each module can use another module. As in the example above, we are using <code>ngRoute</code> and <code>ngResource</code> in our module <code>app.Main</code>. </p>
+<p>The general convention is to wrap each module inside an immediately invoking function, just not to pollute the global space of the Javascript. As in the example above, we are using <code>ngRoute</code> and <code>ngResource</code> in our module <code>app.Main</code>. </p>
 <ul>
 <li>Each Javascript file should be an <a href="https://angularjs.org/">AngularJS</a>&nbsp;Module</li>
-<li>Each module can use another module as a dependency and that can be passed in as a parameter in the array as shown&nbsp;above          </li>
+<li>Each module can use another module as a dependency and that can be passed in as a parameter in the array as shown&nbsp;above</li>
+<li>By now, you must have noticed, the name of the Javascript file and the name of the module might be different. As long as we provide proper name as dependecy and proper name for the script src, it is all&nbsp;good.          </li>
 </ul>
-<p>Actually in the example above, the dependency modules <code>ngRoute</code> and <code>ngResource</code> is not present in the <code>angular.js</code> Javascript file . These modules are written in separate Javascript files as modules. So we need to include <code>angular-route.js</code> and <code>angular-resource.js</code> in our <code>.html</code> file to use them, else it will through&nbsp;error.       </p>
+<p>Actually in the example above, the dependent modules <code>ngRoute</code> and <code>ngResource</code> is not present in the <code>angular.js</code> Javascript file . These modules are written in separate Javascript files as modules. So we need to include <code>angular-route.js</code> and <code>angular-resource.js</code> in our <code>.html</code> file to use them, else it will through&nbsp;error.       </p>
 <pre><code class="lang-html"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"js/lib/angular-1.4.7/angular.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
 <span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"js/lib/angular-1.4.7/angular-route.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
 <span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"js/lib/angular-1.4.7/angular-resource.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
@@ -81,7 +82,7 @@ First thing first, as of any Javascript framework, the nature of <a href="https:
 <li>Each module could expose any number of anything. That means, any module could expose more than one Object. Those Objects could be any <a href="https://angularjs.org/">AngluarJS</a> Object types, such as Controller, Factory, Service, Directive&nbsp;etc.</li>
 <li>As long as we are providing a dependency of the module name in the Array and refering the proper name of the Objects, we can use&nbsp;them.</li>
 </ul>
-<p><code>Directives</code> in <a href="https://angularjs.org/">AngularJS</a> are visual elements. They define custom <span class="caps">HTML</span> tags/elements as per their&nbsp;definition.</p>
+<p><code>Directives</code> in <a href="https://angularjs.org/">AngularJS</a> are <code>visual elements</code>. They define custom <span class="caps">HTML</span> tags/elements as per their&nbsp;definition.</p>
 <p>Take a look at the <a href="https://github.com/saumya/ng-102">Sample Project</a> and that should clear a lot of things, which might seem unclear here. <a href="https://angularjs.org/">AngularJS</a> is modular in the sense, there are carefully separated modules for different purposes. When in need, we include those Javascript files and add the dependecies in the Array. The same goes for our own modules. Try to separate out functionalities into their own modules and use it when&nbsp;needed.   </p>
 <p>Hopefully that will get you started with the&nbsp;framework.</p>
 </section>
