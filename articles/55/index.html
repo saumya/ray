@@ -4,28 +4,24 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width">
-    <title>Saumya
+    <title>AngularJS 102 - Saumya
     </title>
     <link rel="alternate" href="http://saumya.github.io/ray/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
     <link rel="stylesheet" href="http://saumya.github.io/ray/css/main.css">
     <link rel="stylesheet" href="http://saumya.github.io/ray/css/saumya.css">
   </head>
-  <body>
+  <body class="article-detail">
     <header class="header">
       <div class="content-wrap">
-        <div class="logo">
-          <h1><a href="http://saumya.github.io/ray">Saumya</a></h1>
-          <p class="description">Where there is a will, there is a way.</p>
-        </div>
+        <h1>AngularJS 102</h1>
+        <p class="author">Written by <span class="author"><a href="mailto:contact@saumyaray.com">Saumya</a></span>
+        </p>
+        <p class="date">25. November 2015</p>
       </div>
     </header>
     <div id="content">
       <div class="content-wrap">
-        <article class="article intro">
-          <header>
-            <p class="date"><span>25. November 2015</span></p>
-            <h2><a href="http://saumya.github.io/ray/articles/55/">AngularJS 102</a></h2>
-          </header>
+        <article class="article">
           <section class="content"><p>This is the part two of the study of <a href="https://angularjs.org/">AngularJS</a>. The first part is <a href="http://saumya.github.io/ray/articles/39/">AngularJS 101</a>.
 This is focused on the vary basic concepts of <a href="https://angularjs.org/">AngularJS</a> like how and where to write a <code>controller</code> or <code>directive</code> etc. The <a href="https://github.com/saumya/ng-102">sample project is here</a>.
 First thing first, as of any Javascript framework, the nature of <a href="https://angularjs.org/">AngularJS</a> is not different in terms of, where you should write what. This is understood, as Javascript itself is dynamic in nature. There are a lot of guidelines through out the web as to, which file to contain what. In the end it boils down to personal preference. So just go ahead and do some working samples of&nbsp;yours.</p>
@@ -88,69 +84,23 @@ First thing first, as of any Javascript framework, the nature of <a href="https:
 <p><code>Directives</code> in <a href="https://angularjs.org/">AngularJS</a> are visual elements. They define custom <span class="caps">HTML</span> tags/elements as per their&nbsp;definition.</p>
 <p>Take a look at the <a href="https://github.com/saumya/ng-102">Sample Project</a> and that should clear a lot of things, which might seem unclear here. <a href="https://angularjs.org/">AngularJS</a> is modular in the sense, there are carefully separated modules for different purposes. When in need, we include those Javascript files and add the dependecies in the Array. The same goes for our own modules. Try to separate out functionalities into their own modules and use it when&nbsp;needed.   </p>
 <p>Hopefully that will get you started with the&nbsp;framework.</p>
-
-          </section>
-        </article>
-        <article class="article intro">
-          <header>
-            <p class="date"><span>18. November 2015</span></p>
-            <h2><a href="http://saumya.github.io/ray/articles/54/">A year with DOJO Toolkit.</a></h2>
-          </header>
-          <section class="content"><p>There are a number of reasons to use a specific framework in a work environment. But sometimes it boils down to just the hype. For example in recent past almost all the companies are trying to implement <a href="https://angularjs.org/">AngularJS</a> and before that time it was the time for <a href="http://backbonejs.org/">BackboneJS</a> and the story goes on like that. It is always a good experience to work in very different kind of framework or for that matter its even better to work in different kind of languages&nbsp;altogether.          </p>
-<p>The last year was <a href="https://dojotoolkit.org/"><span class="caps">DOJO</span> Toolkit</a> year for me. I must say I am impressed to see features it provides and now that its moving in the right direction. For a long time now, this toolkit was just stagnant but last year only they have started moving again. Well, if you come from a <code>pure Javascript</code> background might not like it by the way it is designed and behaves. The <span class="caps">UI</span> layer of the <a href="https://dojotoolkit.org/"><span class="caps">DOJO</span> Toolkit</a> named as Dijit will seem like Flex components (If you know what Flash and Flex is, you will get what I am saying). The framework itself is designed to make people comfortable, who are used to Classical programming languages like <span class="caps">JAVA</span>. The whole toolkit will show itself, as a class based toolkit. The average user will just think and use it as a Classical programming language, which is the root of all evil things in a project. Thats part of the team and how it works with this&nbsp;toolkit.          </p>
-<p>In general if we talk about the features this toolkit gives us, I would say its nice and efficient if we use it the way it is meant to. The next version is already on progress and they are moving to <a href="http://www.typescriptlang.org/">TypeScript</a>, that a nice move. All in all its a nice experience working with this&nbsp;framework.     </p>
-
-          </section>
-        </article>
-        <article class="article intro">
-          <header>
-            <p class="date"><span>06. August 2015</span></p>
-            <h2><a href="http://saumya.github.io/ray/articles/53/">Vi/Vim comands</a></h2>
-          </header>
-          <section class="content"><p>First of all there are 2 modes. <code>Insert</code> and <code>Command</code> . By default one is in the command&nbsp;mode.</p>
-<pre><code>i : to move to insert mode
-esc : to move out from insert mode
-</code></pre><p>Following is a set of commands I use in a regular&nbsp;basis.</p>
-<pre><code>a : append : start after cursor
-i : insert : start before cursor
-
-w : move forward word by word
-b : move backwars word by word
-
-ctrl+F : scroll forward 1 screen
-ctrl+B : scroll backward 1 screen
-ctrl+D : scroll forward 1/2 screen
-ctrl+U : scroll backward 1/2 screen
-
-ctrl+E : scroll forward 1 line
-ctrl+Y : scroll backward 1 line
-
-ctrl+H : move to top line
-ctrl+M : move to middle line
-ctrl+L : move to last line
-
-/ : search for pattern : forward from cursor
-? : search for pattern : backwards from cursor
-
-f,F : search inline forward,backward
-t,T : move cursor to occurance of the character forwar,backward
-; , , : repear last find command forward and backward
-
-ctrl+G : print line info
-G : move the cursor by line number
-</code></pre><p><code>ctrl+L</code> : Redraw the screen : <code>Remember the screen in just a buffer of texts</code><br>Configuring vi&nbsp;:</p>
-<pre><code>set nu : show line numbers
-set nowrapscan : search does not wrap TOP or BOTTOM
-</code></pre><p>Happy&nbsp;editing.</p>
-
-          </section>
+</section>
         </article>
       </div>
     </div>
     <footer>
       <div class="content-wrap">
-        <div class="nav"><a href="http://saumya.github.io/ray/archive.html">« Archives</a><a href="http://saumya.github.io/ray/page/2/">Next page »</a>
-        </div>
+        <div class="nav"><a href="http://saumya.github.io/ray/">« Full blog</a></div>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+          var disqus_shortname = 'saumya';
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
         <section class="about"><p><a href="http://www.saumyaray.com">Saumya</a> believes in The God.</p>
 <p>A maker of things and curious about everything. Continuous learning is, what fuels him. This blog itself, reflects one of many things he is trying at all the time.</p>
 <p>He is <a href="https://twitter.com/saumya">@saumya</a> on Twitter. </p>

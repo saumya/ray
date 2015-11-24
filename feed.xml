@@ -5,9 +5,79 @@
     <atom:link href="http://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Wed, 18 Nov 2015 05:30:00 +0630</pubDate>
+    <pubDate>Wed, 25 Nov 2015 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>AngularJS 102</title>
+      <link>http://saumya.github.io/ray/articles/55/</link>
+      <pubDate>Wed, 25 Nov 2015 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">http://saumya.github.io/ray/articles/55/</guid>
+      <author></author>
+      <description>&lt;p&gt;This is the part two of the study of &lt;a href=&quot;https://angularjs.org/&quot;&gt;AngularJS&lt;/a&gt;. The first part is &lt;a href=&quot;http://saumya.github.io/ray/articles/39/&quot;&gt;AngularJS 101&lt;/a&gt;.
+This is focused on the vary basic concepts of &lt;a href=&quot;https://angularjs.org/&quot;&gt;AngularJS&lt;/a&gt; like how and where to write a &lt;code&gt;controller&lt;/code&gt; or &lt;code&gt;directive&lt;/code&gt; etc. The &lt;a href=&quot;https://github.com/saumya/ng-102&quot;&gt;sample project is here&lt;/a&gt;.
+First thing first, as of any Javascript framework, the nature of &lt;a href=&quot;https://angularjs.org/&quot;&gt;AngularJS&lt;/a&gt; is not different in terms of, where you should write what. This is understood, as Javascript itself is dynamic in nature. There are a lot of guidelines through out the web as to, which file to contain what. In the end it boils down to personal preference. So just go ahead and do some working samples of yours.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The first thing you need is &lt;code&gt;index.html&lt;/code&gt; or some &lt;code&gt;.html&lt;/code&gt; file, which will be your entry point to the project.&lt;/li&gt;
+&lt;li&gt;Include all the Javascript files in this &lt;code&gt;index.html&lt;/code&gt; file as needed&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://angularjs.org/&quot;&gt;AngularJS&lt;/a&gt; does not need &lt;a href=&quot;https://jquery.com/&quot;&gt;JQuery&lt;/a&gt;, but if you are using &lt;a href=&quot;http://getbootstrap.com/&quot;&gt;Bootstrap&lt;/a&gt;, you will need &lt;a href=&quot;https://jquery.com/&quot;&gt;JQuery&lt;/a&gt; library as the later uses it. So include them in the &lt;code&gt;index.html&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Include the CSS framework files in the &lt;code&gt;index.html&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;All in all, include all the files necessary in the project in &lt;code&gt;index.html&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Well, there are ways to minify and combine all of them in a single file and all those tricks. We can focus on them later. For the timebeing lets focus on how to build &lt;a href=&quot;https://angularjs.org/&quot;&gt;AngularJS&lt;/a&gt; applications.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;In the end include your &lt;code&gt;application.js&lt;/code&gt; file, which will be your application entry file. Name of the file is not relevant, you can name it anything.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;All of the application could be written in a single Javascript file or the application could be divided to be written in different Javascript files, each having a particular scope of work. Whatever the case may be, just remember each Javascript file should be an &lt;a href=&quot;https://angularjs.org/&quot;&gt;AngularJS&lt;/a&gt; module.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;(&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;)&lt;/span&gt;{&lt;span class=&quot;string&quot;&gt;'use strict'&lt;/span&gt;;
+&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; appModule = angular.module(&lt;span class=&quot;string&quot;&gt;'app.Main'&lt;/span&gt;,[&lt;span class=&quot;string&quot;&gt;&quot;ngRoute&quot;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&quot;ngResource&quot;&lt;/span&gt;]);
+})();
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The general convention is to wrap each module inside an immediately invoking function, just not to pollute the global space of the Javascript. Each module can use another module. As in the example above, we are using &lt;code&gt;ngRoute&lt;/code&gt; and &lt;code&gt;ngResource&lt;/code&gt; in our module &lt;code&gt;app.Main&lt;/code&gt;. &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Each Javascript file should be an &lt;a href=&quot;https://angularjs.org/&quot;&gt;AngularJS&lt;/a&gt; Module&lt;/li&gt;
+&lt;li&gt;Each module can use another module as a dependency and that can be passed in as a parameter in the array as shown above          &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Actually in the example above, the dependency modules &lt;code&gt;ngRoute&lt;/code&gt; and &lt;code&gt;ngResource&lt;/code&gt; is not present in the &lt;code&gt;angular.js&lt;/code&gt; Javascript file . These modules are written in separate Javascript files as modules. So we need to include &lt;code&gt;angular-route.js&lt;/code&gt; and &lt;code&gt;angular-resource.js&lt;/code&gt; in our &lt;code&gt;.html&lt;/code&gt; file to use them, else it will through error.       &lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-html&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;type&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;&quot;text/javascript&quot;&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;src&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;&quot;js/lib/angular-1.4.7/angular.js&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;undefined&quot;&gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;type&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;&quot;text/javascript&quot;&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;src&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;&quot;js/lib/angular-1.4.7/angular-route.js&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;undefined&quot;&gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;type&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;&quot;text/javascript&quot;&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;src&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;&quot;js/lib/angular-1.4.7/angular-resource.js&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;undefined&quot;&gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Have a look at the &lt;a href=&quot;https://github.com/saumya/ng-102&quot;&gt;Sample Project&lt;/a&gt;.&lt;br&gt;Lets define another module in a javascript file named &lt;code&gt;one.js&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;(&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;)&lt;/span&gt;{&lt;span class=&quot;string&quot;&gt;'use strict'&lt;/span&gt;;
+  &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; mOne = angular.module(&lt;span class=&quot;string&quot;&gt;'module.one'&lt;/span&gt;,[]);
+})();
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now lets expose a factory from this module.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;(&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;)&lt;/span&gt;{&lt;span class=&quot;string&quot;&gt;'use strict'&lt;/span&gt;;
+  &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; mOne = angular.module(&lt;span class=&quot;string&quot;&gt;'module.one'&lt;/span&gt;,[]);
+  mOne.factory(&lt;span class=&quot;string&quot;&gt;'oneFactory'&lt;/span&gt;,&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;)&lt;/span&gt;{
+    &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; service = {};
+    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; service;
+  });
+})();
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To use this factory in our project. We have to &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;include the &lt;code&gt;one.js&lt;/code&gt; in our html file&lt;/li&gt;
+&lt;li&gt;add the module name &lt;code&gt;module.one&lt;/code&gt; in our application entry file          &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;So the application entry file will look as below&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;(&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;)&lt;/span&gt;{&lt;span class=&quot;string&quot;&gt;'use strict'&lt;/span&gt;;
+  &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; appModule = angular.module(&lt;span class=&quot;string&quot;&gt;'app.Main'&lt;/span&gt;,[&lt;span class=&quot;string&quot;&gt;&quot;ngRoute&quot;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&quot;ngResource&quot;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&quot;module.one&quot;&lt;/span&gt;]);
+  &lt;span class=&quot;comment&quot;&gt;// Now, we can use 'oneFactory' here, as its exposed by 'module.one'&lt;/span&gt;
+})();
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Each Javascript file should be an &lt;a href=&quot;https://angularjs.org/&quot;&gt;AngularJS&lt;/a&gt; module.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Each module could expose any number of anything. That means, any module could expose more than one Object. Those Objects could be any &lt;a href=&quot;https://angularjs.org/&quot;&gt;AngluarJS&lt;/a&gt; Object types, such as Controller, Factory, Service, Directive etc.&lt;/li&gt;
+&lt;li&gt;As long as we are providing a dependency of the module name in the Array and refering the proper name of the Objects, we can use them.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;Directives&lt;/code&gt; in &lt;a href=&quot;https://angularjs.org/&quot;&gt;AngularJS&lt;/a&gt; are visual elements. They define custom HTML tags/elements as per their definition.&lt;/p&gt;
+&lt;p&gt;Take a look at the &lt;a href=&quot;https://github.com/saumya/ng-102&quot;&gt;Sample Project&lt;/a&gt; and that should clear a lot of things, which might seem unclear here. &lt;a href=&quot;https://angularjs.org/&quot;&gt;AngularJS&lt;/a&gt; is modular in the sense, there are carefully separated modules for different purposes. When in need, we include those Javascript files and add the dependecies in the Array. The same goes for our own modules. Try to separate out functionalities into their own modules and use it when needed.   &lt;/p&gt;
+&lt;p&gt;Hopefully that will get you started with the framework.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>A year with DOJO Toolkit.</title>
       <link>http://saumya.github.io/ray/articles/54/</link>
@@ -285,28 +355,6 @@ com.jungle.Animal
 </description>
     </item>
     <item>
-      <title>CoffeeScript basics</title>
-      <link>http://saumya.github.io/ray/articles/45/</link>
-      <pubDate>Thu, 01 Jan 2015 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://saumya.github.io/ray/articles/45/</guid>
-      <author></author>
-      <description>&lt;p&gt;Just to set the expectations right, we need to know something before we begin here.         &lt;/p&gt;
-&lt;p&gt;When I first heard about &lt;code&gt;Class&lt;/code&gt; in &lt;code&gt;Javascript&lt;/code&gt; it created curiosity on me and the expectation increased as to work like a &lt;code&gt;Classical&lt;/code&gt; language(Where Classes are the root of everything) instead of &lt;code&gt;Prototypical&lt;/code&gt; language(like Javascript). But then slowly I understood that its not &lt;code&gt;Javascript&lt;/code&gt; but other languages on top of Javascript which create somekind of &lt;code&gt;Class&lt;/code&gt; concept to mimic &lt;code&gt;Classical&lt;/code&gt; languages. The point is everything boils down to &lt;code&gt;Javascript&lt;/code&gt; if a language is written to compile or transpile to &lt;code&gt;Javascript&lt;/code&gt; . Well, that may seem like a spoiler right now, but its actually not as we will see. Just keep these things in mind all the time, even if we are doing &lt;a href=&quot;http://coffeescript.org/#top&quot;&gt;CoffeeScript&lt;/a&gt;.        &lt;/p&gt;
-&lt;p&gt;Here is the direct link to the &lt;a href=&quot;https://github.com/saumya/CoffeeScript101&quot;&gt;Github&lt;/a&gt; repository for the code reference to this post.       &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;CoffeeScript is generally written in a &lt;code&gt;.coffee&lt;/code&gt; file&lt;/li&gt;
-&lt;li&gt;Each &lt;code&gt;.coffee&lt;/code&gt; file is compiled to a &lt;code&gt;.js&lt;/code&gt; file&lt;/li&gt;
-&lt;li&gt;Each space (a blank space) in code has a meaning in the &lt;code&gt;.coffee&lt;/code&gt; file&lt;/li&gt;
-&lt;li&gt;Semicolons are optional and generally avoided&lt;/li&gt;
-&lt;li&gt;In the beginning you may write more than one classes in a single &lt;code&gt;.coffee&lt;/code&gt; file, and thats perfectly alright here&lt;/li&gt;
-&lt;li&gt;By default the &lt;a href=&quot;http://coffeescript.org/#top&quot;&gt;CoffeeScript&lt;/a&gt; Classes you write are private            &lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;When compiled to JS, the contents of each file, are put inside a self invoking function. This is intentional to not pollute the Global variables. So if the content has some classes inside them, then those classes will also be inside the self-invoking function, restricting the access from outside.&lt;br&gt;The classes in &lt;a href=&quot;http://coffeescript.org/#top&quot;&gt;CoffeeScript&lt;/a&gt; are compiled to as usual JS functions and the inheritence is done through the prototypical inheritence concepts of Javascript. Since all this happens behind the scenes and as a &lt;a href=&quot;http://coffeescript.org/#top&quot;&gt;CoffeeScript&lt;/a&gt; developer if you do not know, how its working, it would be a pain later to expect anything else from this language.          &lt;/p&gt;
-&lt;p&gt;Thats all to start with the new year. Happy new year.         &lt;/p&gt;
-&lt;p&gt;Happy Coding.&lt;/p&gt;
-</description>
-    </item>
-    <item>
       <title>Cake and Coffee</title>
       <link>http://saumya.github.io/ray/articles/46/</link>
       <pubDate>Thu, 01 Jan 2015 05:30:00 +0630</pubDate>
@@ -336,6 +384,28 @@ com.jungle.Animal
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;While defining tasks, we can make a relation between tasks. That means we can say taskOne is dependent on taskTwo. The &lt;a href=&quot;https://github.com/saumya/CoffeeScript101&quot;&gt;basics of CoffeeScript project&lt;/a&gt; has a Cakefile for reference.        &lt;/p&gt;
 &lt;p&gt;The direct link to the sample &lt;code&gt;Cakefile&lt;/code&gt; &lt;a href=&quot;https://github.com/saumya/CoffeeScript101/blob/master/Cakefile&quot;&gt;is here&lt;/a&gt;. All the code are commented for easy reference.       &lt;/p&gt;
+&lt;p&gt;Happy Coding.&lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>CoffeeScript basics</title>
+      <link>http://saumya.github.io/ray/articles/45/</link>
+      <pubDate>Thu, 01 Jan 2015 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">http://saumya.github.io/ray/articles/45/</guid>
+      <author></author>
+      <description>&lt;p&gt;Just to set the expectations right, we need to know something before we begin here.         &lt;/p&gt;
+&lt;p&gt;When I first heard about &lt;code&gt;Class&lt;/code&gt; in &lt;code&gt;Javascript&lt;/code&gt; it created curiosity on me and the expectation increased as to work like a &lt;code&gt;Classical&lt;/code&gt; language(Where Classes are the root of everything) instead of &lt;code&gt;Prototypical&lt;/code&gt; language(like Javascript). But then slowly I understood that its not &lt;code&gt;Javascript&lt;/code&gt; but other languages on top of Javascript which create somekind of &lt;code&gt;Class&lt;/code&gt; concept to mimic &lt;code&gt;Classical&lt;/code&gt; languages. The point is everything boils down to &lt;code&gt;Javascript&lt;/code&gt; if a language is written to compile or transpile to &lt;code&gt;Javascript&lt;/code&gt; . Well, that may seem like a spoiler right now, but its actually not as we will see. Just keep these things in mind all the time, even if we are doing &lt;a href=&quot;http://coffeescript.org/#top&quot;&gt;CoffeeScript&lt;/a&gt;.        &lt;/p&gt;
+&lt;p&gt;Here is the direct link to the &lt;a href=&quot;https://github.com/saumya/CoffeeScript101&quot;&gt;Github&lt;/a&gt; repository for the code reference to this post.       &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;CoffeeScript is generally written in a &lt;code&gt;.coffee&lt;/code&gt; file&lt;/li&gt;
+&lt;li&gt;Each &lt;code&gt;.coffee&lt;/code&gt; file is compiled to a &lt;code&gt;.js&lt;/code&gt; file&lt;/li&gt;
+&lt;li&gt;Each space (a blank space) in code has a meaning in the &lt;code&gt;.coffee&lt;/code&gt; file&lt;/li&gt;
+&lt;li&gt;Semicolons are optional and generally avoided&lt;/li&gt;
+&lt;li&gt;In the beginning you may write more than one classes in a single &lt;code&gt;.coffee&lt;/code&gt; file, and thats perfectly alright here&lt;/li&gt;
+&lt;li&gt;By default the &lt;a href=&quot;http://coffeescript.org/#top&quot;&gt;CoffeeScript&lt;/a&gt; Classes you write are private            &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;When compiled to JS, the contents of each file, are put inside a self invoking function. This is intentional to not pollute the Global variables. So if the content has some classes inside them, then those classes will also be inside the self-invoking function, restricting the access from outside.&lt;br&gt;The classes in &lt;a href=&quot;http://coffeescript.org/#top&quot;&gt;CoffeeScript&lt;/a&gt; are compiled to as usual JS functions and the inheritence is done through the prototypical inheritence concepts of Javascript. Since all this happens behind the scenes and as a &lt;a href=&quot;http://coffeescript.org/#top&quot;&gt;CoffeeScript&lt;/a&gt; developer if you do not know, how its working, it would be a pain later to expect anything else from this language.          &lt;/p&gt;
+&lt;p&gt;Thats all to start with the new year. Happy new year.         &lt;/p&gt;
 &lt;p&gt;Happy Coding.&lt;/p&gt;
 </description>
     </item>
