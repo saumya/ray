@@ -23,6 +23,41 @@
       <div class="content-wrap">
         <article class="article intro">
           <header>
+            <p class="date"><span>17. November 2014</span></p>
+            <h2><a href="http://saumya.github.io/ray/articles/44/">RequireJS, Load timeout for modules!</a></h2>
+          </header>
+          <section class="content"><p>Working with <a href="http://backbonejs.org/">BackboneJS</a>, will make you work with <a href="http://requirejs.org/">RequireJS</a>. And if you are working with <a href="http://backbonejs.org/">BackboneJS</a> for a little time, then you probably know what I am talking about. Sometimes, the modules we are loading through <a href="http://requirejs.org/">RequireJS</a> throw errors&nbsp;saying</p>
+<pre><code class="lang-javascript"><span class="built_in">Error</span>: Load timeout <span class="keyword">for</span> modules
+</code></pre>
+<p>I will suggest to have a look at <a href="http://requirejs.org/docs/errors.html">RequireJS</a> documentation for detailed explanation.<br>The most common and which may hit you in the begining is the <code>timeout</code> for timeout itself. There are ways to fix this. The options&nbsp;are</p>
+<ul>
+<li>increase the timeout&nbsp;limit</li>
+<li>reload the page or the module on timeout&nbsp;error</li>
+</ul>
+<p>The <a href="http://requirejs.org/">RequireJS</a> configuration has an option called <code>waitSeconds</code>, which defaults to <code>7</code>. Now if the module does not load in 7 seconds, it will giveup and throw the error. If <code>waitSeconds</code> is set to <code>0</code>, it will wait for <code>infinite</code>. Well, along with that setting, set the <code>enforceDefine</code> to <code>true</code> for reliability in all browsers and scenarios. This setting will look as&nbsp;below.</p>
+<pre><code class="lang-javascript">requirejs.config({
+    enforceDefine: <span class="literal">true</span>,
+    waitSeconds: <span class="number">0</span>,
+</code></pre>
+<p>Thats a quickfix. But again, it may hit the performace of the application.<br>The otherway is <a href="http://requirejs.org/docs/api.html#errbacks">Errbacks</a> as per <a href="http://requirejs.org/">RequireJS</a>. so what are they. They are simply callbacks but since it happens in errors, its called <code>Errbacks</code>. We can do stuff like reloading the whole application or the specified module or other error handling on&nbsp;these.</p>
+<pre><code class="lang-javascript"><span class="built_in">require</span>([<span class="string">'modules/one'</span>,<span class="string">'modules/two'</span>],
+           <span class="function"><span class="keyword">function</span>(<span class="params">One,Two</span>)</span>{
+            <span class="comment">//Application logic</span>
+        },
+        <span class="function"><span class="keyword">function</span>(<span class="params">error</span>)</span>{
+            <span class="built_in">console</span>.log(<span class="string">'Custom <span class="caps">ERROR</span> handler'</span>,error);
+            <span class="comment">//error.requireModules : is Array of all failed modules</span>
+            <span class="keyword">var</span> failedId = error.requireModules &amp;&amp; error.requireModules[<span class="number">0</span>];
+            <span class="built_in">console</span>.log(failedId);
+            <span class="built_in">console</span>.log(error.message);
+        });
+</code></pre>
+<p>Happy&nbsp;Coding.</p>
+
+          </section>
+        </article>
+        <article class="article intro">
+          <header>
             <p class="date"><span>23. October 2014</span></p>
             <h2><a href="http://saumya.github.io/ray/articles/43/">Upgrading to Cordova 3.4 and above</a></h2>
           </header>
@@ -86,26 +121,6 @@ While writing a custom Widget, its necessary to override parent’s lifecycle me
 <li>addChild()</li>
 </ul>
 <p>Well, this post may seem a lot but the idea is to make you aware of the vocabulary and some background to <code>dijit</code> infrastructure. For a basic and complete <code>example</code> <a href="https://github.com/saumya/dojo101/blob/master/dojo-release-1.10.0-src/myWidgets/rayWidget3.js">have a look at this widget</a>.</p>
-<p>Happy&nbsp;Coding.</p>
-
-          </section>
-        </article>
-        <article class="article intro">
-          <header>
-            <p class="date"><span>29. September 2014</span></p>
-            <h2><a href="http://saumya.github.io/ray/articles/41/">Getting started with, Dojo Toolkit</a></h2>
-          </header>
-          <section class="content"><p>To begin with, <a href="http://dojotoolkit.org/">Dojo Toolkit</a> or simply referred to as <a href="http://dojotoolkit.org/">Dojo</a> is one of many libraries in javascript. First thing to do is, like any other javascript libraries, make sure which version of library you are studying and using. <a href="http://dojotoolkit.org/">Dojo</a> has gone through major upgrades and if you are trying to do things the new way of <a href="http://dojotoolkit.org/">Dojo</a> then better get to know the <a href="http://dojotoolkit.org/documentation/tutorials/1.10/modern_dojo/">new version</a>. We will be focusing on the new version only(currently <code>1.10</code>) and referring to old one, wherever&nbsp;necessary.</p>
-<p><a href="http://dojotoolkit.org/">Dojo Toolkit</a> has got a combination&nbsp;following</p>
-<ul>
-<li>A bare bone of functionality ( <code>dojo</code> )</li>
-<li>A widget library ( <code>dijit</code> )</li>
-<li>An experimental library ( <code>dojox</code> )</li>
-<li>An Unit testing&nbsp;framework</li>
-<li>A compiler to do the minification and&nbsp;optimisation</li>
-</ul>
-<p>A lot of javascript libraries try to implement the classical programming concepts and <a href="http://dojotoolkit.org/">Dojo</a> is another one of them. So, if you are a purist in Javascript, <a href="http://dojotoolkit.org/">Dojo</a> will dissapoint you. The functional nature of Javascript is also eliminated here. <a href="http://dojotoolkit.org/">Dojo</a> clearly disagrees to say that <code>function</code> is <code>a first class citizen</code>, which is again denying another nice feature of javascript. Well, but if you are coming from a classical programming background, that means from a programming language which is class based like Java, then <a href="http://dojotoolkit.org/">Dojo</a> will seem natural. So, we will refer them in classical terms rather than Javascript&nbsp;terms.</p>
-<p>The core functionality of the toolkit is wrapped in a package called <code>dojo</code>. Everythig that runs in the toolkit depends on this basic package. Next is <code>dijit</code>, which can be called as a component library or in dojo’s terms these are widgets. Now <code>dojox</code> is a package containing experimental widgets, which will eventually go into <code>dijit</code> , once they are stable enough. Since widgets have to live a life of their own, there is a flow of lifecycle events. It is now obvious that any application using these widgets have to abide to these lifecycle events and some rules as a whole. In Dojo’s terms these are framework&nbsp;rules.</p>
 <p>Happy&nbsp;Coding.</p>
 
           </section>
