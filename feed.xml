@@ -5,9 +5,87 @@
     <atom:link href="http://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Fri, 27 Nov 2015 05:30:00 +0630</pubDate>
+    <pubDate>Sat, 28 Nov 2015 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>How to React now.</title>
+      <link>http://saumya.github.io/ray/articles/58/</link>
+      <pubDate>Sat, 28 Nov 2015 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">http://saumya.github.io/ray/articles/58/</guid>
+      <author></author>
+      <description>&lt;p&gt;Here is the way to &lt;a href=&quot;http://facebook.github.io/react/&quot;&gt;React&lt;/a&gt; now.        &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Download &lt;a href=&quot;http://facebook.github.io/react/&quot;&gt;React&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Make a new html file&lt;/li&gt;
+&lt;li&gt;Include “react.js”, this gives us ‘React’ Object&lt;/li&gt;
+&lt;li&gt;Include “react-dom.js”, this gives us ‘ReactDOM’ Object&lt;/li&gt;
+&lt;li&gt;Write the a React component and use it. This is explained below.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The HTML file should look something as shown here.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-html&quot;&gt;&lt;span class=&quot;doctype&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;html&lt;/span&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;head&lt;/span&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;meta&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;charset&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;&quot;utf-8&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;title&lt;/span&gt;&amp;gt;&lt;/span&gt;React!&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;title&lt;/span&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;head&lt;/span&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;body&lt;/span&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;id&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;&quot;myReactApp&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;comment&quot;&gt;&amp;lt;!-- React Application --&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;comment&quot;&gt;&amp;lt;!-- React library --&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;src&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;&quot;js/lib/react/react.js&quot;&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;charset&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;&quot;utf-8&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;undefined&quot;&gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;src&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;&quot;js/lib/react/react-dom.js&quot;&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;charset&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;&quot;utf-8&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;undefined&quot;&gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;comment&quot;&gt;&amp;lt;!-- Application Code --&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;type&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;&quot;text/javascript&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;actionscript&quot;&gt;
+        &lt;span class=&quot;comment&quot;&gt;// TODO&lt;/span&gt;
+    &lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;body&lt;/span&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;html&lt;/span&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This HTML file has only a &lt;code&gt;div&lt;/code&gt; with an id as &lt;code&gt;id=&amp;quot;myReactApp&amp;quot;&lt;/code&gt;. Now lets write a React Component. The component code is as below.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; Component1 = React.createClass({
+  render: &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;)&lt;/span&gt;{
+    &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; reactComponent = React.DOM.span(&lt;span class=&quot;literal&quot;&gt;null&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&quot;I am a Custom Span.&quot;&lt;/span&gt;);
+    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; reactComponent;
+  }
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now lets add this component to our DOM. We are going to add this component in the &lt;code&gt;div&lt;/code&gt; with id &lt;code&gt;myReactApp&lt;/code&gt;.           &lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;ReactDOM.render( React.createElement(Component1), &lt;span class=&quot;built_in&quot;&gt;document&lt;/span&gt;.getElementById(&lt;span class=&quot;string&quot;&gt;&quot;myReactApp&quot;&lt;/span&gt;) );
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;So the final HTML file with the added javascripts and our code will look as below.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-html&quot;&gt;&lt;span class=&quot;doctype&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;html&lt;/span&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;head&lt;/span&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;meta&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;charset&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;&quot;utf-8&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;title&lt;/span&gt;&amp;gt;&lt;/span&gt;React!&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;title&lt;/span&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;head&lt;/span&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;body&lt;/span&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;id&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;&quot;myReactApp&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;comment&quot;&gt;&amp;lt;!-- React Application --&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;comment&quot;&gt;&amp;lt;!-- React library --&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;src&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;&quot;js/lib/react/react.js&quot;&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;charset&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;&quot;utf-8&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;undefined&quot;&gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;src&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;&quot;js/lib/react/react-dom.js&quot;&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;charset&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;&quot;utf-8&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;undefined&quot;&gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;comment&quot;&gt;&amp;lt;!-- Application Code --&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;type&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;&quot;text/javascript&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;javascript&quot;&gt;
+        &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; Component1 = React.createClass({
+                                render: &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;)&lt;/span&gt;{
+                                    &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; reactComponent = React.DOM.span(&lt;span class=&quot;literal&quot;&gt;null&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&quot;I am a REACT Component Span&quot;&lt;/span&gt;);
+                                    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; reactComponent;
+                                }
+                            });
+        ReactDOM.render( React.createElement(Component1), &lt;span class=&quot;built_in&quot;&gt;document&lt;/span&gt;.getElementById(&lt;span class=&quot;string&quot;&gt;&quot;myReactApp&quot;&lt;/span&gt;) );
+    &lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;body&lt;/span&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;html&lt;/span&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now, if you run this from a server and view the page in the browser. You can see our compent is rendered in the &lt;code&gt;div&lt;/code&gt; and it displays the text as ‘I am a REACT Component Span’.          &lt;/p&gt;
+&lt;p&gt;Thats all is there to &lt;a href=&quot;http://facebook.github.io/react/&quot;&gt;React&lt;/a&gt;. After this point all that &lt;code&gt;remains&lt;/code&gt; is the &lt;code&gt;APIs for Component&lt;/code&gt; development. But as you can see, &lt;a href=&quot;http://facebook.github.io/react/&quot;&gt;React&lt;/a&gt; is not telling or expecting anything else. It just makes reusable HTML components. The architecture of the application is upon the developers.&lt;/p&gt;
+&lt;p&gt;Happy Reacting.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>React</title>
       <link>http://saumya.github.io/ray/articles/57/</link>
