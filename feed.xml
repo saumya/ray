@@ -5,9 +5,32 @@
     <atom:link href="http://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Sat, 28 Nov 2015 05:30:00 +0630</pubDate>
+    <pubDate>Sat, 05 Dec 2015 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>RequireJS is not require()</title>
+      <link>http://saumya.github.io/ray/articles/59/</link>
+      <pubDate>Sat, 05 Dec 2015 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">http://saumya.github.io/ray/articles/59/</guid>
+      <author></author>
+      <description>&lt;p&gt;It would have saved me time if I could have known this in the beginning. Like a lot of things in Javscript world, a same kind of name for two different functionalities makes a lot of confusion.          &lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://requirejs.org/&quot;&gt;RequireJS&lt;/a&gt; is used to load &lt;a href=&quot;http://requirejs.org/docs/whyamd.html#amd&quot;&gt;AMD&lt;/a&gt;&lt;br&gt;require() is used to load &lt;a href=&quot;http://requirejs.org/docs/whyamd.html#commonjs&quot;&gt;CommonJS&lt;/a&gt;          &lt;/p&gt;
+&lt;p&gt;Well, to add to confusion the &lt;code&gt;require()&lt;/code&gt; function is available to both the module definitions. But both the &lt;code&gt;require()&lt;/code&gt; do different things. For &lt;a href=&quot;http://requirejs.org/docs/whyamd.html#commonjs&quot;&gt;CommonJS&lt;/a&gt; &lt;code&gt;require()&lt;/code&gt; loads modules in a &lt;code&gt;synchronous&lt;/code&gt; way, while the &lt;code&gt;require()&lt;/code&gt; in &lt;a href=&quot;http://requirejs.org/docs/whyamd.html#amd&quot;&gt;AMD&lt;/a&gt; ie; in &lt;a href=&quot;http://requirejs.org/&quot;&gt;RequireJS&lt;/a&gt; the modules are loaded in &lt;code&gt;asynhronous&lt;/code&gt; way.             &lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://requirejs.org/docs/whyamd.html#amd&quot;&gt;AMD&lt;/a&gt; style loading is&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;require&lt;/span&gt;([&lt;span class=&quot;string&quot;&gt;'path/myModuleFileName.js'&lt;/span&gt;],&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;MyModule&lt;/span&gt;)&lt;/span&gt;{
+  &lt;span class=&quot;comment&quot;&gt;// Use MyModule&lt;/span&gt;
+  MyModule.doSomething();
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In &lt;a href=&quot;http://requirejs.org/docs/whyamd.html#commonjs&quot;&gt;CommonJS&lt;/a&gt; its done as below&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; MyModule = &lt;span class=&quot;built_in&quot;&gt;require&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;'path/myModuleFileName.js'&lt;/span&gt;);
+&lt;span class=&quot;comment&quot;&gt;// the line below is same as above, just removed the file extention .js&lt;/span&gt;
+&lt;span class=&quot;comment&quot;&gt;//var MyModule = require('path/myModuleFileName');&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Happy requiring.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>How to React now.</title>
       <link>http://saumya.github.io/ray/articles/58/</link>

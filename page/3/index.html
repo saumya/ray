@@ -23,6 +23,49 @@
       <div class="content-wrap">
         <article class="article intro">
           <header>
+            <p class="date"><span>06. August 2015</span></p>
+            <h2><a href="http://saumya.github.io/ray/articles/53/">Vi/Vim comands</a></h2>
+          </header>
+          <section class="content"><p>First of all there are 2 modes. <code>Insert</code> and <code>Command</code> . By default one is in the command&nbsp;mode.</p>
+<pre><code>i : to move to insert mode
+esc : to move out from insert mode
+</code></pre><p>Following is a set of commands I use in a regular&nbsp;basis.</p>
+<pre><code>a : append : start after cursor
+i : insert : start before cursor
+
+w : move forward word by word
+b : move backwars word by word
+
+ctrl+F : scroll forward 1 screen
+ctrl+B : scroll backward 1 screen
+ctrl+D : scroll forward 1/2 screen
+ctrl+U : scroll backward 1/2 screen
+
+ctrl+E : scroll forward 1 line
+ctrl+Y : scroll backward 1 line
+
+ctrl+H : move to top line
+ctrl+M : move to middle line
+ctrl+L : move to last line
+
+/ : search for pattern : forward from cursor
+? : search for pattern : backwards from cursor
+
+f,F : search inline forward,backward
+t,T : move cursor to occurance of the character forwar,backward
+; , , : repear last find command forward and backward
+
+ctrl+G : print line info
+G : move the cursor by line number
+</code></pre><p><code>ctrl+L</code> : Redraw the screen : <code>Remember the screen in just a buffer of texts</code><br>Configuring vi&nbsp;:</p>
+<pre><code>set nu : show line numbers
+set nowrapscan : search does not wrap TOP or BOTTOM
+</code></pre><p>Happy&nbsp;editing.</p>
+
+          </section>
+        </article>
+        <article class="article intro">
+          <header>
             <p class="date"><span>19. May 2015</span></p>
             <h2><a href="http://saumya.github.io/ray/articles/52/">Git, Forking and Syncing</a></h2>
           </header>
@@ -65,30 +108,6 @@ git push origin master
 <p>Thats about compilation and running. Lets get back to coding. There is no surprise here as all we have to do is, get the right package and class from <a href="http://haxe.org/"><span class="caps">HAXE</span></a> and use it. Here is the <a href="https://github.com/saumya/HAXE-CLI-101">Git repo</a> for this example. The application entry initialises ‘PrintInfo’ Class. That class prints the information that we want to show to the user and finally asks the name of the use. As user inputs the name, it greets the user and moves to our defined command prompt. We have setup some commands to display. Depending upon user input the necessary commands are executed. All these are happening in <code>MyCli.hx</code>  Class. The <a href="https://github.com/saumya/HAXE-CLI-101/blob/master/com/saumya/cli/MyCli.hx">code is commented</a> for easy reference in <a href="https://github.com/saumya/HAXE-CLI-101">this repo</a>. Here is the <a href="https://github.com/saumya/HAXE-CLI-101/blob/master/com/saumya/cli/MyCli.hx">direct link</a> to the&nbsp;class. </p>
 <p>Happy&nbsp;coding.</p>
 
-          </section>
-        </article>
-        <article class="article intro">
-          <header>
-            <p class="date"><span>18. January 2015</span></p>
-            <h2><a href="http://saumya.github.io/ray/articles/50/">HAXE and NodeJS</a></h2>
-          </header>
-          <section class="content"><p>Continuing the sudy of javascript target of <a href="http://haxe.org/"><span class="caps">HAXE</span></a> we will focus on <a href="http://nodejs.org/">NodeJS</a> this time. Before we move on, lets remind ourselves the things to expect from the <a href="http://haxe.org/"><span class="caps">HAXE</span></a> toolchain by going through the previous two introductions, here is the <a href="http://saumya.github.io/ray/articles/47/">first</a> and the <a href="http://saumya.github.io/ray/articles/48/">second</a> post.<br>Thats about <a href="http://haxe.org/"><span class="caps">HAXE</span></a>, now a little about <a href="http://nodejs.org/">NodeJS</a>. In <a href="http://nodejs.org/">NodeJS</a> the concept of modules is very common to make some re-usable code. In general, modules hide everything by default. In class based languages we can call them as <code>private</code> elements. To make something <code>public</code> , we have to use <code>exports</code> keyword in <a href="http://nodejs.org/">NodeJS</a>.           </p>
-<p>For example, if we have a file names <code>one.js</code> as</p>
-<pre><code class="lang-javascript">exports.publicFunction = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{
-  <span class="built_in">console</span>.log(<span class="string">'Hello World'</span>);
-}
-</code></pre>
-<p>Now, in <a href="http://nodejs.org/">NodeJS</a>, we can write something&nbsp;as          </p>
-<pre><code class="lang-javascript"><span class="keyword">var</span> oneObj = <span class="built_in">require</span>(<span class="string">'./one'</span>);
-oneObj.publicFunction();
-</code></pre>
-<p>Thats first kind of modules we have. There is another kind of modules in <a href="http://nodejs.org/">NodeJS</a>, where instead of exposing each individual elements from the modules, it exposes a <code>Constructor</code> function. This is done with <code>module.exports</code> in stead of only <code>exports</code>.          </p>
-<pre><code class="lang-javascript"><span class="built_in">module</span>.exports.MyObjConstructor = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{
-  <span class="built_in">console</span>.log(<span class="string">'New Object'</span>);
-}
-</code></pre>
-<p>This second one is looked at as classical concepts of programming, where each <span class="caps">JS</span> file is kind of a Class file.<br>The dynamic and fun nature of javascript allows us to use the first way of exposing individual elements to actually expose a constructor function too. Is not it ?! Why we think about that! Because <a href="http://haxe.org/"><span class="caps">HAXE</span></a> generated javascript is actually doing that. Smart.<br>
-            <p class="more"><a href="http://saumya.github.io/ray/articles/50/">more</a></p>
           </section>
         </article>
       </div>
