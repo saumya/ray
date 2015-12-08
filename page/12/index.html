@@ -23,6 +23,23 @@
       <div class="content-wrap">
         <article class="article intro">
           <header>
+            <p class="date"><span>14. February 2014</span></p>
+            <h2><a href="http://saumya.github.io/ray/articles/27/">Amazon S3 Sync with NodeJS</a></h2>
+          </header>
+          <section class="content"><p>This is my first practical cross-platform desktop application written in <a href="http://nodejs.org/">NodeJS</a>. The application is a simple desktop client to upload the changed files in a folder automatically to a bucket in <a href="http://aws.amazon.com/s3/">Amazon S3</a>. The main components, which make this application,&nbsp;are     </p>
+<ul>
+<li><a href="https://github.com/rogerwang/node-webkit">node-webkit</a></li>
+<li><a href="http://docs.aws.amazon.com/AWSJavaScriptSDK/guide/browser-intro.html">Amazon S3 <span class="caps">SDK</span> for&nbsp;browser</a></li>
+</ul>
+<p>Well, there is a <a href="http://nodejs.org/">NodeJS</a> module as well for the <span class="caps">SDK</span>, but I prefer to take it only browser way at the&nbsp;moment.     </p>
+<p>The <a href="https://github.com/saumya/AmazonS3Sync">source code</a> is available here and to run it, get a copy of the <a href="https://github.com/rogerwang/node-webkit">node-webkit</a> for your environment. And that makes a cross-platform application on <a href="http://nodejs.org/">NodeJS</a>.     </p>
+<p>Currently the application keeps an eye on a folder, you specify. Once a file is changed in that folder, is automatically uploaded to the ‘bucket’ you specify in the beginning of the application. Note, currently it just uploads the files, which are changed. It does not upload a new file in the folder or any existing&nbsp;file.</p>
+<p>Happy&nbsp;synching.</p>
+
+          </section>
+        </article>
+        <article class="article intro">
+          <header>
             <p class="date"><span>13. February 2014</span></p>
             <h2><a href="http://saumya.github.io/ray/articles/26/">iOS, customising top and bottom bar inside UINavigationController</a></h2>
           </header>
@@ -44,23 +61,6 @@
           </header>
           <section class="content"><p>It was not there 4 years back, when the iOS was just beginning its life. Whether you like it or not the truth is its fragmented now. There are all different versions of iOS, then different versions of the devices. These two itself bring a lot of different considerations, while developing for the platform now.<br>Its agreed that its less fragmented but then thats enough to bring in the pain to a frontend developer.<br>Now, to add to it, there are different device form factors. Starting with regular iPads, retina, air, mini, iphone, ipod touch and all have different specifications. So the point is, the XCode workflow allows one to <code>design</code> for all different devices, that does mean <code>design is multiplied</code> not <code>reduced</code>. While its good and freedom to the <span class="caps">UI</span> designer, as a frontend developer one must keep an eye on all these form fragmentations.
 Now the same code will produce, a different looking back button in an older iOS and a different looking one in the newer ones. The UI may hide some UI elements on a smaller heighted device and look perfect in a newer bigger iPhone/iPodTouch.<br>Thats doable but definitely increases time to implement <span class="caps">UI</span>, if its not designed, and well thought of, by people, who know what they are doing.<br>Happy&nbsp;designing.</p>
-
-          </section>
-        </article>
-        <article class="article intro">
-          <header>
-            <p class="date"><span>11. February 2014</span></p>
-            <h2><a href="http://saumya.github.io/ray/articles/24/">jQuerymobile, changePage is deprecated as of 1.4.0, will be removed in 1.5.0.</a></h2>
-          </header>
-          <section class="content"><p>This is really going to break things, if someone is updating the library to latest version. This is a very frequently used function and chances are, that, in a mobile web application its being used everywhere. Lets remind ourselves again that <code>jQuery.mobile.changePage</code> is <code>deprecated as of 1.4.0</code> and <code>will be removed in 1.5.0</code>.<br>Now there are vaious ways to change page in a <a href="http://jquerymobile.com">jQuerymobile</a> application. Here are the 3 options to do the page change in the new&nbsp;<span class="caps">API</span>.</p>
-<pre><code class="lang-javascript">$(<span class="string">":mobile-pagecontainer"</span>).pagecontainer(<span class="string">"change"</span>, <span class="string">"target"</span>, { options });
-<span class="comment">//or</span>
-$.mobile.pageContainer.pagecontainer(<span class="string">"change"</span>, <span class="string">"target"</span>, { options });
-<span class="comment">//or</span>
-$(<span class="string">"body"</span>).pagecontainer(<span class="string">"change"</span>, <span class="string">"target"</span>, { options });
-</code></pre>
-<p><a href="http://api.jquerymobile.com/jQuery.mobile.changePage/">Here is the official document for&nbsp;reference</a>     </p>
-<p>Happy&nbsp;coding.</p>
 
           </section>
         </article>
