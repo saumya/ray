@@ -5,11 +5,13 @@ date: 2015-12-08
 template: article.jade
 ---
 
-Once you start working on [NodeJS][1], very soon one will come across a term called [Socket.IO][2]. It happened to me for a long time, trying to understand about the term. So lets know what is it.          
+Once one starts working on [NodeJS][1], very soon will come across a term called [Socket.IO][2]. It may feel as if just another [NodeJS][1] module available through [NPM][3]. Then it may feel like just another way to write a Javascript application for the browser. Then it may seem something else.          
 
- - Its a [NodeJS][1] module
- - install it from a [NPM][3]
- - It has a server component (NodeJS Module) and client library (.js file)
+So lets know what is it?          
+
+ - Its two things, a server framework and client framework.
+ - Its a [NodeJS][1] module ( install it from a [NPM][3] ) 
+ - Its a client library ( .js file )
           
 Now, lets understand a little more in detail.          
 
