@@ -14,9 +14,10 @@
       <pubDate>Tue, 08 Dec 2015 05:30:00 +0630</pubDate>
       <guid isPermaLink="true">http://saumya.github.io/ray/articles/60/</guid>
       <author></author>
-      <description>&lt;p&gt;Once one starts working on &lt;a href=&quot;https://nodejs.org/&quot;&gt;NodeJS&lt;/a&gt;, very soon will come across a term called &lt;a href=&quot;http://socket.io&quot;&gt;Socket.IO&lt;/a&gt;. At first it may seem something totally different. Then it may feel as if just another &lt;a href=&quot;https://nodejs.org/&quot;&gt;NodeJS&lt;/a&gt; module available through &lt;a href=&quot;https://www.npmjs.com&quot;&gt;NPM&lt;/a&gt;. Then it may feel like just another way to write a Javascript application. Then it may seem something else.          &lt;/p&gt;
+      <description>&lt;p&gt;Once one starts working on &lt;a href=&quot;https://nodejs.org/&quot;&gt;NodeJS&lt;/a&gt;, very soon will come across a term called &lt;a href=&quot;http://socket.io&quot;&gt;Socket.IO&lt;/a&gt;. It may feel as if just another &lt;a href=&quot;https://nodejs.org/&quot;&gt;NodeJS&lt;/a&gt; module available through &lt;a href=&quot;https://www.npmjs.com&quot;&gt;NPM&lt;/a&gt;. Then it may feel like just another way to write a Javascript application for the browser. Then it may seem something else.          &lt;/p&gt;
 &lt;p&gt;So lets know what is it?          &lt;/p&gt;
 &lt;ul&gt;
+&lt;li&gt;Its two things, a server framework and client framework.&lt;/li&gt;
 &lt;li&gt;Its a &lt;a href=&quot;https://nodejs.org/&quot;&gt;NodeJS&lt;/a&gt; module ( install it from a &lt;a href=&quot;https://www.npmjs.com&quot;&gt;NPM&lt;/a&gt; ) &lt;/li&gt;
 &lt;li&gt;Its a client library ( .js file )&lt;/li&gt;
 &lt;/ul&gt;
