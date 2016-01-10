@@ -26,59 +26,9 @@
             <p class="date"><span>09. January 2016</span></p>
             <h2><a href="http://saumya.github.io/ray/articles/62/">Cordova today</a></h2>
           </header>
-          <section class="content"><p>During these years <a href="https://cordova.apache.org/">Cordova</a> and the mobile phones have come a long way. Today it seems the mobiles are more powerful and can handle a web application quite nicely. On the other hand <a href="https://cordova.apache.org/">Cordova</a> tool chain also has matured. Comparing to older versions of the tool chain, currently its purely <a href="https://www.npmjs.com/"><span class="caps">NPM</span></a> based, as long as we talk about cross platform development. So anything one needs is just a <code>npm install</code> away. <span class="mor"></span></p>
-<p>There are two ways, as usual with <a href="https://cordova.apache.org/">Cordova</a>, to make a&nbsp;project.</p>
-<ul>
-<li><span class="caps">CLI</span>&nbsp;based</li>
-<li>Platform&nbsp;based</li>
-</ul>
-<blockquote>
-<p>The difference is in, what an application needs from, the platform its deployed&nbsp;into. </p>
-<blockquote>
-<p>If one application does not depend upon things like Camera or Geolocation etc and can still serve itself, then its best to use <span class="caps">CLI</span> based approach. That way, it can be delivered to a lot of platforms with just few&nbsp;commands.   </p>
-<p>On the otherhand, if an application requires a specific feature from the underlying platform, then its better to get started with the platform specific workflow. If its needed to write some custom hooks to only iOS devices, then its much easier to get started in platform specific development and customise the application for iOS&nbsp;platform.    </p>
-</blockquote>
-</blockquote>
-<h3 id="platform-projects">Platform&nbsp;projects</h3>
-<p>For platform specific development, there are separate compressed files available and the projects start from there. Here is a list for iOS and&nbsp;Android.</p>
-<ul>
-<li>iOS ( <a href="https://github.com/apache/cordova-ios/releases">https://github.com/apache/cordova-ios/releases</a>&nbsp;)</li>
-<li>Android ( <a href="https://github.com/apache/cordova-android/releases">https://github.com/apache/cordova-android/releases</a>&nbsp;)</li>
-</ul>
-<h3 id="cli-projects"><span class="caps">CLI</span>&nbsp;projects</h3>
-<p>For <span class="caps">CLI</span> based applications, the basic need is <a href="https://nodejs.org/en/">Node</a> and with that comes <a href="https://www.npmjs.com/"><span class="caps">NPM</span></a>. First thing to do is, intall Cordova from <a href="https://www.npmjs.com/"><span class="caps">NPM</span></a>, once <a href="https://nodejs.org/en/">Node</a> is installed in the system. From that point onwards the commands to start working on a Cordova project are as&nbsp;below.          </p>
-<p>Make a cordova&nbsp;project</p>
-<pre><code>cordova create hello com.example.hello HelloWorld
-</code></pre><p>Now move to the project folder, which is just created by the above command. All the following commands should run from inside the project&nbsp;folder.</p>
-<pre><code>cd hello
-</code></pre><p>Check the number of&nbsp;platforms</p>
-<pre><code>cordova platforms ls
-</code></pre><p>Add the required&nbsp;platforms</p>
-<pre><code>cordova platform add ios
-cordova platform add android
-cordova platform add browser
-</code></pre><p>Remove&nbsp;platforms</p>
-<pre><code>cordova platform remove blackberry10
-</code></pre><p>Build</p>
-<pre><code>cordova build ios ( this is equivalent as the below two commands combined together )
-
-cordova prepare ios ( at this point, Xcode can be used to open the project )
-cordova compile ios
-</code></pre><p>Run</p>
-<pre><code>cordova emulate android ( run in emulator )
-cordova run android ( run in device )
-</code></pre><p>Help</p>
-<pre><code>cordova run --help
-</code></pre><h3 id="plugins-command-reference">Plugins command&nbsp;reference</h3>
-<p>List all the plugins installed in the&nbsp;project</p>
-<pre><code>cordova plugin ls
-</code></pre><p>Add&nbsp;plugin</p>
-<pre><code>cordova plugin add cordova-plugin-console
-</code></pre><p>Remove&nbsp;plugin</p>
-<pre><code>cordova plugin rm cordova-plugin-console
-</code></pre><p>I hope that helps you get started with <a href="https://cordova.apache.org/">Cordova</a>. For detailed documenation, its better to go to the official&nbsp;documentation. </p>
-<p>Happy&nbsp;coding.</p>
-
+          <section class="content"><p>During these years <a href="https://cordova.apache.org/">Cordova</a> and the mobile phones have come a long way. Today it seems the mobiles are more powerful and can handle a web application quite nicely. On the other hand <a href="https://cordova.apache.org/">Cordova</a> tool chain also has matured. Comparing to older versions of the tool chain, currently its purely <a href="https://www.npmjs.com/"><span class="caps">NPM</span></a> based, as long as we talk about cross platform development. So anything one needs is just a <code>npm install</code> away. </p>
+<p>
+            <p class="more"><a href="http://saumya.github.io/ray/articles/62/">more</a></p>
           </section>
         </article>
         <article class="article intro">
