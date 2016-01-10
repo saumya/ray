@@ -36,20 +36,21 @@
 <p>The difference is in, what an application needs from, the platform its deployed&nbsp;into. </p>
 <blockquote>
 <p>If one application does not depend upon things like Camera or Geolocation etc and can still serve itself, then its best to use <span class="caps">CLI</span> based approach. That way, it can be delivered to a lot of platforms with just few&nbsp;commands.   </p>
-<p>On the otherhand, if an application requires a specific feature from the underlying platform, then its better to get started with the platform specific workflow. If its needed to write some custom hooks to only iOS devices, then its much easier to get started in platform specific development and customise the application for that particular&nbsp;platform.    </p>
+<p>On the otherhand, if an application requires a specific feature from the underlying platform, then its better to get started with the platform specific workflow. If its needed to write some custom hooks to only iOS devices, then its much easier to get started in platform specific development and customise the application for iOS&nbsp;platform.    </p>
 </blockquote>
 </blockquote>
 <h3 id="platform-projects">Platform&nbsp;projects</h3>
-<p>For platform specific development, there are separate compressed files available and the projects starts from there. Here is a list for iOS and&nbsp;Android.</p>
+<p>For platform specific development, there are separate compressed files available and the projects start from there. Here is a list for iOS and&nbsp;Android.</p>
 <ul>
 <li>iOS ( <a href="https://github.com/apache/cordova-ios/releases">https://github.com/apache/cordova-ios/releases</a>&nbsp;)</li>
 <li>Android ( <a href="https://github.com/apache/cordova-android/releases">https://github.com/apache/cordova-android/releases</a>&nbsp;)</li>
 </ul>
 <h3 id="cli-projects"><span class="caps">CLI</span>&nbsp;projects</h3>
-<p>For <span class="caps">CLI</span> based applications, the basic need is <a href="https://nodejs.org/en/">Node</a> and with that comes <a href="https://www.npmjs.com/"><span class="caps">NPM</span></a>. First thing to do is, intall Cordova-<span class="caps">CLI</span> onces <a href="https://nodejs.org/en/">Node</a> is installed in the system. From that point onwards the commands to start working on a Cordova project are as&nbsp;below.          </p>
+<p>For <span class="caps">CLI</span> based applications, the basic need is <a href="https://nodejs.org/en/">Node</a> and with that comes <a href="https://www.npmjs.com/"><span class="caps">NPM</span></a>. First thing to do is, intall Cordova from <a href="https://www.npmjs.com/"><span class="caps">NPM</span></a>, once <a href="https://nodejs.org/en/">Node</a> is installed in the system. From that point onwards the commands to start working on a Cordova project are as&nbsp;below.          </p>
 <p>Make a cordova&nbsp;project</p>
 <pre><code>cordova create hello com.example.hello HelloWorld
-cd hello
+</code></pre><p>Now move to the project folder, which is just created by the above command. All the following commands should run from inside the project&nbsp;folder.</p>
+<pre><code>cd hello
 </code></pre><p>Check the number of&nbsp;platforms</p>
 <pre><code>cordova platforms ls
 </code></pre><p>Add the required&nbsp;platforms</p>
