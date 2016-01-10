@@ -38,7 +38,7 @@
 &lt;p&gt;For CLI based applications, the basic need is &lt;a href=&quot;https://nodejs.org/en/&quot;&gt;Node&lt;/a&gt; and with that comes &lt;a href=&quot;https://www.npmjs.com/&quot;&gt;NPM&lt;/a&gt;. First thing to do is, intall Cordova from &lt;a href=&quot;https://www.npmjs.com/&quot;&gt;NPM&lt;/a&gt;, once &lt;a href=&quot;https://nodejs.org/en/&quot;&gt;Node&lt;/a&gt; is installed in the system. From that point onwards the commands to start working on a Cordova project are as below.          &lt;/p&gt;
 &lt;p&gt;Make a cordova project&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;cordova create hello com.example.hello HelloWorld
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Now move to the project folder, which is just created by the above command. All the following commands should run from inside the project folder.&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Now &lt;code&gt;move to the project folder&lt;/code&gt;, which is just created by the above command. All the &lt;code&gt;following commands should run&lt;/code&gt; from &lt;code&gt;inside the project folder&lt;/code&gt;.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;cd hello
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Check the number of platforms&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;cordova platforms ls
