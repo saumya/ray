@@ -14,7 +14,7 @@
       <pubDate>Sat, 09 Jan 2016 05:30:00 +0630</pubDate>
       <guid isPermaLink="true">http://saumya.github.io/ray/articles/62/</guid>
       <author></author>
-      <description>&lt;p&gt;During these years &lt;a href=&quot;https://cordova.apache.org/&quot;&gt;Cordova&lt;/a&gt; and the mobile phones have come a long way. Today it seems the mobiles are more powerful and can handle a web application quite nicely. On the other hand &lt;a href=&quot;https://cordova.apache.org/&quot;&gt;Cordova&lt;/a&gt; tool chain also has matured. Comparing to older versions of the tool chain, currently its purely &lt;a href=&quot;https://www.npmjs.com/&quot;&gt;NPM&lt;/a&gt; based, as long as we talk about cross platform development. So anything one needs is just a &lt;code&gt;npm install&lt;/code&gt; away.  &lt;/p&gt;
+      <description>&lt;p&gt;During these years &lt;a href=&quot;https://cordova.apache.org/&quot;&gt;Cordova&lt;/a&gt; and the mobile phones have come a long way. Today it seems the mobiles are more powerful and can handle a web application quite nicely. On the other hand &lt;a href=&quot;https://cordova.apache.org/&quot;&gt;Cordova&lt;/a&gt; tool chain also has matured. Comparing to older versions of the tool chain, currently its purely &lt;a href=&quot;https://www.npmjs.com/&quot;&gt;NPM&lt;/a&gt; based, as long as we talk about cross platform development. So anything one needs is just a &lt;code&gt;npm install&lt;/code&gt; away.   &lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;There are two ways, as usual with &lt;a href=&quot;https://cordova.apache.org/&quot;&gt;Cordova&lt;/a&gt;, to make a project.&lt;/p&gt;
 &lt;ul&gt;
