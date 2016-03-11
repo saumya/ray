@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <title>React with Router and Material UI - Saumya
+    </title>
+    <link rel="alternate" href="http://saumya.github.io/ray/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
+    <link rel="stylesheet" href="http://saumya.github.io/ray/css/main.css">
+    <link rel="stylesheet" href="http://saumya.github.io/ray/css/saumya.css">
+  </head>
+  <body class="article-detail">
+    <header class="header">
+      <div class="content-wrap">
+        <h1>React with Router and Material UI</h1>
+        <p class="author">Written by <span class="author"><a href="mailto:contact@saumyaray.com">Saumya</a></span>
+        </p>
+        <p class="date">10. March 2016</p>
+      </div>
+    </header>
+    <div id="content">
+      <div class="content-wrap">
+        <article class="article">
+          <section class="content"><p>This is a little more than just the basics. If you do not have any idea about <a href="http://facebook.github.io/react/">React</a>, here are two links to get started&nbsp;with.          </p>
+<ul>
+<li><a href="http://saumya.github.io/ray/articles/57/">React&nbsp;Basics</a></li>
+<li><a href="http://saumya.github.io/ray/articles/58/">How to&nbsp;React</a>          </li>
+</ul>
+<p>Now that we know what is <a href="http://facebook.github.io/react/">React</a> and how to do the basics. Lets go a little further.<span class="more"></span>          </p>
+<p>The best part of <a href="http://facebook.github.io/react/">React</a> is its all components and the whole application architecture is upon us. Being said that, once the application gets little complex, soon we need a structure. Either we do it ourselves or take a ready one. Same goes with the <span class="caps">UI</span> of the application. Fortunately there are several solutions available for both of these. We are going to focus on two&nbsp;today.           </p>
+<ul>
+<li><a href="https://github.com/reactjs/react-router">react-router</a></li>
+<li><a href="http://www.material-ui.com/">Material-<span class="caps">UI</span></a>           </li>
+</ul>
+<h3 id="react-router">react-router</h3>
+<p>This takes care of the routing of the <a href="http://facebook.github.io/react/">React</a> application on frontend. It plays nice with other <a href="http://facebook.github.io/react/">React</a> components. Instead of manually keeping track of the addition and removal of components, its a nice solution to start with for only this purpose, though adding a router in frontend has its added advantages&nbsp;too.</p>
+<blockquote>
+<p>There are couple of tips here to use latest version(2.0) of <a href="https://github.com/reactjs/react-router">react-router</a>.</p>
+</blockquote>
+<ul>
+<li>Firstly there is no default <code>history</code> created, so we have to pass it on while creating our&nbsp;router.</li>
+<li>Secondly provide the <code>contextTypes</code> property to the&nbsp;components</li>
+</ul>
+<pre><code class="lang-javascript"><span class="comment">// Router creation</span>
+<span class="keyword">var</span> ReactDOM = <span class="built_in">require</span>(<span class="string">'react-dom'</span>);
+<span class="keyword">var</span> hashHistory = <span class="built_in">require</span>(<span class="string">'react-router'</span>).hashHistory;
+<span class="keyword">var</span> routes = (
+            <span class="xml"><span class="tag">&lt;<span class="title">Route</span> <span class="attribute">path</span>=<span class="value">"/"</span> <span class="attribute">component</span>=<span class="value">{AppComponent}</span>&gt;</span>
+              <span class="tag">&lt;<span class="title">IndexRoute</span> <span class="attribute">component</span>=<span class="value">{IndexComponent}</span> /&gt;</span>
+              <span class="tag">&lt;<span class="title">Route</span> <span class="attribute">path</span>=<span class="value">"see"</span> <span class="attribute">component</span>=<span class="value">{ViewComponent}</span> /&gt;</span>
+              <span class="tag">&lt;<span class="title">Route</span> <span class="attribute">path</span>=<span class="value">"add"</span> <span class="attribute">component</span>=<span class="value">{AddComponent}</span> /&gt;</span>
+            <span class="tag">&lt;/<span class="title">Route</span>&gt;</span>
+          )</span>;
+<span class="keyword">var</span> App = ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">Router</span> <span class="attribute">routes</span>=<span class="value">{routes}</span> <span class="attribute">history</span>=<span class="value">{hashHistory}</span> /&gt;</span>,
+                            document.getElementById('react-app'));</span>
+</code></pre>
+<p>In our component code, we have to provide the <code>contenxtTypes</code> propert as&nbsp;below.</p>
+<pre><code class="lang-javascript"><span class="comment">// contextTypes property setting in components</span>
+contextTypes: {
+    router: React.PropTypes.object.isRequired,
+  },
+</code></pre>
+<p>Now the programmatic routing is done through the <code>router</code> property of the <code>context</code> object. Once we put <code>contextTypes</code> property, we can get the <code>router</code> from it and through that, we can make our application to move to any other route. 
+Here is an&nbsp;example.</p>
+<pre><code class="lang-javascript"><span class="comment">// programmatic routing</span>
+<span class="keyword">this</span>.context.router.push(<span class="string">'/see'</span>);
+</code></pre>
+<h3 id="material-ui">Material-<span class="caps">UI</span></h3>
+<p>This is directly an implemention of <a href="https://www.google.com/design/spec/material-design/introduction.html">Material design</a> guidelines from Google. Once we put this to use, application automatically abides to the design principles. This is a library of <a href="http://facebook.github.io/react/">react</a> components. So all we have to do is install the library and start using it by using its&nbsp;components.</p>
+<p>Happy&nbsp;Reacting.</p>
+</section>
+        </article>
+      </div>
+    </div>
+    <footer>
+      <div class="content-wrap">
+        <div class="nav"><a href="http://saumya.github.io/ray/">« Full blog</a></div>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+          var disqus_shortname = 'saumya';
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        <section class="about"><p><a href="http://www.saumyaray.com">Saumya</a> believes in The God.</p>
+<p>A maker of things and curious about everything. Continuous learning is, what fuels him. This blog itself, reflects one of many things he is trying at all the time.</p>
+<p>He is <a href="https://twitter.com/saumya">@saumya</a> on Twitter. </p>
+<span class="nav"><a href="http://saumya.github.io/ray/">Blog Home</a><a href="http://saumya.github.io/ray/archive.html">Archives</a></span>
+        </section>
+        <section class="copy">
+          <p>&copy; 2016 saumya ray &mdash; powered by&nbsp;     <a href="https://github.com/jnordberg/wintersmith">Wintersmith&nbsp;</a>
+            <p> <a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
+          </p>
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -5,9 +5,64 @@
     <atom:link href="http://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Sat, 09 Jan 2016 05:30:00 +0630</pubDate>
+    <pubDate>Thu, 10 Mar 2016 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>React with Router and Material UI</title>
+      <link>http://saumya.github.io/ray/articles/63/</link>
+      <pubDate>Thu, 10 Mar 2016 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">http://saumya.github.io/ray/articles/63/</guid>
+      <author></author>
+      <description>&lt;p&gt;This is a little more than just the basics. If you do not have any idea about &lt;a href=&quot;http://facebook.github.io/react/&quot;&gt;React&lt;/a&gt;, here are two links to get started with.          &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://saumya.github.io/ray/articles/57/&quot;&gt;React Basics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://saumya.github.io/ray/articles/58/&quot;&gt;How to React&lt;/a&gt;          &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Now that we know what is &lt;a href=&quot;http://facebook.github.io/react/&quot;&gt;React&lt;/a&gt; and how to do the basics. Lets go a little further.&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;          &lt;/p&gt;
+&lt;p&gt;The best part of &lt;a href=&quot;http://facebook.github.io/react/&quot;&gt;React&lt;/a&gt; is its all components and the whole application architecture is upon us. Being said that, once the application gets little complex, soon we need a structure. Either we do it ourselves or take a ready one. Same goes with the UI of the application. Fortunately there are several solutions available for both of these. We are going to focus on two today.           &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/reactjs/react-router&quot;&gt;react-router&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.material-ui.com/&quot;&gt;Material-UI&lt;/a&gt;           &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;react-router&quot;&gt;react-router&lt;/h3&gt;
+&lt;p&gt;This takes care of the routing of the &lt;a href=&quot;http://facebook.github.io/react/&quot;&gt;React&lt;/a&gt; application on frontend. It plays nice with other &lt;a href=&quot;http://facebook.github.io/react/&quot;&gt;React&lt;/a&gt; components. Instead of manually keeping track of the addition and removal of components, its a nice solution to start with for only this purpose, though adding a router in frontend has its added advantages too.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;There are couple of tips here to use latest version(2.0) of &lt;a href=&quot;https://github.com/reactjs/react-router&quot;&gt;react-router&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Firstly there is no default &lt;code&gt;history&lt;/code&gt; created, so we have to pass it on while creating our router.&lt;/li&gt;
+&lt;li&gt;Secondly provide the &lt;code&gt;contextTypes&lt;/code&gt; property to the components&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// Router creation&lt;/span&gt;
+&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; ReactDOM = &lt;span class=&quot;built_in&quot;&gt;require&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;'react-dom'&lt;/span&gt;);
+&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; hashHistory = &lt;span class=&quot;built_in&quot;&gt;require&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;'react-router'&lt;/span&gt;).hashHistory;
+&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; routes = (
+            &lt;span class=&quot;xml&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;Route&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;path&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;&quot;/&quot;&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;component&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;{AppComponent}&lt;/span&gt;&amp;gt;&lt;/span&gt;
+              &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;IndexRoute&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;component&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;{IndexComponent}&lt;/span&gt; /&amp;gt;&lt;/span&gt;
+              &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;Route&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;path&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;&quot;see&quot;&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;component&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;{ViewComponent}&lt;/span&gt; /&amp;gt;&lt;/span&gt;
+              &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;Route&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;path&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;&quot;add&quot;&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;component&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;{AddComponent}&lt;/span&gt; /&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;Route&lt;/span&gt;&amp;gt;&lt;/span&gt;
+          )&lt;/span&gt;;
+&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; App = ReactDOM.render(&lt;span class=&quot;xml&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;Router&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;routes&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;{routes}&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;history&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;{hashHistory}&lt;/span&gt; /&amp;gt;&lt;/span&gt;,
+                            document.getElementById('react-app'));&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In our component code, we have to provide the &lt;code&gt;contenxtTypes&lt;/code&gt; propert as below.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// contextTypes property setting in components&lt;/span&gt;
+contextTypes: {
+    router: React.PropTypes.object.isRequired,
+  },
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now the programmatic routing is done through the &lt;code&gt;router&lt;/code&gt; property of the &lt;code&gt;context&lt;/code&gt; object. Once we put &lt;code&gt;contextTypes&lt;/code&gt; property, we can get the &lt;code&gt;router&lt;/code&gt; from it and through that, we can make our application to move to any other route. 
+Here is an example.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// programmatic routing&lt;/span&gt;
+&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.context.router.push(&lt;span class=&quot;string&quot;&gt;'/see'&lt;/span&gt;);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&quot;material-ui&quot;&gt;Material-UI&lt;/h3&gt;
+&lt;p&gt;This is directly an implemention of &lt;a href=&quot;https://www.google.com/design/spec/material-design/introduction.html&quot;&gt;Material design&lt;/a&gt; guidelines from Google. Once we put this to use, application automatically abides to the design principles. This is a library of &lt;a href=&quot;http://facebook.github.io/react/&quot;&gt;react&lt;/a&gt; components. So all we have to do is install the library and start using it by using its components.&lt;/p&gt;
+&lt;p&gt;Happy Reacting.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>Cordova today</title>
       <link>http://saumya.github.io/ray/articles/62/</link>
@@ -621,6 +676,28 @@ com.jungle.Animal
 </description>
     </item>
     <item>
+      <title>CoffeeScript basics</title>
+      <link>http://saumya.github.io/ray/articles/45/</link>
+      <pubDate>Thu, 01 Jan 2015 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">http://saumya.github.io/ray/articles/45/</guid>
+      <author></author>
+      <description>&lt;p&gt;Just to set the expectations right, we need to know something before we begin here.         &lt;/p&gt;
+&lt;p&gt;When I first heard about &lt;code&gt;Class&lt;/code&gt; in &lt;code&gt;Javascript&lt;/code&gt; it created curiosity on me and the expectation increased as to work like a &lt;code&gt;Classical&lt;/code&gt; language(Where Classes are the root of everything) instead of &lt;code&gt;Prototypical&lt;/code&gt; language(like Javascript). But then slowly I understood that its not &lt;code&gt;Javascript&lt;/code&gt; but other languages on top of Javascript which create somekind of &lt;code&gt;Class&lt;/code&gt; concept to mimic &lt;code&gt;Classical&lt;/code&gt; languages. The point is everything boils down to &lt;code&gt;Javascript&lt;/code&gt; if a language is written to compile or transpile to &lt;code&gt;Javascript&lt;/code&gt; . Well, that may seem like a spoiler right now, but its actually not as we will see. Just keep these things in mind all the time, even if we are doing &lt;a href=&quot;http://coffeescript.org/#top&quot;&gt;CoffeeScript&lt;/a&gt;.        &lt;/p&gt;
+&lt;p&gt;Here is the direct link to the &lt;a href=&quot;https://github.com/saumya/CoffeeScript101&quot;&gt;Github&lt;/a&gt; repository for the code reference to this post.       &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;CoffeeScript is generally written in a &lt;code&gt;.coffee&lt;/code&gt; file&lt;/li&gt;
+&lt;li&gt;Each &lt;code&gt;.coffee&lt;/code&gt; file is compiled to a &lt;code&gt;.js&lt;/code&gt; file&lt;/li&gt;
+&lt;li&gt;Each space (a blank space) in code has a meaning in the &lt;code&gt;.coffee&lt;/code&gt; file&lt;/li&gt;
+&lt;li&gt;Semicolons are optional and generally avoided&lt;/li&gt;
+&lt;li&gt;In the beginning you may write more than one classes in a single &lt;code&gt;.coffee&lt;/code&gt; file, and thats perfectly alright here&lt;/li&gt;
+&lt;li&gt;By default the &lt;a href=&quot;http://coffeescript.org/#top&quot;&gt;CoffeeScript&lt;/a&gt; Classes you write are private            &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;When compiled to JS, the contents of each file, are put inside a self invoking function. This is intentional to not pollute the Global variables. So if the content has some classes inside them, then those classes will also be inside the self-invoking function, restricting the access from outside.&lt;br&gt;The classes in &lt;a href=&quot;http://coffeescript.org/#top&quot;&gt;CoffeeScript&lt;/a&gt; are compiled to as usual JS functions and the inheritence is done through the prototypical inheritence concepts of Javascript. Since all this happens behind the scenes and as a &lt;a href=&quot;http://coffeescript.org/#top&quot;&gt;CoffeeScript&lt;/a&gt; developer if you do not know, how its working, it would be a pain later to expect anything else from this language.          &lt;/p&gt;
+&lt;p&gt;Thats all to start with the new year. Happy new year.         &lt;/p&gt;
+&lt;p&gt;Happy Coding.&lt;/p&gt;
+</description>
+    </item>
+    <item>
       <title>Cake and Coffee</title>
       <link>http://saumya.github.io/ray/articles/46/</link>
       <pubDate>Thu, 01 Jan 2015 05:30:00 +0630</pubDate>
@@ -650,28 +727,6 @@ com.jungle.Animal
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;While defining tasks, we can make a relation between tasks. That means we can say taskOne is dependent on taskTwo. The &lt;a href=&quot;https://github.com/saumya/CoffeeScript101&quot;&gt;basics of CoffeeScript project&lt;/a&gt; has a Cakefile for reference.        &lt;/p&gt;
 &lt;p&gt;The direct link to the sample &lt;code&gt;Cakefile&lt;/code&gt; &lt;a href=&quot;https://github.com/saumya/CoffeeScript101/blob/master/Cakefile&quot;&gt;is here&lt;/a&gt;. All the code are commented for easy reference.       &lt;/p&gt;
-&lt;p&gt;Happy Coding.&lt;/p&gt;
-</description>
-    </item>
-    <item>
-      <title>CoffeeScript basics</title>
-      <link>http://saumya.github.io/ray/articles/45/</link>
-      <pubDate>Thu, 01 Jan 2015 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://saumya.github.io/ray/articles/45/</guid>
-      <author></author>
-      <description>&lt;p&gt;Just to set the expectations right, we need to know something before we begin here.         &lt;/p&gt;
-&lt;p&gt;When I first heard about &lt;code&gt;Class&lt;/code&gt; in &lt;code&gt;Javascript&lt;/code&gt; it created curiosity on me and the expectation increased as to work like a &lt;code&gt;Classical&lt;/code&gt; language(Where Classes are the root of everything) instead of &lt;code&gt;Prototypical&lt;/code&gt; language(like Javascript). But then slowly I understood that its not &lt;code&gt;Javascript&lt;/code&gt; but other languages on top of Javascript which create somekind of &lt;code&gt;Class&lt;/code&gt; concept to mimic &lt;code&gt;Classical&lt;/code&gt; languages. The point is everything boils down to &lt;code&gt;Javascript&lt;/code&gt; if a language is written to compile or transpile to &lt;code&gt;Javascript&lt;/code&gt; . Well, that may seem like a spoiler right now, but its actually not as we will see. Just keep these things in mind all the time, even if we are doing &lt;a href=&quot;http://coffeescript.org/#top&quot;&gt;CoffeeScript&lt;/a&gt;.        &lt;/p&gt;
-&lt;p&gt;Here is the direct link to the &lt;a href=&quot;https://github.com/saumya/CoffeeScript101&quot;&gt;Github&lt;/a&gt; repository for the code reference to this post.       &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;CoffeeScript is generally written in a &lt;code&gt;.coffee&lt;/code&gt; file&lt;/li&gt;
-&lt;li&gt;Each &lt;code&gt;.coffee&lt;/code&gt; file is compiled to a &lt;code&gt;.js&lt;/code&gt; file&lt;/li&gt;
-&lt;li&gt;Each space (a blank space) in code has a meaning in the &lt;code&gt;.coffee&lt;/code&gt; file&lt;/li&gt;
-&lt;li&gt;Semicolons are optional and generally avoided&lt;/li&gt;
-&lt;li&gt;In the beginning you may write more than one classes in a single &lt;code&gt;.coffee&lt;/code&gt; file, and thats perfectly alright here&lt;/li&gt;
-&lt;li&gt;By default the &lt;a href=&quot;http://coffeescript.org/#top&quot;&gt;CoffeeScript&lt;/a&gt; Classes you write are private            &lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;When compiled to JS, the contents of each file, are put inside a self invoking function. This is intentional to not pollute the Global variables. So if the content has some classes inside them, then those classes will also be inside the self-invoking function, restricting the access from outside.&lt;br&gt;The classes in &lt;a href=&quot;http://coffeescript.org/#top&quot;&gt;CoffeeScript&lt;/a&gt; are compiled to as usual JS functions and the inheritence is done through the prototypical inheritence concepts of Javascript. Since all this happens behind the scenes and as a &lt;a href=&quot;http://coffeescript.org/#top&quot;&gt;CoffeeScript&lt;/a&gt; developer if you do not know, how its working, it would be a pain later to expect anything else from this language.          &lt;/p&gt;
-&lt;p&gt;Thats all to start with the new year. Happy new year.         &lt;/p&gt;
 &lt;p&gt;Happy Coding.&lt;/p&gt;
 </description>
     </item>
