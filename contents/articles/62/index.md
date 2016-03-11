@@ -7,7 +7,7 @@ template: article.jade
 
 
 
-During these years [Cordova][1] and the mobile phones have come a long way. Today it seems the mobiles are more powerful and can handle a web application quite nicely. On the other hand [Cordova][1] tool chain also has matured. Comparing to older versions of the tool chain, currently its purely [NPM][2] based, as long as we talk about cross platform development. So anything one needs is just a `npm install` away. 
+During these years [Cordova][1] and the mobile phones have come a long way. Today it seems the mobiles are more powerful and can handle a web application quite nicely. On the other hand [Cordova][1] tool chain also has matured. Comparing to older versions of the tool chain, currently its purely [NPM][2] based, as long as we talk about cross platform development. So anything one needs is just a `npm install` away.   
 
 <span class="more"></span>
 
