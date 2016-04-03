@@ -5,9 +5,21 @@
     <atom:link href="http://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Fri, 11 Mar 2016 05:30:00 +0630</pubDate>
+    <pubDate>Mon, 04 Apr 2016 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>React Native</title>
+      <link>http://saumya.github.io/ray/articles/64/</link>
+      <pubDate>Mon, 04 Apr 2016 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">http://saumya.github.io/ray/articles/64/</guid>
+      <author></author>
+      <description>&lt;p&gt;The beauty of &lt;a href=&quot;http://facebook.github.io/react/&quot;&gt;React&lt;/a&gt; is it now has a lot to offer and &lt;a href=&quot;https://facebook.github.io/react-native/&quot;&gt;React Native&lt;/a&gt; is just an amazing way to create native mobile applications with Javascript or more specifically with &lt;a href=&quot;http://facebook.github.io/react/&quot;&gt;React&lt;/a&gt;. Yes, we are talking about native applications. Unlike &lt;a href=&quot;https://cordova.apache.org/&quot;&gt;Cordova&lt;/a&gt;, &lt;a href=&quot;https://facebook.github.io/react-native/&quot;&gt;React Native&lt;/a&gt; applications do not run inside a webview. These applications use the native components from the environment it is running in. If its running in iOS the components like buttons, views etc are real iOS components. Same is true for Android.&lt;/p&gt;
+&lt;p&gt;From the first few weeks of &lt;a href=&quot;https://facebook.github.io/react-native/&quot;&gt;React Native&lt;/a&gt; I must say its worth a try. There might be a chance that even the same code is running in both iOS and Android. Though its almost always a little different code for both the platforms. But all in all, its all Javascript.&lt;/p&gt;
+&lt;p&gt;I am not going in details of getting started here. May be in a next blog post we will explore that. If you are already developing in &lt;a href=&quot;http://facebook.github.io/react/&quot;&gt;React&lt;/a&gt; you are already there. No extra effort for another toolset or language. &lt;/p&gt;
+&lt;p&gt;Happy Reacting.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>React with Router and Material UI</title>
       <link>http://saumya.github.io/ray/articles/63/</link>
@@ -38,14 +50,14 @@
 &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; ReactDOM = &lt;span class=&quot;built_in&quot;&gt;require&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;'react-dom'&lt;/span&gt;);
 &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; hashHistory = &lt;span class=&quot;built_in&quot;&gt;require&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;'react-router'&lt;/span&gt;).hashHistory;
 &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; routes = (
-            &lt;span class=&quot;xml&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;Route&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;path&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;&quot;/&quot;&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;component&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;{AppComponent}&lt;/span&gt;&amp;gt;&lt;/span&gt;
-              &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;IndexRoute&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;component&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;{IndexComponent}&lt;/span&gt; /&amp;gt;&lt;/span&gt;
-              &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;Route&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;path&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;&quot;see&quot;&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;component&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;{ViewComponent}&lt;/span&gt; /&amp;gt;&lt;/span&gt;
-              &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;Route&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;path&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;&quot;add&quot;&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;component&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;{AddComponent}&lt;/span&gt; /&amp;gt;&lt;/span&gt;
-            &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;Route&lt;/span&gt;&amp;gt;&lt;/span&gt;
-          )&lt;/span&gt;;
-&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; App = ReactDOM.render(&lt;span class=&quot;xml&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;Router&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;routes&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;{routes}&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;history&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;{hashHistory}&lt;/span&gt; /&amp;gt;&lt;/span&gt;,
-                            document.getElementById('react-app'));&lt;/span&gt;
+            &amp;lt;Route path=&quot;/&quot; component={AppComponent}&amp;gt;
+              &amp;lt;IndexRoute component={IndexComponent} /&amp;gt;
+              &amp;lt;Route path=&quot;see&quot; component={ViewComponent} /&amp;gt;
+              &amp;lt;Route path=&quot;add&quot; component={AddComponent} /&amp;gt;
+            &amp;lt;/Route&amp;gt;
+          );
+var App = ReactDOM.render(&amp;lt;Router routes={routes} history={hashHistory} /&amp;gt;,
+                            document.getElementById('react-app'));
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;In our component code, we have to provide the &lt;code&gt;contenxtTypes&lt;/code&gt; propert as below.&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// contextTypes property setting in components&lt;/span&gt;
@@ -233,25 +245,25 @@ cordova run android ( run in device )
 &lt;li&gt;Write the a React component and use it. This is explained below.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;The HTML file should look something as shown here.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;lang-html&quot;&gt;&lt;span class=&quot;doctype&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;html&lt;/span&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;head&lt;/span&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;meta&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;charset&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;&quot;utf-8&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;title&lt;/span&gt;&amp;gt;&lt;/span&gt;React!&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;title&lt;/span&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;head&lt;/span&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;body&lt;/span&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;id&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;&quot;myReactApp&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-html&quot;&gt;&lt;span class=&quot;meta&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;html&lt;/span&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;head&lt;/span&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;meta&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;charset&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;utf-8&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;title&lt;/span&gt;&amp;gt;&lt;/span&gt;React!&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;title&lt;/span&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;head&lt;/span&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;body&lt;/span&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;id&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;myReactApp&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;
       &lt;span class=&quot;comment&quot;&gt;&amp;lt;!-- React Application --&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;
     &lt;span class=&quot;comment&quot;&gt;&amp;lt;!-- React library --&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;src&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;&quot;js/lib/react/react.js&quot;&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;charset&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;&quot;utf-8&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;undefined&quot;&gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;src&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;&quot;js/lib/react/react-dom.js&quot;&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;charset&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;&quot;utf-8&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;undefined&quot;&gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;src&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;js/lib/react/react.js&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;charset&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;utf-8&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;undefined&quot;&gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;src&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;js/lib/react/react-dom.js&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;charset&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;utf-8&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;undefined&quot;&gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;
     &lt;span class=&quot;comment&quot;&gt;&amp;lt;!-- Application Code --&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;type&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;&quot;text/javascript&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;actionscript&quot;&gt;
+    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;type&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;text/javascript&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;actionscript&quot;&gt;
         &lt;span class=&quot;comment&quot;&gt;// TODO&lt;/span&gt;
-    &lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;body&lt;/span&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;html&lt;/span&gt;&amp;gt;&lt;/span&gt;
+    &lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;body&lt;/span&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;html&lt;/span&gt;&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;This HTML file has only a &lt;code&gt;div&lt;/code&gt; with an id as &lt;code&gt;id=&amp;quot;myReactApp&amp;quot;&lt;/code&gt;. Now lets write a React Component. The component code is as below.&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; Component1 = React.createClass({
@@ -265,21 +277,21 @@ cordova run android ( run in device )
 &lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;ReactDOM.render( React.createElement(Component1), &lt;span class=&quot;built_in&quot;&gt;document&lt;/span&gt;.getElementById(&lt;span class=&quot;string&quot;&gt;&quot;myReactApp&quot;&lt;/span&gt;) );
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;So the final HTML file with the added javascripts and our code will look as below.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;lang-html&quot;&gt;&lt;span class=&quot;doctype&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;html&lt;/span&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;head&lt;/span&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;meta&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;charset&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;&quot;utf-8&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;title&lt;/span&gt;&amp;gt;&lt;/span&gt;React!&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;title&lt;/span&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;head&lt;/span&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;body&lt;/span&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;id&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;&quot;myReactApp&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-html&quot;&gt;&lt;span class=&quot;meta&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;html&lt;/span&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;head&lt;/span&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;meta&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;charset&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;utf-8&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;title&lt;/span&gt;&amp;gt;&lt;/span&gt;React!&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;title&lt;/span&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;head&lt;/span&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;body&lt;/span&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;id&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;myReactApp&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;
       &lt;span class=&quot;comment&quot;&gt;&amp;lt;!-- React Application --&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;
     &lt;span class=&quot;comment&quot;&gt;&amp;lt;!-- React library --&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;src&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;&quot;js/lib/react/react.js&quot;&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;charset&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;&quot;utf-8&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;undefined&quot;&gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;src&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;&quot;js/lib/react/react-dom.js&quot;&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;charset&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;&quot;utf-8&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;undefined&quot;&gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;src&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;js/lib/react/react.js&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;charset&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;utf-8&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;undefined&quot;&gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;src&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;js/lib/react/react-dom.js&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;charset&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;utf-8&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;undefined&quot;&gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;
     &lt;span class=&quot;comment&quot;&gt;&amp;lt;!-- Application Code --&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;type&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;&quot;text/javascript&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;javascript&quot;&gt;
+    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;type&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;text/javascript&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;javascript&quot;&gt;
         &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; Component1 = React.createClass({
                                 render: &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;)&lt;/span&gt;{
                                     &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; reactComponent = React.DOM.span(&lt;span class=&quot;literal&quot;&gt;null&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&quot;I am a REACT Component Span&quot;&lt;/span&gt;);
@@ -287,9 +299,9 @@ cordova run android ( run in device )
                                 }
                             });
         ReactDOM.render( React.createElement(Component1), &lt;span class=&quot;built_in&quot;&gt;document&lt;/span&gt;.getElementById(&lt;span class=&quot;string&quot;&gt;&quot;myReactApp&quot;&lt;/span&gt;) );
-    &lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;body&lt;/span&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;html&lt;/span&gt;&amp;gt;&lt;/span&gt;
+    &lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;body&lt;/span&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;html&lt;/span&gt;&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Now, if you run this from a server and view the page in the browser. You can see our compent is rendered in the &lt;code&gt;div&lt;/code&gt; and it displays the text as ‘I am a REACT Component Span’.          &lt;/p&gt;
 &lt;p&gt;Thats all is there to &lt;a href=&quot;http://facebook.github.io/react/&quot;&gt;React&lt;/a&gt;. After this point all that &lt;code&gt;remains&lt;/code&gt; is the &lt;code&gt;APIs for Component&lt;/code&gt; development. But as you can see, &lt;a href=&quot;http://facebook.github.io/react/&quot;&gt;React&lt;/a&gt; is not telling or expecting anything else. It just makes reusable HTML components. The architecture of the application is upon the developers.&lt;/p&gt;
@@ -360,9 +372,9 @@ This is focused on the vary basic concepts of &lt;a href=&quot;https://angularjs
 &lt;li&gt;By now, you must have noticed, the name of the Javascript file and the name of the module might be different. As long as we provide proper name as dependecy and proper name for the script src, it is all good.          &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Actually in the example above, the dependent modules &lt;code&gt;ngRoute&lt;/code&gt; and &lt;code&gt;ngResource&lt;/code&gt; is not present in the &lt;code&gt;angular.js&lt;/code&gt; Javascript file . These modules are written in separate Javascript files as modules. So we need to include &lt;code&gt;angular-route.js&lt;/code&gt; and &lt;code&gt;angular-resource.js&lt;/code&gt; in our &lt;code&gt;.html&lt;/code&gt; file to use them, else it will through error.       &lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;lang-html&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;type&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;&quot;text/javascript&quot;&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;src&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;&quot;js/lib/angular-1.4.7/angular.js&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;undefined&quot;&gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;type&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;&quot;text/javascript&quot;&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;src&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;&quot;js/lib/angular-1.4.7/angular-route.js&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;undefined&quot;&gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;type&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;&quot;text/javascript&quot;&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;src&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;&quot;js/lib/angular-1.4.7/angular-resource.js&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;undefined&quot;&gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-html&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;type&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;text/javascript&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;src&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;js/lib/angular-1.4.7/angular.js&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;undefined&quot;&gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;type&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;text/javascript&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;src&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;js/lib/angular-1.4.7/angular-route.js&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;undefined&quot;&gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;type&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;text/javascript&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;src&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;js/lib/angular-1.4.7/angular-resource.js&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;undefined&quot;&gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Have a look at the &lt;a href=&quot;https://github.com/saumya/ng-102&quot;&gt;Sample Project&lt;/a&gt;.&lt;br&gt;Lets define another module in a javascript file named &lt;code&gt;one.js&lt;/code&gt;.&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;(&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;)&lt;/span&gt;{&lt;span class=&quot;string&quot;&gt;'use strict'&lt;/span&gt;;
@@ -483,14 +495,14 @@ git push origin master
       <author></author>
       <description>&lt;p&gt;When I first heard about CLI applications, I thought it might be shipping with the OS itself. Then I found that we can write our own CLI applications. At that point I assume that well, just a CLI application, means it runs everywhere. But actually CLI applications by default are not crossplatform! Yes, I realised it much later. In order to have a crossplatform CLI app, one needs all the required environment to compile to and compile for a particular OS.         &lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;http://haxe.org/&quot;&gt;HAXE&lt;/a&gt; comes in handy in this case. One can make a crossplatfom CLI app with just one code base. Ofcourse you need the required environment to compile to that particular environment. There is even a shorter way to this, compile for &lt;a href=&quot;http://nekovm.org&quot;&gt;NEKO&lt;/a&gt; virtual machine. This &lt;a href=&quot;http://nekovm.org&quot;&gt;NEKO&lt;/a&gt; VM ships with &lt;a href=&quot;http://haxe.org/&quot;&gt;HAXE&lt;/a&gt;. Once you compile to &lt;a href=&quot;http://nekovm.org&quot;&gt;NEKO&lt;/a&gt;, all you do is package all the &lt;a href=&quot;http://nekovm.org&quot;&gt;NEKO&lt;/a&gt; dependencies and there you have a crossplatform CLI for every OS. Here we will compile to &lt;a href=&quot;http://nekovm.org&quot;&gt;NEKO&lt;/a&gt; and run through &lt;a href=&quot;http://nekovm.org&quot;&gt;NEKO&lt;/a&gt;, but just keep in mind that the same code can be compiled to CPP(C++) to produce true native CLI.&lt;br&gt;Lets begin with the compiler settings or the build file. The &lt;code&gt;.hxml&lt;/code&gt; file has the following content.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;lang-haxe&quot;&gt;&lt;span class=&quot;preprocessor&quot;&gt;# HAXE build&lt;/span&gt;
-&lt;span class=&quot;preprocessor&quot;&gt;# Defining the application entry&lt;/span&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-haxe&quot;&gt;&lt;span class=&quot;meta&quot;&gt;# HAXE build&lt;/span&gt;
+&lt;span class=&quot;meta&quot;&gt;# Defining the application entry&lt;/span&gt;
 -main MyCliApp
-&lt;span class=&quot;preprocessor&quot;&gt;# NEKO : compilation&lt;/span&gt;
+&lt;span class=&quot;meta&quot;&gt;# NEKO : compilation&lt;/span&gt;
 -neko bin/myCliApp.n
-&lt;span class=&quot;preprocessor&quot;&gt;#&lt;/span&gt;
-&lt;span class=&quot;preprocessor&quot;&gt;# CPP : compilation&lt;/span&gt;
-&lt;span class=&quot;preprocessor&quot;&gt;#-cpp bin/cpp/&lt;/span&gt;
+&lt;span class=&quot;meta&quot;&gt;#&lt;/span&gt;
+&lt;span class=&quot;meta&quot;&gt;# CPP : compilation&lt;/span&gt;
+&lt;span class=&quot;meta&quot;&gt;#-cpp bin/cpp/&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;We are setting up for compiling to &lt;a href=&quot;http://nekovm.org&quot;&gt;NEKO&lt;/a&gt; but then we have the options commented out for compiling to CPP. If we want to compile for the C++ target, then comment out the &lt;a href=&quot;http://nekovm.org&quot;&gt;NEKO&lt;/a&gt; target and enable the CPP(C++) target. Well, this compilation will create a file named &lt;code&gt;myCliApp.n&lt;/code&gt; inside the ‘bin’ folder. To run the file, we have to navigate to the ‘bin’ folder and run with &lt;a href=&quot;http://nekovm.org&quot;&gt;NEKO&lt;/a&gt; as below.  &lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;lang-haxe&quot;&gt;neko ./myCliApp.n
@@ -525,12 +537,12 @@ oneObj.publicFunction();
 &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Animal&lt;/span&gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The application entry class &lt;code&gt;ApplicationEntry.hx&lt;/code&gt; is actually using all these classes. Finally, we have the &lt;code&gt;.hxml&lt;/code&gt; file, we name it &lt;code&gt;compile.hxml&lt;/code&gt;, but could be given any name, to compile our application. Here is the code for quick reference.          &lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;lang-haxe&quot;&gt;&lt;span class=&quot;preprocessor&quot;&gt;# Generates one single application JS&lt;/span&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-haxe&quot;&gt;&lt;span class=&quot;meta&quot;&gt;# Generates one single application JS&lt;/span&gt;
 -main ApplicationEntry
 -js bin/hxApp.js
-&lt;span class=&quot;preprocessor&quot;&gt;#&lt;/span&gt;
+&lt;span class=&quot;meta&quot;&gt;#&lt;/span&gt;
 --next
-&lt;span class=&quot;preprocessor&quot;&gt;# Generates JS file for individual hx files&lt;/span&gt;
+&lt;span class=&quot;meta&quot;&gt;# Generates JS file for individual hx files&lt;/span&gt;
 -js bin/Tree.js 
 -cp src 
 com.jungle.Tree
@@ -542,7 +554,7 @@ com.jungle.Animal
 -js bin/Jungle.js 
 -cp src 
 com.jungle.Jungle
-&lt;span class=&quot;preprocessor&quot;&gt;#&lt;/span&gt;
+&lt;span class=&quot;meta&quot;&gt;#&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Once we run the &lt;a href=&quot;http://haxe.org/&quot;&gt;HAXE&lt;/a&gt; compiler with&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;lang-haxe&quot;&gt;haxe compile.hxml
@@ -676,28 +688,6 @@ com.jungle.Animal
 </description>
     </item>
     <item>
-      <title>CoffeeScript basics</title>
-      <link>http://saumya.github.io/ray/articles/45/</link>
-      <pubDate>Thu, 01 Jan 2015 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://saumya.github.io/ray/articles/45/</guid>
-      <author></author>
-      <description>&lt;p&gt;Just to set the expectations right, we need to know something before we begin here.         &lt;/p&gt;
-&lt;p&gt;When I first heard about &lt;code&gt;Class&lt;/code&gt; in &lt;code&gt;Javascript&lt;/code&gt; it created curiosity on me and the expectation increased as to work like a &lt;code&gt;Classical&lt;/code&gt; language(Where Classes are the root of everything) instead of &lt;code&gt;Prototypical&lt;/code&gt; language(like Javascript). But then slowly I understood that its not &lt;code&gt;Javascript&lt;/code&gt; but other languages on top of Javascript which create somekind of &lt;code&gt;Class&lt;/code&gt; concept to mimic &lt;code&gt;Classical&lt;/code&gt; languages. The point is everything boils down to &lt;code&gt;Javascript&lt;/code&gt; if a language is written to compile or transpile to &lt;code&gt;Javascript&lt;/code&gt; . Well, that may seem like a spoiler right now, but its actually not as we will see. Just keep these things in mind all the time, even if we are doing &lt;a href=&quot;http://coffeescript.org/#top&quot;&gt;CoffeeScript&lt;/a&gt;.        &lt;/p&gt;
-&lt;p&gt;Here is the direct link to the &lt;a href=&quot;https://github.com/saumya/CoffeeScript101&quot;&gt;Github&lt;/a&gt; repository for the code reference to this post.       &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;CoffeeScript is generally written in a &lt;code&gt;.coffee&lt;/code&gt; file&lt;/li&gt;
-&lt;li&gt;Each &lt;code&gt;.coffee&lt;/code&gt; file is compiled to a &lt;code&gt;.js&lt;/code&gt; file&lt;/li&gt;
-&lt;li&gt;Each space (a blank space) in code has a meaning in the &lt;code&gt;.coffee&lt;/code&gt; file&lt;/li&gt;
-&lt;li&gt;Semicolons are optional and generally avoided&lt;/li&gt;
-&lt;li&gt;In the beginning you may write more than one classes in a single &lt;code&gt;.coffee&lt;/code&gt; file, and thats perfectly alright here&lt;/li&gt;
-&lt;li&gt;By default the &lt;a href=&quot;http://coffeescript.org/#top&quot;&gt;CoffeeScript&lt;/a&gt; Classes you write are private            &lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;When compiled to JS, the contents of each file, are put inside a self invoking function. This is intentional to not pollute the Global variables. So if the content has some classes inside them, then those classes will also be inside the self-invoking function, restricting the access from outside.&lt;br&gt;The classes in &lt;a href=&quot;http://coffeescript.org/#top&quot;&gt;CoffeeScript&lt;/a&gt; are compiled to as usual JS functions and the inheritence is done through the prototypical inheritence concepts of Javascript. Since all this happens behind the scenes and as a &lt;a href=&quot;http://coffeescript.org/#top&quot;&gt;CoffeeScript&lt;/a&gt; developer if you do not know, how its working, it would be a pain later to expect anything else from this language.          &lt;/p&gt;
-&lt;p&gt;Thats all to start with the new year. Happy new year.         &lt;/p&gt;
-&lt;p&gt;Happy Coding.&lt;/p&gt;
-</description>
-    </item>
-    <item>
       <title>Cake and Coffee</title>
       <link>http://saumya.github.io/ray/articles/46/</link>
       <pubDate>Thu, 01 Jan 2015 05:30:00 +0630</pubDate>
@@ -727,6 +717,28 @@ com.jungle.Animal
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;While defining tasks, we can make a relation between tasks. That means we can say taskOne is dependent on taskTwo. The &lt;a href=&quot;https://github.com/saumya/CoffeeScript101&quot;&gt;basics of CoffeeScript project&lt;/a&gt; has a Cakefile for reference.        &lt;/p&gt;
 &lt;p&gt;The direct link to the sample &lt;code&gt;Cakefile&lt;/code&gt; &lt;a href=&quot;https://github.com/saumya/CoffeeScript101/blob/master/Cakefile&quot;&gt;is here&lt;/a&gt;. All the code are commented for easy reference.       &lt;/p&gt;
+&lt;p&gt;Happy Coding.&lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>CoffeeScript basics</title>
+      <link>http://saumya.github.io/ray/articles/45/</link>
+      <pubDate>Thu, 01 Jan 2015 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">http://saumya.github.io/ray/articles/45/</guid>
+      <author></author>
+      <description>&lt;p&gt;Just to set the expectations right, we need to know something before we begin here.         &lt;/p&gt;
+&lt;p&gt;When I first heard about &lt;code&gt;Class&lt;/code&gt; in &lt;code&gt;Javascript&lt;/code&gt; it created curiosity on me and the expectation increased as to work like a &lt;code&gt;Classical&lt;/code&gt; language(Where Classes are the root of everything) instead of &lt;code&gt;Prototypical&lt;/code&gt; language(like Javascript). But then slowly I understood that its not &lt;code&gt;Javascript&lt;/code&gt; but other languages on top of Javascript which create somekind of &lt;code&gt;Class&lt;/code&gt; concept to mimic &lt;code&gt;Classical&lt;/code&gt; languages. The point is everything boils down to &lt;code&gt;Javascript&lt;/code&gt; if a language is written to compile or transpile to &lt;code&gt;Javascript&lt;/code&gt; . Well, that may seem like a spoiler right now, but its actually not as we will see. Just keep these things in mind all the time, even if we are doing &lt;a href=&quot;http://coffeescript.org/#top&quot;&gt;CoffeeScript&lt;/a&gt;.        &lt;/p&gt;
+&lt;p&gt;Here is the direct link to the &lt;a href=&quot;https://github.com/saumya/CoffeeScript101&quot;&gt;Github&lt;/a&gt; repository for the code reference to this post.       &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;CoffeeScript is generally written in a &lt;code&gt;.coffee&lt;/code&gt; file&lt;/li&gt;
+&lt;li&gt;Each &lt;code&gt;.coffee&lt;/code&gt; file is compiled to a &lt;code&gt;.js&lt;/code&gt; file&lt;/li&gt;
+&lt;li&gt;Each space (a blank space) in code has a meaning in the &lt;code&gt;.coffee&lt;/code&gt; file&lt;/li&gt;
+&lt;li&gt;Semicolons are optional and generally avoided&lt;/li&gt;
+&lt;li&gt;In the beginning you may write more than one classes in a single &lt;code&gt;.coffee&lt;/code&gt; file, and thats perfectly alright here&lt;/li&gt;
+&lt;li&gt;By default the &lt;a href=&quot;http://coffeescript.org/#top&quot;&gt;CoffeeScript&lt;/a&gt; Classes you write are private            &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;When compiled to JS, the contents of each file, are put inside a self invoking function. This is intentional to not pollute the Global variables. So if the content has some classes inside them, then those classes will also be inside the self-invoking function, restricting the access from outside.&lt;br&gt;The classes in &lt;a href=&quot;http://coffeescript.org/#top&quot;&gt;CoffeeScript&lt;/a&gt; are compiled to as usual JS functions and the inheritence is done through the prototypical inheritence concepts of Javascript. Since all this happens behind the scenes and as a &lt;a href=&quot;http://coffeescript.org/#top&quot;&gt;CoffeeScript&lt;/a&gt; developer if you do not know, how its working, it would be a pain later to expect anything else from this language.          &lt;/p&gt;
+&lt;p&gt;Thats all to start with the new year. Happy new year.         &lt;/p&gt;
 &lt;p&gt;Happy Coding.&lt;/p&gt;
 </description>
     </item>

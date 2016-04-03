@@ -46,14 +46,14 @@
 <span class="keyword">var</span> ReactDOM = <span class="built_in">require</span>(<span class="string">'react-dom'</span>);
 <span class="keyword">var</span> hashHistory = <span class="built_in">require</span>(<span class="string">'react-router'</span>).hashHistory;
 <span class="keyword">var</span> routes = (
-            <span class="xml"><span class="tag">&lt;<span class="title">Route</span> <span class="attribute">path</span>=<span class="value">"/"</span> <span class="attribute">component</span>=<span class="value">{AppComponent}</span>&gt;</span>
-              <span class="tag">&lt;<span class="title">IndexRoute</span> <span class="attribute">component</span>=<span class="value">{IndexComponent}</span> /&gt;</span>
-              <span class="tag">&lt;<span class="title">Route</span> <span class="attribute">path</span>=<span class="value">"see"</span> <span class="attribute">component</span>=<span class="value">{ViewComponent}</span> /&gt;</span>
-              <span class="tag">&lt;<span class="title">Route</span> <span class="attribute">path</span>=<span class="value">"add"</span> <span class="attribute">component</span>=<span class="value">{AddComponent}</span> /&gt;</span>
-            <span class="tag">&lt;/<span class="title">Route</span>&gt;</span>
-          )</span>;
-<span class="keyword">var</span> App = ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="title">Router</span> <span class="attribute">routes</span>=<span class="value">{routes}</span> <span class="attribute">history</span>=<span class="value">{hashHistory}</span> /&gt;</span>,
-                            document.getElementById('react-app'));</span>
+            &lt;Route path="/" component={AppComponent}&gt;
+              &lt;IndexRoute component={IndexComponent} /&gt;
+              &lt;Route path="see" component={ViewComponent} /&gt;
+              &lt;Route path="add" component={AddComponent} /&gt;
+            &lt;/Route&gt;
+          );
+var App = ReactDOM.render(&lt;Router routes={routes} history={hashHistory} /&gt;,
+                            document.getElementById('react-app'));
 </code></pre>
 <p>In our component code, we have to provide the <code>contenxtTypes</code> propert as&nbsp;below.</p>
 <pre><code class="lang-javascript"><span class="comment">// contextTypes property setting in components</span>

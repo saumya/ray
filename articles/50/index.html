@@ -42,12 +42,12 @@ oneObj.publicFunction();
 <span class="class"><span class="keyword">class</span> <span class="title">Animal</span></span>
 </code></pre>
 <p>The application entry class <code>ApplicationEntry.hx</code> is actually using all these classes. Finally, we have the <code>.hxml</code> file, we name it <code>compile.hxml</code>, but could be given any name, to compile our application. Here is the code for quick&nbsp;reference.          </p>
-<pre><code class="lang-haxe"><span class="preprocessor"># Generates one single application <span class="caps">JS</span></span>
+<pre><code class="lang-haxe"><span class="meta"># Generates one single application <span class="caps">JS</span></span>
 -main ApplicationEntry
 -js bin/hxApp.js
-<span class="preprocessor">#</span>
+<span class="meta">#</span>
 --next
-<span class="preprocessor"># Generates <span class="caps">JS</span> file for individual hx files</span>
+<span class="meta"># Generates <span class="caps">JS</span> file for individual hx files</span>
 -js bin/Tree.js 
 -cp src 
 com.jungle.Tree
@@ -59,7 +59,7 @@ com.jungle.Animal
 -js bin/Jungle.js 
 -cp src 
 com.jungle.Jungle
-<span class="preprocessor">#</span>
+<span class="meta">#</span>
 </code></pre>
 <p>Once we run the <a href="http://haxe.org/"><span class="caps">HAXE</span></a> compiler&nbsp;with</p>
 <pre><code class="lang-haxe">haxe compile.hxml
