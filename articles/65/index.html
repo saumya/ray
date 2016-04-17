@@ -23,17 +23,17 @@
       <div class="content-wrap">
         <article class="article">
           <section class="content"><p>Here we will talk about the recent changes in <a href="http://www.material-ui.com/">Material-<span class="caps">UI</span></a> and how it affects our <a href="http://facebook.github.io/react/">React</a>&nbsp;code.</p>
-<p>Before moving further, if you have not yet started with <a href="http://www.material-ui.com/">Material-<span class="caps">UI</span></a>, here is <a href="http://saumya.github.io/ray/articles/63/">my first post</a> describing the&nbsp;details. </p>
-<p>Current version of <a href="http://facebook.github.io/react/">React</a> is <code>15.0.1</code>. To make <a href="http://www.material-ui.com/">Material-<span class="caps">UI</span></a> compatible with this version of <a href="http://facebook.github.io/react/">React</a>, a new version of <a href="http://www.material-ui.com/">Material-<span class="caps">UI</span></a> which is <code>0.15.0-beta.1</code> is released recently. However there are some breaking changes in this release of <a href="http://www.material-ui.com/">Material-<span class="caps">UI</span></a> if you are coming from the last version which is <code>0.15.0-alpha.2</code>. The complete <a href="https://github.com/callemall/material-ui/releases">release note</a> is here along with the change&nbsp;logs.</p>
-<p>There are couple of things to&nbsp;change.</p>
+<p>Before moving further, if you have not yet started with <a href="http://www.material-ui.com/">Material-<span class="caps">UI</span></a>, <a href="http://saumya.github.io/ray/articles/63/">here is my first post</a> describing the&nbsp;details. </p>
+<p>Current version of <a href="http://facebook.github.io/react/">React</a> is <code>15.0.1</code>. To make <a href="http://www.material-ui.com/">Material-<span class="caps">UI</span></a> compatible with this version of <a href="http://facebook.github.io/react/">React</a>, a new version of <a href="http://www.material-ui.com/">Material-<span class="caps">UI</span></a> which is <code>0.15.0-beta.1</code> is released recently. However there are some breaking changes in this release of <a href="http://www.material-ui.com/">Material-<span class="caps">UI</span></a> if you are coming from the last version which is <code>0.15.0-alpha.2</code>. The complete <a href="https://github.com/callemall/material-ui/releases">release note is here</a> along with the change&nbsp;logs.</p>
+<p>There are couple of things to change in our <a href="http://facebook.github.io/react/">React</a> application&nbsp;code.</p>
 <h3 id="import-require">import /&nbsp;require</h3>
-<p>The <code>import</code> and <code>require</code> syntaxes are&nbsp;changed.</p>
+<p>The syntax for getting a component from <a href="http://www.material-ui.com/">Material-<span class="caps">UI</span></a> is&nbsp;changed. </p>
 <pre><code class="lang-javascript"><span class="comment">// Use</span>
 <span class="keyword">var</span> AppBar = <span class="built_in">require</span>(<span class="string">'material-ui/AppBar'</span>)[<span class="string">'default'</span>] ;
 <span class="comment">// Or</span>
 <span class="keyword">import</span> AppBar <span class="keyword">from</span> <span class="string">'material-ui/AppBar'</span>;
 <span class="comment">// instead of</span>
-<span class="keyword">var</span> AppBar = <span class="built_in">require</span>(<span class="string">'material-ui/lib/app-bar'</span>);
+<span class="keyword">var</span> AppBar = <span class="built_in">require</span>(<span class="string">'material-ui/lib/app-bar'</span>); <span class="comment">// deprecated</span>
 </code></pre>
 <p>Notice </p>
 <ul>
@@ -42,7 +42,7 @@
 </ul>
 <h3 id="default-theme-handling">default theme&nbsp;handling</h3>
 <p>The <a href="https://github.com/callemall/material-ui/pull/3820">default theme handling has changed</a> for components and for that, some changes are required in application&nbsp;code.</p>
-<p>In the RootControllerView /&nbsp;MainControllerView</p>
+<p>In the RootControllerView / MainControllerView, import the&nbsp;following.</p>
 <pre><code class="lang-javascript"><span class="keyword">import</span> baseTheme <span class="keyword">from</span> <span class="string">'material-ui/styles/baseThemes/lightBaseTheme'</span>;
 <span class="keyword">import</span> getMuiTheme <span class="keyword">from</span> <span class="string">'material-ui/styles/getMuiTheme'</span>;
 </code></pre>
