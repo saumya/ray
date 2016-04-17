@@ -4,28 +4,24 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width">
-    <title>Saumya
+    <title>React &amp; Material-UI - Saumya
     </title>
     <link rel="alternate" href="http://saumya.github.io/ray/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
     <link rel="stylesheet" href="http://saumya.github.io/ray/css/main.css">
     <link rel="stylesheet" href="http://saumya.github.io/ray/css/saumya.css">
   </head>
-  <body>
+  <body class="article-detail">
     <header class="header">
       <div class="content-wrap">
-        <div class="logo">
-          <h1><a href="http://saumya.github.io/ray">Saumya</a></h1>
-          <p class="description">Where there is a will, there is a way.</p>
-        </div>
+        <h1>React &amp; Material-UI</h1>
+        <p class="author">Written by <span class="author"><a href="mailto:contact@saumyaray.com">Saumya</a></span>
+        </p>
+        <p class="date">17. April 2016</p>
       </div>
     </header>
     <div id="content">
       <div class="content-wrap">
-        <article class="article intro">
-          <header>
-            <p class="date"><span>17. April 2016</span></p>
-            <h2><a href="http://saumya.github.io/ray/articles/65/">React &amp; Material-UI</a></h2>
-          </header>
+        <article class="article">
           <section class="content"><p>Here we will talk about the recent changes in <a href="http://www.material-ui.com/">Material-<span class="caps">UI</span></a> and how it affects our <a href="http://facebook.github.io/react/">React</a>&nbsp;code.</p>
 <p>Before moving further, if you have not yet started with <a href="http://www.material-ui.com/">Material-<span class="caps">UI</span></a>, here is <a href="http://saumya.github.io/ray/articles/63/">my first post</a> describing the&nbsp;details. </p>
 <p>Current version of <a href="http://facebook.github.io/react/">React</a> is <code>15.0.1</code>. To make <a href="http://www.material-ui.com/">Material-<span class="caps">UI</span></a> compatible with this version of <a href="http://facebook.github.io/react/">React</a>, a new version of <a href="http://www.material-ui.com/">Material-<span class="caps">UI</span></a> which is <code>0.15.0-beta.1</code> is released recently. However there are some breaking changes in this release of <a href="http://www.material-ui.com/">Material-<span class="caps">UI</span></a> if you are coming from the last version which is <code>0.15.0-alpha.2</code>. The complete <a href="https://github.com/callemall/material-ui/releases">release note</a> is here along with the change&nbsp;logs.</p>
@@ -60,41 +56,23 @@ getChildContext() {
 </code></pre>
 <p>Here is <a href="https://github.com/callemall/material-ui/issues/4021">a little more</a> in-depth view of the&nbsp;scenario.</p>
 <p>Happy&nbsp;Reacting.          </p>
-
-          </section>
-        </article>
-        <article class="article intro">
-          <header>
-            <p class="date"><span>04. April 2016</span></p>
-            <h2><a href="http://saumya.github.io/ray/articles/64/">React Native</a></h2>
-          </header>
-          <section class="content"><p>The beauty of <a href="http://facebook.github.io/react/">React</a> is it now has a lot to offer and <a href="https://facebook.github.io/react-native/">React Native</a> is just an amazing way to create native mobile applications with Javascript or more specifically with <a href="http://facebook.github.io/react/">React</a>. Yes, we are talking about native applications. Unlike <a href="https://cordova.apache.org/">Cordova</a>, <a href="https://facebook.github.io/react-native/">React Native</a> applications do not run inside a webview. These applications use the native components from the environment it is running in. If its running in iOS the components like buttons, views etc are real iOS components. Same is true for&nbsp;Android.</p>
-<p>From the first few weeks of <a href="https://facebook.github.io/react-native/">React Native</a> I must say its worth a try. There might be a chance that even the same code is running in both iOS and Android. Though its almost always a little different code for both the platforms. But all in all, its all&nbsp;Javascript.</p>
-<p>I am not going in details of getting started here. May be in a next blog post we will explore that. If you are already developing in <a href="http://facebook.github.io/react/">React</a> you are already there. No extra effort for another toolset or&nbsp;language. </p>
-<p>Happy&nbsp;Reacting.</p>
-
-          </section>
-        </article>
-        <article class="article intro">
-          <header>
-            <p class="date"><span>11. March 2016</span></p>
-            <h2><a href="http://saumya.github.io/ray/articles/63/">React with Router and Material UI</a></h2>
-          </header>
-          <section class="content"><p>This is a little more than just the basics. If you do not have any idea about <a href="http://facebook.github.io/react/">React</a>, here are two links to get started&nbsp;with.          </p>
-<ul>
-<li><a href="http://saumya.github.io/ray/articles/57/">React&nbsp;Basics</a></li>
-<li><a href="http://saumya.github.io/ray/articles/58/">How to&nbsp;React</a>          </li>
-</ul>
-<p>Now that we know what is <a href="http://facebook.github.io/react/">React</a> and how to do the basics. Lets go a little&nbsp;further.
-            <p class="more"><a href="http://saumya.github.io/ray/articles/63/">more</a></p>
-          </section>
+</section>
         </article>
       </div>
     </div>
     <footer>
       <div class="content-wrap">
-        <div class="nav"><a href="http://saumya.github.io/ray/archive.html">« Archives</a><a href="http://saumya.github.io/ray/page/2/">Next page »</a>
-        </div>
+        <div class="nav"><a href="http://saumya.github.io/ray/">« Full blog</a></div>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+          var disqus_shortname = 'saumya';
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
         <section class="about"><p><a href="http://www.saumyaray.com">Saumya</a> believes in The God.</p>
 <p>A maker of things and curious about everything. Continuous learning is, what fuels him. This blog itself, reflects one of many things he is trying at all the time.</p>
 <p>He is <a href="https://twitter.com/saumya">@saumya</a> on Twitter. </p>

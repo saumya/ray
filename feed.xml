@@ -5,9 +5,51 @@
     <atom:link href="http://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Mon, 04 Apr 2016 05:30:00 +0630</pubDate>
+    <pubDate>Sun, 17 Apr 2016 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>React &amp; Material-UI</title>
+      <link>http://saumya.github.io/ray/articles/65/</link>
+      <pubDate>Sun, 17 Apr 2016 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">http://saumya.github.io/ray/articles/65/</guid>
+      <author></author>
+      <description>&lt;p&gt;Here we will talk about the recent changes in &lt;a href=&quot;http://www.material-ui.com/&quot;&gt;Material-UI&lt;/a&gt; and how it affects our &lt;a href=&quot;http://facebook.github.io/react/&quot;&gt;React&lt;/a&gt; code.&lt;/p&gt;
+&lt;p&gt;Before moving further, if you have not yet started with &lt;a href=&quot;http://www.material-ui.com/&quot;&gt;Material-UI&lt;/a&gt;, here is &lt;a href=&quot;http://saumya.github.io/ray/articles/63/&quot;&gt;my first post&lt;/a&gt; describing the details. &lt;/p&gt;
+&lt;p&gt;Current version of &lt;a href=&quot;http://facebook.github.io/react/&quot;&gt;React&lt;/a&gt; is &lt;code&gt;15.0.1&lt;/code&gt;. To make &lt;a href=&quot;http://www.material-ui.com/&quot;&gt;Material-UI&lt;/a&gt; compatible with this version of &lt;a href=&quot;http://facebook.github.io/react/&quot;&gt;React&lt;/a&gt;, a new version of &lt;a href=&quot;http://www.material-ui.com/&quot;&gt;Material-UI&lt;/a&gt; which is &lt;code&gt;0.15.0-beta.1&lt;/code&gt; is released recently. However there are some breaking changes in this release of &lt;a href=&quot;http://www.material-ui.com/&quot;&gt;Material-UI&lt;/a&gt; if you are coming from the last version which is &lt;code&gt;0.15.0-alpha.2&lt;/code&gt;. The complete &lt;a href=&quot;https://github.com/callemall/material-ui/releases&quot;&gt;release note&lt;/a&gt; is here along with the change logs.&lt;/p&gt;
+&lt;p&gt;There are couple of things to change.&lt;/p&gt;
+&lt;h3 id=&quot;import-require&quot;&gt;import / require&lt;/h3&gt;
+&lt;p&gt;The &lt;code&gt;import&lt;/code&gt; and &lt;code&gt;require&lt;/code&gt; syntaxes are changed.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// Use&lt;/span&gt;
+&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; AppBar = &lt;span class=&quot;built_in&quot;&gt;require&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;'material-ui/AppBar'&lt;/span&gt;)[&lt;span class=&quot;string&quot;&gt;'default'&lt;/span&gt;] ;
+&lt;span class=&quot;comment&quot;&gt;// Or&lt;/span&gt;
+&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; AppBar &lt;span class=&quot;keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;'material-ui/AppBar'&lt;/span&gt;;
+&lt;span class=&quot;comment&quot;&gt;// instead of&lt;/span&gt;
+&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; AppBar = &lt;span class=&quot;built_in&quot;&gt;require&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;'material-ui/lib/app-bar'&lt;/span&gt;);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Notice &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;there is no &lt;code&gt;lib&lt;/code&gt; in between &lt;code&gt;material-ui&lt;/code&gt; and &lt;code&gt;AppBar&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;if using &lt;code&gt;require&lt;/code&gt; , there is a &lt;code&gt;[&amp;#39;default&amp;#39;]&lt;/code&gt; at the end&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;default-theme-handling&quot;&gt;default theme handling&lt;/h3&gt;
+&lt;p&gt;The &lt;a href=&quot;https://github.com/callemall/material-ui/pull/3820&quot;&gt;default theme handling has changed&lt;/a&gt; for components and for that, some changes are required in application code.&lt;/p&gt;
+&lt;p&gt;In the RootControllerView / MainControllerView&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; baseTheme &lt;span class=&quot;keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;'material-ui/styles/baseThemes/lightBaseTheme'&lt;/span&gt;;
+&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; getMuiTheme &lt;span class=&quot;keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;'material-ui/styles/getMuiTheme'&lt;/span&gt;;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In the same RootControllerView / MainControllerView, inside component declaration add&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;childContextTypes:{
+  muiTheme: React.PropTypes.object.isRequired,
+},
+getChildContext() {
+  &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; {muiTheme: getMuiTheme(baseTheme)};
+},
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Here is &lt;a href=&quot;https://github.com/callemall/material-ui/issues/4021&quot;&gt;a little more&lt;/a&gt; in-depth view of the scenario.&lt;/p&gt;
+&lt;p&gt;Happy Reacting.          &lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>React Native</title>
       <link>http://saumya.github.io/ray/articles/64/</link>
