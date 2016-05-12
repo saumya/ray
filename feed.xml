@@ -5,9 +5,34 @@
     <atom:link href="http://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Sun, 17 Apr 2016 05:30:00 +0630</pubDate>
+    <pubDate>Thu, 12 May 2016 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>React and understanding Redux, Thunk, Router.</title>
+      <link>http://saumya.github.io/ray/articles/66/</link>
+      <pubDate>Thu, 12 May 2016 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">http://saumya.github.io/ray/articles/66/</guid>
+      <author></author>
+      <description>&lt;p&gt;&lt;a href=&quot;https://github.com/facebook/react&quot;&gt;React&lt;/a&gt; is the view as they call it in a MVC (Model-View-Controller) world. Actually it is enough to build the whole frontend with &lt;a href=&quot;https://github.com/facebook/react&quot;&gt;React&lt;/a&gt; and its components. One does not need anything else to make a &lt;a href=&quot;https://github.com/facebook/react&quot;&gt;React&lt;/a&gt; application. Then comes a time, when one thinks of organising the code. Well, then and only then the things we talk now will make sense.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3 id=&quot;tl-tr&quot;&gt;TL;TR&lt;/h3&gt;
+&lt;p&gt;I asked and you may too, “so what are these fancy terms are for?” Simply saying they do the following.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/reactjs/redux&quot;&gt;Redux&lt;/a&gt; is Model or Data or State (Whatever you call it) &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/gaearon/redux-thunk&quot;&gt;Thunk&lt;/a&gt; is helping &lt;a href=&quot;https://github.com/reactjs/redux&quot;&gt;Redux&lt;/a&gt; for communicating with Servers and getting data&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/react-router&quot;&gt;Router&lt;/a&gt; is making the application to display specific things on navigating to specific URL&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;react-and-its-universe&quot;&gt;React and its universe&lt;/h3&gt;
+&lt;p&gt;The best thing is, about pick and choose. Instead of a monolithic application framework, if the things are so nicely done that one can pick and choose between them to use in an application, it would be really nice. Most importantly at anypoint one should be able to swap between different implementations of the same thing. And &lt;a href=&quot;https://github.com/facebook/react&quot;&gt;React&lt;/a&gt; universe is full of these kind of implementations.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/facebook/react&quot;&gt;React&lt;/a&gt; is just to make visual components. There is nothing else to it. The exciting thing is there exists a whole universe arround &lt;a href=&quot;https://github.com/facebook/react&quot;&gt;React&lt;/a&gt; which does a lot of things to help build the application. There are different frameworks which use &lt;a href=&quot;https://github.com/facebook/react&quot;&gt;React&lt;/a&gt; and guidelines from facebook known as &lt;a href=&quot;https://facebook.github.io/flux/&quot;&gt;Flux&lt;/a&gt;. The community is building a lot of things arround &lt;a href=&quot;https://github.com/facebook/react&quot;&gt;React&lt;/a&gt; too. Once components are done and you are ready to work with data, instead of putting the data logic all arround the place, it feels right to put them at one place. &lt;a href=&quot;https://github.com/reactjs/redux&quot;&gt;Redux&lt;/a&gt; which follows the &lt;a href=&quot;https://facebook.github.io/flux/&quot;&gt;Flux&lt;/a&gt; guidlines makes it possible to do data management easier. If you know a little about &lt;a href=&quot;https://facebook.github.io/flux/&quot;&gt;Flux&lt;/a&gt; then the difference is &lt;a href=&quot;https://facebook.github.io/flux/&quot;&gt;Flux&lt;/a&gt; deals with a lot of &lt;code&gt;stores&lt;/code&gt; in the application, while &lt;a href=&quot;https://github.com/reactjs/redux&quot;&gt;Redux&lt;/a&gt; deals with a &lt;code&gt;single store&lt;/code&gt;. Well do not be afraid to the term &lt;code&gt;store&lt;/code&gt; as simply speaking a &lt;code&gt;store&lt;/code&gt; is the &lt;code&gt;model&lt;/code&gt; or &lt;code&gt;data&lt;/code&gt;. So we can say &lt;a href=&quot;https://facebook.github.io/flux/&quot;&gt;Flux&lt;/a&gt; deals with a lot of models while &lt;a href=&quot;https://github.com/reactjs/redux&quot;&gt;Redux&lt;/a&gt; deals with a single model. In &lt;a href=&quot;https://github.com/reactjs/redux&quot;&gt;Redux&lt;/a&gt; you design your application in such a way that anywhere in the application, the data is coming from one single model / store.&lt;/p&gt;
+&lt;p&gt;Now we know that we have view and model on frontend. We need a way to communicate with backend to get data and give back data. There comes in &lt;a href=&quot;https://github.com/gaearon/redux-thunk&quot;&gt;Thunk&lt;/a&gt;. It helps our &lt;a href=&quot;https://github.com/reactjs/redux&quot;&gt;Redux&lt;/a&gt; applications to sync with server. Talking about &lt;a href=&quot;https://github.com/gaearon/redux-thunk&quot;&gt;Thunk&lt;/a&gt;, its actually a middleware to &lt;a href=&quot;https://github.com/reactjs/redux&quot;&gt;Redux&lt;/a&gt;. Which means, &lt;a href=&quot;https://github.com/reactjs/redux&quot;&gt;Redux&lt;/a&gt; has a concept of &lt;code&gt;middleware&lt;/code&gt;. Simply put we can plugin different functionality to &lt;a href=&quot;https://github.com/reactjs/redux&quot;&gt;Redux&lt;/a&gt; with our own code.&lt;/p&gt;
+&lt;p&gt;Well, we got data from server and created our application with components. Now a full application can be built using just these. However, we need a way to show different user interfaces when going to different URLs. As we can develop whole application without a Model layer, we can do the same here too. But the thing is &lt;a href=&quot;https://www.npmjs.com/package/react-router&quot;&gt;Router&lt;/a&gt; makes our life easier in these scenarios. If we want to navigate to different URLs depending upon our usecase and then show different UI, then &lt;a href=&quot;https://www.npmjs.com/package/react-router&quot;&gt;Router&lt;/a&gt; makes it very easy for us.&lt;/p&gt;
+&lt;p&gt;Combining all these together, we get a framework consiting of traditional model,view and controller or whatever you call it.&lt;/p&gt;
+&lt;p&gt;The nice thing about &lt;a href=&quot;https://github.com/reactjs/redux&quot;&gt;Redux&lt;/a&gt; and &lt;a href=&quot;https://www.npmjs.com/package/react-router&quot;&gt;Router&lt;/a&gt; is they play nicely with each other.&lt;/p&gt;
+&lt;p&gt;Happy Reacting.          &lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>React &amp; Material-UI, recently breaking changes.</title>
       <link>http://saumya.github.io/ray/articles/65/</link>

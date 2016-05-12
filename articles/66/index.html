@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <title>React and understanding Redux, Thunk, Router. - Saumya
+    </title>
+    <link rel="alternate" href="http://saumya.github.io/ray/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
+    <link rel="stylesheet" href="http://saumya.github.io/ray/css/main.css">
+    <link rel="stylesheet" href="http://saumya.github.io/ray/css/saumya.css">
+  </head>
+  <body class="article-detail">
+    <header class="header">
+      <div class="content-wrap">
+        <h1>React and understanding Redux, Thunk, Router.</h1>
+        <p class="author">Written by <span class="author"><a href="mailto:contact@saumyaray.com">Saumya</a></span>
+        </p>
+        <p class="date">12. May 2016</p>
+      </div>
+    </header>
+    <div id="content">
+      <div class="content-wrap">
+        <article class="article">
+          <section class="content"><p><a href="https://github.com/facebook/react">React</a> is the view as they call it in a <span class="caps">MVC</span> (Model-View-Controller) world. Actually it is enough to build the whole frontend with <a href="https://github.com/facebook/react">React</a> and its components. One does not need anything else to make a <a href="https://github.com/facebook/react">React</a> application. Then comes a time, when one thinks of organising the code. Well, then and only then the things we talk now will make&nbsp;sense.</p>
+<p><span class="more"></span></p>
+<h3 id="tl-tr"><span class="caps">TL</span>;TR</h3>
+<p>I asked and you may too, “so what are these fancy terms are for?” Simply saying they do the&nbsp;following.</p>
+<ul>
+<li><a href="https://github.com/reactjs/redux">Redux</a> is Model or Data or State (Whatever you call&nbsp;it) </li>
+<li><a href="https://github.com/gaearon/redux-thunk">Thunk</a> is helping <a href="https://github.com/reactjs/redux">Redux</a> for communicating with Servers and getting&nbsp;data</li>
+<li><a href="https://www.npmjs.com/package/react-router">Router</a> is making the application to display specific things on navigating to specific&nbsp;<span class="caps">URL</span></li>
+</ul>
+<h3 id="react-and-its-universe">React and its&nbsp;universe</h3>
+<p>The best thing is, about pick and choose. Instead of a monolithic application framework, if the things are so nicely done that one can pick and choose between them to use in an application, it would be really nice. Most importantly at anypoint one should be able to swap between different implementations of the same thing. And <a href="https://github.com/facebook/react">React</a> universe is full of these kind of&nbsp;implementations.</p>
+<p><a href="https://github.com/facebook/react">React</a> is just to make visual components. There is nothing else to it. The exciting thing is there exists a whole universe arround <a href="https://github.com/facebook/react">React</a> which does a lot of things to help build the application. There are different frameworks which use <a href="https://github.com/facebook/react">React</a> and guidelines from facebook known as <a href="https://facebook.github.io/flux/">Flux</a>. The community is building a lot of things arround <a href="https://github.com/facebook/react">React</a> too. Once components are done and you are ready to work with data, instead of putting the data logic all arround the place, it feels right to put them at one place. <a href="https://github.com/reactjs/redux">Redux</a> which follows the <a href="https://facebook.github.io/flux/">Flux</a> guidlines makes it possible to do data management easier. If you know a little about <a href="https://facebook.github.io/flux/">Flux</a> then the difference is <a href="https://facebook.github.io/flux/">Flux</a> deals with a lot of <code>stores</code> in the application, while <a href="https://github.com/reactjs/redux">Redux</a> deals with a <code>single store</code>. Well do not be afraid to the term <code>store</code> as simply speaking a <code>store</code> is the <code>model</code> or <code>data</code>. So we can say <a href="https://facebook.github.io/flux/">Flux</a> deals with a lot of models while <a href="https://github.com/reactjs/redux">Redux</a> deals with a single model. In <a href="https://github.com/reactjs/redux">Redux</a> you design your application in such a way that anywhere in the application, the data is coming from one single model /&nbsp;store.</p>
+<p>Now we know that we have view and model on frontend. We need a way to communicate with backend to get data and give back data. There comes in <a href="https://github.com/gaearon/redux-thunk">Thunk</a>. It helps our <a href="https://github.com/reactjs/redux">Redux</a> applications to sync with server. Talking about <a href="https://github.com/gaearon/redux-thunk">Thunk</a>, its actually a middleware to <a href="https://github.com/reactjs/redux">Redux</a>. Which means, <a href="https://github.com/reactjs/redux">Redux</a> has a concept of <code>middleware</code>. Simply put we can plugin different functionality to <a href="https://github.com/reactjs/redux">Redux</a> with our own&nbsp;code.</p>
+<p>Well, we got data from server and created our application with components. Now a full application can be built using just these. However, we need a way to show different user interfaces when going to different URLs. As we can develop whole application without a Model layer, we can do the same here too. But the thing is <a href="https://www.npmjs.com/package/react-router">Router</a> makes our life easier in these scenarios. If we want to navigate to different URLs depending upon our usecase and then show different <span class="caps">UI</span>, then <a href="https://www.npmjs.com/package/react-router">Router</a> makes it very easy for&nbsp;us.</p>
+<p>Combining all these together, we get a framework consiting of traditional model,view and controller or whatever you call&nbsp;it.</p>
+<p>The nice thing about <a href="https://github.com/reactjs/redux">Redux</a> and <a href="https://www.npmjs.com/package/react-router">Router</a> is they play nicely with each&nbsp;other.</p>
+<p>Happy&nbsp;Reacting.          </p>
+</section>
+        </article>
+      </div>
+    </div>
+    <footer>
+      <div class="content-wrap">
+        <div class="nav"><a href="http://saumya.github.io/ray/">« Full blog</a></div>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+          var disqus_shortname = 'saumya';
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        <section class="about"><p><a href="http://www.saumyaray.com">Saumya</a> believes in The God.</p>
+<p>A maker of things and curious about everything. Continuous learning is, what fuels him. This blog itself, reflects one of many things he is trying at all the time.</p>
+<p>He is <a href="https://twitter.com/saumya">@saumya</a> on Twitter. </p>
+<span class="nav"><a href="http://saumya.github.io/ray/">Blog Home</a><a href="http://saumya.github.io/ray/archive.html">Archives</a></span>
+        </section>
+        <section class="copy">
+          <p>&copy; 2016 saumya ray &mdash; powered by&nbsp;     <a href="https://github.com/jnordberg/wintersmith">Wintersmith&nbsp;</a>
+            <p> <a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
+          </p>
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>
