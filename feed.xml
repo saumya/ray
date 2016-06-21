@@ -5,9 +5,20 @@
     <atom:link href="http://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Thu, 12 May 2016 05:30:00 +0630</pubDate>
+    <pubDate>Wed, 22 Jun 2016 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Cocoapods</title>
+      <link>http://saumya.github.io/ray/articles/67/</link>
+      <pubDate>Wed, 22 Jun 2016 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">http://saumya.github.io/ray/articles/67/</guid>
+      <author></author>
+      <description>&lt;p&gt;Developing for iDevices has come a long way. With the new and emerging tools everyday, the pain is also fading away. In the beginning I used to avoid any third party tools to help me build for iOS in ObjectiveC. Back then, both the XCode environment and the tools were emerging, so it was obvious to run into the edge cases very soon. The time has changed and so as the tools have matured.&lt;br&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;br&gt;One such thing is dependency manager for XCode projects. While there are options here, but &lt;a href=&quot;https://cocoapods.org/&quot;&gt;Cocoapods&lt;/a&gt; seems to be matured enough to go production without problem. There are plenty of packges available and I must say that its impressive in the way, the community is producing quality stuff. Its like &lt;a href=&quot;https://www.npmjs.com/&quot;&gt;NPM&lt;/a&gt; for XCode projects. The best part is whether the project is in Swift or ObjectiveC, one can get the dependecies for either from &lt;a href=&quot;https://cocoapods.org/&quot;&gt;Cocoapods&lt;/a&gt;.          &lt;/p&gt;
+&lt;p&gt;If you have not yet, just give it a try and I am sure you will save a lot of time of your life shifting from manually managing dependencies.          &lt;/p&gt;
+&lt;p&gt;Happy coding.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>React and understanding Redux, Thunk, Router.</title>
       <link>http://saumya.github.io/ray/articles/66/</link>

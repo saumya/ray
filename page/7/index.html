@@ -23,6 +23,44 @@
       <div class="content-wrap">
         <article class="article intro">
           <header>
+            <p class="date"><span>14. January 2015</span></p>
+            <h2><a href="http://saumya.github.io/ray/articles/49/">Dojo Toolkit, require and events.</a></h2>
+          </header>
+          <section class="content"><p>Well, lets say this, if you are working on <a href="http://dojotoolkit.org/">Dojo Toolkit</a>, you are working on a legacy application. Since <a href="http://dojotoolkit.org/">Dojo Toolkit</a> is releasing its newer versions, you need to change your application to newer codebase. Currently <a href="http://dojotoolkit.org/">Dojo Toolkit</a> is leveraging <a href="http://requirejs.org/docs/whyamd.html#amd"><span class="caps">AMD</span></a> for modules and Javascript files. Which is very new for this toolkit and veteran developers in this toolkit may find its very&nbsp;different.          </p>
+<p>Previously, when we needed some <span class="caps">JS</span> code, its simply done by making a ‘require’&nbsp;call.          </p>
+<pre><code class="lang-javascript">dojo.require(<span class="string">"dojo.string"</span>);
+<span class="comment">//then use it</span>
+dojo.string.trim(<span class="string">"  I Like Trim Strings "</span>);
+</code></pre>
+<p>Now it looks&nbsp;as          </p>
+<pre><code class="lang-javascript"><span class="built_in">require</span>([<span class="string">"dojo/string"</span>, <span class="string">"dojo/domReady!"</span>], <span class="function"><span class="keyword">function</span>(<span class="params">string</span>)</span>{
+  string.trim(<span class="string">"  I Like Trim Strings "</span>);
+});
+</code></pre>
+<p>Well that may seems fine now, but then what happens when we need something inside that <code>require</code> itself? Actually, its simpler than it seems, we can have <code>require</code> inside another require&nbsp;too.          </p>
+<pre><code class="lang-javascript"><span class="built_in">require</span>([<span class="string">"dojo/domReady!"</span>], <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{
+    <span class="comment">//<span class="caps">DOM</span> is ready, load another module</span>
+    <span class="built_in">require</span>([<span class="string">"dojo/string"</span>], <span class="function"><span class="keyword">function</span>(<span class="params">string</span>)</span>{
+      string.trim(<span class="string">"  I Like Trim Strings "</span>);
+    });
+});
+</code></pre>
+<p>Thats nice. Here <a href="http://dojotoolkit.org/reference-guide/1.7/dojo/require.html">is the official documentation</a>. The introduction to <a href="http://dojotoolkit.org/documentation/tutorials/1.10/modern_dojo/">modern dojo</a> is here.<br>Another nice utility is <a href="http://dojotoolkit.org/reference-guide/1.10/dojo/topic.html">topic</a>. This is kind of central event dispatching and listening station. All one has to do is, dispatch events through <a href="http://dojotoolkit.org/reference-guide/1.10/dojo/topic.html">topic</a> and listen through it too. These are called <code>publish</code> and <code>subscribe</code> of&nbsp;events.          </p>
+<pre><code class="lang-javascript"><span class="built_in">require</span>([<span class="string">"dojo/topic"</span>], <span class="function"><span class="keyword">function</span>(<span class="params">topic</span>)</span>{
+    topic.subscribe(<span class="string">"some/topic"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">arguments</span>)</span>{
+        <span class="built_in">console</span>.log(<span class="string">"received:"</span>, <span class="built_in">arguments</span>);
+    });
+    <span class="comment">// ...</span>
+    topic.publish(<span class="string">"some/topic"</span>, <span class="string">"one"</span>, <span class="string">"two"</span>);
+});
+</code></pre>
+<p>The other kind of events are <span class="caps">DOM</span> events and <a href="http://dojotoolkit.org/reference-guide/1.10/dojo/on.html#dojo-on">they are handled with the ‘on’</a>&nbsp;module.          </p>
+<p>Happy&nbsp;coding.</p>
+
+          </section>
+        </article>
+        <article class="article intro">
+          <header>
             <p class="date"><span>12. January 2015</span></p>
             <h2><a href="http://saumya.github.io/ray/articles/48/">HAXE JS 102</a></h2>
           </header>
@@ -72,39 +110,6 @@ com.jungle.Animal
 </code></pre>
 <p>Thats all to it. <a href="http://haxe.org/"><span class="caps">HAXE</span></a> will take care of the <code>import</code> and <code>package</code> and <code>class</code> of the application. Finally the generted <span class="caps">JS</span> file is having everything our application needs. Include the JS file in the required HTML file and we are&nbsp;done.      </p>
 <p>Here is a <a href="https://github.com/saumya/HAXE-JS101">sample basic application</a> showing all there is to&nbsp;it.</p>
-<p>Happy&nbsp;Coding.</p>
-
-          </section>
-        </article>
-        <article class="article intro">
-          <header>
-            <p class="date"><span>01. January 2015</span></p>
-            <h2><a href="http://saumya.github.io/ray/articles/46/">Cake and Coffee</a></h2>
-          </header>
-          <section class="content"><p>While working with <a href="http://coffeescript.org/#top">CoffeeScript</a>, we generally tend to do the&nbsp;following,</p>
-<ul>
-<li>write something in a .coffee&nbsp;file</li>
-<li>compile that file with coffee compiler to .js&nbsp;file         </li>
-</ul>
-<p>Well, if we are a little smarter, then use the following command to compile all the .coffee files in a particular folder to respective .js file in another&nbsp;folder.</p>
-<pre><code class="lang-coffeescript">coffee --compile --output outputFolder/ inputFolder/
-</code></pre>
-<p>That may seem enough now, but actually there are a lot of things we could automate. The native way to do this in <a href="http://coffeescript.org/#top">CoffeeScript</a> is called <code>Cake</code>. We can look at it as a build system. Nice thing about this is, we can write every instruction in <a href="http://coffeescript.org/#top">CoffeeScript</a>&nbsp;itself.         </p>
-<ul>
-<li>Cake is an utility comes with <a href="http://coffeescript.org/#top">CoffeeScript</a></li>
-<li>its a task runner or build&nbsp;system</li>
-<li>all the instructions are saved in a file with name <code>Cakefile</code></li>
-<li><code>Cakefile</code> is the file name and there is no extension to&nbsp;it</li>
-<li>Everything inside the <code>Cakefile</code> is a <a href="http://coffeescript.org/#top">CoffeeScript</a>&nbsp;expression         </li>
-</ul>
-<p>To run the <code>Cake</code> task runner, navigate to the folder, where our <code>Cakefile</code> is residing and fire up the command as&nbsp;below.        </p>
-<pre><code class="lang-coffeescript">cake
-</code></pre>
-<p>That will display all the tasks available in that file to be run. To run a specific task,&nbsp;run</p>
-<pre><code class="lang-coffeescript">cake taskName
-</code></pre>
-<p>While defining tasks, we can make a relation between tasks. That means we can say taskOne is dependent on taskTwo. The <a href="https://github.com/saumya/CoffeeScript101">basics of CoffeeScript project</a> has a Cakefile for&nbsp;reference.        </p>
-<p>The direct link to the sample <code>Cakefile</code> <a href="https://github.com/saumya/CoffeeScript101/blob/master/Cakefile">is here</a>. All the code are commented for easy&nbsp;reference.       </p>
 <p>Happy&nbsp;Coding.</p>
 
           </section>
