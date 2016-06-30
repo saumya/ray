@@ -5,9 +5,41 @@
     <atom:link href="http://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Wed, 22 Jun 2016 05:30:00 +0630</pubDate>
+    <pubDate>Thu, 30 Jun 2016 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>NSNotification in Swift</title>
+      <link>http://saumya.github.io/ray/articles/68/</link>
+      <pubDate>Thu, 30 Jun 2016 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">http://saumya.github.io/ray/articles/68/</guid>
+      <author></author>
+      <description>&lt;p&gt;While Apple has put a lot of design patterns to develop applications for iOS, the flexibility of an event driven application development surely has its merits. The very de-coupled application is so nice to play around with. Well, the downside is to find where is what. For a strictly coupled application, one can definitely find the root of the roots. But for a de-coupled application its very difficult to find what is happening where. Then comes good practices of code commeting and logger messages to rescue. That topic is a separate post I hope.  &lt;/p&gt;
+&lt;p&gt;Lets see how in &lt;a href=&quot;https://developer.apple.com/swift/&quot;&gt;swift&lt;/a&gt; we could write an event driven application.                       &lt;/p&gt;
+&lt;p&gt;Here is a scenario. We have a ViewController1.swift and MyViewController.swift. First &lt;code&gt;ViewController1&lt;/code&gt; is loaded in the application and then it navigates to &lt;code&gt;MyViewController.swift&lt;/code&gt;. Upon certain situation in &lt;code&gt;MyViewController&lt;/code&gt; we want to do something on &lt;code&gt;ViewController1&lt;/code&gt;. All we have to do is send an event from &lt;code&gt;MyViewController&lt;/code&gt; to &lt;code&gt;ViewController1&lt;/code&gt;. The events here in iOS is known as &lt;code&gt;NSNotification&lt;/code&gt;. So the setup is as shown here.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-swift&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// MyViewController.swift&lt;/span&gt;
+&lt;span class=&quot;comment&quot;&gt;// Dispatch Event from wherever necessary&lt;/span&gt;
+&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; notification = &lt;span class=&quot;type&quot;&gt;NSNotification&lt;/span&gt;(name: &lt;span class=&quot;string&quot;&gt;&quot;myNotification&quot;&lt;/span&gt; , object: &lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt;, userInfo:&lt;span class=&quot;literal&quot;&gt;nil&lt;/span&gt; )
+&lt;span class=&quot;type&quot;&gt;NSNotificationCenter&lt;/span&gt;.defaultCenter().postNotification(notification)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Then in the other file just add the listeners to listen to the events and call the methods to handle them.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-swift&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// ViewController1.swift&lt;/span&gt;
+&lt;span class=&quot;keyword&quot;&gt;override&lt;/span&gt; &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;viewDidLoad&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt; {
+    &lt;span class=&quot;keyword&quot;&gt;super&lt;/span&gt;.viewDidLoad()
+    &lt;span class=&quot;comment&quot;&gt;// Listen for Event&lt;/span&gt;
+    &lt;span class=&quot;type&quot;&gt;NSNotificationCenter&lt;/span&gt;.defaultCenter().addObserver( &lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt;, selector: #selector(onGotNotification),name: &lt;span class=&quot;string&quot;&gt;&quot;myNotification&quot;&lt;/span&gt;, object: &lt;span class=&quot;literal&quot;&gt;nil&lt;/span&gt; )
+}
+&lt;span class=&quot;keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;onGotNotification&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(notification:NSNotification)&lt;/span&gt;&lt;/span&gt;{
+    &lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;name=&quot;&lt;/span&gt;,notification.name)
+    &lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;object=&quot;&lt;/span&gt;,notification.object)
+    &lt;span class=&quot;comment&quot;&gt;//&lt;/span&gt;
+    &lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; myViewController:&lt;span class=&quot;type&quot;&gt;MyViewController&lt;/span&gt; = notification.object &lt;span class=&quot;keyword&quot;&gt;as&lt;/span&gt;! &lt;span class=&quot;type&quot;&gt;MyViewController&lt;/span&gt;
+    myViewController.someMethod()
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Happy coding.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>Cocoapods</title>
       <link>http://saumya.github.io/ray/articles/67/</link>
