@@ -26,31 +26,10 @@
             <p class="date"><span>30. June 2016</span></p>
             <h2><a href="http://saumya.github.io/ray/articles/68/">NSNotification in Swift</a></h2>
           </header>
-          <section class="content"><p>While Apple has put a lot of design patterns to develop applications for iOS, the flexibility of an event driven application development surely has its merits. The very de-coupled application is so nice to play around with. Well, the downside is to find where is what. For a strictly coupled application, one can definitely find the root of the roots. But for a de-coupled application its very difficult to find what is happening where. Then comes good practices of code commeting and logger messages to rescue. That topic is a separate post I&nbsp;hope.  </p>
-<p>Lets see how in <a href="https://developer.apple.com/swift/">swift</a> we could write an event driven&nbsp;application.                       </p>
-<p>Here is a scenario. We have a ViewController1.swift and MyViewController.swift. First <code>ViewController1</code> is loaded in the application and then it navigates to <code>MyViewController.swift</code>. Upon certain situation in <code>MyViewController</code> we want to do something on <code>ViewController1</code>. All we have to do is send an event from <code>MyViewController</code> to <code>ViewController1</code>. The events here in iOS is known as <code>NSNotification</code>. So the setup is as shown&nbsp;here.</p>
-<pre><code class="lang-swift"><span class="comment">// MyViewController.swift</span>
-<span class="comment">// Dispatch Event from wherever necessary</span>
-<span class="keyword">let</span> notification = <span class="type">NSNotification</span>(name: <span class="string">"myNotification"</span> , object: <span class="keyword">self</span>, userInfo:<span class="literal">nil</span> )
-<span class="type">NSNotificationCenter</span>.defaultCenter().postNotification(notification)
-</code></pre>
-<p>Then in the other file just add the listeners to listen to the events and call the methods to handle&nbsp;them.</p>
-<pre><code class="lang-swift"><span class="comment">// ViewController1.swift</span>
-<span class="keyword">override</span> <span class="function"><span class="keyword">func</span> <span class="title">viewDidLoad</span><span class="params">()</span></span> {
-    <span class="keyword">super</span>.viewDidLoad()
-    <span class="comment">// Listen for Event</span>
-    <span class="type">NSNotificationCenter</span>.defaultCenter().addObserver( <span class="keyword">self</span>, selector: #selector(onGotNotification),name: <span class="string">"myNotification"</span>, object: <span class="literal">nil</span> )
-}
-<span class="keyword">private</span> <span class="function"><span class="keyword">func</span> <span class="title">onGotNotification</span><span class="params">(notification:NSNotification)</span></span>{
-    <span class="built_in">print</span>(<span class="string">"name="</span>,notification.name)
-    <span class="built_in">print</span>(<span class="string">"object="</span>,notification.object)
-    <span class="comment">//</span>
-    <span class="keyword">let</span> myViewController:<span class="type">MyViewController</span> = notification.object <span class="keyword">as</span>! <span class="type">MyViewController</span>
-    myViewController.someMethod()
-}
-</code></pre>
-<p>Happy&nbsp;coding.</p>
-
+          <section class="content"><p>While Apple has put a lot of design patterns to develop applications for iOS, the flexibility of an event driven application development surely has its merits. The very de-coupled application is so nice to play around with. Well, the downside is to find where is what. For a strictly coupled application, one can definitely find the root of the roots. But for a de-coupled application its very difficult to find what is happening where. Then comes good practices of code commeting and logger messages to rescue. That topic is a separate post I&nbsp;hope.            </p>
+<p>Lets see how in <a href="https://developer.apple.com/swift/">swift</a> we could write an event driven&nbsp;application.</p>
+<p>
+            <p class="more"><a href="http://saumya.github.io/ray/articles/68/">more</a></p>
           </section>
         </article>
         <article class="article intro">
