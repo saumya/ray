@@ -5,9 +5,71 @@
     <atom:link href="http://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Thu, 30 Jun 2016 05:30:00 +0630</pubDate>
+    <pubDate>Fri, 08 Jul 2016 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Realm in Swift</title>
+      <link>http://saumya.github.io/ray/articles/69/</link>
+      <pubDate>Fri, 08 Jul 2016 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">http://saumya.github.io/ray/articles/69/</guid>
+      <author></author>
+      <description>&lt;p&gt;Working on a local storage for persistence in data has a lot of solutions. While we can definitely go ahead and just store &lt;code&gt;String&lt;/code&gt; values and play with it, Apple provides some solutions to play with local data as if its a database. The thing is, its not that intuitive. Other solutions are there, but the simplicity of &lt;a href=&quot;https://realm.io/&quot;&gt;Realm.io&lt;/a&gt; is nice and addictive.            &lt;/p&gt;
+&lt;p&gt;Lets see how in &lt;a href=&quot;https://developer.apple.com/swift/&quot;&gt;swift&lt;/a&gt; we could play with &lt;a href=&quot;https://realm.io/&quot;&gt;Realm&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-swift&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;do&lt;/span&gt; {
+
+    &lt;span class=&quot;comment&quot;&gt;// clear the whole DB if Realm throws Errors saying need to migrate&lt;/span&gt;
+    &lt;span class=&quot;type&quot;&gt;Realm&lt;/span&gt;.&lt;span class=&quot;type&quot;&gt;Configuration&lt;/span&gt;.defaultConfiguration.deleteRealmIfMigrationNeeded = &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt;
+    &lt;span class=&quot;comment&quot;&gt;// initiate DB and keep a ref&lt;/span&gt;
+    &lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt;.realm = &lt;span class=&quot;keyword&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;type&quot;&gt;Realm&lt;/span&gt;()
+
+    &lt;span class=&quot;comment&quot;&gt;// query to get all models of a PArticular type&lt;/span&gt;
+    &lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; pModel = &lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt;.realm!.objects(&lt;span class=&quot;type&quot;&gt;MyModel&lt;/span&gt;.&lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt;)
+
+    &lt;span class=&quot;comment&quot;&gt;// check for already saved data&lt;/span&gt;
+    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(pModel.&lt;span class=&quot;built_in&quot;&gt;count&lt;/span&gt; == &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;){
+        &lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;=== No Saved Data Found === XXX &quot;&lt;/span&gt;)
+
+        &lt;span class=&quot;comment&quot;&gt;// initiate a Model&lt;/span&gt;
+        &lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; appInfo:&lt;span class=&quot;type&quot;&gt;MyModel&lt;/span&gt; = &lt;span class=&quot;type&quot;&gt;MyModel&lt;/span&gt;()
+
+        &lt;span class=&quot;comment&quot;&gt;//write a model to DB&lt;/span&gt;
+        &lt;span class=&quot;keyword&quot;&gt;try&lt;/span&gt;! &lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt;.realm?.write({
+            &lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt;.realm!.add(appInfo)
+        })
+
+    }&lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt;{
+        &lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;=== Saved Data Found ===&quot;&lt;/span&gt;)
+        &lt;span class=&quot;comment&quot;&gt;// get the first model &lt;/span&gt;
+        &lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; appInfo:&lt;span class=&quot;type&quot;&gt;MyModel&lt;/span&gt; = pModel.first!
+    }
+
+} &lt;span class=&quot;keyword&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; error &lt;span class=&quot;keyword&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;type&quot;&gt;NSError&lt;/span&gt; {
+    &lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;init : Realm : ERROR :&quot;&lt;/span&gt;)
+    &lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;(error)
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;For writing into the database   &lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-swift&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;saveUserId&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(userId:String,AndPhone:String)&lt;/span&gt;&lt;/span&gt;{
+
+    &lt;span class=&quot;keyword&quot;&gt;do&lt;/span&gt;{
+        &lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt;.realmRef?.beginWrite()
+
+        &lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt;.pivdModel!.registeredUserId = userId
+        &lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt;.pivdModel!.registeredMobileNumber = &lt;span class=&quot;type&quot;&gt;AndPhone&lt;/span&gt;
+
+        &lt;span class=&quot;keyword&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt;.realmRef?.commitWrite()
+
+    }&lt;span class=&quot;keyword&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; error &lt;span class=&quot;keyword&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;type&quot;&gt;NSError&lt;/span&gt;{
+        &lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;(error)
+    }
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Happy coding.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>NSNotification in Swift</title>
       <link>http://saumya.github.io/ray/articles/68/</link>

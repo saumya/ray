@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <title>Realm in Swift - Saumya
+    </title>
+    <link rel="alternate" href="http://saumya.github.io/ray/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
+    <link rel="stylesheet" href="http://saumya.github.io/ray/css/main.css">
+    <link rel="stylesheet" href="http://saumya.github.io/ray/css/saumya.css">
+  </head>
+  <body class="article-detail">
+    <header class="header">
+      <div class="content-wrap">
+        <h1>Realm in Swift</h1>
+        <p class="author">Written by <span class="author"><a href="mailto:contact@saumyaray.com">Saumya</a></span>
+        </p>
+        <p class="date">08. July 2016</p>
+      </div>
+    </header>
+    <div id="content">
+      <div class="content-wrap">
+        <article class="article">
+          <section class="content"><p>Working on a local storage for persistence in data has a lot of solutions. While we can definitely go ahead and just store <code>String</code> values and play with it, Apple provides some solutions to play with local data as if its a database. The thing is, its not that intuitive. Other solutions are there, but the simplicity of <a href="https://realm.io/">Realm.io</a> is nice and&nbsp;addictive.            </p>
+<p>Lets see how in <a href="https://developer.apple.com/swift/">swift</a> we could play with <a href="https://realm.io/">Realm</a>.</p>
+<p><span class="more"></span></p>
+<pre><code class="lang-swift"><span class="keyword">do</span> {
+
+    <span class="comment">// clear the whole <span class="caps">DB</span> if Realm throws Errors saying need to migrate</span>
+    <span class="type">Realm</span>.<span class="type">Configuration</span>.defaultConfiguration.deleteRealmIfMigrationNeeded = <span class="literal">true</span>
+    <span class="comment">// initiate <span class="caps">DB</span> and keep a ref</span>
+    <span class="keyword">self</span>.realm = <span class="keyword">try</span> <span class="type">Realm</span>()
+
+    <span class="comment">// query to get all models of a PArticular type</span>
+    <span class="keyword">let</span> pModel = <span class="keyword">self</span>.realm!.objects(<span class="type">MyModel</span>.<span class="keyword">self</span>)
+
+    <span class="comment">// check for already saved data</span>
+    <span class="keyword">if</span>(pModel.<span class="built_in">count</span> == <span class="number">0</span>){
+        <span class="built_in">print</span>(<span class="string">"=== No Saved Data Found === <span class="caps">XXX</span> "</span>)
+
+        <span class="comment">// initiate a Model</span>
+        <span class="keyword">let</span> appInfo:<span class="type">MyModel</span> = <span class="type">MyModel</span>()
+
+        <span class="comment">//write a model to <span class="caps">DB</span></span>
+        <span class="keyword">try</span>! <span class="keyword">self</span>.realm?.write({
+            <span class="keyword">self</span>.realm!.add(appInfo)
+        })
+
+    }<span class="keyword">else</span>{
+        <span class="built_in">print</span>(<span class="string">"=== Saved Data Found ==="</span>)
+        <span class="comment">// get the first model </span>
+        <span class="keyword">let</span> appInfo:<span class="type">MyModel</span> = pModel.first!
+    }
+
+} <span class="keyword">catch</span> <span class="keyword">let</span> error <span class="keyword">as</span> <span class="type">NSError</span> {
+    <span class="built_in">print</span>(<span class="string">"init : Realm : <span class="caps">ERROR</span> :"</span>)
+    <span class="built_in">print</span>(error)
+}
+</code></pre>
+<p>For writing into the&nbsp;database   </p>
+<pre><code class="lang-swift"><span class="keyword">public</span> <span class="function"><span class="keyword">func</span> <span class="title">saveUserId</span><span class="params">(userId:String,AndPhone:String)</span></span>{
+
+    <span class="keyword">do</span>{
+        <span class="keyword">self</span>.realmRef?.beginWrite()
+
+        <span class="keyword">self</span>.pivdModel!.registeredUserId = userId
+        <span class="keyword">self</span>.pivdModel!.registeredMobileNumber = <span class="type">AndPhone</span>
+
+        <span class="keyword">try</span> <span class="keyword">self</span>.realmRef?.commitWrite()
+
+    }<span class="keyword">catch</span> <span class="keyword">let</span> error <span class="keyword">as</span> <span class="type">NSError</span>{
+        <span class="built_in">print</span>(error)
+    }
+
+}
+</code></pre>
+<p>Happy&nbsp;coding.</p>
+</section>
+        </article>
+      </div>
+    </div>
+    <footer>
+      <div class="content-wrap">
+        <div class="nav"><a href="http://saumya.github.io/ray/">« Full blog</a></div>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+          var disqus_shortname = 'saumya';
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        <section class="about"><p><a href="http://www.saumyaray.com">Saumya</a> believes in The God.</p>
+<p>A maker of things and curious about everything. Continuous learning is, what fuels him. This blog itself, reflects one of many things he is trying at all the time.</p>
+<p>He is <a href="https://twitter.com/saumya">@saumya</a> on Twitter. </p>
+<span class="nav"><a href="http://saumya.github.io/ray/">Blog Home</a><a href="http://saumya.github.io/ray/archive.html">Archives</a></span>
+        </section>
+        <section class="copy">
+          <p>&copy; 2016 saumya ray &mdash; powered by&nbsp;     <a href="https://github.com/jnordberg/wintersmith">Wintersmith&nbsp;</a>
+            <p> <a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
+          </p>
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>
