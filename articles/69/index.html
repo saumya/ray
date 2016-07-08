@@ -32,7 +32,7 @@
     <span class="comment">// initiate <span class="caps">DB</span> and keep a ref</span>
     <span class="keyword">self</span>.realm = <span class="keyword">try</span> <span class="type">Realm</span>()
 
-    <span class="comment">// query to get all models of a PArticular type</span>
+    <span class="comment">// query to get all models of a Particular type</span>
     <span class="keyword">let</span> pModel = <span class="keyword">self</span>.realm!.objects(<span class="type">MyModel</span>.<span class="keyword">self</span>)
 
     <span class="comment">// check for already saved data</span>
@@ -61,13 +61,16 @@
 <p>For writing into the&nbsp;database   </p>
 <pre><code class="lang-swift"><span class="keyword">public</span> <span class="function"><span class="keyword">func</span> <span class="title">saveUserId</span><span class="params">(userId:String,AndPhone:String)</span></span>{
 
+    <span class="comment">// get the realm reference we saved above and start interacting with it</span>
+
     <span class="keyword">do</span>{
-        <span class="keyword">self</span>.realmRef?.beginWrite()
+
+        <span class="keyword">self</span>.realm?.beginWrite()
 
         <span class="keyword">self</span>.pivdModel!.registeredUserId = userId
         <span class="keyword">self</span>.pivdModel!.registeredMobileNumber = <span class="type">AndPhone</span>
 
-        <span class="keyword">try</span> <span class="keyword">self</span>.realmRef?.commitWrite()
+        <span class="keyword">try</span> <span class="keyword">self</span>.realm?.commitWrite()
 
     }<span class="keyword">catch</span> <span class="keyword">let</span> error <span class="keyword">as</span> <span class="type">NSError</span>{
         <span class="built_in">print</span>(error)

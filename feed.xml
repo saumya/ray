@@ -24,7 +24,7 @@
     &lt;span class=&quot;comment&quot;&gt;// initiate DB and keep a ref&lt;/span&gt;
     &lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt;.realm = &lt;span class=&quot;keyword&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;type&quot;&gt;Realm&lt;/span&gt;()
 
-    &lt;span class=&quot;comment&quot;&gt;// query to get all models of a PArticular type&lt;/span&gt;
+    &lt;span class=&quot;comment&quot;&gt;// query to get all models of a Particular type&lt;/span&gt;
     &lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; pModel = &lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt;.realm!.objects(&lt;span class=&quot;type&quot;&gt;MyModel&lt;/span&gt;.&lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt;)
 
     &lt;span class=&quot;comment&quot;&gt;// check for already saved data&lt;/span&gt;
@@ -53,13 +53,16 @@
 &lt;p&gt;For writing into the database   &lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;lang-swift&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;saveUserId&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(userId:String,AndPhone:String)&lt;/span&gt;&lt;/span&gt;{
 
+    &lt;span class=&quot;comment&quot;&gt;// get the realm reference we saved above and start interacting with it&lt;/span&gt;
+
     &lt;span class=&quot;keyword&quot;&gt;do&lt;/span&gt;{
-        &lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt;.realmRef?.beginWrite()
+
+        &lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt;.realm?.beginWrite()
 
         &lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt;.pivdModel!.registeredUserId = userId
         &lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt;.pivdModel!.registeredMobileNumber = &lt;span class=&quot;type&quot;&gt;AndPhone&lt;/span&gt;
 
-        &lt;span class=&quot;keyword&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt;.realmRef?.commitWrite()
+        &lt;span class=&quot;keyword&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt;.realm?.commitWrite()
 
     }&lt;span class=&quot;keyword&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; error &lt;span class=&quot;keyword&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;type&quot;&gt;NSError&lt;/span&gt;{
         &lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;(error)
