@@ -5,9 +5,39 @@
     <atom:link href="http://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Fri, 08 Jul 2016 05:30:00 +0630</pubDate>
+    <pubDate>Wed, 05 Oct 2016 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Fixing NPM permissions</title>
+      <link>http://saumya.github.io/ray/articles/70/</link>
+      <pubDate>Wed, 05 Oct 2016 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">http://saumya.github.io/ray/articles/70/</guid>
+      <author></author>
+      <description>&lt;p&gt;The problem is to use &lt;code&gt;sudo&lt;/code&gt; everywhere and try to fix things that way. Especially while dealing with global &lt;a href=&quot;https://www.npmjs.com/&quot;&gt;NPM&lt;/a&gt; modules. Sometimes it may happen that &lt;code&gt;sudo&lt;/code&gt; also will fail to install.   &lt;/p&gt;
+&lt;p&gt;&lt;code&gt;TL;DR:&lt;/code&gt; The fix I am using is to &lt;code&gt;change&lt;/code&gt; the &lt;code&gt;user permission&lt;/code&gt; to &lt;code&gt;current user&lt;/code&gt;.   &lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Here are some basic commads to get the things going.         &lt;/p&gt;
+&lt;p&gt;Get the global npm modules path &lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;npm config get prefix
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Details about all the files and their permission to owners&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;ls -la /usr/local/lib/node_modules
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Change the owner of the files recursively to the new user name&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo chown -R user_name /usr/local/
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Prints the current user&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;whoami
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;When you are using &lt;code&gt;sudo&lt;/code&gt; to install anything, it will create a folder named &lt;code&gt;.staging&lt;/code&gt; as &lt;code&gt;root&lt;/code&gt; owner, inside the &lt;code&gt;node_modules&lt;/code&gt; folder and keep the installed module there but could not move the module to actual folder and so eventually fail. &lt;/p&gt;
+&lt;p&gt;The fix is to change the permission of the &lt;code&gt;/usr/local/&lt;/code&gt; recursively to the current user. Then install the modules &lt;code&gt;without&lt;/code&gt; &lt;code&gt;sudo&lt;/code&gt;.  Well, the &lt;a href=&quot;https://docs.npmjs.com/getting-started/fixing-npm-permissions&quot;&gt;official video on the doc&lt;/a&gt; says you can actually just change the permission of below three directories inside &lt;code&gt;/usr/local/&lt;/code&gt; instead of all the directories inside &lt;code&gt;/usr/local/&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;/user/local/lib/node_modules&lt;/li&gt;
+&lt;li&gt;/usr/local/bin/&lt;/li&gt;
+&lt;li&gt;/usr/local/share/&lt;/li&gt;
+&lt;/ul&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/bxvybxYFq2o&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Happy nodding.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>Realm in Swift</title>
       <link>http://saumya.github.io/ray/articles/69/</link>
