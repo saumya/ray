@@ -23,7 +23,7 @@
 &lt;p&gt;The fix is a two step process.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Manully copy the HTML pages to &lt;code&gt;android/app/src/main/assets&lt;/code&gt; folder&lt;/li&gt;
-&lt;li&gt;Change the reference in code to &lt;code&gt;file:///&lt;/code&gt; instead of &lt;code&gt;./ or ../&lt;/code&gt; for example &lt;code&gt;file:///android_asset/generic.html&lt;/code&gt;       &lt;/li&gt;
+&lt;li&gt;Change the reference in code to &lt;code&gt;file:///android_asset&lt;/code&gt; instead of &lt;code&gt;./ or ../&lt;/code&gt; for example &lt;code&gt;file:///android_asset/generic.html&lt;/code&gt;       &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;We are done. Build and release your Android app.           &lt;/p&gt;
 &lt;p&gt;Just remember that, whatever is available inside &lt;code&gt;android/app/src/main/assets&lt;/code&gt; folder can be referenced with &lt;code&gt;file:///android_asset/&lt;/code&gt; URL and life is good. The WebView code looks as below.         &lt;/p&gt;

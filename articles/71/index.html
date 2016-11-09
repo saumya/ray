@@ -31,7 +31,7 @@
 <p>The fix is a two step&nbsp;process.</p>
 <ol>
 <li>Manully copy the <span class="caps">HTML</span> pages to <code>android/app/src/main/assets</code> folder</li>
-<li>Change the reference in code to <code>file:///</code> instead of <code>./ or ../</code> for example <code>file:///android_asset/generic.html</code>       </li>
+<li>Change the reference in code to <code>file:///android_asset</code> instead of <code>./ or ../</code> for example <code>file:///android_asset/generic.html</code>       </li>
 </ol>
 <p>We are done. Build and release your Android&nbsp;app.           </p>
 <p>Just remember that, whatever is available inside <code>android/app/src/main/assets</code> folder can be referenced with <code>file:///android_asset/</code> <span class="caps">URL</span> and life is good. The WebView code looks as&nbsp;below.         </p>
