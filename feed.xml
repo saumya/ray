@@ -5,9 +5,32 @@
     <atom:link href="http://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Wed, 05 Oct 2016 05:30:00 +0630</pubDate>
+    <pubDate>Wed, 09 Nov 2016 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>React Native, Android and Loading embeded HTML pages in WebView</title>
+      <link>http://saumya.github.io/ray/articles/71/</link>
+      <pubDate>Wed, 09 Nov 2016 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">http://saumya.github.io/ray/articles/71/</guid>
+      <author></author>
+      <description>&lt;p&gt;The problem is in Android release builds, where the local HTML files do not load. This is not a problem in debug builds. I have not tested the final iOS builds. Loading of a local html file in a webview in &lt;a href=&quot;https://facebook.github.io/react-native/&quot;&gt;React Native&lt;/a&gt; is as simple as this.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;WebView source={{ uri: &amp;#39;../assets/generic.html&amp;#39; }} /&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;First thing is, the code above might not work. Why I say &lt;code&gt;might&lt;/code&gt; is, it sometimes works ! Well, the fix to this situation is to use a &lt;code&gt;require&lt;/code&gt; as shown below. Which works everywhere, all the time.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;WebView source={ require(&amp;#39;../assets/generic.html&amp;#39;) } /&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;All is fine till you are building and testing from your machine with USB debugging. Once you move forward to a release build and test the app on a device, the HTML pages stop to load! Un/Fortunately its a known issue, look &lt;a href=&quot;https://github.com/facebook/react-native/issues/505&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;https://github.com/facebook/react-native/issues/6004&quot;&gt;here&lt;/a&gt;. If you have gone through the links, then probably got the solution. I will just keep a note here for easy reference.     &lt;/p&gt;
+&lt;p&gt;The fix is a two step process.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Manully copy the HTML pages to &lt;code&gt;android/app/src/main/assets&lt;/code&gt; folder&lt;/li&gt;
+&lt;li&gt;Change the reference in code to &lt;code&gt;file:///&lt;/code&gt; instead of &lt;code&gt;./ or ../&lt;/code&gt; for example &lt;code&gt;file:///android_asset/generic.html&lt;/code&gt;       &lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;We are done. Build and release your Android app.           &lt;/p&gt;
+&lt;p&gt;Just remember that, whatever is available inside &lt;code&gt;android/app/src/main/assets&lt;/code&gt; folder can be referenced with &lt;code&gt;file:///android_asset/&lt;/code&gt; URL and life is good. The WebView code looks as below.         &lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;WebView source={{ uri: &amp;#39;file:///android_asset/generic.html&amp;#39; }} /&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Cheers&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>Fixing NPM permissions</title>
       <link>http://saumya.github.io/ray/articles/70/</link>
