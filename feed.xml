@@ -5,9 +5,55 @@
     <atom:link href="https://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>https://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Wed, 09 Nov 2016 05:30:00 +0630</pubDate>
+    <pubDate>Fri, 11 Nov 2016 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>React Native on Android, changing app name, package name and version code</title>
+      <link>https://saumya.github.io/ray/articles/72/</link>
+      <pubDate>Fri, 11 Nov 2016 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/72/</guid>
+      <author></author>
+      <description>&lt;p&gt;There are things one may need to change in the release build for Android. 
+Things like &lt;code&gt;App Name&lt;/code&gt; are a case here. Suppose you start developing by initialising to a generic &lt;code&gt;App Name&lt;/code&gt; and at the time of release one need to change to the actual &lt;code&gt;App Name&lt;/code&gt;. Same goes for &lt;code&gt;package name&lt;/code&gt;, which is visible in &lt;code&gt;Google Play Store&lt;/code&gt; and as well in the &lt;code&gt;App details&lt;/code&gt; of the Android phone.          &lt;/p&gt;
+&lt;h3 id=&quot;app-name&quot;&gt;App Name&lt;/h3&gt;
+&lt;p&gt;Lets start with &lt;code&gt;App Name&lt;/code&gt;. This is the name thats visible in users screen. To change this name, you have to change it in &lt;code&gt;strings.xml&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Full path is &lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;android/app/src/main/res/values/strings.xml
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;and the entry is &lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;string name=&amp;quot;app_name&amp;quot;&amp;gt;My Android App&amp;lt;/string&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;package-name&quot;&gt;Package name&lt;/h3&gt;
+&lt;p&gt;This is shown in the &lt;code&gt;Play Store&lt;/code&gt; and the details in &lt;code&gt;About App&lt;/code&gt; of your Android device. This should say something like &lt;code&gt;com.myapp&lt;/code&gt; or &lt;code&gt;com.company.appname&lt;/code&gt; or something similar. &lt;/p&gt;
+&lt;p&gt;To change this, you have to edit four files. &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;android/app/src/main/java/com/reactNativeSampleApp/MainActivity.java&lt;/li&gt;
+&lt;li&gt;android/app/src/main/java/com/reactNativeSampleApp/MainApplication.java&lt;/li&gt;
+&lt;li&gt;android/app/src/main/AndroidManifest.xml ( optional as per my experience )&lt;/li&gt;
+&lt;li&gt;android/app/build.gradle&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The first two Java files have the package name as something like below.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;package com.ReactNativeApp;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Change it to your desired package name.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;package com.myComp.MyApp;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;At this point it should be required to make the physical changes to the Java files in the proper package. But somehow it does not work! Rather it breaks the build. Just keep in mind, that we have changed the &lt;code&gt;package&lt;/code&gt; names and that should reflect in the actual package. Incase the builds break, you know where to find.&lt;/p&gt;
+&lt;h3 id=&quot;version-code&quot;&gt;Version Code&lt;/h3&gt;
+&lt;p&gt;This is a number which Google Playstore recognises and does not allow to upload another APK having the same value. Just think of this as build number. The same build can not be uploaded twice. So the point is everytime, you make a build or release-apk, you must have a different number or more specifically incremental number. If your first version of the application has a version code of 5, then the second version must have a version code which is more than 5. &lt;/p&gt;
+&lt;p&gt;Along with version code, you might need to update the &lt;code&gt;version name&lt;/code&gt; also. Which is the version number of your application and visible in Google Play Store. &lt;/p&gt;
+&lt;p&gt;While &lt;code&gt;version code&lt;/code&gt; is used by &lt;code&gt;Play Store&lt;/code&gt; to manage your APK, &lt;code&gt;version name&lt;/code&gt; is used by &lt;code&gt;Play Store&lt;/code&gt; to notify user that an update to your app is available.&lt;/p&gt;
+&lt;p&gt;To change these two values, you need to edit &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;android/app/build.gradle&lt;/li&gt;
+&lt;li&gt;android/app/src/main/AndroidManifest.xml ( optional as per my experience )&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These settings are taken from &lt;code&gt;build.gradle&lt;/code&gt; while making a build with &lt;code&gt;gradle&lt;/code&gt; but for the purpose of sanity, its better to change in both of the files above. &lt;/p&gt;
+&lt;h3 id=&quot;making-the-release-build&quot;&gt;Making the release build&lt;/h3&gt;
+&lt;p&gt;Finally making a release build is done from inside the &lt;code&gt;android&lt;/code&gt; folder of the &lt;code&gt;React Native&lt;/code&gt; application. The commands are as below.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;./gradlew clean
+./gradlew assembleRelease
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Cheers&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>React Native, Android and Loading embeded HTML pages in WebView</title>
       <link>https://saumya.github.io/ray/articles/71/</link>
