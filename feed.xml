@@ -47,6 +47,7 @@ Things like &lt;code&gt;App Name&lt;/code&gt; are a case here. Suppose you start
 &lt;li&gt;android/app/src/main/AndroidManifest.xml ( optional as per my experience )&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;These settings are taken from &lt;code&gt;build.gradle&lt;/code&gt; while making a build with &lt;code&gt;gradle&lt;/code&gt; but for the purpose of sanity, its better to change in both of the files above. &lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/saumya/aRnDot36One/commit/7c1855bc1e5eee29294278e5a849ef9693730902&quot;&gt;Here is a reference change&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id=&quot;making-the-release-build&quot;&gt;Making the release build&lt;/h3&gt;
 &lt;p&gt;Finally making a release build is done from inside the &lt;code&gt;android&lt;/code&gt; folder of the &lt;code&gt;React Native&lt;/code&gt; application. The commands are as below.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;./gradlew clean
