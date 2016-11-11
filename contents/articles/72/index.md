@@ -9,7 +9,7 @@ There are things one may need to change in the release build for Android.
 Things like `App Name` are a case here. Suppose you start developing by initialising to a generic `App Name` and at the time of release one need to change to the actual `App Name`. Same goes for `package name`, which is visible in `Google Play Store` and as well in the `App details` of the Android phone. 
 <span class="more"></span>
 
-### Generate with correct names
+# Generate with correct names
 
 Before we move forward and change things in the final version of the app. There is a way to fix this from the beginning. Generate a `react native` app with a proper package name with the command below.
 
