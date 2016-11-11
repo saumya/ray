@@ -27,42 +27,8 @@
             <h2><a href="https://saumya.github.io/ray/articles/72/">React Native on Android, changing app name, package name and version code</a></h2>
           </header>
           <section class="content"><p>There are things one may need to change in the release build for Android. 
-Things like <code>App Name</code> are a case here. Suppose you start developing by initialising to a generic <code>App Name</code> and at the time of release one need to change to the actual <code>App Name</code>. Same goes for <code>package name</code>, which is visible in <code>Google Play Store</code> and as well in the <code>App details</code> of the Android&nbsp;phone.          </p>
-<h3 id="app-name">App&nbsp;Name</h3>
-<p>Lets start with <code>App Name</code>. This is the name thats visible in users screen. To change this name, you have to change it in <code>strings.xml</code>.</p>
-<p>Full path&nbsp;is </p>
-<pre><code>android/app/src/main/res/values/strings.xml
-</code></pre><p>and the entry&nbsp;is </p>
-<pre><code>&lt;string name=&quot;app_name&quot;&gt;My Android App&lt;/string&gt;
-</code></pre><h3 id="package-name">Package&nbsp;name</h3>
-<p>This is shown in the <code>Play Store</code> and the details in <code>About App</code> of your Android device. This should say something like <code>com.myapp</code> or <code>com.company.appname</code> or something&nbsp;similar. </p>
-<p>To change this, you have to edit four&nbsp;files. </p>
-<ul>
-<li>android/app/src/main/java/com/reactNativeSampleApp/MainActivity.java</li>
-<li>android/app/src/main/java/com/reactNativeSampleApp/MainApplication.java</li>
-<li>android/app/src/main/AndroidManifest.xml ( optional as per my experience&nbsp;)</li>
-<li>android/app/build.gradle</li>
-</ul>
-<p>The first two Java files have the package name as something like&nbsp;below.</p>
-<pre><code>package com.ReactNativeApp;
-</code></pre><p>Change it to your desired package&nbsp;name.</p>
-<pre><code>package com.myComp.MyApp;
-</code></pre><p>At this point it should be required to make the physical changes to the Java files in the proper package. But somehow it does not work! Rather it breaks the build. Just keep in mind, that we have changed the <code>package</code> names and that should reflect in the actual package. Incase the builds break, you know where to&nbsp;find.</p>
-<h3 id="version-code">Version&nbsp;Code</h3>
-<p>This is a number which Google Playstore recognises and does not allow to upload another <span class="caps">APK</span> having the same value. Just think of this as build number. The same build can not be uploaded twice. So the point is everytime, you make a build or release-apk, you must have a different number or more specifically incremental number. If your first version of the application has a version code of 5, then the second version must have a version code which is more than&nbsp;5. </p>
-<p>Along with version code, you might need to update the <code>version name</code> also. Which is the version number of your application and visible in Google Play&nbsp;Store. </p>
-<p>While <code>version code</code> is used by <code>Play Store</code> to manage your <span class="caps">APK</span>, <code>version name</code> is used by <code>Play Store</code> to notify user that an update to your app is&nbsp;available.</p>
-<p>To change these two values, you need to&nbsp;edit </p>
-<ul>
-<li>android/app/build.gradle</li>
-<li>android/app/src/main/AndroidManifest.xml ( optional as per my experience&nbsp;)</li>
-</ul>
-<p>These settings are taken from <code>build.gradle</code> while making a build with <code>gradle</code> but for the purpose of sanity, its better to change in both of the files&nbsp;above. </p>
-<h3 id="making-the-release-build">Making the release&nbsp;build</h3>
-<p>Finally making a release build is done from inside the <code>android</code> folder of the <code>React Native</code> application. The commands are as&nbsp;below.</p>
-<pre><code>./gradlew clean
-./gradlew assembleRelease
-</code></pre><p>
+Things like <code>App Name</code> are a case here. Suppose you start developing by initialising to a generic <code>App Name</code> and at the time of release one need to change to the actual <code>App Name</code>. Same goes for <code>package name</code>, which is visible in <code>Google Play Store</code> and as well in the <code>App details</code> of the Android&nbsp;phone. 
+
             <p class="more"><a href="https://saumya.github.io/ray/articles/72/">more</a></p>
           </section>
         </article>

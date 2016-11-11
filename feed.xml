@@ -15,7 +15,8 @@
       <guid isPermaLink="true">https://saumya.github.io/ray/articles/72/</guid>
       <author></author>
       <description>&lt;p&gt;There are things one may need to change in the release build for Android. 
-Things like &lt;code&gt;App Name&lt;/code&gt; are a case here. Suppose you start developing by initialising to a generic &lt;code&gt;App Name&lt;/code&gt; and at the time of release one need to change to the actual &lt;code&gt;App Name&lt;/code&gt;. Same goes for &lt;code&gt;package name&lt;/code&gt;, which is visible in &lt;code&gt;Google Play Store&lt;/code&gt; and as well in the &lt;code&gt;App details&lt;/code&gt; of the Android phone.          &lt;/p&gt;
+Things like &lt;code&gt;App Name&lt;/code&gt; are a case here. Suppose you start developing by initialising to a generic &lt;code&gt;App Name&lt;/code&gt; and at the time of release one need to change to the actual &lt;code&gt;App Name&lt;/code&gt;. Same goes for &lt;code&gt;package name&lt;/code&gt;, which is visible in &lt;code&gt;Google Play Store&lt;/code&gt; and as well in the &lt;code&gt;App details&lt;/code&gt; of the Android phone. 
+&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;h3 id=&quot;app-name&quot;&gt;App Name&lt;/h3&gt;
 &lt;p&gt;Lets start with &lt;code&gt;App Name&lt;/code&gt;. This is the name thats visible in users screen. To change this name, you have to change it in &lt;code&gt;strings.xml&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Full path is &lt;/p&gt;
@@ -50,8 +51,7 @@ Things like &lt;code&gt;App Name&lt;/code&gt; are a case here. Suppose you start
 &lt;p&gt;Finally making a release build is done from inside the &lt;code&gt;android&lt;/code&gt; folder of the &lt;code&gt;React Native&lt;/code&gt; application. The commands are as below.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;./gradlew clean
 ./gradlew assembleRelease
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Cheers&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Cheers&lt;/p&gt;
 </description>
     </item>
     <item>
