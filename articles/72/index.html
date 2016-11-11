@@ -25,6 +25,12 @@
           <section class="content"><p>There are things one may need to change in the release build for Android. 
 Things like <code>App Name</code> are a case here. Suppose you start developing by initialising to a generic <code>App Name</code> and at the time of release one need to change to the actual <code>App Name</code>. Same goes for <code>package name</code>, which is visible in <code>Google Play Store</code> and as well in the <code>App details</code> of the Android phone. 
 <span class="more"></span></p>
+<h3 id="generate-the-app-with-correct-package">Generate the App with correct&nbsp;package</h3>
+<p>Before we move forward and change things in the final version of the app. There is a way to fix this from the beginning. Generate a <code>react native</code> app with a proper package name with the command&nbsp;below.</p>
+<pre><code>react-native init MyAwesome -package &quot;com.saumya.app&quot;
+</code></pre><p>But however if at all you have initialised the app&nbsp;as  </p>
+<pre><code>react-native init RnApp
+</code></pre><p>then the option remains to hack things in the end. So read&nbsp;on.</p>
 <h3 id="app-name">App&nbsp;Name</h3>
 <p>Lets start with <code>App Name</code>. This is the name thats visible in users screen. To change this name, you have to change it in <code>strings.xml</code>.</p>
 <p>Full path&nbsp;is </p>
