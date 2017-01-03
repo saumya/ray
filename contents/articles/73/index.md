@@ -8,7 +8,7 @@ template: article.jade
  - Moved to a new place
  - Moved to a new company (rather new kind of employment) 
 
-<span class="more"></span>
+
 
  - Chose what to do for that year and done that
  - Started with some UX design and consulting for clients with a team
@@ -21,7 +21,7 @@ template: article.jade
  - Done and delivered a project in ReactNative for Android          
 
 
-### Opensource 
+### Contribution 
 
  - Github activities are increased.
 
@@ -33,7 +33,8 @@ template: article.jade
 
  - A lot of learning in terms of client and business understandings 
  - Moved to Linux (Ubuntu) from macOS as primary dev-environment
- - Redesigned [my site][3]                    
+ - Redesigned [my site][3] 
+ - Cold drinks consumption is below a litre in the whole year :)                    
 
 
 Still I feel, I could have done more, I am looking at you 2017.
