@@ -5,9 +5,51 @@
     <atom:link href="https://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>https://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Fri, 11 Nov 2016 05:30:00 +0630</pubDate>
+    <pubDate>Tue, 03 Jan 2017 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Reflecting on 2016.</title>
+      <link>https://saumya.github.io/ray/articles/73/</link>
+      <pubDate>Tue, 03 Jan 2017 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/73/</guid>
+      <author></author>
+      <description>&lt;ul&gt;
+&lt;li&gt;Moved to a new place&lt;/li&gt;
+&lt;li&gt;Moved to a new company (rather new kind of employment) &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Chose what to do for that year and done that&lt;/li&gt;
+&lt;li&gt;Started with some UX design and consulting for clients with a team&lt;/li&gt;
+&lt;li&gt;Educated the team about the UX design and work flow and the tools&lt;/li&gt;
+&lt;li&gt;I together with the team delivered the UX to the clients&lt;/li&gt;
+&lt;li&gt;Done some plugins for Wordpress customisation&lt;/li&gt;
+&lt;li&gt;Written some APIs to connect to Wordpress from a mobile App&lt;/li&gt;
+&lt;li&gt;Swift was the call of the mid-year and done that for almost 4 months&lt;/li&gt;
+&lt;li&gt;Well the end of the year was to React&lt;/li&gt;
+&lt;li&gt;Done and delivered a project in ReactNative for Android          &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;contribution&quot;&gt;Contribution&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Github activities are increased.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;https://c1.staticflickr.com/1/389/31206649944_27be46b4c5_z.jpg&quot; alt=&quot;Opensource contribution on Github&quot;&gt; &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Released my first ever library, &lt;a href=&quot;http://lib.haxe.org/p/raymp&quot;&gt;raymp on haxelib&lt;/a&gt; and &lt;a href=&quot;https://github.com/saumya/raymp&quot;&gt;its opensorce&lt;/a&gt; too.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;general&quot;&gt;General&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;A lot of learning in terms of client and business understandings &lt;/li&gt;
+&lt;li&gt;Moved to Linux (Ubuntu) from macOS as primary dev-environment&lt;/li&gt;
+&lt;li&gt;Redesigned &lt;a href=&quot;https://saumya.github.io&quot;&gt;my site&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;Cold drinks consumption is below a litre in the whole year :)                    &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Still I feel, I could have done more, I am looking at you 2017.&lt;/p&gt;
+&lt;p&gt;Happy New Year.
+Cheers.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>React Native on Android, changing app name, package name and version code</title>
       <link>https://saumya.github.io/ray/articles/72/</link>

@@ -23,6 +23,16 @@
       <div class="content-wrap">
         <article class="article intro">
           <header>
+            <p class="date"><span>12. February 2014</span></p>
+            <h2><a href="https://saumya.github.io/ray/articles/25/">iOS fragmentation and UI development</a></h2>
+          </header>
+          <section class="content"><p>It was not there 4 years back, when the iOS was just beginning its life. Whether you like it or not the truth is its fragmented now. There are all different versions of iOS, then different versions of the devices. These two itself bring a lot of different considerations, while developing for the platform now.<br>Its agreed that its less fragmented but then thats enough to bring in the pain to a frontend developer.<br>Now, to add to it, there are different device form factors. Starting with regular iPads, retina, air, mini, iphone, ipod touch and all have different specifications. So the point is, the XCode workflow allows one to <code>design</code> for all different devices, that does mean <code>design is multiplied</code> not <code>reduced</code>. While its good and freedom to the <span class="caps">UI</span> designer, as a frontend developer one must keep an eye on all these form fragmentations.
+Now the same code will produce, a different looking back button in an older iOS and a different looking one in the newer ones. The UI may hide some UI elements on a smaller heighted device and look perfect in a newer bigger iPhone/iPodTouch.<br>Thats doable but definitely increases time to implement <span class="caps">UI</span>, if its not designed, and well thought of, by people, who know what they are doing.<br>Happy&nbsp;designing.</p>
+
+          </section>
+        </article>
+        <article class="article intro">
+          <header>
             <p class="date"><span>11. February 2014</span></p>
             <h2><a href="https://saumya.github.io/ray/articles/24/">jQuerymobile, changePage is deprecated as of 1.4.0, will be removed in 1.5.0.</a></h2>
           </header>
@@ -54,25 +64,6 @@ $(<span class="string">"body"</span>).pagecontainer(<span class="string">"change
 
           </section>
         </article>
-        <article class="article intro">
-          <header>
-            <p class="date"><span>01. February 2014</span></p>
-            <h2><a href="https://saumya.github.io/ray/articles/22/">BackboneJS, making an event-dispatching Object.</a></h2>
-          </header>
-          <section class="content"><p>Making Views, Collections and Models in <a href="http://backbonejs.org/">BackboneJS</a> is as simple as extending the raw <a href="http://backbonejs.org/">BackboneJS</a>&nbsp;objects.</p>
-<pre><code class="lang-javascript"><span class="keyword">var</span> MyView = Backbone.View.extend({});
-</code></pre>
-<p>Making a generic object and make it dispatch events is also kind of same, but then the syntax is a little&nbsp;different.</p>
-<pre><code class="lang-javascript"><span class="keyword">var</span> myUtilLib = _.extend({},Backbone.Events);
-</code></pre>
-<p>Everything else remains the same, but then, this little syntax change for an event dispatching object may come in your way, if you are new to <a href="http://backbonejs.org/">BackboneJS</a>.<br>Here is a detailed example of an utility class for <a href="http://backbonejs.org/">BackboneJS</a>.</p>
-<script src="https://gist.github.com/saumya/8755642.js"></script>
-
-
-<p>Happy&nbsp;coding.</p>
-
-          </section>
-        </article>
       </div>
     </div>
     <footer>
@@ -85,7 +76,7 @@ $(<span class="string">"body"</span>).pagecontainer(<span class="string">"change
 <span class="nav"><a href="https://saumya.github.io/ray/">Blog Home</a><a href="https://saumya.github.io/ray/archive.html">Archives</a></span>
         </section>
         <section class="copy">
-          <p>&copy; 2016 saumya ray &mdash; powered by&nbsp;     <a href="https://github.com/jnordberg/wintersmith">Wintersmith&nbsp;</a>
+          <p>&copy; 2017 saumya ray &mdash; powered by&nbsp;     <a href="https://github.com/jnordberg/wintersmith">Wintersmith&nbsp;</a>
             <p> <a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
           </p>
         </section>
