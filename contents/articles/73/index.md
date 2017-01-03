@@ -8,7 +8,7 @@ template: article.jade
  - Moved to a new place
  - Moved to a new company (rather new kind of employment) 
 
-
+<span class="more"></span>
 
  - Chose what to do for that year and done that
  - Started with some UX design and consulting for clients with a team
