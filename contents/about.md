@@ -9,5 +9,5 @@ A maker of things and curious about everything. Continuous learning is, what fue
 He is [@saumya][2] on Twitter. 
 
 
-[1]: http://www.saumyaray.com
+[1]: https://saumya.github.io/
 [2]: https://twitter.com/saumya
