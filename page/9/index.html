@@ -23,6 +23,30 @@
       <div class="content-wrap">
         <article class="article intro">
           <header>
+            <p class="date"><span>18. January 2015</span></p>
+            <h2><a href="https://saumya.github.io/ray/articles/50/">HAXE and NodeJS</a></h2>
+          </header>
+          <section class="content"><p>Continuing the sudy of javascript target of <a href="http://haxe.org/"><span class="caps">HAXE</span></a> we will focus on <a href="http://nodejs.org/">NodeJS</a> this time. Before we move on, lets remind ourselves the things to expect from the <a href="http://haxe.org/"><span class="caps">HAXE</span></a> toolchain by going through the previous two introductions, here is the <a href="http://saumya.github.io/ray/articles/47/">first</a> and the <a href="http://saumya.github.io/ray/articles/48/">second</a> post.<br>Thats about <a href="http://haxe.org/"><span class="caps">HAXE</span></a>, now a little about <a href="http://nodejs.org/">NodeJS</a>. In <a href="http://nodejs.org/">NodeJS</a> the concept of modules is very common to make some re-usable code. In general, modules hide everything by default. In class based languages we can call them as <code>private</code> elements. To make something <code>public</code> , we have to use <code>exports</code> keyword in <a href="http://nodejs.org/">NodeJS</a>.           </p>
+<p>For example, if we have a file names <code>one.js</code> as</p>
+<pre><code class="lang-javascript">exports.publicFunction = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{
+  <span class="built_in">console</span>.log(<span class="string">'Hello World'</span>);
+}
+</code></pre>
+<p>Now, in <a href="http://nodejs.org/">NodeJS</a>, we can write something&nbsp;as          </p>
+<pre><code class="lang-javascript"><span class="keyword">var</span> oneObj = <span class="built_in">require</span>(<span class="string">'./one'</span>);
+oneObj.publicFunction();
+</code></pre>
+<p>Thats first kind of modules we have. There is another kind of modules in <a href="http://nodejs.org/">NodeJS</a>, where instead of exposing each individual elements from the modules, it exposes a <code>Constructor</code> function. This is done with <code>module.exports</code> in stead of only <code>exports</code>.          </p>
+<pre><code class="lang-javascript"><span class="built_in">module</span>.exports.MyObjConstructor = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{
+  <span class="built_in">console</span>.log(<span class="string">'New Object'</span>);
+}
+</code></pre>
+<p>This second one is looked at as classical concepts of programming, where each <span class="caps">JS</span> file is kind of a Class file.<br>The dynamic and fun nature of javascript allows us to use the first way of exposing individual elements to actually expose a constructor function too. Is not it ?! Why we think about that! Because <a href="http://haxe.org/"><span class="caps">HAXE</span></a> generated javascript is actually doing that. Smart.<br>
+            <p class="more"><a href="https://saumya.github.io/ray/articles/50/">more</a></p>
+          </section>
+        </article>
+        <article class="article intro">
+          <header>
             <p class="date"><span>14. January 2015</span></p>
             <h2><a href="https://saumya.github.io/ray/articles/49/">Dojo Toolkit, require and events.</a></h2>
           </header>
@@ -86,31 +110,6 @@ com.jungle.Animal
 <p>For a sample project and the options, have a look at <a href="https://github.com/saumya/HAXE-JS101">this repo</a> and the <a href="https://github.com/saumya/HAXE-JS101/blob/master/compile.hxml">sample .hxml</a> file is here with all the possible options for <code>.js</code> output.          </p>
 <p>The important thing is to remember that finally every <span class="caps">JS</span> project is compiled to a single JS file and <a href="http://haxe.org/"><span class="caps">HAXE</span></a> does it in one go. It does not provide module export or any fancy things that other <span class="caps">JS</span> frameworks do to support JS look like a classical programming language. <a href="http://haxe.org/"><span class="caps">HAXE</span></a> works with its own tool chain and provides well made <span class="caps">JS</span> output. Do not fight it to mock JS libraries, <a href="http://haxe.org/"><span class="caps">HAXE</span></a> is more powerful than that. Even for NodeJS output, <a href="http://haxe.org/"><span class="caps">HAXE</span></a> produces the final <span class="caps">JS</span> output, just a single <code>.js</code> file. Work with <a href="http://haxe.org/"><span class="caps">HAXE</span></a> packages and classes and then compile it to make the final output, no nothing in&nbsp;between.</p>
 <p>Happy&nbsp;Haxing.</p>
-
-          </section>
-        </article>
-        <article class="article intro">
-          <header>
-            <p class="date"><span>05. January 2015</span></p>
-            <h2><a href="https://saumya.github.io/ray/articles/47/">HAXE JS 101</a></h2>
-          </header>
-          <section class="content"><p>Hope you know what is <a href="http://haxe.org/"><span class="caps">HAXE</span></a>, take a moment to go through the official <a href="http://haxe.org/"><span class="caps">HAXE</span></a> documentation. We will discuss how and what to consider while working with <span class="caps">JS</span> in <a href="http://haxe.org/"><span class="caps">HAXE</span></a>.<br>Generally other languages, which compile to <span class="caps">JS</span>, actually compile each specific file to a respective JS file. <a href="http://haxe.org/"><span class="caps">HAXE</span></a> actually compiles to one single <span class="caps">JS</span> file for our application. We can further take the generated JS file and minify it using popular JS&nbsp;minifiers.        </p>
-<p>The work flow for <a href="http://haxe.org/"><span class="caps">HAXE</span></a> to <span class="caps">JS</span> is as simple&nbsp;as         </p>
-<ul>
-<li>Writing the normal <a href="http://haxe.org/"><span class="caps">HAXE</span></a>&nbsp;application</li>
-<li>Use the package structure and class as&nbsp;usual</li>
-<li>Make a .hxml file difining what would be the final <span class="caps">JS</span>&nbsp;file</li>
-<li>Compile with <a href="http://haxe.org/"><span class="caps">HAXE</span></a> compiler to produce the <span class="caps">JS</span>&nbsp;file         </li>
-</ul>
-<pre><code class="lang-haxe">haxe compile.hxml
-</code></pre>
-<p>The <code>.hxml</code> file looks something&nbsp;like</p>
-<pre><code class="lang-haxe">-main ApplicationEntry
--js app.js
-</code></pre>
-<p>Thats all to it. <a href="http://haxe.org/"><span class="caps">HAXE</span></a> will take care of the <code>import</code> and <code>package</code> and <code>class</code> of the application. Finally the generted <span class="caps">JS</span> file is having everything our application needs. Include the JS file in the required HTML file and we are&nbsp;done.      </p>
-<p>Here is a <a href="https://github.com/saumya/HAXE-JS101">sample basic application</a> showing all there is to&nbsp;it.</p>
-<p>Happy&nbsp;Coding.</p>
 
           </section>
         </article>

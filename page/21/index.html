@@ -23,6 +23,15 @@
       <div class="content-wrap">
         <article class="article intro">
           <header>
+            <p class="date"><span>23. January 2014</span></p>
+            <h2><a href="https://saumya.github.io/ray/articles/14/">Phonegap, jQuery, jQueryMobile and AJAX caching</a></h2>
+          </header>
+          <section class="content"><p>Developing for a fragmented landscape is not easy. Its even difficult, if you choose to use, a library or framework, which says <code>develop once and run everywhere</code> or something like <code>it makes your application look like native</code>.<br>First thing first. With every new release, we have another step addition to test. Contrary to the belief that, the new Operating System is obviously capable of running the old running application, it adds one more fragment to the already fragmented landscape. So if you are a mobile developer, keep this in mind that <code>new OS, is a new test step</code>. Well, lets add one more device to this equation. Lets just focus on <code>Apple</code> devices, considering there <code>so called, minimum number of device types</code>. An iDevice is suppose to run the latest vesion of the iOS. But in the development environment, you might not able to keep up with new device types or <span class="caps">OS</span> updates. And only this can break your application. So make sure, you have <code>latest device and latest OS</code>. Ok, then test your application in this device, chances are your application <code>may run</code> but chances are <code>it might not</code> too. So the point is <code>search arround</code> the internet from the beginning itself, if there are known problems with the exact <code>device and OS</code> combination.
+            <p class="more"><a href="https://saumya.github.io/ray/articles/14/">more</a></p>
+          </section>
+        </article>
+        <article class="article intro">
+          <header>
             <p class="date"><span>22. January 2014</span></p>
             <h2><a href="https://saumya.github.io/ray/articles/13/">Author details on Wintersmith</a></h2>
           </header>
@@ -40,38 +49,6 @@
             <h2><a href="https://saumya.github.io/ray/articles/12/">Experience with Parse</a></h2>
           </header>
           <section class="content"><p>This is the <code>first time</code>, I worked with <a href="https://parse.com/">Parse</a> and must say its a nice to have tool for any web developer. <a href="https://parse.com/">Parse</a> minimises the task a lot in terms of backend and hosting.<br><a href="https://parse.com/">Parse</a> has a lot of options to choose from and one can choose to use the only required ones.<br>Well, I started of with hosting only, for one of my <a href="http://facebook.com/">Facebook</a> applications. They even have a <span class="caps">SDK</span> to integrate the <a href="http://facebook.com/">Facebook</a> <span class="caps">SDK</span> with them. I have not yet implemented their SDK yet, but docs show its simplicity of use.<br>I have started working on a <a href="http://backbonejs.org/">BackboneJS</a> application integrating <a href="http://facebook.com/">Facebook</a> and hosting in <a href="https://parse.com/">Parse</a>. That went quite smooth. Actually <a href="https://parse.com/">Parse</a> <code>has extended</code> <a href="http://backbonejs.org/">BackboneJS</a> to provide another <span class="caps">SDK</span> of their own to create frontend applications.<br>Happy&nbsp;coding.      </p>
-
-          </section>
-        </article>
-        <article class="article intro">
-          <header>
-            <p class="date"><span>20. January 2014</span></p>
-            <h2><a href="https://saumya.github.io/ray/articles/11/">BackboneJS, view and its events</a></h2>
-          </header>
-          <section class="content"><p>Working in <a href="http://backbonejs.org/">BackboneJS</a> is fun and easy to begin with. Slowly but steadily it gets complicated as we move on and add more to the project. Being said that, <a href="http://backbonejs.org/">BackboneJS</a> is not at all opinionated. So there is no rightway of doing something. If your solution works for your project, then its good to go. Well, then there are certain things, which may help you, better organise your code. One of such things is <code>View Events</code>.<br>In a Backbone view, to listen to events and handle them, the general syntax is as&nbsp;this.</p>
-<pre><code class="lang-javascript">events:{
-        <span class="string">"click"</span>: <span class="string">"onClick"</span>
-        },
-onClick: <span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>{
-    <span class="comment">//Do something with the event</span>
-    <span class="comment">//or</span>
-    <span class="comment">//specifically do it for a target</span>
-    <span class="keyword">var</span> btnID = event.target.id;
-    <span class="keyword">if</span>(btnID===<span class="string">'btn_one'</span>){
-        <span class="built_in">console</span>.log(<span class="string">'<span class="caps">TODO</span>:'</span>);
-    }
-}
-</code></pre>
-<p>Well, it may be easier at first, but we are listening for events for the whole view and then in the handler checking it. There is a way in <a href="http://backbonejs.org/">BackboneJS</a> that directly and listens for events for that particular target. The code looks as&nbsp;this.</p>
-<pre><code class="lang-javascript">events:{
-        <span class="string">"click #btn_one"</span>: <span class="string">"onClick"</span>
-        },
-onClick: <span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>{
-    <span class="comment">//btn_one is clicked</span>
-    <span class="comment">//Do something with the event</span>
-}
-</code></pre>
-<p>Happy&nbsp;coding.      </p>
 
           </section>
         </article>

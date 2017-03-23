@@ -5,9 +5,32 @@
     <atom:link href="https://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>https://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Tue, 03 Jan 2017 05:30:00 +0630</pubDate>
+    <pubDate>Thu, 23 Mar 2017 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Maintaining a React Native application on iOS.</title>
+      <link>https://saumya.github.io/ray/articles/74/</link>
+      <pubDate>Thu, 23 Mar 2017 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/74/</guid>
+      <author></author>
+      <description>&lt;p&gt; That may sound just an easy job. Surprisingly its not! Its because &lt;a href=&quot;https://facebook.github.io/react-native/&quot;&gt;React Native&lt;/a&gt;is evolving at a very high speed. The community is vibrant and &lt;a href=&quot;https://facebook.github.io/react/&quot;&gt;React&lt;/a&gt; itself is also moving at a very high speed. Though there are minimal API changes but there are changes and sometimes there are breaking changes. Well as for iOS, we know it also comes with API changes and sometimes breaking changes. &lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt; The absolute minimum one has to do, to maintain a &lt;a href=&quot;https://facebook.github.io/react-native/&quot;&gt;React Native&lt;/a&gt; project on iOS is to check for all the tool chain is upto date. Being said that, there are dependent libraries and there are chances that these things may not sync and your project may break.&lt;/p&gt;
+&lt;p&gt; As of today &lt;a href=&quot;https://facebook.github.io/react-native/&quot;&gt;React Native&lt;/a&gt; is 0.42 and to compile an iOS project, it seems the bare minimum is &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://facebook.github.io/watchman/&quot;&gt;Watchman&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://brew.sh/&quot;&gt;Brew&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;Update the &lt;code&gt;react-native-cli&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The code reference to update the &lt;code&gt;react-native-cli&lt;/code&gt; would be just to re-install it.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo npm install -g react-native-cli
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;To know the version of both, its as simple as this.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;react-native --version
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Hopefully that opens up the idea as to maintaining a project is also a time consuming process. And with projects which evolve, if one has develop its own project, then the time and effort to maintain it will be exponential.&lt;/p&gt;
+&lt;p&gt;Happy Coding.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>Reflecting on 2016.</title>
       <link>https://saumya.github.io/ray/articles/73/</link>
