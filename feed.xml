@@ -31,11 +31,11 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;And then, from inside your project, you can call the methods as &lt;code&gt;MyExtension.myMethod()&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;I have written down some of my own extensions for Android.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/saumya/AnCam&quot;&gt;AnCam&lt;/a&gt;, use camera&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/saumya/RayToast&quot;&gt;RayToast&lt;/a&gt;, show Toast messages&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/saumya/AnWebView&quot;&gt;AnWebView&lt;/a&gt;, native WebView&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/saumya/AnAppLaunch&quot;&gt;AnAppLaunch&lt;/a&gt;, launch another application&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/saumya/AnCall&quot;&gt;AnCall&lt;/a&gt;, call a phone number&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/saumya/AnCam&quot;&gt;AnCam&lt;/a&gt;, use &lt;strong&gt;camera&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/saumya/RayToast&quot;&gt;RayToast&lt;/a&gt;, show &lt;strong&gt;Toast messages&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/saumya/AnWebView&quot;&gt;AnWebView&lt;/a&gt;, show an url in &lt;strong&gt;native WebView&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/saumya/AnAppLaunch&quot;&gt;AnAppLaunch&lt;/a&gt;, &lt;strong&gt;launch&lt;/strong&gt; another application&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/saumya/AnCall&quot;&gt;AnCall&lt;/a&gt;, &lt;strong&gt;call&lt;/strong&gt; a phone number&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;The &lt;a href=&quot;https://github.com/saumya/OpenFL-AnExt&quot;&gt;example implementation&lt;/a&gt; for the extnsions are present here.&lt;/p&gt;
 &lt;p&gt;Happy Coding.&lt;/p&gt;
