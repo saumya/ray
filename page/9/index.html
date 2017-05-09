@@ -23,6 +23,30 @@
       <div class="content-wrap">
         <article class="article intro">
           <header>
+            <p class="date"><span>19. January 2015</span></p>
+            <h2><a href="https://saumya.github.io/ray/articles/51/">Making crossplatform CLI application with HAXE</a></h2>
+          </header>
+          <section class="content"><p>When I first heard about <span class="caps">CLI</span> applications, I thought it might be shipping with the OS itself. Then I found that we can write our own CLI applications. At that point I assume that well, just a CLI application, means it runs everywhere. But actually CLI applications by default are not crossplatform! Yes, I realised it much later. In order to have a crossplatform CLI app, one needs all the required environment to compile to and compile for a particular&nbsp;OS.         </p>
+<p><a href="http://haxe.org/"><span class="caps">HAXE</span></a> comes in handy in this case. One can make a crossplatfom <span class="caps">CLI</span> app with just one code base. Ofcourse you need the required environment to compile to that particular environment. There is even a shorter way to this, compile for <a href="http://nekovm.org"><span class="caps">NEKO</span></a> virtual machine. This <a href="http://nekovm.org"><span class="caps">NEKO</span></a> <span class="caps">VM</span> ships with <a href="http://haxe.org/"><span class="caps">HAXE</span></a>. Once you compile to <a href="http://nekovm.org"><span class="caps">NEKO</span></a>, all you do is package all the <a href="http://nekovm.org"><span class="caps">NEKO</span></a> dependencies and there you have a crossplatform <span class="caps">CLI</span> for every OS. Here we will compile to <a href="http://nekovm.org"><span class="caps">NEKO</span></a> and run through <a href="http://nekovm.org"><span class="caps">NEKO</span></a>, but just keep in mind that the same code can be compiled to <span class="caps">CPP</span>(C++) to produce true native CLI.<br>Lets begin with the compiler settings or the build file. The <code>.hxml</code> file has the following&nbsp;content.</p>
+<pre><code class="lang-haxe"><span class="meta"># <span class="caps">HAXE</span> build</span>
+<span class="meta"># Defining the application entry</span>
+-main MyCliApp
+<span class="meta"># <span class="caps">NEKO</span> : compilation</span>
+-neko bin/myCliApp.n
+<span class="meta">#</span>
+<span class="meta"># <span class="caps">CPP</span> : compilation</span>
+<span class="meta">#-cpp bin/cpp/</span>
+</code></pre>
+<p>We are setting up for compiling to <a href="http://nekovm.org"><span class="caps">NEKO</span></a> but then we have the options commented out for compiling to <span class="caps">CPP</span>. If we want to compile for the C++ target, then comment out the <a href="http://nekovm.org"><span class="caps">NEKO</span></a> target and enable the <span class="caps">CPP</span>(C++) target. Well, this compilation will create a file named <code>myCliApp.n</code> inside the ‘bin’ folder. To run the file, we have to navigate to the ‘bin’ folder and run with <a href="http://nekovm.org"><span class="caps">NEKO</span></a> as&nbsp;below.  </p>
+<pre><code class="lang-haxe">neko ./myCliApp.n
+</code></pre>
+<p>Thats about compilation and running. Lets get back to coding. There is no surprise here as all we have to do is, get the right package and class from <a href="http://haxe.org/"><span class="caps">HAXE</span></a> and use it. Here is the <a href="https://github.com/saumya/HAXE-CLI-101">Git repo</a> for this example. The application entry initialises ‘PrintInfo’ Class. That class prints the information that we want to show to the user and finally asks the name of the use. As user inputs the name, it greets the user and moves to our defined command prompt. We have setup some commands to display. Depending upon user input the necessary commands are executed. All these are happening in <code>MyCli.hx</code>  Class. The <a href="https://github.com/saumya/HAXE-CLI-101/blob/master/com/saumya/cli/MyCli.hx">code is commented</a> for easy reference in <a href="https://github.com/saumya/HAXE-CLI-101">this repo</a>. Here is the <a href="https://github.com/saumya/HAXE-CLI-101/blob/master/com/saumya/cli/MyCli.hx">direct link</a> to the&nbsp;class. </p>
+<p>Happy&nbsp;coding.</p>
+
+          </section>
+        </article>
+        <article class="article intro">
+          <header>
             <p class="date"><span>18. January 2015</span></p>
             <h2><a href="https://saumya.github.io/ray/articles/50/">HAXE and NodeJS</a></h2>
           </header>
@@ -80,36 +104,6 @@ dojo.string.trim(<span class="string">"  I Like Trim Strings "</span>);
 </code></pre>
 <p>The other kind of events are <span class="caps">DOM</span> events and <a href="http://dojotoolkit.org/reference-guide/1.10/dojo/on.html#dojo-on">they are handled with the ‘on’</a>&nbsp;module.          </p>
 <p>Happy&nbsp;coding.</p>
-
-          </section>
-        </article>
-        <article class="article intro">
-          <header>
-            <p class="date"><span>12. January 2015</span></p>
-            <h2><a href="https://saumya.github.io/ray/articles/48/">HAXE JS 102</a></h2>
-          </header>
-          <section class="content"><p>We are going good with <a href="http://haxe.org/"><span class="caps">HAXE</span></a>, take a moment to go through the official <a href="http://haxe.org/"><span class="caps">HAXE</span></a> documentation.<br>This is a follow-up post to the <a href="http://saumya.github.io/ray/articles/47/">Haxe <span class="caps">JS</span> 101</a>. Its all about setting up the expectations from the language and the tool chain. Lets make some more things clear about the tooling and how the language&nbsp;works.          </p>
-<ul>
-<li><a href="http://haxe.org/"><span class="caps">HAXE</span></a> will produce one single <span class="caps">JS</span>&nbsp;file</li>
-<li>We can force it to create one <span class="caps">JS</span> file for one .hx&nbsp;file</li>
-<li>The created <span class="caps">JS</span> file, is by no means is a module JS file as in CommonJS or&nbsp;AMD          </li>
-</ul>
-<p>The contents of <code>.hxml</code> or the build file generally looks&nbsp;as        </p>
-<pre><code class="lang-haxe">-main ApplicationEntry
--js app.js
-</code></pre>
-<p>While forcing each <code>.hx</code> file for an individual <code>.js</code> file, the build file would contain something&nbsp;as         </p>
-<pre><code class="lang-haxe">-js com/jungle/Tree.js 
--cp src 
-com.jungle.Tree
---next
--js com/jungle/Animal.js 
--cp src 
-com.jungle.Animal
-</code></pre>
-<p>For a sample project and the options, have a look at <a href="https://github.com/saumya/HAXE-JS101">this repo</a> and the <a href="https://github.com/saumya/HAXE-JS101/blob/master/compile.hxml">sample .hxml</a> file is here with all the possible options for <code>.js</code> output.          </p>
-<p>The important thing is to remember that finally every <span class="caps">JS</span> project is compiled to a single JS file and <a href="http://haxe.org/"><span class="caps">HAXE</span></a> does it in one go. It does not provide module export or any fancy things that other <span class="caps">JS</span> frameworks do to support JS look like a classical programming language. <a href="http://haxe.org/"><span class="caps">HAXE</span></a> works with its own tool chain and provides well made <span class="caps">JS</span> output. Do not fight it to mock JS libraries, <a href="http://haxe.org/"><span class="caps">HAXE</span></a> is more powerful than that. Even for NodeJS output, <a href="http://haxe.org/"><span class="caps">HAXE</span></a> produces the final <span class="caps">JS</span> output, just a single <code>.js</code> file. Work with <a href="http://haxe.org/"><span class="caps">HAXE</span></a> packages and classes and then compile it to make the final output, no nothing in&nbsp;between.</p>
-<p>Happy&nbsp;Haxing.</p>
 
           </section>
         </article>
