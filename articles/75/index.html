@@ -24,14 +24,17 @@
         <article class="article">
           <section class="content"><p>Native Extensions for <a href="http://www.openfl.org/">OpenFL</a> are the things which bind <a href="http://www.openfl.org/">OpenFL</a> applications with the native platform it is running on. There are some extensions provided from <a href="http://www.openfl.org/">OpenFL</a> itself. If you go to <a href="http://www.openfl.org/">OpenFL</a> repository on github, you can find for yourself extensions, such as <a href="https://github.com/openfl/extension-iap">In-App Purchase</a> and <a href="https://github.com/openfl/extension-admob">Google AdMob</a>.</p>
 <p><span class="more"></span></p>
-<p>Previously it was a lot to do to make an extension for yourself. But as <a href="http://www.openfl.org/">OpenFL</a> and Android platform matured, the getting started with extensions became&nbsp;easier. </p>
+<p>Previously it was a lot to do to make an extension for yourself. But as <a href="http://www.openfl.org/">OpenFL</a> and Android platform matured, the getting started with extensions became&nbsp;easier.      </p>
 <p>Here is a <a href="https://player03.com/2014/08/09/openfl-extensions/">tutorial in detail about the making</a> of&nbsp;Extensions.</p>
 <p>There are 2 steps to&nbsp;it.</p>
 <ol>
-<li>create<pre><code>lime create extension MyExtension
+<li><p>create</p>
+<pre><code>lime create extension MyExtension
 </code></pre></li>
-<li>Make it ready to use<pre><code>lime rebuild MyExtension android
-</code></pre>Or, if you are calling <code>rebuild</code> from inside the extension folder<pre><code>lime rebuild . android
+<li><p>Make it ready to&nbsp;use</p>
+<pre><code>lime rebuild MyExtension android
+</code></pre><p>Or, if you are calling <code>rebuild</code> from inside the extension&nbsp;folder</p>
+<pre><code>lime rebuild . android
 </code></pre></li>
 </ol>
 <p>Thats all for an extension to be ready to use in an OpenFL Android&nbsp;Application. </p>
