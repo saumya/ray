@@ -16,7 +16,8 @@
       <author></author>
       <description>&lt;p&gt;Native Extensions for &lt;a href=&quot;http://www.openfl.org/&quot;&gt;OpenFL&lt;/a&gt; are the things which bind &lt;a href=&quot;http://www.openfl.org/&quot;&gt;OpenFL&lt;/a&gt; applications with the native platform it is running on. There are some extensions provided from &lt;a href=&quot;http://www.openfl.org/&quot;&gt;OpenFL&lt;/a&gt; itself. If you go to &lt;a href=&quot;http://www.openfl.org/&quot;&gt;OpenFL&lt;/a&gt; repository on github, you can find for yourself extensions, such as &lt;a href=&quot;https://github.com/openfl/extension-iap&quot;&gt;In-App Purchase&lt;/a&gt; and &lt;a href=&quot;https://github.com/openfl/extension-admob&quot;&gt;Google AdMob&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Previously it was a lot to do to make an extension for yourself. But as &lt;a href=&quot;http://www.openfl.org/&quot;&gt;OpenFL&lt;/a&gt; and Android platform matured, the getting started with extensions became easier. Here is a &lt;a href=&quot;https://player03.com/2014/08/09/openfl-extensions/&quot;&gt;tutorial in detail about the making&lt;/a&gt; of Extensions.&lt;/p&gt;
+&lt;p&gt;Previously it was a lot to do to make an extension for yourself. But as &lt;a href=&quot;http://www.openfl.org/&quot;&gt;OpenFL&lt;/a&gt; and Android platform matured, the getting started with extensions became easier. &lt;/p&gt;
+&lt;p&gt;Here is a &lt;a href=&quot;https://player03.com/2014/08/09/openfl-extensions/&quot;&gt;tutorial in detail about the making&lt;/a&gt; of Extensions.&lt;/p&gt;
 &lt;p&gt;There are 2 steps to it.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;create&lt;pre&gt;&lt;code&gt;lime create extension MyExtension
