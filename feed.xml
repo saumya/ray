@@ -14,9 +14,9 @@
       <pubDate>Tue, 09 May 2017 05:30:00 +0630</pubDate>
       <guid isPermaLink="true">https://saumya.github.io/ray/articles/75/</guid>
       <author></author>
-      <description>&lt;p&gt;Native Extensions for &lt;a href=&quot;http://www.openfl.org/&quot;&gt;OpenFL&lt;/a&gt; are the things which bind &lt;a href=&quot;http://www.openfl.org/&quot;&gt;OpenFL&lt;/a&gt; applications with the native platform it is running on. There are some extensions provided from &lt;a href=&quot;http://www.openfl.org/&quot;&gt;OpenFL&lt;/a&gt; itself. If you go to there repository on github, you can find for yourself, such as &lt;a href=&quot;https://github.com/openfl/extension-iap&quot;&gt;In-App Purchase&lt;/a&gt; and &lt;a href=&quot;https://github.com/openfl/extension-admob&quot;&gt;Google AdMob&lt;/a&gt;.&lt;/p&gt;
+      <description>&lt;p&gt;Native Extensions for &lt;a href=&quot;http://www.openfl.org/&quot;&gt;OpenFL&lt;/a&gt; are the things which bind &lt;a href=&quot;http://www.openfl.org/&quot;&gt;OpenFL&lt;/a&gt; applications with the native platform it is running on. There are some extensions provided from &lt;a href=&quot;http://www.openfl.org/&quot;&gt;OpenFL&lt;/a&gt; itself. If you go to &lt;a href=&quot;http://www.openfl.org/&quot;&gt;OpenFL&lt;/a&gt; repository on github, you can find for yourself extensions, such as &lt;a href=&quot;https://github.com/openfl/extension-iap&quot;&gt;In-App Purchase&lt;/a&gt; and &lt;a href=&quot;https://github.com/openfl/extension-admob&quot;&gt;Google AdMob&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Previously it was a lot more work to do for making an extension for yourself. But as &lt;a href=&quot;http://www.openfl.org/&quot;&gt;OpenFL&lt;/a&gt; and Android platform matured, the getting started with extensions became easier.&lt;/p&gt;
+&lt;p&gt;Previously it was a lot to do to make an extension for yourself. But as &lt;a href=&quot;http://www.openfl.org/&quot;&gt;OpenFL&lt;/a&gt; and Android platform matured, the getting started with extensions became easier.&lt;/p&gt;
 &lt;p&gt;There are 2 steps to it.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;create&lt;pre&gt;&lt;code&gt;lime create extension MyExtension
@@ -26,16 +26,16 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Thats all for an extension to be ready to use in an OpenFL Android Application. &lt;/p&gt;
-&lt;p&gt;To use it in your OpenFL project add this to your &lt;code&gt;project.xml&lt;/code&gt; as below.&lt;/p&gt;
+&lt;p&gt;To use the extension in your &lt;a href=&quot;http://www.openfl.org/&quot;&gt;OpenFL&lt;/a&gt; project, add this to your &lt;code&gt;project.xml&lt;/code&gt; as below.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;&amp;lt;include path=&amp;quot;../relative/path/to/MyExtension&amp;quot; /&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;And then, from inside your project, you can call the methods as &lt;code&gt;MyExtension.myMethod()&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;I have written down some of my own extensions for Android.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/saumya/AnCam&quot;&gt;AnCam&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/saumya/RayToast&quot;&gt;RayToast&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/saumya/AnWebView&quot;&gt;AnWebView&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/saumya/AnAppLaunch&quot;&gt;AnAppLaunch&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/saumya/AnCall&quot;&gt;AnCall&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/saumya/AnCam&quot;&gt;AnCam&lt;/a&gt;, use camera&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/saumya/RayToast&quot;&gt;RayToast&lt;/a&gt;, show Toast messages&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/saumya/AnWebView&quot;&gt;AnWebView&lt;/a&gt;, native WebView&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/saumya/AnAppLaunch&quot;&gt;AnAppLaunch&lt;/a&gt;, launch another application&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/saumya/AnCall&quot;&gt;AnCall&lt;/a&gt;, call a phone number&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;The &lt;a href=&quot;https://github.com/saumya/OpenFL-AnExt&quot;&gt;example implementation&lt;/a&gt; for the extnsions are present here.&lt;/p&gt;
 &lt;p&gt;Happy Coding.&lt;/p&gt;
