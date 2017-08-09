@@ -23,6 +23,84 @@
       <div class="content-wrap">
         <article class="article intro">
           <header>
+            <p class="date"><span>28. November 2015</span></p>
+            <h2><a href="https://saumya.github.io/ray/articles/58/">How to React now.</a></h2>
+          </header>
+          <section class="content"><p>Here is the way to <a href="http://facebook.github.io/react/">React</a>&nbsp;now.        </p>
+<ul>
+<li>Download <a href="http://facebook.github.io/react/">React</a></li>
+<li>Make a new html&nbsp;file</li>
+<li>Include “react.js”, this gives us ‘React’&nbsp;Object</li>
+<li>Include “react-dom.js”, this gives us ‘ReactDOM’&nbsp;Object</li>
+<li>Write the a React component and use it. This is explained&nbsp;below.</li>
+</ul>
+<p>The <span class="caps">HTML</span> file should look something as shown&nbsp;here.</p>
+<pre><code class="lang-html"><span class="meta">&lt;!<span class="caps">DOCTYPE</span> html&gt;</span>
+<span class="tag">&lt;<span class="name">html</span>&gt;</span>
+  <span class="tag">&lt;<span class="name">head</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">title</span>&gt;</span>React!<span class="tag">&lt;/<span class="name">title</span>&gt;</span>
+  <span class="tag">&lt;/<span class="name">head</span>&gt;</span>
+  <span class="tag">&lt;<span class="name">body</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"myReactApp"</span>&gt;</span>
+      <span class="comment">&lt;!-- React Application --&gt;</span>
+    <span class="tag">&lt;/<span class="name">div</span>&gt;</span>
+    <span class="comment">&lt;!-- React library --&gt;</span>
+    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"js/lib/react/react.js"</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"js/lib/react/react-dom.js"</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>
+    <span class="comment">&lt;!-- Application Code --&gt;</span>
+    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="actionscript">
+        <span class="comment">// <span class="caps">TODO</span></span>
+    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>
+  <span class="tag">&lt;/<span class="name">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="name">html</span>&gt;</span>
+</code></pre>
+<p>This <span class="caps">HTML</span> file has only a <code>div</code> with an id as <code>id=&quot;myReactApp&quot;</code>. Now lets write a React Component. The component code is as&nbsp;below.</p>
+<pre><code class="lang-javascript"><span class="keyword">var</span> Component1 = React.createClass({
+  render: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{
+    <span class="keyword">var</span> reactComponent = React.<span class="caps">DOM</span>.span(<span class="literal">null</span>,<span class="string">"I am a Custom Span."</span>);
+    <span class="keyword">return</span> reactComponent;
+  }
+});
+</code></pre>
+<p>Now lets add this component to our <span class="caps">DOM</span>. We are going to add this component in the <code>div</code> with id <code>myReactApp</code>.           </p>
+<pre><code class="lang-javascript">ReactDOM.render( React.createElement(Component1), <span class="built_in">document</span>.getElementById(<span class="string">"myReactApp"</span>) );
+</code></pre>
+<p>So the final <span class="caps">HTML</span> file with the added javascripts and our code will look as&nbsp;below.</p>
+<pre><code class="lang-html"><span class="meta">&lt;!<span class="caps">DOCTYPE</span> html&gt;</span>
+<span class="tag">&lt;<span class="name">html</span>&gt;</span>
+  <span class="tag">&lt;<span class="name">head</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">title</span>&gt;</span>React!<span class="tag">&lt;/<span class="name">title</span>&gt;</span>
+  <span class="tag">&lt;/<span class="name">head</span>&gt;</span>
+  <span class="tag">&lt;<span class="name">body</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"myReactApp"</span>&gt;</span>
+      <span class="comment">&lt;!-- React Application --&gt;</span>
+    <span class="tag">&lt;/<span class="name">div</span>&gt;</span>
+    <span class="comment">&lt;!-- React library --&gt;</span>
+    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"js/lib/react/react.js"</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"js/lib/react/react-dom.js"</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>
+    <span class="comment">&lt;!-- Application Code --&gt;</span>
+    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="javascript">
+        <span class="keyword">var</span> Component1 = React.createClass({
+                                render: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{
+                                    <span class="keyword">var</span> reactComponent = React.<span class="caps">DOM</span>.span(<span class="literal">null</span>,<span class="string">"I am a <span class="caps">REACT</span> Component Span"</span>);
+                                    <span class="keyword">return</span> reactComponent;
+                                }
+                            });
+        ReactDOM.render( React.createElement(Component1), <span class="built_in">document</span>.getElementById(<span class="string">"myReactApp"</span>) );
+    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>
+  <span class="tag">&lt;/<span class="name">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="name">html</span>&gt;</span>
+</code></pre>
+<p>Now, if you run this from a server and view the page in the browser. You can see our compent is rendered in the <code>div</code> and it displays the text as ‘I am a <span class="caps">REACT</span> Component&nbsp;Span’.          </p>
+<p>Thats all is there to <a href="http://facebook.github.io/react/">React</a>. After this point all that <code>remains</code> is the <code>APIs for Component</code> development. But as you can see, <a href="http://facebook.github.io/react/">React</a> is not telling or expecting anything else. It just makes reusable <span class="caps">HTML</span> components. The architecture of the application is upon the&nbsp;developers.</p>
+<p>Happy&nbsp;Reacting.</p>
+
+          </section>
+        </article>
+        <article class="article intro">
+          <header>
             <p class="date"><span>27. November 2015</span></p>
             <h2><a href="https://saumya.github.io/ray/articles/57/">React</a></h2>
           </header>
@@ -53,84 +131,13 @@
 
           </section>
         </article>
-        <article class="article intro">
-          <header>
-            <p class="date"><span>25. November 2015</span></p>
-            <h2><a href="https://saumya.github.io/ray/articles/55/">AngularJS 102</a></h2>
-          </header>
-          <section class="content"><p>This is the part two of the study of <a href="https://angularjs.org/">AngularJS</a>. The first part is <a href="http://saumya.github.io/ray/articles/39/">AngularJS 101</a>.
-This is focused on the vary basic concepts of <a href="https://angularjs.org/">AngularJS</a> like how and where to write a <code>controller</code> or <code>directive</code> etc. The <a href="https://github.com/saumya/ng-102">sample project is here</a>.          </p>
-<p>First thing first, as of any Javascript framework, the nature of <a href="https://angularjs.org/">AngularJS</a> is not different in terms of, where you should write what. This is understood, as Javascript itself is dynamic in nature. There are a lot of guidelines through out the web as to, which file to contain what. In the end it boils down to personal preference. So just go ahead and do some working samples of&nbsp;yours.</p>
-<ul>
-<li>The first thing you need is <code>index.html</code> or some <code>.html</code> file, which will be your entry point to the&nbsp;project.</li>
-<li>Include all the Javascript files in this <code>index.html</code> file as&nbsp;needed</li>
-<li><a href="https://angularjs.org/">AngularJS</a> does not need <a href="https://jquery.com/">JQuery</a>, but if you are using <a href="http://getbootstrap.com/">Bootstrap</a>, you will need <a href="https://jquery.com/">JQuery</a> library as the later uses it. So include them in the <code>index.html</code></li>
-<li>Include the <span class="caps">CSS</span> framework files in the <code>index.html</code></li>
-<li>All in all, include all the files necessary in the project in <code>index.html</code></li>
-</ul>
-<p>Well, there are ways to minify and combine all of them in a single file and all those tricks. We can focus on them later. For the timebeing lets focus on how to build <a href="https://angularjs.org/">AngularJS</a>&nbsp;applications.</p>
-<ul>
-<li>In the end include your <code>application.js</code> file, which will be your application entry file. Name of the file is not relevant, you can name it&nbsp;anything.</li>
-</ul>
-<p>All of the application could be written in a single Javascript file or the application could be divided to be written in different Javascript files, each having a particular scope of work. Whatever the case may be, just remember each Javascript file should be an <a href="https://angularjs.org/">AngularJS</a>&nbsp;module.</p>
-<pre><code class="lang-javascript">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{<span class="string">'use strict'</span>;
-<span class="keyword">var</span> appModule = angular.module(<span class="string">'app.Main'</span>,[<span class="string">"ngRoute"</span>,<span class="string">"ngResource"</span>]);
-})();
-</code></pre>
-<p>The general convention is to wrap each module inside an immediately invoking function, just not to pollute the global space of the Javascript. As in the example above, we are using <code>ngRoute</code> and <code>ngResource</code> in our module <code>app.Main</code>. </p>
-<ul>
-<li>Each Javascript file should be an <a href="https://angularjs.org/">AngularJS</a>&nbsp;Module</li>
-<li>Each module can use another module as a dependency and that can be passed in as a parameter in the array as shown&nbsp;above</li>
-<li>By now, you must have noticed, the name of the Javascript file and the name of the module might be different. As long as we provide proper name as dependecy and proper name for the script src, it is all&nbsp;good.          </li>
-</ul>
-<p>Actually in the example above, the dependent modules <code>ngRoute</code> and <code>ngResource</code> is not present in the <code>angular.js</code> Javascript file . These modules are written in separate Javascript files as modules. So we need to include <code>angular-route.js</code> and <code>angular-resource.js</code> in our <code>.html</code> file to use them, else it will through&nbsp;error.       </p>
-<pre><code class="lang-html"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"js/lib/angular-1.4.7/angular.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>
-<span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"js/lib/angular-1.4.7/angular-route.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>
-<span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"js/lib/angular-1.4.7/angular-resource.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>
-</code></pre>
-<p>Have a look at the <a href="https://github.com/saumya/ng-102">Sample Project</a>.<br>Lets define another module in a javascript file named <code>one.js</code>.</p>
-<pre><code class="lang-javascript">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{<span class="string">'use strict'</span>;
-  <span class="keyword">var</span> mOne = angular.module(<span class="string">'module.one'</span>,[]);
-})();
-</code></pre>
-<p>Now lets expose a factory from this&nbsp;module.</p>
-<pre><code class="lang-javascript">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{<span class="string">'use strict'</span>;
-  <span class="keyword">var</span> mOne = angular.module(<span class="string">'module.one'</span>,[]);
-  mOne.factory(<span class="string">'oneFactory'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{
-    <span class="keyword">var</span> service = {};
-    <span class="keyword">return</span> service;
-  });
-})();
-</code></pre>
-<p>To use this factory in our project. We have&nbsp;to </p>
-<ul>
-<li>include the <code>one.js</code> in our html&nbsp;file</li>
-<li>add the module name <code>module.one</code> in our application entry&nbsp;file          </li>
-</ul>
-<p>So the application entry file will look as&nbsp;below</p>
-<pre><code class="lang-javascript">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{<span class="string">'use strict'</span>;
-  <span class="keyword">var</span> appModule = angular.module(<span class="string">'app.Main'</span>,[<span class="string">"ngRoute"</span>,<span class="string">"ngResource"</span>,<span class="string">"module.one"</span>]);
-  <span class="comment">// Now, we can use 'oneFactory' here, as its exposed by 'module.one'</span>
-})();
-</code></pre>
-<p>Each Javascript file should be an <a href="https://angularjs.org/">AngularJS</a>&nbsp;module.</p>
-<ul>
-<li>Each module could expose any number of anything. That means, any module could expose more than one Object. Those Objects could be any <a href="https://angularjs.org/">AngluarJS</a> Object types, such as Controller, Factory, Service, Directive&nbsp;etc.</li>
-<li>As long as we are providing a dependency of the module name in the Array and refering the proper name of the Objects, we can use&nbsp;them.</li>
-</ul>
-<p><code>Directives</code> in <a href="https://angularjs.org/">AngularJS</a> are <code>visual elements</code>. They define custom <span class="caps">HTML</span> tags/elements as per their&nbsp;definition.</p>
-<p>Take a look at the <a href="https://github.com/saumya/ng-102">Sample Project</a> and that should clear a lot of things, which might seem unclear here. <a href="https://angularjs.org/">AngularJS</a> is modular in the sense, there are carefully separated modules for different purposes. When in need, we include those Javascript files and add the dependecies in the Array. The same goes for our own modules. Try to separate out functionalities into their own modules and use it when&nbsp;needed.   </p>
-<p>Hopefully that will get you started with the&nbsp;framework.</p>
-
-          </section>
-        </article>
       </div>
     </div>
     <footer>
       <div class="content-wrap">
         <div class="nav"><a href="https://saumya.github.io/ray/page/6/">« Newer</a><a href="https://saumya.github.io/ray/page/8/">Next page »</a>
         </div>
-        <section class="about"><p><a href="https://saumya.github.io/">Saumya</a> believes in seeking.</p>
+        <section class="about"><p><a href="https://saumya.github.io/">Saumya</a> is an iternal seeker.</p>
 <p>A maker of things and curious about everything. Continuous learning is, what fuels him. This blog itself, reflects one of many things he is trying at all the time.</p>
 <p>He is <a href="https://twitter.com/saumya">@saumya</a> on Twitter. </p>
 <span class="nav"><a href="https://saumya.github.io/ray/">Blog Home</a><a href="https://saumya.github.io/ray/archive.html">Archives</a></span>

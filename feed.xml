@@ -5,9 +5,33 @@
     <atom:link href="https://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>https://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Tue, 09 May 2017 05:30:00 +0630</pubDate>
+    <pubDate>Wed, 09  Aug 2017 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Slim with Composer</title>
+      <link>https://saumya.github.io/ray/articles/76/</link>
+      <pubDate>Wed, 09  Aug 2017 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/76/</guid>
+      <author></author>
+      <description>&lt;p&gt;One of the nice frameworks of &lt;a href=&quot;https://secure.php.net/&quot;&gt;PHP&lt;/a&gt; is &lt;a href=&quot;https://github.com/slimphp&quot;&gt;Slim&lt;/a&gt;. Now its on its version 3. I started using it since version 1. And must admit that there are a lot of changes since its version 1. &lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;At the same time, &lt;a href=&quot;https://secure.php.net/&quot;&gt;PHP&lt;/a&gt; also has seen a lot of changes. One of the interesting thing that happened is package manager. There are a few options here but &lt;a href=&quot;https://getcomposer.org/&quot;&gt;Composer&lt;/a&gt; is probably oldest one here. It says “Dependency Manager for PHP” for itself. Well, whatever one calls it, the thing is it downloads the required packages (and its dependencies) for us. The installation also has two options, either install it locally in a folder (project folder) or could be installed globally in one machine. The difference is how you fire up the command &lt;code&gt;composer&lt;/code&gt;. If its globally installed, one has to say &lt;code&gt;composer&lt;/code&gt; but if its locally installed, then it would be called with &lt;code&gt;php composer&lt;/code&gt;. The &lt;code&gt;php&lt;/code&gt; executable must call the locally installed &lt;code&gt;composer&lt;/code&gt;. &lt;/p&gt;
+&lt;p&gt;Now to install a package, one has to run the command&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;composer require slim/slim &amp;quot;^3.0&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Alternatively one can write all the dependencies in &lt;code&gt;composer.json&lt;/code&gt; file.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{
+    &amp;quot;require&amp;quot;: {
+        &amp;quot;slim/slim&amp;quot;: &amp;quot;^3.0&amp;quot;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;And then run the command&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;composer install
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Now, everything that is listed in the &lt;code&gt;composer.json&lt;/code&gt; file will be downloaded inside a folder named &lt;code&gt;vendor&lt;/code&gt;. &lt;/p&gt;
+&lt;p&gt;From there on, its all your code.&lt;/p&gt;
+&lt;p&gt;Happy Coding.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>Five OpenFL Extensions for Android</title>
       <link>https://saumya.github.io/ray/articles/75/</link>

@@ -24,6 +24,39 @@
         <article class="article intro">
           <header>
             <p class="date"><span>01. January 2015</span></p>
+            <h2><a href="https://saumya.github.io/ray/articles/46/">Cake and Coffee</a></h2>
+          </header>
+          <section class="content"><p>While working with <a href="http://coffeescript.org/#top">CoffeeScript</a>, we generally tend to do the&nbsp;following,</p>
+<ul>
+<li>write something in a .coffee&nbsp;file</li>
+<li>compile that file with coffee compiler to .js&nbsp;file         </li>
+</ul>
+<p>Well, if we are a little smarter, then use the following command to compile all the .coffee files in a particular folder to respective .js file in another&nbsp;folder.</p>
+<pre><code class="lang-coffeescript">coffee --compile --output outputFolder/ inputFolder/
+</code></pre>
+<p>That may seem enough now, but actually there are a lot of things we could automate. The native way to do this in <a href="http://coffeescript.org/#top">CoffeeScript</a> is called <code>Cake</code>. We can look at it as a build system. Nice thing about this is, we can write every instruction in <a href="http://coffeescript.org/#top">CoffeeScript</a>&nbsp;itself.         </p>
+<ul>
+<li>Cake is an utility comes with <a href="http://coffeescript.org/#top">CoffeeScript</a></li>
+<li>its a task runner or build&nbsp;system</li>
+<li>all the instructions are saved in a file with name <code>Cakefile</code></li>
+<li><code>Cakefile</code> is the file name and there is no extension to&nbsp;it</li>
+<li>Everything inside the <code>Cakefile</code> is a <a href="http://coffeescript.org/#top">CoffeeScript</a>&nbsp;expression         </li>
+</ul>
+<p>To run the <code>Cake</code> task runner, navigate to the folder, where our <code>Cakefile</code> is residing and fire up the command as&nbsp;below.        </p>
+<pre><code class="lang-coffeescript">cake
+</code></pre>
+<p>That will display all the tasks available in that file to be run. To run a specific task,&nbsp;run</p>
+<pre><code class="lang-coffeescript">cake taskName
+</code></pre>
+<p>While defining tasks, we can make a relation between tasks. That means we can say taskOne is dependent on taskTwo. The <a href="https://github.com/saumya/CoffeeScript101">basics of CoffeeScript project</a> has a Cakefile for&nbsp;reference.        </p>
+<p>The direct link to the sample <code>Cakefile</code> <a href="https://github.com/saumya/CoffeeScript101/blob/master/Cakefile">is here</a>. All the code are commented for easy&nbsp;reference.       </p>
+<p>Happy&nbsp;Coding.</p>
+
+          </section>
+        </article>
+        <article class="article intro">
+          <header>
+            <p class="date"><span>01. January 2015</span></p>
             <h2><a href="https://saumya.github.io/ray/articles/45/">CoffeeScript basics</a></h2>
           </header>
           <section class="content"><p>Just to set the expectations right, we need to know something before we begin&nbsp;here.         </p>
@@ -78,34 +111,13 @@
 
           </section>
         </article>
-        <article class="article intro">
-          <header>
-            <p class="date"><span>23. October 2014</span></p>
-            <h2><a href="https://saumya.github.io/ray/articles/43/">Upgrading to Cordova 3.4 and above</a></h2>
-          </header>
-          <section class="content"><p>While trying to upgrade, one of my previous Cordova Android application, to latest <a href="http://cordova.apache.org/">Cordova</a> , noticed that <a href="http://cordova.apache.org/">Cordova</a> now makes it very difficult to switch to a native development workflow. Its not the flow itself, which is difficult, but the information about the flow and to get started with a project which is the problem. If you have ever worked with the native development flow of <a href="http://cordova.apache.org/">Cordova</a> , which I guess you must have, as that was the actual flow in the beginning. Then its exactly the same work flow, but the thing is, its not mentioned anywhere. And in between these, they had introduced a web development workflow and tried forcing to use it. Which itself is not clear and then combined the native workflow with it. Good that, that period is over. But its not clear at all from the docs.
-Well, first of all, <a href="http://cordova.apache.org/">Cordova</a> is saying its released the version 4 of the toolkit. When you go to <a href="http://cordova.apache.org/#download">download</a> section for native development workflow, you will <a href="https://www.apache.org/dist/cordova/">not find a version 4</a> ! So, you have to go inside <a href="https://www.apache.org/dist/cordova/platforms/">platforms</a>, there also you will not find version 4. So, I ended up downloading 3.6.4 for android and will suggest everyone to do that for the time being. After downloading the zipped file, extract it to a folder. Navigate to the folder and fireup the cordova create command to create a project.
-Next is adding the plugins, because now <a href="http://cordova.apache.org/">Cordova</a> does not include plugins by default. For that, one has to go back to Cordova <span class="caps">CLI</span> and that can be done with Node and NPM. But instead of running Cordova to add plugins, one has to run Plugman to install&nbsp;plugins.</p>
-<p>The flow&nbsp;is </p>
-<ul>
-<li>download Cordova Native development&nbsp;package</li>
-<li>download Node and&nbsp;<span class="caps">NPM</span></li>
-<li>install Cordova and Plugman through&nbsp;<span class="caps">NPM</span></li>
-<li>create project from inside the dowloaded Cordova&nbsp;folder</li>
-<li>navigate to the project&nbsp;folder</li>
-<li>run the Plugman command to add plugins to the&nbsp;project</li>
-</ul>
-<p>Happy&nbsp;Coding.</p>
-
-          </section>
-        </article>
       </div>
     </div>
     <footer>
       <div class="content-wrap">
         <div class="nav"><a href="https://saumya.github.io/ray/page/10/">« Newer</a><a href="https://saumya.github.io/ray/page/12/">Next page »</a>
         </div>
-        <section class="about"><p><a href="https://saumya.github.io/">Saumya</a> believes in seeking.</p>
+        <section class="about"><p><a href="https://saumya.github.io/">Saumya</a> is an iternal seeker.</p>
 <p>A maker of things and curious about everything. Continuous learning is, what fuels him. This blog itself, reflects one of many things he is trying at all the time.</p>
 <p>He is <a href="https://twitter.com/saumya">@saumya</a> on Twitter. </p>
 <span class="nav"><a href="https://saumya.github.io/ray/">Blog Home</a><a href="https://saumya.github.io/ray/archive.html">Archives</a></span>

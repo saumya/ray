@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width">
-    <title>Reflecting on 2016. - Saumya
+    <title>Slim with Composer - Saumya
     </title>
     <link rel="alternate" href="https://saumya.github.io/ray/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
     <link rel="stylesheet" href="https://saumya.github.io/ray/css/main.css">
@@ -13,48 +13,31 @@
   <body class="article-detail">
     <header class="header">
       <div class="content-wrap">
-        <h1>Reflecting on 2016.</h1>
+        <h1>Slim with Composer</h1>
         <p class="author">Written by <span class="author"><a href="mailto:2saumyaray@gmail.com">Saumya</a></span>
         </p>
-        <p class="date">03. January 2017</p>
+        <p class="date">09. August 2017</p>
       </div>
     </header>
     <div id="content">
       <div class="content-wrap">
         <article class="article">
-          <section class="content"><ul>
-<li>Moved to a new&nbsp;place</li>
-<li>Moved to a new company (rather new kind of&nbsp;employment) </li>
-</ul>
+          <section class="content"><p>One of the nice frameworks of <a href="https://secure.php.net/"><span class="caps">PHP</span></a> is <a href="https://github.com/slimphp">Slim</a>. Now its on its version 3. I started using it since version 1. And must admit that there are a lot of changes since its version&nbsp;1. </p>
 <p><span class="more"></span></p>
-<ul>
-<li>Chose what to do for that year and done&nbsp;that</li>
-<li>Started with some <span class="caps">UX</span> design and consulting for clients with a&nbsp;team</li>
-<li>Educated the team about the <span class="caps">UX</span> design and work flow and the&nbsp;tools</li>
-<li>I together with the team delivered the <span class="caps">UX</span> to the&nbsp;clients</li>
-<li>Done some plugins for Wordpress&nbsp;customisation</li>
-<li>Written some APIs to connect to Wordpress from a mobile&nbsp;App</li>
-<li>Swift was the call of the mid-year and done that for almost 4&nbsp;months</li>
-<li>Well the end of the year was to&nbsp;React</li>
-<li>Done and delivered a project in ReactNative for&nbsp;Android          </li>
-</ul>
-<h3 id="contribution">Contribution</h3>
-<ul>
-<li>Github activities are&nbsp;increased.</li>
-</ul>
-<p><img src="https://c1.staticflickr.com/1/389/31206649944_27be46b4c5_z.jpg" alt="Opensource contribution on Github"> </p>
-<ul>
-<li>Released my first ever library, <a href="http://lib.haxe.org/p/raymp">raymp on haxelib</a> and <a href="https://github.com/saumya/raymp">its opensorce</a>&nbsp;too.</li>
-</ul>
-<h3 id="general">General</h3>
-<ul>
-<li>A lot of learning in terms of client and business&nbsp;understandings </li>
-<li>Moved to Linux (Ubuntu) from macOS as primary&nbsp;dev-environment</li>
-<li>Redesigned <a href="https://saumya.github.io">my&nbsp;site</a> </li>
-<li>Cold drinks consumption is below a litre in the whole year&nbsp;:)                    </li>
-</ul>
-<p>Still I feel, I could have done more, I am looking at you&nbsp;2017.</p>
-<p>Happy New Year.&nbsp;Cheers.</p>
+<p>At the same time, <a href="https://secure.php.net/"><span class="caps">PHP</span></a> also has seen a lot of changes. One of the interesting thing that happened is package manager. There are a few options here but <a href="https://getcomposer.org/">Composer</a> is probably oldest one here. It says “Dependency Manager for <span class="caps">PHP</span>” for itself. Well, whatever one calls it, the thing is it downloads the required packages (and its dependencies) for us. The installation also has two options, either install it locally in a folder (project folder) or could be installed globally in one machine. The difference is how you fire up the command <code>composer</code>. If its globally installed, one has to say <code>composer</code> but if its locally installed, then it would be called with <code>php composer</code>. The <code>php</code> executable must call the locally installed <code>composer</code>. </p>
+<p>Now to install a package, one has to run the&nbsp;command</p>
+<pre><code>composer require slim/slim &quot;^3.0&quot;
+</code></pre><p>Alternatively one can write all the dependencies in <code>composer.json</code> file.</p>
+<pre><code>{
+    &quot;require&quot;: {
+        &quot;slim/slim&quot;: &quot;^3.0&quot;
+    }
+}
+</code></pre><p>And then run the&nbsp;command</p>
+<pre><code>composer install
+</code></pre><p>Now, everything that is listed in the <code>composer.json</code> file will be downloaded inside a folder named <code>vendor</code>. </p>
+<p>From there on, its all your&nbsp;code.</p>
+<p>Happy&nbsp;Coding.</p>
 </section>
         </article>
       </div>
