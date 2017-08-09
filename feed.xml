@@ -28,7 +28,7 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;And then run the command&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;composer install
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Now, everything that is listed in the &lt;code&gt;composer.json&lt;/code&gt; file will be downloaded inside a folder named &lt;code&gt;vendor&lt;/code&gt;. &lt;/p&gt;
-&lt;p&gt;From there on, its all your code.&lt;/p&gt;
+&lt;p&gt;From there on, its all your code, the &lt;a href=&quot;https://github.com/saumya/Slim3Basics&quot;&gt;reference app&lt;/a&gt; is here.&lt;/p&gt;
 &lt;p&gt;Happy Coding.&lt;/p&gt;
 </description>
     </item>
