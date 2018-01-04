@@ -32,8 +32,8 @@
 </ul>
 <p>The <a href="http://requirejs.org/">RequireJS</a> configuration has an option called <code>waitSeconds</code>, which defaults to <code>7</code>. Now if the module does not load in 7 seconds, it will giveup and throw the error. If <code>waitSeconds</code> is set to <code>0</code>, it will wait for <code>infinite</code>. Well, along with that setting, set the <code>enforceDefine</code> to <code>true</code> for reliability in all browsers and scenarios. This setting will look as&nbsp;below.</p>
 <pre><code class="lang-javascript">requirejs.config({
-    enforceDefine: <span class="literal">true</span>,
-    waitSeconds: <span class="number">0</span>,
+    <span class="attr">enforceDefine</span>: <span class="literal">true</span>,
+    <span class="attr">waitSeconds</span>: <span class="number">0</span>,
 </code></pre>
 <p>Thats a quickfix. But again, it may hit the performace of the application.<br>The otherway is <a href="http://requirejs.org/docs/api.html#errbacks">Errbacks</a> as per <a href="http://requirejs.org/">RequireJS</a>. so what are they. They are simply callbacks but since it happens in errors, its called <code>Errbacks</code>. We can do stuff like reloading the whole application or the specified module or other error handling on&nbsp;these.</p>
 <pre><code class="lang-javascript"><span class="built_in">require</span>([<span class="string">'modules/one'</span>,<span class="string">'modules/two'</span>],
@@ -72,7 +72,7 @@
 <span class="nav"><a href="https://saumya.github.io/ray/">Blog Home</a><a href="https://saumya.github.io/ray/archive.html">Archives</a></span>
         </section>
         <section class="copy">
-          <p>&copy; 2017 saumya ray &mdash; powered by&nbsp;     <a href="https://github.com/jnordberg/wintersmith">Wintersmith&nbsp;</a>
+          <p>&copy; 2018 saumya ray &mdash; powered by&nbsp;     <a href="https://github.com/jnordberg/wintersmith">Wintersmith&nbsp;</a>
             <p> <a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
           </p>
         </section>

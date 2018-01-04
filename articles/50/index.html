@@ -16,7 +16,7 @@
         <h1>HAXE and NodeJS</h1>
         <p class="author">Written by <span class="author"><a href="mailto:2saumyaray@gmail.com">Saumya</a></span>
         </p>
-        <p class="date">18. January 2015</p>
+        <p class="date">17. January 2015</p>
       </div>
     </header>
     <div id="content">
@@ -38,7 +38,7 @@ oneObj.publicFunction();
 }
 </code></pre>
 <p>This second one is looked at as classical concepts of programming, where each <span class="caps">JS</span> file is kind of a Class file.<br>The dynamic and fun nature of javascript allows us to use the first way of exposing individual elements to actually expose a constructor function too. Is not it ?! Why we think about that! Because <a href="http://haxe.org/"><span class="caps">HAXE</span></a> generated javascript is actually doing that. Smart.<br><span class="more"></span><br>Now, lets focus back in <a href="http://haxe.org/"><span class="caps">HAXE</span></a> and here is the companion <a href="https://github.com/saumya/HAXENode">Github project</a>. We have three classes in <code>.hx</code> as Animal, Jungle and Tree. But only Animal class is exposed by using <code>@:expose</code> just before the class declaration&nbsp;as           </p>
-<pre><code class="lang-haxe">@:expose(<span class="string">"Animal"</span>)
+<pre><code class="lang-haxe"><span class="meta">@:expose("Animal")</span>
 <span class="class"><span class="keyword">class</span> <span class="title">Animal</span></span>
 </code></pre>
 <p>The application entry class <code>ApplicationEntry.hx</code> is actually using all these classes. Finally, we have the <code>.hxml</code> file, we name it <code>compile.hxml</code>, but could be given any name, to compile our application. Here is the code for quick&nbsp;reference.          </p>
@@ -120,7 +120,7 @@ com.jungle.Jungle
 <span class="nav"><a href="https://saumya.github.io/ray/">Blog Home</a><a href="https://saumya.github.io/ray/archive.html">Archives</a></span>
         </section>
         <section class="copy">
-          <p>&copy; 2017 saumya ray &mdash; powered by&nbsp;     <a href="https://github.com/jnordberg/wintersmith">Wintersmith&nbsp;</a>
+          <p>&copy; 2018 saumya ray &mdash; powered by&nbsp;     <a href="https://github.com/jnordberg/wintersmith">Wintersmith&nbsp;</a>
             <p> <a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
           </p>
         </section>

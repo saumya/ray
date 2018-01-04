@@ -48,10 +48,10 @@
 </code></pre>
 <p>In the same RootControllerView / MainControllerView, inside component declaration&nbsp;add</p>
 <pre><code class="lang-javascript">childContextTypes:{
-  muiTheme: React.PropTypes.object.isRequired,
+  <span class="attr">muiTheme</span>: React.PropTypes.object.isRequired,
 },
 getChildContext() {
-  <span class="keyword">return</span> {muiTheme: getMuiTheme(baseTheme)};
+  <span class="keyword">return</span> {<span class="attr">muiTheme</span>: getMuiTheme(baseTheme)};
 },
 </code></pre>
 <p>Here is <a href="https://github.com/callemall/material-ui/issues/4021">a little more</a> in-depth view of the&nbsp;scenario.</p>
@@ -79,7 +79,7 @@ getChildContext() {
 <span class="nav"><a href="https://saumya.github.io/ray/">Blog Home</a><a href="https://saumya.github.io/ray/archive.html">Archives</a></span>
         </section>
         <section class="copy">
-          <p>&copy; 2017 saumya ray &mdash; powered by&nbsp;     <a href="https://github.com/jnordberg/wintersmith">Wintersmith&nbsp;</a>
+          <p>&copy; 2018 saumya ray &mdash; powered by&nbsp;     <a href="https://github.com/jnordberg/wintersmith">Wintersmith&nbsp;</a>
             <p> <a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
           </p>
         </section>

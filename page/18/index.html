@@ -23,6 +23,22 @@
       <div class="content-wrap">
         <article class="article intro">
           <header>
+            <p class="date"><span>13. February 2014</span></p>
+            <h2><a href="https://saumya.github.io/ray/articles/26/">iOS, customising top and bottom bar inside UINavigationController</a></h2>
+          </header>
+          <section class="content"><p>This may seem a difficult or simple task, depending upon what and how you want to do it.<br><a href="https://developer.apple.com/library/ios/documentation/uikit/reference/UINavigationController_Class/Reference/Reference.html">UINavigationController</a> is simply a controller to manage all the UIViewControllers inside it. Now, customising each and every <a href="https://developer.apple.com/library/ios/documentation/uikit/reference/UIViewController_Class/Reference/Reference.html#//apple_ref/doc/c_ref/UIViewController">UIViewController</a> could be done by code or InterfaceBuilder, depending upon what you want to achieve. We will be seeing here, as to how, to customise the Navigation bar (top bar) and the Tab bar (bottom bar) of the respective <a href="https://developer.apple.com/library/ios/documentation/uikit/reference/UIViewController_Class/Reference/Reference.html#//apple_ref/doc/c_ref/UIViewController">UIViewController</a>.<br>These are the references to look for while customising <a href="https://developer.apple.com/library/ios/documentation/uikit/reference/UIViewController_Class/Reference/Reference.html#//apple_ref/doc/c_ref/UIViewController">UIViewController</a> through InterfaceBuilder.<br>Hide the Tab bar (bottom&nbsp;bar)     </p>
+<p><iframe src="http://www.flickr.com/photos/saumyaray/12479138795/player/" width="408" height="477" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe><br>The above setting is on the same <a href="https://developer.apple.com/library/ios/documentation/uikit/reference/UIViewController_Class/Reference/Reference.html#//apple_ref/doc/c_ref/UIViewController">UIViewController</a>.<br>To display custom text on the back button in a UIViewController, look for the setting as&nbsp;below     </p>
+<p><iframe src="http://www.flickr.com/photos/saumyaray/12476698994/player/" width="500" height="408" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe><br>Just remember that the above setting is done on the <code>previous</code> <a href="https://developer.apple.com/library/ios/documentation/uikit/reference/UIViewController_Class/Reference/Reference.html#//apple_ref/doc/c_ref/UIViewController">UIViewController</a> for the next <a href="https://developer.apple.com/library/ios/documentation/uikit/reference/UIViewController_Class/Reference/Reference.html#//apple_ref/doc/c_ref/UIViewController">UIViewController</a>, <code>its tricky</code> that way.<br>Now the code reference for <a href="https://developer.apple.com/library/ios/documentation/uikit/reference/UIViewController_Class/Reference/Reference.html#//apple_ref/doc/c_ref/UIViewController">UIViewController</a> is as&nbsp;below.          </p>
+<script src="https://gist.github.com/saumya/8969920.js"></script>     
+
+
+
+<p>Happy&nbsp;customising.</p>
+
+          </section>
+        </article>
+        <article class="article intro">
+          <header>
             <p class="date"><span>12. February 2014</span></p>
             <h2><a href="https://saumya.github.io/ray/articles/25/">iOS fragmentation and UI development</a></h2>
           </header>
@@ -48,22 +64,6 @@ $(<span class="string">"body"</span>).pagecontainer(<span class="string">"change
 
           </section>
         </article>
-        <article class="article intro">
-          <header>
-            <p class="date"><span>10. February 2014</span></p>
-            <h2><a href="https://saumya.github.io/ray/articles/23/">Making desktop applications, using NodeJS.</a></h2>
-          </header>
-          <section class="content"><p>I am suprised to see, how big the javascript community has become! And specifically <a href="http://nodejs.org/">NodeJS</a> has some serious people in its community. I was trying to do a desktop application in javascript and without searching in the internet, I started out to do it all over again! After a couple of days, out of curiosity, did a search in internet to find, that <a href="http://nodejs.org/">NodeJS</a> has plenty of options to do the stuff.<br>Evaluating some options, I settled with <a href="https://github.com/rogerwang/node-webkit">Node-Webkit</a>. For now the best 3 in my opinion&nbsp;are;</p>
-<ul>
-<li><a href="https://github.com/rogerwang/node-webkit">Node-Webkit</a></li>
-<li><a href="http://appjs.com/">AppJS</a></li>
-<li><a href="http://hex.youdao.com/">hex</a></li>
-</ul>
-<p>I must say, <a href="http://nodejs.org/">NodeJS</a> has already revolutionised the internet. If at all, you think of doing something, search for a <a href="http://nodejs.org/">NodeJS</a> solution and its possible that the solution is already&nbsp;there.</p>
-<p>Happy&nbsp;coding.</p>
-
-          </section>
-        </article>
       </div>
     </div>
     <footer>
@@ -76,7 +76,7 @@ $(<span class="string">"body"</span>).pagecontainer(<span class="string">"change
 <span class="nav"><a href="https://saumya.github.io/ray/">Blog Home</a><a href="https://saumya.github.io/ray/archive.html">Archives</a></span>
         </section>
         <section class="copy">
-          <p>&copy; 2017 saumya ray &mdash; powered by&nbsp;     <a href="https://github.com/jnordberg/wintersmith">Wintersmith&nbsp;</a>
+          <p>&copy; 2018 saumya ray &mdash; powered by&nbsp;     <a href="https://github.com/jnordberg/wintersmith">Wintersmith&nbsp;</a>
             <p> <a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
           </p>
         </section>

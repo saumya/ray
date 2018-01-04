@@ -5,9 +5,25 @@
     <atom:link href="https://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>https://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Wed, 09  Aug 2017 05:30:00 +0630</pubDate>
+    <pubDate>Thu, 04 Jan 2018 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>The year 2017</title>
+      <link>https://saumya.github.io/ray/articles/77/</link>
+      <pubDate>Thu, 04 Jan 2018 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/77/</guid>
+      <author></author>
+      <description>&lt;p&gt;The year 2017, was an exciting year. A lot of things have started and could be seen as a year of life.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://farm5.staticflickr.com/4682/38781051814_1414f9066b_z.jpg&quot; alt=&quot;Dibyaamshu&quot;&gt;&lt;/p&gt;
+&lt;p&gt;There are countless events good and bad(no worse), but if I have to summerise, its this.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;I saw and spent time with my son&lt;/code&gt;
+&lt;code&gt;since his birth (after 3 and half years).&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;A week of togetherness.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://farm5.staticflickr.com/4642/25619857958_1e105aecc8_z.jpg&quot; alt=&quot;Dibyaamshu&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Happy Living.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>Slim with Composer</title>
       <link>https://saumya.github.io/ray/articles/76/</link>
@@ -409,10 +425,10 @@ I asked and you may too, “so what are these fancy terms are for?” &lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;In the same RootControllerView / MainControllerView, inside component declaration add&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;childContextTypes:{
-  muiTheme: React.PropTypes.object.isRequired,
+  &lt;span class=&quot;attr&quot;&gt;muiTheme&lt;/span&gt;: React.PropTypes.object.isRequired,
 },
 getChildContext() {
-  &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; {muiTheme: getMuiTheme(baseTheme)};
+  &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; {&lt;span class=&quot;attr&quot;&gt;muiTheme&lt;/span&gt;: getMuiTheme(baseTheme)};
 },
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Here is &lt;a href=&quot;https://github.com/callemall/material-ui/issues/4021&quot;&gt;a little more&lt;/a&gt; in-depth view of the scenario.&lt;/p&gt;
@@ -473,7 +489,7 @@ var App = ReactDOM.render(&amp;lt;Router routes={routes} history={hashHistory} /
 &lt;p&gt;In our component code, we have to provide the &lt;code&gt;contenxtTypes&lt;/code&gt; propert as below.&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// contextTypes property setting in components&lt;/span&gt;
 contextTypes: {
-    router: React.PropTypes.object.isRequired,
+    &lt;span class=&quot;attr&quot;&gt;router&lt;/span&gt;: React.PropTypes.object.isRequired,
   },
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Now the programmatic routing is done through the &lt;code&gt;router&lt;/code&gt; property of the &lt;code&gt;context&lt;/code&gt; object. Once we put &lt;code&gt;contextTypes&lt;/code&gt; property, we can get the &lt;code&gt;router&lt;/code&gt; from it and through that, we can make our application to move to any other route. 
@@ -678,7 +694,7 @@ cordova run android ( run in device )
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;This HTML file has only a &lt;code&gt;div&lt;/code&gt; with an id as &lt;code&gt;id=&amp;quot;myReactApp&amp;quot;&lt;/code&gt;. Now lets write a React Component. The component code is as below.&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; Component1 = React.createClass({
-  render: &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;)&lt;/span&gt;{
+  &lt;span class=&quot;attr&quot;&gt;render&lt;/span&gt;: &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;)&lt;/span&gt;{
     &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; reactComponent = React.DOM.span(&lt;span class=&quot;literal&quot;&gt;null&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&quot;I am a Custom Span.&quot;&lt;/span&gt;);
     &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; reactComponent;
   }
@@ -704,7 +720,7 @@ cordova run android ( run in device )
     &lt;span class=&quot;comment&quot;&gt;&amp;lt;!-- Application Code --&amp;gt;&lt;/span&gt;
     &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;type&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;text/javascript&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;javascript&quot;&gt;
         &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; Component1 = React.createClass({
-                                render: &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;)&lt;/span&gt;{
+                                &lt;span class=&quot;attr&quot;&gt;render&lt;/span&gt;: &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;)&lt;/span&gt;{
                                     &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; reactComponent = React.DOM.span(&lt;span class=&quot;literal&quot;&gt;null&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&quot;I am a REACT Component Span&quot;&lt;/span&gt;);
                                     &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; reactComponent;
                                 }
@@ -836,7 +852,7 @@ This is focused on the vary basic concepts of &lt;a href=&quot;https://angularjs
     <item>
       <title>Vi/Vim comands</title>
       <link>https://saumya.github.io/ray/articles/53/</link>
-      <pubDate>Thu, 06  Aug 2015 05:30:00 +0630</pubDate>
+      <pubDate>Thu, 06  Aug 2015 00:00:00 +0630</pubDate>
       <guid isPermaLink="true">https://saumya.github.io/ray/articles/53/</guid>
       <author></author>
       <description>&lt;p&gt;First of all there are 2 modes. &lt;code&gt;Insert&lt;/code&gt; and &lt;code&gt;Command&lt;/code&gt; . By default one is in the command mode.&lt;/p&gt;
@@ -879,7 +895,7 @@ set nowrapscan : search does not wrap TOP or BOTTOM
     <item>
       <title>Git, Forking and Syncing</title>
       <link>https://saumya.github.io/ray/articles/52/</link>
-      <pubDate>Tue, 19 May 2015 05:30:00 +0630</pubDate>
+      <pubDate>Tue, 19 May 2015 00:00:00 +0630</pubDate>
       <guid isPermaLink="true">https://saumya.github.io/ray/articles/52/</guid>
       <author></author>
       <description>&lt;p&gt;There are couple of things to understand before going to the commandline, just remember that we have assumed the name &lt;code&gt;UPSTREAM&lt;/code&gt; as the repository, from where we have forked the project and &lt;code&gt;master&lt;/code&gt; is our own remote repository where we save our changes.
@@ -901,7 +917,7 @@ git push origin master
     <item>
       <title>Making crossplatform CLI application with HAXE</title>
       <link>https://saumya.github.io/ray/articles/51/</link>
-      <pubDate>Mon, 19 Jan 2015 05:30:00 +0630</pubDate>
+      <pubDate>Mon, 19 Jan 2015 00:00:00 +0630</pubDate>
       <guid isPermaLink="true">https://saumya.github.io/ray/articles/51/</guid>
       <author></author>
       <description>&lt;p&gt;When I first heard about CLI applications, I thought it might be shipping with the OS itself. Then I found that we can write our own CLI applications. At that point I assume that well, just a CLI application, means it runs everywhere. But actually CLI applications by default are not crossplatform! Yes, I realised it much later. In order to have a crossplatform CLI app, one needs all the required environment to compile to and compile for a particular OS.         &lt;/p&gt;
@@ -925,7 +941,7 @@ git push origin master
     <item>
       <title>HAXE and NodeJS</title>
       <link>https://saumya.github.io/ray/articles/50/</link>
-      <pubDate>Sun, 18 Jan 2015 05:30:00 +0630</pubDate>
+      <pubDate>Sun, 18 Jan 2015 00:00:00 +0630</pubDate>
       <guid isPermaLink="true">https://saumya.github.io/ray/articles/50/</guid>
       <author></author>
       <description>&lt;p&gt;Continuing the sudy of javascript target of &lt;a href=&quot;http://haxe.org/&quot;&gt;HAXE&lt;/a&gt; we will focus on &lt;a href=&quot;http://nodejs.org/&quot;&gt;NodeJS&lt;/a&gt; this time. Before we move on, lets remind ourselves the things to expect from the &lt;a href=&quot;http://haxe.org/&quot;&gt;HAXE&lt;/a&gt; toolchain by going through the previous two introductions, here is the &lt;a href=&quot;http://saumya.github.io/ray/articles/47/&quot;&gt;first&lt;/a&gt; and the &lt;a href=&quot;http://saumya.github.io/ray/articles/48/&quot;&gt;second&lt;/a&gt; post.&lt;br&gt;Thats about &lt;a href=&quot;http://haxe.org/&quot;&gt;HAXE&lt;/a&gt;, now a little about &lt;a href=&quot;http://nodejs.org/&quot;&gt;NodeJS&lt;/a&gt;. In &lt;a href=&quot;http://nodejs.org/&quot;&gt;NodeJS&lt;/a&gt; the concept of modules is very common to make some re-usable code. In general, modules hide everything by default. In class based languages we can call them as &lt;code&gt;private&lt;/code&gt; elements. To make something &lt;code&gt;public&lt;/code&gt; , we have to use &lt;code&gt;exports&lt;/code&gt; keyword in &lt;a href=&quot;http://nodejs.org/&quot;&gt;NodeJS&lt;/a&gt;.           &lt;/p&gt;
@@ -944,7 +960,7 @@ oneObj.publicFunction();
 }
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;This second one is looked at as classical concepts of programming, where each JS file is kind of a Class file.&lt;br&gt;The dynamic and fun nature of javascript allows us to use the first way of exposing individual elements to actually expose a constructor function too. Is not it ?! Why we think about that! Because &lt;a href=&quot;http://haxe.org/&quot;&gt;HAXE&lt;/a&gt; generated javascript is actually doing that. Smart.&lt;br&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;br&gt;Now, lets focus back in &lt;a href=&quot;http://haxe.org/&quot;&gt;HAXE&lt;/a&gt; and here is the companion &lt;a href=&quot;https://github.com/saumya/HAXENode&quot;&gt;Github project&lt;/a&gt;. We have three classes in &lt;code&gt;.hx&lt;/code&gt; as Animal, Jungle and Tree. But only Animal class is exposed by using &lt;code&gt;@:expose&lt;/code&gt; just before the class declaration as           &lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;lang-haxe&quot;&gt;@:expose(&lt;span class=&quot;string&quot;&gt;&quot;Animal&quot;&lt;/span&gt;)
+&lt;pre&gt;&lt;code class=&quot;lang-haxe&quot;&gt;&lt;span class=&quot;meta&quot;&gt;@:expose(&quot;Animal&quot;)&lt;/span&gt;
 &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Animal&lt;/span&gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The application entry class &lt;code&gt;ApplicationEntry.hx&lt;/code&gt; is actually using all these classes. Finally, we have the &lt;code&gt;.hxml&lt;/code&gt; file, we name it &lt;code&gt;compile.hxml&lt;/code&gt;, but could be given any name, to compile our application. Here is the code for quick reference.          &lt;/p&gt;
@@ -1008,7 +1024,7 @@ com.jungle.Jungle
     <item>
       <title>Dojo Toolkit, require and events.</title>
       <link>https://saumya.github.io/ray/articles/49/</link>
-      <pubDate>Wed, 14 Jan 2015 05:30:00 +0630</pubDate>
+      <pubDate>Wed, 14 Jan 2015 00:00:00 +0630</pubDate>
       <guid isPermaLink="true">https://saumya.github.io/ray/articles/49/</guid>
       <author></author>
       <description>&lt;p&gt;Well, lets say this, if you are working on &lt;a href=&quot;http://dojotoolkit.org/&quot;&gt;Dojo Toolkit&lt;/a&gt;, you are working on a legacy application. Since &lt;a href=&quot;http://dojotoolkit.org/&quot;&gt;Dojo Toolkit&lt;/a&gt; is releasing its newer versions, you need to change your application to newer codebase. Currently &lt;a href=&quot;http://dojotoolkit.org/&quot;&gt;Dojo Toolkit&lt;/a&gt; is leveraging &lt;a href=&quot;http://requirejs.org/docs/whyamd.html#amd&quot;&gt;AMD&lt;/a&gt; for modules and Javascript files. Which is very new for this toolkit and veteran developers in this toolkit may find its very different.          &lt;/p&gt;
@@ -1046,7 +1062,7 @@ dojo.string.trim(&lt;span class=&quot;string&quot;&gt;&quot;  I Like Trim String
     <item>
       <title>HAXE JS 102</title>
       <link>https://saumya.github.io/ray/articles/48/</link>
-      <pubDate>Mon, 12 Jan 2015 05:30:00 +0630</pubDate>
+      <pubDate>Mon, 12 Jan 2015 00:00:00 +0630</pubDate>
       <guid isPermaLink="true">https://saumya.github.io/ray/articles/48/</guid>
       <author></author>
       <description>&lt;p&gt;We are going good with &lt;a href=&quot;http://haxe.org/&quot;&gt;HAXE&lt;/a&gt;, take a moment to go through the official &lt;a href=&quot;http://haxe.org/&quot;&gt;HAXE&lt;/a&gt; documentation.&lt;br&gt;This is a follow-up post to the &lt;a href=&quot;http://saumya.github.io/ray/articles/47/&quot;&gt;Haxe JS 101&lt;/a&gt;. Its all about setting up the expectations from the language and the tool chain. Lets make some more things clear about the tooling and how the language works.          &lt;/p&gt;
@@ -1076,7 +1092,7 @@ com.jungle.Animal
     <item>
       <title>HAXE JS 101</title>
       <link>https://saumya.github.io/ray/articles/47/</link>
-      <pubDate>Mon, 05 Jan 2015 05:30:00 +0630</pubDate>
+      <pubDate>Mon, 05 Jan 2015 00:00:00 +0630</pubDate>
       <guid isPermaLink="true">https://saumya.github.io/ray/articles/47/</guid>
       <author></author>
       <description>&lt;p&gt;Hope you know what is &lt;a href=&quot;http://haxe.org/&quot;&gt;HAXE&lt;/a&gt;, take a moment to go through the official &lt;a href=&quot;http://haxe.org/&quot;&gt;HAXE&lt;/a&gt; documentation. We will discuss how and what to consider while working with JS in &lt;a href=&quot;http://haxe.org/&quot;&gt;HAXE&lt;/a&gt;.&lt;br&gt;Generally other languages, which compile to JS, actually compile each specific file to a respective JS file. &lt;a href=&quot;http://haxe.org/&quot;&gt;HAXE&lt;/a&gt; actually compiles to one single JS file for our application. We can further take the generated JS file and minify it using popular JS minifiers.        &lt;/p&gt;
@@ -1101,7 +1117,7 @@ com.jungle.Animal
     <item>
       <title>Cake and Coffee</title>
       <link>https://saumya.github.io/ray/articles/46/</link>
-      <pubDate>Thu, 01 Jan 2015 05:30:00 +0630</pubDate>
+      <pubDate>Thu, 01 Jan 2015 00:00:00 +0630</pubDate>
       <guid isPermaLink="true">https://saumya.github.io/ray/articles/46/</guid>
       <author></author>
       <description>&lt;p&gt;While working with &lt;a href=&quot;http://coffeescript.org/#top&quot;&gt;CoffeeScript&lt;/a&gt;, we generally tend to do the following,&lt;/p&gt;
@@ -1134,7 +1150,7 @@ com.jungle.Animal
     <item>
       <title>CoffeeScript basics</title>
       <link>https://saumya.github.io/ray/articles/45/</link>
-      <pubDate>Thu, 01 Jan 2015 05:30:00 +0630</pubDate>
+      <pubDate>Thu, 01 Jan 2015 00:00:00 +0630</pubDate>
       <guid isPermaLink="true">https://saumya.github.io/ray/articles/45/</guid>
       <author></author>
       <description>&lt;p&gt;Just to set the expectations right, we need to know something before we begin here.         &lt;/p&gt;
@@ -1169,8 +1185,8 @@ com.jungle.Animal
 &lt;/ul&gt;
 &lt;p&gt;The &lt;a href=&quot;http://requirejs.org/&quot;&gt;RequireJS&lt;/a&gt; configuration has an option called &lt;code&gt;waitSeconds&lt;/code&gt;, which defaults to &lt;code&gt;7&lt;/code&gt;. Now if the module does not load in 7 seconds, it will giveup and throw the error. If &lt;code&gt;waitSeconds&lt;/code&gt; is set to &lt;code&gt;0&lt;/code&gt;, it will wait for &lt;code&gt;infinite&lt;/code&gt;. Well, along with that setting, set the &lt;code&gt;enforceDefine&lt;/code&gt; to &lt;code&gt;true&lt;/code&gt; for reliability in all browsers and scenarios. This setting will look as below.&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;requirejs.config({
-    enforceDefine: &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt;,
-    waitSeconds: &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;,
+    &lt;span class=&quot;attr&quot;&gt;enforceDefine&lt;/span&gt;: &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt;,
+    &lt;span class=&quot;attr&quot;&gt;waitSeconds&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;,
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Thats a quickfix. But again, it may hit the performace of the application.&lt;br&gt;The otherway is &lt;a href=&quot;http://requirejs.org/docs/api.html#errbacks&quot;&gt;Errbacks&lt;/a&gt; as per &lt;a href=&quot;http://requirejs.org/&quot;&gt;RequireJS&lt;/a&gt;. so what are they. They are simply callbacks but since it happens in errors, its called &lt;code&gt;Errbacks&lt;/code&gt;. We can do stuff like reloading the whole application or the specified module or other error handling on these.&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;require&lt;/span&gt;([&lt;span class=&quot;string&quot;&gt;'modules/one'&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;'modules/two'&lt;/span&gt;],
@@ -1478,12 +1494,12 @@ All that is to it is, how you &lt;code&gt;trigger&lt;/code&gt; the event, from t
       <description>&lt;p&gt;It will come to you very soon, if you are trying to develop any decent webapp or phonegap mobile app using &lt;a href=&quot;http://jquery.com/&quot;&gt;jQuery&lt;/a&gt;.&lt;br&gt;The problem is, if we have the same &lt;code&gt;GET&lt;/code&gt; request multiple times, by default jQuery will cache the request. The end result is the response same as the first response!! Well, there is a setting in jQuery AJAX setup, where in we write &lt;code&gt;cache:false&lt;/code&gt; and that should work. Well, depending upon how the API is written on the server side, this call might not work! There are many reasons as to why it may not work, one simple reason is, to understand, how &lt;a href=&quot;http://jquery.com/&quot;&gt;jQuery&lt;/a&gt; behaves, when we set &lt;code&gt;cache:false&lt;/code&gt; as below.&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; apiURL = &lt;span class=&quot;string&quot;&gt;&quot;my/api/server/URI&quot;&lt;/span&gt;;
 $.ajax({
-    url:apiURL,
-    cache: &lt;span class=&quot;literal&quot;&gt;false&lt;/span&gt;,
-    success:&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;result&lt;/span&gt;)&lt;/span&gt;{
+    &lt;span class=&quot;attr&quot;&gt;url&lt;/span&gt;:apiURL,
+    &lt;span class=&quot;attr&quot;&gt;cache&lt;/span&gt;: &lt;span class=&quot;literal&quot;&gt;false&lt;/span&gt;,
+    &lt;span class=&quot;attr&quot;&gt;success&lt;/span&gt;:&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;result&lt;/span&gt;)&lt;/span&gt;{
         &lt;span class=&quot;comment&quot;&gt;//&lt;/span&gt;
     },
-    error:&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;data&lt;/span&gt;)&lt;/span&gt;{           
+    &lt;span class=&quot;attr&quot;&gt;error&lt;/span&gt;:&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;data&lt;/span&gt;)&lt;/span&gt;{           
         &lt;span class=&quot;comment&quot;&gt;//            &lt;/span&gt;
     }   
 });
@@ -1492,12 +1508,12 @@ $.ajax({
 &lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; timeStamp = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;Date&lt;/span&gt;().getTime();
 &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; apiURL = &lt;span class=&quot;string&quot;&gt;&quot;my/api/server/URI/&quot;&lt;/span&gt;+timeStamp;
 $.ajax({
-    url:apiURL,
+    &lt;span class=&quot;attr&quot;&gt;url&lt;/span&gt;:apiURL,
     &lt;span class=&quot;comment&quot;&gt;//cache: false,//not needed now&lt;/span&gt;
     success:&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;result&lt;/span&gt;)&lt;/span&gt;{
         &lt;span class=&quot;comment&quot;&gt;//&lt;/span&gt;
     },
-    error:&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;data&lt;/span&gt;)&lt;/span&gt;{           
+    &lt;span class=&quot;attr&quot;&gt;error&lt;/span&gt;:&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;data&lt;/span&gt;)&lt;/span&gt;{           
         &lt;span class=&quot;comment&quot;&gt;//            &lt;/span&gt;
     }   
 });
@@ -1812,9 +1828,9 @@ Ok. Lets add a library to the equation. Now it becomes &lt;code&gt;device + OS +
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The complete AJAX call will look somthing like this.&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;$.ajax({
-headers : { &lt;span class=&quot;string&quot;&gt;&quot;cache-control&quot;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;no-cache&quot;&lt;/span&gt; },
-url : &lt;span class=&quot;string&quot;&gt;''&lt;/span&gt;,
-success : &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;result&lt;/span&gt;) &lt;/span&gt;{}
+&lt;span class=&quot;attr&quot;&gt;headers&lt;/span&gt; : { &lt;span class=&quot;string&quot;&gt;&quot;cache-control&quot;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;no-cache&quot;&lt;/span&gt; },
+&lt;span class=&quot;attr&quot;&gt;url&lt;/span&gt; : &lt;span class=&quot;string&quot;&gt;''&lt;/span&gt;,
+&lt;span class=&quot;attr&quot;&gt;success&lt;/span&gt; : &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;result&lt;/span&gt;) &lt;/span&gt;{}
 })
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Here is a &lt;a href=&quot;http://www.einternals.com/blog/web-development/ios6-0-caching-ajax-post-requests&quot;&gt;nice write up about how&lt;/a&gt; you configure &lt;a href=&quot;http://jquery.com/&quot;&gt;jQuery&lt;/a&gt; AJAX call, so that they are not cached.     &lt;/p&gt;
@@ -1862,7 +1878,7 @@ It goes on and on. The matter of fact is, you can not ignore testing it in all t
 &lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;events:{
         &lt;span class=&quot;string&quot;&gt;&quot;click&quot;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;onClick&quot;&lt;/span&gt;
         },
-onClick: &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;event&lt;/span&gt;)&lt;/span&gt;{
+&lt;span class=&quot;attr&quot;&gt;onClick&lt;/span&gt;: &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;event&lt;/span&gt;)&lt;/span&gt;{
     &lt;span class=&quot;comment&quot;&gt;//Do something with the event&lt;/span&gt;
     &lt;span class=&quot;comment&quot;&gt;//or&lt;/span&gt;
     &lt;span class=&quot;comment&quot;&gt;//specifically do it for a target&lt;/span&gt;
@@ -1876,7 +1892,7 @@ onClick: &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quo
 &lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;events:{
         &lt;span class=&quot;string&quot;&gt;&quot;click #btn_one&quot;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;onClick&quot;&lt;/span&gt;
         },
-onClick: &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;event&lt;/span&gt;)&lt;/span&gt;{
+&lt;span class=&quot;attr&quot;&gt;onClick&lt;/span&gt;: &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;event&lt;/span&gt;)&lt;/span&gt;{
     &lt;span class=&quot;comment&quot;&gt;//btn_one is clicked&lt;/span&gt;
     &lt;span class=&quot;comment&quot;&gt;//Do something with the event&lt;/span&gt;
 }

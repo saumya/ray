@@ -58,7 +58,7 @@ var App = ReactDOM.render(&lt;Router routes={routes} history={hashHistory} /&gt;
 <p>In our component code, we have to provide the <code>contenxtTypes</code> propert as&nbsp;below.</p>
 <pre><code class="lang-javascript"><span class="comment">// contextTypes property setting in components</span>
 contextTypes: {
-    router: React.PropTypes.object.isRequired,
+    <span class="attr">router</span>: React.PropTypes.object.isRequired,
   },
 </code></pre>
 <p>Now the programmatic routing is done through the <code>router</code> property of the <code>context</code> object. Once we put <code>contextTypes</code> property, we can get the <code>router</code> from it and through that, we can make our application to move to any other route. 
@@ -92,7 +92,7 @@ Here is an&nbsp;example.</p>
 <span class="nav"><a href="https://saumya.github.io/ray/">Blog Home</a><a href="https://saumya.github.io/ray/archive.html">Archives</a></span>
         </section>
         <section class="copy">
-          <p>&copy; 2017 saumya ray &mdash; powered by&nbsp;     <a href="https://github.com/jnordberg/wintersmith">Wintersmith&nbsp;</a>
+          <p>&copy; 2018 saumya ray &mdash; powered by&nbsp;     <a href="https://github.com/jnordberg/wintersmith">Wintersmith&nbsp;</a>
             <p> <a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
           </p>
         </section>
