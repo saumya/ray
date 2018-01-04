@@ -14,7 +14,7 @@ There are countless events good and bad(no worse), but if I have to summerise, i
 `I saw and spent time with my son`
 `since his birth (after 3 and half years).`
 
-A week of togetherness.
+Despite of all the conspiracies we still made it. A week of togetherness. 
 
 ![Dibyaamshu](https://farm5.staticflickr.com/4642/25619857958_1e105aecc8_z.jpg)
 
