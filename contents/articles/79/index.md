@@ -1,5 +1,5 @@
 ---
-title: Firebase Cloud FireStore and checking existance of a Document
+title: Firebase Cloud FireStore and checking existence of a Document
 author: saumya
 date: 2018-06-28
 template: article.jade
