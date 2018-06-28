@@ -4,28 +4,24 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width">
-    <title>Saumya
+    <title>Firebase Cloud FireStore and checking existance of a Document - Saumya
     </title>
     <link rel="alternate" href="https://saumya.github.io/ray/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
     <link rel="stylesheet" href="https://saumya.github.io/ray/css/main.css">
     <link rel="stylesheet" href="https://saumya.github.io/ray/css/saumya.css">
   </head>
-  <body>
+  <body class="article-detail">
     <header class="header">
       <div class="content-wrap">
-        <div class="logo">
-          <h1><a href="https://saumya.github.io/ray">Saumya</a></h1>
-          <p class="description">Where there is a will, there is a way.</p>
-        </div>
+        <h1>Firebase Cloud FireStore and checking existance of a Document</h1>
+        <p class="author">Written by <span class="author"><a href="mailto:2saumyaray@gmail.com">Saumya</a></span>
+        </p>
+        <p class="date">28. June 2018</p>
       </div>
     </header>
     <div id="content">
       <div class="content-wrap">
-        <article class="article intro">
-          <header>
-            <p class="date"><span>28. June 2018</span></p>
-            <h2><a href="https://saumya.github.io/ray/articles/79/">Firebase Cloud FireStore and checking existance of a Document</a></h2>
-          </header>
+        <article class="article">
           <section class="content"><p>The thing is <a href="https://firebase.google.com/products/firestore/">Cloud FireStore</a> is still in beta. However, I find it quite stable to run my applications. It has got all the things to run a serverless&nbsp;application.</p>
 <p>While this is a NoSQL database, there are <code>Documents</code> and <code>Collections</code>. I was suppose to check the existence of a <code>Document</code> before adding some values into it. There is an <span class="caps">API</span> which gives us exactly the same thing, <a href="https://firebase.google.com/docs/reference/js/firebase.firestore.DocumentSnapshot#~exists">exists</a>.</p>
 <pre><code>docSnapshot.exists
@@ -33,55 +29,23 @@
 <p>Just make sure, you created your <code>Document</code> before checking it with <code>exists</code>.</p>
 <p>Here is <a href="https://stackoverflow.com/questions/48068581/firebase-doc-exists-but-doc-exists-returns-false?answertab=active#tab-top">stackoverflow answer</a>, which helped me in this&nbsp;regard.</p>
 <p>Happy&nbsp;Coding.</p>
-
-          </section>
-        </article>
-        <article class="article intro">
-          <header>
-            <p class="date"><span>11. April 2018</span></p>
-            <h2><a href="https://saumya.github.io/ray/articles/78/">The options today</a></h2>
-          </header>
-          <section class="content"><p>Social networks&nbsp;-      </p>
-<ul>
-<li><a href="https://friendi.ca/">friendica</a></li>
-<li><a href="https://diasporafoundation.org/">diaspora</a></li>
-<li><a href="https://project.hubzilla.org/page/hubzilla/hubzilla-project">hubzilla</a></li>
-<li><a href="https://matrix.org/blog/home/">matrix</a></li>
-<li><a href="https://joinmastodon.org/">mastodon</a></li>
-<li><a href="https://movim.eu/">movim</a>          </li>
-</ul>
-<p>Emails - <a href="https://www.prxbx.com/email/">all the email&nbsp;services</a>               </p>
-<p>Browsers&nbsp;-     </p>
-<ul>
-<li><a href="https://beakerbrowser.com/">beaker</a></li>
-<li><a href="https://brave.com/">brave</a></li>
-</ul>
-<p>Happy&nbsp;Living.</p>
-
-          </section>
-        </article>
-        <article class="article intro">
-          <header>
-            <p class="date"><span>04. January 2018</span></p>
-            <h2><a href="https://saumya.github.io/ray/articles/77/">The year 2017</a></h2>
-          </header>
-          <section class="content"><p>The year 2017, was an exciting year. A lot of things have started and could be seen as a year of&nbsp;life.</p>
-<p><img src="https://farm5.staticflickr.com/4682/38781051814_1414f9066b_z.jpg" alt="Dibyaamshu"></p>
-<p>There are countless events good and bad(no worse), but if I have to summerise, its&nbsp;this.</p>
-<p><code>I saw and spent time with my son</code>
-<code>since his birth (after 3 and half years).</code></p>
-<p>Despite of all the conspiracies we still made it. A week of&nbsp;togetherness. </p>
-<p><img src="https://farm5.staticflickr.com/4642/25619857958_1e105aecc8_z.jpg" alt="Dibyaamshu"></p>
-<p>Happy&nbsp;Living.</p>
-
-          </section>
+</section>
         </article>
       </div>
     </div>
     <footer>
       <div class="content-wrap">
-        <div class="nav"><a href="https://saumya.github.io/ray/archive.html">« Archives</a><a href="https://saumya.github.io/ray/page/2/">Next page »</a>
-        </div>
+        <div class="nav"><a href="https://saumya.github.io/ray/">« Full blog</a></div>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+          var disqus_shortname = 'saumya';
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
         <section class="about"><p><a href="https://saumya.github.io/">Saumya</a> is an iternal seeker.</p>
 <p>A maker of things and curious about everything. Continuous learning is, what fuels him. This blog itself, reflects one of many things he is trying at all the time.</p>
 <p>He is <a href="https://twitter.com/saumya">@saumya</a> on Twitter. </p>

@@ -5,9 +5,24 @@
     <atom:link href="https://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>https://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Wed, 11 Apr 2018 05:30:00 +0630</pubDate>
+    <pubDate>Thu, 28 Jun 2018 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Firebase Cloud FireStore and checking existance of a Document</title>
+      <link>https://saumya.github.io/ray/articles/79/</link>
+      <pubDate>Thu, 28 Jun 2018 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/79/</guid>
+      <author></author>
+      <description>&lt;p&gt;The thing is &lt;a href=&quot;https://firebase.google.com/products/firestore/&quot;&gt;Cloud FireStore&lt;/a&gt; is still in beta. However, I find it quite stable to run my applications. It has got all the things to run a serverless application.&lt;/p&gt;
+&lt;p&gt;While this is a NoSQL database, there are &lt;code&gt;Documents&lt;/code&gt; and &lt;code&gt;Collections&lt;/code&gt;. I was suppose to check the existence of a &lt;code&gt;Document&lt;/code&gt; before adding some values into it. There is an API which gives us exactly the same thing, &lt;a href=&quot;https://firebase.google.com/docs/reference/js/firebase.firestore.DocumentSnapshot#~exists&quot;&gt;exists&lt;/a&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;docSnapshot.exists
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The trick here is, if there is no &lt;code&gt;Document&lt;/code&gt; creation involved before but still there are data inside that &lt;code&gt;Document&lt;/code&gt; path (its possible) then the &lt;code&gt;exists&lt;/code&gt; will always return &lt;code&gt;false&lt;/code&gt;. To know whether the &lt;code&gt;Document&lt;/code&gt; is actually created or not Firebase &lt;code&gt;Console&lt;/code&gt; is a good help. In the &lt;code&gt;Console&lt;/code&gt; the &lt;code&gt;Documents&lt;/code&gt; which are not created will be shown as &lt;em&gt;italics&lt;/em&gt;. Its a subtle but very informative visual separation.&lt;/p&gt;
+&lt;p&gt;Just make sure, you created your &lt;code&gt;Document&lt;/code&gt; before checking it with &lt;code&gt;exists&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Here is &lt;a href=&quot;https://stackoverflow.com/questions/48068581/firebase-doc-exists-but-doc-exists-returns-false?answertab=active#tab-top&quot;&gt;stackoverflow answer&lt;/a&gt;, which helped me in this regard.&lt;/p&gt;
+&lt;p&gt;Happy Coding.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>The options today</title>
       <link>https://saumya.github.io/ray/articles/78/</link>
