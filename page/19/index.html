@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width">
     <title>Saumya
     </title>
-    <link rel="alternate" href="https://saumya.github.io/ray/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
-    <link rel="stylesheet" href="https://saumya.github.io/ray/css/main.css">
-    <link rel="stylesheet" href="https://saumya.github.io/ray/css/saumya.css">
+    <link rel="alternate" href="http://localhost:8080/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
+    <link rel="stylesheet" href="http://localhost:8080/css/main.css">
+    <link rel="stylesheet" href="http://localhost:8080/css/saumya.css">
   </head>
   <body>
     <header class="header">
       <div class="content-wrap">
         <div class="logo">
-          <h1><a href="https://saumya.github.io/ray">Saumya</a></h1>
+          <h1><a href="http://localhost:8080">Saumya</a></h1>
           <p class="description">Where there is a will, there is a way.</p>
         </div>
       </div>
@@ -23,8 +23,25 @@
       <div class="content-wrap">
         <article class="article intro">
           <header>
+            <p class="date"><span>14. February 2014</span></p>
+            <h2><a href="http://localhost:8080/articles/27/">Amazon S3 Sync with NodeJS</a></h2>
+          </header>
+          <section class="content"><p>This is my first practical cross-platform desktop application written in <a href="http://nodejs.org/">NodeJS</a>. The application is a simple desktop client to upload the changed files in a folder automatically to a bucket in <a href="http://aws.amazon.com/s3/">Amazon S3</a>. The main components, which make this application,&nbsp;are     </p>
+<ul>
+<li><a href="https://github.com/rogerwang/node-webkit">node-webkit</a></li>
+<li><a href="http://docs.aws.amazon.com/AWSJavaScriptSDK/guide/browser-intro.html">Amazon S3 <span class="caps">SDK</span> for&nbsp;browser</a></li>
+</ul>
+<p>Well, there is a <a href="http://nodejs.org/">NodeJS</a> module as well for the <span class="caps">SDK</span>, but I prefer to take it only browser way at the&nbsp;moment.     </p>
+<p>The <a href="https://github.com/saumya/AmazonS3Sync">source code</a> is available here and to run it, get a copy of the <a href="https://github.com/rogerwang/node-webkit">node-webkit</a> for your environment. And that makes a cross-platform application on <a href="http://nodejs.org/">NodeJS</a>.     </p>
+<p>Currently the application keeps an eye on a folder, you specify. Once a file is changed in that folder, is automatically uploaded to the ‘bucket’ you specify in the beginning of the application. Note, currently it just uploads the files, which are changed. It does not upload a new file in the folder or any existing&nbsp;file.</p>
+<p>Happy&nbsp;synching.</p>
+
+          </section>
+        </article>
+        <article class="article intro">
+          <header>
             <p class="date"><span>13. February 2014</span></p>
-            <h2><a href="https://saumya.github.io/ray/articles/26/">iOS, customising top and bottom bar inside UINavigationController</a></h2>
+            <h2><a href="http://localhost:8080/articles/26/">iOS, customising top and bottom bar inside UINavigationController</a></h2>
           </header>
           <section class="content"><p>This may seem a difficult or simple task, depending upon what and how you want to do it.<br><a href="https://developer.apple.com/library/ios/documentation/uikit/reference/UINavigationController_Class/Reference/Reference.html">UINavigationController</a> is simply a controller to manage all the UIViewControllers inside it. Now, customising each and every <a href="https://developer.apple.com/library/ios/documentation/uikit/reference/UIViewController_Class/Reference/Reference.html#//apple_ref/doc/c_ref/UIViewController">UIViewController</a> could be done by code or InterfaceBuilder, depending upon what you want to achieve. We will be seeing here, as to how, to customise the Navigation bar (top bar) and the Tab bar (bottom bar) of the respective <a href="https://developer.apple.com/library/ios/documentation/uikit/reference/UIViewController_Class/Reference/Reference.html#//apple_ref/doc/c_ref/UIViewController">UIViewController</a>.<br>These are the references to look for while customising <a href="https://developer.apple.com/library/ios/documentation/uikit/reference/UIViewController_Class/Reference/Reference.html#//apple_ref/doc/c_ref/UIViewController">UIViewController</a> through InterfaceBuilder.<br>Hide the Tab bar (bottom&nbsp;bar)     </p>
 <p><iframe src="http://www.flickr.com/photos/saumyaray/12479138795/player/" width="408" height="477" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe><br>The above setting is on the same <a href="https://developer.apple.com/library/ios/documentation/uikit/reference/UIViewController_Class/Reference/Reference.html#//apple_ref/doc/c_ref/UIViewController">UIViewController</a>.<br>To display custom text on the back button in a UIViewController, look for the setting as&nbsp;below     </p>
@@ -40,27 +57,10 @@
         <article class="article intro">
           <header>
             <p class="date"><span>12. February 2014</span></p>
-            <h2><a href="https://saumya.github.io/ray/articles/25/">iOS fragmentation and UI development</a></h2>
+            <h2><a href="http://localhost:8080/articles/25/">iOS fragmentation and UI development</a></h2>
           </header>
           <section class="content"><p>It was not there 4 years back, when the iOS was just beginning its life. Whether you like it or not the truth is its fragmented now. There are all different versions of iOS, then different versions of the devices. These two itself bring a lot of different considerations, while developing for the platform now.<br>Its agreed that its less fragmented but then thats enough to bring in the pain to a frontend developer.<br>Now, to add to it, there are different device form factors. Starting with regular iPads, retina, air, mini, iphone, ipod touch and all have different specifications. So the point is, the XCode workflow allows one to <code>design</code> for all different devices, that does mean <code>design is multiplied</code> not <code>reduced</code>. While its good and freedom to the <span class="caps">UI</span> designer, as a frontend developer one must keep an eye on all these form fragmentations.
 Now the same code will produce, a different looking back button in an older iOS and a different looking one in the newer ones. The UI may hide some UI elements on a smaller heighted device and look perfect in a newer bigger iPhone/iPodTouch.<br>Thats doable but definitely increases time to implement <span class="caps">UI</span>, if its not designed, and well thought of, by people, who know what they are doing.<br>Happy&nbsp;designing.</p>
-
-          </section>
-        </article>
-        <article class="article intro">
-          <header>
-            <p class="date"><span>11. February 2014</span></p>
-            <h2><a href="https://saumya.github.io/ray/articles/24/">jQuerymobile, changePage is deprecated as of 1.4.0, will be removed in 1.5.0.</a></h2>
-          </header>
-          <section class="content"><p>This is really going to break things, if someone is updating the library to latest version. This is a very frequently used function and chances are, that, in a mobile web application its being used everywhere. Lets remind ourselves again that <code>jQuery.mobile.changePage</code> is <code>deprecated as of 1.4.0</code> and <code>will be removed in 1.5.0</code>.<br>Now there are vaious ways to change page in a <a href="http://jquerymobile.com">jQuerymobile</a> application. Here are the 3 options to do the page change in the new&nbsp;<span class="caps">API</span>.</p>
-<pre><code class="lang-javascript">$(<span class="string">":mobile-pagecontainer"</span>).pagecontainer(<span class="string">"change"</span>, <span class="string">"target"</span>, { options });
-<span class="comment">//or</span>
-$.mobile.pageContainer.pagecontainer(<span class="string">"change"</span>, <span class="string">"target"</span>, { options });
-<span class="comment">//or</span>
-$(<span class="string">"body"</span>).pagecontainer(<span class="string">"change"</span>, <span class="string">"target"</span>, { options });
-</code></pre>
-<p><a href="http://api.jquerymobile.com/jQuery.mobile.changePage/">Here is the official document for&nbsp;reference</a>     </p>
-<p>Happy&nbsp;coding.</p>
 
           </section>
         </article>
@@ -68,15 +68,15 @@ $(<span class="string">"body"</span>).pagecontainer(<span class="string">"change
     </div>
     <footer>
       <div class="content-wrap">
-        <div class="nav"><a href="https://saumya.github.io/ray/page/18/">« Newer</a><a href="https://saumya.github.io/ray/page/20/">Next page »</a>
+        <div class="nav"><a href="http://localhost:8080/page/18/">« Newer</a><a href="http://localhost:8080/page/20/">Next page »</a>
         </div>
         <section class="about"><p><a href="https://saumya.github.io/">Saumya</a> is an iternal seeker.</p>
 <p>A maker of things and curious about everything. Continuous learning is, what fuels him. This blog itself, reflects one of many things he is trying at all the time.</p>
 <p>He is <a href="https://twitter.com/saumya">@saumya</a> on Twitter. </p>
-<span class="nav"><a href="https://saumya.github.io/ray/">Blog Home</a><a href="https://saumya.github.io/ray/archive.html">Archives</a></span>
+<span class="nav"><a href="http://localhost:8080/">Blog Home</a><a href="http://localhost:8080/archive.html">Archives</a></span>
         </section>
         <section class="copy">
-          <p>&copy; 2018 saumya ray &mdash; powered by&nbsp;     <a href="https://github.com/jnordberg/wintersmith">Wintersmith&nbsp;</a>
+          <p>&copy; 2019 saumya ray &mdash; powered by&nbsp;     <a href="https://github.com/jnordberg/wintersmith">Wintersmith&nbsp;</a>
             <p> <a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
           </p>
         </section>

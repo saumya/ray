@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width">
     <title>Saumya
     </title>
-    <link rel="alternate" href="https://saumya.github.io/ray/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
-    <link rel="stylesheet" href="https://saumya.github.io/ray/css/main.css">
-    <link rel="stylesheet" href="https://saumya.github.io/ray/css/saumya.css">
+    <link rel="alternate" href="http://localhost:8080/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
+    <link rel="stylesheet" href="http://localhost:8080/css/main.css">
+    <link rel="stylesheet" href="http://localhost:8080/css/saumya.css">
   </head>
   <body>
     <header class="header">
       <div class="content-wrap">
         <div class="logo">
-          <h1><a href="https://saumya.github.io/ray">Saumya</a></h1>
+          <h1><a href="http://localhost:8080">Saumya</a></h1>
           <p class="description">Where there is a will, there is a way.</p>
         </div>
       </div>
@@ -23,8 +23,30 @@
       <div class="content-wrap">
         <article class="article intro">
           <header>
+            <p class="date"><span>31. December 2014</span></p>
+            <h2><a href="http://localhost:8080/articles/45/">CoffeeScript basics</a></h2>
+          </header>
+          <section class="content"><p>Just to set the expectations right, we need to know something before we begin&nbsp;here.         </p>
+<p>When I first heard about <code>Class</code> in <code>Javascript</code> it created curiosity on me and the expectation increased as to work like a <code>Classical</code> language(Where Classes are the root of everything) instead of <code>Prototypical</code> language(like Javascript). But then slowly I understood that its not <code>Javascript</code> but other languages on top of Javascript which create somekind of <code>Class</code> concept to mimic <code>Classical</code> languages. The point is everything boils down to <code>Javascript</code> if a language is written to compile or transpile to <code>Javascript</code> . Well, that may seem like a spoiler right now, but its actually not as we will see. Just keep these things in mind all the time, even if we are doing <a href="http://coffeescript.org/#top">CoffeeScript</a>.        </p>
+<p>Here is the direct link to the <a href="https://github.com/saumya/CoffeeScript101">Github</a> repository for the code reference to this&nbsp;post.       </p>
+<ul>
+<li>CoffeeScript is generally written in a <code>.coffee</code> file</li>
+<li>Each <code>.coffee</code> file is compiled to a <code>.js</code> file</li>
+<li>Each space (a blank space) in code has a meaning in the <code>.coffee</code> file</li>
+<li>Semicolons are optional and generally&nbsp;avoided</li>
+<li>In the beginning you may write more than one classes in a single <code>.coffee</code> file, and thats perfectly alright&nbsp;here</li>
+<li>By default the <a href="http://coffeescript.org/#top">CoffeeScript</a> Classes you write are&nbsp;private            </li>
+</ul>
+<p>When compiled to <span class="caps">JS</span>, the contents of each file, are put inside a self invoking function. This is intentional to not pollute the Global variables. So if the content has some classes inside them, then those classes will also be inside the self-invoking function, restricting the access from outside.<br>The classes in <a href="http://coffeescript.org/#top">CoffeeScript</a> are compiled to as usual <span class="caps">JS</span> functions and the inheritence is done through the prototypical inheritence concepts of Javascript. Since all this happens behind the scenes and as a <a href="http://coffeescript.org/#top">CoffeeScript</a> developer if you do not know, how its working, it would be a pain later to expect anything else from this&nbsp;language.          </p>
+<p>Thats all to start with the new year. Happy new&nbsp;year.         </p>
+<p>Happy&nbsp;Coding.</p>
+
+          </section>
+        </article>
+        <article class="article intro">
+          <header>
             <p class="date"><span>17. November 2014</span></p>
-            <h2><a href="https://saumya.github.io/ray/articles/44/">RequireJS, Load timeout for modules!</a></h2>
+            <h2><a href="http://localhost:8080/articles/44/">RequireJS, Load timeout for modules!</a></h2>
           </header>
           <section class="content"><p>Working with <a href="http://backbonejs.org/">BackboneJS</a>, will make you work with <a href="http://requirejs.org/">RequireJS</a>. And if you are working with <a href="http://backbonejs.org/">BackboneJS</a> for a little time, then you probably know what I am talking about. Sometimes, the modules we are loading through <a href="http://requirejs.org/">RequireJS</a> throw errors&nbsp;saying</p>
 <pre><code class="lang-javascript"><span class="built_in">Error</span>: Load timeout <span class="keyword">for</span> modules
@@ -59,7 +81,7 @@
         <article class="article intro">
           <header>
             <p class="date"><span>23. October 2014</span></p>
-            <h2><a href="https://saumya.github.io/ray/articles/43/">Upgrading to Cordova 3.4 and above</a></h2>
+            <h2><a href="http://localhost:8080/articles/43/">Upgrading to Cordova 3.4 and above</a></h2>
           </header>
           <section class="content"><p>While trying to upgrade, one of my previous Cordova Android application, to latest <a href="http://cordova.apache.org/">Cordova</a> , noticed that <a href="http://cordova.apache.org/">Cordova</a> now makes it very difficult to switch to a native development workflow. Its not the flow itself, which is difficult, but the information about the flow and to get started with a project which is the problem. If you have ever worked with the native development flow of <a href="http://cordova.apache.org/">Cordova</a> , which I guess you must have, as that was the actual flow in the beginning. Then its exactly the same work flow, but the thing is, its not mentioned anywhere. And in between these, they had introduced a web development workflow and tried forcing to use it. Which itself is not clear and then combined the native workflow with it. Good that, that period is over. But its not clear at all from the docs.
 Well, first of all, <a href="http://cordova.apache.org/">Cordova</a> is saying its released the version 4 of the toolkit. When you go to <a href="http://cordova.apache.org/#download">download</a> section for native development workflow, you will <a href="https://www.apache.org/dist/cordova/">not find a version 4</a> ! So, you have to go inside <a href="https://www.apache.org/dist/cordova/platforms/">platforms</a>, there also you will not find version 4. So, I ended up downloading 3.6.4 for android and will suggest everyone to do that for the time being. After downloading the zipped file, extract it to a folder. Navigate to the folder and fireup the cordova create command to create a project.
@@ -77,67 +99,19 @@ Next is adding the plugins, because now <a href="http://cordova.apache.org/">Cor
 
           </section>
         </article>
-        <article class="article intro">
-          <header>
-            <p class="date"><span>30. September 2014</span></p>
-            <h2><a href="https://saumya.github.io/ray/articles/42/">Dojo Toolkit, Widget.</a></h2>
-          </header>
-          <section class="content"><p><a href="http://dojotoolkit.org/">Dojo Toolkit</a> has a component library named as <code>Dijit</code>. Each component in this library is known as a <code>Widget</code>. It is better to know the <code>dijit</code> framework vocabulary before going further inside&nbsp;it. </p>
-<ul>
-<li>Normally each <code>.js</code> file represents a <code>Class</code>.</li>
-<li>Each file, whose name starts with <code>_</code> (underscore) is <code>not a concrete</code> class. That means, this class is supposed to be extended to be used, <code>never directly used</code> as&nbsp;is.</li>
-<li>Members inside a class, properties and methods, whose name starts with <code>_</code> (underscore) are <code>private</code></li>
-<li>A class is defined by <code>declare()</code> </li>
-</ul>
-<p><a href="http://dojotoolkit.org/">Dojo</a> now supports <span class="caps">AMD</span> modules. So the module definition is pretty straight forward as in standard module definition. If you have ever used any other framework such as <a href="http://backbonejs.org/">BackboneJS</a>, you already know, how to declare, extend, load and use a module and a&nbsp;class. </p>
-<p>Now, lets see what <code>Widget</code> brings to the rules table. Each Widget has a life-cycle of its own. The lifecycle methods are as below in&nbsp;sequence.</p>
-<ul>
-<li>constructor()</li>
-<li>postMixInProperties()</li>
-<li>buildRendering()</li>
-<li>setters and getters, example is&nbsp;set(“myProperty”,value)</li>
-<li>postCreate()</li>
-<li>startup()</li>
-<li>destroy()</li>
-</ul>
-<p>There are few methods which also be called in some widgets, such&nbsp;as</p>
-<ul>
-<li>resize()</li>
-</ul>
-<p>Each <code>Widget</code> is supposed to <code>Extend</code> the <code>_WidgetBase</code> class defined in <code>dijit/_WidgetBase</code> package. Sometimes, it is necessary to use template strings or templates inside a  Widget. In that case, the <code>Widget</code> extends <code>_WidgetBase</code> and <code>_TemplatedMixin</code>, defined in <code>dijit/_WidgetBase</code> and <code>dijit/_TemplatedMixin</code> package&nbsp;respectively.</p>
-<p>After creation of each child <code>Widget</code> inside the parent Widget, its necessary to call the <code>startup()</code> method of the child Widget. Since <code>startup()</code> call goes through all the child widgets of a container Widget, its better to add all the child Widgets to the parent Widget and call parent’s <code>startup()</code>, which will call <code>startup()</code> of each child Widget.
-While writing a custom Widget, its necessary to override parent’s lifecycle methods. At the sametime, it is necessary to continue the lifecycle of the Widget. So a call to parent’s method is necessary. In most of all programming languages it is done with a <code>super()</code> call. In <code>dijit</code> framework its called&nbsp;as</p>
-<ul>
-<li>this.inherited(arguments);</li>
-</ul>
-<p>So inside each of the above life-cycle methods, a call to <code>this.inherited(arguments);</code> is necessary, either in the beginning or as the last line of the&nbsp;method.</p>
-<p>A custom <code>Widget</code> has either of the 2 properties below or sometimes both, to add child widgets to&nbsp;itself.</p>
-<ul>
-<li>this.domNode</li>
-<li>this.containerNode</li>
-</ul>
-<p>Now to add child widgets to the parent widget there are methods&nbsp;like</p>
-<ul>
-<li>addChild()</li>
-</ul>
-<p>Well, this post may seem a lot but the idea is to make you aware of the vocabulary and some background to <code>dijit</code> infrastructure. For a basic and complete <code>example</code> <a href="https://github.com/saumya/dojo101/blob/master/dojo-release-1.10.0-src/myWidgets/rayWidget3.js">have a look at this widget</a>.</p>
-<p>Happy&nbsp;Coding.</p>
-
-          </section>
-        </article>
       </div>
     </div>
     <footer>
       <div class="content-wrap">
-        <div class="nav"><a href="https://saumya.github.io/ray/page/12/">« Newer</a><a href="https://saumya.github.io/ray/page/14/">Next page »</a>
+        <div class="nav"><a href="http://localhost:8080/page/12/">« Newer</a><a href="http://localhost:8080/page/14/">Next page »</a>
         </div>
         <section class="about"><p><a href="https://saumya.github.io/">Saumya</a> is an iternal seeker.</p>
 <p>A maker of things and curious about everything. Continuous learning is, what fuels him. This blog itself, reflects one of many things he is trying at all the time.</p>
 <p>He is <a href="https://twitter.com/saumya">@saumya</a> on Twitter. </p>
-<span class="nav"><a href="https://saumya.github.io/ray/">Blog Home</a><a href="https://saumya.github.io/ray/archive.html">Archives</a></span>
+<span class="nav"><a href="http://localhost:8080/">Blog Home</a><a href="http://localhost:8080/archive.html">Archives</a></span>
         </section>
         <section class="copy">
-          <p>&copy; 2018 saumya ray &mdash; powered by&nbsp;     <a href="https://github.com/jnordberg/wintersmith">Wintersmith&nbsp;</a>
+          <p>&copy; 2019 saumya ray &mdash; powered by&nbsp;     <a href="https://github.com/jnordberg/wintersmith">Wintersmith&nbsp;</a>
             <p> <a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
           </p>
         </section>

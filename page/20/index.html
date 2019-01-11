@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width">
     <title>Saumya
     </title>
-    <link rel="alternate" href="https://saumya.github.io/ray/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
-    <link rel="stylesheet" href="https://saumya.github.io/ray/css/main.css">
-    <link rel="stylesheet" href="https://saumya.github.io/ray/css/saumya.css">
+    <link rel="alternate" href="http://localhost:8080/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
+    <link rel="stylesheet" href="http://localhost:8080/css/main.css">
+    <link rel="stylesheet" href="http://localhost:8080/css/saumya.css">
   </head>
   <body>
     <header class="header">
       <div class="content-wrap">
         <div class="logo">
-          <h1><a href="https://saumya.github.io/ray">Saumya</a></h1>
+          <h1><a href="http://localhost:8080">Saumya</a></h1>
           <p class="description">Where there is a will, there is a way.</p>
         </div>
       </div>
@@ -23,8 +23,25 @@
       <div class="content-wrap">
         <article class="article intro">
           <header>
+            <p class="date"><span>11. February 2014</span></p>
+            <h2><a href="http://localhost:8080/articles/24/">jQuerymobile, changePage is deprecated as of 1.4.0, will be removed in 1.5.0.</a></h2>
+          </header>
+          <section class="content"><p>This is really going to break things, if someone is updating the library to latest version. This is a very frequently used function and chances are, that, in a mobile web application its being used everywhere. Lets remind ourselves again that <code>jQuery.mobile.changePage</code> is <code>deprecated as of 1.4.0</code> and <code>will be removed in 1.5.0</code>.<br>Now there are vaious ways to change page in a <a href="http://jquerymobile.com">jQuerymobile</a> application. Here are the 3 options to do the page change in the new&nbsp;<span class="caps">API</span>.</p>
+<pre><code class="lang-javascript">$(<span class="string">":mobile-pagecontainer"</span>).pagecontainer(<span class="string">"change"</span>, <span class="string">"target"</span>, { options });
+<span class="comment">//or</span>
+$.mobile.pageContainer.pagecontainer(<span class="string">"change"</span>, <span class="string">"target"</span>, { options });
+<span class="comment">//or</span>
+$(<span class="string">"body"</span>).pagecontainer(<span class="string">"change"</span>, <span class="string">"target"</span>, { options });
+</code></pre>
+<p><a href="http://api.jquerymobile.com/jQuery.mobile.changePage/">Here is the official document for&nbsp;reference</a>     </p>
+<p>Happy&nbsp;coding.</p>
+
+          </section>
+        </article>
+        <article class="article intro">
+          <header>
             <p class="date"><span>10. February 2014</span></p>
-            <h2><a href="https://saumya.github.io/ray/articles/23/">Making desktop applications, using NodeJS.</a></h2>
+            <h2><a href="http://localhost:8080/articles/23/">Making desktop applications, using NodeJS.</a></h2>
           </header>
           <section class="content"><p>I am suprised to see, how big the javascript community has become! And specifically <a href="http://nodejs.org/">NodeJS</a> has some serious people in its community. I was trying to do a desktop application in javascript and without searching in the internet, I started out to do it all over again! After a couple of days, out of curiosity, did a search in internet to find, that <a href="http://nodejs.org/">NodeJS</a> has plenty of options to do the stuff.<br>Evaluating some options, I settled with <a href="https://github.com/rogerwang/node-webkit">Node-Webkit</a>. For now the best 3 in my opinion&nbsp;are;</p>
 <ul>
@@ -40,7 +57,7 @@
         <article class="article intro">
           <header>
             <p class="date"><span>01. February 2014</span></p>
-            <h2><a href="https://saumya.github.io/ray/articles/22/">BackboneJS, making an event-dispatching Object.</a></h2>
+            <h2><a href="http://localhost:8080/articles/22/">BackboneJS, making an event-dispatching Object.</a></h2>
           </header>
           <section class="content"><p>Making Views, Collections and Models in <a href="http://backbonejs.org/">BackboneJS</a> is as simple as extending the raw <a href="http://backbonejs.org/">BackboneJS</a>&nbsp;objects.</p>
 <pre><code class="lang-javascript"><span class="keyword">var</span> MyView = Backbone.View.extend({});
@@ -56,32 +73,19 @@
 
           </section>
         </article>
-        <article class="article intro">
-          <header>
-            <p class="date"><span>31. January 2014</span></p>
-            <h2><a href="https://saumya.github.io/ray/articles/21/">Typography.</a></h2>
-          </header>
-          <section class="content"><p>Like many other things, there are a lot of nice typography available, which are free to use. There is no hidden spying on you or hidden charges or anything hidden, in the name of free.<br>I would like to mention, the two types, which are used in the theme <a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Elegant</a> for <a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>.     </p>
-<p><a href="http://www.fontsquirrel.com/fonts/kaushan-script">Kaushan Script</a> and <a href="http://www.fontsquirrel.com/fonts/TeX-Gyre-Adventor">TeX Gyre&nbsp;Adventor</a></p>
-<p>I found these fonts at <a href="http://www.fontsquirrel.com/">fontsquirrel</a>.</p>
-<p><a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Elegant</a> is a free as in air, theme, and encourage you to take it, hack it and use it, for whatever reason you may want it to&nbsp;use.     </p>
-<p>Happy&nbsp;hacking.</p>
-
-          </section>
-        </article>
       </div>
     </div>
     <footer>
       <div class="content-wrap">
-        <div class="nav"><a href="https://saumya.github.io/ray/page/19/">« Newer</a><a href="https://saumya.github.io/ray/page/21/">Next page »</a>
+        <div class="nav"><a href="http://localhost:8080/page/19/">« Newer</a><a href="http://localhost:8080/page/21/">Next page »</a>
         </div>
         <section class="about"><p><a href="https://saumya.github.io/">Saumya</a> is an iternal seeker.</p>
 <p>A maker of things and curious about everything. Continuous learning is, what fuels him. This blog itself, reflects one of many things he is trying at all the time.</p>
 <p>He is <a href="https://twitter.com/saumya">@saumya</a> on Twitter. </p>
-<span class="nav"><a href="https://saumya.github.io/ray/">Blog Home</a><a href="https://saumya.github.io/ray/archive.html">Archives</a></span>
+<span class="nav"><a href="http://localhost:8080/">Blog Home</a><a href="http://localhost:8080/archive.html">Archives</a></span>
         </section>
         <section class="copy">
-          <p>&copy; 2018 saumya ray &mdash; powered by&nbsp;     <a href="https://github.com/jnordberg/wintersmith">Wintersmith&nbsp;</a>
+          <p>&copy; 2019 saumya ray &mdash; powered by&nbsp;     <a href="https://github.com/jnordberg/wintersmith">Wintersmith&nbsp;</a>
             <p> <a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
           </p>
         </section>
