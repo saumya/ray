@@ -23,6 +23,28 @@
       <div class="content-wrap">
         <article class="article intro">
           <header>
+            <p class="date"><span>18. May 2015</span></p>
+            <h2><a href="https://saumya.github.io/ray/articles/52/">Git, Forking and Syncing</a></h2>
+          </header>
+          <section class="content"><p>There are couple of things to understand before going to the commandline, just remember that we have assumed the name <code>UPSTREAM</code> as the repository, from where we have forked the project and <code>master</code> is our own remote repository where we save our changes.
+Well, another important thing is to <a href="https://help.github.com/articles/configuring-a-remote-for-a-fork/">configure</a> the <code>UPSTREAM</code> or simply configure a repository from where we want to&nbsp;sync.</p>
+<pre><code class="lang-git">git remote -v
+git remote add UPSTREAM https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git
+</code></pre>
+<p>For syncing forked repository, the commands are as&nbsp;below.</p>
+<pre><code class="lang-git">git remote -v
+git fetch UPSTREAM
+git checkout master
+git merge UPSTREAM/master
+git push origin master
+</code></pre>
+<p>This is a direct <a href="https://help.github.com/articles/syncing-a-fork/">tutorial from github</a>.</p>
+<p>Happy&nbsp;syncing.</p>
+
+          </section>
+        </article>
+        <article class="article intro">
+          <header>
             <p class="date"><span>18. January 2015</span></p>
             <h2><a href="https://saumya.github.io/ray/articles/51/">Making crossplatform CLI application with HAXE</a></h2>
           </header>
@@ -67,44 +89,6 @@ oneObj.publicFunction();
 </code></pre>
 <p>This second one is looked at as classical concepts of programming, where each <span class="caps">JS</span> file is kind of a Class file.<br>The dynamic and fun nature of javascript allows us to use the first way of exposing individual elements to actually expose a constructor function too. Is not it ?! Why we think about that! Because <a href="http://haxe.org/"><span class="caps">HAXE</span></a> generated javascript is actually doing that. Smart.<br>
             <p class="more"><a href="https://saumya.github.io/ray/articles/50/">more</a></p>
-          </section>
-        </article>
-        <article class="article intro">
-          <header>
-            <p class="date"><span>13. January 2015</span></p>
-            <h2><a href="https://saumya.github.io/ray/articles/49/">Dojo Toolkit, require and events.</a></h2>
-          </header>
-          <section class="content"><p>Well, lets say this, if you are working on <a href="http://dojotoolkit.org/">Dojo Toolkit</a>, you are working on a legacy application. Since <a href="http://dojotoolkit.org/">Dojo Toolkit</a> is releasing its newer versions, you need to change your application to newer codebase. Currently <a href="http://dojotoolkit.org/">Dojo Toolkit</a> is leveraging <a href="http://requirejs.org/docs/whyamd.html#amd"><span class="caps">AMD</span></a> for modules and Javascript files. Which is very new for this toolkit and veteran developers in this toolkit may find its very&nbsp;different.          </p>
-<p>Previously, when we needed some <span class="caps">JS</span> code, its simply done by making a ‘require’&nbsp;call.          </p>
-<pre><code class="lang-javascript">dojo.require(<span class="string">"dojo.string"</span>);
-<span class="comment">//then use it</span>
-dojo.string.trim(<span class="string">"  I Like Trim Strings "</span>);
-</code></pre>
-<p>Now it looks&nbsp;as          </p>
-<pre><code class="lang-javascript"><span class="built_in">require</span>([<span class="string">"dojo/string"</span>, <span class="string">"dojo/domReady!"</span>], <span class="function"><span class="keyword">function</span>(<span class="params">string</span>)</span>{
-  string.trim(<span class="string">"  I Like Trim Strings "</span>);
-});
-</code></pre>
-<p>Well that may seems fine now, but then what happens when we need something inside that <code>require</code> itself? Actually, its simpler than it seems, we can have <code>require</code> inside another require&nbsp;too.          </p>
-<pre><code class="lang-javascript"><span class="built_in">require</span>([<span class="string">"dojo/domReady!"</span>], <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{
-    <span class="comment">//<span class="caps">DOM</span> is ready, load another module</span>
-    <span class="built_in">require</span>([<span class="string">"dojo/string"</span>], <span class="function"><span class="keyword">function</span>(<span class="params">string</span>)</span>{
-      string.trim(<span class="string">"  I Like Trim Strings "</span>);
-    });
-});
-</code></pre>
-<p>Thats nice. Here <a href="http://dojotoolkit.org/reference-guide/1.7/dojo/require.html">is the official documentation</a>. The introduction to <a href="http://dojotoolkit.org/documentation/tutorials/1.10/modern_dojo/">modern dojo</a> is here.<br>Another nice utility is <a href="http://dojotoolkit.org/reference-guide/1.10/dojo/topic.html">topic</a>. This is kind of central event dispatching and listening station. All one has to do is, dispatch events through <a href="http://dojotoolkit.org/reference-guide/1.10/dojo/topic.html">topic</a> and listen through it too. These are called <code>publish</code> and <code>subscribe</code> of&nbsp;events.          </p>
-<pre><code class="lang-javascript"><span class="built_in">require</span>([<span class="string">"dojo/topic"</span>], <span class="function"><span class="keyword">function</span>(<span class="params">topic</span>)</span>{
-    topic.subscribe(<span class="string">"some/topic"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">arguments</span>)</span>{
-        <span class="built_in">console</span>.log(<span class="string">"received:"</span>, <span class="built_in">arguments</span>);
-    });
-    <span class="comment">// ...</span>
-    topic.publish(<span class="string">"some/topic"</span>, <span class="string">"one"</span>, <span class="string">"two"</span>);
-});
-</code></pre>
-<p>The other kind of events are <span class="caps">DOM</span> events and <a href="http://dojotoolkit.org/reference-guide/1.10/dojo/on.html#dojo-on">they are handled with the ‘on’</a>&nbsp;module.          </p>
-<p>Happy&nbsp;coding.</p>
-
           </section>
         </article>
       </div>

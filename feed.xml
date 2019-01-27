@@ -5,9 +5,20 @@
     <atom:link href="https://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>https://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Fri, 11 Jan 2019 05:30:00 +0630</pubDate>
+    <pubDate>Sun, 27 Jan 2019 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Cake &amp; Slim</title>
+      <link>https://saumya.github.io/ray/articles/82/</link>
+      <pubDate>Sun, 27 Jan 2019 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/82/</guid>
+      <author></author>
+      <description>&lt;p&gt;PHP frameworks have really taken up some new concepts from other technology such as NodeJS and Ruby. On my search for an easy deployable framework to server, I found both &lt;a href=&quot;https://cakephp.org/&quot;&gt;CakePHP&lt;/a&gt; and &lt;a href=&quot;https://www.slimframework.com/&quot;&gt;Slim&lt;/a&gt; are good enough.&lt;/p&gt;
+&lt;p&gt;For getting started with development &lt;a href=&quot;https://cakephp.org/&quot;&gt;CakePHP&lt;/a&gt; seems like old school as one just needs to download the package and put it on a server and get into coding. While &lt;a href=&quot;https://www.slimframework.com/&quot;&gt;Slim&lt;/a&gt; seems to be a little more learning as one needs to get used to &lt;a href=&quot;https://getcomposer.org/&quot;&gt;Composer&lt;/a&gt;. [CakePHP] also has an option to get started using &lt;a href=&quot;https://getcomposer.org/&quot;&gt;Composer&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://cakephp.org/&quot;&gt;CakePHP&lt;/a&gt; is a full framework having everything to get an application running on server. &lt;a href=&quot;https://www.slimframework.com/&quot;&gt;Slim&lt;/a&gt; seems to be a better option to get upto speed with API development.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>The 2018.</title>
       <link>https://saumya.github.io/ray/articles/81/</link>
