@@ -23,7 +23,7 @@ Ooty, for the first time! A small and beautiful place.
 
 Isha Yoga Center, for the first time! Spent some time each day at [Dhyanalinga][dl] Yogic Temple and the Yoga Center complex. First time, accidentally saw Sadhguru in person and listened to his discourse in person at the Yoga Center.
 
-Travelled back to Bengaluru in a train, which was 8 hours late! However made some friends at the Coimbatore station and the journey was just an amazing experience. It was a general ticket journey and more than half a distance I was standing on the train at night. That opened my eyes towards the cooperation people have. People were offering their sheets to other willingly! 
+Travelled back to Bengaluru in a train, which was 8 hours late! However made some friends at the Coimbatore station and the journey was just an amazing experience. It was a general ticket journey and more than half a distance I was standing on the train at night. That opened my eyes towards the cooperation people have. People were offering their sheets to others, willingly! 
 
 Mysuru, for the first time. The early morning train from Bengaluru to Mysuru is a must have, if you want to get the maximum experience of the places. Another friend, met after 20 years, became my host! A couple of days and Mysuru is just a nice experience. A teen at home means, home is always energetic. And a willingness to life is all one needs to experience the good that life has to offer. Car ride to the **Chamundi Hills** and visiting the temple was part of the hospitality that I got. A ride arround the city and we ended that day arround Mysuru palace. Next day I trekked the Chamundi Hill on my own and that was also a beautiful experience. There is a Bull temple on the way to top of the hill.
 
@@ -35,11 +35,11 @@ For the first time, travelled to **Sambalpur** and **Paradip** in Odisha, on two
 
 Made a road trip to **Rourkela**, Odisha with a friend. Must say, the roads are amazing to drive and the route is scenic. I was for the first time in that city!
 
-I got myself formally intiated into Yoga on November.
+I got myself formally initiated into Yoga on November 2018.
 
 Met with a school friend after 25 years in my home town! And some more old friends in the City.
 
-Another road trip to the jungles of the Banapur, Odisha. It was a one day travel to deep inside the jungle.
+Another road trip to the jungles of the Banapur, Odisha. It was an one day travel to deep inside the jungle.
 
 ### All most all the travels that I did in 2018 was absolutely not planned. They just went so well that thinking of never planning a travel.
 
