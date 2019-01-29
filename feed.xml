@@ -55,9 +55,9 @@ class AppConfig
 &lt;h3 id=&quot;after-adding-the-autoload-field-in-composer-json-one-has-to-re-run-dump-autoload-to-re-generate-the-vendor-autoload-php-file-&quot;&gt;After adding the &lt;strong&gt;autoload field&lt;/strong&gt; in &lt;code&gt;composer.json&lt;/code&gt;, one &lt;strong&gt;has to&lt;/strong&gt; re-run &lt;code&gt;dump-autoload&lt;/code&gt; to re-generate the vendor/autoload.php file.&lt;/h3&gt;
 &lt;p&gt;This should takecare of autoloading of the class files. The &lt;code&gt;dump-autoload&lt;/code&gt; is a critical step while updating the &lt;code&gt;composer.json&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;For windows&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;php composer dump-autoload
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;For Unix, Linux and OSX&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;php composer.phar dump-autoload
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;For Unix, Linux and OSX&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;php composer dump-autoload
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Happy coding.&lt;/p&gt;
 </description>
     </item>
