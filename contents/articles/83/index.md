@@ -7,6 +7,8 @@ template: article.jade
 
 Like most of the PHP frameworks, [Slim framework][slim] uses [Composer][3] for developer experience. [Composer][3] does a lot of things which manually one has to do before. This post is specifically with regard to [Slim framework][slim]. However, this can also be refered to, for other frameworks which use [Composer][3].
 
+<span class="more">
+
 There is a specific configuration in `composer.json` which deals with autoloading of the classes. Its not necessary to do autoloading, one can do it manually as always.
 
 ```
@@ -59,7 +61,7 @@ class AppConfig
 
 Once one is careful enough to map the `folder structure` and `namespace` the composer autoload functionality will load the classes. Here is a [nice explanation][ref1] of the concepts.
 
-> After adding the **autoload field** in `composer.json`, one **has to** re-run `dump-autoload` to re-generate the vendor/autoload.php file.
+### After adding the **autoload field** in `composer.json`, one **has to** re-run `dump-autoload` to re-generate the vendor/autoload.php file.
 
 This should takecare of autoloading of the class files. The `dump-autoload` is a critical step while updating the `composer.json`.
 
@@ -72,7 +74,7 @@ php composer.phar dump-autoload
 For Unix, Linux and OSX
 
 ```
-php composer.phar dump-autoload
+php composer dump-autoload
 ```
     
 Happy coding.
