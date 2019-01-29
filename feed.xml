@@ -15,6 +15,7 @@
       <guid isPermaLink="true">https://saumya.github.io/ray/articles/83/</guid>
       <author></author>
       <description>&lt;p&gt;Like most of the PHP frameworks, &lt;a href=&quot;https://www.slimframework.com/&quot;&gt;Slim framework&lt;/a&gt; uses &lt;a href=&quot;https://getcomposer.org/&quot;&gt;Composer&lt;/a&gt; for developer experience. &lt;a href=&quot;https://getcomposer.org/&quot;&gt;Composer&lt;/a&gt; does a lot of things which manually one has to do before. This post is specifically with regard to &lt;a href=&quot;https://www.slimframework.com/&quot;&gt;Slim framework&lt;/a&gt;. However, this can also be refered to, for other frameworks which use &lt;a href=&quot;https://getcomposer.org/&quot;&gt;Composer&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/p&gt;
 &lt;p&gt;There is a specific configuration in &lt;code&gt;composer.json&lt;/code&gt; which deals with autoloading of the classes. Its not necessary to do autoloading, one can do it manually as always.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;require &amp;#39;../src/controllers/AppController.php&amp;#39;;
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This way, one has to do it all the time for each individual classes. The autoloading of classes does this automatically depending upon the settings and some conventions. Depending upon the folder structure and the namespaces, the setting could just be as below.&lt;/p&gt;
@@ -51,9 +52,7 @@ class AppConfig
     }
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Once one is careful enough to map the &lt;code&gt;folder structure&lt;/code&gt; and &lt;code&gt;namespace&lt;/code&gt; the composer autoload functionality will load the classes. Here is a &lt;a href=&quot;https://myshittycode.com/2018/03/14/slim-class-x-not-found/&quot;&gt;nice explanation&lt;/a&gt; of the concepts.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;After adding the &lt;strong&gt;autoload field&lt;/strong&gt; in &lt;code&gt;composer.json&lt;/code&gt;, one &lt;strong&gt;has to&lt;/strong&gt; re-run &lt;code&gt;dump-autoload&lt;/code&gt; to re-generate the vendor/autoload.php file.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;h3 id=&quot;after-adding-the-autoload-field-in-composer-json-one-has-to-re-run-dump-autoload-to-re-generate-the-vendor-autoload-php-file-&quot;&gt;After adding the &lt;strong&gt;autoload field&lt;/strong&gt; in &lt;code&gt;composer.json&lt;/code&gt;, one &lt;strong&gt;has to&lt;/strong&gt; re-run &lt;code&gt;dump-autoload&lt;/code&gt; to re-generate the vendor/autoload.php file.&lt;/h3&gt;
 &lt;p&gt;This should takecare of autoloading of the class files. The &lt;code&gt;dump-autoload&lt;/code&gt; is a critical step while updating the &lt;code&gt;composer.json&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;For windows&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;php composer.phar dump-autoload
