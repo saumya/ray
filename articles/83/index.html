@@ -4,28 +4,24 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width">
-    <title>Saumya
+    <title>Slim Framework and Composer Autoload - Saumya
     </title>
     <link rel="alternate" href="https://saumya.github.io/ray/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
     <link rel="stylesheet" href="https://saumya.github.io/ray/css/main.css">
     <link rel="stylesheet" href="https://saumya.github.io/ray/css/saumya.css">
   </head>
-  <body>
+  <body class="article-detail">
     <header class="header">
       <div class="content-wrap">
-        <div class="logo">
-          <h1><a href="https://saumya.github.io/ray">Saumya</a></h1>
-          <p class="description">Where there is a will, there is a way.</p>
-        </div>
+        <h1>Slim Framework and Composer Autoload</h1>
+        <p class="author">Written by <span class="author"><a href="mailto:2saumyaray@gmail.com">Saumya</a></span>
+        </p>
+        <p class="date">29. January 2019</p>
       </div>
     </header>
     <div id="content">
       <div class="content-wrap">
-        <article class="article intro">
-          <header>
-            <p class="date"><span>29. January 2019</span></p>
-            <h2><a href="https://saumya.github.io/ray/articles/83/">Slim Framework and Composer Autoload</a></h2>
-          </header>
+        <article class="article">
           <section class="content"><p>Like most of the <span class="caps">PHP</span> frameworks, <a href="https://www.slimframework.com/">Slim framework</a> uses <a href="https://getcomposer.org/">Composer</a> for developer experience. <a href="https://getcomposer.org/">Composer</a> does a lot of things which manually one has to do before. This post is specifically with regard to <a href="https://www.slimframework.com/">Slim framework</a>. However, this can also be refered to, for other frameworks which use <a href="https://getcomposer.org/">Composer</a>.</p>
 <p>There is a specific configuration in <code>composer.json</code> which deals with autoloading of the classes. Its not necessary to do autoloading, one can do it manually as&nbsp;always.</p>
 <pre><code>require &#39;../src/controllers/AppController.php&#39;;
@@ -72,38 +68,23 @@ class AppConfig
 </code></pre><p>For Unix, Linux and&nbsp;<span class="caps">OSX</span></p>
 <pre><code>php composer.phar dump-autoload
 </code></pre><p>Happy&nbsp;coding.</p>
-
-          </section>
-        </article>
-        <article class="article intro">
-          <header>
-            <p class="date"><span>27. January 2019</span></p>
-            <h2><a href="https://saumya.github.io/ray/articles/82/">Cake &amp; Slim</a></h2>
-          </header>
-          <section class="content"><p><span class="caps">PHP</span> frameworks have really taken up some new concepts from other technology such as NodeJS and Ruby. On my search for an easy deployable framework to server, I found both <a href="https://cakephp.org/">CakePHP</a> and <a href="https://www.slimframework.com/">Slim</a> are good&nbsp;enough.</p>
-<p>For getting started with development <a href="https://cakephp.org/">CakePHP</a> seems like old school as one just needs to download the package and put it on a server and get into coding. While <a href="https://www.slimframework.com/">Slim</a> seems to be a little more learning as one needs to get used to <a href="https://getcomposer.org/">Composer</a>. <a href="https://cakephp.org/">CakePHP</a> also has an option to get started using <a href="https://getcomposer.org/">Composer</a>.</p>
-<p><a href="https://cakephp.org/">CakePHP</a> is a full framework having everything to get an application running on server. <a href="https://www.slimframework.com/">Slim</a> seems to be a better option to get upto speed with <span class="caps">API</span>&nbsp;development.</p>
-
-          </section>
-        </article>
-        <article class="article intro">
-          <header>
-            <p class="date"><span>11. January 2019</span></p>
-            <h2><a href="https://saumya.github.io/ray/articles/81/">The 2018.</a></h2>
-          </header>
-          <section class="content"><h6 id="december-of-2017-ended-with-my-first-ever-visit-to-court-at-cuttack-odisha-">December of 2017 ended with my first ever visit to Court at Cuttack,&nbsp;Odisha.</h6>
-<p>The visits to the Court continue through out 2018. <del>That’s another story.</del></p>
-<p><img src="https://farm5.staticflickr.com/4898/46646647672_793d52dc42_h.jpg" alt="Nilgiri Mountain"></p>
-<p>
-            <p class="more"><a href="https://saumya.github.io/ray/articles/81/">more</a></p>
-          </section>
+</section>
         </article>
       </div>
     </div>
     <footer>
       <div class="content-wrap">
-        <div class="nav"><a href="https://saumya.github.io/ray/archive.html">« Archives</a><a href="https://saumya.github.io/ray/page/2/">Next page »</a>
-        </div>
+        <div class="nav"><a href="https://saumya.github.io/ray/">« Full blog</a></div>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+          var disqus_shortname = 'saumya';
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
         <section class="about"><p><a href="https://saumya.github.io/">Saumya</a> is an iternal seeker.</p>
 <p>A maker of things and curious about everything. Continuous learning is, what fuels him. This blog itself, reflects one of many things he is trying at all the time.</p>
 <p>He is <a href="https://twitter.com/saumya">@saumya</a> on Twitter. </p>

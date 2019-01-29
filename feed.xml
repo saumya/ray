@@ -5,9 +5,63 @@
     <atom:link href="https://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>https://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Sun, 27 Jan 2019 05:30:00 +0630</pubDate>
+    <pubDate>Tue, 29 Jan 2019 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Slim Framework and Composer Autoload</title>
+      <link>https://saumya.github.io/ray/articles/83/</link>
+      <pubDate>Tue, 29 Jan 2019 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/83/</guid>
+      <author></author>
+      <description>&lt;p&gt;Like most of the PHP frameworks, &lt;a href=&quot;https://www.slimframework.com/&quot;&gt;Slim framework&lt;/a&gt; uses &lt;a href=&quot;https://getcomposer.org/&quot;&gt;Composer&lt;/a&gt; for developer experience. &lt;a href=&quot;https://getcomposer.org/&quot;&gt;Composer&lt;/a&gt; does a lot of things which manually one has to do before. This post is specifically with regard to &lt;a href=&quot;https://www.slimframework.com/&quot;&gt;Slim framework&lt;/a&gt;. However, this can also be refered to, for other frameworks which use &lt;a href=&quot;https://getcomposer.org/&quot;&gt;Composer&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;There is a specific configuration in &lt;code&gt;composer.json&lt;/code&gt; which deals with autoloading of the classes. Its not necessary to do autoloading, one can do it manually as always.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;require &amp;#39;../src/controllers/AppController.php&amp;#39;;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This way, one has to do it all the time for each individual classes. The autoloading of classes does this automatically depending upon the settings and some conventions. Depending upon the folder structure and the namespaces, the setting could just be as below.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{
+    &amp;quot;require&amp;quot;: {
+        &amp;quot;slim/slim&amp;quot;: &amp;quot;^3.12&amp;quot;
+    },
+    &amp;quot;autoload&amp;quot;: {
+        &amp;quot;psr-4&amp;quot;: { &amp;quot;rain\\&amp;quot; : [&amp;quot;src/&amp;quot;] }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Here we are talking about &lt;code&gt;psr-4&lt;/code&gt; standards. There are different standards in &lt;code&gt;psr&lt;/code&gt; and they may have somethings in common. However there are differences between them also. So just keep this in mind we are talking about &lt;code&gt;psr-4&lt;/code&gt; standards here.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;quot;autoload&amp;quot;: {
+        &amp;quot;psr-4&amp;quot;: { &amp;quot;rain\\&amp;quot; : [&amp;quot;src/&amp;quot;] }
+    }
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Well, now let’s look at the standards of &lt;code&gt;psr-4&lt;/code&gt; and how it finds the files.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://getcomposer.org/&quot;&gt;Composer&lt;/a&gt; will load the files relative to &lt;code&gt;composer.json&lt;/code&gt; file. In the setting above, it will load from the folder &lt;code&gt;src&lt;/code&gt; which is at the same level as &lt;code&gt;composer.json&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;The first setting &lt;code&gt;rain&lt;/code&gt; in the &lt;code&gt;autoload&lt;/code&gt; configuration is the namespace of the PHP Classes&lt;/li&gt;
+&lt;li&gt;PHP class &lt;code&gt;file name&lt;/code&gt; and the &lt;code&gt;class name&lt;/code&gt; should be exactly the same (except the &lt;code&gt;.php&lt;/code&gt; extension)&lt;/li&gt;
+&lt;li&gt;PHP class file location and its namespace should exactly the same&lt;/li&gt;
+&lt;li&gt;PHP class namespace should be exactly the same as specified in the &lt;code&gt;autoload&lt;/code&gt; configuration&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;A PHP class file for the above settings would look like below.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;//location: src/configs/AppConfig.php
+
+namespace rain\configs;
+
+class AppConfig
+{
+    function getConfig()
+    {
+        return &amp;#39;AppConfig&amp;#39;;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Once one is careful enough to map the &lt;code&gt;folder structure&lt;/code&gt; and &lt;code&gt;namespace&lt;/code&gt; the composer autoload functionality will load the classes. Here is a &lt;a href=&quot;https://myshittycode.com/2018/03/14/slim-class-x-not-found/&quot;&gt;nice explanation&lt;/a&gt; of the concepts.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;After adding the &lt;strong&gt;autoload field&lt;/strong&gt; in &lt;code&gt;composer.json&lt;/code&gt;, one &lt;strong&gt;has to&lt;/strong&gt; re-run &lt;code&gt;dump-autoload&lt;/code&gt; to re-generate the vendor/autoload.php file.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This should takecare of autoloading of the class files. The &lt;code&gt;dump-autoload&lt;/code&gt; is a critical step while updating the &lt;code&gt;composer.json&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;For windows&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;php composer.phar dump-autoload
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;For Unix, Linux and OSX&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;php composer.phar dump-autoload
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Happy coding.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>Cake &amp; Slim</title>
       <link>https://saumya.github.io/ray/articles/82/</link>
