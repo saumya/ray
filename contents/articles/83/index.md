@@ -71,7 +71,7 @@ For windows
 php composer.phar dump-autoload
 ```
 
-For Unix, Linux and OSX
+For Unix, Linux and macOS
 
 ```
 php composer dump-autoload
