@@ -20,6 +20,7 @@ This came to me as a surprise that, in today's world for web related work one ha
  - [Images][6] should be named short and `Alt text` should be present
  - It is the best to use a single column layout
  - Use images to layout and display groups of information instead of trying to recreate the same in HTML and CSS
+ - Maximum width of layout should be 600px
 
 Here is a [tutorial][2] showing the steps to create an [HTML template][2] from scratch. 
 
