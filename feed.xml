@@ -5,9 +5,37 @@
     <atom:link href="https://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>https://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Tue, 29 Jan 2019 05:30:00 +0630</pubDate>
+    <pubDate>Mon, 17 Jun 2019 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Building HTML Email Newsletter</title>
+      <link>https://saumya.github.io/ray/articles/84/</link>
+      <pubDate>Mon, 17 Jun 2019 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/84/</guid>
+      <author></author>
+      <description>&lt;p&gt;This came to me as a surprise that, in today’s world for web related work one has to work with &lt;code&gt;tables&lt;/code&gt; as if its 1999. Well, I am talking about designing and developing for email newsletters. Here is a &lt;a href=&quot;https://www.smashingmagazine.com/2010/01/design-and-build-an-email-newsletter-without-losing-your-mind/&quot;&gt;tutorial from 2010&lt;/a&gt; which still is relevant. So yes, if you have gone through the above tutorial you have already known, for the reference I will mention it again here. &lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.smashingmagazine.com/2010/01/design-and-build-an-email-newsletter-without-losing-your-mind/&quot;&gt;Code like it’s 1999 (literally)&lt;/a&gt; and I agree to it. Below is a list of things to remember while making HTML email newsletters.&lt;/p&gt;
+&lt;h3 id=&quot;the-to-do-list&quot;&gt;The to-do list&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;HTML and CSS, &lt;del&gt;(well, not HTML5 and CSS3)&lt;/del&gt;&lt;/li&gt;
+&lt;li&gt;Layouts are all &lt;code&gt;table&lt;/code&gt; nothing more &lt;del&gt;(no CSS layouts or box models)&lt;/del&gt;&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;No Canvas, no Webgl, no javascript, no modern web&lt;/del&gt;&lt;/li&gt;
+&lt;li&gt;CSS should always be inline &lt;del&gt;(no extenal and no CSS declarations)&lt;/del&gt;   &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Img&quot;&gt;Images&lt;/a&gt; should be named short and &lt;code&gt;Alt text&lt;/code&gt; should be present&lt;/li&gt;
+&lt;li&gt;It is the best to use a single column layout&lt;/li&gt;
+&lt;li&gt;Use images to layout and display groups of information instead of trying to recreate the same in HTML and CSS&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Here is a &lt;a href=&quot;https://webdesign.tutsplus.com/articles/build-an-html-email-template-from-scratch--webdesign-12770&quot;&gt;tutorial&lt;/a&gt; showing the steps to create an &lt;a href=&quot;https://webdesign.tutsplus.com/articles/build-an-html-email-template-from-scratch--webdesign-12770&quot;&gt;HTML template&lt;/a&gt; from scratch. &lt;/p&gt;
+&lt;h3 id=&quot;further-reading&quot;&gt;Further reading&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://webdesign.tutsplus.com/tutorials/what-you-should-know-about-html-email--webdesign-12908&quot;&gt;What you should know about HTML Email&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://webdesign.tutsplus.com/articles/the-complete-guide-to-designing-for-email--webdesign-12941&quot;&gt;The complete guide to designing for Email&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Happy coding.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>Slim Framework and Composer Autoload</title>
       <link>https://saumya.github.io/ray/articles/83/</link>
@@ -56,7 +84,7 @@ class AppConfig
 &lt;p&gt;This should takecare of autoloading of the class files. The &lt;code&gt;dump-autoload&lt;/code&gt; is a critical step while updating the &lt;code&gt;composer.json&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;For windows&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;php composer.phar dump-autoload
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;For Unix, Linux and OSX&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;For Unix, Linux and macOS&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;php composer dump-autoload
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Happy coding.&lt;/p&gt;
 </description>

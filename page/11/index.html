@@ -23,6 +23,17 @@
       <div class="content-wrap">
         <article class="article intro">
           <header>
+            <p class="date"><span>18. November 2015</span></p>
+            <h2><a href="https://saumya.github.io/ray/articles/54/">A year with DOJO Toolkit.</a></h2>
+          </header>
+          <section class="content"><p>There are a number of reasons to use a specific framework in a work environment. But sometimes it boils down to just the hype. For example in recent past almost all the companies are trying to implement <a href="https://angularjs.org/">AngularJS</a> and before that time it was the time for <a href="http://backbonejs.org/">BackboneJS</a> and the story goes on like that. It is always a good experience to work in very different kind of framework or for that matter its even better to work in different kind of languages&nbsp;altogether.          </p>
+<p>The last year was <a href="https://dojotoolkit.org/"><span class="caps">DOJO</span> Toolkit</a> year for me. I must say I am impressed to see features it provides and now that its moving in the right direction. For a long time now, this toolkit was just stagnant but last year only they have started moving again. Well, if you come from a <code>pure Javascript</code> background might not like it by the way it is designed and behaves. The <span class="caps">UI</span> layer of the <a href="https://dojotoolkit.org/"><span class="caps">DOJO</span> Toolkit</a> named as Dijit will seem like Flex components (If you know what Flash and Flex is, you will get what I am saying). The framework itself is designed to make people comfortable, who are used to Classical programming languages like <span class="caps">JAVA</span>. The whole toolkit will show itself, as a class based toolkit. The average user will just think and use it as a Classical programming language, which is the root of all evil things in a project. Thats part of the team and how it works with this&nbsp;toolkit.          </p>
+<p>In general if we talk about the features this toolkit gives us, I would say its nice and efficient if we use it the way it is meant to. The next version is already on progress and they are moving to <a href="http://www.typescriptlang.org/">TypeScript</a>, that a nice move. All in all its a nice experience working with this&nbsp;framework.     </p>
+
+          </section>
+        </article>
+        <article class="article intro">
+          <header>
             <p class="date"><span>05. August 2015</span></p>
             <h2><a href="https://saumya.github.io/ray/articles/53/">Vi/Vim comands</a></h2>
           </header>
@@ -83,30 +94,6 @@ git push origin master
 </code></pre>
 <p>This is a direct <a href="https://help.github.com/articles/syncing-a-fork/">tutorial from github</a>.</p>
 <p>Happy&nbsp;syncing.</p>
-
-          </section>
-        </article>
-        <article class="article intro">
-          <header>
-            <p class="date"><span>18. January 2015</span></p>
-            <h2><a href="https://saumya.github.io/ray/articles/51/">Making crossplatform CLI application with HAXE</a></h2>
-          </header>
-          <section class="content"><p>When I first heard about <span class="caps">CLI</span> applications, I thought it might be shipping with the OS itself. Then I found that we can write our own CLI applications. At that point I assume that well, just a CLI application, means it runs everywhere. But actually CLI applications by default are not crossplatform! Yes, I realised it much later. In order to have a crossplatform CLI app, one needs all the required environment to compile to and compile for a particular&nbsp;OS.         </p>
-<p><a href="http://haxe.org/"><span class="caps">HAXE</span></a> comes in handy in this case. One can make a crossplatfom <span class="caps">CLI</span> app with just one code base. Ofcourse you need the required environment to compile to that particular environment. There is even a shorter way to this, compile for <a href="http://nekovm.org"><span class="caps">NEKO</span></a> virtual machine. This <a href="http://nekovm.org"><span class="caps">NEKO</span></a> <span class="caps">VM</span> ships with <a href="http://haxe.org/"><span class="caps">HAXE</span></a>. Once you compile to <a href="http://nekovm.org"><span class="caps">NEKO</span></a>, all you do is package all the <a href="http://nekovm.org"><span class="caps">NEKO</span></a> dependencies and there you have a crossplatform <span class="caps">CLI</span> for every OS. Here we will compile to <a href="http://nekovm.org"><span class="caps">NEKO</span></a> and run through <a href="http://nekovm.org"><span class="caps">NEKO</span></a>, but just keep in mind that the same code can be compiled to <span class="caps">CPP</span>(C++) to produce true native CLI.<br>Lets begin with the compiler settings or the build file. The <code>.hxml</code> file has the following&nbsp;content.</p>
-<pre><code class="lang-haxe"><span class="meta"># <span class="caps">HAXE</span> build</span>
-<span class="meta"># Defining the application entry</span>
--main MyCliApp
-<span class="meta"># <span class="caps">NEKO</span> : compilation</span>
--neko bin/myCliApp.n
-<span class="meta">#</span>
-<span class="meta"># <span class="caps">CPP</span> : compilation</span>
-<span class="meta">#-cpp bin/cpp/</span>
-</code></pre>
-<p>We are setting up for compiling to <a href="http://nekovm.org"><span class="caps">NEKO</span></a> but then we have the options commented out for compiling to <span class="caps">CPP</span>. If we want to compile for the C++ target, then comment out the <a href="http://nekovm.org"><span class="caps">NEKO</span></a> target and enable the <span class="caps">CPP</span>(C++) target. Well, this compilation will create a file named <code>myCliApp.n</code> inside the ‘bin’ folder. To run the file, we have to navigate to the ‘bin’ folder and run with <a href="http://nekovm.org"><span class="caps">NEKO</span></a> as&nbsp;below.  </p>
-<pre><code class="lang-haxe">neko ./myCliApp.n
-</code></pre>
-<p>Thats about compilation and running. Lets get back to coding. There is no surprise here as all we have to do is, get the right package and class from <a href="http://haxe.org/"><span class="caps">HAXE</span></a> and use it. Here is the <a href="https://github.com/saumya/HAXE-CLI-101">Git repo</a> for this example. The application entry initialises ‘PrintInfo’ Class. That class prints the information that we want to show to the user and finally asks the name of the use. As user inputs the name, it greets the user and moves to our defined command prompt. We have setup some commands to display. Depending upon user input the necessary commands are executed. All these are happening in <code>MyCli.hx</code>  Class. The <a href="https://github.com/saumya/HAXE-CLI-101/blob/master/com/saumya/cli/MyCli.hx">code is commented</a> for easy reference in <a href="https://github.com/saumya/HAXE-CLI-101">this repo</a>. Here is the <a href="https://github.com/saumya/HAXE-CLI-101/blob/master/com/saumya/cli/MyCli.hx">direct link</a> to the&nbsp;class. </p>
-<p>Happy&nbsp;coding.</p>
 
           </section>
         </article>

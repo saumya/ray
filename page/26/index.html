@@ -23,6 +23,21 @@
       <div class="content-wrap">
         <article class="article intro">
           <header>
+            <p class="date"><span>14. January 2014</span></p>
+            <h2><a href="https://saumya.github.io/ray/articles/9/">HTML5, requestAnimationFrame</a></h2>
+          </header>
+          <section class="content"><p>Making a javascript application, at somepoint, involves use of <code>setTimeout</code> and <code>setInterval</code> functions. Well, the possibility increases even more, when one needs to animate elements. So we know what it means to use these two functions.<br>Fortunately we have a new method, called <code>requestAnimationFrame()</code>, which is elegant and effective. Now animations will not eat up mobile battery life, but still be smooth. This is optimised to takecare of the host environment, such as mobile browser, desktop browser etc. It even minimises the repeat call, if the application using it, is not visible or scrolled out of view, sweet.<br><a href="http://caniuse.com/requestanimationframe">Check, which browsers and versions support this function,</a> just to make yourself clear.<br>Here are few links which explain <code>requestAnimationFrame</code> function in more&nbsp;detail.    </p>
+<ul>
+<li><a href="https://developer.mozilla.org/en/docs/Web/API/window.requestAnimationFrame">mozilla</a></li>
+<li><a href="http://www.paulirish.com/2011/requestanimationframe-for-smart-animating/">Paul&nbsp;Irish</a></li>
+<li><a href="http://creativejs.com/resources/requestanimationframe/">Creative&nbsp;<span class="caps">JS</span></a>   </li>
+</ul>
+<p>Its kind of <code>saying bye bye</code> to <code>setTimeout</code> and <code>setInterval</code>.<br>Happy&nbsp;Animating.</p>
+
+          </section>
+        </article>
+        <article class="article intro">
+          <header>
             <p class="date"><span>13. January 2014</span></p>
             <h2><a href="https://saumya.github.io/ray/articles/8/">Native Android development and getting Key Hash for Facebook</a></h2>
           </header>
@@ -39,17 +54,6 @@
           <section class="content"><p><a href="https://github.com/jnordberg/wintersmith">Wintersmith</a> is perfect on creating a static site, but the problem arises when one needs to configure it to meet a particular need. I think, thats true for any framework.<br>The problem I encountered is, putting the static blog in any domain or sub-domain. <a href="https://github.com/jnordberg/wintersmith">Wintersmith</a> generates urls which are default to root <code>/</code> and to change it to any domain means one has to change it to the domain one wishes to put the site on. Thats as simple as that. Well, for most parts. Then, there are places where it creates a relative&nbsp;<span class="caps">URL</span>.    </p>
 <p>To solve this, I looked inside the templates and configuration. <a href="https://github.com/jnordberg/wintersmith">Wintersmith</a> reads from the <code>config.json</code> file to get the base <span class="caps">URL</span> and make the other URLs. So I changed the <code>url</code> to my desired <span class="caps">URL</span> and added another parameter to the <code>locals</code> object of the <code>config.json</code> named <code>folder</code>, Then changed the <span class="caps">URL</span> in templates, from <code>/</code> to <code>locals.url</code> and at some places to <code>locals.url+&#39;/&#39;+locals.folder</code> and thats it. Its now perfectly alright to take my site to wherever I want. All I need to do is change these variables and build the site again with <a href="https://github.com/jnordberg/wintersmith">Wintersmith</a> build command.<br>Is this the rightway? Well, seriously I do not know, but it&nbsp;works.   </p>
 <p>Happy Hacking&nbsp;! </p>
-
-          </section>
-        </article>
-        <article class="article intro">
-          <header>
-            <p class="date"><span>11. January 2014</span></p>
-            <h2><a href="https://saumya.github.io/ray/articles/6/">The technology choice of the blog.</a></h2>
-          </header>
-          <section class="content"><p>First question to answer is <code>why I moved to a static page solution?</code>, there are a lot of answers to this.
-Here is a nice writeup by David Tucker. <a href="http://davidtucker.net/articles/move-to-static-site-generator/">The Need for a Static Site Generator.</a><br>Now, since we know a static page site is the need of the time, the technology choice is important too. Obviously the first thing, that comes to mind is <a href="http://jekyllrb.com/">Jekyll</a>, yeah, its simple and just works. Being in <span class="caps">MAC</span>, its even tempting to use <a href="http://jekyllrb.com/">Jekyll</a>, as <a href="https://www.ruby-lang.org/en/">Ruby</a> comes installed with the <span class="caps">OS</span>. Further more <a href="http://jekyllrb.com/">Jekyll</a> support is in-built with <a href="https://help.github.com/articles/using-jekyll-with-pages">GitHub Pages</a>. It could have been as simple as that.<br>I choose Javascript as the language of choice, since its exciting now, what we could do with it, so this blog would be one of my playgrounds for the work I do. I have already getting more and more familiar with <a href="http://jade-lang.com/">Jade</a> templating engine and <a href="http://nodejs.org/">nodeJS</a> workflows, <a href="https://github.com/jnordberg/wintersmith">wintersmith</a> is such a nice engine which works on <a href="http://nodejs.org/">nodeJS</a>. Just the matter of time, as how far Javascript has&nbsp;come!   </p>
-<p>Happy&nbsp;Coding</p>
 
           </section>
         </article>
