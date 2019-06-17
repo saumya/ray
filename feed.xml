@@ -26,6 +26,7 @@
 &lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Img&quot;&gt;Images&lt;/a&gt; should be named short and &lt;code&gt;Alt text&lt;/code&gt; should be present&lt;/li&gt;
 &lt;li&gt;It is the best to use a single column layout&lt;/li&gt;
 &lt;li&gt;Use images to layout and display groups of information instead of trying to recreate the same in HTML and CSS&lt;/li&gt;
+&lt;li&gt;Maximum width of layout should be 600px&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Here is a &lt;a href=&quot;https://webdesign.tutsplus.com/articles/build-an-html-email-template-from-scratch--webdesign-12770&quot;&gt;tutorial&lt;/a&gt; showing the steps to create an &lt;a href=&quot;https://webdesign.tutsplus.com/articles/build-an-html-email-template-from-scratch--webdesign-12770&quot;&gt;HTML template&lt;/a&gt; from scratch. &lt;/p&gt;
 &lt;h3 id=&quot;further-reading&quot;&gt;Further reading&lt;/h3&gt;
