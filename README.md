@@ -10,6 +10,23 @@
 
 
 
+### WIP
+ 
+ Have changed `Wintersmith` library by changing the `package.json` entry from
+
+```
+"marked": "^0.5.1",
+```
+
+to
+
+```
+"marked": ">=0.6.1",
+```
+
+
+
+
 
 
 
