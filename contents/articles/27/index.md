@@ -2,7 +2,7 @@
 title: Amazon S3 Sync with NodeJS
 author: saumya
 date: 2014-02-14
-template: article.jade
+template: article.pug
 ---
 
 

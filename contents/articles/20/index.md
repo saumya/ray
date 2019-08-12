@@ -2,7 +2,7 @@
 title: Theme, Elegant.
 author: saumya
 date: 2014-01-30
-template: article.jade
+template: article.pug
 ---
 
 Continuing to create themes, which are free of the dependencies, here is my next theme, `Elegant`. I am definitenly in love with [Wintesmith][1]. My frequency of blogging has increased exponentially. I am releasing this [theme][2] at github in my [Wintersmith Themes][3] repository. It adds some typography to the plain theme [Simple][4].      

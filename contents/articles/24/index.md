@@ -2,7 +2,7 @@
 title: jQuerymobile, changePage is deprecated as of 1.4.0, will be removed in 1.5.0.
 author: saumya
 date: 2014-02-11
-template: article.jade
+template: article.pug
 ---
 
 

@@ -2,7 +2,7 @@
 title: React Native on Android, changing app name, package name and version code
 author: saumya
 date: 2016-11-11
-template: article.jade
+template: article.pug
 ---
 
 There are things one may need to change in the release build for Android. 

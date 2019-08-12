@@ -2,7 +2,7 @@
 title: RequireJS is not require()
 author: saumya
 date: 2015-12-05
-template: article.jade
+template: article.pug
 ---
 
 It would have saved me time if I could have known this in the beginning. Like a lot of things in Javscript world, a same kind of name for two different functionalities makes a lot of confusion.          

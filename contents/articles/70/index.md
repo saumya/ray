@@ -2,7 +2,7 @@
 title: Fixing NPM permissions
 author: saumya
 date: 2016-10-05
-template: article.jade
+template: article.pug
 ---
 The problem is to use `sudo` everywhere and try to fix things that way. Especially while dealing with global [NPM][2] modules. Sometimes it may happen that `sudo` also will fail to install.   
 

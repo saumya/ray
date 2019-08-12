@@ -2,7 +2,7 @@
 title: Native Android development and getting Key Hash for Facebook
 author: saumya
 date: 2014-01-13
-template: article.jade
+template: article.pug
 ---
 
 

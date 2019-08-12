@@ -2,7 +2,7 @@
 title: The 2018.
 author: saumya
 date: 2019-01-11
-template: article.jade
+template: article.pug
 ---
 
 ###### December of 2017 ended with my first ever visit to Court at Cuttack, Odisha. 
@@ -23,7 +23,7 @@ Professionally the year 2018, was not much to offer but personally it was loaded
  - Met with a lot of friends after 20 years, some after 30 years!
  - Dealt with Court and Lawyers 
 
-
+The [long story is here][details].
 
 [details]: long_story.html
 

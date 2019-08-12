@@ -2,7 +2,7 @@
 title: AngularJS 101
 author: saumya
 date: 2014-06-24
-template: article.jade
+template: article.pug
 ---
 
 

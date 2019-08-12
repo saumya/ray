@@ -2,7 +2,7 @@
 title: Want excitement, work with Freshers or even younger.
 author: saumya
 date: 2014-01-24
-template: article.jade
+template: article.pug
 ---
 
 

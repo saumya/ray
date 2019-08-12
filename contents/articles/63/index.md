@@ -2,7 +2,7 @@
 title: React with Router and Material UI
 author: saumya
 date: 2016-03-11
-template: article.jade
+template: article.pug
 ---
 
 

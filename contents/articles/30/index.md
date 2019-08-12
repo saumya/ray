@@ -2,7 +2,7 @@
 title: Book Review, jQuery UI 1.10-The User Interface Library for jQuery. 
 author: saumya
 date: 2014-02-22
-template: article.jade
+template: article.pug
 ---
 
 

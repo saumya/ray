@@ -2,7 +2,7 @@
 title: Distribute iOS app on your web site
 author: saumya
 date: 2014-01-15
-template: article.jade
+template: article.pug
 ---
 
 

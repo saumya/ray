@@ -2,7 +2,7 @@
 title: BackboneJS, view and its events
 author: saumya
 date: 2014-01-20
-template: article.jade
+template: article.pug
 ---
 
 

@@ -2,7 +2,7 @@
 title: Maintaining a React Native application on iOS.
 author: saumya
 date: 2017-03-23
-template: article.jade
+template: article.pug
 ---
 
  That may sound just an easy job. Surprisingly its not! Its because [React Native][1]is evolving at a very high speed. The community is vibrant and [React][2] itself is also moving at a very high speed. Though there are minimal API changes but there are changes and sometimes there are breaking changes. Well as for iOS, we know it also comes with API changes and sometimes breaking changes. 

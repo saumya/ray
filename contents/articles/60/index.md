@@ -2,7 +2,7 @@
 title: What is Socket.IO ?
 author: saumya
 date: 2015-12-08
-template: article.jade
+template: article.pug
 ---
 
 Once one starts working on [NodeJS][1], very soon will come across a term called [Socket.IO][2]. It may feel as if just another [NodeJS][1] module available through [NPM][3]. Then it may feel like just another way to write a Javascript application for the browser. Then it may seem something else.          

@@ -2,7 +2,7 @@
 title: New year, time to look back and forth.
 author: saumya
 date: 2016-01-01
-template: article.jade
+template: article.pug
 ---
 
 First of all, I wish all the best of spirits, health and prosperity. <span class="more"></span>

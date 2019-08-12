@@ -2,7 +2,7 @@
 title: Author details on Wintersmith
 author: saumya
 date: 2014-01-22
-template: article.jade
+template: article.pug
 ---
 
 

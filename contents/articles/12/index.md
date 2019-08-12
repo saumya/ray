@@ -2,7 +2,7 @@
 title: Experience with Parse
 author: saumya
 date: 2014-01-21
-template: article.jade
+template: article.pug
 ---
 
 

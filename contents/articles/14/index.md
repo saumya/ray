@@ -2,7 +2,7 @@
 title: Phonegap, jQuery, jQueryMobile and AJAX caching
 author: saumya
 date: 2014-01-23
-template: article.jade
+template: article.pug
 ---
 
 

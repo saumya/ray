@@ -2,7 +2,7 @@
 title: The options today
 author: saumya
 date: 2018-04-11
-template: article.jade
+template: article.pug
 ---
 
 Social networks -      

@@ -2,7 +2,7 @@
 title: Cake and Coffee
 author: saumya
 date: 2015-1-1
-template: article.jade
+template: article.pug
 ---
 
 While working with [CoffeeScript][1], we generally tend to do the following,

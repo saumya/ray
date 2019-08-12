@@ -2,7 +2,7 @@
 title: Wintersmith configuration
 author: saumya
 date: 2014-01-12
-template: article.jade
+template: article.pug
 ---
 
 

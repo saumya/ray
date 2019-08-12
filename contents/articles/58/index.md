@@ -2,7 +2,7 @@
 title: How to React now.
 author: saumya
 date: 2015-11-28
-template: article.jade
+template: article.pug
 ---
 Here is the way to [React][1] now.        
 

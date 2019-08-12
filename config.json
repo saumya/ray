@@ -1,9 +1,9 @@
 {
   "locals": {
-    "url": "https://saumya.github.io/ray",
+    "url": "http://localhost:8080",
     "folder": "ray",
     "name": "Saumya",
-    "owner": "saumya ray",
+    "owner": "Saumya Ray",
     "description": "Where there is a will, there is a way."
   },
   "plugins": [
@@ -14,7 +14,7 @@
     "_": "underscore",
     "typogr": "typogr"
   },
-  "jade": {
+  "pug": {
     "pretty": true
   },
   "markdown": {

@@ -2,7 +2,7 @@
 title: iOS, customising top and bottom bar inside UINavigationController
 author: saumya
 date: 2014-02-13
-template: article.jade
+template: article.pug
 ---
 
 

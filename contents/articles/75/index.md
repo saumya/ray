@@ -2,7 +2,7 @@
 title: Five OpenFL Extensions for Android
 author: saumya
 date: 2017-05-09
-template: article.jade
+template: article.pug
 ---
 
 Native Extensions for [OpenFL][1] are the things which bind [OpenFL][1] applications with the native platform it is running on. There are some extensions provided from [OpenFL][1] itself. If you go to [OpenFL][1] repository on github, you can find for yourself extensions, such as [In-App Purchase][e2] and [Google AdMob][e1].

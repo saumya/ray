@@ -2,7 +2,7 @@
 title: CoffeeScript basics
 author: saumya
 date: 2015-1-1
-template: article.jade
+template: article.pug
 ---
 
 Just to set the expectations right, we need to know something before we begin here.         

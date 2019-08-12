@@ -2,7 +2,7 @@
 title: React Native, Android and Loading embeded HTML pages in WebView
 author: saumya
 date: 2016-11-09
-template: article.jade
+template: article.pug
 ---
 The problem is in Android release builds, where the local HTML files do not load. This is not a problem in debug builds. I have not tested the final iOS builds. Loading of a local html file in a webview in [React Native][1] is as simple as this.
 

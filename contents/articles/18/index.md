@@ -2,7 +2,7 @@
 title: Git commit throws fatal error for line endings.
 author: saumya
 date: 2014-01-27
-template: article.jade
+template: article.pug
 ---
 
 This comes to me in a regular basis, thought it would be nice, to keep a note to me and anyone else dealing with same.     

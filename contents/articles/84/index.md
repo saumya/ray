@@ -2,7 +2,7 @@
 title: Building HTML Email Newsletter
 author: saumya
 date: 2019-06-17
-template: article.jade
+template: article.pug
 ---
 
 This came to me as a surprise that, in today's world for web related work one has to work with `tables` as if its 1999. Well, I am talking about designing and developing for email newsletters. Here is a [tutorial from 2010][1] which still is relevant. So yes, if you have gone through the above tutorial you have already known, for the reference I will mention it again here. 

@@ -2,7 +2,7 @@
 title: Making desktop applications, using NodeJS.
 author: saumya
 date: 2014-02-10
-template: article.jade
+template: article.pug
 ---
 
 

@@ -2,7 +2,7 @@
 title: Upgrading to Ruby 2.x from 1.x with rvm, on an upgrade from old OSX to Mavericks.
 author: saumya
 date: 2014-05-26
-template: article.jade
+template: article.pug
 ---
 
 

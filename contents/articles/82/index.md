@@ -2,7 +2,7 @@
 title: Cake & Slim
 author: saumya
 date: 2019-01-27
-template: article.jade
+template: article.pug
 ---
 
 PHP frameworks have really taken up some new concepts from other technology such as NodeJS and Ruby. On my search for an easy deployable framework to server, I found both [CakePHP][cake] and [Slim][slim] are good enough.

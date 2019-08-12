@@ -2,7 +2,7 @@
 title: Slim with Composer
 author: saumya
 date: 2017-08-09
-template: article.jade
+template: article.pug
 ---
 
 One of the nice frameworks of [PHP][php] is [Slim][slim]. Now its on its version 3. I started using it since version 1. And must admit that there are a lot of changes since its version 1. 

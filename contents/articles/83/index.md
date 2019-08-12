@@ -2,7 +2,7 @@
 title: Slim Framework and Composer Autoload
 author: saumya
 date: 2019-01-29
-template: article.jade
+template: article.pug
 ---
 
 Like most of the PHP frameworks, [Slim framework][slim] uses [Composer][3] for developer experience. [Composer][3] does a lot of things which manually one has to do before. This post is specifically with regard to [Slim framework][slim]. However, this can also be refered to, for other frameworks which use [Composer][3].

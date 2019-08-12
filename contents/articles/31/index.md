@@ -2,7 +2,7 @@
 title: Migration checklist for Cordova(Phonegap) application from version 2.x to 3.x 
 author: saumya
 date: 2014-02-27
-template: article.jade
+template: article.pug
 ---
 
 

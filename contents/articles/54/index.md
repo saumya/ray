@@ -2,7 +2,7 @@
 title: A year with DOJO Toolkit.
 author: saumya
 date: 2015-11-18
-template: article.jade
+template: article.pug
 ---
 There are a number of reasons to use a specific framework in a work environment. But sometimes it boils down to just the hype. For example in recent past almost all the companies are trying to implement [AngularJS][1] and before that time it was the time for [BackboneJS][2] and the story goes on like that. It is always a good experience to work in very different kind of framework or for that matter its even better to work in different kind of languages altogether.          
 

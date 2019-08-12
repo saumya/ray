@@ -2,7 +2,7 @@
 title: Realm in Swift
 author: saumya
 date: 2016-07-08
-template: article.jade
+template: article.pug
 ---
 Working on a local storage for persistence in data has a lot of solutions. While we can definitely go ahead and just store `String` values and play with it, Apple provides some solutions to play with local data as if its a database. The thing is, its not that intuitive. Other solutions are there, but the simplicity of [Realm.io][3] is nice and addictive.            
 

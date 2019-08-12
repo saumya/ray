@@ -2,7 +2,7 @@
 title: Typography.
 author: saumya
 date: 2014-01-31
-template: article.jade
+template: article.pug
 ---
 
 

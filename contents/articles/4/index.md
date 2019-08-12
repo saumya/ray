@@ -2,7 +2,7 @@
 title: Its moved to github now.
 author: saumya
 date: 2014-01-10
-template: article.jade
+template: article.pug
 ---
 
 

@@ -2,7 +2,7 @@
 title: AngularJS, BackboneJS, similarities and differences.
 author: saumya
 date: 2015-11-26
-template: article.jade
+template: article.pug
 ---
 When learning a new framework or library, its very difficult to look at the same problem from a different perspective. But when you hear a lot like 'ohh, that library is similar to this', then the tendency comes to compare it. And when you see similar terminology in both the frameworks, then you are absolutely sure that both are doing the same thing in the same way. I think, thats the main problem here with learning the frameworks like [AngularJS][1] and [BackboneJS][2]. Both of these have their own share of `how to` and `where to`, overall they seem completely different, even though the terminolgies seem completely same.         
 

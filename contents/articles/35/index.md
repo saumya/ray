@@ -2,7 +2,7 @@
 title: NodeJS, HTML5, JQuery and what you may come across in an interview
 author: saumya
 date: 2014-05-20
-template: article.jade
+template: article.pug
 ---
 
 

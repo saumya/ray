@@ -2,7 +2,7 @@
 title: HAXE JS 101
 author: saumya
 date: 2015-1-5
-template: article.jade
+template: article.pug
 ---
 
 Hope you know what is [HAXE][1], take a moment to go through the official [HAXE][1] documentation. We will discuss how and what to consider while working with JS in [HAXE][1].          

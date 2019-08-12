@@ -2,7 +2,7 @@
 title: HAXE and NodeJS
 author: saumya
 date: 2015-1-18
-template: article.jade
+template: article.pug
 ---
 
 Continuing the sudy of javascript target of [HAXE][1] we will focus on [NodeJS][2] this time. Before we move on, lets remind ourselves the things to expect from the [HAXE][1] toolchain by going through the previous two introductions, here is the [first][3] and the [second][4] post.          

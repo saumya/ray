@@ -2,7 +2,7 @@
 title: The technology choice of the blog.
 author: saumya
 date: 2014-01-11
-template: article.jade
+template: article.pug
 ---
 
 

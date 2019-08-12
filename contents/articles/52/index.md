@@ -2,7 +2,7 @@
 title: Git, Forking and Syncing
 author: saumya
 date: 2015-5-19
-template: article.jade
+template: article.pug
 ---
 
            

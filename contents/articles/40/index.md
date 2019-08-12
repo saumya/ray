@@ -2,7 +2,7 @@
 title: Checklist to join a corporate
 author: saumya
 date: 2014-08-23
-template: article.jade
+template: article.pug
 ---
 
 It is a surprise for me, to see the processes these companines follow to get a person on board. I am not talking about interview. The technical interview is kind of rounds after rounds of never ending interviews. But at least, these are ok-ish situation for a tech person.      

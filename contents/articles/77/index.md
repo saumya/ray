@@ -2,7 +2,7 @@
 title: The year 2017
 author: saumya
 date: 2018-01-04
-template: article.jade
+template: article.pug
 ---
 
 The year 2017, was an exciting year. A lot of things have started and could be seen as a year of life.

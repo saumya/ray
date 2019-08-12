@@ -2,7 +2,7 @@
 title: React & Material-UI, recently breaking changes.
 author: saumya
 date: 2016-04-17
-template: article.jade
+template: article.pug
 ---
 Here we will talk about the recent changes in [Material-UI][2] and how it affects our [React][1] code.
 

@@ -2,7 +2,7 @@
 title: jQuery and fixing AJAX cache for GET calls 
 author: saumya
 date: 2014-04-03
-template: article.jade
+template: article.pug
 ---
 
 

@@ -2,7 +2,7 @@
 title: Looking at AngularJS
 author: saumya
 date: 2014-06-07
-template: article.jade
+template: article.pug
 ---
 
 

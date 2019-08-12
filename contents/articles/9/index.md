@@ -2,7 +2,7 @@
 title: HTML5, requestAnimationFrame
 author: saumya
 date: 2014-01-14
-template: article.jade
+template: article.pug
 ---
 
 

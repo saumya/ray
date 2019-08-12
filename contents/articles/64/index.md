@@ -2,7 +2,7 @@
 title: React Native
 author: saumya
 date: 2016-04-04
-template: article.jade
+template: article.pug
 ---
 The beauty of [React][React-link] is it now has a lot to offer and [React Native][2] is just an amazing way to create native mobile applications with Javascript or more specifically with [React][React-link]. Yes, we are talking about native applications. Unlike [Cordova][3], [React Native][2] applications do not run inside a webview. These applications use the native components from the environment it is running in. If its running in iOS the components like buttons, views etc are real iOS components. Same is true for Android.
 

@@ -2,7 +2,7 @@
 title: Getting started with, Dojo Toolkit
 author: saumya
 date: 2014-09-29
-template: article.jade
+template: article.pug
 ---
 
 To begin with, [Dojo Toolkit][1] or simply referred to as [Dojo][1] is one of many libraries in javascript. First thing to do is, like any other javascript libraries, make sure which version of library you are studying and using. [Dojo][1] has gone through major upgrades and if you are trying to do things the new way of [Dojo][1] then better get to know the [new version][2]. We will be focusing on the new version only(currently `1.10`) and referring to old one, wherever necessary.

@@ -2,7 +2,7 @@
 title: Vi/Vim comands
 author: saumya
 date: 2015-8-6
-template: article.jade
+template: article.pug
 ---
 
            

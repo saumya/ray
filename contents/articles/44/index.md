@@ -2,7 +2,7 @@
 title: RequireJS, Load timeout for modules!
 author: saumya
 date: 2014-11-17
-template: article.jade
+template: article.pug
 ---
 
 Working with [BackboneJS][3], will make you work with [RequireJS][4]. And if you are working with [BackboneJS][3] for a little time, then you probably know what I am talking about. Sometimes, the modules we are loading through [RequireJS][4] throw errors saying

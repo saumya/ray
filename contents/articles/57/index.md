@@ -2,7 +2,7 @@
 title: React
 author: saumya
 date: 2015-11-27
-template: article.jade
+template: article.pug
 ---
 [React][3] is a library from the famous social networking [facebook][4].          
 

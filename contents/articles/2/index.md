@@ -2,7 +2,7 @@
 title: Thanking wordpress.
 author: saumya
 date: 2014-01-07
-template: article.jade
+template: article.pug
 ---
 
 

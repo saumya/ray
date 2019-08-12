@@ -2,7 +2,7 @@
 title: React and understanding Redux, Thunk, Router.
 author: saumya
 date: 2016-05-12
-template: article.jade
+template: article.pug
 ---
 [React][15] is the view as they call it in a MVC (Model-View-Controller) world. Actually it is enough to build the whole frontend with [React][15] and its components. One does not need anything else to make a [React][15] application. Then comes a time, when one thinks of organising the code. Well, then and only then the things we talk now will make sense.
 

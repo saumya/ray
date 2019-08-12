@@ -2,7 +2,7 @@
 title: Firebase Cloud FireStore and checking existence of a Document
 author: saumya
 date: 2018-06-28
-template: article.jade
+template: article.pug
 ---
 
 The thing is [Cloud FireStore][1] is still in beta. However, I find it quite stable to run my applications. It has got all the things to run a serverless application.

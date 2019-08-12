@@ -2,7 +2,7 @@
 title: SketchUp + Visualizer
 author: saumya
 date: 2018-07-02
-template: article.jade
+template: article.pug
 ---
 
 While doing some architectural visualisations recently, I got amazed by the tools available now. From costlier to the free versions, they are all around the place. However there are very few which work with the workflow of an architect.

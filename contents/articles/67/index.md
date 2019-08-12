@@ -2,7 +2,7 @@
 title: Cocoapods
 author: saumya
 date: 2016-06-22
-template: article.jade
+template: article.pug
 ---
 Developing for iDevices has come a long way. With the new and emerging tools everyday, the pain is also fading away. In the beginning I used to avoid any third party tools to help me build for iOS in ObjectiveC. Back then, both the XCode environment and the tools were emerging, so it was obvious to run into the edge cases very soon. The time has changed and so as the tools have matured.          
 <span class="more"></span>	

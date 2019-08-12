@@ -2,7 +2,7 @@
 title: jQuery Mobile, making change page work. 
 author: saumya
 date: 2014-02-15
-template: article.jade
+template: article.pug
 ---
 
 

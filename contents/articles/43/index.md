@@ -2,7 +2,7 @@
 title: Upgrading to Cordova 3.4 and above
 author: saumya
 date: 2014-10-23
-template: article.jade
+template: article.pug
 ---
 
 While trying to upgrade, one of my previous Cordova Android application, to latest [Cordova][1] , noticed that [Cordova][1] now makes it very difficult to switch to a native development workflow. Its not the flow itself, which is difficult, but the information about the flow and to get started with a project which is the problem. If you have ever worked with the native development flow of [Cordova][1] , which I guess you must have, as that was the actual flow in the beginning. Then its exactly the same work flow, but the thing is, its not mentioned anywhere. And in between these, they had introduced a web development workflow and tried forcing to use it. Which itself is not clear and then combined the native workflow with it. Good that, that period is over. But its not clear at all from the docs.

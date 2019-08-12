@@ -2,7 +2,7 @@
 title: Getting started with Wintersmith themes
 author: saumya
 date: 2014-01-25
-template: article.jade
+template: article.pug
 ---
 
 I am getting more and more conversant with the [Jade][1] templating engine and [Wintersmith][2]. Which I hope, is, what was one of the intentions, of moving from [Wordpress][3] to [Wintersmith][2]. Well, trying my hands on to customise the theme, I found its extemely easy to just add another CSS to the `layout` template ie; `layout.jade` and start putting in the styles there. It can not be simpler than this. The base style is taken from the style definition at `main.css`. If you look at the `layout.jade`, it will look something as this.

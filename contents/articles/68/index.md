@@ -2,7 +2,7 @@
 title: NSNotification in Swift
 author: saumya
 date: 2016-06-30
-template: article.jade
+template: article.pug
 ---
 While Apple has put a lot of design patterns to develop applications for iOS, the flexibility of an event driven application development surely has its merits. The very de-coupled application is so nice to play around with. Well, the downside is to find where is what. For a strictly coupled application, one can definitely find the root of the roots. But for a de-coupled application its very difficult to find what is happening where. Then comes good practices of code commeting and logger messages to rescue. That topic is a separate post I hope.            
 

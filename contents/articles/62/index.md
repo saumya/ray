@@ -2,7 +2,7 @@
 title: Cordova today
 author: saumya
 date: 2016-01-09
-template: article.jade
+template: article.pug
 ---
 
 

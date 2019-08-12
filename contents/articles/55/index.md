@@ -2,7 +2,7 @@
 title: AngularJS 102
 author: saumya
 date: 2015-11-25
-template: article.jade
+template: article.pug
 ---
 This is the part two of the study of [AngularJS][1]. The first part is [AngularJS 101][2].
 This is focused on the vary basic concepts of [AngularJS][1] like how and where to write a `controller` or `directive` etc. The [sample project is here][5].          

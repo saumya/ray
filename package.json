@@ -1,8 +1,17 @@
 {
   "dependencies": {
-    "moment": "2.3.x",
-    "underscore": "1.4.x",
-    "typogr": "0.5.x"
+    "moment": "^2.22.2",
+    "typogr": "0.6.x",
+    "underscore": "^1.9.1"
   },
-  "repository": "none"
+  "private": true,
+  "repository": "https://github.com/saumya/ray",
+  "scripts": {
+    "preview-test": "../node_modules/wintersmith/bin/wintersmith preview -p 1234",
+    "preview": "./node_modules/wintersmith/bin/wintersmith preview",
+    "build": "./node_modules/wintersmith/bin/wintersmith build"
+  },
+  "devDependencies": {
+    "wintersmith": "^2.5.0"
+  }
 }

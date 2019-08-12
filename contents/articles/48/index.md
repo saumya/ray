@@ -2,7 +2,7 @@
 title: HAXE JS 102
 author: saumya
 date: 2015-1-12
-template: article.jade
+template: article.pug
 ---
 
 We are going good with [HAXE][1], take a moment to go through the official [HAXE][1] documentation.           

@@ -2,7 +2,7 @@
 title: Making a RESTful API with NodeJS and Express
 author: saumya
 date: 2014-05-21
-template: article.jade
+template: article.pug
 ---
 
 

@@ -2,7 +2,7 @@
 title: Reflecting on 2016.
 author: saumya
 date: 2017-01-03
-template: article.jade
+template: article.pug
 ---
 
  - Moved to a new place

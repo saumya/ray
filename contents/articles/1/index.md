@@ -2,7 +2,7 @@
 title: Finally, a static site !
 author: saumya
 date: 2014-01-07
-template: article.jade
+template: article.pug
 ---
 
 

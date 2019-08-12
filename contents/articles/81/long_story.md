@@ -2,7 +2,7 @@
 title: The 2018.
 author: saumya
 date: 2019-01-11
-template: article.jade
+template: article.pug
 ---
 
 ###### December of 2017 ended with my first ever visit to Court at Cuttack, Odisha. 

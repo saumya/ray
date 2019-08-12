@@ -2,7 +2,7 @@
 title: Making crossplatform CLI application with HAXE
 author: saumya
 date: 2015-1-19
-template: article.jade
+template: article.pug
 ---
 
 When I first heard about CLI applications, I thought it might be shipping with the OS itself. Then I found that we can write our own CLI applications. At that point I assume that well, just a CLI application, means it runs everywhere. But actually CLI applications by default are not crossplatform! Yes, I realised it much later. In order to have a crossplatform CLI app, one needs all the required environment to compile to and compile for a particular OS.         

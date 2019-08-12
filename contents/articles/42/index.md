@@ -2,7 +2,7 @@
 title: Dojo Toolkit, Widget.
 author: saumya
 date: 2014-09-30
-template: article.jade
+template: article.pug
 ---
 
 [Dojo Toolkit][1] has a component library named as `Dijit`. Each component in this library is known as a `Widget`. It is better to know the `dijit` framework vocabulary before going further inside it. 

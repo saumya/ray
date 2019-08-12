@@ -2,7 +2,7 @@
 title: Dojo Toolkit, require and events.
 author: saumya
 date: 2015-1-14
-template: article.jade
+template: article.pug
 ---
 
 Well, lets say this, if you are working on [Dojo Toolkit][1], you are working on a legacy application. Since [Dojo Toolkit][1] is releasing its newer versions, you need to change your application to newer codebase. Currently [Dojo Toolkit][1] is leveraging [AMD][2] for modules and Javascript files. Which is very new for this toolkit and veteran developers in this toolkit may find its very different.          

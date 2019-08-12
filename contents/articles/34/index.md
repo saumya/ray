@@ -2,7 +2,7 @@
 title: Understanding BackboneJS View Event, jQuery Event and trigger()
 author: saumya
 date: 2014-04-18
-template: article.jade
+template: article.pug
 ---
 
 

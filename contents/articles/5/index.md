@@ -2,7 +2,7 @@
 title: Finally added Disqus
 author: saumya
 date: 2014-01-11
-template: article.jade
+template: article.pug
 ---
 
 
