@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width">
     <title>Cordova today - Saumya
     </title>
-    <link rel="alternate" href="https://saumya.github.io/ray/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
-    <link rel="stylesheet" href="https://saumya.github.io/ray/css/main.css">
-    <link rel="stylesheet" href="https://saumya.github.io/ray/css/saumya.css">
+    <link rel="alternate" href="http://localhost:8080/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="http://localhost:8080/css/saumya.css">
   </head>
   <body class="article-detail">
     <header class="header">
@@ -16,7 +16,6 @@
         <h1>Cordova today</h1>
         <p class="author">Written by <span class="author"><a href="mailto:2saumyaray@gmail.com">Saumya</a></span>
         </p>
-        <p class="date">09. January 2016</p>
       </div>
     </header>
     <div id="content">
@@ -24,88 +23,67 @@
         <article class="article">
           <section class="content"><p>During these years <a href="https://cordova.apache.org/">Cordova</a> and the mobile phones have come a long way. Today it seems the mobiles are more powerful and can handle a web application quite nicely. On the other hand <a href="https://cordova.apache.org/">Cordova</a> tool chain also has matured. Comparing to older versions of the tool chain, currently its purely <a href="https://www.npmjs.com/"><span class="caps">NPM</span></a> based, as long as we talk about cross platform development. So anything one needs is just a <code>npm install</code> away.   </p>
 <p><span class="more"></span></p>
-<p>There are two ways, as usual with <a href="https://cordova.apache.org/">Cordova</a>, to make a&nbsp;project.</p>
+<p>There are two ways, as usual with <a href="https://cordova.apache.org/">Cordova</a>, to make a<span class="widont">&nbsp;</span>project.</p>
 <ul>
-<li><span class="caps">CLI</span>&nbsp;based</li>
-<li>Platform&nbsp;based</li>
+<li><span class="caps">CLI</span> based</li>
+<li>Platform based</li>
 </ul>
 <blockquote>
-<p>The difference is in, what an application needs from, the platform its deployed&nbsp;into. </p>
+<p>The difference is in, what an application needs from, the platform its deployed<span class="widont">&nbsp;</span>into. </p>
 </blockquote>
 <blockquote>
 <blockquote>
-<p>If one application does not depend upon things like Camera or Geolocation etc and can still serve itself, then its best to use <span class="caps">CLI</span> based approach. That way, it can be delivered to a lot of platforms with just few&nbsp;commands.   </p>
+<p>If one application does not depend upon things like Camera or Geolocation etc and can still serve itself, then its best to use <span class="caps">CLI</span> based approach. That way, it can be delivered to a lot of platforms with just few<span class="widont">&nbsp;</span>commands.   </p>
 </blockquote>
 </blockquote>
 <blockquote>
 <blockquote>
-<p>On the otherhand, if an application requires a specific feature from the underlying platform, then its better to get started with the platform specific workflow. If its needed to write some custom hooks to only iOS devices, then its much easier to get started in platform specific development and customise the application for iOS&nbsp;platform.    </p>
+<p>On the otherhand, if an application requires a specific feature from the underlying platform, then its better to get started with the platform specific workflow. If its needed to write some custom hooks to only iOS devices, then its much easier to get started in platform specific development and customise the application for iOS<span class="widont">&nbsp;</span>platform.    </p>
 </blockquote>
 </blockquote>
-<h3 id="platform-projects">Platform&nbsp;projects</h3>
-<p>For platform specific development, there are separate compressed files available and the projects start from there. Here is a list for iOS and&nbsp;Android.</p>
+<h3 id="platform-projects">Platform projects</h3>
+<p>For platform specific development, there are separate compressed files available and the projects start from there. Here is a list for iOS and<span class="widont">&nbsp;</span>Android.</p>
 <ul>
-<li>iOS ( <a href="https://github.com/apache/cordova-ios/releases">https://github.com/apache/cordova-ios/releases</a>&nbsp;)</li>
-<li>Android ( <a href="https://github.com/apache/cordova-android/releases">https://github.com/apache/cordova-android/releases</a>&nbsp;)</li>
+<li>iOS ( <a href="https://github.com/apache/cordova-ios/releases">https://github.com/apache/cordova-ios/releases</a><span class="widont">&nbsp;</span>)</li>
+<li>Android ( <a href="https://github.com/apache/cordova-android/releases">https://github.com/apache/cordova-android/releases</a><span class="widont">&nbsp;</span>)</li>
 </ul>
-<h3 id="cli-projects"><span class="caps">CLI</span>&nbsp;projects</h3>
-<p>For <span class="caps">CLI</span> based applications, the basic need is <a href="https://nodejs.org/en/">Node</a> and with that comes <a href="https://www.npmjs.com/"><span class="caps">NPM</span></a>. First thing to do is, intall Cordova from <a href="https://www.npmjs.com/"><span class="caps">NPM</span></a>, once <a href="https://nodejs.org/en/">Node</a> is installed in the system. From that point onwards the commands to start working on a Cordova project are as&nbsp;below.          </p>
-<p>Make a cordova&nbsp;project</p>
-<pre><code>cordova create hello com.example.hello HelloWorld
-</code></pre><p>Now move to the project folder, which is just created by the above command. All the <code>following commands</code> should <code>run</code> from inside the <code>project folder</code>.</p>
-<pre><code>cd hello
-</code></pre><p>Check the number of&nbsp;platforms</p>
-<pre><code>cordova platforms ls
-</code></pre><p>Add the required&nbsp;platforms</p>
+<h3 id="cli-projects"><span class="caps">CLI</span> projects</h3>
+<p>For <span class="caps">CLI</span> based applications, the basic need is <a href="https://nodejs.org/en/">Node</a> and with that comes <a href="https://www.npmjs.com/"><span class="caps">NPM</span></a>. First thing to do is, intall Cordova from <a href="https://www.npmjs.com/"><span class="caps">NPM</span></a>, once <a href="https://nodejs.org/en/">Node</a> is installed in the system. From that point onwards the commands to start working on a Cordova project are as<span class="widont">&nbsp;</span>below.          </p>
+<p>Make a cordova<span class="widont">&nbsp;</span>project</p>
+<pre><code>cordova create hello com.example.hello HelloWorld</code></pre><p>Now move to the project folder, which is just created by the above command. All the <code>following commands</code> should <code>run</code> from inside the <code>project folder</code>.</p>
+<pre><code>cd hello</code></pre><p>Check the number of<span class="widont">&nbsp;</span>platforms</p>
+<pre><code>cordova platforms ls</code></pre><p>Add the required<span class="widont">&nbsp;</span>platforms</p>
 <pre><code>cordova platform add ios
 cordova platform add android
-cordova platform add browser
-</code></pre><p>Remove&nbsp;platforms</p>
-<pre><code>cordova platform remove blackberry10
-</code></pre><p>Build</p>
+cordova platform add browser</code></pre><p>Remove platforms</p>
+<pre><code>cordova platform remove blackberry10</code></pre><p>Build</p>
 <pre><code>cordova build ios ( this is equivalent as the below two commands combined together )
 
 cordova prepare ios ( at this point, Xcode can be used to open the project )
-cordova compile ios
-</code></pre><p>Run</p>
+cordova compile ios</code></pre><p>Run</p>
 <pre><code>cordova emulate android ( run in emulator )
-cordova run android ( run in device )
-</code></pre><p>Help</p>
-<pre><code>cordova run --help
-</code></pre><h3 id="plugins-command-reference">Plugins command&nbsp;reference</h3>
-<p>List all the plugins installed in the&nbsp;project</p>
-<pre><code>cordova plugin ls
-</code></pre><p>Add&nbsp;plugin</p>
-<pre><code>cordova plugin add cordova-plugin-console
-</code></pre><p>Remove&nbsp;plugin</p>
-<pre><code>cordova plugin rm cordova-plugin-console
-</code></pre><p>I hope that helps you get started with <a href="https://cordova.apache.org/">Cordova</a>. For detailed documenation, its better to go to the official&nbsp;documentation. </p>
-<p>Happy&nbsp;coding.</p>
+cordova run android ( run in device )</code></pre><p>Help</p>
+<pre><code>cordova run --help</code></pre><h3 id="plugins-command-reference">Plugins command reference</h3>
+<p>List all the plugins installed in the<span class="widont">&nbsp;</span>project</p>
+<pre><code>cordova plugin ls</code></pre><p>Add plugin</p>
+<pre><code>cordova plugin add cordova-plugin-console</code></pre><p>Remove plugin</p>
+<pre><code>cordova plugin rm cordova-plugin-console</code></pre><p>I hope that helps you get started with <a href="https://cordova.apache.org/">Cordova</a>. For detailed documenation, its better to go to the official<span class="widont">&nbsp;</span>documentation. </p>
+<p>Happy coding.</p>
 </section>
         </article>
       </div>
     </div>
     <footer>
       <div class="content-wrap">
-        <div class="nav"><a href="https://saumya.github.io/ray/">« Full blog</a></div>
-        <div id="disqus_thread"></div>
-        <script type="text/javascript">
-          var disqus_shortname = 'saumya';
-          (function() {
-              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-          })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        <div class="nav"><a href="/">&laquo; Full blog</a></div>
         <section class="about"><p><a href="https://saumya.github.io/">Saumya</a> is an iternal seeker.</p>
 <p>A maker of things and curious about everything. Continuous learning is, what fuels him. This blog itself, reflects one of many things he is trying at all the time.</p>
-<p>He is <a href="https://twitter.com/saumya">@saumya</a> on Twitter. </p>
-<span class="nav"><a href="https://saumya.github.io/ray/">Blog Home</a><a href="https://saumya.github.io/ray/archive.html">Archives</a></span>
+<p>Talk to <a href="https://twitter.com/saumya">@saumya</a> on Twitter. </p>
+<span class="nav"><a href="http://localhost:8080/">Blog Home</a><a href="http://localhost:8080/archive.html">Archives</a><a href="http://localhost:8080/feed.xml">Feed</a></span>
         </section>
         <section class="copy">
-          <p>&copy; 2019 saumya ray &mdash; powered by&nbsp;     <a href="https://github.com/jnordberg/wintersmith">Wintersmith&nbsp;</a>
-            <p> <a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
+          <p>&copy; 2019 Saumya Ray &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>
+            <p><a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
           </p>
         </section>
       </div>

@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width">
     <title>BackboneJS, view and its events - Saumya
     </title>
-    <link rel="alternate" href="https://saumya.github.io/ray/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
-    <link rel="stylesheet" href="https://saumya.github.io/ray/css/main.css">
-    <link rel="stylesheet" href="https://saumya.github.io/ray/css/saumya.css">
+    <link rel="alternate" href="http://localhost:8080/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="http://localhost:8080/css/saumya.css">
   </head>
   <body class="article-detail">
     <header class="header">
@@ -16,14 +16,14 @@
         <h1>BackboneJS, view and its events</h1>
         <p class="author">Written by <span class="author"><a href="mailto:2saumyaray@gmail.com">Saumya</a></span>
         </p>
-        <p class="date">20. January 2014</p>
       </div>
     </header>
     <div id="content">
       <div class="content-wrap">
         <article class="article">
-          <section class="content"><p>Working in <a href="http://backbonejs.org/">BackboneJS</a> is fun and easy to begin with. Slowly but steadily it gets complicated as we move on and add more to the project. Being said that, <a href="http://backbonejs.org/">BackboneJS</a> is not at all opinionated. So there is no rightway of doing something. If your solution works for your project, then its good to go. Well, then there are certain things, which may help you, better organise your code. One of such things is <code>View Events</code>.<br>In a Backbone view, to listen to events and handle them, the general syntax is as&nbsp;this.</p>
-<pre><code class="lang-javascript">events:{
+          <section class="content"><p>Working in <a href="http://backbonejs.org/">BackboneJS</a> is fun and easy to begin with. Slowly but steadily it gets complicated as we move on and add more to the project. Being said that, <a href="http://backbonejs.org/">BackboneJS</a> is not at all opinionated. So there is no rightway of doing something. If your solution works for your project, then its good to go. Well, then there are certain things, which may help you, better organise your code. One of such things is <code>View Events</code>.     
+In a Backbone view, to listen to events and handle them, the general syntax is as<span class="widont">&nbsp;</span>this.</p>
+<pre><code class="language-javascript">events:{
         <span class="string">"click"</span>: <span class="string">"onClick"</span>
         },
 <span class="attr">onClick</span>: <span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>{
@@ -34,43 +34,31 @@
     <span class="keyword">if</span>(btnID===<span class="string">'btn_one'</span>){
         <span class="built_in">console</span>.log(<span class="string">'<span class="caps">TODO</span>:'</span>);
     }
-}
-</code></pre>
-<p>Well, it may be easier at first, but we are listening for events for the whole view and then in the handler checking it. There is a way in <a href="http://backbonejs.org/">BackboneJS</a> that directly and listens for events for that particular target. The code looks as&nbsp;this.</p>
-<pre><code class="lang-javascript">events:{
+}</code></pre>
+<p>Well, it may be easier at first, but we are listening for events for the whole view and then in the handler checking it. There is a way in <a href="http://backbonejs.org/">BackboneJS</a> that directly and listens for events for that particular target. The code looks as<span class="widont">&nbsp;</span>this.</p>
+<pre><code class="language-javascript">events:{
         <span class="string">"click #btn_one"</span>: <span class="string">"onClick"</span>
         },
 <span class="attr">onClick</span>: <span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>{
     <span class="comment">//btn_one is clicked</span>
     <span class="comment">//Do something with the event</span>
-}
-</code></pre>
-<p>Happy&nbsp;coding.      </p>
+}</code></pre>
+<p>Happy coding.      </p>
 </section>
         </article>
       </div>
     </div>
     <footer>
       <div class="content-wrap">
-        <div class="nav"><a href="https://saumya.github.io/ray/">« Full blog</a></div>
-        <div id="disqus_thread"></div>
-        <script type="text/javascript">
-          var disqus_shortname = 'saumya';
-          (function() {
-              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-          })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        <div class="nav"><a href="/">&laquo; Full blog</a></div>
         <section class="about"><p><a href="https://saumya.github.io/">Saumya</a> is an iternal seeker.</p>
 <p>A maker of things and curious about everything. Continuous learning is, what fuels him. This blog itself, reflects one of many things he is trying at all the time.</p>
-<p>He is <a href="https://twitter.com/saumya">@saumya</a> on Twitter. </p>
-<span class="nav"><a href="https://saumya.github.io/ray/">Blog Home</a><a href="https://saumya.github.io/ray/archive.html">Archives</a></span>
+<p>Talk to <a href="https://twitter.com/saumya">@saumya</a> on Twitter. </p>
+<span class="nav"><a href="http://localhost:8080/">Blog Home</a><a href="http://localhost:8080/archive.html">Archives</a><a href="http://localhost:8080/feed.xml">Feed</a></span>
         </section>
         <section class="copy">
-          <p>&copy; 2019 saumya ray &mdash; powered by&nbsp;     <a href="https://github.com/jnordberg/wintersmith">Wintersmith&nbsp;</a>
-            <p> <a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
+          <p>&copy; 2019 Saumya Ray &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>
+            <p><a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
           </p>
         </section>
       </div>

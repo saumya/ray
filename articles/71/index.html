@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width">
     <title>React Native, Android and Loading embeded HTML pages in WebView - Saumya
     </title>
-    <link rel="alternate" href="https://saumya.github.io/ray/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
-    <link rel="stylesheet" href="https://saumya.github.io/ray/css/main.css">
-    <link rel="stylesheet" href="https://saumya.github.io/ray/css/saumya.css">
+    <link rel="alternate" href="http://localhost:8080/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="http://localhost:8080/css/saumya.css">
   </head>
   <body class="article-detail">
     <header class="header">
@@ -16,52 +16,38 @@
         <h1>React Native, Android and Loading embeded HTML pages in WebView</h1>
         <p class="author">Written by <span class="author"><a href="mailto:2saumyaray@gmail.com">Saumya</a></span>
         </p>
-        <p class="date">09. November 2016</p>
       </div>
     </header>
     <div id="content">
       <div class="content-wrap">
         <article class="article">
-          <section class="content"><p>The problem is in Android release builds, where the local <span class="caps">HTML</span> files do not load. This is not a problem in debug builds. I have not tested the final iOS builds. Loading of a local html file in a webview in <a href="https://facebook.github.io/react-native/">React Native</a> is as simple as&nbsp;this.</p>
-<pre><code>&lt;WebView source={{ uri: &#39;../assets/generic.html&#39; }} /&gt;
-</code></pre><p><span class="more"></span></p>
-<p>First thing is, the code above might not work. Why I say <code>might</code> is, it sometimes works ! Well, the fix to this situation is to use a <code>require</code> as shown below. Which works everywhere, all the&nbsp;time.</p>
-<pre><code>&lt;WebView source={ require(&#39;../assets/generic.html&#39;) } /&gt;
-</code></pre><p>All is fine till you are building and testing from your machine with <span class="caps">USB</span> debugging. Once you move forward to a release build and test the app on a device, the HTML pages stop to load! Un/Fortunately its a known issue, look <a href="https://github.com/facebook/react-native/issues/505">here</a> and <a href="https://github.com/facebook/react-native/issues/6004">here</a>. If you have gone through the links, then probably got the solution. I will just keep a note here for easy&nbsp;reference.     </p>
-<p>The fix is a two step&nbsp;process.</p>
+          <section class="content"><p>The problem is in Android release builds, where the local <span class="caps">HTML</span> files do not load. This is not a problem in debug builds. I have not tested the final iOS builds. Loading of a local html file in a webview in <a href="https://facebook.github.io/react-native/">React Native</a> is as simple as<span class="widont">&nbsp;</span>this.</p>
+<pre><code>&lt;WebView source={{ uri: &#39;../assets/generic.html&#39; }} /&gt;</code></pre><p><span class="more"></span></p>
+<p>First thing is, the code above might not work. Why I say <code>might</code> is, it sometimes works ! Well, the fix to this situation is to use a <code>require</code> as shown below. Which works everywhere, all the<span class="widont">&nbsp;</span>time.</p>
+<pre><code>&lt;WebView source={ require(&#39;../assets/generic.html&#39;) } /&gt;</code></pre><p>All is fine till you are building and testing from your machine with <span class="caps">USB</span> debugging. Once you move forward to a release build and test the app on a device, the <span class="caps">HTML</span> pages stop to load! Un/Fortunately its a known issue, look <a href="https://github.com/facebook/react-native/issues/505">here</a> and <a href="https://github.com/facebook/react-native/issues/6004">here</a>. If you have gone through the links, then probably got the solution. I will just keep a note here for easy<span class="widont">&nbsp;</span>reference.     </p>
+<p>The fix is a two step<span class="widont">&nbsp;</span>process.</p>
 <ol>
 <li>Manully copy the <span class="caps">HTML</span> pages to <code>android/app/src/main/assets</code> folder</li>
 <li>Change the reference in code to <code>file:///android_asset</code> instead of <code>./ or ../</code> for example <code>file:///android_asset/generic.html</code>       </li>
 </ol>
-<p>We are done. Build and release your Android&nbsp;app.           </p>
-<p>Just remember that, whatever is available inside <code>android/app/src/main/assets</code> folder can be referenced with <code>file:///android_asset/</code> <span class="caps">URL</span> and life is good. The WebView code looks as&nbsp;below.         </p>
-<pre><code>&lt;WebView source={{ uri: &#39;file:///android_asset/generic.html&#39; }} /&gt;
-</code></pre><p>Cheers</p>
+<p>We are done. Build and release your Android<span class="widont">&nbsp;</span>app.           </p>
+<p>Just remember that, whatever is available inside <code>android/app/src/main/assets</code> folder can be referenced with <code>file:///android_asset/</code> <span class="caps">URL</span> and life is good. The WebView code looks as<span class="widont">&nbsp;</span>below.         </p>
+<pre><code>&lt;WebView source={{ uri: &#39;file:///android_asset/generic.html&#39; }} /&gt;</code></pre><p>Cheers</p>
 </section>
         </article>
       </div>
     </div>
     <footer>
       <div class="content-wrap">
-        <div class="nav"><a href="https://saumya.github.io/ray/">« Full blog</a></div>
-        <div id="disqus_thread"></div>
-        <script type="text/javascript">
-          var disqus_shortname = 'saumya';
-          (function() {
-              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-          })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        <div class="nav"><a href="/">&laquo; Full blog</a></div>
         <section class="about"><p><a href="https://saumya.github.io/">Saumya</a> is an iternal seeker.</p>
 <p>A maker of things and curious about everything. Continuous learning is, what fuels him. This blog itself, reflects one of many things he is trying at all the time.</p>
-<p>He is <a href="https://twitter.com/saumya">@saumya</a> on Twitter. </p>
-<span class="nav"><a href="https://saumya.github.io/ray/">Blog Home</a><a href="https://saumya.github.io/ray/archive.html">Archives</a></span>
+<p>Talk to <a href="https://twitter.com/saumya">@saumya</a> on Twitter. </p>
+<span class="nav"><a href="http://localhost:8080/">Blog Home</a><a href="http://localhost:8080/archive.html">Archives</a><a href="http://localhost:8080/feed.xml">Feed</a></span>
         </section>
         <section class="copy">
-          <p>&copy; 2019 saumya ray &mdash; powered by&nbsp;     <a href="https://github.com/jnordberg/wintersmith">Wintersmith&nbsp;</a>
-            <p> <a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
+          <p>&copy; 2019 Saumya Ray &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>
+            <p><a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
           </p>
         </section>
       </div>

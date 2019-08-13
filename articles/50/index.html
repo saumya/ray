@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width">
     <title>HAXE and NodeJS - Saumya
     </title>
-    <link rel="alternate" href="https://saumya.github.io/ray/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
-    <link rel="stylesheet" href="https://saumya.github.io/ray/css/main.css">
-    <link rel="stylesheet" href="https://saumya.github.io/ray/css/saumya.css">
+    <link rel="alternate" href="http://localhost:8080/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="http://localhost:8080/css/saumya.css">
   </head>
   <body class="article-detail">
     <header class="header">
@@ -16,7 +16,6 @@
         <h1>HAXE and NodeJS</h1>
         <p class="author">Written by <span class="author"><a href="mailto:2saumyaray@gmail.com">Saumya</a></span>
         </p>
-        <p class="date">17. January 2015</p>
       </div>
     </header>
     <div id="content">
@@ -24,25 +23,21 @@
         <article class="article">
           <section class="content"><p>Continuing the sudy of javascript target of <a href="http://haxe.org/"><span class="caps">HAXE</span></a> we will focus on <a href="http://nodejs.org/">NodeJS</a> this time. Before we move on, lets remind ourselves the things to expect from the <a href="http://haxe.org/"><span class="caps">HAXE</span></a> toolchain by going through the previous two introductions, here is the <a href="http://saumya.github.io/ray/articles/47/">first</a> and the <a href="http://saumya.github.io/ray/articles/48/">second</a> post.<br>Thats about <a href="http://haxe.org/"><span class="caps">HAXE</span></a>, now a little about <a href="http://nodejs.org/">NodeJS</a>. In <a href="http://nodejs.org/">NodeJS</a> the concept of modules is very common to make some re-usable code. In general, modules hide everything by default. In class based languages we can call them as <code>private</code> elements. To make something <code>public</code> , we have to use <code>exports</code> keyword in <a href="http://nodejs.org/">NodeJS</a>.           </p>
 <p>For example, if we have a file names <code>one.js</code> as</p>
-<pre><code class="lang-javascript">exports.publicFunction = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{
+<pre><code class="language-javascript">exports.publicFunction = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{
   <span class="built_in">console</span>.log(<span class="string">'Hello World'</span>);
-}
-</code></pre>
-<p>Now, in <a href="http://nodejs.org/">NodeJS</a>, we can write something&nbsp;as          </p>
-<pre><code class="lang-javascript"><span class="keyword">var</span> oneObj = <span class="built_in">require</span>(<span class="string">'./one'</span>);
-oneObj.publicFunction();
-</code></pre>
+}</code></pre>
+<p>Now, in <a href="http://nodejs.org/">NodeJS</a>, we can write something<span class="widont">&nbsp;</span>as          </p>
+<pre><code class="language-javascript"><span class="keyword">var</span> oneObj = <span class="built_in">require</span>(<span class="string">'./one'</span>);
+oneObj.publicFunction();</code></pre>
 <p>Thats first kind of modules we have. There is another kind of modules in <a href="http://nodejs.org/">NodeJS</a>, where instead of exposing each individual elements from the modules, it exposes a <code>Constructor</code> function. This is done with <code>module.exports</code> in stead of only <code>exports</code>.          </p>
-<pre><code class="lang-javascript"><span class="built_in">module</span>.exports.MyObjConstructor = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{
+<pre><code class="language-javascript"><span class="built_in">module</span>.exports.MyObjConstructor = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{
   <span class="built_in">console</span>.log(<span class="string">'New Object'</span>);
-}
-</code></pre>
-<p>This second one is looked at as classical concepts of programming, where each <span class="caps">JS</span> file is kind of a Class file.<br>The dynamic and fun nature of javascript allows us to use the first way of exposing individual elements to actually expose a constructor function too. Is not it ?! Why we think about that! Because <a href="http://haxe.org/"><span class="caps">HAXE</span></a> generated javascript is actually doing that. Smart.<br><span class="more"></span><br>Now, lets focus back in <a href="http://haxe.org/"><span class="caps">HAXE</span></a> and here is the companion <a href="https://github.com/saumya/HAXENode">Github project</a>. We have three classes in <code>.hx</code> as Animal, Jungle and Tree. But only Animal class is exposed by using <code>@:expose</code> just before the class declaration&nbsp;as           </p>
-<pre><code class="lang-haxe"><span class="meta">@:expose("Animal")</span>
-<span class="class"><span class="keyword">class</span> <span class="title">Animal</span> </span>
-</code></pre>
-<p>The application entry class <code>ApplicationEntry.hx</code> is actually using all these classes. Finally, we have the <code>.hxml</code> file, we name it <code>compile.hxml</code>, but could be given any name, to compile our application. Here is the code for quick&nbsp;reference.          </p>
-<pre><code class="lang-haxe"><span class="meta"># Generates one single application <span class="caps">JS</span></span>
+}</code></pre>
+<p>This second one is looked at as classical concepts of programming, where each <span class="caps">JS</span> file is kind of a Class file.<br>The dynamic and fun nature of javascript allows us to use the first way of exposing individual elements to actually expose a constructor function too. Is not it ?! Why we think about that! Because <a href="http://haxe.org/"><span class="caps">HAXE</span></a> generated javascript is actually doing that. Smart.<br><span class="more"></span><br>Now, lets focus back in <a href="http://haxe.org/"><span class="caps">HAXE</span></a> and here is the companion <a href="https://github.com/saumya/HAXENode">Github project</a>. We have three classes in <code>.hx</code> as Animal, Jungle and Tree. But only Animal class is exposed by using <code>@:expose</code> just before the class declaration<span class="widont">&nbsp;</span>as           </p>
+<pre><code class="language-haxe"><span class="meta">@:expose("Animal")</span>
+<span class="class"><span class="keyword">class</span> <span class="title">Animal</span> </span></code></pre>
+<p>The application entry class <code>ApplicationEntry.hx</code> is actually using all these classes. Finally, we have the <code>.hxml</code> file, we name it <code>compile.hxml</code>, but could be given any name, to compile our application. Here is the code for quick<span class="widont">&nbsp;</span>reference.          </p>
+<pre><code class="language-haxe"><span class="meta"># Generates one single application <span class="caps">JS</span></span>
 -main ApplicationEntry
 -js bin/hxApp.js
 <span class="meta">#</span>
@@ -59,69 +54,52 @@ com.jungle.Animal
 -js bin/Jungle.js 
 -cp src 
 com.jungle.Jungle
-<span class="meta">#</span>
-</code></pre>
-<p>Once we run the <a href="http://haxe.org/"><span class="caps">HAXE</span></a> compiler&nbsp;with</p>
-<pre><code class="lang-haxe">haxe compile.hxml
-</code></pre>
-<p>It generates a file with the name <code>hxApp.js</code>, which is enough for the <a href="http://nodejs.org/">NodeJS</a> experiements. But we have the other generted <span class="caps">JS</span> files just to see, what actually <a href="http://haxe.org/"><span class="caps">HAXE</span></a> is outputting. If you look at the <code>Animal.js</code> its actually getting exported as <code>exports.Animal</code> and thats exactly what we need to use as a <a href="http://nodejs.org/">NodeJS</a> module.<br>Lets write a simple <a href="http://nodejs.org/">NodeJS</a> application. Get into our <code>bin</code> folder, where all the <a href="http://haxe.org/"><span class="caps">HAXE</span></a> compiled <span class="caps">JS</span> files are. There we create a node application as <code>nodeApp.js</code> and the content of the file&nbsp;is </p>
-<pre><code class="lang-javascript"><span class="keyword">var</span> app = <span class="built_in">require</span>(<span class="string">'./hxApp.js'</span>);
-<span class="built_in">console</span>.log(app);
-</code></pre>
-<p>Now to run the <a href="http://nodejs.org/">NodeJS</a> application, do this in&nbsp;commandline</p>
-<pre><code class="lang-javascript">node nodeApp.js
-</code></pre>
-<p>You can see now all the logs in the commadline, which is actually being run from the application we generated from <a href="http://haxe.org/"><span class="caps">HAXE</span></a>. This is <code>the way</code> <a href="http://haxe.org/"><span class="caps">HAXE</span></a> can be <code>used best</code>. Do all the code in <a href="http://haxe.org/"><span class="caps">HAXE</span></a> and finally output to a single application javascript file. Then use the application file to launch the application.<br>Now, lets see what else we can do with the generated code. If you remember we have exposed the ‘Animal’ class with <code>@:expose</code>. Lets modify our ‘nodeApp.js’&nbsp;as</p>
-<pre><code class="lang-javascript"><span class="keyword">var</span> app = <span class="built_in">require</span>(<span class="string">'./hxApp.js'</span>);
+<span class="meta">#</span></code></pre>
+<p>Once we run the <a href="http://haxe.org/"><span class="caps">HAXE</span></a> compiler<span class="widont">&nbsp;</span>with</p>
+<pre><code class="language-haxe">haxe compile.hxml</code></pre>
+<p>It generates a file with the name <code>hxApp.js</code>, which is enough for the <a href="http://nodejs.org/">NodeJS</a> experiements. But we have the other generted <span class="caps">JS</span> files just to see, what actually <a href="http://haxe.org/"><span class="caps">HAXE</span></a> is outputting. If you look at the <code>Animal.js</code> its actually getting exported as <code>exports.Animal</code> and thats exactly what we need to use as a <a href="http://nodejs.org/">NodeJS</a> module.<br>Lets write a simple <a href="http://nodejs.org/">NodeJS</a> application. Get into our <code>bin</code> folder, where all the <a href="http://haxe.org/"><span class="caps">HAXE</span></a> compiled <span class="caps">JS</span> files are. There we create a node application as <code>nodeApp.js</code> and the content of the file<span class="widont">&nbsp;</span>is </p>
+<pre><code class="language-javascript"><span class="keyword">var</span> app = <span class="built_in">require</span>(<span class="string">'./hxApp.js'</span>);
+<span class="built_in">console</span>.log(app);</code></pre>
+<p>Now to run the <a href="http://nodejs.org/">NodeJS</a> application, do this in<span class="widont">&nbsp;</span>commandline</p>
+<pre><code class="language-javascript">node nodeApp.js</code></pre>
+<p>You can see now all the logs in the commadline, which is actually being run from the application we generated from <a href="http://haxe.org/"><span class="caps">HAXE</span></a>. This is <code>the way</code> <a href="http://haxe.org/"><span class="caps">HAXE</span></a> can be <code>used best</code>. Do all the code in <a href="http://haxe.org/"><span class="caps">HAXE</span></a> and finally output to a single application javascript file. Then use the application file to launch the application.<br>Now, lets see what else we can do with the generated code. If you remember we have exposed the ‘Animal’ class with <code>@:expose</code>. Lets modify our ‘nodeApp.js’<span class="widont">&nbsp;</span>as</p>
+<pre><code class="language-javascript"><span class="keyword">var</span> app = <span class="built_in">require</span>(<span class="string">'./hxApp.js'</span>);
 <span class="keyword">var</span> animal_1 = <span class="keyword">new</span> app.Animal(<span class="string">'<span class="caps">CAT</span>'</span>,<span class="number">9</span>);
-<span class="built_in">console</span>.log(animal_1);
-</code></pre>
-<p>Now run the <a href="http://nodejs.org/">NodeJS</a> application with the same command as <code>node nodeApp.js</code>, this time if you look at the application log on the command promt, its actually created a new ‘Animal’. The fun has just begun, I hope. Well, we can go on modifying our code to look it more&nbsp;beautiful. </p>
-<pre><code class="lang-javascript"><span class="keyword">var</span> app = <span class="built_in">require</span>(<span class="string">'./hxApp.js'</span>);
+<span class="built_in">console</span>.log(animal_1);</code></pre>
+<p>Now run the <a href="http://nodejs.org/">NodeJS</a> application with the same command as <code>node nodeApp.js</code>, this time if you look at the application log on the command promt, its actually created a new ‘Animal’. The fun has just begun, I hope. Well, we can go on modifying our code to look it more<span class="widont">&nbsp;</span>beautiful. </p>
+<pre><code class="language-javascript"><span class="keyword">var</span> app = <span class="built_in">require</span>(<span class="string">'./hxApp.js'</span>);
 <span class="keyword">var</span> animal_1 = <span class="keyword">new</span> app.Animal(<span class="string">'<span class="caps">CAT</span>'</span>,<span class="number">9</span>);
 <span class="built_in">console</span>.log(animal_1);
 <span class="keyword">var</span> Animal = app.Animal; <span class="comment">// Store the Constructor</span>
 <span class="keyword">var</span> animal_2 = <span class="keyword">new</span> Animal(<span class="string">'Tiger'</span>,<span class="number">6</span>); <span class="comment">// And use it</span>
-<span class="built_in">console</span>.log(animal_2);
-</code></pre>
-<p>We have a goodlooking constructor for ‘Animal’ in the name of ‘Animal’&nbsp;now.</p>
-<p>Thats all is happening from the only one generated Javascript file that is the final application javascript file. Lets see, what else we can do! If you remember we have actually generated all the resepective javascript files for individual <code>.hx</code> files. This time, lets forget our final or application javascript file. Lets modify our <a href="http://nodejs.org/">NodeJS</a> application file by removing everything else from it and adding the following&nbsp;code.</p>
-<pre><code class="lang-javascript"><span class="keyword">var</span> o = <span class="built_in">require</span>(<span class="string">'./Animal'</span>);
+<span class="built_in">console</span>.log(animal_2);</code></pre>
+<p>We have a goodlooking constructor for ‘Animal’ in the name of ‘Animal’<span class="widont">&nbsp;</span>now.</p>
+<p>Thats all is happening from the only one generated Javascript file that is the final application javascript file. Lets see, what else we can do! If you remember we have actually generated all the resepective javascript files for individual <code>.hx</code> files. This time, lets forget our final or application javascript file. Lets modify our <a href="http://nodejs.org/">NodeJS</a> application file by removing everything else from it and adding the following<span class="widont">&nbsp;</span>code.</p>
+<pre><code class="language-javascript"><span class="keyword">var</span> o = <span class="built_in">require</span>(<span class="string">'./Animal'</span>);
 <span class="keyword">var</span> c = <span class="keyword">new</span> o.Animal(<span class="string">'Cat'</span>,<span class="number">4</span>); <span class="comment">// Directly using constructor</span>
 <span class="keyword">var</span> Animal = o.Animal;<span class="comment">//storing the constructor</span>
 <span class="keyword">var</span> a2 = <span class="keyword">new</span> Animal(<span class="string">'Tiger'</span>,<span class="number">8</span>);<span class="comment">//using constructor</span>
 <span class="built_in">console</span>.log(c);
-<span class="built_in">console</span>.log(a2);
-</code></pre>
-<p>Now run the <a href="http://nodejs.org/">NodeJS</a> application from command line as before. Sweat! That works&nbsp;too!         </p>
-<p>Well, we now are ready for primetime <a href="http://nodejs.org/">NodeJS</a> application using <a href="http://haxe.org/"><span class="caps">HAXE</span></a> toolchain. The reference application and haxe code is at <a href="https://github.com/saumya/HAXENode">this repo on Github</a>.       </p>
-<p>To summerise all this, we can create a final javascript output and use it to launch our <a href="http://nodejs.org/">NodeJS</a> application. We can also just compile each <a href="http://haxe.org/"><span class="caps">HAXE</span></a> file to respective javascript file and use that as a module for our&nbsp;application.         </p>
-<p>Happy&nbsp;coding.</p>
+<span class="built_in">console</span>.log(a2);</code></pre>
+<p>Now run the <a href="http://nodejs.org/">NodeJS</a> application from command line as before. Sweat! That works<span class="widont">&nbsp;</span>too!         </p>
+<p>Well, we now are ready for primetime <a href="http://nodejs.org/">NodeJS</a> application using <a href="http://haxe.org/"><span class="caps">HAXE</span></a> toolchain. The reference application and haxe code is at <a href="https://github.com/saumya/HAXENode">this repo on<span class="widont">&nbsp;</span>Github</a>.       </p>
+<p>To summerise all this, we can create a final javascript output and use it to launch our <a href="http://nodejs.org/">NodeJS</a> application. We can also just compile each <a href="http://haxe.org/"><span class="caps">HAXE</span></a> file to respective javascript file and use that as a module for our<span class="widont">&nbsp;</span>application.         </p>
+<p>Happy coding.</p>
 </section>
         </article>
       </div>
     </div>
     <footer>
       <div class="content-wrap">
-        <div class="nav"><a href="https://saumya.github.io/ray/">« Full blog</a></div>
-        <div id="disqus_thread"></div>
-        <script type="text/javascript">
-          var disqus_shortname = 'saumya';
-          (function() {
-              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-          })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        <div class="nav"><a href="/">&laquo; Full blog</a></div>
         <section class="about"><p><a href="https://saumya.github.io/">Saumya</a> is an iternal seeker.</p>
 <p>A maker of things and curious about everything. Continuous learning is, what fuels him. This blog itself, reflects one of many things he is trying at all the time.</p>
-<p>He is <a href="https://twitter.com/saumya">@saumya</a> on Twitter. </p>
-<span class="nav"><a href="https://saumya.github.io/ray/">Blog Home</a><a href="https://saumya.github.io/ray/archive.html">Archives</a></span>
+<p>Talk to <a href="https://twitter.com/saumya">@saumya</a> on Twitter. </p>
+<span class="nav"><a href="http://localhost:8080/">Blog Home</a><a href="http://localhost:8080/archive.html">Archives</a><a href="http://localhost:8080/feed.xml">Feed</a></span>
         </section>
         <section class="copy">
-          <p>&copy; 2019 saumya ray &mdash; powered by&nbsp;     <a href="https://github.com/jnordberg/wintersmith">Wintersmith&nbsp;</a>
-            <p> <a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
+          <p>&copy; 2019 Saumya Ray &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>
+            <p><a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
           </p>
         </section>
       </div>

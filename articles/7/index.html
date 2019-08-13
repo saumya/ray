@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width">
     <title>Wintersmith configuration - Saumya
     </title>
-    <link rel="alternate" href="https://saumya.github.io/ray/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
-    <link rel="stylesheet" href="https://saumya.github.io/ray/css/main.css">
-    <link rel="stylesheet" href="https://saumya.github.io/ray/css/saumya.css">
+    <link rel="alternate" href="http://localhost:8080/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="http://localhost:8080/css/saumya.css">
   </head>
   <body class="article-detail">
     <header class="header">
@@ -16,40 +16,29 @@
         <h1>Wintersmith configuration</h1>
         <p class="author">Written by <span class="author"><a href="mailto:2saumyaray@gmail.com">Saumya</a></span>
         </p>
-        <p class="date">12. January 2014</p>
       </div>
     </header>
     <div id="content">
       <div class="content-wrap">
         <article class="article">
-          <section class="content"><p><a href="https://github.com/jnordberg/wintersmith">Wintersmith</a> is perfect on creating a static site, but the problem arises when one needs to configure it to meet a particular need. I think, thats true for any framework.<br>The problem I encountered is, putting the static blog in any domain or sub-domain. <a href="https://github.com/jnordberg/wintersmith">Wintersmith</a> generates urls which are default to root <code>/</code> and to change it to any domain means one has to change it to the domain one wishes to put the site on. Thats as simple as that. Well, for most parts. Then, there are places where it creates a relative&nbsp;<span class="caps">URL</span>.    </p>
-<p>To solve this, I looked inside the templates and configuration. <a href="https://github.com/jnordberg/wintersmith">Wintersmith</a> reads from the <code>config.json</code> file to get the base <span class="caps">URL</span> and make the other URLs. So I changed the <code>url</code> to my desired <span class="caps">URL</span> and added another parameter to the <code>locals</code> object of the <code>config.json</code> named <code>folder</code>, Then changed the <span class="caps">URL</span> in templates, from <code>/</code> to <code>locals.url</code> and at some places to <code>locals.url+&#39;/&#39;+locals.folder</code> and thats it. Its now perfectly alright to take my site to wherever I want. All I need to do is change these variables and build the site again with <a href="https://github.com/jnordberg/wintersmith">Wintersmith</a> build command.<br>Is this the rightway? Well, seriously I do not know, but it&nbsp;works.   </p>
-<p>Happy Hacking&nbsp;! </p>
+          <section class="content"><p><a href="https://github.com/jnordberg/wintersmith">Wintersmith</a> is perfect on creating a static site, but the problem arises when one needs to configure it to meet a particular need. I think, thats true for any framework.<br>The problem I encountered is, putting the static blog in any domain or sub-domain. <a href="https://github.com/jnordberg/wintersmith">Wintersmith</a> generates urls which are default to root <code>/</code> and to change it to any domain means one has to change it to the domain one wishes to put the site on. Thats as simple as that. Well, for most parts. Then, there are places where it creates a relative<span class="widont">&nbsp;</span><span class="caps">URL</span>.    </p>
+<p>To solve this, I looked inside the templates and configuration. <a href="https://github.com/jnordberg/wintersmith">Wintersmith</a> reads from the <code>config.json</code> file to get the base <span class="caps">URL</span> and make the other URLs. So I changed the <code>url</code> to my desired <span class="caps">URL</span> and added another parameter to the <code>locals</code> object of the <code>config.json</code> named <code>folder</code>, Then changed the <span class="caps">URL</span> in templates, from <code>/</code> to <code>locals.url</code> and at some places to <code>locals.url+&#39;/&#39;+locals.folder</code> and thats it. Its now perfectly alright to take my site to wherever I want. All I need to do is change these variables and build the site again with <a href="https://github.com/jnordberg/wintersmith">Wintersmith</a> build command.<br>Is this the rightway? Well, seriously I do not know, but it<span class="widont">&nbsp;</span>works.   </p>
+<p>Happy Hacking ! </p>
 </section>
         </article>
       </div>
     </div>
     <footer>
       <div class="content-wrap">
-        <div class="nav"><a href="https://saumya.github.io/ray/">« Full blog</a></div>
-        <div id="disqus_thread"></div>
-        <script type="text/javascript">
-          var disqus_shortname = 'saumya';
-          (function() {
-              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-          })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        <div class="nav"><a href="/">&laquo; Full blog</a></div>
         <section class="about"><p><a href="https://saumya.github.io/">Saumya</a> is an iternal seeker.</p>
 <p>A maker of things and curious about everything. Continuous learning is, what fuels him. This blog itself, reflects one of many things he is trying at all the time.</p>
-<p>He is <a href="https://twitter.com/saumya">@saumya</a> on Twitter. </p>
-<span class="nav"><a href="https://saumya.github.io/ray/">Blog Home</a><a href="https://saumya.github.io/ray/archive.html">Archives</a></span>
+<p>Talk to <a href="https://twitter.com/saumya">@saumya</a> on Twitter. </p>
+<span class="nav"><a href="http://localhost:8080/">Blog Home</a><a href="http://localhost:8080/archive.html">Archives</a><a href="http://localhost:8080/feed.xml">Feed</a></span>
         </section>
         <section class="copy">
-          <p>&copy; 2019 saumya ray &mdash; powered by&nbsp;     <a href="https://github.com/jnordberg/wintersmith">Wintersmith&nbsp;</a>
-            <p> <a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
+          <p>&copy; 2019 Saumya Ray &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>
+            <p><a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
           </p>
         </section>
       </div>

@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width">
     <title>How to React now. - Saumya
     </title>
-    <link rel="alternate" href="https://saumya.github.io/ray/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
-    <link rel="stylesheet" href="https://saumya.github.io/ray/css/main.css">
-    <link rel="stylesheet" href="https://saumya.github.io/ray/css/saumya.css">
+    <link rel="alternate" href="http://localhost:8080/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="http://localhost:8080/css/saumya.css">
   </head>
   <body class="article-detail">
     <header class="header">
@@ -16,22 +16,21 @@
         <h1>How to React now.</h1>
         <p class="author">Written by <span class="author"><a href="mailto:2saumyaray@gmail.com">Saumya</a></span>
         </p>
-        <p class="date">28. November 2015</p>
       </div>
     </header>
     <div id="content">
       <div class="content-wrap">
         <article class="article">
-          <section class="content"><p>Here is the way to <a href="http://facebook.github.io/react/">React</a>&nbsp;now.        </p>
+          <section class="content"><p>Here is the way to <a href="http://facebook.github.io/react/">React</a><span class="widont">&nbsp;</span>now.        </p>
 <ul>
 <li>Download <a href="http://facebook.github.io/react/">React</a></li>
-<li>Make a new html&nbsp;file</li>
-<li>Include “react.js”, this gives us ‘React’&nbsp;Object</li>
-<li>Include “react-dom.js”, this gives us ‘ReactDOM’&nbsp;Object</li>
-<li>Write the a React component and use it. This is explained&nbsp;below.</li>
+<li>Make a new html<span class="widont">&nbsp;</span>file</li>
+<li>Include “react.js”, this gives us ‘React’<span class="widont">&nbsp;</span>Object</li>
+<li>Include “react-dom.js”, this gives us ‘ReactDOM’<span class="widont">&nbsp;</span>Object</li>
+<li>Write the a React component and use it. This is explained<span class="widont">&nbsp;</span>below.</li>
 </ul>
-<p>The <span class="caps">HTML</span> file should look something as shown&nbsp;here.</p>
-<pre><code class="lang-html"><span class="meta">&lt;!<span class="caps">DOCTYPE</span> html&gt;</span>
+<p>The <span class="caps">HTML</span> file should look something as shown<span class="widont">&nbsp;</span>here.</p>
+<pre><code class="language-html"><span class="meta">&lt;!<span class="caps">DOCTYPE</span> html&gt;</span>
 <span class="tag">&lt;<span class="name">html</span>&gt;</span>
   <span class="tag">&lt;<span class="name">head</span>&gt;</span>
     <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span>
@@ -42,28 +41,25 @@
       <span class="comment">&lt;!-- React Application --&gt;</span>
     <span class="tag">&lt;/<span class="name">div</span>&gt;</span>
     <span class="comment">&lt;!-- React library --&gt;</span>
-    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"js/lib/react/react.js"</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>
-    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"js/lib/react/react-dom.js"</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"js/lib/react/react.js"</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"js/lib/react/react-dom.js"</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>
     <span class="comment">&lt;!-- Application Code --&gt;</span>
     <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="actionscript">
         <span class="comment">// <span class="caps">TODO</span></span>
     </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>
   <span class="tag">&lt;/<span class="name">body</span>&gt;</span>
-<span class="tag">&lt;/<span class="name">html</span>&gt;</span>
-</code></pre>
-<p>This <span class="caps">HTML</span> file has only a <code>div</code> with an id as <code>id=&quot;myReactApp&quot;</code>. Now lets write a React Component. The component code is as&nbsp;below.</p>
-<pre><code class="lang-javascript"><span class="keyword">var</span> Component1 = React.createClass({
+<span class="tag">&lt;/<span class="name">html</span>&gt;</span></code></pre>
+<p>This <span class="caps">HTML</span> file has only a <code>div</code> with an id as <code>id=&quot;myReactApp&quot;</code>. Now lets write a React Component. The component code is as<span class="widont">&nbsp;</span>below.</p>
+<pre><code class="language-javascript"><span class="keyword">var</span> Component1 = React.createClass({
   <span class="attr">render</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{
     <span class="keyword">var</span> reactComponent = React.<span class="caps">DOM</span>.span(<span class="literal">null</span>,<span class="string">"I am a Custom Span."</span>);
     <span class="keyword">return</span> reactComponent;
   }
-});
-</code></pre>
+});</code></pre>
 <p>Now lets add this component to our <span class="caps">DOM</span>. We are going to add this component in the <code>div</code> with id <code>myReactApp</code>.           </p>
-<pre><code class="lang-javascript">ReactDOM.render( React.createElement(Component1), <span class="built_in">document</span>.getElementById(<span class="string">"myReactApp"</span>) );
-</code></pre>
-<p>So the final <span class="caps">HTML</span> file with the added javascripts and our code will look as&nbsp;below.</p>
-<pre><code class="lang-html"><span class="meta">&lt;!<span class="caps">DOCTYPE</span> html&gt;</span>
+<pre><code class="language-javascript">ReactDOM.render( React.createElement(Component1), <span class="built_in">document</span>.getElementById(<span class="string">"myReactApp"</span>) );</code></pre>
+<p>So the final <span class="caps">HTML</span> file with the added javascripts and our code will look as<span class="widont">&nbsp;</span>below.</p>
+<pre><code class="language-html"><span class="meta">&lt;!<span class="caps">DOCTYPE</span> html&gt;</span>
 <span class="tag">&lt;<span class="name">html</span>&gt;</span>
   <span class="tag">&lt;<span class="name">head</span>&gt;</span>
     <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span>
@@ -74,8 +70,8 @@
       <span class="comment">&lt;!-- React Application --&gt;</span>
     <span class="tag">&lt;/<span class="name">div</span>&gt;</span>
     <span class="comment">&lt;!-- React library --&gt;</span>
-    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"js/lib/react/react.js"</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>
-    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"js/lib/react/react-dom.js"</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"js/lib/react/react.js"</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"js/lib/react/react-dom.js"</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>
     <span class="comment">&lt;!-- Application Code --&gt;</span>
     <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="javascript">
         <span class="keyword">var</span> Component1 = React.createClass({
@@ -87,36 +83,25 @@
         ReactDOM.render( React.createElement(Component1), <span class="built_in">document</span>.getElementById(<span class="string">"myReactApp"</span>) );
     </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>
   <span class="tag">&lt;/<span class="name">body</span>&gt;</span>
-<span class="tag">&lt;/<span class="name">html</span>&gt;</span>
-</code></pre>
-<p>Now, if you run this from a server and view the page in the browser. You can see our compent is rendered in the <code>div</code> and it displays the text as ‘I am a <span class="caps">REACT</span> Component&nbsp;Span’.          </p>
-<p>Thats all is there to <a href="http://facebook.github.io/react/">React</a>. After this point all that <code>remains</code> is the <code>APIs for Component</code> development. But as you can see, <a href="http://facebook.github.io/react/">React</a> is not telling or expecting anything else. It just makes reusable <span class="caps">HTML</span> components. The architecture of the application is upon the&nbsp;developers.</p>
-<p>Happy&nbsp;Reacting.</p>
+<span class="tag">&lt;/<span class="name">html</span>&gt;</span></code></pre>
+<p>Now, if you run this from a server and view the page in the browser. You can see our compent is rendered in the <code>div</code> and it displays the text as ‘I am a <span class="caps">REACT</span> Component<span class="widont">&nbsp;</span>Span’.          </p>
+<p>Thats all is there to <a href="http://facebook.github.io/react/">React</a>. After this point all that <code>remains</code> is the <code>APIs for Component</code> development. But as you can see, <a href="http://facebook.github.io/react/">React</a> is not telling or expecting anything else. It just makes reusable <span class="caps">HTML</span> components. The architecture of the application is upon the<span class="widont">&nbsp;</span>developers.</p>
+<p>Happy Reacting.</p>
 </section>
         </article>
       </div>
     </div>
     <footer>
       <div class="content-wrap">
-        <div class="nav"><a href="https://saumya.github.io/ray/">« Full blog</a></div>
-        <div id="disqus_thread"></div>
-        <script type="text/javascript">
-          var disqus_shortname = 'saumya';
-          (function() {
-              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-          })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        <div class="nav"><a href="/">&laquo; Full blog</a></div>
         <section class="about"><p><a href="https://saumya.github.io/">Saumya</a> is an iternal seeker.</p>
 <p>A maker of things and curious about everything. Continuous learning is, what fuels him. This blog itself, reflects one of many things he is trying at all the time.</p>
-<p>He is <a href="https://twitter.com/saumya">@saumya</a> on Twitter. </p>
-<span class="nav"><a href="https://saumya.github.io/ray/">Blog Home</a><a href="https://saumya.github.io/ray/archive.html">Archives</a></span>
+<p>Talk to <a href="https://twitter.com/saumya">@saumya</a> on Twitter. </p>
+<span class="nav"><a href="http://localhost:8080/">Blog Home</a><a href="http://localhost:8080/archive.html">Archives</a><a href="http://localhost:8080/feed.xml">Feed</a></span>
         </section>
         <section class="copy">
-          <p>&copy; 2019 saumya ray &mdash; powered by&nbsp;     <a href="https://github.com/jnordberg/wintersmith">Wintersmith&nbsp;</a>
-            <p> <a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
+          <p>&copy; 2019 Saumya Ray &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>
+            <p><a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
           </p>
         </section>
       </div>

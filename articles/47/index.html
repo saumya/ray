@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width">
     <title>HAXE JS 101 - Saumya
     </title>
-    <link rel="alternate" href="https://saumya.github.io/ray/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
-    <link rel="stylesheet" href="https://saumya.github.io/ray/css/main.css">
-    <link rel="stylesheet" href="https://saumya.github.io/ray/css/saumya.css">
+    <link rel="alternate" href="http://localhost:8080/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="http://localhost:8080/css/saumya.css">
   </head>
   <body class="article-detail">
     <header class="header">
@@ -16,54 +16,42 @@
         <h1>HAXE JS 101</h1>
         <p class="author">Written by <span class="author"><a href="mailto:2saumyaray@gmail.com">Saumya</a></span>
         </p>
-        <p class="date">04. January 2015</p>
       </div>
     </header>
     <div id="content">
       <div class="content-wrap">
         <article class="article">
-          <section class="content"><p>Hope you know what is <a href="http://haxe.org/"><span class="caps">HAXE</span></a>, take a moment to go through the official <a href="http://haxe.org/"><span class="caps">HAXE</span></a> documentation. We will discuss how and what to consider while working with <span class="caps">JS</span> in <a href="http://haxe.org/"><span class="caps">HAXE</span></a>.<br>Generally other languages, which compile to <span class="caps">JS</span>, actually compile each specific file to a respective JS file. <a href="http://haxe.org/"><span class="caps">HAXE</span></a> actually compiles to one single <span class="caps">JS</span> file for our application. We can further take the generated JS file and minify it using popular JS&nbsp;minifiers.        </p>
-<p>The work flow for <a href="http://haxe.org/"><span class="caps">HAXE</span></a> to <span class="caps">JS</span> is as simple&nbsp;as         </p>
+          <section class="content"><p>Hope you know what is <a href="http://haxe.org/"><span class="caps">HAXE</span></a>, take a moment to go through the official <a href="http://haxe.org/"><span class="caps">HAXE</span></a> documentation. We will discuss how and what to consider while working with <span class="caps">JS</span> in <a href="http://haxe.org/"><span class="caps">HAXE</span></a>.          
+Generally other languages, which compile to <span class="caps">JS</span>, actually compile each specific file to a respective <span class="caps">JS</span> file. <a href="http://haxe.org/"><span class="caps">HAXE</span></a> actually compiles to one single <span class="caps">JS</span> file for our application. We can further take the generated <span class="caps">JS</span> file and minify it using popular <span class="caps">JS</span><span class="widont">&nbsp;</span>minifiers.        </p>
+<p>The work flow for <a href="http://haxe.org/"><span class="caps">HAXE</span></a> to <span class="caps">JS</span> is as simple<span class="widont">&nbsp;</span>as         </p>
 <ul>
-<li>Writing the normal <a href="http://haxe.org/"><span class="caps">HAXE</span></a>&nbsp;application</li>
-<li>Use the package structure and class as&nbsp;usual</li>
-<li>Make a .hxml file difining what would be the final <span class="caps">JS</span>&nbsp;file</li>
-<li>Compile with <a href="http://haxe.org/"><span class="caps">HAXE</span></a> compiler to produce the <span class="caps">JS</span>&nbsp;file         </li>
+<li>Writing the normal <a href="http://haxe.org/"><span class="caps">HAXE</span></a><span class="widont">&nbsp;</span>application</li>
+<li>Use the package structure and class as<span class="widont">&nbsp;</span>usual</li>
+<li>Make a .hxml file difining what would be the final <span class="caps">JS</span><span class="widont">&nbsp;</span>file</li>
+<li>Compile with <a href="http://haxe.org/"><span class="caps">HAXE</span></a> compiler to produce the <span class="caps">JS</span><span class="widont">&nbsp;</span>file         </li>
 </ul>
-<pre><code class="lang-haxe">haxe compile.hxml
-</code></pre>
-<p>The <code>.hxml</code> file looks something&nbsp;like</p>
-<pre><code class="lang-haxe">-main ApplicationEntry
--js app.js
-</code></pre>
-<p>Thats all to it. <a href="http://haxe.org/"><span class="caps">HAXE</span></a> will take care of the <code>import</code> and <code>package</code> and <code>class</code> of the application. Finally the generted <span class="caps">JS</span> file is having everything our application needs. Include the JS file in the required HTML file and we are&nbsp;done.      </p>
-<p>Here is a <a href="https://github.com/saumya/HAXE-JS101">sample basic application</a> showing all there is to&nbsp;it.</p>
-<p>Happy&nbsp;Coding.</p>
+<pre><code class="language-haxe">haxe compile.hxml</code></pre>
+<p>The <code>.hxml</code> file looks something<span class="widont">&nbsp;</span>like</p>
+<pre><code class="language-haxe">-main ApplicationEntry
+-js app.js</code></pre>
+<p>Thats all to it. <a href="http://haxe.org/"><span class="caps">HAXE</span></a> will take care of the <code>import</code> and <code>package</code> and <code>class</code> of the application. Finally the generted <span class="caps">JS</span> file is having everything our application needs. Include the <span class="caps">JS</span> file in the required <span class="caps">HTML</span> file and we are<span class="widont">&nbsp;</span>done.      </p>
+<p>Here is a <a href="https://github.com/saumya/HAXE-JS101">sample basic application</a> showing all there is to<span class="widont">&nbsp;</span>it.</p>
+<p>Happy Coding.</p>
 </section>
         </article>
       </div>
     </div>
     <footer>
       <div class="content-wrap">
-        <div class="nav"><a href="https://saumya.github.io/ray/">« Full blog</a></div>
-        <div id="disqus_thread"></div>
-        <script type="text/javascript">
-          var disqus_shortname = 'saumya';
-          (function() {
-              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-          })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        <div class="nav"><a href="/">&laquo; Full blog</a></div>
         <section class="about"><p><a href="https://saumya.github.io/">Saumya</a> is an iternal seeker.</p>
 <p>A maker of things and curious about everything. Continuous learning is, what fuels him. This blog itself, reflects one of many things he is trying at all the time.</p>
-<p>He is <a href="https://twitter.com/saumya">@saumya</a> on Twitter. </p>
-<span class="nav"><a href="https://saumya.github.io/ray/">Blog Home</a><a href="https://saumya.github.io/ray/archive.html">Archives</a></span>
+<p>Talk to <a href="https://twitter.com/saumya">@saumya</a> on Twitter. </p>
+<span class="nav"><a href="http://localhost:8080/">Blog Home</a><a href="http://localhost:8080/archive.html">Archives</a><a href="http://localhost:8080/feed.xml">Feed</a></span>
         </section>
         <section class="copy">
-          <p>&copy; 2019 saumya ray &mdash; powered by&nbsp;     <a href="https://github.com/jnordberg/wintersmith">Wintersmith&nbsp;</a>
-            <p> <a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
+          <p>&copy; 2019 Saumya Ray &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>
+            <p><a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
           </p>
         </section>
       </div>

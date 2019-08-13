@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width">
     <title>Saumya
     </title>
-    <link rel="alternate" href="https://saumya.github.io/ray/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
-    <link rel="stylesheet" href="https://saumya.github.io/ray/css/main.css">
-    <link rel="stylesheet" href="https://saumya.github.io/ray/css/saumya.css">
+    <link rel="alternate" href="http://localhost:8080/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="http://localhost:8080/css/saumya.css">
   </head>
   <body>
     <header class="header">
       <div class="content-wrap">
         <div class="logo">
-          <h1><a href="https://saumya.github.io/ray">Saumya</a></h1>
+          <h1><a href="http://localhost:8080">Saumya</a></h1>
           <p class="description">Where there is a will, there is a way.</p>
         </div>
       </div>
@@ -24,77 +24,74 @@
         <article class="article intro">
           <header>
             <p class="date"><span>11. January 2015</span></p>
-            <h2><a href="https://saumya.github.io/ray/articles/48/">HAXE JS 102</a></h2>
+            <h2><a href="/articles/48/">HAXE JS 102</a></h2>
           </header>
-          <section class="content"><p>We are going good with <a href="http://haxe.org/"><span class="caps">HAXE</span></a>, take a moment to go through the official <a href="http://haxe.org/"><span class="caps">HAXE</span></a> documentation.<br>This is a follow-up post to the <a href="http://saumya.github.io/ray/articles/47/">Haxe <span class="caps">JS</span> 101</a>. Its all about setting up the expectations from the language and the tool chain. Lets make some more things clear about the tooling and how the language&nbsp;works.          </p>
+          <section class="content"><p>We are going good with <a href="http://haxe.org/"><span class="caps">HAXE</span></a>, take a moment to go through the official <a href="http://haxe.org/"><span class="caps">HAXE</span></a> documentation.<br>This is a follow-up post to the <a href="http://saumya.github.io/ray/articles/47/">Haxe <span class="caps">JS</span> 101</a>. Its all about setting up the expectations from the language and the tool chain. Lets make some more things clear about the tooling and how the language<span class="widont">&nbsp;</span>works.          </p>
 <ul>
-<li><a href="http://haxe.org/"><span class="caps">HAXE</span></a> will produce one single <span class="caps">JS</span>&nbsp;file</li>
-<li>We can force it to create one <span class="caps">JS</span> file for one .hx&nbsp;file</li>
-<li>The created <span class="caps">JS</span> file, is by no means is a module JS file as in CommonJS or&nbsp;AMD          </li>
+<li><a href="http://haxe.org/"><span class="caps">HAXE</span></a> will produce one single <span class="caps">JS</span><span class="widont">&nbsp;</span>file</li>
+<li>We can force it to create one <span class="caps">JS</span> file for one .hx<span class="widont">&nbsp;</span>file</li>
+<li>The created <span class="caps">JS</span> file, is by no means is a module <span class="caps">JS</span> file as in CommonJS or<span class="widont">&nbsp;</span><span class="caps">AMD</span>          </li>
 </ul>
-<p>The contents of <code>.hxml</code> or the build file generally looks&nbsp;as        </p>
-<pre><code class="lang-haxe">-main ApplicationEntry
--js app.js
-</code></pre>
-<p>While forcing each <code>.hx</code> file for an individual <code>.js</code> file, the build file would contain something&nbsp;as         </p>
-<pre><code class="lang-haxe">-js com/jungle/Tree.js 
+<p>The contents of <code>.hxml</code> or the build file generally looks<span class="widont">&nbsp;</span>as        </p>
+<pre><code class="language-haxe">-main ApplicationEntry
+-js app.js</code></pre>
+<p>While forcing each <code>.hx</code> file for an individual <code>.js</code> file, the build file would contain something<span class="widont">&nbsp;</span>as         </p>
+<pre><code class="language-haxe">-js com/jungle/Tree.js 
 -cp src 
 com.jungle.Tree
 --next
 -js com/jungle/Animal.js 
 -cp src 
-com.jungle.Animal
-</code></pre>
+com.jungle.Animal</code></pre>
 <p>For a sample project and the options, have a look at <a href="https://github.com/saumya/HAXE-JS101">this repo</a> and the <a href="https://github.com/saumya/HAXE-JS101/blob/master/compile.hxml">sample .hxml</a> file is here with all the possible options for <code>.js</code> output.          </p>
-<p>The important thing is to remember that finally every <span class="caps">JS</span> project is compiled to a single JS file and <a href="http://haxe.org/"><span class="caps">HAXE</span></a> does it in one go. It does not provide module export or any fancy things that other <span class="caps">JS</span> frameworks do to support JS look like a classical programming language. <a href="http://haxe.org/"><span class="caps">HAXE</span></a> works with its own tool chain and provides well made <span class="caps">JS</span> output. Do not fight it to mock JS libraries, <a href="http://haxe.org/"><span class="caps">HAXE</span></a> is more powerful than that. Even for NodeJS output, <a href="http://haxe.org/"><span class="caps">HAXE</span></a> produces the final <span class="caps">JS</span> output, just a single <code>.js</code> file. Work with <a href="http://haxe.org/"><span class="caps">HAXE</span></a> packages and classes and then compile it to make the final output, no nothing in&nbsp;between.</p>
-<p>Happy&nbsp;Haxing.</p>
+<p>The important thing is to remember that finally every <span class="caps">JS</span> project is compiled to a single <span class="caps">JS</span> file and <a href="http://haxe.org/"><span class="caps">HAXE</span></a> does it in one go. It does not provide module export or any fancy things that other <span class="caps">JS</span> frameworks do to support <span class="caps">JS</span> look like a classical programming language. <a href="http://haxe.org/"><span class="caps">HAXE</span></a> works with its own tool chain and provides well made <span class="caps">JS</span> output. Do not fight it to mock <span class="caps">JS</span> libraries, <a href="http://haxe.org/"><span class="caps">HAXE</span></a> is more powerful than that. Even for NodeJS output, <a href="http://haxe.org/"><span class="caps">HAXE</span></a> produces the final <span class="caps">JS</span> output, just a single <code>.js</code> file. Work with <a href="http://haxe.org/"><span class="caps">HAXE</span></a> packages and classes and then compile it to make the final output, no nothing in<span class="widont">&nbsp;</span>between.</p>
+<p>Happy Haxing.</p>
 
           </section>
         </article>
         <article class="article intro">
           <header>
             <p class="date"><span>04. January 2015</span></p>
-            <h2><a href="https://saumya.github.io/ray/articles/47/">HAXE JS 101</a></h2>
+            <h2><a href="/articles/47/">HAXE JS 101</a></h2>
           </header>
-          <section class="content"><p>Hope you know what is <a href="http://haxe.org/"><span class="caps">HAXE</span></a>, take a moment to go through the official <a href="http://haxe.org/"><span class="caps">HAXE</span></a> documentation. We will discuss how and what to consider while working with <span class="caps">JS</span> in <a href="http://haxe.org/"><span class="caps">HAXE</span></a>.<br>Generally other languages, which compile to <span class="caps">JS</span>, actually compile each specific file to a respective JS file. <a href="http://haxe.org/"><span class="caps">HAXE</span></a> actually compiles to one single <span class="caps">JS</span> file for our application. We can further take the generated JS file and minify it using popular JS&nbsp;minifiers.        </p>
-<p>The work flow for <a href="http://haxe.org/"><span class="caps">HAXE</span></a> to <span class="caps">JS</span> is as simple&nbsp;as         </p>
+          <section class="content"><p>Hope you know what is <a href="http://haxe.org/"><span class="caps">HAXE</span></a>, take a moment to go through the official <a href="http://haxe.org/"><span class="caps">HAXE</span></a> documentation. We will discuss how and what to consider while working with <span class="caps">JS</span> in <a href="http://haxe.org/"><span class="caps">HAXE</span></a>.          
+Generally other languages, which compile to <span class="caps">JS</span>, actually compile each specific file to a respective <span class="caps">JS</span> file. <a href="http://haxe.org/"><span class="caps">HAXE</span></a> actually compiles to one single <span class="caps">JS</span> file for our application. We can further take the generated <span class="caps">JS</span> file and minify it using popular <span class="caps">JS</span><span class="widont">&nbsp;</span>minifiers.        </p>
+<p>The work flow for <a href="http://haxe.org/"><span class="caps">HAXE</span></a> to <span class="caps">JS</span> is as simple<span class="widont">&nbsp;</span>as         </p>
 <ul>
-<li>Writing the normal <a href="http://haxe.org/"><span class="caps">HAXE</span></a>&nbsp;application</li>
-<li>Use the package structure and class as&nbsp;usual</li>
-<li>Make a .hxml file difining what would be the final <span class="caps">JS</span>&nbsp;file</li>
-<li>Compile with <a href="http://haxe.org/"><span class="caps">HAXE</span></a> compiler to produce the <span class="caps">JS</span>&nbsp;file         </li>
+<li>Writing the normal <a href="http://haxe.org/"><span class="caps">HAXE</span></a><span class="widont">&nbsp;</span>application</li>
+<li>Use the package structure and class as<span class="widont">&nbsp;</span>usual</li>
+<li>Make a .hxml file difining what would be the final <span class="caps">JS</span><span class="widont">&nbsp;</span>file</li>
+<li>Compile with <a href="http://haxe.org/"><span class="caps">HAXE</span></a> compiler to produce the <span class="caps">JS</span><span class="widont">&nbsp;</span>file         </li>
 </ul>
-<pre><code class="lang-haxe">haxe compile.hxml
-</code></pre>
-<p>The <code>.hxml</code> file looks something&nbsp;like</p>
-<pre><code class="lang-haxe">-main ApplicationEntry
--js app.js
-</code></pre>
-<p>Thats all to it. <a href="http://haxe.org/"><span class="caps">HAXE</span></a> will take care of the <code>import</code> and <code>package</code> and <code>class</code> of the application. Finally the generted <span class="caps">JS</span> file is having everything our application needs. Include the JS file in the required HTML file and we are&nbsp;done.      </p>
-<p>Here is a <a href="https://github.com/saumya/HAXE-JS101">sample basic application</a> showing all there is to&nbsp;it.</p>
-<p>Happy&nbsp;Coding.</p>
+<pre><code class="language-haxe">haxe compile.hxml</code></pre>
+<p>The <code>.hxml</code> file looks something<span class="widont">&nbsp;</span>like</p>
+<pre><code class="language-haxe">-main ApplicationEntry
+-js app.js</code></pre>
+<p>Thats all to it. <a href="http://haxe.org/"><span class="caps">HAXE</span></a> will take care of the <code>import</code> and <code>package</code> and <code>class</code> of the application. Finally the generted <span class="caps">JS</span> file is having everything our application needs. Include the <span class="caps">JS</span> file in the required <span class="caps">HTML</span> file and we are<span class="widont">&nbsp;</span>done.      </p>
+<p>Here is a <a href="https://github.com/saumya/HAXE-JS101">sample basic application</a> showing all there is to<span class="widont">&nbsp;</span>it.</p>
+<p>Happy Coding.</p>
 
           </section>
         </article>
         <article class="article intro">
           <header>
             <p class="date"><span>31. December 2014</span></p>
-            <h2><a href="https://saumya.github.io/ray/articles/45/">CoffeeScript basics</a></h2>
+            <h2><a href="/articles/45/">CoffeeScript basics</a></h2>
           </header>
-          <section class="content"><p>Just to set the expectations right, we need to know something before we begin&nbsp;here.         </p>
+          <section class="content"><p>Just to set the expectations right, we need to know something before we begin<span class="widont">&nbsp;</span>here.         </p>
 <p>When I first heard about <code>Class</code> in <code>Javascript</code> it created curiosity on me and the expectation increased as to work like a <code>Classical</code> language(Where Classes are the root of everything) instead of <code>Prototypical</code> language(like Javascript). But then slowly I understood that its not <code>Javascript</code> but other languages on top of Javascript which create somekind of <code>Class</code> concept to mimic <code>Classical</code> languages. The point is everything boils down to <code>Javascript</code> if a language is written to compile or transpile to <code>Javascript</code> . Well, that may seem like a spoiler right now, but its actually not as we will see. Just keep these things in mind all the time, even if we are doing <a href="http://coffeescript.org/#top">CoffeeScript</a>.        </p>
-<p>Here is the direct link to the <a href="https://github.com/saumya/CoffeeScript101">Github</a> repository for the code reference to this&nbsp;post.       </p>
+<p>Here is the direct link to the <a href="https://github.com/saumya/CoffeeScript101">Github</a> repository for the code reference to this<span class="widont">&nbsp;</span>post.       </p>
 <ul>
 <li>CoffeeScript is generally written in a <code>.coffee</code> file</li>
 <li>Each <code>.coffee</code> file is compiled to a <code>.js</code> file</li>
 <li>Each space (a blank space) in code has a meaning in the <code>.coffee</code> file</li>
-<li>Semicolons are optional and generally&nbsp;avoided</li>
-<li>In the beginning you may write more than one classes in a single <code>.coffee</code> file, and thats perfectly alright&nbsp;here</li>
-<li>By default the <a href="http://coffeescript.org/#top">CoffeeScript</a> Classes you write are&nbsp;private            </li>
+<li>Semicolons are optional and generally<span class="widont">&nbsp;</span>avoided</li>
+<li>In the beginning you may write more than one classes in a single <code>.coffee</code> file, and thats perfectly alright<span class="widont">&nbsp;</span>here</li>
+<li>By default the <a href="http://coffeescript.org/#top">CoffeeScript</a> Classes you write are<span class="widont">&nbsp;</span>private            </li>
 </ul>
-<p>When compiled to <span class="caps">JS</span>, the contents of each file, are put inside a self invoking function. This is intentional to not pollute the Global variables. So if the content has some classes inside them, then those classes will also be inside the self-invoking function, restricting the access from outside.<br>The classes in <a href="http://coffeescript.org/#top">CoffeeScript</a> are compiled to as usual <span class="caps">JS</span> functions and the inheritence is done through the prototypical inheritence concepts of Javascript. Since all this happens behind the scenes and as a <a href="http://coffeescript.org/#top">CoffeeScript</a> developer if you do not know, how its working, it would be a pain later to expect anything else from this&nbsp;language.          </p>
-<p>Thats all to start with the new year. Happy new&nbsp;year.         </p>
-<p>Happy&nbsp;Coding.</p>
+<p>When compiled to <span class="caps">JS</span>, the contents of each file, are put inside a self invoking function. This is intentional to not pollute the Global variables. So if the content has some classes inside them, then those classes will also be inside the self-invoking function, restricting the access from outside.<br>The classes in <a href="http://coffeescript.org/#top">CoffeeScript</a> are compiled to as usual <span class="caps">JS</span> functions and the inheritence is done through the prototypical inheritence concepts of Javascript. Since all this happens behind the scenes and as a <a href="http://coffeescript.org/#top">CoffeeScript</a> developer if you do not know, how its working, it would be a pain later to expect anything else from this<span class="widont">&nbsp;</span>language.          </p>
+<p>Thats all to start with the new year. Happy new<span class="widont">&nbsp;</span>year.         </p>
+<p>Happy Coding.</p>
 
           </section>
         </article>
@@ -102,16 +99,16 @@ com.jungle.Animal
     </div>
     <footer>
       <div class="content-wrap">
-        <div class="nav"><a href="https://saumya.github.io/ray/page/12/">« Newer</a><a href="https://saumya.github.io/ray/page/14/">Next page »</a>
+        <div class="nav"><a href="/page/12/">&laquo; Newer</a><a href="/page/14/">Next page &raquo;</a>
         </div>
         <section class="about"><p><a href="https://saumya.github.io/">Saumya</a> is an iternal seeker.</p>
 <p>A maker of things and curious about everything. Continuous learning is, what fuels him. This blog itself, reflects one of many things he is trying at all the time.</p>
-<p>He is <a href="https://twitter.com/saumya">@saumya</a> on Twitter. </p>
-<span class="nav"><a href="https://saumya.github.io/ray/">Blog Home</a><a href="https://saumya.github.io/ray/archive.html">Archives</a></span>
+<p>Talk to <a href="https://twitter.com/saumya">@saumya</a> on Twitter. </p>
+<span class="nav"><a href="http://localhost:8080/">Blog Home</a><a href="http://localhost:8080/archive.html">Archives</a><a href="http://localhost:8080/feed.xml">Feed</a></span>
         </section>
         <section class="copy">
-          <p>&copy; 2019 saumya ray &mdash; powered by&nbsp;     <a href="https://github.com/jnordberg/wintersmith">Wintersmith&nbsp;</a>
-            <p> <a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
+          <p>&copy; 2019 Saumya Ray &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>
+            <p><a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
           </p>
         </section>
       </div>

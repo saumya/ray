@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width">
     <title>Saumya
     </title>
-    <link rel="alternate" href="https://saumya.github.io/ray/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
-    <link rel="stylesheet" href="https://saumya.github.io/ray/css/main.css">
-    <link rel="stylesheet" href="https://saumya.github.io/ray/css/saumya.css">
+    <link rel="alternate" href="http://localhost:8080/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="http://localhost:8080/css/saumya.css">
   </head>
   <body>
     <header class="header">
       <div class="content-wrap">
         <div class="logo">
-          <h1><a href="https://saumya.github.io/ray">Saumya</a></h1>
+          <h1><a href="http://localhost:8080">Saumya</a></h1>
           <p class="description">Where there is a will, there is a way.</p>
         </div>
       </div>
@@ -24,64 +24,61 @@
         <article class="article intro">
           <header>
             <p class="date"><span>12. May 2016</span></p>
-            <h2><a href="https://saumya.github.io/ray/articles/66/">React and understanding Redux, Thunk, Router.</a></h2>
+            <h2><a href="/articles/66/">React and understanding Redux, Thunk, Router.</a></h2>
           </header>
-          <section class="content"><p><a href="https://github.com/facebook/react">React</a> is the view as they call it in a <span class="caps">MVC</span> (Model-View-Controller) world. Actually it is enough to build the whole frontend with <a href="https://github.com/facebook/react">React</a> and its components. One does not need anything else to make a <a href="https://github.com/facebook/react">React</a> application. Then comes a time, when one thinks of organising the code. Well, then and only then the things we talk now will make&nbsp;sense.</p>
+          <section class="content"><p><a href="https://github.com/facebook/react">React</a> is the view as they call it in a <span class="caps">MVC</span> (Model-View-Controller) world. Actually it is enough to build the whole frontend with <a href="https://github.com/facebook/react">React</a> and its components. One does not need anything else to make a <a href="https://github.com/facebook/react">React</a> application. Then comes a time, when one thinks of organising the code. Well, then and only then the things we talk now will make<span class="widont">&nbsp;</span>sense.</p>
 <p>
-            <p class="more"><a href="https://saumya.github.io/ray/articles/66/">more</a></p>
+            <p class="more"><a href="/articles/66/">more</a></p>
           </section>
         </article>
         <article class="article intro">
           <header>
             <p class="date"><span>17. April 2016</span></p>
-            <h2><a href="https://saumya.github.io/ray/articles/65/">React &amp; Material-UI, recently breaking changes.</a></h2>
+            <h2><a href="/articles/65/">React &amp; Material-UI, recently breaking changes.</a></h2>
           </header>
-          <section class="content"><p>Here we will talk about the recent changes in <a href="http://www.material-ui.com/">Material-<span class="caps">UI</span></a> and how it affects our <a href="http://facebook.github.io/react/">React</a>&nbsp;code.</p>
-<p>Before moving further, if you have not yet started with <a href="http://www.material-ui.com/">Material-<span class="caps">UI</span></a>, <a href="http://saumya.github.io/ray/articles/63/">here is my first post</a> describing the&nbsp;details. </p>
-<p>Current version of <a href="http://facebook.github.io/react/">React</a> is <code>15.0.1</code>. To make <a href="http://www.material-ui.com/">Material-<span class="caps">UI</span></a> compatible with this version of <a href="http://facebook.github.io/react/">React</a>, a new version of <a href="http://www.material-ui.com/">Material-<span class="caps">UI</span></a> which is <code>0.15.0-beta.1</code> is released recently. However there are some breaking changes in this release of <a href="http://www.material-ui.com/">Material-<span class="caps">UI</span></a> if you are coming from the last version which is <code>0.15.0-alpha.2</code>. The complete <a href="https://github.com/callemall/material-ui/releases">release note is here</a> along with the change&nbsp;logs.</p>
-<p>There are couple of things to change in our <a href="http://facebook.github.io/react/">React</a> application&nbsp;code.</p>
-<h3 id="import-require">import /&nbsp;require</h3>
-<p>The syntax for getting a component from <a href="http://www.material-ui.com/">Material-<span class="caps">UI</span></a> is&nbsp;changed. </p>
-<pre><code class="lang-javascript"><span class="comment">// Use</span>
+          <section class="content"><p>Here we will talk about the recent changes in <a href="http://www.material-ui.com/">Material-<span class="caps">UI</span></a> and how it affects our <a href="http://facebook.github.io/react/">React</a><span class="widont">&nbsp;</span>code.</p>
+<p>Before moving further, if you have not yet started with <a href="http://www.material-ui.com/">Material-<span class="caps">UI</span></a>, <a href="http://saumya.github.io/ray/articles/63/">here is my first post</a> describing the<span class="widont">&nbsp;</span>details. </p>
+<p>Current version of <a href="http://facebook.github.io/react/">React</a> is <code>15.0.1</code>. To make <a href="http://www.material-ui.com/">Material-<span class="caps">UI</span></a> compatible with this version of <a href="http://facebook.github.io/react/">React</a>, a new version of <a href="http://www.material-ui.com/">Material-<span class="caps">UI</span></a> which is <code>0.15.0-beta.1</code> is released recently. However there are some breaking changes in this release of <a href="http://www.material-ui.com/">Material-<span class="caps">UI</span></a> if you are coming from the last version which is <code>0.15.0-alpha.2</code>. The complete <a href="https://github.com/callemall/material-ui/releases">release note is here</a> along with the change<span class="widont">&nbsp;</span>logs.</p>
+<p>There are couple of things to change in our <a href="http://facebook.github.io/react/">React</a> application<span class="widont">&nbsp;</span>code.</p>
+<h3 id="import--require">import / require</h3>
+<p>The syntax for getting a component from <a href="http://www.material-ui.com/">Material-<span class="caps">UI</span></a> is<span class="widont">&nbsp;</span>changed. </p>
+<pre><code class="language-javascript"><span class="comment">// Use</span>
 <span class="keyword">var</span> AppBar = <span class="built_in">require</span>(<span class="string">'material-ui/AppBar'</span>)[<span class="string">'default'</span>] ;
 <span class="comment">// Or</span>
 <span class="keyword">import</span> AppBar <span class="keyword">from</span> <span class="string">'material-ui/AppBar'</span>;
 <span class="comment">// instead of</span>
-<span class="keyword">var</span> AppBar = <span class="built_in">require</span>(<span class="string">'material-ui/lib/app-bar'</span>); <span class="comment">// deprecated</span>
-</code></pre>
+<span class="keyword">var</span> AppBar = <span class="built_in">require</span>(<span class="string">'material-ui/lib/app-bar'</span>); <span class="comment">// deprecated</span></code></pre>
 <p>Notice </p>
 <ul>
 <li>there is no <code>lib</code> in between <code>material-ui</code> and <code>AppBar</code></li>
-<li>if using <code>require</code> , there is a <code>[&#39;default&#39;]</code> at the&nbsp;end</li>
+<li>if using <code>require</code> , there is a <code>[&#39;default&#39;]</code> at the<span class="widont">&nbsp;</span>end</li>
 </ul>
-<h3 id="default-theme-handling">default theme&nbsp;handling</h3>
-<p>The <a href="https://github.com/callemall/material-ui/pull/3820">default theme handling has changed</a> for components and for that, some changes are required in application&nbsp;code.</p>
-<p>In the RootControllerView / MainControllerView, import the&nbsp;following.</p>
-<pre><code class="lang-javascript"><span class="keyword">import</span> baseTheme <span class="keyword">from</span> <span class="string">'material-ui/styles/baseThemes/lightBaseTheme'</span>;
-<span class="keyword">import</span> getMuiTheme <span class="keyword">from</span> <span class="string">'material-ui/styles/getMuiTheme'</span>;
-</code></pre>
-<p>In the same RootControllerView / MainControllerView, inside component declaration&nbsp;add</p>
-<pre><code class="lang-javascript">childContextTypes:{
+<h3 id="default-theme-handling">default theme handling</h3>
+<p>The <a href="https://github.com/callemall/material-ui/pull/3820">default theme handling has changed</a> for components and for that, some changes are required in application<span class="widont">&nbsp;</span>code.</p>
+<p>In the RootControllerView / MainControllerView, import the<span class="widont">&nbsp;</span>following.</p>
+<pre><code class="language-javascript"><span class="keyword">import</span> baseTheme <span class="keyword">from</span> <span class="string">'material-ui/styles/baseThemes/lightBaseTheme'</span>;
+<span class="keyword">import</span> getMuiTheme <span class="keyword">from</span> <span class="string">'material-ui/styles/getMuiTheme'</span>;</code></pre>
+<p>In the same RootControllerView / MainControllerView, inside component declaration<span class="widont">&nbsp;</span>add</p>
+<pre><code class="language-javascript">childContextTypes:{
   <span class="attr">muiTheme</span>: React.PropTypes.object.isRequired,
 },
 getChildContext() {
   <span class="keyword">return</span> {<span class="attr">muiTheme</span>: getMuiTheme(baseTheme)};
-},
-</code></pre>
-<p>Here is <a href="https://github.com/callemall/material-ui/issues/4021">a little more</a> in-depth view of the&nbsp;scenario.</p>
-<p>Happy&nbsp;Reacting.          </p>
+},</code></pre>
+<p>Here is <a href="https://github.com/callemall/material-ui/issues/4021">a little more</a> in-depth view of the<span class="widont">&nbsp;</span>scenario.</p>
+<p>Happy Reacting.          </p>
 
           </section>
         </article>
         <article class="article intro">
           <header>
             <p class="date"><span>04. April 2016</span></p>
-            <h2><a href="https://saumya.github.io/ray/articles/64/">React Native</a></h2>
+            <h2><a href="/articles/64/">React Native</a></h2>
           </header>
-          <section class="content"><p>The beauty of <a href="http://facebook.github.io/react/">React</a> is it now has a lot to offer and <a href="https://facebook.github.io/react-native/">React Native</a> is just an amazing way to create native mobile applications with Javascript or more specifically with <a href="http://facebook.github.io/react/">React</a>. Yes, we are talking about native applications. Unlike <a href="https://cordova.apache.org/">Cordova</a>, <a href="https://facebook.github.io/react-native/">React Native</a> applications do not run inside a webview. These applications use the native components from the environment it is running in. If its running in iOS the components like buttons, views etc are real iOS components. Same is true for&nbsp;Android.</p>
-<p>From the first few weeks of <a href="https://facebook.github.io/react-native/">React Native</a> I must say its worth a try. There might be a chance that even the same code is running in both iOS and Android. Though its almost always a little different code for both the platforms. But all in all, its all&nbsp;Javascript.</p>
-<p>I am not going in details of getting started here. May be in a next blog post we will explore that. If you are already developing in <a href="http://facebook.github.io/react/">React</a> you are already there. No extra effort for another toolset or&nbsp;language. </p>
-<p>Happy&nbsp;Reacting.</p>
+          <section class="content"><p>The beauty of <a href="http://facebook.github.io/react/">React</a> is it now has a lot to offer and <a href="https://facebook.github.io/react-native/">React Native</a> is just an amazing way to create native mobile applications with Javascript or more specifically with <a href="http://facebook.github.io/react/">React</a>. Yes, we are talking about native applications. Unlike <a href="https://cordova.apache.org/">Cordova</a>, <a href="https://facebook.github.io/react-native/">React Native</a> applications do not run inside a webview. These applications use the native components from the environment it is running in. If its running in iOS the components like buttons, views etc are real iOS components. Same is true for<span class="widont">&nbsp;</span>Android.</p>
+<p>From the first few weeks of <a href="https://facebook.github.io/react-native/">React Native</a> I must say its worth a try. There might be a chance that even the same code is running in both iOS and Android. Though its almost always a little different code for both the platforms. But all in all, its all<span class="widont">&nbsp;</span>Javascript.</p>
+<p>I am not going in details of getting started here. May be in a next blog post we will explore that. If you are already developing in <a href="http://facebook.github.io/react/">React</a> you are already there. No extra effort for another toolset or<span class="widont">&nbsp;</span>language. </p>
+<p>Happy Reacting.</p>
 
           </section>
         </article>
@@ -89,16 +86,16 @@ getChildContext() {
     </div>
     <footer>
       <div class="content-wrap">
-        <div class="nav"><a href="https://saumya.github.io/ray/page/6/">« Newer</a><a href="https://saumya.github.io/ray/page/8/">Next page »</a>
+        <div class="nav"><a href="/page/6/">&laquo; Newer</a><a href="/page/8/">Next page &raquo;</a>
         </div>
         <section class="about"><p><a href="https://saumya.github.io/">Saumya</a> is an iternal seeker.</p>
 <p>A maker of things and curious about everything. Continuous learning is, what fuels him. This blog itself, reflects one of many things he is trying at all the time.</p>
-<p>He is <a href="https://twitter.com/saumya">@saumya</a> on Twitter. </p>
-<span class="nav"><a href="https://saumya.github.io/ray/">Blog Home</a><a href="https://saumya.github.io/ray/archive.html">Archives</a></span>
+<p>Talk to <a href="https://twitter.com/saumya">@saumya</a> on Twitter. </p>
+<span class="nav"><a href="http://localhost:8080/">Blog Home</a><a href="http://localhost:8080/archive.html">Archives</a><a href="http://localhost:8080/feed.xml">Feed</a></span>
         </section>
         <section class="copy">
-          <p>&copy; 2019 saumya ray &mdash; powered by&nbsp;     <a href="https://github.com/jnordberg/wintersmith">Wintersmith&nbsp;</a>
-            <p> <a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
+          <p>&copy; 2019 Saumya Ray &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>
+            <p><a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
           </p>
         </section>
       </div>

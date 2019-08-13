@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width">
     <title>Maintaining a React Native application on iOS. - Saumya
     </title>
-    <link rel="alternate" href="https://saumya.github.io/ray/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
-    <link rel="stylesheet" href="https://saumya.github.io/ray/css/main.css">
-    <link rel="stylesheet" href="https://saumya.github.io/ray/css/saumya.css">
+    <link rel="alternate" href="http://localhost:8080/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="http://localhost:8080/css/saumya.css">
   </head>
   <body class="article-detail">
     <header class="header">
@@ -16,52 +16,39 @@
         <h1>Maintaining a React Native application on iOS.</h1>
         <p class="author">Written by <span class="author"><a href="mailto:2saumyaray@gmail.com">Saumya</a></span>
         </p>
-        <p class="date">23. March 2017</p>
       </div>
     </header>
     <div id="content">
       <div class="content-wrap">
         <article class="article">
-          <section class="content"><p> That may sound just an easy job. Surprisingly its not! Its because <a href="https://facebook.github.io/react-native/">React Native</a>is evolving at a very high speed. The community is vibrant and <a href="https://facebook.github.io/react/">React</a> itself is also moving at a very high speed. Though there are minimal <span class="caps">API</span> changes but there are changes and sometimes there are breaking changes. Well as for iOS, we know it also comes with API changes and sometimes breaking&nbsp;changes. </p>
+          <section class="content"><p> That may sound just an easy job. Surprisingly its not! Its because <a href="https://facebook.github.io/react-native/">React Native</a>is evolving at a very high speed. The community is vibrant and <a href="https://facebook.github.io/react/">React</a> itself is also moving at a very high speed. Though there are minimal <span class="caps">API</span> changes but there are changes and sometimes there are breaking changes. Well as for iOS, we know it also comes with <span class="caps">API</span> changes and sometimes breaking<span class="widont">&nbsp;</span>changes. </p>
 <p><span class="more"></span></p>
-<p> The absolute minimum one has to do, to maintain a <a href="https://facebook.github.io/react-native/">React Native</a> project on iOS is to check for all the tool chain is upto date. Being said that, there are dependent libraries and there are chances that these things may not sync and your project may&nbsp;break.</p>
-<p> As of today <a href="https://facebook.github.io/react-native/">React Native</a> is 0.42 and to compile an iOS project, it seems the bare minimum&nbsp;is </p>
+<p> The absolute minimum one has to do, to maintain a <a href="https://facebook.github.io/react-native/">React Native</a> project on iOS is to check for all the tool chain is upto date. Being said that, there are dependent libraries and there are chances that these things may not sync and your project may<span class="widont">&nbsp;</span>break.</p>
+<p> As of today <a href="https://facebook.github.io/react-native/">React Native</a> is 0.42 and to compile an iOS project, it seems the bare minimum<span class="widont">&nbsp;</span>is </p>
 <ul>
 <li><a href="https://facebook.github.io/watchman/">Watchman</a></li>
 <li><a href="https://brew.sh/">Brew</a> </li>
 <li>Update the <code>react-native-cli</code></li>
 </ul>
-<p>The code reference to update the <code>react-native-cli</code> would be just to re-install&nbsp;it.</p>
-<pre><code>sudo npm install -g react-native-cli
-</code></pre><p>To know the version of both, its as simple as&nbsp;this.</p>
-<pre><code>react-native --version
-</code></pre><p>Hopefully that opens up the idea as to maintaining a project is also a time consuming process. And with projects which evolve, if one has develop its own project, then the time and effort to maintain it will be&nbsp;exponential.</p>
-<p>Happy&nbsp;Coding.</p>
+<p>The code reference to update the <code>react-native-cli</code> would be just to re-install<span class="widont">&nbsp;</span>it.</p>
+<pre><code>sudo npm install -g react-native-cli</code></pre><p>To know the version of both, its as simple as<span class="widont">&nbsp;</span>this.</p>
+<pre><code>react-native --version</code></pre><p>Hopefully that opens up the idea as to maintaining a project is also a time consuming process. And with projects which evolve, if one has develop its own project, then the time and effort to maintain it will be<span class="widont">&nbsp;</span>exponential.</p>
+<p>Happy Coding.</p>
 </section>
         </article>
       </div>
     </div>
     <footer>
       <div class="content-wrap">
-        <div class="nav"><a href="https://saumya.github.io/ray/">« Full blog</a></div>
-        <div id="disqus_thread"></div>
-        <script type="text/javascript">
-          var disqus_shortname = 'saumya';
-          (function() {
-              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-          })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        <div class="nav"><a href="/">&laquo; Full blog</a></div>
         <section class="about"><p><a href="https://saumya.github.io/">Saumya</a> is an iternal seeker.</p>
 <p>A maker of things and curious about everything. Continuous learning is, what fuels him. This blog itself, reflects one of many things he is trying at all the time.</p>
-<p>He is <a href="https://twitter.com/saumya">@saumya</a> on Twitter. </p>
-<span class="nav"><a href="https://saumya.github.io/ray/">Blog Home</a><a href="https://saumya.github.io/ray/archive.html">Archives</a></span>
+<p>Talk to <a href="https://twitter.com/saumya">@saumya</a> on Twitter. </p>
+<span class="nav"><a href="http://localhost:8080/">Blog Home</a><a href="http://localhost:8080/archive.html">Archives</a><a href="http://localhost:8080/feed.xml">Feed</a></span>
         </section>
         <section class="copy">
-          <p>&copy; 2019 saumya ray &mdash; powered by&nbsp;     <a href="https://github.com/jnordberg/wintersmith">Wintersmith&nbsp;</a>
-            <p> <a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
+          <p>&copy; 2019 Saumya Ray &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>
+            <p><a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
           </p>
         </section>
       </div>

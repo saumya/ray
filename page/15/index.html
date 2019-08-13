@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width">
     <title>Saumya
     </title>
-    <link rel="alternate" href="https://saumya.github.io/ray/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
-    <link rel="stylesheet" href="https://saumya.github.io/ray/css/main.css">
-    <link rel="stylesheet" href="https://saumya.github.io/ray/css/saumya.css">
+    <link rel="alternate" href="http://localhost:8080/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="http://localhost:8080/css/saumya.css">
   </head>
   <body>
     <header class="header">
       <div class="content-wrap">
         <div class="logo">
-          <h1><a href="https://saumya.github.io/ray">Saumya</a></h1>
+          <h1><a href="http://localhost:8080">Saumya</a></h1>
           <p class="description">Where there is a will, there is a way.</p>
         </div>
       </div>
@@ -24,93 +24,93 @@
         <article class="article intro">
           <header>
             <p class="date"><span>30. September 2014</span></p>
-            <h2><a href="https://saumya.github.io/ray/articles/42/">Dojo Toolkit, Widget.</a></h2>
+            <h2><a href="/articles/42/">Dojo Toolkit, Widget.</a></h2>
           </header>
-          <section class="content"><p><a href="http://dojotoolkit.org/">Dojo Toolkit</a> has a component library named as <code>Dijit</code>. Each component in this library is known as a <code>Widget</code>. It is better to know the <code>dijit</code> framework vocabulary before going further inside&nbsp;it. </p>
+          <section class="content"><p><a href="http://dojotoolkit.org/">Dojo Toolkit</a> has a component library named as <code>Dijit</code>. Each component in this library is known as a <code>Widget</code>. It is better to know the <code>dijit</code> framework vocabulary before going further inside<span class="widont">&nbsp;</span>it. </p>
 <ul>
 <li>Normally each <code>.js</code> file represents a <code>Class</code>.</li>
-<li>Each file, whose name starts with <code>_</code> (underscore) is <code>not a concrete</code> class. That means, this class is supposed to be extended to be used, <code>never directly used</code> as&nbsp;is.</li>
+<li>Each file, whose name starts with <code>_</code> (underscore) is <code>not a concrete</code> class. That means, this class is supposed to be extended to be used, <code>never directly used</code> as is.</li>
 <li>Members inside a class, properties and methods, whose name starts with <code>_</code> (underscore) are <code>private</code></li>
 <li>A class is defined by <code>declare()</code> </li>
 </ul>
-<p><a href="http://dojotoolkit.org/">Dojo</a> now supports <span class="caps">AMD</span> modules. So the module definition is pretty straight forward as in standard module definition. If you have ever used any other framework such as <a href="http://backbonejs.org/">BackboneJS</a>, you already know, how to declare, extend, load and use a module and a&nbsp;class. </p>
-<p>Now, lets see what <code>Widget</code> brings to the rules table. Each Widget has a life-cycle of its own. The lifecycle methods are as below in&nbsp;sequence.</p>
+<p><a href="http://dojotoolkit.org/">Dojo</a> now supports <span class="caps">AMD</span> modules. So the module definition is pretty straight forward as in standard module definition. If you have ever used any other framework such as <a href="http://backbonejs.org/">BackboneJS</a>, you already know, how to declare, extend, load and use a module and a<span class="widont">&nbsp;</span>class. </p>
+<p>Now, lets see what <code>Widget</code> brings to the rules table. Each Widget has a life-cycle of its own. The lifecycle methods are as below in<span class="widont">&nbsp;</span>sequence.</p>
 <ul>
 <li>constructor()</li>
 <li>postMixInProperties()</li>
 <li>buildRendering()</li>
-<li>setters and getters, example is&nbsp;set(“myProperty”,value)</li>
+<li>setters and getters, example is<span class="widont">&nbsp;</span>set(“myProperty”,value)</li>
 <li>postCreate()</li>
 <li>startup()</li>
 <li>destroy()</li>
 </ul>
-<p>There are few methods which also be called in some widgets, such&nbsp;as</p>
+<p>There are few methods which also be called in some widgets, such<span class="widont">&nbsp;</span>as</p>
 <ul>
 <li>resize()</li>
 </ul>
-<p>Each <code>Widget</code> is supposed to <code>Extend</code> the <code>_WidgetBase</code> class defined in <code>dijit/_WidgetBase</code> package. Sometimes, it is necessary to use template strings or templates inside a  Widget. In that case, the <code>Widget</code> extends <code>_WidgetBase</code> and <code>_TemplatedMixin</code>, defined in <code>dijit/_WidgetBase</code> and <code>dijit/_TemplatedMixin</code> package&nbsp;respectively.</p>
+<p>Each <code>Widget</code> is supposed to <code>Extend</code> the <code>_WidgetBase</code> class defined in <code>dijit/_WidgetBase</code> package. Sometimes, it is necessary to use template strings or templates inside a  Widget. In that case, the <code>Widget</code> extends <code>_WidgetBase</code> and <code>_TemplatedMixin</code>, defined in <code>dijit/_WidgetBase</code> and <code>dijit/_TemplatedMixin</code> package respectively.</p>
 <p>After creation of each child <code>Widget</code> inside the parent Widget, its necessary to call the <code>startup()</code> method of the child Widget. Since <code>startup()</code> call goes through all the child widgets of a container Widget, its better to add all the child Widgets to the parent Widget and call parent’s <code>startup()</code>, which will call <code>startup()</code> of each child Widget.
-While writing a custom Widget, its necessary to override parent’s lifecycle methods. At the sametime, it is necessary to continue the lifecycle of the Widget. So a call to parent’s method is necessary. In most of all programming languages it is done with a <code>super()</code> call. In <code>dijit</code> framework its called&nbsp;as</p>
+While writing a custom Widget, its necessary to override parent’s lifecycle methods. At the sametime, it is necessary to continue the lifecycle of the Widget. So a call to parent’s method is necessary. In most of all programming languages it is done with a <code>super()</code> call. In <code>dijit</code> framework its called<span class="widont">&nbsp;</span>as</p>
 <ul>
 <li>this.inherited(arguments);</li>
 </ul>
-<p>So inside each of the above life-cycle methods, a call to <code>this.inherited(arguments);</code> is necessary, either in the beginning or as the last line of the&nbsp;method.</p>
-<p>A custom <code>Widget</code> has either of the 2 properties below or sometimes both, to add child widgets to&nbsp;itself.</p>
+<p>So inside each of the above life-cycle methods, a call to <code>this.inherited(arguments);</code> is necessary, either in the beginning or as the last line of the<span class="widont">&nbsp;</span>method.</p>
+<p>A custom <code>Widget</code> has either of the 2 properties below or sometimes both, to add child widgets to<span class="widont">&nbsp;</span>itself.</p>
 <ul>
 <li>this.domNode</li>
 <li>this.containerNode</li>
 </ul>
-<p>Now to add child widgets to the parent widget there are methods&nbsp;like</p>
+<p>Now to add child widgets to the parent widget there are methods<span class="widont">&nbsp;</span>like</p>
 <ul>
 <li>addChild()</li>
 </ul>
-<p>Well, this post may seem a lot but the idea is to make you aware of the vocabulary and some background to <code>dijit</code> infrastructure. For a basic and complete <code>example</code> <a href="https://github.com/saumya/dojo101/blob/master/dojo-release-1.10.0-src/myWidgets/rayWidget3.js">have a look at this widget</a>.</p>
-<p>Happy&nbsp;Coding.</p>
+<p>Well, this post may seem a lot but the idea is to make you aware of the vocabulary and some background to <code>dijit</code> infrastructure. For a basic and complete <code>example</code> <a href="https://github.com/saumya/dojo101/blob/master/dojo-release-1.10.0-src/myWidgets/rayWidget3.js">have a look at this<span class="widont">&nbsp;</span>widget</a>.</p>
+<p>Happy Coding.</p>
 
           </section>
         </article>
         <article class="article intro">
           <header>
             <p class="date"><span>29. September 2014</span></p>
-            <h2><a href="https://saumya.github.io/ray/articles/41/">Getting started with, Dojo Toolkit</a></h2>
+            <h2><a href="/articles/41/">Getting started with, Dojo Toolkit</a></h2>
           </header>
-          <section class="content"><p>To begin with, <a href="http://dojotoolkit.org/">Dojo Toolkit</a> or simply referred to as <a href="http://dojotoolkit.org/">Dojo</a> is one of many libraries in javascript. First thing to do is, like any other javascript libraries, make sure which version of library you are studying and using. <a href="http://dojotoolkit.org/">Dojo</a> has gone through major upgrades and if you are trying to do things the new way of <a href="http://dojotoolkit.org/">Dojo</a> then better get to know the <a href="http://dojotoolkit.org/documentation/tutorials/1.10/modern_dojo/">new version</a>. We will be focusing on the new version only(currently <code>1.10</code>) and referring to old one, wherever&nbsp;necessary.</p>
-<p><a href="http://dojotoolkit.org/">Dojo Toolkit</a> has got a combination&nbsp;following</p>
+          <section class="content"><p>To begin with, <a href="http://dojotoolkit.org/">Dojo Toolkit</a> or simply referred to as <a href="http://dojotoolkit.org/">Dojo</a> is one of many libraries in javascript. First thing to do is, like any other javascript libraries, make sure which version of library you are studying and using. <a href="http://dojotoolkit.org/">Dojo</a> has gone through major upgrades and if you are trying to do things the new way of <a href="http://dojotoolkit.org/">Dojo</a> then better get to know the <a href="http://dojotoolkit.org/documentation/tutorials/1.10/modern_dojo/">new version</a>. We will be focusing on the new version only(currently <code>1.10</code>) and referring to old one, wherever<span class="widont">&nbsp;</span>necessary.</p>
+<p><a href="http://dojotoolkit.org/">Dojo Toolkit</a> has got a combination<span class="widont">&nbsp;</span>following</p>
 <ul>
 <li>A bare bone of functionality ( <code>dojo</code> )</li>
 <li>A widget library ( <code>dijit</code> )</li>
 <li>An experimental library ( <code>dojox</code> )</li>
-<li>An Unit testing&nbsp;framework</li>
-<li>A compiler to do the minification and&nbsp;optimisation</li>
+<li>An Unit testing<span class="widont">&nbsp;</span>framework</li>
+<li>A compiler to do the minification and<span class="widont">&nbsp;</span>optimisation</li>
 </ul>
-<p>A lot of javascript libraries try to implement the classical programming concepts and <a href="http://dojotoolkit.org/">Dojo</a> is another one of them. So, if you are a purist in Javascript, <a href="http://dojotoolkit.org/">Dojo</a> will dissapoint you. The functional nature of Javascript is also eliminated here. <a href="http://dojotoolkit.org/">Dojo</a> clearly disagrees to say that <code>function</code> is <code>a first class citizen</code>, which is again denying another nice feature of javascript. Well, but if you are coming from a classical programming background, that means from a programming language which is class based like Java, then <a href="http://dojotoolkit.org/">Dojo</a> will seem natural. So, we will refer them in classical terms rather than Javascript&nbsp;terms.</p>
-<p>The core functionality of the toolkit is wrapped in a package called <code>dojo</code>. Everythig that runs in the toolkit depends on this basic package. Next is <code>dijit</code>, which can be called as a component library or in dojo’s terms these are widgets. Now <code>dojox</code> is a package containing experimental widgets, which will eventually go into <code>dijit</code> , once they are stable enough. Since widgets have to live a life of their own, there is a flow of lifecycle events. It is now obvious that any application using these widgets have to abide to these lifecycle events and some rules as a whole. In Dojo’s terms these are framework&nbsp;rules.</p>
-<p>Happy&nbsp;Coding.</p>
+<p>A lot of javascript libraries try to implement the classical programming concepts and <a href="http://dojotoolkit.org/">Dojo</a> is another one of them. So, if you are a purist in Javascript, <a href="http://dojotoolkit.org/">Dojo</a> will dissapoint you. The functional nature of Javascript is also eliminated here. <a href="http://dojotoolkit.org/">Dojo</a> clearly disagrees to say that <code>function</code> is <code>a first class citizen</code>, which is again denying another nice feature of javascript. Well, but if you are coming from a classical programming background, that means from a programming language which is class based like Java, then <a href="http://dojotoolkit.org/">Dojo</a> will seem natural. So, we will refer them in classical terms rather than Javascript<span class="widont">&nbsp;</span>terms.</p>
+<p>The core functionality of the toolkit is wrapped in a package called <code>dojo</code>. Everythig that runs in the toolkit depends on this basic package. Next is <code>dijit</code>, which can be called as a component library or in dojo’s terms these are widgets. Now <code>dojox</code> is a package containing experimental widgets, which will eventually go into <code>dijit</code> , once they are stable enough. Since widgets have to live a life of their own, there is a flow of lifecycle events. It is now obvious that any application using these widgets have to abide to these lifecycle events and some rules as a whole. In Dojo’s terms these are framework<span class="widont">&nbsp;</span>rules.</p>
+<p>Happy Coding.</p>
 
           </section>
         </article>
         <article class="article intro">
           <header>
             <p class="date"><span>23. August 2014</span></p>
-            <h2><a href="https://saumya.github.io/ray/articles/40/">Checklist to join a corporate</a></h2>
+            <h2><a href="/articles/40/">Checklist to join a corporate</a></h2>
           </header>
           <section class="content"><p>It is a surprise for me, to see the processes these companines follow to get a person on board. I am not talking about interview. The technical interview is kind of rounds after rounds of never ending interviews. But at least, these are ok-ish situation for a tech person.<br>The real pain starts, once you get through the interview. Now you are selected and need to serve the notice period at old organisation and move on to join the new one. The problem is, once you are through the interview, this new companies will call you at least 5 times a day. This is plain and simple irritating. They will force you (no one can force you, but at least they will talk like that) to join before the scheduled time. 
-If at all, you have joined them by keeping their words, there would be no respect at all for that. Once you come to join them, they will show how much process they follow! Really?!! If you follow all these, why you kept on calling a person who has not joined you? Where were your processes! Or is that a process of yours to trouble someone, who is not from your organisation! Simple stupid. So you make your own process, follow your own process and change that at will.<br>Well, just keep in mind that once you have come to join a new corporate, keep below things with you. These companies will not tell you, when they should have, that please bring all these with&nbsp;you.     </p>
+If at all, you have joined them by keeping their words, there would be no respect at all for that. Once you come to join them, they will show how much process they follow! Really?!! If you follow all these, why you kept on calling a person who has not joined you? Where were your processes! Or is that a process of yours to trouble someone, who is not from your organisation! Simple stupid. So you make your own process, follow your own process and change that at will.<br>Well, just keep in mind that once you have come to join a new corporate, keep below things with you. These companies will not tell you, when they should have, that please bring all these with<span class="widont">&nbsp;</span>you.     </p>
 <ol>
-<li>Your own laptop (only windows with Internet&nbsp;Explorer)</li>
-<li>Your own datacard for&nbsp;internet</li>
-<li>Your phone with roaming&nbsp;activated   </li>
+<li>Your own laptop (only windows with Internet<span class="widont">&nbsp;</span>Explorer)</li>
+<li>Your own datacard for<span class="widont">&nbsp;</span>internet</li>
+<li>Your phone with roaming<span class="widont">&nbsp;</span>activated   </li>
 </ol>
-<p>Once these are done, keep below things with&nbsp;you.</p>
+<p>Once these are done, keep below things with<span class="widont">&nbsp;</span>you.</p>
 <ol>
-<li>Your cheque&nbsp;book</li>
-<li>Your father’s identity&nbsp;proof</li>
-<li>All your previous residing locations&nbsp;proof</li>
-<li>Two friends’ addresses and contact from each of all previous location and&nbsp;company</li>
-<li>Two local friends’ contacts and addresses (if they are not, create them&nbsp;!)</li>
+<li>Your cheque book</li>
+<li>Your father’s identity<span class="widont">&nbsp;</span>proof</li>
+<li>All your previous residing locations<span class="widont">&nbsp;</span>proof</li>
+<li>Two friends’ addresses and contact from each of all previous location and<span class="widont">&nbsp;</span>company</li>
+<li>Two local friends’ contacts and addresses (if they are not, create them<span class="widont">&nbsp;</span>!)</li>
 </ol>
-<p>Well last but most importantly keep “your common sense and simplicity” at home. Just rember that these are just mindless machines working for a factory which does not have and can not respect to have a&nbsp;brain.</p>
-<p>Never&nbsp;giveup.</p>
+<p>Well last but most importantly keep “your common sense and simplicity” at home. Just rember that these are just mindless machines working for a factory which does not have and can not respect to have a<span class="widont">&nbsp;</span>brain.</p>
+<p>Never giveup.</p>
 
           </section>
         </article>
@@ -118,16 +118,16 @@ If at all, you have joined them by keeping their words, there would be no respec
     </div>
     <footer>
       <div class="content-wrap">
-        <div class="nav"><a href="https://saumya.github.io/ray/page/14/">« Newer</a><a href="https://saumya.github.io/ray/page/16/">Next page »</a>
+        <div class="nav"><a href="/page/14/">&laquo; Newer</a><a href="/page/16/">Next page &raquo;</a>
         </div>
         <section class="about"><p><a href="https://saumya.github.io/">Saumya</a> is an iternal seeker.</p>
 <p>A maker of things and curious about everything. Continuous learning is, what fuels him. This blog itself, reflects one of many things he is trying at all the time.</p>
-<p>He is <a href="https://twitter.com/saumya">@saumya</a> on Twitter. </p>
-<span class="nav"><a href="https://saumya.github.io/ray/">Blog Home</a><a href="https://saumya.github.io/ray/archive.html">Archives</a></span>
+<p>Talk to <a href="https://twitter.com/saumya">@saumya</a> on Twitter. </p>
+<span class="nav"><a href="http://localhost:8080/">Blog Home</a><a href="http://localhost:8080/archive.html">Archives</a><a href="http://localhost:8080/feed.xml">Feed</a></span>
         </section>
         <section class="copy">
-          <p>&copy; 2019 saumya ray &mdash; powered by&nbsp;     <a href="https://github.com/jnordberg/wintersmith">Wintersmith&nbsp;</a>
-            <p> <a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
+          <p>&copy; 2019 Saumya Ray &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>
+            <p><a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
           </p>
         </section>
       </div>

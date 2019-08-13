@@ -53,3 +53,15 @@ footer .about a{
 .content{
   /*color: #ff3d01;*/
 }
+
+
+
+p code {
+  padding: 0.1em 0.3em 0.2em;
+  border-radius: 0.3em;
+  position: relative;
+  top: -0.15em;
+  background: #dadada;
+  /*color: #fff;*/
+  white-space: nowrap;
+}

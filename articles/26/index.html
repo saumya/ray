@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width">
     <title>iOS, customising top and bottom bar inside UINavigationController - Saumya
     </title>
-    <link rel="alternate" href="https://saumya.github.io/ray/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
-    <link rel="stylesheet" href="https://saumya.github.io/ray/css/main.css">
-    <link rel="stylesheet" href="https://saumya.github.io/ray/css/saumya.css">
+    <link rel="alternate" href="http://localhost:8080/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="http://localhost:8080/css/saumya.css">
   </head>
   <body class="article-detail">
     <header class="header">
@@ -16,45 +16,39 @@
         <h1>iOS, customising top and bottom bar inside UINavigationController</h1>
         <p class="author">Written by <span class="author"><a href="mailto:2saumyaray@gmail.com">Saumya</a></span>
         </p>
-        <p class="date">13. February 2014</p>
       </div>
     </header>
     <div id="content">
       <div class="content-wrap">
         <article class="article">
-          <section class="content"><p>This may seem a difficult or simple task, depending upon what and how you want to do it.<br><a href="https://developer.apple.com/library/ios/documentation/uikit/reference/UINavigationController_Class/Reference/Reference.html">UINavigationController</a> is simply a controller to manage all the UIViewControllers inside it. Now, customising each and every <a href="https://developer.apple.com/library/ios/documentation/uikit/reference/UIViewController_Class/Reference/Reference.html#//apple_ref/doc/c_ref/UIViewController">UIViewController</a> could be done by code or InterfaceBuilder, depending upon what you want to achieve. We will be seeing here, as to how, to customise the Navigation bar (top bar) and the Tab bar (bottom bar) of the respective <a href="https://developer.apple.com/library/ios/documentation/uikit/reference/UIViewController_Class/Reference/Reference.html#//apple_ref/doc/c_ref/UIViewController">UIViewController</a>.<br>These are the references to look for while customising <a href="https://developer.apple.com/library/ios/documentation/uikit/reference/UIViewController_Class/Reference/Reference.html#//apple_ref/doc/c_ref/UIViewController">UIViewController</a> through InterfaceBuilder.<br>Hide the Tab bar (bottom&nbsp;bar)     </p>
-<p><iframe src="http://www.flickr.com/photos/saumyaray/12479138795/player/" width="408" height="477" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe><br>The above setting is on the same <a href="https://developer.apple.com/library/ios/documentation/uikit/reference/UIViewController_Class/Reference/Reference.html#//apple_ref/doc/c_ref/UIViewController">UIViewController</a>.<br>To display custom text on the back button in a UIViewController, look for the setting as&nbsp;below     </p>
-<p><iframe src="http://www.flickr.com/photos/saumyaray/12476698994/player/" width="500" height="408" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe><br>Just remember that the above setting is done on the <code>previous</code> <a href="https://developer.apple.com/library/ios/documentation/uikit/reference/UIViewController_Class/Reference/Reference.html#//apple_ref/doc/c_ref/UIViewController">UIViewController</a> for the next <a href="https://developer.apple.com/library/ios/documentation/uikit/reference/UIViewController_Class/Reference/Reference.html#//apple_ref/doc/c_ref/UIViewController">UIViewController</a>, <code>its tricky</code> that way.<br>Now the code reference for <a href="https://developer.apple.com/library/ios/documentation/uikit/reference/UIViewController_Class/Reference/Reference.html#//apple_ref/doc/c_ref/UIViewController">UIViewController</a> is as&nbsp;below.          </p>
+          <section class="content"><p>This may seem a difficult or simple task, depending upon what and how you want to do it.<br><a href="https://developer.apple.com/library/ios/documentation/uikit/reference/UINavigationController_Class/Reference/Reference.html">UINavigationController</a> is simply a controller to manage all the UIViewControllers inside it. Now, customising each and every <a href="https://developer.apple.com/library/ios/documentation/uikit/reference/UIViewController_Class/Reference/Reference.html#//apple_ref/doc/c_ref/UIViewController">UIViewController</a> could be done by code or InterfaceBuilder, depending upon what you want to achieve. We will be seeing here, as to how, to customise the Navigation bar (top bar) and the Tab bar (bottom bar) of the respective <a href="https://developer.apple.com/library/ios/documentation/uikit/reference/UIViewController_Class/Reference/Reference.html#//apple_ref/doc/c_ref/UIViewController">UIViewController</a>.     
+These are the references to look for while customising <a href="https://developer.apple.com/library/ios/documentation/uikit/reference/UIViewController_Class/Reference/Reference.html#//apple_ref/doc/c_ref/UIViewController">UIViewController</a> through InterfaceBuilder.<br>Hide the Tab bar (bottom<span class="widont">&nbsp;</span>bar)     </p>
+<iframe src="http://www.flickr.com/photos/saumyaray/12479138795/player/" width="408" height="477" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>     
+The above setting is on the same [UIViewController][2].         
+To display custom text on the back button in a UIViewController, look for the setting as below     
+<iframe src="http://www.flickr.com/photos/saumyaray/12476698994/player/" width="500" height="408" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>     
+Just remember that the above setting is done on the `previous` [UIViewController][2] for the next [UIViewController][2], `its tricky` that way.     
+Now the code reference for [UIViewController][2] is as below.          
 <script src="https://gist.github.com/saumya/8969920.js"></script>     
 
 
 
-<p>Happy&nbsp;customising.</p>
+<p>Happy customising.</p>
 </section>
         </article>
       </div>
     </div>
     <footer>
       <div class="content-wrap">
-        <div class="nav"><a href="https://saumya.github.io/ray/">« Full blog</a></div>
-        <div id="disqus_thread"></div>
-        <script type="text/javascript">
-          var disqus_shortname = 'saumya';
-          (function() {
-              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-          })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        <div class="nav"><a href="/">&laquo; Full blog</a></div>
         <section class="about"><p><a href="https://saumya.github.io/">Saumya</a> is an iternal seeker.</p>
 <p>A maker of things and curious about everything. Continuous learning is, what fuels him. This blog itself, reflects one of many things he is trying at all the time.</p>
-<p>He is <a href="https://twitter.com/saumya">@saumya</a> on Twitter. </p>
-<span class="nav"><a href="https://saumya.github.io/ray/">Blog Home</a><a href="https://saumya.github.io/ray/archive.html">Archives</a></span>
+<p>Talk to <a href="https://twitter.com/saumya">@saumya</a> on Twitter. </p>
+<span class="nav"><a href="http://localhost:8080/">Blog Home</a><a href="http://localhost:8080/archive.html">Archives</a><a href="http://localhost:8080/feed.xml">Feed</a></span>
         </section>
         <section class="copy">
-          <p>&copy; 2019 saumya ray &mdash; powered by&nbsp;     <a href="https://github.com/jnordberg/wintersmith">Wintersmith&nbsp;</a>
-            <p> <a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
+          <p>&copy; 2019 Saumya Ray &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>
+            <p><a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
           </p>
         </section>
       </div>

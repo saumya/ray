@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width">
     <title>Slim Framework and Composer Autoload - Saumya
     </title>
-    <link rel="alternate" href="https://saumya.github.io/ray/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
-    <link rel="stylesheet" href="https://saumya.github.io/ray/css/main.css">
-    <link rel="stylesheet" href="https://saumya.github.io/ray/css/saumya.css">
+    <link rel="alternate" href="http://localhost:8080/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="http://localhost:8080/css/saumya.css">
   </head>
   <body class="article-detail">
     <header class="header">
@@ -16,17 +16,16 @@
         <h1>Slim Framework and Composer Autoload</h1>
         <p class="author">Written by <span class="author"><a href="mailto:2saumyaray@gmail.com">Saumya</a></span>
         </p>
-        <p class="date">29. January 2019</p>
       </div>
     </header>
     <div id="content">
       <div class="content-wrap">
         <article class="article">
           <section class="content"><p>Like most of the <span class="caps">PHP</span> frameworks, <a href="https://www.slimframework.com/">Slim framework</a> uses <a href="https://getcomposer.org/">Composer</a> for developer experience. <a href="https://getcomposer.org/">Composer</a> does a lot of things which manually one has to do before. This post is specifically with regard to <a href="https://www.slimframework.com/">Slim framework</a>. However, this can also be refered to, for other frameworks which use <a href="https://getcomposer.org/">Composer</a>.</p>
-<p><span class="more"></p>
-<p>There is a specific configuration in <code>composer.json</code> which deals with autoloading of the classes. Its not necessary to do autoloading, one can do it manually as&nbsp;always.</p>
-<pre><code>require &#39;../src/controllers/AppController.php&#39;;
-</code></pre><p>This way, one has to do it all the time for each individual classes. The autoloading of classes does this automatically depending upon the settings and some conventions. Depending upon the folder structure and the namespaces, the setting could just be as&nbsp;below.</p>
+<span class="more">
+
+<p>There is a specific configuration in <code>composer.json</code> which deals with autoloading of the classes. Its not necessary to do autoloading, one can do it manually as<span class="widont">&nbsp;</span>always.</p>
+<pre><code>require &#39;../src/controllers/AppController.php&#39;;</code></pre><p>This way, one has to do it all the time for each individual classes. The autoloading of classes does this automatically depending upon the settings and some conventions. Depending upon the folder structure and the namespaces, the setting could just be as<span class="widont">&nbsp;</span>below.</p>
 <pre><code>{
     &quot;require&quot;: {
         &quot;slim/slim&quot;: &quot;^3.12&quot;
@@ -34,20 +33,18 @@
     &quot;autoload&quot;: {
         &quot;psr-4&quot;: { &quot;rain\\&quot; : [&quot;src/&quot;] }
     }
-}
-</code></pre><p>Here we are talking about <code>psr-4</code> standards. There are different standards in <code>psr</code> and they may have somethings in common. However there are differences between them also. So just keep this in mind we are talking about <code>psr-4</code> standards&nbsp;here.</p>
+}</code></pre><p>Here we are talking about <code>psr-4</code> standards. There are different standards in <code>psr</code> and they may have somethings in common. However there are differences between them also. So just keep this in mind we are talking about <code>psr-4</code> standards here.</p>
 <pre><code>&quot;autoload&quot;: {
         &quot;psr-4&quot;: { &quot;rain\\&quot; : [&quot;src/&quot;] }
-    }
-</code></pre><p>Well, now let’s look at the standards of <code>psr-4</code> and how it finds the&nbsp;files.</p>
+    }</code></pre><p>Well, now let’s look at the standards of <code>psr-4</code> and how it finds the<span class="widont">&nbsp;</span>files.</p>
 <ul>
 <li><a href="https://getcomposer.org/">Composer</a> will load the files relative to <code>composer.json</code> file. In the setting above, it will load from the folder <code>src</code> which is at the same level as <code>composer.json</code></li>
-<li>The first setting <code>rain</code> in the <code>autoload</code> configuration is the namespace of the <span class="caps">PHP</span>&nbsp;Classes</li>
+<li>The first setting <code>rain</code> in the <code>autoload</code> configuration is the namespace of the <span class="caps">PHP</span><span class="widont">&nbsp;</span>Classes</li>
 <li><span class="caps">PHP</span> class <code>file name</code> and the <code>class name</code> should be exactly the same (except the <code>.php</code> extension)</li>
-<li><span class="caps">PHP</span> class file location and its namespace should exactly the&nbsp;same</li>
+<li><span class="caps">PHP</span> class file location and its namespace should exactly the<span class="widont">&nbsp;</span>same</li>
 <li><span class="caps">PHP</span> class namespace should be exactly the same as specified in the <code>autoload</code> configuration</li>
 </ul>
-<p>A <span class="caps">PHP</span> class file for the above settings would look like&nbsp;below.</p>
+<p>A <span class="caps">PHP</span> class file for the above settings would look like<span class="widont">&nbsp;</span>below.</p>
 <pre><code>//location: src/configs/AppConfig.php
 
 namespace rain\configs;
@@ -58,40 +55,27 @@ class AppConfig
     {
         return &#39;AppConfig&#39;;
     }
-}
-</code></pre><p>Once one is careful enough to map the <code>folder structure</code> and <code>namespace</code> the composer autoload functionality will load the classes. Here is a <a href="https://myshittycode.com/2018/03/14/slim-class-x-not-found/">nice explanation</a> of the&nbsp;concepts.</p>
-<h3 id="after-adding-the-autoload-field-in-composer-json-one-has-to-re-run-dump-autoload-to-re-generate-the-vendor-autoload-php-file-">After adding the <strong>autoload field</strong> in <code>composer.json</code>, one <strong>has to</strong> re-run <code>dump-autoload</code> to re-generate the vendor/autoload.php&nbsp;file.</h3>
+}</code></pre><p>Once one is careful enough to map the <code>folder structure</code> and <code>namespace</code> the composer autoload functionality will load the classes. Here is a <a href="https://myshittycode.com/2018/03/14/slim-class-x-not-found/">nice explanation</a> of the<span class="widont">&nbsp;</span>concepts.</p>
+<h3 id="after-adding-the-autoload-field-in-composerjson-one-has-to-re-run-dump-autoload-to-re-generate-the-vendorautoloadphp-file">After adding the <strong>autoload field</strong> in <code>composer.json</code>, one <strong>has to</strong> re-run <code>dump-autoload</code> to re-generate the vendor/autoload.php<span class="widont">&nbsp;</span>file.</h3>
 <p>This should takecare of autoloading of the class files. The <code>dump-autoload</code> is a critical step while updating the <code>composer.json</code>.</p>
-<p>For&nbsp;windows</p>
-<pre><code>php composer.phar dump-autoload
-</code></pre><p>For Unix, Linux and&nbsp;macOS</p>
-<pre><code>php composer dump-autoload
-</code></pre><p>Happy&nbsp;coding.</p>
+<p>For windows</p>
+<pre><code>php composer.phar dump-autoload</code></pre><p>For Unix, Linux and<span class="widont">&nbsp;</span>macOS</p>
+<pre><code>php composer dump-autoload</code></pre><p>Happy coding.</p>
 </section>
         </article>
       </div>
     </div>
     <footer>
       <div class="content-wrap">
-        <div class="nav"><a href="https://saumya.github.io/ray/">« Full blog</a></div>
-        <div id="disqus_thread"></div>
-        <script type="text/javascript">
-          var disqus_shortname = 'saumya';
-          (function() {
-              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-          })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        <div class="nav"><a href="/">&laquo; Full blog</a></div>
         <section class="about"><p><a href="https://saumya.github.io/">Saumya</a> is an iternal seeker.</p>
 <p>A maker of things and curious about everything. Continuous learning is, what fuels him. This blog itself, reflects one of many things he is trying at all the time.</p>
-<p>He is <a href="https://twitter.com/saumya">@saumya</a> on Twitter. </p>
-<span class="nav"><a href="https://saumya.github.io/ray/">Blog Home</a><a href="https://saumya.github.io/ray/archive.html">Archives</a></span>
+<p>Talk to <a href="https://twitter.com/saumya">@saumya</a> on Twitter. </p>
+<span class="nav"><a href="http://localhost:8080/">Blog Home</a><a href="http://localhost:8080/archive.html">Archives</a><a href="http://localhost:8080/feed.xml">Feed</a></span>
         </section>
         <section class="copy">
-          <p>&copy; 2019 saumya ray &mdash; powered by&nbsp;     <a href="https://github.com/jnordberg/wintersmith">Wintersmith&nbsp;</a>
-            <p> <a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
+          <p>&copy; 2019 Saumya Ray &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>
+            <p><a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
           </p>
         </section>
       </div>

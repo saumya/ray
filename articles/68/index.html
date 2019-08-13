@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width">
     <title>NSNotification in Swift - Saumya
     </title>
-    <link rel="alternate" href="https://saumya.github.io/ray/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
-    <link rel="stylesheet" href="https://saumya.github.io/ray/css/main.css">
-    <link rel="stylesheet" href="https://saumya.github.io/ray/css/saumya.css">
+    <link rel="alternate" href="http://localhost:8080/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="http://localhost:8080/css/saumya.css">
   </head>
   <body class="article-detail">
     <header class="header">
@@ -16,23 +16,21 @@
         <h1>NSNotification in Swift</h1>
         <p class="author">Written by <span class="author"><a href="mailto:2saumyaray@gmail.com">Saumya</a></span>
         </p>
-        <p class="date">30. June 2016</p>
       </div>
     </header>
     <div id="content">
       <div class="content-wrap">
         <article class="article">
-          <section class="content"><p>While Apple has put a lot of design patterns to develop applications for iOS, the flexibility of an event driven application development surely has its merits. The very de-coupled application is so nice to play around with. Well, the downside is to find where is what. For a strictly coupled application, one can definitely find the root of the roots. But for a de-coupled application its very difficult to find what is happening where. Then comes good practices of code commeting and logger messages to rescue. That topic is a separate post I&nbsp;hope.            </p>
-<p>Lets see how in <a href="https://developer.apple.com/swift/">swift</a> we could write an event driven&nbsp;application.</p>
+          <section class="content"><p>While Apple has put a lot of design patterns to develop applications for iOS, the flexibility of an event driven application development surely has its merits. The very de-coupled application is so nice to play around with. Well, the downside is to find where is what. For a strictly coupled application, one can definitely find the root of the roots. But for a de-coupled application its very difficult to find what is happening where. Then comes good practices of code commeting and logger messages to rescue. That topic is a separate post I<span class="widont">&nbsp;</span>hope.            </p>
+<p>Lets see how in <a href="https://developer.apple.com/swift/">swift</a> we could write an event driven<span class="widont">&nbsp;</span>application.</p>
 <p><span class="more"></span></p>
-<p>Here is a scenario. We have a ViewController1.swift and MyViewController.swift. First <code>ViewController1</code> is loaded in the application and then it navigates to <code>MyViewController</code>. Upon certain situation in <code>MyViewController</code> we want to do something on <code>ViewController1</code>. All we have to do is send an event from <code>MyViewController</code> to <code>ViewController1</code>. The events here in iOS is known as <code>NSNotification</code>. So the setup is as shown&nbsp;here.</p>
-<pre><code class="lang-swift"><span class="comment">// MyViewController.swift</span>
+<p>Here is a scenario. We have a ViewController1.swift and MyViewController.swift. First <code>ViewController1</code> is loaded in the application and then it navigates to <code>MyViewController</code>. Upon certain situation in <code>MyViewController</code> we want to do something on <code>ViewController1</code>. All we have to do is send an event from <code>MyViewController</code> to <code>ViewController1</code>. The events here in iOS is known as <code>NSNotification</code>. So the setup is as shown<span class="widont">&nbsp;</span>here.</p>
+<pre><code class="language-swift"><span class="comment">// MyViewController.swift</span>
 <span class="comment">// Dispatch Event from wherever necessary</span>
 <span class="keyword">let</span> notification = <span class="type">NSNotification</span>(name: <span class="string">"myNotification"</span> , object: <span class="keyword">self</span>, userInfo:<span class="literal">nil</span> )
-<span class="type">NSNotificationCenter</span>.defaultCenter().postNotification(notification)
-</code></pre>
-<p>Then in the other file just add the listeners to listen to the events and call the methods to handle&nbsp;them.</p>
-<pre><code class="lang-swift"><span class="comment">// ViewController1.swift</span>
+<span class="type">NSNotificationCenter</span>.defaultCenter().postNotification(notification)</code></pre>
+<p>Then in the other file just add the listeners to listen to the events and call the methods to handle<span class="widont">&nbsp;</span>them.</p>
+<pre><code class="language-swift"><span class="comment">// ViewController1.swift</span>
 <span class="keyword">override</span> <span class="function"><span class="keyword">func</span> <span class="title">viewDidLoad</span><span class="params">()</span></span> {
     <span class="keyword">super</span>.viewDidLoad()
     <span class="comment">// Listen for Event</span>
@@ -44,34 +42,23 @@
     <span class="comment">//</span>
     <span class="keyword">let</span> myViewController:<span class="type">MyViewController</span> = notification.object <span class="keyword">as</span>! <span class="type">MyViewController</span>
     myViewController.someMethod()
-}
-</code></pre>
-<p>Happy&nbsp;coding.</p>
+}</code></pre>
+<p>Happy coding.</p>
 </section>
         </article>
       </div>
     </div>
     <footer>
       <div class="content-wrap">
-        <div class="nav"><a href="https://saumya.github.io/ray/">« Full blog</a></div>
-        <div id="disqus_thread"></div>
-        <script type="text/javascript">
-          var disqus_shortname = 'saumya';
-          (function() {
-              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-          })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        <div class="nav"><a href="/">&laquo; Full blog</a></div>
         <section class="about"><p><a href="https://saumya.github.io/">Saumya</a> is an iternal seeker.</p>
 <p>A maker of things and curious about everything. Continuous learning is, what fuels him. This blog itself, reflects one of many things he is trying at all the time.</p>
-<p>He is <a href="https://twitter.com/saumya">@saumya</a> on Twitter. </p>
-<span class="nav"><a href="https://saumya.github.io/ray/">Blog Home</a><a href="https://saumya.github.io/ray/archive.html">Archives</a></span>
+<p>Talk to <a href="https://twitter.com/saumya">@saumya</a> on Twitter. </p>
+<span class="nav"><a href="http://localhost:8080/">Blog Home</a><a href="http://localhost:8080/archive.html">Archives</a><a href="http://localhost:8080/feed.xml">Feed</a></span>
         </section>
         <section class="copy">
-          <p>&copy; 2019 saumya ray &mdash; powered by&nbsp;     <a href="https://github.com/jnordberg/wintersmith">Wintersmith&nbsp;</a>
-            <p> <a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
+          <p>&copy; 2019 Saumya Ray &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>
+            <p><a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
           </p>
         </section>
       </div>

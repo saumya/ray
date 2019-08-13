@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width">
     <title>Migration checklist for Cordova(Phonegap) application from version 2.x to 3.x - Saumya
     </title>
-    <link rel="alternate" href="https://saumya.github.io/ray/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
-    <link rel="stylesheet" href="https://saumya.github.io/ray/css/main.css">
-    <link rel="stylesheet" href="https://saumya.github.io/ray/css/saumya.css">
+    <link rel="alternate" href="http://localhost:8080/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="http://localhost:8080/css/saumya.css">
   </head>
   <body class="article-detail">
     <header class="header">
@@ -16,68 +16,54 @@
         <h1>Migration checklist for Cordova(Phonegap) application from version 2.x to 3.x</h1>
         <p class="author">Written by <span class="author"><a href="mailto:2saumyaray@gmail.com">Saumya</a></span>
         </p>
-        <p class="date">27. February 2014</p>
       </div>
     </header>
     <div id="content">
       <div class="content-wrap">
         <article class="article">
-          <section class="content"><p>There might be chances that you are re-writing a project or simply maintainig an old codebase of a <a href="https://cordova.apache.org/">Cordova</a>(phonegap) application. In both the cases, its ideal to go for the lastest version of the library. Being said that, its not that straight forward to migrate a phonegap 2.x application to Phonegap 3.x. And if, the project uses a 1.x version of <a href="http://jquery.com">jQuery</a> with <a href="https://jqueryui.com/">jQuerymobile</a>, you might want to update that to 2.x too, which adds up to more confusion and work, than solution. I will be focusing on <a href="https://cordova.apache.org/">Cordova</a> rather than <a href="http://phonegap.com/">Phonegap</a> here. Yes, they are different! They are supposed to be the same but there are&nbsp;differences.      </p>
-<h3 id="here-is-a-checklist-to-keep-things-in-perspective-">Here is a checklist to keep things in&nbsp;perspective.</h3>
+          <section class="content"><p>There might be chances that you are re-writing a project or simply maintainig an old codebase of a <a href="https://cordova.apache.org/">Cordova</a>(phonegap) application. In both the cases, its ideal to go for the lastest version of the library. Being said that, its not that straight forward to migrate a phonegap 2.x application to Phonegap 3.x. And if, the project uses a 1.x version of <a href="http://jquery.com">jQuery</a> with <a href="https://jqueryui.com/">jQuerymobile</a>, you might want to update that to 2.x too, which adds up to more confusion and work, than solution. I will be focusing on <a href="https://cordova.apache.org/">Cordova</a> rather than <a href="http://phonegap.com/">Phonegap</a> here. Yes, they are different! They are supposed to be the same but there are<span class="widont">&nbsp;</span>differences.      </p>
+<h3 id="here-is-a-checklist-to-keep-things-in-perspective">Here is a checklist to keep things in<span class="widont">&nbsp;</span>perspective.</h3>
 <h3 id="cordova">Cordova</h3>
 <ul>
-<li>Get used to <a href="http://nodejs.org/">NodeJS</a>. Yes, thats now mandatory to&nbsp;use.</li>
-<li>Get used to <a href="https://cordova.apache.org/">Cordova</a> and <a href="http://phonegap.com/">Phonegap</a>, they are&nbsp;different.</li>
-<li>Know the difference between <a href="https://cordova.apache.org/">Cordova</a> and <a href="http://phonegap.com/">Phonegap</a>, at-least what they do&nbsp;internally.</li>
+<li>Get used to <a href="http://nodejs.org/">NodeJS</a>. Yes, thats now mandatory to<span class="widont">&nbsp;</span>use.</li>
+<li>Get used to <a href="https://cordova.apache.org/">Cordova</a> and <a href="http://phonegap.com/">Phonegap</a>, they are<span class="widont">&nbsp;</span>different.</li>
+<li>Know the difference between <a href="https://cordova.apache.org/">Cordova</a> and <a href="http://phonegap.com/">Phonegap</a>, at-least what they do<span class="widont">&nbsp;</span>internally.</li>
 <li><a href="http://cordova.apache.org/docs/en/3.4.0/guide_overview_index.md.html#Overview">Read completely the getting started</a> with <a href="https://cordova.apache.org/">Cordova</a>.</li>
-<li>Do not confuse with <a href="http://cordova.apache.org/docs/en/3.4.0/guide_overview_index.md.html#Overview_development_paths">Web Project Dev</a> work flow, if possible avoid it&nbsp;altogether.</li>
-<li>Start with <a href="http://cordova.apache.org/docs/en/3.4.0/guide_overview_index.md.html#Overview_development_paths">Native Platform Dev</a> workflow. This is the one, which is closer to the older version&nbsp;workflow.</li>
-<li>Do not use <a href="http://cordova.apache.org/docs/en/3.4.0/guide_cli_index.md.html#The%20Command-Line%20Interface"><span class="caps">CLI</span></a> for creating project. You can download the <a href="http://archive.apache.org/dist/cordova/">whole archive for a version</a> as you used to in the previous versions and still can create project with&nbsp;it.</li>
+<li>Do not confuse with <a href="http://cordova.apache.org/docs/en/3.4.0/guide_overview_index.md.html#Overview_development_paths">Web Project Dev</a> work flow, if possible avoid it<span class="widont">&nbsp;</span>altogether.</li>
+<li>Start with <a href="http://cordova.apache.org/docs/en/3.4.0/guide_overview_index.md.html#Overview_development_paths">Native Platform Dev</a> workflow. This is the one, which is closer to the older version<span class="widont">&nbsp;</span>workflow.</li>
+<li>Do not use <a href="http://cordova.apache.org/docs/en/3.4.0/guide_cli_index.md.html#The%20Command-Line%20Interface"><span class="caps">CLI</span></a> for creating project. You can download the <a href="http://archive.apache.org/dist/cordova/">whole archive for a version</a> as you used to in the previous versions and still can create project with<span class="widont">&nbsp;</span>it.</li>
 <li>Get used to <a href="http://cordova.apache.org/docs/en/3.4.0/plugin_ref_plugman.md.html#Using%20Plugman%20to%20Manage%20Plugins">Plugman</a> to manage plugins. Everything is now a plugin. That means, a default project created, is nothing more than a website. If you need to interact with a device, you have to add plugin. In <a href="http://cordova.apache.org/docs/en/3.4.0/guide_overview_index.md.html#Overview_development_paths">Native Platform Dev</a>, these are managed by <a href="http://cordova.apache.org/docs/en/3.4.0/plugin_ref_plugman.md.html#Using%20Plugman%20to%20Manage%20Plugins">Plugman</a>.</li>
-<li>For the first couple of trials, <a href="http://cordova.apache.org/docs/en/3.4.0/plugin_ref_plugman.md.html#Using%20Plugman%20to%20Manage%20Plugins_installing_core_plugins">add all the plugins</a>. That will make the project, behave as the older version projects, where everything is set by default. The document to install plugin is&nbsp;misleading.     </li>
+<li>For the first couple of trials, <a href="http://cordova.apache.org/docs/en/3.4.0/plugin_ref_plugman.md.html#Using%20Plugman%20to%20Manage%20Plugins_installing_core_plugins">add all the plugins</a>. That will make the project, behave as the older version projects, where everything is set by default. The document to install plugin is<span class="widont">&nbsp;</span>misleading.     </li>
 </ul>
 <p><code>Instead</code> of</p>
-<pre><code>plugman --platform --project --plugin org.apache.cordova.battery-status
-</code></pre><p><code>Use</code>, the commands as below. The document is missing <code>--install</code> from the&nbsp;command!</p>
-<pre><code>plugman --install --platform --project --plugin org.apache.cordova.battery-status
-</code></pre><p>The actual code will look&nbsp;as</p>
-<pre><code>plugman --install --ios --path/to/project/folder --plugin org.apache.cordova.battery-status
-</code></pre><ul>
-<li>Get used to <code>config.xml</code>, <a href="http://cordova.apache.org/docs/en/3.4.0/config_ref_index.md.html#The%2520config.xml%2520File">for configuring the whole&nbsp;project</a></li>
+<pre><code>plugman --platform --project --plugin org.apache.cordova.battery-status</code></pre><p><code>Use</code>, the commands as below. The document is missing <code>--install</code> from the<span class="widont">&nbsp;</span>command!</p>
+<pre><code>plugman --install --platform --project --plugin org.apache.cordova.battery-status</code></pre><p>The actual code will look<span class="widont">&nbsp;</span>as</p>
+<pre><code>plugman --install --ios --path/to/project/folder --plugin org.apache.cordova.battery-status</code></pre><ul>
+<li>Get used to <code>config.xml</code>, <a href="http://cordova.apache.org/docs/en/3.4.0/config_ref_index.md.html#The%2520config.xml%2520File">for configuring the whole<span class="widont">&nbsp;</span>project</a></li>
 </ul>
-<h3 id="jquery-and-jquerymobile">jQuery and&nbsp;jQueryMobile</h3>
+<h3 id="jquery-and-jquerymobile">jQuery and jQueryMobile</h3>
 <ul>
-<li>Update the <a href="http://api.jquerymobile.com/jQuery.mobile.changePage/">page change code</a> to remove the deprecated one and use the new&nbsp;one.</li>
+<li>Update the <a href="http://api.jquerymobile.com/jQuery.mobile.changePage/">page change code</a> to remove the deprecated one and use the new<span class="widont">&nbsp;</span>one.</li>
 <li>Update the event listener code from deprecated <a href="http://api.jquery.com/live/">live()</a> to <a href="http://api.jquery.com/on/">on()</a>.</li>
-<li>Keep an eye on all the <a href="http://api.jquery.com/category/deprecated/">deprecated</a> APIs of&nbsp;jQuery</li>
+<li>Keep an eye on all the <a href="http://api.jquery.com/category/deprecated/">deprecated</a> APIs of<span class="widont">&nbsp;</span>jQuery</li>
 </ul>
-<p>That should make you compile your old project in the new&nbsp;code.</p>
-<p>Happy&nbsp;transitioning.</p>
+<p>That should make you compile your old project in the new<span class="widont">&nbsp;</span>code.</p>
+<p>Happy transitioning.</p>
 </section>
         </article>
       </div>
     </div>
     <footer>
       <div class="content-wrap">
-        <div class="nav"><a href="https://saumya.github.io/ray/">« Full blog</a></div>
-        <div id="disqus_thread"></div>
-        <script type="text/javascript">
-          var disqus_shortname = 'saumya';
-          (function() {
-              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-          })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        <div class="nav"><a href="/">&laquo; Full blog</a></div>
         <section class="about"><p><a href="https://saumya.github.io/">Saumya</a> is an iternal seeker.</p>
 <p>A maker of things and curious about everything. Continuous learning is, what fuels him. This blog itself, reflects one of many things he is trying at all the time.</p>
-<p>He is <a href="https://twitter.com/saumya">@saumya</a> on Twitter. </p>
-<span class="nav"><a href="https://saumya.github.io/ray/">Blog Home</a><a href="https://saumya.github.io/ray/archive.html">Archives</a></span>
+<p>Talk to <a href="https://twitter.com/saumya">@saumya</a> on Twitter. </p>
+<span class="nav"><a href="http://localhost:8080/">Blog Home</a><a href="http://localhost:8080/archive.html">Archives</a><a href="http://localhost:8080/feed.xml">Feed</a></span>
         </section>
         <section class="copy">
-          <p>&copy; 2019 saumya ray &mdash; powered by&nbsp;     <a href="https://github.com/jnordberg/wintersmith">Wintersmith&nbsp;</a>
-            <p> <a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
+          <p>&copy; 2019 Saumya Ray &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>
+            <p><a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
           </p>
         </section>
       </div>

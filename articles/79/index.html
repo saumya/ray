@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width">
     <title>Firebase Cloud FireStore and checking existence of a Document - Saumya
     </title>
-    <link rel="alternate" href="https://saumya.github.io/ray/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
-    <link rel="stylesheet" href="https://saumya.github.io/ray/css/main.css">
-    <link rel="stylesheet" href="https://saumya.github.io/ray/css/saumya.css">
+    <link rel="alternate" href="http://localhost:8080/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="http://localhost:8080/css/saumya.css">
   </head>
   <body class="article-detail">
     <header class="header">
@@ -16,44 +16,32 @@
         <h1>Firebase Cloud FireStore and checking existence of a Document</h1>
         <p class="author">Written by <span class="author"><a href="mailto:2saumyaray@gmail.com">Saumya</a></span>
         </p>
-        <p class="date">28. June 2018</p>
       </div>
     </header>
     <div id="content">
       <div class="content-wrap">
         <article class="article">
-          <section class="content"><p>The thing is <a href="https://firebase.google.com/products/firestore/">Cloud FireStore</a> is still in beta. However, I find it quite stable to run my applications. It has got all the things to run a serverless&nbsp;application.</p>
+          <section class="content"><p>The thing is <a href="https://firebase.google.com/products/firestore/">Cloud FireStore</a> is still in beta. However, I find it quite stable to run my applications. It has got all the things to run a serverless<span class="widont">&nbsp;</span>application.</p>
 <p>While this is a NoSQL database, there are <code>Documents</code> and <code>Collections</code>. I was suppose to check the existence of a <code>Document</code> before adding some values into it. There is an <span class="caps">API</span> which gives us exactly the same thing, <a href="https://firebase.google.com/docs/reference/js/firebase.firestore.DocumentSnapshot#~exists">exists</a>.</p>
-<pre><code>docSnapshot.exists
-</code></pre><p>The trick here is, if there is no <code>Document</code> creation involved before but still there are data inside that <code>Document</code> path (its possible) then the <code>exists</code> will always return <code>false</code>. To know whether the <code>Document</code> is actually created or not Firebase <code>Console</code> is a good help. In the <code>Console</code> the <code>Documents</code> which are not created will be shown as <em>italics</em>. Its a subtle but very informative visual&nbsp;separation.</p>
+<pre><code>docSnapshot.exists</code></pre><p>The trick here is, if there is no <code>Document</code> creation involved before but still there are data inside that <code>Document</code> path (its possible) then the <code>exists</code> will always return <code>false</code>. To know whether the <code>Document</code> is actually created or not Firebase <code>Console</code> is a good help. In the <code>Console</code> the <code>Documents</code> which are not created will be shown as <em>italics</em>. Its a subtle but very informative visual<span class="widont">&nbsp;</span>separation.</p>
 <p>Just make sure, you created your <code>Document</code> before checking it with <code>exists</code>.</p>
-<p>Here is <a href="https://stackoverflow.com/questions/48068581/firebase-doc-exists-but-doc-exists-returns-false?answertab=active#tab-top">stackoverflow answer</a>, which helped me in this&nbsp;regard.</p>
-<p>Happy&nbsp;Coding.</p>
+<p>Here is <a href="https://stackoverflow.com/questions/48068581/firebase-doc-exists-but-doc-exists-returns-false?answertab=active#tab-top">stackoverflow answer</a>, which helped me in this<span class="widont">&nbsp;</span>regard.</p>
+<p>Happy Coding.</p>
 </section>
         </article>
       </div>
     </div>
     <footer>
       <div class="content-wrap">
-        <div class="nav"><a href="https://saumya.github.io/ray/">« Full blog</a></div>
-        <div id="disqus_thread"></div>
-        <script type="text/javascript">
-          var disqus_shortname = 'saumya';
-          (function() {
-              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-          })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        <div class="nav"><a href="/">&laquo; Full blog</a></div>
         <section class="about"><p><a href="https://saumya.github.io/">Saumya</a> is an iternal seeker.</p>
 <p>A maker of things and curious about everything. Continuous learning is, what fuels him. This blog itself, reflects one of many things he is trying at all the time.</p>
-<p>He is <a href="https://twitter.com/saumya">@saumya</a> on Twitter. </p>
-<span class="nav"><a href="https://saumya.github.io/ray/">Blog Home</a><a href="https://saumya.github.io/ray/archive.html">Archives</a></span>
+<p>Talk to <a href="https://twitter.com/saumya">@saumya</a> on Twitter. </p>
+<span class="nav"><a href="http://localhost:8080/">Blog Home</a><a href="http://localhost:8080/archive.html">Archives</a><a href="http://localhost:8080/feed.xml">Feed</a></span>
         </section>
         <section class="copy">
-          <p>&copy; 2019 saumya ray &mdash; powered by&nbsp;     <a href="https://github.com/jnordberg/wintersmith">Wintersmith&nbsp;</a>
-            <p> <a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
+          <p>&copy; 2019 Saumya Ray &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>
+            <p><a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
           </p>
         </section>
       </div>

@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width">
     <title>RequireJS, Load timeout for modules! - Saumya
     </title>
-    <link rel="alternate" href="https://saumya.github.io/ray/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
-    <link rel="stylesheet" href="https://saumya.github.io/ray/css/main.css">
-    <link rel="stylesheet" href="https://saumya.github.io/ray/css/saumya.css">
+    <link rel="alternate" href="http://localhost:8080/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="http://localhost:8080/css/saumya.css">
   </head>
   <body class="article-detail">
     <header class="header">
@@ -16,27 +16,24 @@
         <h1>RequireJS, Load timeout for modules!</h1>
         <p class="author">Written by <span class="author"><a href="mailto:2saumyaray@gmail.com">Saumya</a></span>
         </p>
-        <p class="date">17. November 2014</p>
       </div>
     </header>
     <div id="content">
       <div class="content-wrap">
         <article class="article">
-          <section class="content"><p>Working with <a href="http://backbonejs.org/">BackboneJS</a>, will make you work with <a href="http://requirejs.org/">RequireJS</a>. And if you are working with <a href="http://backbonejs.org/">BackboneJS</a> for a little time, then you probably know what I am talking about. Sometimes, the modules we are loading through <a href="http://requirejs.org/">RequireJS</a> throw errors&nbsp;saying</p>
-<pre><code class="lang-javascript"><span class="built_in">Error</span>: Load timeout <span class="keyword">for</span> modules
-</code></pre>
-<p>I will suggest to have a look at <a href="http://requirejs.org/docs/errors.html">RequireJS</a> documentation for detailed explanation.<br>The most common and which may hit you in the begining is the <code>timeout</code> for timeout itself. There are ways to fix this. The options&nbsp;are</p>
+          <section class="content"><p>Working with <a href="http://backbonejs.org/">BackboneJS</a>, will make you work with <a href="http://requirejs.org/">RequireJS</a>. And if you are working with <a href="http://backbonejs.org/">BackboneJS</a> for a little time, then you probably know what I am talking about. Sometimes, the modules we are loading through <a href="http://requirejs.org/">RequireJS</a> throw errors<span class="widont">&nbsp;</span>saying</p>
+<pre><code class="language-javascript"><span class="built_in">Error</span>: Load timeout <span class="keyword">for</span> modules</code></pre>
+<p>I will suggest to have a look at <a href="http://requirejs.org/docs/errors.html">RequireJS</a> documentation for detailed explanation.<br>The most common and which may hit you in the begining is the <code>timeout</code> for timeout itself. There are ways to fix this. The options<span class="widont">&nbsp;</span>are</p>
 <ul>
-<li>increase the timeout&nbsp;limit</li>
-<li>reload the page or the module on timeout&nbsp;error</li>
+<li>increase the timeout<span class="widont">&nbsp;</span>limit</li>
+<li>reload the page or the module on timeout<span class="widont">&nbsp;</span>error</li>
 </ul>
-<p>The <a href="http://requirejs.org/">RequireJS</a> configuration has an option called <code>waitSeconds</code>, which defaults to <code>7</code>. Now if the module does not load in 7 seconds, it will giveup and throw the error. If <code>waitSeconds</code> is set to <code>0</code>, it will wait for <code>infinite</code>. Well, along with that setting, set the <code>enforceDefine</code> to <code>true</code> for reliability in all browsers and scenarios. This setting will look as&nbsp;below.</p>
-<pre><code class="lang-javascript">requirejs.config({
+<p>The <a href="http://requirejs.org/">RequireJS</a> configuration has an option called <code>waitSeconds</code>, which defaults to <code>7</code>. Now if the module does not load in 7 seconds, it will giveup and throw the error. If <code>waitSeconds</code> is set to <code>0</code>, it will wait for <code>infinite</code>. Well, along with that setting, set the <code>enforceDefine</code> to <code>true</code> for reliability in all browsers and scenarios. This setting will look as<span class="widont">&nbsp;</span>below.</p>
+<pre><code class="language-javascript">requirejs.config({
     <span class="attr">enforceDefine</span>: <span class="literal">true</span>,
-    <span class="attr">waitSeconds</span>: <span class="number">0</span>,
-</code></pre>
-<p>Thats a quickfix. But again, it may hit the performace of the application.<br>The otherway is <a href="http://requirejs.org/docs/api.html#errbacks">Errbacks</a> as per <a href="http://requirejs.org/">RequireJS</a>. so what are they. They are simply callbacks but since it happens in errors, its called <code>Errbacks</code>. We can do stuff like reloading the whole application or the specified module or other error handling on&nbsp;these.</p>
-<pre><code class="lang-javascript"><span class="built_in">require</span>([<span class="string">'modules/one'</span>,<span class="string">'modules/two'</span>],
+    <span class="attr">waitSeconds</span>: <span class="number">0</span>,</code></pre>
+<p>Thats a quickfix. But again, it may hit the performace of the application.<br>The otherway is <a href="http://requirejs.org/docs/api.html#errbacks">Errbacks</a> as per <a href="http://requirejs.org/">RequireJS</a>. so what are they. They are simply callbacks but since it happens in errors, its called <code>Errbacks</code>. We can do stuff like reloading the whole application or the specified module or other error handling on<span class="widont">&nbsp;</span>these.</p>
+<pre><code class="language-javascript"><span class="built_in">require</span>([<span class="string">'modules/one'</span>,<span class="string">'modules/two'</span>],
            <span class="function"><span class="keyword">function</span>(<span class="params">One,Two</span>)</span>{
             <span class="comment">//Application logic</span>
         },
@@ -46,34 +43,23 @@
             <span class="keyword">var</span> failedId = error.requireModules &amp;&amp; error.requireModules[<span class="number">0</span>];
             <span class="built_in">console</span>.log(failedId);
             <span class="built_in">console</span>.log(error.message);
-        });
-</code></pre>
-<p>Happy&nbsp;Coding.</p>
+        });</code></pre>
+<p>Happy Coding.</p>
 </section>
         </article>
       </div>
     </div>
     <footer>
       <div class="content-wrap">
-        <div class="nav"><a href="https://saumya.github.io/ray/">« Full blog</a></div>
-        <div id="disqus_thread"></div>
-        <script type="text/javascript">
-          var disqus_shortname = 'saumya';
-          (function() {
-              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-          })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        <div class="nav"><a href="/">&laquo; Full blog</a></div>
         <section class="about"><p><a href="https://saumya.github.io/">Saumya</a> is an iternal seeker.</p>
 <p>A maker of things and curious about everything. Continuous learning is, what fuels him. This blog itself, reflects one of many things he is trying at all the time.</p>
-<p>He is <a href="https://twitter.com/saumya">@saumya</a> on Twitter. </p>
-<span class="nav"><a href="https://saumya.github.io/ray/">Blog Home</a><a href="https://saumya.github.io/ray/archive.html">Archives</a></span>
+<p>Talk to <a href="https://twitter.com/saumya">@saumya</a> on Twitter. </p>
+<span class="nav"><a href="http://localhost:8080/">Blog Home</a><a href="http://localhost:8080/archive.html">Archives</a><a href="http://localhost:8080/feed.xml">Feed</a></span>
         </section>
         <section class="copy">
-          <p>&copy; 2019 saumya ray &mdash; powered by&nbsp;     <a href="https://github.com/jnordberg/wintersmith">Wintersmith&nbsp;</a>
-            <p> <a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
+          <p>&copy; 2019 Saumya Ray &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>
+            <p><a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
           </p>
         </section>
       </div>

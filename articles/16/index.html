@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width">
     <title>Getting started with Wintersmith themes - Saumya
     </title>
-    <link rel="alternate" href="https://saumya.github.io/ray/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
-    <link rel="stylesheet" href="https://saumya.github.io/ray/css/main.css">
-    <link rel="stylesheet" href="https://saumya.github.io/ray/css/saumya.css">
+    <link rel="alternate" href="http://localhost:8080/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="http://localhost:8080/css/saumya.css">
   </head>
   <body class="article-detail">
     <header class="header">
@@ -16,55 +16,40 @@
         <h1>Getting started with Wintersmith themes</h1>
         <p class="author">Written by <span class="author"><a href="mailto:2saumyaray@gmail.com">Saumya</a></span>
         </p>
-        <p class="date">25. January 2014</p>
       </div>
     </header>
     <div id="content">
       <div class="content-wrap">
         <article class="article">
-          <section class="content"><p>I am getting more and more conversant with the <a href="http://jade-lang.com">Jade</a> templating engine and <a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>. Which I hope, is, what was one of the intentions, of moving from <a href="http://wordpress.org">Wordpress</a> to <a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>. Well, trying my hands on to customise the theme, I found its extemely easy to just add another <span class="caps">CSS</span> to the <code>layout</code> template ie; <code>layout.jade</code> and start putting in the styles there. It can not be simpler than this. The base style is taken from the style definition at <code>main.css</code>. If you look at the <code>layout.jade</code>, it will look something as&nbsp;this.</p>
-<pre><code class="lang-javascript">link(rel=<span class="string">'stylesheet'</span>, href=<span class="string">'/css/main.css'</span>)
-</code></pre>
-<p>If you are following this blog, I have mentioned previously how to configure <a href="https://github.com/jnordberg/wintersmith">Wintersmith</a> so as to make it working from any domain or subdomain. So the <code>layout.jade</code> in my case, looks as&nbsp;below.</p>
-<pre><code class="lang-javascript">link(rel=<span class="string">'stylesheet'</span>, href=locals.url+<span class="string">'/css/main.css'</span>)
-</code></pre>
+          <section class="content"><p>I am getting more and more conversant with the <a href="http://jade-lang.com">Jade</a> templating engine and <a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>. Which I hope, is, what was one of the intentions, of moving from <a href="http://wordpress.org">Wordpress</a> to <a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>. Well, trying my hands on to customise the theme, I found its extemely easy to just add another <span class="caps">CSS</span> to the <code>layout</code> template ie; <code>layout.jade</code> and start putting in the styles there. It can not be simpler than this. The base style is taken from the style definition at <code>main.css</code>. If you look at the <code>layout.jade</code>, it will look something as<span class="widont">&nbsp;</span>this.</p>
+<pre><code class="language-javascript">link(rel=<span class="string">'stylesheet'</span>, href=<span class="string">'/css/main.css'</span>)</code></pre>
+<p>If you are following this blog, I have mentioned previously how to configure <a href="https://github.com/jnordberg/wintersmith">Wintersmith</a> so as to make it working from any domain or subdomain. So the <code>layout.jade</code> in my case, looks as<span class="widont">&nbsp;</span>below.</p>
+<pre><code class="language-javascript">link(rel=<span class="string">'stylesheet'</span>, href=locals.url+<span class="string">'/css/main.css'</span>)</code></pre>
 <p>Whatever the condition may be, whether you are using default settings or my settings, the point is, just add another <span class="caps">CSS</span> file(<code>theme.css</code>) below the default <span class="caps">CSS</span>.
-So the default setting will be as&nbsp;this.</p>
-<pre><code class="lang-javascript">link(rel=<span class="string">'stylesheet'</span>, href=<span class="string">'/css/main.css'</span>)
-link(rel=<span class="string">'stylesheet'</span>, href=<span class="string">'/css/theme.css'</span>)
-</code></pre>
-<p>In my case, I am using a theme <span class="caps">CSS</span> file as <code>saumya.css</code> and with my configuration change, it looks as&nbsp;this.</p>
-<pre><code class="lang-javascript">link(rel=<span class="string">'stylesheet'</span>, href=locals.url+<span class="string">'/css/main.css'</span>)
-link(rel=<span class="string">'stylesheet'</span>, href=locals.url+<span class="string">'/css/saumya.css'</span>)
-</code></pre>
+So the default setting will be as<span class="widont">&nbsp;</span>this.</p>
+<pre><code class="language-javascript">link(rel=<span class="string">'stylesheet'</span>, href=<span class="string">'/css/main.css'</span>)
+link(rel=<span class="string">'stylesheet'</span>, href=<span class="string">'/css/theme.css'</span>)</code></pre>
+<p>In my case, I am using a theme <span class="caps">CSS</span> file as <code>saumya.css</code> and with my configuration change, it looks as<span class="widont">&nbsp;</span>this.</p>
+<pre><code class="language-javascript">link(rel=<span class="string">'stylesheet'</span>, href=locals.url+<span class="string">'/css/main.css'</span>)
+link(rel=<span class="string">'stylesheet'</span>, href=locals.url+<span class="string">'/css/saumya.css'</span>)</code></pre>
 <p>Now do the customisation in the <code>theme.css</code>.     </p>
-<p>Hope you understand <code>the best practice of overriding styles</code> than manipulating directly the original <span class="caps">CSS</span>&nbsp;file.</p>
-<p>Happy&nbsp;theming.</p>
+<p>Hope you understand <code>the best practice of overriding styles</code> than manipulating directly the original <span class="caps">CSS</span><span class="widont">&nbsp;</span>file.</p>
+<p>Happy theming.</p>
 </section>
         </article>
       </div>
     </div>
     <footer>
       <div class="content-wrap">
-        <div class="nav"><a href="https://saumya.github.io/ray/">« Full blog</a></div>
-        <div id="disqus_thread"></div>
-        <script type="text/javascript">
-          var disqus_shortname = 'saumya';
-          (function() {
-              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-          })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        <div class="nav"><a href="/">&laquo; Full blog</a></div>
         <section class="about"><p><a href="https://saumya.github.io/">Saumya</a> is an iternal seeker.</p>
 <p>A maker of things and curious about everything. Continuous learning is, what fuels him. This blog itself, reflects one of many things he is trying at all the time.</p>
-<p>He is <a href="https://twitter.com/saumya">@saumya</a> on Twitter. </p>
-<span class="nav"><a href="https://saumya.github.io/ray/">Blog Home</a><a href="https://saumya.github.io/ray/archive.html">Archives</a></span>
+<p>Talk to <a href="https://twitter.com/saumya">@saumya</a> on Twitter. </p>
+<span class="nav"><a href="http://localhost:8080/">Blog Home</a><a href="http://localhost:8080/archive.html">Archives</a><a href="http://localhost:8080/feed.xml">Feed</a></span>
         </section>
         <section class="copy">
-          <p>&copy; 2019 saumya ray &mdash; powered by&nbsp;     <a href="https://github.com/jnordberg/wintersmith">Wintersmith&nbsp;</a>
-            <p> <a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
+          <p>&copy; 2019 Saumya Ray &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>
+            <p><a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
           </p>
         </section>
       </div>
