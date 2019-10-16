@@ -61,13 +61,16 @@ What an experience! I never thought I will cross even 50 tress. Like it is said,
 
 In the course of all this I talked with friends, with whom I had not talked in years! I had almost talked with friends all across the planet. For some I used to think I just know them in Facebook! I never knew they have such a strong connection with me! This is another experience I have, that distance does not matter. If you have an authentic connection, it really works.
 
-It can be done with just an internet connection and Facebook. Here I am, 4 days and 44 supporters away, done with 1000 trees.
+It can be done with just an internet connection and Facebook. Here I am, 4 days and 44 supporters away, done with 1000 trees. [This is the campaign][m1] that I am talking about here.
 
 Well, I had started another campaign just to make sure that I can make it, the first one might be an accident! That is another story.
 
 The campaigns are still going on for [Cauvery Calling][cc] 🙏 and if you wish, you can start your own campaign or donate some tress 🙏. 
 
 Thank you.
+
+
+###### Please leave a comment in [Facebook here][fb-comment].
 
 
 
@@ -80,5 +83,5 @@ Thank you.
 
 [cc]: https://www.ishaoutreach.org/en/cauvery-calling
 [m1]: https://www.ishaoutreach.org/en/cauvery-calling/campaigns/cauvery-calling-action-now-12287
-
+[fb-comment]: https://www.facebook.com/saumyaray/posts/10162952072090179
 
