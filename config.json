@@ -1,6 +1,6 @@
 {
   "locals": {
-    "url": "https://saumya.github.io/ray",
+    "url": "http://localhost:8080",
     "folder": "ray",
     "name": "Saumya",
     "owner": "Saumya Ray",
