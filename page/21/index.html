@@ -23,6 +23,27 @@
       <div class="content-wrap">
         <article class="article intro">
           <header>
+            <p class="date"><span>13. February 2014</span></p>
+            <h2><a href="https://saumya.github.io/ray/articles/26/">iOS, customising top and bottom bar inside UINavigationController</a></h2>
+          </header>
+          <section class="content"><p>This may seem a difficult or simple task, depending upon what and how you want to do it.<br><a href="https://developer.apple.com/library/ios/documentation/uikit/reference/UINavigationController_Class/Reference/Reference.html">UINavigationController</a> is simply a controller to manage all the UIViewControllers inside it. Now, customising each and every <a href="https://developer.apple.com/library/ios/documentation/uikit/reference/UIViewController_Class/Reference/Reference.html#//apple_ref/doc/c_ref/UIViewController">UIViewController</a> could be done by code or InterfaceBuilder, depending upon what you want to achieve. We will be seeing here, as to how, to customise the Navigation bar (top bar) and the Tab bar (bottom bar) of the respective <a href="https://developer.apple.com/library/ios/documentation/uikit/reference/UIViewController_Class/Reference/Reference.html#//apple_ref/doc/c_ref/UIViewController">UIViewController</a>.     
+These are the references to look for while customising <a href="https://developer.apple.com/library/ios/documentation/uikit/reference/UIViewController_Class/Reference/Reference.html#//apple_ref/doc/c_ref/UIViewController">UIViewController</a> through InterfaceBuilder.<br>Hide the Tab bar (bottom<span class="widont">&nbsp;</span>bar)     </p>
+<iframe src="http://www.flickr.com/photos/saumyaray/12479138795/player/" width="408" height="477" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>     
+The above setting is on the same [UIViewController][2].         
+To display custom text on the back button in a UIViewController, look for the setting as below     
+<iframe src="http://www.flickr.com/photos/saumyaray/12476698994/player/" width="500" height="408" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>     
+Just remember that the above setting is done on the `previous` [UIViewController][2] for the next [UIViewController][2], `its tricky` that way.     
+Now the code reference for [UIViewController][2] is as below.          
+<script src="https://gist.github.com/saumya/8969920.js"></script>     
+
+
+
+<p>Happy customising.</p>
+
+          </section>
+        </article>
+        <article class="article intro">
+          <header>
             <p class="date"><span>12. February 2014</span></p>
             <h2><a href="https://saumya.github.io/ray/articles/25/">iOS fragmentation and UI development</a></h2>
           </header>
@@ -44,22 +65,6 @@ $.mobile.pageContainer.pagecontainer(<span class="string">"change"</span>, <span
 <span class="comment">//or</span>
 $(<span class="string">"body"</span>).pagecontainer(<span class="string">"change"</span>, <span class="string">"target"</span>, { options });</code></pre>
 <p><a href="http://api.jquerymobile.com/jQuery.mobile.changePage/">Here is the official document for<span class="widont">&nbsp;</span>reference</a>     </p>
-<p>Happy coding.</p>
-
-          </section>
-        </article>
-        <article class="article intro">
-          <header>
-            <p class="date"><span>10. February 2014</span></p>
-            <h2><a href="https://saumya.github.io/ray/articles/23/">Making desktop applications, using NodeJS.</a></h2>
-          </header>
-          <section class="content"><p>I am suprised to see, how big the javascript community has become! And specifically <a href="http://nodejs.org/">NodeJS</a> has some serious people in its community. I was trying to do a desktop application in javascript and without searching in the internet, I started out to do it all over again! After a couple of days, out of curiosity, did a search in internet to find, that <a href="http://nodejs.org/">NodeJS</a> has plenty of options to do the stuff.<br>Evaluating some options, I settled with <a href="https://github.com/rogerwang/node-webkit">Node-Webkit</a>. For now the best 3 in my opinion<span class="widont">&nbsp;</span>are;</p>
-<ul>
-<li><a href="https://github.com/rogerwang/node-webkit">Node-Webkit</a></li>
-<li><a href="http://appjs.com/">AppJS</a></li>
-<li><a href="http://hex.youdao.com/">hex</a></li>
-</ul>
-<p>I must say, <a href="http://nodejs.org/">NodeJS</a> has already revolutionised the internet. If at all, you think of doing something, search for a <a href="http://nodejs.org/">NodeJS</a> solution and its possible that the solution is already<span class="widont">&nbsp;</span>there.</p>
 <p>Happy coding.</p>
 
           </section>

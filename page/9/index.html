@@ -23,6 +23,16 @@
       <div class="content-wrap">
         <article class="article intro">
           <header>
+            <p class="date"><span>09. January 2016</span></p>
+            <h2><a href="https://saumya.github.io/ray/articles/62/">Cordova today</a></h2>
+          </header>
+          <section class="content"><p>During these years <a href="https://cordova.apache.org/">Cordova</a> and the mobile phones have come a long way. Today it seems the mobiles are more powerful and can handle a web application quite nicely. On the other hand <a href="https://cordova.apache.org/">Cordova</a> tool chain also has matured. Comparing to older versions of the tool chain, currently its purely <a href="https://www.npmjs.com/"><span class="caps">NPM</span></a> based, as long as we talk about cross platform development. So anything one needs is just a <code>npm install</code> away.   </p>
+<p>
+            <p class="more"><a href="/articles/62/">more</a></p>
+          </section>
+        </article>
+        <article class="article intro">
+          <header>
             <p class="date"><span>01. January 2016</span></p>
             <h2><a href="https://saumya.github.io/ray/articles/61/">New year, time to look back and forth.</a></h2>
           </header>
@@ -49,27 +59,6 @@
 <p>Client Framework</p>
 <p>Now to write a client (basically a web application) we can incorporate <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API">WebSockets</a> <span class="caps">API</span>. Well, its possible in the same manner that we can write a Socket server by our own using <a href="https://nodejs.org/">NodeJS</a> as explained above. But then <a href="http://socket.io">Socket.<span class="caps">IO</span></a> provides us a ‘.js’ file with exposed APIs to use, which is cross-platform. That means <a href="http://socket.io">Socket.<span class="caps">IO</span></a> gives a <code>frontend framework</code> too, to write our frontend Javascript<span class="widont">&nbsp;</span>applications.          </p>
 <p>Happy Noding.</p>
-
-          </section>
-        </article>
-        <article class="article intro">
-          <header>
-            <p class="date"><span>05. December 2015</span></p>
-            <h2><a href="https://saumya.github.io/ray/articles/59/">RequireJS is not require()</a></h2>
-          </header>
-          <section class="content"><p>It would have saved me time if I could have known this in the beginning. Like a lot of things in Javscript world, a same kind of name for two different functionalities makes a lot of<span class="widont">&nbsp;</span>confusion.          </p>
-<p><a href="http://requirejs.org/">RequireJS</a> is used to load <a href="http://requirejs.org/docs/whyamd.html#amd"><span class="caps">AMD</span></a><br>require() is used to load <a href="http://requirejs.org/docs/whyamd.html#commonjs">CommonJS</a>          </p>
-<p>Well, to add to confusion the <code>require()</code> function is available to both the module definitions. But both the <code>require()</code> do different things. For <a href="http://requirejs.org/docs/whyamd.html#commonjs">CommonJS</a> <code>require()</code> loads modules in a <code>synchronous</code> way, while the <code>require()</code> in <a href="http://requirejs.org/docs/whyamd.html#amd"><span class="caps">AMD</span></a> ie; in <a href="http://requirejs.org/">RequireJS</a> the modules are loaded in <code>asynhronous</code> way.             </p>
-<p><a href="http://requirejs.org/docs/whyamd.html#amd"><span class="caps">AMD</span></a> style loading<span class="widont">&nbsp;</span>is</p>
-<pre><code class="language-javascript"><span class="built_in">require</span>([<span class="string">'path/myModuleFileName.js'</span>],<span class="function"><span class="keyword">function</span>(<span class="params">MyModule</span>)</span>{
-  <span class="comment">// Use MyModule</span>
-  MyModule.doSomething();
-});</code></pre>
-<p>In <a href="http://requirejs.org/docs/whyamd.html#commonjs">CommonJS</a> its done as<span class="widont">&nbsp;</span>below</p>
-<pre><code class="language-javascript"><span class="keyword">var</span> MyModule = <span class="built_in">require</span>(<span class="string">'path/myModuleFileName.js'</span>);
-<span class="comment">// the line below is same as above, just removed the file extention .js</span>
-<span class="comment">//var MyModule = require('path/myModuleFileName');</span></code></pre>
-<p>Happy requiring.</p>
 
           </section>
         </article>
