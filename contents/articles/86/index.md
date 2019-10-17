@@ -85,7 +85,7 @@ Thank you.
 
 
 [details]: long_story.html
-[2]: https://saumya.github.io/ray/articles/86/2.html
+[2]: 2.html
 
 [cc]: https://www.ishaoutreach.org/en/cauvery-calling
 [m1]: https://www.ishaoutreach.org/en/cauvery-calling/campaigns/cauvery-calling-action-now-12287
