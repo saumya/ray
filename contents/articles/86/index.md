@@ -89,7 +89,7 @@ Thank you.
 
 
 [details]: long_story.html
-[2]: ./2.html
+[2]: 2.html
 [2-full]: https://saumya.github.io/ray/articles/86/2.html
 
 [cc]: https://www.ishaoutreach.org/en/cauvery-calling
