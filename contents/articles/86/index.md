@@ -24,7 +24,7 @@ Second day I thought I will try it for sometime and then just leave it. After al
 Wow! I was suprised as how people are willing to help. Some friends do not even ask for the cause! As I ask them "Can you donate for me?", straightaway they asked "How?! Give your account number?" Thanking all of you for being there. This does not mean there are no backfire from people. There were some `very very rude` and `negative` responses. But the thing is despite of all those, I made it. 
 
 <center>
-<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fphoto.php%3Ffbid%3D10162802205600179%26set%3Da.112470705178%26type%3D3&width=500" width="500" height="638" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fphoto.php%3Ffbid%3D10162802205600179%26set%3Da.112470705178%26type%3D3&width=400" width="400" height="658" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
 </center>
 
 I think the points below are the basics for a successful Fundraising Campaign.
