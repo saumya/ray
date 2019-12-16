@@ -23,6 +23,24 @@
       <div class="content-wrap">
         <article class="article intro">
           <header>
+            <p class="date"><span>21. May 2014</span></p>
+            <h2><a href="https://saumya.github.io/ray/articles/36/">Making a RESTful API with NodeJS and Express</a></h2>
+          </header>
+          <section class="content"><p>Here we will be making a basic <span class="caps">REST</span> <span class="caps">API</span> using the <a href="http://expressjs.com/">Express</a> framework for <a href="http://nodejs.org/">NodeJS</a>. I am not going in detail of how <a href="http://expressjs.com/">Express</a> works, but straight to the code, which is as below. While this may look as a regular <a href="http://expressjs.com/">Express</a> application, the important thing is the <span class="caps">API</span> can be called from any web<span class="widont">&nbsp;</span>server.      </p>
+<script src="https://gist.github.com/saumya/402d2f035b23d7d08877.js"></script>
+<p>While developing APIs, the first thing came to me is, how to call this from another server?! For thats the only reason we are exposing the <span class="caps">API</span>. And the answer is enable <a href="http://enable-cors.org/"><span class="caps">CORS</span></a>, cross-origin resource sharing. It simply means, make the <span class="caps">API</span> available or expose to these servers. we can specify the domain names individually or in this partcular case, we have exposed the <span class="caps">API</span> to any sever by specifying *<span class="widont">&nbsp;</span>.       </p>
+<pre><code class="language-javascript">app.all(<span class="string">'*'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res, next</span>) </span>{
+  res.header(<span class="string">"Access-Control-Allow-Origin"</span>, <span class="string">"*"</span>);
+  res.header(<span class="string">"Access-Control-Allow-Headers"</span>, <span class="string">"X-Requested-With"</span>);
+  next();
+ });</code></pre>
+<p>This means, upon any <span class="caps">API</span> call, add these headers first. And the header says, its allowed from any <code>*</code> domain. So the result is, before the <span class="caps">API</span> call hits any route, it first comes into this <code>all</code> binding and sets the values and then goes to the respective<span class="widont">&nbsp;</span>route.</p>
+<p>Happy Noding.</p>
+
+          </section>
+        </article>
+        <article class="article intro">
+          <header>
             <p class="date"><span>20. May 2014</span></p>
             <h2><a href="https://saumya.github.io/ray/articles/35/">NodeJS, HTML5, JQuery and what you may come across in an interview</a></h2>
           </header>
@@ -89,42 +107,6 @@ All that is to it is, how you <code>trigger</code> the event, from the two ways<
 <li><a href="http://backbonejs.org/#Events-trigger">BackboneJS trigger</a></li>
 </ol>
 <p>Happy Bubbling.</p>
-
-          </section>
-        </article>
-        <article class="article intro">
-          <header>
-            <p class="date"><span>03. April 2014</span></p>
-            <h2><a href="https://saumya.github.io/ray/articles/33/">jQuery and fixing AJAX cache for GET calls</a></h2>
-          </header>
-          <section class="content"><p>It will come to you very soon, if you are trying to develop any decent webapp or phonegap mobile app using <a href="http://jquery.com/">jQuery</a>.     
-The problem is, if we have the same <code>GET</code> request multiple times, by default jQuery will cache the request. The end result is the response same as the first response!! Well, there is a setting in jQuery <span class="caps">AJAX</span> setup, where in we write <code>cache:false</code> and that should work. Well, depending upon how the <span class="caps">API</span> is written on the server side, this call might not work! There are many reasons as to why it may not work, one simple reason is, to understand, how <a href="http://jquery.com/">jQuery</a> behaves, when we set <code>cache:false</code> as below.</p>
-<pre><code class="language-javascript"><span class="keyword">var</span> apiURL = <span class="string">"my/api/server/<span class="caps">URI</span>"</span>;
-$.ajax({
-    <span class="attr">url</span>:apiURL,
-    <span class="attr">cache</span>: <span class="literal">false</span>,
-    <span class="attr">success</span>:<span class="function"><span class="keyword">function</span>(<span class="params">result</span>)</span>{
-        <span class="comment">//</span>
-    },
-    <span class="attr">error</span>:<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>{           
-        <span class="comment">//            </span>
-    }   
-});</code></pre>
-<p>Now, <a href="http://jquery.com/">jQuery</a> will append <code>_={timestamp}</code> to the <span class="caps">GET</span> parameters. Here is the <a href="https://api.jquery.com/jQuery.ajax/">official documentation</a> of the same. The service call will fail, if this extra parameter is not handled properly. A little workarround, fixed this for me, which is appending the timestamp mannually by hand instead of setting <code>cache: false</code> in <span class="caps">AJAX</span> setup of <a href="http://jquery.com/">jQuery</a>. The modified code looks as<span class="widont">&nbsp;</span>this.</p>
-<pre><code class="language-javascript"><span class="keyword">var</span> timeStamp = <span class="keyword">new</span> <span class="built_in">Date</span>().getTime();
-<span class="keyword">var</span> apiURL = <span class="string">"my/api/server/<span class="caps">URI</span>/"</span>+timeStamp;
-$.ajax({
-    <span class="attr">url</span>:apiURL,
-    <span class="comment">//cache: false,//not needed now</span>
-    success:<span class="function"><span class="keyword">function</span>(<span class="params">result</span>)</span>{
-        <span class="comment">//</span>
-    },
-    <span class="attr">error</span>:<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>{           
-        <span class="comment">//            </span>
-    }   
-});</code></pre>
-<p>Well, that worked for me as my <span class="caps">API</span> end point was not handling ‘_’(underscore) properly, but could handle the extra parameters.<br>Depending upon the situations, find a right place and <code>add timestamp mannually</code>, to fix the <span class="caps">AJAX</span> cache instead of setting it in the<span class="widont">&nbsp;</span>setup.     </p>
-<p>Happy Coding.</p>
 
           </section>
         </article>

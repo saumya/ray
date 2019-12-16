@@ -5,9 +5,42 @@
     <atom:link href="https://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>https://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Wed, 16 Oct 2019 05:30:00 +0630</pubDate>
+    <pubDate>Mon, 16 Dec 2019 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Node, SQL and ORM.</title>
+      <link>https://saumya.github.io/ray/articles/87/</link>
+      <pubDate>Mon, 16 Dec 2019 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/87/</guid>
+      <author>Saumya</author>
+      <description>&lt;p&gt;Finished a project having database, &lt;a href=&quot;https://nodejs.org/en/&quot;&gt;Node&lt;/a&gt; and web UI. While connecting the database from &lt;code&gt;Node&lt;/code&gt; server is easy, there are as usual a lot of options here. First I used &lt;a href=&quot;https://github.com/mysqljs/mysql#install&quot;&gt;mysql&lt;/a&gt; but soon after realised there is an updated package to it called &lt;a href=&quot;https://github.com/sidorares/node-mysql2#installation&quot;&gt;mysql2&lt;/a&gt;. So I have shifted to &lt;a href=&quot;https://github.com/sidorares/node-mysql2#installation&quot;&gt;mysql2&lt;/a&gt;. Once its installed, it is straight forward to connect to any database. The docs are very helpful to get going.&lt;/p&gt;
+&lt;p&gt;Once database connection is done and one get used to the workflow, the need for an &lt;code&gt;ORM&lt;/code&gt; arises. There are many options for this in &lt;code&gt;Node&lt;/code&gt; land. After looking into different options, I started using &lt;a href=&quot;https://sequelize.org/&quot;&gt;Sequelize&lt;/a&gt;. It is as nice as &lt;code&gt;Node&lt;/code&gt; itself and the docs of this library is very helpful and welcoming.&lt;/p&gt;
+&lt;p&gt;These two things makes life a lot easier, while working with database from a &lt;a href=&quot;https://nodejs.org/en/&quot;&gt;Node&lt;/a&gt; server. Next comes the time to write APIs for the frontend. I used &lt;a href=&quot;https://expressjs.com/&quot;&gt;Express&lt;/a&gt; to get things done for the APIs. There is one thing to keep in mind while working with JSON for the APIs in &lt;a href=&quot;https://expressjs.com/&quot;&gt;Express&lt;/a&gt;. The thing is one has to initialise &lt;a href=&quot;https://expressjs.com/&quot;&gt;Express&lt;/a&gt; application like below.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    const express = require(&amp;#39;express&amp;#39;);
+    const app = express();
+    const port = 3000;
+    app.use(express.json());
+    app.use(express.urlencoded({ extended: false }));&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Once this is done, we are ready to take/give JSON from/to UI. If you are trying to host it on Heroku, then the following line is important.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt; app.listen( process.env.PORT || port , () =&amp;gt; console.log(`My App listening!`) );&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This is required because, Heroku does not listen on port 3000 as we are trying to make it. But Heroku port is available for us at &lt;code&gt;process.env.PORT&lt;/code&gt;. So we are using it here.&lt;/p&gt;
+&lt;p&gt;Next is making the APIs CORS enabled. Which is done as below.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    app.use(function (req, res, next) {
+        res.setHeader(&amp;#39;Access-Control-Allow-Origin&amp;#39;, &amp;#39;http://localhost:1234&amp;#39;);
+        res.setHeader(&amp;#39;Access-Control-Allow-Methods&amp;#39;, &amp;#39;GET, POST, OPTIONS, PUT, PATCH, DELETE&amp;#39;);
+        res.setHeader(&amp;#39;Access-Control-Allow-Headers&amp;#39;, &amp;#39;X-Requested-With,content-type, Accept&amp;#39;);
+        res.setHeader(&amp;#39;Access-Control-Allow-Credentials&amp;#39;, true);
+        next();
+    });&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Now we are ready to write the APIs. &lt;/p&gt;
+&lt;h3 id=&quot;front-end&quot;&gt;Front End&lt;/h3&gt;
+&lt;p&gt;The frontend I have done, is using &lt;a href=&quot;https://bulma.io/&quot;&gt;bulma&lt;/a&gt; for CSS and &lt;a href=&quot;https://jquery.com/&quot;&gt;jQuery&lt;/a&gt; for DOM manipulation. Well yes, I hava avoided all the frameworks and new toys of today. And still could do the project and finish it. I have iterated it a lot and it is all fun to see how time could be saved even if one does not use a framework! &lt;/p&gt;
+&lt;p&gt;Here are the code repositories to have a look for frontend and backend.  &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/saumya/attendance_ui&quot;&gt;Frontend&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/saumya/NodeOrmApi_102&quot;&gt;Backend&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;It is a very nice experience to see Javascript in all sides and almost no framework on frontend and still having a decent project running.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>Fundraising</title>
       <link>https://saumya.github.io/ray/articles/86/</link>
