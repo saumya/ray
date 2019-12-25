@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <title>Node, MongoDB and Express. - Saumya
+    </title>
+    <link rel="alternate" href="https://saumya.github.io/ray/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
+    <link rel="stylesheet" href="https://saumya.github.io/ray/css/main.css">
+    <link rel="stylesheet" href="https://saumya.github.io/ray/css/saumya.css">
+  </head>
+  <body class="article-detail">
+    <header class="header">
+      <div class="content-wrap">
+        <h1>Node, MongoDB and Express.</h1>
+        <p class="author">Written by <span class="author"><a href="mailto:2saumyaray@gmail.com">Saumya</a></span>
+        </p>
+      </div>
+    </header>
+    <div id="content">
+      <div class="content-wrap">
+        <article class="article">
+          <section class="content"><p>Working with databases from <a href="https://nodejs.org/en/">Node</a> is easy. But then working with a support from <span class="caps">ORM</span>/<span class="caps">ODM</span> makes it more interesting. <a href="https://saumya.github.io/ray/articles/87/">Last time</a> we saw <code>how we can work with SQL servers?</code>, this post is about NoSQL servers, specifically <a href="https://www.mongodb.com/">MongoDB</a>. There is a nice <span class="caps">ODM</span> for <a href="https://www.mongodb.com/">MongoDB</a> known as <a href="https://mongoosejs.com/">mongoose</a>. </p>
+<p>This <a href="https://mongoosejs.com/">mongoose</a> makes the database calls as simple as it could be. The concepts here<span class="widont">&nbsp;</span>are </p>
+<ul>
+<li>Define a schema</li>
+<li>Get the Model from the<span class="widont">&nbsp;</span>Schema</li>
+<li>Do the database operations on the<span class="widont">&nbsp;</span>Model</li>
+</ul>
+<p>The <a href="https://github.com/saumya/NodeOrmApi_103">sample project is here</a> in <code>Github</code>.</p>
+<p>The first call to <a href="https://mongoosejs.com/">mongoose</a> is a connection to <a href="https://www.mongodb.com/">MongoDB</a>.</p>
+<pre><code>var mongoose = require(&#39;mongoose&#39;);
+mongoose.connect( mongoURL , {useUnifiedTopology: true,useNewUrlParser: true},function(error){
+        if(error){
+            throw error
+        }
+        console.log(&#39;Connection : SUCCESS : &#39;);
+
+        // Go ahead with Database modifications
+        //
+    });</code></pre><p>There are two ways to call <code>connect</code> function. The way it is shown above will give <code>error</code> object if there is an error in connection. One has to check for the availability of this object and do things accordingly. If not present, then we have a successful connection. Once that is done, one can call the <span class="caps">CRUD</span> methods of the model for modifying the<span class="widont">&nbsp;</span>database.</p>
+<p>A model file(example: <code>dog.model.js</code>) will look as<span class="widont">&nbsp;</span>below.</p>
+<pre><code>const mongoose = require(&#39;mongoose&#39;);
+const DogSchema = mongoose.Schema({
+    name: String,
+    description: String
+});
+const DogModel = mongoose.model(&#39;MyDog&#39;, DogSchema);
+module.exports = DogModel;</code></pre><p>This is how to get the model and from there on, you can use the <a href="https://mongoosejs.com/">mongoose</a> <span class="caps">API</span> to modify the database through the model<span class="widont">&nbsp;</span>Object.</p>
+<p>Happy Coding.</p>
+</section>
+        </article>
+      </div>
+    </div>
+    <footer>
+      <div class="content-wrap">
+        <div class="nav"><a href="https://saumya.github.io/ray/">&laquo; Full blog</a></div>
+        <section class="about"><p><a href="https://saumya.github.io/">Saumya</a> is an iternal seeker.</p>
+<p>A maker of things and curious about everything. Continuous learning is, what fuels him. This blog itself, reflects one of many things he is trying at all the time.</p>
+<p>Talk to <a href="https://twitter.com/saumya">@saumya</a> on Twitter. </p>
+<span class="nav"><a href="https://saumya.github.io/ray/">Blog Home</a><a href="https://saumya.github.io/ray/archive.html">Archives</a><a href="https://saumya.github.io/ray/feed.xml">Feed</a></span>
+        </section>
+        <section class="copy">
+          <p>&copy; 2019 Saumya Ray &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>
+            <p><a href="https://github.com/saumya/wintersmithThemes/tree/master/2019">Theme 2019</a></p>
+          </p>
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>

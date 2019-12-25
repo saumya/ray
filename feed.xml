@@ -5,9 +5,45 @@
     <atom:link href="https://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>https://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Mon, 16 Dec 2019 05:30:00 +0630</pubDate>
+    <pubDate>Wed, 25 Dec 2019 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Node, MongoDB and Express.</title>
+      <link>https://saumya.github.io/ray/articles/88/</link>
+      <pubDate>Wed, 25 Dec 2019 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/88/</guid>
+      <author>Saumya</author>
+      <description>&lt;p&gt;Working with databases from &lt;a href=&quot;https://nodejs.org/en/&quot;&gt;Node&lt;/a&gt; is easy. But then working with a support from ORM/ODM makes it more interesting. &lt;a href=&quot;https://saumya.github.io/ray/articles/87/&quot;&gt;Last time&lt;/a&gt; we saw &lt;code&gt;how we can work with SQL servers?&lt;/code&gt;, this post is about NoSQL servers, specifically &lt;a href=&quot;https://www.mongodb.com/&quot;&gt;MongoDB&lt;/a&gt;. There is a nice ODM for &lt;a href=&quot;https://www.mongodb.com/&quot;&gt;MongoDB&lt;/a&gt; known as &lt;a href=&quot;https://mongoosejs.com/&quot;&gt;mongoose&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;This &lt;a href=&quot;https://mongoosejs.com/&quot;&gt;mongoose&lt;/a&gt; makes the database calls as simple as it could be. The concepts here are &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Define a schema&lt;/li&gt;
+&lt;li&gt;Get the Model from the Schema&lt;/li&gt;
+&lt;li&gt;Do the database operations on the Model&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The &lt;a href=&quot;https://github.com/saumya/NodeOrmApi_103&quot;&gt;sample project is here&lt;/a&gt; in &lt;code&gt;Github&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The first call to &lt;a href=&quot;https://mongoosejs.com/&quot;&gt;mongoose&lt;/a&gt; is a connection to &lt;a href=&quot;https://www.mongodb.com/&quot;&gt;MongoDB&lt;/a&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;var mongoose = require(&amp;#39;mongoose&amp;#39;);
+mongoose.connect( mongoURL , {useUnifiedTopology: true,useNewUrlParser: true},function(error){
+        if(error){
+            throw error
+        }
+        console.log(&amp;#39;Connection : SUCCESS : &amp;#39;);
+
+        // Go ahead with Database modifications
+        //
+    });&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;There are two ways to call &lt;code&gt;connect&lt;/code&gt; function. The way it is shown above will give &lt;code&gt;error&lt;/code&gt; object if there is an error in connection. One has to check for the availability of this object and do things accordingly. If not present, then we have a successful connection. Once that is done, one can call the CRUD methods of the model for modifying the database.&lt;/p&gt;
+&lt;p&gt;A model file(example: &lt;code&gt;dog.model.js&lt;/code&gt;) will look as below.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;const mongoose = require(&amp;#39;mongoose&amp;#39;);
+const DogSchema = mongoose.Schema({
+    name: String,
+    description: String
+});
+const DogModel = mongoose.model(&amp;#39;MyDog&amp;#39;, DogSchema);
+module.exports = DogModel;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This is how to get the model and from there on, you can use the &lt;a href=&quot;https://mongoosejs.com/&quot;&gt;mongoose&lt;/a&gt; API to modify the database through the model Object.&lt;/p&gt;
+&lt;p&gt;Happy Coding.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>Node, SQL and ORM.</title>
       <link>https://saumya.github.io/ray/articles/87/</link>

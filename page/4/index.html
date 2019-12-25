@@ -23,6 +23,20 @@
       <div class="content-wrap">
         <article class="article intro">
           <header>
+            <p class="date"><span>28. June 2018</span></p>
+            <h2><a href="https://saumya.github.io/ray/articles/79/">Firebase Cloud FireStore and checking existence of a Document</a></h2>
+          </header>
+          <section class="content"><p>The thing is <a href="https://firebase.google.com/products/firestore/">Cloud FireStore</a> is still in beta. However, I find it quite stable to run my applications. It has got all the things to run a serverless<span class="widont">&nbsp;</span>application.</p>
+<p>While this is a NoSQL database, there are <code>Documents</code> and <code>Collections</code>. I was suppose to check the existence of a <code>Document</code> before adding some values into it. There is an <span class="caps">API</span> which gives us exactly the same thing, <a href="https://firebase.google.com/docs/reference/js/firebase.firestore.DocumentSnapshot#~exists">exists</a>.</p>
+<pre><code>docSnapshot.exists</code></pre><p>The trick here is, if there is no <code>Document</code> creation involved before but still there are data inside that <code>Document</code> path (its possible) then the <code>exists</code> will always return <code>false</code>. To know whether the <code>Document</code> is actually created or not Firebase <code>Console</code> is a good help. In the <code>Console</code> the <code>Documents</code> which are not created will be shown as <em>italics</em>. Its a subtle but very informative visual<span class="widont">&nbsp;</span>separation.</p>
+<p>Just make sure, you created your <code>Document</code> before checking it with <code>exists</code>.</p>
+<p>Here is <a href="https://stackoverflow.com/questions/48068581/firebase-doc-exists-but-doc-exists-returns-false?answertab=active#tab-top">stackoverflow answer</a>, which helped me in this<span class="widont">&nbsp;</span>regard.</p>
+<p>Happy Coding.</p>
+
+          </section>
+        </article>
+        <article class="article intro">
+          <header>
             <p class="date"><span>11. April 2018</span></p>
             <h2><a href="https://saumya.github.io/ray/articles/78/">The options today</a></h2>
           </header>
@@ -59,16 +73,6 @@
 <p><img src="https://farm5.staticflickr.com/4642/25619857958_1e105aecc8_z.jpg" alt="Dibyaamshu"></p>
 <p>Happy Living.</p>
 
-          </section>
-        </article>
-        <article class="article intro">
-          <header>
-            <p class="date"><span>09. August 2017</span></p>
-            <h2><a href="https://saumya.github.io/ray/articles/76/">Slim with Composer</a></h2>
-          </header>
-          <section class="content"><p>One of the nice frameworks of <a href="https://secure.php.net/"><span class="caps">PHP</span></a> is <a href="https://github.com/slimphp">Slim</a>. Now its on its version 3. I started using it since version 1. And must admit that there are a lot of changes since its version<span class="widont">&nbsp;</span>1. </p>
-<p>
-            <p class="more"><a href="/articles/76/">more</a></p>
           </section>
         </article>
       </div>
