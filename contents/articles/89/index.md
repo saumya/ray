@@ -8,7 +8,7 @@ template: article.pug
 
 Happy new year! I am late about the post. But can not miss it. The reflection about the past year. <span class="more">
 
-![Evening Talk](saumya_2019_review.jpg)
+![Evening Talk](../../ray/articles/89/saumya_2019_review.jpg)
 
 It was a year of breaking many things. The list will be very long to write and some of the things can not even be put in words. These are both internal and external. 
 
@@ -59,10 +59,10 @@ Happy living.
 
 [s1]: https://saumya.github.io/ray/articles/87/
 
-[fund-1]: ../86/
-[fund-2]: ../86/2.html
+[fund-1]: ../../ray/articles/86/
+[fund-2]: ../../ray/articles/86/2.html
 
-[iy-1]: ../81/long_story.html
+[iy-1]: ../../ray/articles/81/long_story.html
 
 
 
