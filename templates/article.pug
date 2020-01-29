@@ -11,8 +11,9 @@ block header
   include author
   h1= page.title
   p.author
-    | #{ 'Written by ' }
+    | #{ 'Written by - ' }
     +author(page.metadata.author)
+    p(class='date')= moment.utc(page.metadata.date).format('DD MMMM YYYY')
 
 block content
   article.article
