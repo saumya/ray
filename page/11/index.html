@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width">
     <title>Saumya
     </title>
-    <link rel="alternate" href="https://saumya.github.io/ray/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
-    <link rel="stylesheet" href="https://saumya.github.io/ray/css/main.css">
-    <link rel="stylesheet" href="https://saumya.github.io/ray/css/saumya.css">
+    <link rel="alternate" href="http://localhost:1234/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
+    <link rel="stylesheet" href="http://localhost:1234/css/main.css">
+    <link rel="stylesheet" href="http://localhost:1234/css/saumya.css">
   </head>
   <body>
     <header class="header">
       <div class="content-wrap">
         <div class="logo">
-          <h1><a href="https://saumya.github.io/ray">Saumya</a></h1>
+          <h1><a href="http://localhost:1234">Saumya</a></h1>
           <p class="description">Where there is a will, there is a way.</p>
         </div>
       </div>
@@ -23,8 +23,29 @@
       <div class="content-wrap">
         <article class="article intro">
           <header>
+            <p class="date"><span>05. December 2015</span></p>
+            <h2><a href="http://localhost:1234/articles/59/">RequireJS is not require()</a></h2>
+          </header>
+          <section class="content"><p>It would have saved me time if I could have known this in the beginning. Like a lot of things in Javscript world, a same kind of name for two different functionalities makes a lot of<span class="widont">&nbsp;</span>confusion.          </p>
+<p><a href="http://requirejs.org/">RequireJS</a> is used to load <a href="http://requirejs.org/docs/whyamd.html#amd"><span class="caps">AMD</span></a><br>require() is used to load <a href="http://requirejs.org/docs/whyamd.html#commonjs">CommonJS</a>          </p>
+<p>Well, to add to confusion the <code>require()</code> function is available to both the module definitions. But both the <code>require()</code> do different things. For <a href="http://requirejs.org/docs/whyamd.html#commonjs">CommonJS</a> <code>require()</code> loads modules in a <code>synchronous</code> way, while the <code>require()</code> in <a href="http://requirejs.org/docs/whyamd.html#amd"><span class="caps">AMD</span></a> ie; in <a href="http://requirejs.org/">RequireJS</a> the modules are loaded in <code>asynhronous</code> way.             </p>
+<p><a href="http://requirejs.org/docs/whyamd.html#amd"><span class="caps">AMD</span></a> style loading<span class="widont">&nbsp;</span>is</p>
+<pre><code class="language-javascript"><span class="built_in">require</span>([<span class="string">'path/myModuleFileName.js'</span>],<span class="function"><span class="keyword">function</span>(<span class="params">MyModule</span>)</span>{
+  <span class="comment">// Use MyModule</span>
+  MyModule.doSomething();
+});</code></pre>
+<p>In <a href="http://requirejs.org/docs/whyamd.html#commonjs">CommonJS</a> its done as<span class="widont">&nbsp;</span>below</p>
+<pre><code class="language-javascript"><span class="keyword">var</span> MyModule = <span class="built_in">require</span>(<span class="string">'path/myModuleFileName.js'</span>);
+<span class="comment">// the line below is same as above, just removed the file extention .js</span>
+<span class="comment">//var MyModule = require('path/myModuleFileName');</span></code></pre>
+<p>Happy requiring.</p>
+
+          </section>
+        </article>
+        <article class="article intro">
+          <header>
             <p class="date"><span>28. November 2015</span></p>
-            <h2><a href="https://saumya.github.io/ray/articles/58/">How to React now.</a></h2>
+            <h2><a href="http://localhost:1234/articles/58/">How to React now.</a></h2>
           </header>
           <section class="content"><p>Here is the way to <a href="http://facebook.github.io/react/">React</a><span class="widont">&nbsp;</span>now.        </p>
 <ul>
@@ -98,7 +119,7 @@
         <article class="article intro">
           <header>
             <p class="date"><span>27. November 2015</span></p>
-            <h2><a href="https://saumya.github.io/ray/articles/57/">React</a></h2>
+            <h2><a href="http://localhost:1234/articles/57/">React</a></h2>
           </header>
           <section class="content"><p><a href="http://facebook.github.io/react/">React</a> is a library from the famous social networking <a href="https://www.facebook.com/">facebook</a>.          </p>
 <p>Another Javascript Library ! Yes, lets face it. Now we can not escape the fact that every other day there is someone, somwhere making a new Javascript<span class="widont">&nbsp;</span>library.           </p>
@@ -111,35 +132,19 @@
 
           </section>
         </article>
-        <article class="article intro">
-          <header>
-            <p class="date"><span>26. November 2015</span></p>
-            <h2><a href="https://saumya.github.io/ray/articles/56/">AngularJS, BackboneJS, similarities and differences.</a></h2>
-          </header>
-          <section class="content"><p>When learning a new framework or library, its very difficult to look at the same problem from a different perspective. But when you hear a lot like ‘ohh, that library is similar to this’, then the tendency comes to compare it. And when you see similar terminology in both the frameworks, then you are absolutely sure that both are doing the same thing in the same way. I think, thats the main problem here with learning the frameworks like <a href="https://angularjs.org/">AngularJS</a> and <a href="http://backbonejs.org/">BackboneJS</a>. Both of these have their own share of <code>how to</code> and <code>where to</code>, overall they seem completely different, even though the terminolgies seem completely<span class="widont">&nbsp;</span>same.         </p>
-<p>One such thing is <code>Module</code>. Both these frameworks define <code>Module</code> and use it. Both of them tell to use <code>Module</code> to separate concerns. But then both of them seem completely different while implementing the <code>Module</code>. Umm, Why?!          </p>
-<p>The <code>difference</code> is in the <code>Module</code> definition of both the frameworks. And that pushes back someone very new to the frameworks, thinking something wrong either in the frameworks or in the understanding of them. While the truth is something simpler than<span class="widont">&nbsp;</span>that.            </p>
-<p><a href="https://angularjs.org/">AngularJS</a> uses <a href="http://requirejs.org/docs/whyamd.html#commonjs">CommonJS</a> module declaration.<br><a href="http://backbonejs.org/">BackboneJS</a> uses <a href="http://requirejs.org/docs/whyamd.html#amd"><span class="caps">AMD</span></a> module<span class="widont">&nbsp;</span>declaration.          </p>
-<p>Once you know this difference, things get a lot easier to understand and will take lesser time than before to get upto speed in either of these. Have a look at the <a href="http://requirejs.org/docs/whyamd.html#definition">Module Definition</a> documentation, it explains the difference of the module definitions. The bottom line is Javascript eco-system gives us <code>two</code> different kind of <code>Module</code> systems. Frameworks use one over the other depending upon their opinion. For example <a href="https://nodejs.org/en/">NodeJS</a> uses <a href="http://requirejs.org/docs/whyamd.html#commonjs">CommonJS</a> approach, while <a href="http://dojotoolkit.org/"><span class="caps">DOJO</span> toolkit</a> uses <a href="http://requirejs.org/docs/whyamd.html#amd"><span class="caps">AMD</span></a><span class="widont">&nbsp;</span>way.          </p>
-<p>Now lets understand why this difference matters us as a developer. In <a href="http://requirejs.org/docs/whyamd.html#commonjs">CommonJS</a> style declaration, each file is supposed to be a module which is same as <a href="http://requirejs.org/docs/whyamd.html#amd"><span class="caps">AMD</span></a> way too. The <a href="http://requirejs.org/docs/whyamd.html#commonjs">CommonJS</a> module can expose as many Objects as one wants, to the application level. So that once one <a href="http://requirejs.org/docs/whyamd.html#commonjs">CommonJS</a> module is included, the application has access to all the exposed Objects in that module. For that matter you can understand, why just adding a <code>some-ng-file.js</code> and including that <code>ModuleName</code> in the dependency of an <a href="https://angularjs.org/">AngularJS</a> application, gives a lot of <code>ngObject</code> to play with. Where in <a href="http://requirejs.org/docs/whyamd.html#amd"><span class="caps">AMD</span></a> each module is exposing just one Object. If you want to play with the internals of that Object, you have to call that Object’s properties and methods. This way makes you feel like as if you are working in a Classical (Class based) language rather than Prototypical language. <a href="http://backbonejs.org/">BackboneJS</a> is doing exactly the same thing. Once you have got a <a href="http://backbonejs.org/">BackboneJS</a> module Object, you deal with it as if you are dealing with an Object from a Class. You invoke methods and properties of that<span class="widont">&nbsp;</span>Object.           </p>
-<p>So one <code>Module</code> in <a href="https://angularjs.org/">AngularJS</a> is exposing a lot to play with and one <code>Module</code> in <a href="http://backbonejs.org/">BackboneJS</a> gives you just one Object to play with. The similarity goes to other frameworks and libraries as I mentioned earlier about <a href="http://dojotoolkit.org/"><span class="caps">DOJO</span> Toolkit</a> and <a href="https://nodejs.org/en/">NodeJS</a>.</p>
-<p>Happy coding with<span class="widont">&nbsp;</span>modules.</p>
-
-          </section>
-        </article>
       </div>
     </div>
     <footer>
       <div class="content-wrap">
-        <div class="nav"><a href="https://saumya.github.io/ray/page/10/">&laquo; Newer</a><a href="https://saumya.github.io/ray/page/12/">Next page &raquo;</a>
+        <div class="nav"><a href="http://localhost:1234/page/10/">&laquo; Newer</a><a href="http://localhost:1234/page/12/">Next page &raquo;</a>
         </div>
         <section class="about"><p><a href="https://saumya.github.io/">Saumya</a> is an iternal seeker.</p>
 <p>A maker of things and curious about everything. Continuous learning is, what fuels him. This blog itself, reflects one of many things he is trying at all the time.</p>
 <p>Talk to <a href="https://twitter.com/saumya">@saumya</a> on Twitter. </p>
-<span class="nav"><a href="https://saumya.github.io/ray/">Blog Home</a><a href="https://saumya.github.io/ray/archive.html">Archives</a><a href="https://saumya.github.io/ray/feed.xml">Feed</a></span>
+<span class="nav"><a href="http://localhost:1234/">Blog Home</a><a href="http://localhost:1234/archive.html">Archives</a><a href="http://localhost:1234/feed.xml">Feed</a></span>
         </section>
         <section class="copy">
-          <p>&copy; 2019 Saumya Ray &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>
+          <p>&copy; 2020 Saumya Ray &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>
             <p><a href="https://github.com/saumya/wintersmithThemes/tree/master/2019">Theme 2019</a></p>
           </p>
         </section>

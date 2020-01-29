@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width">
     <title>Saumya
     </title>
-    <link rel="alternate" href="https://saumya.github.io/ray/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
-    <link rel="stylesheet" href="https://saumya.github.io/ray/css/main.css">
-    <link rel="stylesheet" href="https://saumya.github.io/ray/css/saumya.css">
+    <link rel="alternate" href="http://localhost:1234/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
+    <link rel="stylesheet" href="http://localhost:1234/css/main.css">
+    <link rel="stylesheet" href="http://localhost:1234/css/saumya.css">
   </head>
   <body>
     <header class="header">
       <div class="content-wrap">
         <div class="logo">
-          <h1><a href="https://saumya.github.io/ray">Saumya</a></h1>
+          <h1><a href="http://localhost:1234">Saumya</a></h1>
           <p class="description">Where there is a will, there is a way.</p>
         </div>
       </div>
@@ -23,8 +23,30 @@
       <div class="content-wrap">
         <article class="article intro">
           <header>
+            <p class="date"><span>20. May 2014</span></p>
+            <h2><a href="http://localhost:1234/articles/35/">NodeJS, HTML5, JQuery and what you may come across in an interview</a></h2>
+          </header>
+          <section class="content"><p>This is not a surprise for me, but if you are new to the modern web development and working on Javascript stack, chances are that you come acrcoss these in everyday life. It may come from anywhere, your collegue, your senior, may be from an interviewer. But the cool thing is, you are right in those cases. All you have to do is ignore them and move on. I had seen this while working on Flash platform, when people were saying things about Flash and Flex. Now the platforms are changed but situation are<span class="widont">&nbsp;</span>same.          </p>
+<ul>
+<li>NodeJS is a different<span class="widont">&nbsp;</span>language.</li>
+<li>NodeJS is not<span class="widont">&nbsp;</span>javascript.</li>
+<li>NodeJS is bad for not having X, which Y language<span class="widont">&nbsp;</span>has</li>
+<li>Jquery is a different<span class="widont">&nbsp;</span>language.</li>
+<li>JQuery is not<span class="widont">&nbsp;</span>javascript.</li>
+<li>JQuery is better than<span class="widont">&nbsp;</span>javascript.</li>
+<li><span class="caps">HTML5</span> is a programming<span class="widont">&nbsp;</span>language.</li>
+<li><span class="caps">HTML5</span> is different from<span class="widont">&nbsp;</span><span class="caps">HTML</span>.</li>
+<li>Have you worked on <span class="caps">HTML5</span>? If yes, have you worked on<span class="widont">&nbsp;</span><span class="caps">DOM</span>?</li>
+</ul>
+<p>While I could answer to all these in single lines but then the interpretation would be wrong.<br>The point is people coming from traditional languages like, Java and C# and still working on those, think they know all. I would suggest, please come out from that and even if you want to target <span class="caps">JVM</span>, use a modern language like <span class="caps">SCALA</span> instead. Well, if these guys try to code in a modern platform like NodeJS, they suddenly make the simple solution, to a complex process, as per the old knowledge they were having. Even the elegance of these new modern platforms like Ruby, NodeJS etc seem to be bad in their eyes. Well, the problem is these guys are sitting on top positions in traditional service based companies. So, if you join one of these companies, or even appear for interview in those companies, chances are you will come across these scenarios. The best part is, you are right and they are wrong. So no need to feel bad if they talk like that. Just ignore and move on but never leave learning.<br>Another big problem for working in frontend is, these conventional people think, they can do a better architecture in frontend too, just because they can use an <span class="caps">ORM</span> in backend. So all those frontend elegant solutions provided by modern stacks will be bent according to these guys to a point where the elegance becomes a pain for you as a frontend developer. They will talk that “we had done these before this way”. Common, that way is over, that time is gone. Now learn something from the modern stack developers and make an elegant backend. I have even seen, these backend guys mentoring ObjectiveC guys, how to do an iPhone Application architecture, without knowing the iOS environment. This is not specific to iOS, but any mobile platform in general. Web is not mobile and there are different considerations and architecture depending upon the platform. While the modern web stack has changed and you simply do not understand it, how you can mentor a mobile application developer! Talking of backends, these guys even think traditional databases are the best, no need to try any other. They even hesitate to try a NoSQL! Common! Thats backend, at least update yourelf there before coming to frontend. Ask any new modern stack web developer, they will blow your mind with the stuff like NoSQL to responsive web applications. Even the enterprise is shifting to modern stack, but these are people who hold on to the past.The end result is, everyone suffers. But again, if you are new to the scenario, then do not worry, they will learn from their mistakes and all these time you have to live with it. All these, for someone on top does not know how to deal with new technology.<br>My honest suggestion to all you people starting your career in web development is, learn from the web, there are plenty of brilliant tutorials and examples available online and move on. Better, if you can, shift to a company where they know, what they are doing, rather than what they used to<span class="widont">&nbsp;</span>do.</p>
+<p>Happy Coding.</p>
+
+          </section>
+        </article>
+        <article class="article intro">
+          <header>
             <p class="date"><span>18. April 2014</span></p>
-            <h2><a href="https://saumya.github.io/ray/articles/34/">Understanding BackboneJS View Event, jQuery Event and trigger()</a></h2>
+            <h2><a href="http://localhost:1234/articles/34/">Understanding BackboneJS View Event, jQuery Event and trigger()</a></h2>
           </header>
           <section class="content"><p>The fun in working with <a href="http://backbonejs.org/">BackboneJS</a> is freedom. The library is so decoupled that, one can really do any kind of architecture for an application. This freedom will come in your way if you do not know what is happening behind. We will be focusing on ‘Event’ here.<br>Working with <a href="http://backbonejs.org/">BackboneJS</a> often involves working with <a href="http://jquery.com/">jQuery</a> too as a <span class="caps">DOM</span> manupilation library. When we work on <span class="caps">HTML</span> and <span class="caps">DOM</span>, in terms of <a href="http://backbonejs.org/">BackboneJS</a> we are working on View. At this point we must understand, that this BackboneView can dispatch event and the <span class="caps">DOM</span> we are dealing with also is capable of dispatching event. The point to note here is event dispatched through <a href="http://backbonejs.org/">BackboneJS</a> framework, does not bubble. Where as the default <span class="caps">DOM</span> events bubble. Well, since we generally work with <a href="http://jquery.com/">jQuery</a> for <span class="caps">DOM</span> manupilation, events fired through <a href="http://jquery.com/">jQuery</a> also has the same effect as <span class="caps">DOM</span> events, they bubble. Working with a <a href="http://backbonejs.org/">BackboneJS</a> ViewObject, we deal with <code>el</code> of the ViewObject. <a href="http://backbonejs.org/">BackboneJS</a> also provides a <code>$el</code> on each view. Take a note of this <code>$el</code>, which is a <a href="http://jquery.com/">jQuery</a> object.<br>Dispatching an Event in <a href="http://backbonejs.org/">BackboneJS</a> is done<span class="widont">&nbsp;</span>as</p>
 <pre><code class="language-javascript"><span class="comment">//somewhere inside the View</span>
@@ -73,7 +95,7 @@ All that is to it is, how you <code>trigger</code> the event, from the two ways<
         <article class="article intro">
           <header>
             <p class="date"><span>03. April 2014</span></p>
-            <h2><a href="https://saumya.github.io/ray/articles/33/">jQuery and fixing AJAX cache for GET calls</a></h2>
+            <h2><a href="http://localhost:1234/articles/33/">jQuery and fixing AJAX cache for GET calls</a></h2>
           </header>
           <section class="content"><p>It will come to you very soon, if you are trying to develop any decent webapp or phonegap mobile app using <a href="http://jquery.com/">jQuery</a>.     
 The problem is, if we have the same <code>GET</code> request multiple times, by default jQuery will cache the request. The end result is the response same as the first response!! Well, there is a setting in jQuery <span class="caps">AJAX</span> setup, where in we write <code>cache:false</code> and that should work. Well, depending upon how the <span class="caps">API</span> is written on the server side, this call might not work! There are many reasons as to why it may not work, one simple reason is, to understand, how <a href="http://jquery.com/">jQuery</a> behaves, when we set <code>cache:false</code> as below.</p>
@@ -106,31 +128,19 @@ $.ajax({
 
           </section>
         </article>
-        <article class="article intro">
-          <header>
-            <p class="date"><span>15. March 2014</span></p>
-            <h2><a href="https://saumya.github.io/ray/articles/32/">Back to Lime (OpenFL)</a></h2>
-          </header>
-          <section class="content"><p>Its almost 2 months, I did a project on <a href="https://github.com/openfl/lime">Lime</a>(<a href="http://www.openfl.org/">OpneFL</a>). Fortunately this weekend is the time and I started it. Well, first thing to mention is, there is a huge update to the whole tooling and many libraries of the <a href="http://haxe.org/"><span class="caps">HAXE</span></a>, Lime and OpenFL land. Allmost all the libs are updated.<br>Upon the develoment land on <code>mac</code>, the first thing I noticed is, there is no need to<span class="widont">&nbsp;</span>type</p>
-<pre><code>haxelib run openfl test neko
-haxelib run lime test neko</code></pre><p>This is just as simple as calling directly as<span class="widont">&nbsp;</span>below.</p>
-<pre><code>lime test neko</code></pre><p>Yeah. Thats good start. I thought to document it here, as I have used to the commands on <code>mac</code> and suddenly its changed (though changed for good), a note would be a point of reference in the future to refer<span class="widont">&nbsp;</span>to.</p>
-
-          </section>
-        </article>
       </div>
     </div>
     <footer>
       <div class="content-wrap">
-        <div class="nav"><a href="https://saumya.github.io/ray/page/18/">&laquo; Newer</a><a href="https://saumya.github.io/ray/page/20/">Next page &raquo;</a>
+        <div class="nav"><a href="http://localhost:1234/page/18/">&laquo; Newer</a><a href="http://localhost:1234/page/20/">Next page &raquo;</a>
         </div>
         <section class="about"><p><a href="https://saumya.github.io/">Saumya</a> is an iternal seeker.</p>
 <p>A maker of things and curious about everything. Continuous learning is, what fuels him. This blog itself, reflects one of many things he is trying at all the time.</p>
 <p>Talk to <a href="https://twitter.com/saumya">@saumya</a> on Twitter. </p>
-<span class="nav"><a href="https://saumya.github.io/ray/">Blog Home</a><a href="https://saumya.github.io/ray/archive.html">Archives</a><a href="https://saumya.github.io/ray/feed.xml">Feed</a></span>
+<span class="nav"><a href="http://localhost:1234/">Blog Home</a><a href="http://localhost:1234/archive.html">Archives</a><a href="http://localhost:1234/feed.xml">Feed</a></span>
         </section>
         <section class="copy">
-          <p>&copy; 2019 Saumya Ray &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>
+          <p>&copy; 2020 Saumya Ray &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>
             <p><a href="https://github.com/saumya/wintersmithThemes/tree/master/2019">Theme 2019</a></p>
           </p>
         </section>
