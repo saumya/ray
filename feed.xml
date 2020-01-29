@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Saumya</title>
-    <atom:link href="http://localhost:1234/feed.xml" rel="self" type="application/rss+xml"></atom:link>
-    <link>http://localhost:1234</link>
+    <atom:link href="https://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
+    <link>https://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
     <pubDate>Wed, 29 Jan 2020 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
     <item>
       <title>The 2019.</title>
-      <link>http://localhost:1234/articles/89/</link>
+      <link>https://saumya.github.io/ray/articles/89/</link>
       <pubDate>Wed, 29 Jan 2020 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/89/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/89/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;Happy new year! I am late about the post. But can not miss it. The reflection about the past year. &lt;span class=&quot;more&quot;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/articles/89/saumya_2019_review.jpg&quot; alt=&quot;Evening Talk&quot;&gt;&lt;/p&gt;
@@ -25,7 +25,7 @@
 &lt;p&gt;The year opened it all. The people who stand by me and the people who just pretend, are out in the open. It just amazes to see how people react, even if one does not do anything after knowing the facts.&lt;/p&gt;
 &lt;p&gt;Worked in Architecure after a long time. Thanking all those, who gave me a chance to do it.&lt;/p&gt;
 &lt;p&gt;Pitching for a startup, raising funds and group activity with new people for social cause brought in a whole new experience in itself.&lt;/p&gt;
-&lt;p&gt;My fund raising expereince &lt;a href=&quot;http://localhost:1234/articles/86/&quot;&gt;part 1&lt;/a&gt;, &lt;a href=&quot;http://localhost:1234/articles/86/2.html&quot;&gt;part 2&lt;/a&gt;. 🙏 The campaigns are open and you still can donate.&lt;/p&gt;
+&lt;p&gt;My fund raising expereince &lt;a href=&quot;https://saumya.github.io/ray/articles/86/&quot;&gt;part 1&lt;/a&gt;, &lt;a href=&quot;https://saumya.github.io/ray/articles/86/2.html&quot;&gt;part 2&lt;/a&gt;. 🙏 The campaigns are open and you still can donate.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Make room for new. New can only come in, if you do break the old. Old thoughts and habits are a dead-end.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -40,9 +40,9 @@
     </item>
     <item>
       <title>Node, MongoDB and Express.</title>
-      <link>http://localhost:1234/articles/88/</link>
+      <link>https://saumya.github.io/ray/articles/88/</link>
       <pubDate>Wed, 25 Dec 2019 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/88/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/88/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;Working with databases from &lt;a href=&quot;https://nodejs.org/en/&quot;&gt;Node&lt;/a&gt; is easy. But then working with a support from ORM/ODM makes it more interesting. &lt;a href=&quot;https://saumya.github.io/ray/articles/87/&quot;&gt;Last time&lt;/a&gt; we saw &lt;code&gt;how we can work with SQL servers?&lt;/code&gt;, this post is about NoSQL servers, specifically &lt;a href=&quot;https://www.mongodb.com/&quot;&gt;MongoDB&lt;/a&gt;. There is a nice ODM for &lt;a href=&quot;https://www.mongodb.com/&quot;&gt;MongoDB&lt;/a&gt; known as &lt;a href=&quot;https://mongoosejs.com/&quot;&gt;mongoose&lt;/a&gt;. &lt;/p&gt;
 &lt;p&gt;This &lt;a href=&quot;https://mongoosejs.com/&quot;&gt;mongoose&lt;/a&gt; makes the database calls as simple as it could be. The concepts here are &lt;/p&gt;
@@ -76,9 +76,9 @@ module.exports = DogModel;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This is how to get t
     </item>
     <item>
       <title>Node, SQL and ORM.</title>
-      <link>http://localhost:1234/articles/87/</link>
+      <link>https://saumya.github.io/ray/articles/87/</link>
       <pubDate>Mon, 16 Dec 2019 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/87/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/87/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;Finished a project having database, &lt;a href=&quot;https://nodejs.org/en/&quot;&gt;Node&lt;/a&gt; and web UI. While connecting the database from &lt;code&gt;Node&lt;/code&gt; server is easy, there are as usual a lot of options here. First I used &lt;a href=&quot;https://github.com/mysqljs/mysql#install&quot;&gt;mysql&lt;/a&gt; but soon after realised there is an updated package to it called &lt;a href=&quot;https://github.com/sidorares/node-mysql2#installation&quot;&gt;mysql2&lt;/a&gt;. So I have shifted to &lt;a href=&quot;https://github.com/sidorares/node-mysql2#installation&quot;&gt;mysql2&lt;/a&gt;. Once its installed, it is straight forward to connect to any database. The docs are very helpful to get going.&lt;/p&gt;
 &lt;p&gt;Once database connection is done and one get used to the workflow, the need for an &lt;code&gt;ORM&lt;/code&gt; arises. There are many options for this in &lt;code&gt;Node&lt;/code&gt; land. After looking into different options, I started using &lt;a href=&quot;https://sequelize.org/&quot;&gt;Sequelize&lt;/a&gt;. It is as nice as &lt;code&gt;Node&lt;/code&gt; itself and the docs of this library is very helpful and welcoming.&lt;/p&gt;
@@ -109,9 +109,9 @@ module.exports = DogModel;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This is how to get t
     </item>
     <item>
       <title>Fundraising</title>
-      <link>http://localhost:1234/articles/86/</link>
+      <link>https://saumya.github.io/ray/articles/86/</link>
       <pubDate>Wed, 16 Oct 2019 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/86/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/86/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;I have never thought I could do a fundraising campaign. I had a believe that even if I could start, it would be a failure. &lt;/p&gt;
 &lt;h3 id=&quot;the-problem-is-mind&quot;&gt;The problem is &lt;strong&gt;&lt;code&gt;MIND&lt;/code&gt;&lt;/strong&gt;!&lt;/h3&gt;
@@ -172,9 +172,9 @@ module.exports = DogModel;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This is how to get t
     </item>
     <item>
       <title>Removed Commeting from here, Disqus!</title>
-      <link>http://localhost:1234/articles/85/</link>
+      <link>https://saumya.github.io/ray/articles/85/</link>
       <pubDate>Mon, 07 Oct 2019 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/85/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/85/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;I was ignoring this for a long time. As &lt;code&gt;Disqus&lt;/code&gt; was powering this blog comments, I thought it is alright to ignore. Then came a time, when I found it is true, as to why people are getting away from &lt;code&gt;Disqus&lt;/code&gt;. A simple search in the internet will fetch you a lot of information about what/why of this commenting system. So I am not putting out the pointed information about the story here.&lt;/p&gt;
 &lt;p&gt;Finally I am here, removing that comment system from the blog here. Not sure what I am going to use yet. Till that time it is alright to ping me up on &lt;a href=&quot;https://twitter.com/saumya&quot;&gt;Twitter&lt;/a&gt;.&lt;/p&gt;
@@ -182,9 +182,9 @@ module.exports = DogModel;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This is how to get t
     </item>
     <item>
       <title>Building HTML Email Newsletter</title>
-      <link>http://localhost:1234/articles/84/</link>
+      <link>https://saumya.github.io/ray/articles/84/</link>
       <pubDate>Mon, 17 Jun 2019 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/84/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/84/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;This came to me as a surprise that, in today’s world for web related work one has to work with &lt;code&gt;tables&lt;/code&gt; as if its 1999. Well, I am talking about designing and developing for email newsletters. Here is a &lt;a href=&quot;https://www.smashingmagazine.com/2010/01/design-and-build-an-email-newsletter-without-losing-your-mind/&quot;&gt;tutorial from 2010&lt;/a&gt; which still is relevant. So yes, if you have gone through the above tutorial you have already known, for the reference I will mention it again here. &lt;/p&gt;
 &lt;span class=&quot;more&quot;&gt;
@@ -212,9 +212,9 @@ module.exports = DogModel;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This is how to get t
     </item>
     <item>
       <title>Slim Framework and Composer Autoload</title>
-      <link>http://localhost:1234/articles/83/</link>
+      <link>https://saumya.github.io/ray/articles/83/</link>
       <pubDate>Tue, 29 Jan 2019 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/83/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/83/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;Like most of the PHP frameworks, &lt;a href=&quot;https://www.slimframework.com/&quot;&gt;Slim framework&lt;/a&gt; uses &lt;a href=&quot;https://getcomposer.org/&quot;&gt;Composer&lt;/a&gt; for developer experience. &lt;a href=&quot;https://getcomposer.org/&quot;&gt;Composer&lt;/a&gt; does a lot of things which manually one has to do before. This post is specifically with regard to &lt;a href=&quot;https://www.slimframework.com/&quot;&gt;Slim framework&lt;/a&gt;. However, this can also be refered to, for other frameworks which use &lt;a href=&quot;https://getcomposer.org/&quot;&gt;Composer&lt;/a&gt;.&lt;/p&gt;
 &lt;span class=&quot;more&quot;&gt;
@@ -260,9 +260,9 @@ class AppConfig
     </item>
     <item>
       <title>Cake &amp; Slim</title>
-      <link>http://localhost:1234/articles/82/</link>
+      <link>https://saumya.github.io/ray/articles/82/</link>
       <pubDate>Sun, 27 Jan 2019 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/82/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/82/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;PHP frameworks have really taken up some new concepts from other technology such as NodeJS and Ruby. On my search for an easy deployable framework to server, I found both &lt;a href=&quot;https://cakephp.org/&quot;&gt;CakePHP&lt;/a&gt; and &lt;a href=&quot;https://www.slimframework.com/&quot;&gt;Slim&lt;/a&gt; are good enough.&lt;/p&gt;
 &lt;p&gt;For getting started with development &lt;a href=&quot;https://cakephp.org/&quot;&gt;CakePHP&lt;/a&gt; seems like old school as one just needs to download the package and put it on a server and get into coding. While &lt;a href=&quot;https://www.slimframework.com/&quot;&gt;Slim&lt;/a&gt; seems to be a little more learning as one needs to get used to &lt;a href=&quot;https://getcomposer.org/&quot;&gt;Composer&lt;/a&gt;. &lt;a href=&quot;https://cakephp.org/&quot;&gt;CakePHP&lt;/a&gt; also has an option to get started using &lt;a href=&quot;https://getcomposer.org/&quot;&gt;Composer&lt;/a&gt;.&lt;/p&gt;
@@ -271,9 +271,9 @@ class AppConfig
     </item>
     <item>
       <title>The 2018.</title>
-      <link>http://localhost:1234/articles/81/</link>
+      <link>https://saumya.github.io/ray/articles/81/</link>
       <pubDate>Fri, 11 Jan 2019 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/81/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/81/</guid>
       <author>Saumya</author>
       <description>&lt;h6 id=&quot;december-of-2017-ended-with-my-first-ever-visit-to-court-at-cuttack-odisha&quot;&gt;December of 2017 ended with my first ever visit to Court at Cuttack, Odisha.&lt;/h6&gt;
 &lt;p&gt;The visits to the Court continue through out 2018. &lt;del&gt;That’s another story.&lt;/del&gt;&lt;/p&gt;
@@ -289,14 +289,14 @@ class AppConfig
 &lt;li&gt;Met with a lot of friends after 20 years, some after 30 years!&lt;/li&gt;
 &lt;li&gt;Dealt with Court and Lawyers &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The &lt;a href=&quot;http://localhost:1234/articles/81/long_story.html&quot;&gt;long story is here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The &lt;a href=&quot;https://saumya.github.io/ray/articles/81/long_story.html&quot;&gt;long story is here&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     <item>
       <title>SketchUp + Visualizer</title>
-      <link>http://localhost:1234/articles/80/</link>
+      <link>https://saumya.github.io/ray/articles/80/</link>
       <pubDate>Mon, 02 Jul 2018 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/80/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/80/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;While doing some architectural visualisations recently, I got amazed by the tools available now. From costlier to the free versions, they are all around the place. However there are very few which work with the workflow of an architect.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://farm2.staticflickr.com/1768/28253995577_8c744d682f_z.jpg&quot; alt=&quot;saumya visualisation&quot;&gt;&lt;/p&gt;
@@ -315,9 +315,9 @@ class AppConfig
     </item>
     <item>
       <title>Firebase Cloud FireStore and checking existence of a Document</title>
-      <link>http://localhost:1234/articles/79/</link>
+      <link>https://saumya.github.io/ray/articles/79/</link>
       <pubDate>Thu, 28 Jun 2018 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/79/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/79/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;The thing is &lt;a href=&quot;https://firebase.google.com/products/firestore/&quot;&gt;Cloud FireStore&lt;/a&gt; is still in beta. However, I find it quite stable to run my applications. It has got all the things to run a serverless application.&lt;/p&gt;
 &lt;p&gt;While this is a NoSQL database, there are &lt;code&gt;Documents&lt;/code&gt; and &lt;code&gt;Collections&lt;/code&gt;. I was suppose to check the existence of a &lt;code&gt;Document&lt;/code&gt; before adding some values into it. There is an API which gives us exactly the same thing, &lt;a href=&quot;https://firebase.google.com/docs/reference/js/firebase.firestore.DocumentSnapshot#~exists&quot;&gt;exists&lt;/a&gt;.&lt;/p&gt;
@@ -329,9 +329,9 @@ class AppConfig
     </item>
     <item>
       <title>The options today</title>
-      <link>http://localhost:1234/articles/78/</link>
+      <link>https://saumya.github.io/ray/articles/78/</link>
       <pubDate>Wed, 11 Apr 2018 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/78/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/78/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;Social networks -      &lt;/p&gt;
 &lt;ul&gt;
@@ -353,9 +353,9 @@ class AppConfig
     </item>
     <item>
       <title>The year 2017</title>
-      <link>http://localhost:1234/articles/77/</link>
+      <link>https://saumya.github.io/ray/articles/77/</link>
       <pubDate>Thu, 04 Jan 2018 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/77/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/77/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;The year 2017, was an exciting year. A lot of things have started and could be seen as a year of life.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://farm5.staticflickr.com/4682/38781051814_1414f9066b_z.jpg&quot; alt=&quot;Dibyaamshu&quot;&gt;&lt;/p&gt;
@@ -369,9 +369,9 @@ class AppConfig
     </item>
     <item>
       <title>Slim with Composer</title>
-      <link>http://localhost:1234/articles/76/</link>
+      <link>https://saumya.github.io/ray/articles/76/</link>
       <pubDate>Wed, 09  Aug 2017 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/76/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/76/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;One of the nice frameworks of &lt;a href=&quot;https://secure.php.net/&quot;&gt;PHP&lt;/a&gt; is &lt;a href=&quot;https://github.com/slimphp&quot;&gt;Slim&lt;/a&gt;. Now its on its version 3. I started using it since version 1. And must admit that there are a lot of changes since its version 1. &lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
@@ -390,9 +390,9 @@ class AppConfig
     </item>
     <item>
       <title>Five OpenFL Extensions for Android</title>
-      <link>http://localhost:1234/articles/75/</link>
+      <link>https://saumya.github.io/ray/articles/75/</link>
       <pubDate>Tue, 09 May 2017 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/75/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/75/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;Native Extensions for &lt;a href=&quot;http://www.openfl.org/&quot;&gt;OpenFL&lt;/a&gt; are the things which bind &lt;a href=&quot;http://www.openfl.org/&quot;&gt;OpenFL&lt;/a&gt; applications with the native platform it is running on. There are some extensions provided from &lt;a href=&quot;http://www.openfl.org/&quot;&gt;OpenFL&lt;/a&gt; itself. If you go to &lt;a href=&quot;http://www.openfl.org/&quot;&gt;OpenFL&lt;/a&gt; repository on github, you can find for yourself extensions, such as &lt;a href=&quot;https://github.com/openfl/extension-iap&quot;&gt;In-App Purchase&lt;/a&gt; and &lt;a href=&quot;https://github.com/openfl/extension-admob&quot;&gt;Google AdMob&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
@@ -423,9 +423,9 @@ class AppConfig
     </item>
     <item>
       <title>Maintaining a React Native application on iOS.</title>
-      <link>http://localhost:1234/articles/74/</link>
+      <link>https://saumya.github.io/ray/articles/74/</link>
       <pubDate>Thu, 23 Mar 2017 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/74/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/74/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt; That may sound just an easy job. Surprisingly its not! Its because &lt;a href=&quot;https://facebook.github.io/react-native/&quot;&gt;React Native&lt;/a&gt;is evolving at a very high speed. The community is vibrant and &lt;a href=&quot;https://facebook.github.io/react/&quot;&gt;React&lt;/a&gt; itself is also moving at a very high speed. Though there are minimal API changes but there are changes and sometimes there are breaking changes. Well as for iOS, we know it also comes with API changes and sometimes breaking changes. &lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
@@ -444,9 +444,9 @@ class AppConfig
     </item>
     <item>
       <title>Reflecting on 2016.</title>
-      <link>http://localhost:1234/articles/73/</link>
+      <link>https://saumya.github.io/ray/articles/73/</link>
       <pubDate>Tue, 03 Jan 2017 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/73/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/73/</guid>
       <author>Saumya</author>
       <description>&lt;ul&gt;
 &lt;li&gt;Moved to a new place&lt;/li&gt;
@@ -486,9 +486,9 @@ Cheers.&lt;/p&gt;
     </item>
     <item>
       <title>React Native on Android, changing app name, package name and version code</title>
-      <link>http://localhost:1234/articles/72/</link>
+      <link>https://saumya.github.io/ray/articles/72/</link>
       <pubDate>Fri, 11 Nov 2016 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/72/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/72/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;There are things one may need to change in the release build for Android. 
 Things like &lt;code&gt;App Name&lt;/code&gt; are a case here. Suppose you start developing by initialising to a generic &lt;code&gt;App Name&lt;/code&gt; and at the time of release one need to change to the actual &lt;code&gt;App Name&lt;/code&gt;. Same goes for &lt;code&gt;package name&lt;/code&gt;, which is visible in &lt;code&gt;Google Play Store&lt;/code&gt; and as well in the &lt;code&gt;App details&lt;/code&gt; of the Android phone. 
@@ -533,9 +533,9 @@ Things like &lt;code&gt;App Name&lt;/code&gt; are a case here. Suppose you start
     </item>
     <item>
       <title>React Native, Android and Loading embeded HTML pages in WebView</title>
-      <link>http://localhost:1234/articles/71/</link>
+      <link>https://saumya.github.io/ray/articles/71/</link>
       <pubDate>Wed, 09 Nov 2016 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/71/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/71/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;The problem is in Android release builds, where the local HTML files do not load. This is not a problem in debug builds. I have not tested the final iOS builds. Loading of a local html file in a webview in &lt;a href=&quot;https://facebook.github.io/react-native/&quot;&gt;React Native&lt;/a&gt; is as simple as this.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;&amp;lt;WebView source={{ uri: &amp;#39;../assets/generic.html&amp;#39; }} /&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
@@ -553,9 +553,9 @@ Things like &lt;code&gt;App Name&lt;/code&gt; are a case here. Suppose you start
     </item>
     <item>
       <title>Fixing NPM permissions</title>
-      <link>http://localhost:1234/articles/70/</link>
+      <link>https://saumya.github.io/ray/articles/70/</link>
       <pubDate>Wed, 05 Oct 2016 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/70/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/70/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;The problem is to use &lt;code&gt;sudo&lt;/code&gt; everywhere and try to fix things that way. Especially while dealing with global &lt;a href=&quot;https://www.npmjs.com/&quot;&gt;NPM&lt;/a&gt; modules. Sometimes it may happen that &lt;code&gt;sudo&lt;/code&gt; also will fail to install.   &lt;/p&gt;
 &lt;p&gt;&lt;code&gt;TL;DR:&lt;/code&gt; The fix I am using is to &lt;code&gt;change&lt;/code&gt; the &lt;code&gt;user permission&lt;/code&gt; to &lt;code&gt;current user&lt;/code&gt;.   &lt;/p&gt;
@@ -579,9 +579,9 @@ Things like &lt;code&gt;App Name&lt;/code&gt; are a case here. Suppose you start
     </item>
     <item>
       <title>Realm in Swift</title>
-      <link>http://localhost:1234/articles/69/</link>
+      <link>https://saumya.github.io/ray/articles/69/</link>
       <pubDate>Fri, 08 Jul 2016 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/69/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/69/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;Working on a local storage for persistence in data has a lot of solutions. While we can definitely go ahead and just store &lt;code&gt;String&lt;/code&gt; values and play with it, Apple provides some solutions to play with local data as if its a database. The thing is, its not that intuitive. Other solutions are there, but the simplicity of &lt;a href=&quot;https://realm.io/&quot;&gt;Realm.io&lt;/a&gt; is nice and addictive.            &lt;/p&gt;
 &lt;p&gt;Lets see how in &lt;a href=&quot;https://developer.apple.com/swift/&quot;&gt;swift&lt;/a&gt; we could play with &lt;a href=&quot;https://realm.io/&quot;&gt;Realm&lt;/a&gt;.&lt;/p&gt;
@@ -642,9 +642,9 @@ Things like &lt;code&gt;App Name&lt;/code&gt; are a case here. Suppose you start
     </item>
     <item>
       <title>NSNotification in Swift</title>
-      <link>http://localhost:1234/articles/68/</link>
+      <link>https://saumya.github.io/ray/articles/68/</link>
       <pubDate>Thu, 30 Jun 2016 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/68/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/68/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;While Apple has put a lot of design patterns to develop applications for iOS, the flexibility of an event driven application development surely has its merits. The very de-coupled application is so nice to play around with. Well, the downside is to find where is what. For a strictly coupled application, one can definitely find the root of the roots. But for a de-coupled application its very difficult to find what is happening where. Then comes good practices of code commeting and logger messages to rescue. That topic is a separate post I hope.            &lt;/p&gt;
 &lt;p&gt;Lets see how in &lt;a href=&quot;https://developer.apple.com/swift/&quot;&gt;swift&lt;/a&gt; we could write an event driven application.&lt;/p&gt;
@@ -673,9 +673,9 @@ Things like &lt;code&gt;App Name&lt;/code&gt; are a case here. Suppose you start
     </item>
     <item>
       <title>Cocoapods</title>
-      <link>http://localhost:1234/articles/67/</link>
+      <link>https://saumya.github.io/ray/articles/67/</link>
       <pubDate>Wed, 22 Jun 2016 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/67/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/67/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;Developing for iDevices has come a long way. With the new and emerging tools everyday, the pain is also fading away. In the beginning I used to avoid any third party tools to help me build for iOS in ObjectiveC. Back then, both the XCode environment and the tools were emerging, so it was obvious to run into the edge cases very soon. The time has changed and so as the tools have matured.&lt;br&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;br&gt;One such thing is dependency manager for XCode projects. While there are options here, but [Cocoapods] &lt;a href=&quot;https://cocoapods.org/&quot;&gt;1&lt;/a&gt; seems to be matured enough to go production without problem. There are plenty of packges available and I must say that its impressive in the way, the community is producing quality stuff. Its like &lt;a href=&quot;https://www.npmjs.com/&quot;&gt;NPM&lt;/a&gt; for XCode projects. The best part is whether the project is in Swift or ObjectiveC, one can get the dependecies for either from &lt;a href=&quot;https://cocoapods.org/&quot;&gt;Cocoapods&lt;/a&gt;.          &lt;/p&gt;
 &lt;p&gt;If you have not yet, just give it a try and I am sure you will save a lot of time of your life shifting from manually managing dependencies.          &lt;/p&gt;
@@ -684,9 +684,9 @@ Things like &lt;code&gt;App Name&lt;/code&gt; are a case here. Suppose you start
     </item>
     <item>
       <title>React and understanding Redux, Thunk, Router.</title>
-      <link>http://localhost:1234/articles/66/</link>
+      <link>https://saumya.github.io/ray/articles/66/</link>
       <pubDate>Thu, 12 May 2016 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/66/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/66/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;&lt;a href=&quot;https://github.com/facebook/react&quot;&gt;React&lt;/a&gt; is the view as they call it in a MVC (Model-View-Controller) world. Actually it is enough to build the whole frontend with &lt;a href=&quot;https://github.com/facebook/react&quot;&gt;React&lt;/a&gt; and its components. One does not need anything else to make a &lt;a href=&quot;https://github.com/facebook/react&quot;&gt;React&lt;/a&gt; application. Then comes a time, when one thinks of organising the code. Well, then and only then the things we talk now will make sense.&lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;
@@ -711,9 +711,9 @@ I asked and you may too, “so what are these fancy terms are for?” &lt;/p&gt;
     </item>
     <item>
       <title>React &amp; Material-UI, recently breaking changes.</title>
-      <link>http://localhost:1234/articles/65/</link>
+      <link>https://saumya.github.io/ray/articles/65/</link>
       <pubDate>Sun, 17 Apr 2016 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/65/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/65/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;Here we will talk about the recent changes in &lt;a href=&quot;http://www.material-ui.com/&quot;&gt;Material-UI&lt;/a&gt; and how it affects our &lt;a href=&quot;http://facebook.github.io/react/&quot;&gt;React&lt;/a&gt; code.&lt;/p&gt;
 &lt;p&gt;Before moving further, if you have not yet started with &lt;a href=&quot;http://www.material-ui.com/&quot;&gt;Material-UI&lt;/a&gt;, &lt;a href=&quot;http://saumya.github.io/ray/articles/63/&quot;&gt;here is my first post&lt;/a&gt; describing the details. &lt;/p&gt;
@@ -750,9 +750,9 @@ getChildContext() {
     </item>
     <item>
       <title>React Native</title>
-      <link>http://localhost:1234/articles/64/</link>
+      <link>https://saumya.github.io/ray/articles/64/</link>
       <pubDate>Mon, 04 Apr 2016 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/64/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/64/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;The beauty of &lt;a href=&quot;http://facebook.github.io/react/&quot;&gt;React&lt;/a&gt; is it now has a lot to offer and &lt;a href=&quot;https://facebook.github.io/react-native/&quot;&gt;React Native&lt;/a&gt; is just an amazing way to create native mobile applications with Javascript or more specifically with &lt;a href=&quot;http://facebook.github.io/react/&quot;&gt;React&lt;/a&gt;. Yes, we are talking about native applications. Unlike &lt;a href=&quot;https://cordova.apache.org/&quot;&gt;Cordova&lt;/a&gt;, &lt;a href=&quot;https://facebook.github.io/react-native/&quot;&gt;React Native&lt;/a&gt; applications do not run inside a webview. These applications use the native components from the environment it is running in. If its running in iOS the components like buttons, views etc are real iOS components. Same is true for Android.&lt;/p&gt;
 &lt;p&gt;From the first few weeks of &lt;a href=&quot;https://facebook.github.io/react-native/&quot;&gt;React Native&lt;/a&gt; I must say its worth a try. There might be a chance that even the same code is running in both iOS and Android. Though its almost always a little different code for both the platforms. But all in all, its all Javascript.&lt;/p&gt;
@@ -762,9 +762,9 @@ getChildContext() {
     </item>
     <item>
       <title>React with Router and Material UI</title>
-      <link>http://localhost:1234/articles/63/</link>
+      <link>https://saumya.github.io/ray/articles/63/</link>
       <pubDate>Fri, 11 Mar 2016 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/63/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/63/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;This is a little more than just the basics. If you do not have any idea about &lt;a href=&quot;http://facebook.github.io/react/&quot;&gt;React&lt;/a&gt;, here are two links to get started with.          &lt;/p&gt;
 &lt;ul&gt;
@@ -814,9 +814,9 @@ Here is an example.&lt;/p&gt;
     </item>
     <item>
       <title>Cordova today</title>
-      <link>http://localhost:1234/articles/62/</link>
+      <link>https://saumya.github.io/ray/articles/62/</link>
       <pubDate>Sat, 09 Jan 2016 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/62/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/62/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;During these years &lt;a href=&quot;https://cordova.apache.org/&quot;&gt;Cordova&lt;/a&gt; and the mobile phones have come a long way. Today it seems the mobiles are more powerful and can handle a web application quite nicely. On the other hand &lt;a href=&quot;https://cordova.apache.org/&quot;&gt;Cordova&lt;/a&gt; tool chain also has matured. Comparing to older versions of the tool chain, currently its purely &lt;a href=&quot;https://www.npmjs.com/&quot;&gt;NPM&lt;/a&gt; based, as long as we talk about cross platform development. So anything one needs is just a &lt;code&gt;npm install&lt;/code&gt; away.   &lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
@@ -870,9 +870,9 @@ cordova run android ( run in device )&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Help&lt;/
     </item>
     <item>
       <title>New year, time to look back and forth.</title>
-      <link>http://localhost:1234/articles/61/</link>
+      <link>https://saumya.github.io/ray/articles/61/</link>
       <pubDate>Fri, 01 Jan 2016 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/61/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/61/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;First of all, I wish all the best of spirits, health and prosperity. &lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Last year(2015) had carried the pain for me from its last year (ie; 2014). It started tough and went on to be tougher and tougher. Both in proffessional and personal matters the year progressed into tougher situations day by day. It almost put me in a situation, where I questioned everything about myself. Self doubt and nagetivity had almost got me where they wanted me. The only things those kept me going is a healthy regular habit of meditation, exercise and persistence of both. Finally towards the end of the year, it paid of. When I look at me now in this new year, I am a completely transformed person. Much stronger and moving on the right direction again. &lt;/p&gt;
@@ -934,9 +934,9 @@ cordova run android ( run in device )&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Help&lt;/
     </item>
     <item>
       <title>What is Socket.IO ?</title>
-      <link>http://localhost:1234/articles/60/</link>
+      <link>https://saumya.github.io/ray/articles/60/</link>
       <pubDate>Tue, 08 Dec 2015 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/60/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/60/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;Once one starts working on &lt;a href=&quot;https://nodejs.org/&quot;&gt;NodeJS&lt;/a&gt;, very soon will come across a term called &lt;a href=&quot;http://socket.io&quot;&gt;Socket.IO&lt;/a&gt;. It may feel as if just another &lt;a href=&quot;https://nodejs.org/&quot;&gt;NodeJS&lt;/a&gt; module available through &lt;a href=&quot;https://www.npmjs.com&quot;&gt;NPM&lt;/a&gt;. Then it may feel like just another way to write a Javascript application for the browser. Then it may seem something else.          &lt;/p&gt;
 &lt;p&gt;So lets know what is it?          &lt;/p&gt;
@@ -956,9 +956,9 @@ cordova run android ( run in device )&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Help&lt;/
     </item>
     <item>
       <title>RequireJS is not require()</title>
-      <link>http://localhost:1234/articles/59/</link>
+      <link>https://saumya.github.io/ray/articles/59/</link>
       <pubDate>Sat, 05 Dec 2015 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/59/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/59/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;It would have saved me time if I could have known this in the beginning. Like a lot of things in Javscript world, a same kind of name for two different functionalities makes a lot of confusion.          &lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;http://requirejs.org/&quot;&gt;RequireJS&lt;/a&gt; is used to load &lt;a href=&quot;http://requirejs.org/docs/whyamd.html#amd&quot;&gt;AMD&lt;/a&gt;&lt;br&gt;require() is used to load &lt;a href=&quot;http://requirejs.org/docs/whyamd.html#commonjs&quot;&gt;CommonJS&lt;/a&gt;          &lt;/p&gt;
@@ -977,9 +977,9 @@ cordova run android ( run in device )&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Help&lt;/
     </item>
     <item>
       <title>How to React now.</title>
-      <link>http://localhost:1234/articles/58/</link>
+      <link>https://saumya.github.io/ray/articles/58/</link>
       <pubDate>Sat, 28 Nov 2015 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/58/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/58/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;Here is the way to &lt;a href=&quot;http://facebook.github.io/react/&quot;&gt;React&lt;/a&gt; now.        &lt;/p&gt;
 &lt;ul&gt;
@@ -1051,9 +1051,9 @@ cordova run android ( run in device )&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Help&lt;/
     </item>
     <item>
       <title>React</title>
-      <link>http://localhost:1234/articles/57/</link>
+      <link>https://saumya.github.io/ray/articles/57/</link>
       <pubDate>Fri, 27 Nov 2015 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/57/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/57/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;&lt;a href=&quot;http://facebook.github.io/react/&quot;&gt;React&lt;/a&gt; is a library from the famous social networking &lt;a href=&quot;https://www.facebook.com/&quot;&gt;facebook&lt;/a&gt;.          &lt;/p&gt;
 &lt;p&gt;Another Javascript Library ! Yes, lets face it. Now we can not escape the fact that every other day there is someone, somwhere making a new Javascript library.           &lt;/p&gt;
@@ -1067,9 +1067,9 @@ cordova run android ( run in device )&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Help&lt;/
     </item>
     <item>
       <title>AngularJS, BackboneJS, similarities and differences.</title>
-      <link>http://localhost:1234/articles/56/</link>
+      <link>https://saumya.github.io/ray/articles/56/</link>
       <pubDate>Thu, 26 Nov 2015 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/56/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/56/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;When learning a new framework or library, its very difficult to look at the same problem from a different perspective. But when you hear a lot like ‘ohh, that library is similar to this’, then the tendency comes to compare it. And when you see similar terminology in both the frameworks, then you are absolutely sure that both are doing the same thing in the same way. I think, thats the main problem here with learning the frameworks like &lt;a href=&quot;https://angularjs.org/&quot;&gt;AngularJS&lt;/a&gt; and &lt;a href=&quot;http://backbonejs.org/&quot;&gt;BackboneJS&lt;/a&gt;. Both of these have their own share of &lt;code&gt;how to&lt;/code&gt; and &lt;code&gt;where to&lt;/code&gt;, overall they seem completely different, even though the terminolgies seem completely same.         &lt;/p&gt;
 &lt;p&gt;One such thing is &lt;code&gt;Module&lt;/code&gt;. Both these frameworks define &lt;code&gt;Module&lt;/code&gt; and use it. Both of them tell to use &lt;code&gt;Module&lt;/code&gt; to separate concerns. But then both of them seem completely different while implementing the &lt;code&gt;Module&lt;/code&gt;. Umm, Why?!          &lt;/p&gt;
@@ -1083,9 +1083,9 @@ cordova run android ( run in device )&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Help&lt;/
     </item>
     <item>
       <title>AngularJS 102</title>
-      <link>http://localhost:1234/articles/55/</link>
+      <link>https://saumya.github.io/ray/articles/55/</link>
       <pubDate>Wed, 25 Nov 2015 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/55/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/55/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;This is the part two of the study of &lt;a href=&quot;https://angularjs.org/&quot;&gt;AngularJS&lt;/a&gt;. The first part is &lt;a href=&quot;http://saumya.github.io/ray/articles/39/&quot;&gt;AngularJS 101&lt;/a&gt;.
 This is focused on the vary basic concepts of &lt;a href=&quot;https://angularjs.org/&quot;&gt;AngularJS&lt;/a&gt; like how and where to write a &lt;code&gt;controller&lt;/code&gt; or &lt;code&gt;directive&lt;/code&gt; etc. The &lt;a href=&quot;https://github.com/saumya/ng-102&quot;&gt;sample project is here&lt;/a&gt;.          &lt;/p&gt;
@@ -1150,9 +1150,9 @@ Lets define another module in a javascript file named &lt;code&gt;one.js&lt;/cod
     </item>
     <item>
       <title>A year with DOJO Toolkit.</title>
-      <link>http://localhost:1234/articles/54/</link>
+      <link>https://saumya.github.io/ray/articles/54/</link>
       <pubDate>Wed, 18 Nov 2015 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/54/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/54/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;There are a number of reasons to use a specific framework in a work environment. But sometimes it boils down to just the hype. For example in recent past almost all the companies are trying to implement &lt;a href=&quot;https://angularjs.org/&quot;&gt;AngularJS&lt;/a&gt; and before that time it was the time for &lt;a href=&quot;http://backbonejs.org/&quot;&gt;BackboneJS&lt;/a&gt; and the story goes on like that. It is always a good experience to work in very different kind of framework or for that matter its even better to work in different kind of languages altogether.          &lt;/p&gt;
 &lt;p&gt;The last year was &lt;a href=&quot;https://dojotoolkit.org/&quot;&gt;DOJO Toolkit&lt;/a&gt; year for me. I must say I am impressed to see features it provides and now that its moving in the right direction. For a long time now, this toolkit was just stagnant but last year only they have started moving again. Well, if you come from a &lt;code&gt;pure Javascript&lt;/code&gt; background might not like it by the way it is designed and behaves. The UI layer of the &lt;a href=&quot;https://dojotoolkit.org/&quot;&gt;DOJO Toolkit&lt;/a&gt; named as Dijit will seem like Flex components (If you know what Flash and Flex is, you will get what I am saying). The framework itself is designed to make people comfortable, who are used to Classical programming languages like JAVA. The whole toolkit will show itself, as a class based toolkit. The average user will just think and use it as a Classical programming language, which is the root of all evil things in a project. Thats part of the team and how it works with this toolkit.          &lt;/p&gt;
@@ -1161,9 +1161,9 @@ Lets define another module in a javascript file named &lt;code&gt;one.js&lt;/cod
     </item>
     <item>
       <title>Vi/Vim comands</title>
-      <link>http://localhost:1234/articles/53/</link>
+      <link>https://saumya.github.io/ray/articles/53/</link>
       <pubDate>Thu, 06  Aug 2015 00:00:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/53/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/53/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;First of all there are 2 modes. &lt;code&gt;Insert&lt;/code&gt; and &lt;code&gt;Command&lt;/code&gt; . By default one is in the command mode.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;i : to move to insert mode
@@ -1201,9 +1201,9 @@ set nowrapscan : search does not wrap TOP or BOTTOM&lt;/code&gt;&lt;/pre&gt;&lt;
     </item>
     <item>
       <title>Git, Forking and Syncing</title>
-      <link>http://localhost:1234/articles/52/</link>
+      <link>https://saumya.github.io/ray/articles/52/</link>
       <pubDate>Tue, 19 May 2015 00:00:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/52/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/52/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;There are couple of things to understand before going to the commandline, just remember that we have assumed the name &lt;code&gt;UPSTREAM&lt;/code&gt; as the repository, from where we have forked the project and &lt;code&gt;master&lt;/code&gt; is our own remote repository where we save our changes.
 Well, another important thing is to &lt;a href=&quot;https://help.github.com/articles/configuring-a-remote-for-a-fork/&quot;&gt;configure&lt;/a&gt; the &lt;code&gt;UPSTREAM&lt;/code&gt; or simply configure a repository from where we want to sync.&lt;/p&gt;
@@ -1221,9 +1221,9 @@ git push origin master&lt;/code&gt;&lt;/pre&gt;
     </item>
     <item>
       <title>Making crossplatform CLI application with HAXE</title>
-      <link>http://localhost:1234/articles/51/</link>
+      <link>https://saumya.github.io/ray/articles/51/</link>
       <pubDate>Mon, 19 Jan 2015 00:00:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/51/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/51/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;When I first heard about CLI applications, I thought it might be shipping with the OS itself. Then I found that we can write our own CLI applications. At that point I assume that well, just a CLI application, means it runs everywhere. But actually CLI applications by default are not crossplatform! Yes, I realised it much later. In order to have a crossplatform CLI app, one needs all the required environment to compile to and compile for a particular OS.         &lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;http://haxe.org/&quot;&gt;HAXE&lt;/a&gt; comes in handy in this case. One can make a crossplatfom CLI app with just one code base. Ofcourse you need the required environment to compile to that particular environment. There is even a shorter way to this, compile for &lt;a href=&quot;http://nekovm.org&quot;&gt;NEKO&lt;/a&gt; virtual machine. This &lt;a href=&quot;http://nekovm.org&quot;&gt;NEKO&lt;/a&gt; VM ships with &lt;a href=&quot;http://haxe.org/&quot;&gt;HAXE&lt;/a&gt;. Once you compile to &lt;a href=&quot;http://nekovm.org&quot;&gt;NEKO&lt;/a&gt;, all you do is package all the &lt;a href=&quot;http://nekovm.org&quot;&gt;NEKO&lt;/a&gt; dependencies and there you have a crossplatform CLI for every OS. Here we will compile to &lt;a href=&quot;http://nekovm.org&quot;&gt;NEKO&lt;/a&gt; and run through &lt;a href=&quot;http://nekovm.org&quot;&gt;NEKO&lt;/a&gt;, but just keep in mind that the same code can be compiled to CPP(C++) to produce true native CLI.&lt;br&gt;Lets begin with the compiler settings or the build file. The &lt;code&gt;.hxml&lt;/code&gt; file has the following content.&lt;/p&gt;
@@ -1243,9 +1243,9 @@ git push origin master&lt;/code&gt;&lt;/pre&gt;
     </item>
     <item>
       <title>HAXE and NodeJS</title>
-      <link>http://localhost:1234/articles/50/</link>
+      <link>https://saumya.github.io/ray/articles/50/</link>
       <pubDate>Sun, 18 Jan 2015 00:00:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/50/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/50/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;Continuing the sudy of javascript target of &lt;a href=&quot;http://haxe.org/&quot;&gt;HAXE&lt;/a&gt; we will focus on &lt;a href=&quot;http://nodejs.org/&quot;&gt;NodeJS&lt;/a&gt; this time. Before we move on, lets remind ourselves the things to expect from the &lt;a href=&quot;http://haxe.org/&quot;&gt;HAXE&lt;/a&gt; toolchain by going through the previous two introductions, here is the &lt;a href=&quot;http://saumya.github.io/ray/articles/47/&quot;&gt;first&lt;/a&gt; and the &lt;a href=&quot;http://saumya.github.io/ray/articles/48/&quot;&gt;second&lt;/a&gt; post.&lt;br&gt;Thats about &lt;a href=&quot;http://haxe.org/&quot;&gt;HAXE&lt;/a&gt;, now a little about &lt;a href=&quot;http://nodejs.org/&quot;&gt;NodeJS&lt;/a&gt;. In &lt;a href=&quot;http://nodejs.org/&quot;&gt;NodeJS&lt;/a&gt; the concept of modules is very common to make some re-usable code. In general, modules hide everything by default. In class based languages we can call them as &lt;code&gt;private&lt;/code&gt; elements. To make something &lt;code&gt;public&lt;/code&gt; , we have to use &lt;code&gt;exports&lt;/code&gt; keyword in &lt;a href=&quot;http://nodejs.org/&quot;&gt;NodeJS&lt;/a&gt;.           &lt;/p&gt;
 &lt;p&gt;For example, if we have a file names &lt;code&gt;one.js&lt;/code&gt; as&lt;/p&gt;
@@ -1315,9 +1315,9 @@ com.jungle.Jungle
     </item>
     <item>
       <title>Dojo Toolkit, require and events.</title>
-      <link>http://localhost:1234/articles/49/</link>
+      <link>https://saumya.github.io/ray/articles/49/</link>
       <pubDate>Wed, 14 Jan 2015 00:00:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/49/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/49/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;Well, lets say this, if you are working on &lt;a href=&quot;http://dojotoolkit.org/&quot;&gt;Dojo Toolkit&lt;/a&gt;, you are working on a legacy application. Since &lt;a href=&quot;http://dojotoolkit.org/&quot;&gt;Dojo Toolkit&lt;/a&gt; is releasing its newer versions, you need to change your application to newer codebase. Currently &lt;a href=&quot;http://dojotoolkit.org/&quot;&gt;Dojo Toolkit&lt;/a&gt; is leveraging &lt;a href=&quot;http://requirejs.org/docs/whyamd.html#amd&quot;&gt;AMD&lt;/a&gt; for modules and Javascript files. Which is very new for this toolkit and veteran developers in this toolkit may find its very different.          &lt;/p&gt;
 &lt;p&gt;Previously, when we needed some JS code, its simply done by making a ‘require’ call.          &lt;/p&gt;
@@ -1349,9 +1349,9 @@ dojo.string.trim(&lt;span class=&quot;string&quot;&gt;&quot;  I Like Trim String
     </item>
     <item>
       <title>HAXE JS 102</title>
-      <link>http://localhost:1234/articles/48/</link>
+      <link>https://saumya.github.io/ray/articles/48/</link>
       <pubDate>Mon, 12 Jan 2015 00:00:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/48/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/48/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;We are going good with &lt;a href=&quot;http://haxe.org/&quot;&gt;HAXE&lt;/a&gt;, take a moment to go through the official &lt;a href=&quot;http://haxe.org/&quot;&gt;HAXE&lt;/a&gt; documentation.&lt;br&gt;This is a follow-up post to the &lt;a href=&quot;http://saumya.github.io/ray/articles/47/&quot;&gt;Haxe JS 101&lt;/a&gt;. Its all about setting up the expectations from the language and the tool chain. Lets make some more things clear about the tooling and how the language works.          &lt;/p&gt;
 &lt;ul&gt;
@@ -1377,9 +1377,9 @@ com.jungle.Animal&lt;/code&gt;&lt;/pre&gt;
     </item>
     <item>
       <title>HAXE JS 101</title>
-      <link>http://localhost:1234/articles/47/</link>
+      <link>https://saumya.github.io/ray/articles/47/</link>
       <pubDate>Mon, 05 Jan 2015 00:00:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/47/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/47/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;Hope you know what is &lt;a href=&quot;http://haxe.org/&quot;&gt;HAXE&lt;/a&gt;, take a moment to go through the official &lt;a href=&quot;http://haxe.org/&quot;&gt;HAXE&lt;/a&gt; documentation. We will discuss how and what to consider while working with JS in &lt;a href=&quot;http://haxe.org/&quot;&gt;HAXE&lt;/a&gt;.          
 Generally other languages, which compile to JS, actually compile each specific file to a respective JS file. &lt;a href=&quot;http://haxe.org/&quot;&gt;HAXE&lt;/a&gt; actually compiles to one single JS file for our application. We can further take the generated JS file and minify it using popular JS minifiers.        &lt;/p&gt;
@@ -1401,9 +1401,9 @@ Generally other languages, which compile to JS, actually compile each specific f
     </item>
     <item>
       <title>CoffeeScript basics</title>
-      <link>http://localhost:1234/articles/45/</link>
+      <link>https://saumya.github.io/ray/articles/45/</link>
       <pubDate>Thu, 01 Jan 2015 00:00:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/45/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/45/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;Just to set the expectations right, we need to know something before we begin here.         &lt;/p&gt;
 &lt;p&gt;When I first heard about &lt;code&gt;Class&lt;/code&gt; in &lt;code&gt;Javascript&lt;/code&gt; it created curiosity on me and the expectation increased as to work like a &lt;code&gt;Classical&lt;/code&gt; language(Where Classes are the root of everything) instead of &lt;code&gt;Prototypical&lt;/code&gt; language(like Javascript). But then slowly I understood that its not &lt;code&gt;Javascript&lt;/code&gt; but other languages on top of Javascript which create somekind of &lt;code&gt;Class&lt;/code&gt; concept to mimic &lt;code&gt;Classical&lt;/code&gt; languages. The point is everything boils down to &lt;code&gt;Javascript&lt;/code&gt; if a language is written to compile or transpile to &lt;code&gt;Javascript&lt;/code&gt; . Well, that may seem like a spoiler right now, but its actually not as we will see. Just keep these things in mind all the time, even if we are doing &lt;a href=&quot;http://coffeescript.org/#top&quot;&gt;CoffeeScript&lt;/a&gt;.        &lt;/p&gt;
@@ -1423,9 +1423,9 @@ Generally other languages, which compile to JS, actually compile each specific f
     </item>
     <item>
       <title>Cake and Coffee</title>
-      <link>http://localhost:1234/articles/46/</link>
+      <link>https://saumya.github.io/ray/articles/46/</link>
       <pubDate>Thu, 01 Jan 2015 00:00:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/46/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/46/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;While working with &lt;a href=&quot;http://coffeescript.org/#top&quot;&gt;CoffeeScript&lt;/a&gt;, we generally tend to do the following,&lt;/p&gt;
 &lt;ul&gt;
@@ -1453,9 +1453,9 @@ Generally other languages, which compile to JS, actually compile each specific f
     </item>
     <item>
       <title>RequireJS, Load timeout for modules!</title>
-      <link>http://localhost:1234/articles/44/</link>
+      <link>https://saumya.github.io/ray/articles/44/</link>
       <pubDate>Mon, 17 Nov 2014 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/44/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/44/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;Working with &lt;a href=&quot;http://backbonejs.org/&quot;&gt;BackboneJS&lt;/a&gt;, will make you work with &lt;a href=&quot;http://requirejs.org/&quot;&gt;RequireJS&lt;/a&gt;. And if you are working with &lt;a href=&quot;http://backbonejs.org/&quot;&gt;BackboneJS&lt;/a&gt; for a little time, then you probably know what I am talking about. Sometimes, the modules we are loading through &lt;a href=&quot;http://requirejs.org/&quot;&gt;RequireJS&lt;/a&gt; throw errors saying&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;Error&lt;/span&gt;: Load timeout &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; modules&lt;/code&gt;&lt;/pre&gt;
@@ -1485,9 +1485,9 @@ Generally other languages, which compile to JS, actually compile each specific f
     </item>
     <item>
       <title>Upgrading to Cordova 3.4 and above</title>
-      <link>http://localhost:1234/articles/43/</link>
+      <link>https://saumya.github.io/ray/articles/43/</link>
       <pubDate>Thu, 23 Oct 2014 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/43/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/43/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;While trying to upgrade, one of my previous Cordova Android application, to latest &lt;a href=&quot;http://cordova.apache.org/&quot;&gt;Cordova&lt;/a&gt; , noticed that &lt;a href=&quot;http://cordova.apache.org/&quot;&gt;Cordova&lt;/a&gt; now makes it very difficult to switch to a native development workflow. Its not the flow itself, which is difficult, but the information about the flow and to get started with a project which is the problem. If you have ever worked with the native development flow of &lt;a href=&quot;http://cordova.apache.org/&quot;&gt;Cordova&lt;/a&gt; , which I guess you must have, as that was the actual flow in the beginning. Then its exactly the same work flow, but the thing is, its not mentioned anywhere. And in between these, they had introduced a web development workflow and tried forcing to use it. Which itself is not clear and then combined the native workflow with it. Good that, that period is over. But its not clear at all from the docs.
 Well, first of all, &lt;a href=&quot;http://cordova.apache.org/&quot;&gt;Cordova&lt;/a&gt; is saying its released the version 4 of the toolkit. When you go to &lt;a href=&quot;http://cordova.apache.org/#download&quot;&gt;download&lt;/a&gt; section for native development workflow, you will &lt;a href=&quot;https://www.apache.org/dist/cordova/&quot;&gt;not find a version 4&lt;/a&gt; ! So, you have to go inside &lt;a href=&quot;https://www.apache.org/dist/cordova/platforms/&quot;&gt;platforms&lt;/a&gt;, there also you will not find version 4. So, I ended up downloading 3.6.4 for android and will suggest everyone to do that for the time being. After downloading the zipped file, extract it to a folder. Navigate to the folder and fireup the cordova create command to create a project.
@@ -1506,9 +1506,9 @@ Next is adding the plugins, because now &lt;a href=&quot;http://cordova.apache.o
     </item>
     <item>
       <title>Dojo Toolkit, Widget.</title>
-      <link>http://localhost:1234/articles/42/</link>
+      <link>https://saumya.github.io/ray/articles/42/</link>
       <pubDate>Tue, 30 Sep 2014 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/42/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/42/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;&lt;a href=&quot;http://dojotoolkit.org/&quot;&gt;Dojo Toolkit&lt;/a&gt; has a component library named as &lt;code&gt;Dijit&lt;/code&gt;. Each component in this library is known as a &lt;code&gt;Widget&lt;/code&gt;. It is better to know the &lt;code&gt;dijit&lt;/code&gt; framework vocabulary before going further inside it. &lt;/p&gt;
 &lt;ul&gt;
@@ -1554,9 +1554,9 @@ While writing a custom Widget, its necessary to override parent’s lifecycle me
     </item>
     <item>
       <title>Getting started with, Dojo Toolkit</title>
-      <link>http://localhost:1234/articles/41/</link>
+      <link>https://saumya.github.io/ray/articles/41/</link>
       <pubDate>Mon, 29 Sep 2014 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/41/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/41/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;To begin with, &lt;a href=&quot;http://dojotoolkit.org/&quot;&gt;Dojo Toolkit&lt;/a&gt; or simply referred to as &lt;a href=&quot;http://dojotoolkit.org/&quot;&gt;Dojo&lt;/a&gt; is one of many libraries in javascript. First thing to do is, like any other javascript libraries, make sure which version of library you are studying and using. &lt;a href=&quot;http://dojotoolkit.org/&quot;&gt;Dojo&lt;/a&gt; has gone through major upgrades and if you are trying to do things the new way of &lt;a href=&quot;http://dojotoolkit.org/&quot;&gt;Dojo&lt;/a&gt; then better get to know the &lt;a href=&quot;http://dojotoolkit.org/documentation/tutorials/1.10/modern_dojo/&quot;&gt;new version&lt;/a&gt;. We will be focusing on the new version only(currently &lt;code&gt;1.10&lt;/code&gt;) and referring to old one, wherever necessary.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;http://dojotoolkit.org/&quot;&gt;Dojo Toolkit&lt;/a&gt; has got a combination following&lt;/p&gt;
@@ -1574,9 +1574,9 @@ While writing a custom Widget, its necessary to override parent’s lifecycle me
     </item>
     <item>
       <title>Checklist to join a corporate</title>
-      <link>http://localhost:1234/articles/40/</link>
+      <link>https://saumya.github.io/ray/articles/40/</link>
       <pubDate>Sat, 23  Aug 2014 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/40/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/40/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;It is a surprise for me, to see the processes these companines follow to get a person on board. I am not talking about interview. The technical interview is kind of rounds after rounds of never ending interviews. But at least, these are ok-ish situation for a tech person.&lt;br&gt;The real pain starts, once you get through the interview. Now you are selected and need to serve the notice period at old organisation and move on to join the new one. The problem is, once you are through the interview, this new companies will call you at least 5 times a day. This is plain and simple irritating. They will force you (no one can force you, but at least they will talk like that) to join before the scheduled time. 
 If at all, you have joined them by keeping their words, there would be no respect at all for that. Once you come to join them, they will show how much process they follow! Really?!! If you follow all these, why you kept on calling a person who has not joined you? Where were your processes! Or is that a process of yours to trouble someone, who is not from your organisation! Simple stupid. So you make your own process, follow your own process and change that at will.&lt;br&gt;Well, just keep in mind that once you have come to join a new corporate, keep below things with you. These companies will not tell you, when they should have, that please bring all these with you.     &lt;/p&gt;
@@ -1599,9 +1599,9 @@ If at all, you have joined them by keeping their words, there would be no respec
     </item>
     <item>
       <title>AngularJS 101</title>
-      <link>http://localhost:1234/articles/39/</link>
+      <link>https://saumya.github.io/ray/articles/39/</link>
       <pubDate>Tue, 24 Jun 2014 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/39/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/39/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;It took me sometime to make me comfortable in &lt;a href=&quot;https://angularjs.org/&quot;&gt;AngularJS&lt;/a&gt;. There are a lot of tutorials, discussions and videos out there about &lt;a href=&quot;https://angularjs.org/&quot;&gt;AngularJS&lt;/a&gt;. I would suggest, go through them and go through as many as you can, before jumping into code with this framework. We will be looking at the very basics of the framework here and for &lt;code&gt;version 1.3&lt;/code&gt; and above, of the framework.&lt;br&gt;You must heard about MVC or Model-View-Controller architecture and &lt;a href=&quot;https://angularjs.org/&quot;&gt;AngularJS&lt;/a&gt;. While thats true, lets keep that for a little late.&lt;br&gt;First of all, just remember that &lt;code&gt;$scope&lt;/code&gt; is model object and sometimes referred to as &lt;code&gt;ViewModel&lt;/code&gt;. Then there are &lt;code&gt;Views&lt;/code&gt;, which are either HTML tags or full html files. And then &lt;code&gt;Controllers&lt;/code&gt;, which are javascript files. At this point always remember that &lt;a href=&quot;https://angularjs.org/&quot;&gt;AngularJS&lt;/a&gt; revolves arround these &lt;code&gt;View&lt;/code&gt; and &lt;code&gt;Controller&lt;/code&gt;. The data this &lt;code&gt;View&lt;/code&gt; displays is the same as the data the &lt;code&gt;Controller&lt;/code&gt; modifies and is available through &lt;code&gt;$scope&lt;/code&gt;. No matter what, &lt;code&gt;$scope&lt;/code&gt; remains in the middle as this&lt;br&gt;&lt;code&gt;View &amp;lt;---$scope---&amp;gt; Controller&lt;/code&gt;&lt;br&gt;Now, since &lt;a href=&quot;https://angularjs.org/&quot;&gt;AngularJS&lt;/a&gt; already uses &lt;code&gt;2-way data binding&lt;/code&gt; any changes to data or &lt;code&gt;$scope&lt;/code&gt; in &lt;code&gt;View&lt;/code&gt; or &lt;code&gt;Controller&lt;/code&gt; is reflected by each other.&lt;br&gt;An &lt;a href=&quot;https://angularjs.org/&quot;&gt;AngularJS&lt;/a&gt; application begins with a module named &lt;code&gt;ng-app&lt;/code&gt; and this &lt;code&gt;ng-app&lt;/code&gt; is generally only one. So what is a module ? Module is kind of self contained small applications inside a big application. The special module &lt;code&gt;ng-app&lt;/code&gt; is the only exception as its the big application and everything else in &lt;a href=&quot;https://angularjs.org/&quot;&gt;AngularJS&lt;/a&gt; world happens inside it. All other modules generally go inside &lt;code&gt;ng-view&lt;/code&gt;, have a look at &lt;a href=&quot;https://github.com/saumya/ng-101/blob/master/index.html&quot;&gt;this html page&lt;/a&gt; for the reference.In terms of &lt;a href=&quot;https://angularjs.org/&quot;&gt;AngularJS&lt;/a&gt;, a module is a combination of a &lt;code&gt;View-$scope-Controller&lt;/code&gt;. Everytime you need to load this module, the View gets loaded in the &lt;code&gt;ng-view&lt;/code&gt; and its Controller gets initialised along with the &lt;code&gt;$scope&lt;/code&gt;. All these mapping are written in a &lt;code&gt;Route&lt;/code&gt;, which maps &lt;code&gt;View with Controller&lt;/code&gt;, &lt;a href=&quot;https://github.com/saumya/ng-101/blob/master/js/saumyaApp.js&quot;&gt;take a look at this&lt;/a&gt;. Route is a separate module as of &lt;a href=&quot;https://angularjs.org/&quot;&gt;AngularJS&lt;/a&gt; version 1.3. So, one need to include the JS file and the dependency. A quick reference of an &lt;a href=&quot;https://angularjs.org/&quot;&gt;AngularJS&lt;/a&gt; application looks as below        &lt;/p&gt;
 &lt;ul&gt;
@@ -1620,9 +1620,9 @@ If at all, you have joined them by keeping their words, there would be no respec
     </item>
     <item>
       <title>Looking at AngularJS</title>
-      <link>http://localhost:1234/articles/38/</link>
+      <link>https://saumya.github.io/ray/articles/38/</link>
       <pubDate>Sat, 07 Jun 2014 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/38/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/38/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;I had seen &lt;a href=&quot;https://angularjs.org/&quot;&gt;AngularJS&lt;/a&gt; before, almost one year back. When I came back to have a look at it again now, I got surprised to see “How long it has really come!”. Well here, I am just introducing some of the libraries, frameworks and projects that have eveloved arround &lt;a href=&quot;https://angularjs.org/&quot;&gt;AngularJS&lt;/a&gt;.          &lt;/p&gt;
 &lt;ul&gt;
@@ -1637,9 +1637,9 @@ If at all, you have joined them by keeping their words, there would be no respec
     </item>
     <item>
       <title>Upgrading to Ruby 2.x from 1.x with rvm, on an upgrade from old OSX to Mavericks.</title>
-      <link>http://localhost:1234/articles/37/</link>
+      <link>https://saumya.github.io/ray/articles/37/</link>
       <pubDate>Mon, 26 May 2014 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/37/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/37/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;This is a situation when you have updated the OS from a previous version of Mac OSX to the latest version of the OSX Mavericks. Generally OSX ships with a version of &lt;a href=&quot;https://www.ruby-lang.org/en/&quot;&gt;Ruby&lt;/a&gt;, which is latest by the time the OS is released. But when it comes to OSX upgrade and in this case particularly to OSX Mavericks, the operating system upgrade does not bring in the &lt;a href=&quot;https://www.ruby-lang.org/en/&quot;&gt;Ruby&lt;/a&gt; upgrade. Rather, the old &lt;a href=&quot;https://www.ruby-lang.org/en/&quot;&gt;Ruby&lt;/a&gt; lives on the new OSX. Well, if you have a decent understanding of managing &lt;a href=&quot;https://www.ruby-lang.org/en/&quot;&gt;Ruby&lt;/a&gt; versions, you may be using one of the version management systems of &lt;a href=&quot;https://www.ruby-lang.org/en/&quot;&gt;Ruby&lt;/a&gt;. I used to have &lt;a href=&quot;http://rvm.io/&quot;&gt;rvm&lt;/a&gt;. Now I have an upgraded OSX but need to have the latest version of &lt;a href=&quot;https://www.ruby-lang.org/en/&quot;&gt;Ruby&lt;/a&gt;. The steps are as below     &lt;/p&gt;
 &lt;ol&gt;
@@ -1666,9 +1666,9 @@ If at all, you have joined them by keeping their words, there would be no respec
     </item>
     <item>
       <title>Making a RESTful API with NodeJS and Express</title>
-      <link>http://localhost:1234/articles/36/</link>
+      <link>https://saumya.github.io/ray/articles/36/</link>
       <pubDate>Wed, 21 May 2014 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/36/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/36/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;Here we will be making a basic REST API using the &lt;a href=&quot;http://expressjs.com/&quot;&gt;Express&lt;/a&gt; framework for &lt;a href=&quot;http://nodejs.org/&quot;&gt;NodeJS&lt;/a&gt;. I am not going in detail of how &lt;a href=&quot;http://expressjs.com/&quot;&gt;Express&lt;/a&gt; works, but straight to the code, which is as below. While this may look as a regular &lt;a href=&quot;http://expressjs.com/&quot;&gt;Express&lt;/a&gt; application, the important thing is the API can be called from any web server.      &lt;/p&gt;
 &lt;script src=&quot;https://gist.github.com/saumya/402d2f035b23d7d08877.js&quot;&gt;&lt;/script&gt;
@@ -1684,9 +1684,9 @@ If at all, you have joined them by keeping their words, there would be no respec
     </item>
     <item>
       <title>NodeJS, HTML5, JQuery and what you may come across in an interview</title>
-      <link>http://localhost:1234/articles/35/</link>
+      <link>https://saumya.github.io/ray/articles/35/</link>
       <pubDate>Tue, 20 May 2014 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/35/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/35/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;This is not a surprise for me, but if you are new to the modern web development and working on Javascript stack, chances are that you come acrcoss these in everyday life. It may come from anywhere, your collegue, your senior, may be from an interviewer. But the cool thing is, you are right in those cases. All you have to do is ignore them and move on. I had seen this while working on Flash platform, when people were saying things about Flash and Flex. Now the platforms are changed but situation are same.          &lt;/p&gt;
 &lt;ul&gt;
@@ -1706,9 +1706,9 @@ If at all, you have joined them by keeping their words, there would be no respec
     </item>
     <item>
       <title>Understanding BackboneJS View Event, jQuery Event and trigger()</title>
-      <link>http://localhost:1234/articles/34/</link>
+      <link>https://saumya.github.io/ray/articles/34/</link>
       <pubDate>Fri, 18 Apr 2014 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/34/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/34/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;The fun in working with &lt;a href=&quot;http://backbonejs.org/&quot;&gt;BackboneJS&lt;/a&gt; is freedom. The library is so decoupled that, one can really do any kind of architecture for an application. This freedom will come in your way if you do not know what is happening behind. We will be focusing on ‘Event’ here.&lt;br&gt;Working with &lt;a href=&quot;http://backbonejs.org/&quot;&gt;BackboneJS&lt;/a&gt; often involves working with &lt;a href=&quot;http://jquery.com/&quot;&gt;jQuery&lt;/a&gt; too as a DOM manupilation library. When we work on HTML and DOM, in terms of &lt;a href=&quot;http://backbonejs.org/&quot;&gt;BackboneJS&lt;/a&gt; we are working on View. At this point we must understand, that this BackboneView can dispatch event and the DOM we are dealing with also is capable of dispatching event. The point to note here is event dispatched through &lt;a href=&quot;http://backbonejs.org/&quot;&gt;BackboneJS&lt;/a&gt; framework, does not bubble. Where as the default DOM events bubble. Well, since we generally work with &lt;a href=&quot;http://jquery.com/&quot;&gt;jQuery&lt;/a&gt; for DOM manupilation, events fired through &lt;a href=&quot;http://jquery.com/&quot;&gt;jQuery&lt;/a&gt; also has the same effect as DOM events, they bubble. Working with a &lt;a href=&quot;http://backbonejs.org/&quot;&gt;BackboneJS&lt;/a&gt; ViewObject, we deal with &lt;code&gt;el&lt;/code&gt; of the ViewObject. &lt;a href=&quot;http://backbonejs.org/&quot;&gt;BackboneJS&lt;/a&gt; also provides a &lt;code&gt;$el&lt;/code&gt; on each view. Take a note of this &lt;code&gt;$el&lt;/code&gt;, which is a &lt;a href=&quot;http://jquery.com/&quot;&gt;jQuery&lt;/a&gt; object.&lt;br&gt;Dispatching an Event in &lt;a href=&quot;http://backbonejs.org/&quot;&gt;BackboneJS&lt;/a&gt; is done as&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//somewhere inside the View&lt;/span&gt;
@@ -1755,9 +1755,9 @@ All that is to it is, how you &lt;code&gt;trigger&lt;/code&gt; the event, from t
     </item>
     <item>
       <title>jQuery and fixing AJAX cache for GET calls</title>
-      <link>http://localhost:1234/articles/33/</link>
+      <link>https://saumya.github.io/ray/articles/33/</link>
       <pubDate>Thu, 03 Apr 2014 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/33/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/33/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;It will come to you very soon, if you are trying to develop any decent webapp or phonegap mobile app using &lt;a href=&quot;http://jquery.com/&quot;&gt;jQuery&lt;/a&gt;.     
 The problem is, if we have the same &lt;code&gt;GET&lt;/code&gt; request multiple times, by default jQuery will cache the request. The end result is the response same as the first response!! Well, there is a setting in jQuery AJAX setup, where in we write &lt;code&gt;cache:false&lt;/code&gt; and that should work. Well, depending upon how the API is written on the server side, this call might not work! There are many reasons as to why it may not work, one simple reason is, to understand, how &lt;a href=&quot;http://jquery.com/&quot;&gt;jQuery&lt;/a&gt; behaves, when we set &lt;code&gt;cache:false&lt;/code&gt; as below.&lt;/p&gt;
@@ -1791,9 +1791,9 @@ $.ajax({
     </item>
     <item>
       <title>Back to Lime (OpenFL)</title>
-      <link>http://localhost:1234/articles/32/</link>
+      <link>https://saumya.github.io/ray/articles/32/</link>
       <pubDate>Sat, 15 Mar 2014 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/32/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/32/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;Its almost 2 months, I did a project on &lt;a href=&quot;https://github.com/openfl/lime&quot;&gt;Lime&lt;/a&gt;(&lt;a href=&quot;http://www.openfl.org/&quot;&gt;OpneFL&lt;/a&gt;). Fortunately this weekend is the time and I started it. Well, first thing to mention is, there is a huge update to the whole tooling and many libraries of the &lt;a href=&quot;http://haxe.org/&quot;&gt;HAXE&lt;/a&gt;, Lime and OpenFL land. Allmost all the libs are updated.&lt;br&gt;Upon the develoment land on &lt;code&gt;mac&lt;/code&gt;, the first thing I noticed is, there is no need to type&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;haxelib run openfl test neko
@@ -1803,9 +1803,9 @@ haxelib run lime test neko&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This is just as simp
     </item>
     <item>
       <title>Migration checklist for Cordova(Phonegap) application from version 2.x to 3.x</title>
-      <link>http://localhost:1234/articles/31/</link>
+      <link>https://saumya.github.io/ray/articles/31/</link>
       <pubDate>Thu, 27 Feb 2014 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/31/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/31/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;There might be chances that you are re-writing a project or simply maintainig an old codebase of a &lt;a href=&quot;https://cordova.apache.org/&quot;&gt;Cordova&lt;/a&gt;(phonegap) application. In both the cases, its ideal to go for the lastest version of the library. Being said that, its not that straight forward to migrate a phonegap 2.x application to Phonegap 3.x. And if, the project uses a 1.x version of &lt;a href=&quot;http://jquery.com&quot;&gt;jQuery&lt;/a&gt; with &lt;a href=&quot;https://jqueryui.com/&quot;&gt;jQuerymobile&lt;/a&gt;, you might want to update that to 2.x too, which adds up to more confusion and work, than solution. I will be focusing on &lt;a href=&quot;https://cordova.apache.org/&quot;&gt;Cordova&lt;/a&gt; rather than &lt;a href=&quot;http://phonegap.com/&quot;&gt;Phonegap&lt;/a&gt; here. Yes, they are different! They are supposed to be the same but there are differences.      &lt;/p&gt;
 &lt;h3 id=&quot;here-is-a-checklist-to-keep-things-in-perspective&quot;&gt;Here is a checklist to keep things in perspective.&lt;/h3&gt;
@@ -1839,9 +1839,9 @@ haxelib run lime test neko&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This is just as simp
     </item>
     <item>
       <title>Book Review, jQuery UI 1.10-The User Interface Library for jQuery.</title>
-      <link>http://localhost:1234/articles/30/</link>
+      <link>https://saumya.github.io/ray/articles/30/</link>
       <pubDate>Sat, 22 Feb 2014 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/30/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/30/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;There is no doubt that &lt;a href=&quot;http://jquery.com&quot;&gt;jQuery&lt;/a&gt; is being in use for almost all the projects. But when it comes to making the UI, there are a lot many options in the name of frameworks or libraries. By any chance, if you happen to choose &lt;a href=&quot;https://jqueryui.com/&quot;&gt;jQuery UI&lt;/a&gt; to create your UI, then &lt;a href=&quot;http://www.packtpub.com/jquery-ui-1-10-user-interface-library/book&quot;&gt;this book&lt;/a&gt; is helpful.&lt;br&gt;&lt;a href=&quot;http://www.packtpub.com/jquery-ui-1-10-user-interface-library/book&quot;&gt;This book&lt;/a&gt; takes each of the components of &lt;a href=&quot;https://jqueryui.com/&quot;&gt;jQuery UI&lt;/a&gt; and describes about its customisation options in detail. Each chapter is dedicated to one of the components of the &lt;a href=&quot;https://jqueryui.com/&quot;&gt;jQuery UI&lt;/a&gt; library. So the book is lengthy but if you are getting started with the libray, then this is an advantage. The experienced ones also, will find its handy to get some tips.&lt;br&gt;All in all its a nice read and helpful, if you stick to &lt;a href=&quot;https://jqueryui.com/&quot;&gt;jQuery UI&lt;/a&gt; for the UI development. &lt;/p&gt;
 &lt;p&gt;Happy reading.&lt;/p&gt;
@@ -1849,9 +1849,9 @@ haxelib run lime test neko&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This is just as simp
     </item>
     <item>
       <title>Amazon S3, file system.</title>
-      <link>http://localhost:1234/articles/29/</link>
+      <link>https://saumya.github.io/ray/articles/29/</link>
       <pubDate>Wed, 19 Feb 2014 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/29/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/29/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;I had my hands dirty for the first time, in last couple of days, with Amazon Simple Storage Service (S3). I was playing with the javascript SDK and getting to know the environment in general. The first impression is, it just stores the files and folders. But, digging deep inside and playing with its APIs, made me realise that its different than the traditional storage.&lt;br&gt;&lt;code&gt;Everything is just a pointer&lt;/code&gt;, well thats how I see it.&lt;br&gt;Amazon says, everything is a file. So that means a folder is a file with a different naming convention. Thats it, if you get that, then the API is straight forward. And I must say from the beginning of the computer era, one thing has been consistent and that is file system. Now, the way, new storage solutions are emerging, it’s not actually different from others’ offers, but definitely different from traditional file systems. The new era of the file systems or more generally we can say data storage systems are emerging and Amazon is no different in that regard. So, all in all, a new storage system with a very simple SDK is exciting.&lt;/p&gt;
 &lt;p&gt;Happy coding.&lt;/p&gt;
@@ -1859,9 +1859,9 @@ haxelib run lime test neko&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This is just as simp
     </item>
     <item>
       <title>jQuery Mobile, making change page work.</title>
-      <link>http://localhost:1234/articles/28/</link>
+      <link>https://saumya.github.io/ray/articles/28/</link>
       <pubDate>Sat, 15 Feb 2014 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/28/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/28/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;The &lt;a href=&quot;http://saumya.github.io/ray/articles/24/&quot;&gt;last post&lt;/a&gt; about the &lt;a href=&quot;http://saumya.github.io/ray/articles/24/&quot;&gt;change page&lt;/a&gt; API change of &lt;a href=&quot;http://jquerymobile.com&quot;&gt;jQuery Mobile&lt;/a&gt; tells you as to, how to change a page, in the &lt;a href=&quot;http://api.jquerymobile.com/jQuery.mobile.changePage/&quot;&gt;new API&lt;/a&gt;. I was hoping thats the only change, but there seems, some kind of fix necessary to make a page, change properly. I mean, there is this bug, where the page change actually does this. It goes to the page mentioned by the change page and then it comes back to the page again, from where it was moved. So the effect is, the page is not chaged at all and the user looks at a screen, where the application simply moves to another screen and comesback to the original screen.&lt;br&gt;For me the fix that worked is send &lt;code&gt;changeHash:true&lt;/code&gt; in the options object of the API.     &lt;/p&gt;
 &lt;script src=&quot;https://gist.github.com/saumya/9015917.js&quot;&gt;&lt;/script&gt;
@@ -1871,9 +1871,9 @@ haxelib run lime test neko&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This is just as simp
     </item>
     <item>
       <title>Amazon S3 Sync with NodeJS</title>
-      <link>http://localhost:1234/articles/27/</link>
+      <link>https://saumya.github.io/ray/articles/27/</link>
       <pubDate>Fri, 14 Feb 2014 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/27/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/27/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;This is my first practical cross-platform desktop application written in &lt;a href=&quot;http://nodejs.org/&quot;&gt;NodeJS&lt;/a&gt;. The application is a simple desktop client to upload the changed files in a folder automatically to a bucket in &lt;a href=&quot;http://aws.amazon.com/s3/&quot;&gt;Amazon S3&lt;/a&gt;. The main components, which make this application, are     &lt;/p&gt;
 &lt;ul&gt;
@@ -1888,9 +1888,9 @@ haxelib run lime test neko&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This is just as simp
     </item>
     <item>
       <title>iOS, customising top and bottom bar inside UINavigationController</title>
-      <link>http://localhost:1234/articles/26/</link>
+      <link>https://saumya.github.io/ray/articles/26/</link>
       <pubDate>Thu, 13 Feb 2014 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/26/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/26/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;This may seem a difficult or simple task, depending upon what and how you want to do it.&lt;br&gt;&lt;a href=&quot;https://developer.apple.com/library/ios/documentation/uikit/reference/UINavigationController_Class/Reference/Reference.html&quot;&gt;UINavigationController&lt;/a&gt; is simply a controller to manage all the UIViewControllers inside it. Now, customising each and every &lt;a href=&quot;https://developer.apple.com/library/ios/documentation/uikit/reference/UIViewController_Class/Reference/Reference.html#//apple_ref/doc/c_ref/UIViewController&quot;&gt;UIViewController&lt;/a&gt; could be done by code or InterfaceBuilder, depending upon what you want to achieve. We will be seeing here, as to how, to customise the Navigation bar (top bar) and the Tab bar (bottom bar) of the respective &lt;a href=&quot;https://developer.apple.com/library/ios/documentation/uikit/reference/UIViewController_Class/Reference/Reference.html#//apple_ref/doc/c_ref/UIViewController&quot;&gt;UIViewController&lt;/a&gt;.     
 These are the references to look for while customising &lt;a href=&quot;https://developer.apple.com/library/ios/documentation/uikit/reference/UIViewController_Class/Reference/Reference.html#//apple_ref/doc/c_ref/UIViewController&quot;&gt;UIViewController&lt;/a&gt; through InterfaceBuilder.&lt;br&gt;Hide the Tab bar (bottom bar)     &lt;/p&gt;
@@ -1909,9 +1909,9 @@ Now the code reference for [UIViewController][2] is as below.
     </item>
     <item>
       <title>iOS fragmentation and UI development</title>
-      <link>http://localhost:1234/articles/25/</link>
+      <link>https://saumya.github.io/ray/articles/25/</link>
       <pubDate>Wed, 12 Feb 2014 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/25/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/25/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;It was not there 4 years back, when the iOS was just beginning its life. Whether you like it or not the truth is its fragmented now. There are all different versions of iOS, then different versions of the devices. These two itself bring a lot of different considerations, while developing for the platform now.&lt;br&gt;Its agreed that its less fragmented but then thats enough to bring in the pain to a frontend developer.&lt;br&gt;Now, to add to it, there are different device form factors. Starting with regular iPads, retina, air, mini, iphone, ipod touch and all have different specifications. So the point is, the XCode workflow allows one to &lt;code&gt;design&lt;/code&gt; for all different devices, that does mean &lt;code&gt;design is multiplied&lt;/code&gt; not &lt;code&gt;reduced&lt;/code&gt;. While its good and freedom to the UI designer, as a frontend developer one must keep an eye on all these form fragmentations.
 Now the same code will produce, a different looking back button in an older iOS and a different looking one in the newer ones. The UI may hide some UI elements on a smaller heighted device and look perfect in a newer bigger iPhone/iPodTouch.&lt;br&gt;Thats doable but definitely increases time to implement UI, if its not designed, and well thought of, by people, who know what they are doing.&lt;br&gt;Happy designing.&lt;/p&gt;
@@ -1919,9 +1919,9 @@ Now the same code will produce, a different looking back button in an older iOS 
     </item>
     <item>
       <title>jQuerymobile, changePage is deprecated as of 1.4.0, will be removed in 1.5.0.</title>
-      <link>http://localhost:1234/articles/24/</link>
+      <link>https://saumya.github.io/ray/articles/24/</link>
       <pubDate>Tue, 11 Feb 2014 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/24/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/24/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;This is really going to break things, if someone is updating the library to latest version. This is a very frequently used function and chances are, that, in a mobile web application its being used everywhere. Lets remind ourselves again that &lt;code&gt;jQuery.mobile.changePage&lt;/code&gt; is &lt;code&gt;deprecated as of 1.4.0&lt;/code&gt; and &lt;code&gt;will be removed in 1.5.0&lt;/code&gt;.      
 Now there are vaious ways to change page in a &lt;a href=&quot;http://jquerymobile.com&quot;&gt;jQuerymobile&lt;/a&gt; application. Here are the 3 options to do the page change in the new API.&lt;/p&gt;
@@ -1936,9 +1936,9 @@ $(&lt;span class=&quot;string&quot;&gt;&quot;body&quot;&lt;/span&gt;).pagecontai
     </item>
     <item>
       <title>Making desktop applications, using NodeJS.</title>
-      <link>http://localhost:1234/articles/23/</link>
+      <link>https://saumya.github.io/ray/articles/23/</link>
       <pubDate>Mon, 10 Feb 2014 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/23/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/23/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;I am suprised to see, how big the javascript community has become! And specifically &lt;a href=&quot;http://nodejs.org/&quot;&gt;NodeJS&lt;/a&gt; has some serious people in its community. I was trying to do a desktop application in javascript and without searching in the internet, I started out to do it all over again! After a couple of days, out of curiosity, did a search in internet to find, that &lt;a href=&quot;http://nodejs.org/&quot;&gt;NodeJS&lt;/a&gt; has plenty of options to do the stuff.&lt;br&gt;Evaluating some options, I settled with &lt;a href=&quot;https://github.com/rogerwang/node-webkit&quot;&gt;Node-Webkit&lt;/a&gt;. For now the best 3 in my opinion are;&lt;/p&gt;
 &lt;ul&gt;
@@ -1952,9 +1952,9 @@ $(&lt;span class=&quot;string&quot;&gt;&quot;body&quot;&lt;/span&gt;).pagecontai
     </item>
     <item>
       <title>BackboneJS, making an event-dispatching Object.</title>
-      <link>http://localhost:1234/articles/22/</link>
+      <link>https://saumya.github.io/ray/articles/22/</link>
       <pubDate>Sat, 01 Feb 2014 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/22/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/22/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;Making Views, Collections and Models in &lt;a href=&quot;http://backbonejs.org/&quot;&gt;BackboneJS&lt;/a&gt; is as simple as extending the raw &lt;a href=&quot;http://backbonejs.org/&quot;&gt;BackboneJS&lt;/a&gt; objects.&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; MyView = Backbone.View.extend({});&lt;/code&gt;&lt;/pre&gt;
@@ -1970,9 +1970,9 @@ Here is a detailed example of an utility class for &lt;a href=&quot;http://backb
     </item>
     <item>
       <title>Typography.</title>
-      <link>http://localhost:1234/articles/21/</link>
+      <link>https://saumya.github.io/ray/articles/21/</link>
       <pubDate>Fri, 31 Jan 2014 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/21/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/21/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;Like many other things, there are a lot of nice typography available, which are free to use. There is no hidden spying on you or hidden charges or anything hidden, in the name of free.&lt;br&gt;I would like to mention, the two types, which are used in the theme &lt;a href=&quot;https://github.com/saumya/wintersmithThemes/tree/master/elegant&quot;&gt;Elegant&lt;/a&gt; for &lt;a href=&quot;https://github.com/jnordberg/wintersmith&quot;&gt;Wintersmith&lt;/a&gt;.     &lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;http://www.fontsquirrel.com/fonts/kaushan-script&quot;&gt;Kaushan Script&lt;/a&gt; and &lt;a href=&quot;http://www.fontsquirrel.com/fonts/TeX-Gyre-Adventor&quot;&gt;TeX Gyre Adventor&lt;/a&gt;&lt;/p&gt;
@@ -1983,9 +1983,9 @@ Here is a detailed example of an utility class for &lt;a href=&quot;http://backb
     </item>
     <item>
       <title>Theme, Elegant.</title>
-      <link>http://localhost:1234/articles/20/</link>
+      <link>https://saumya.github.io/ray/articles/20/</link>
       <pubDate>Thu, 30 Jan 2014 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/20/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/20/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;Continuing to create themes, which are free of the dependencies, here is my next theme, &lt;code&gt;Elegant&lt;/code&gt;. I am definitenly in love with &lt;a href=&quot;https://github.com/jnordberg/wintersmith&quot;&gt;Wintesmith&lt;/a&gt;. My frequency of blogging has increased exponentially. I am releasing this &lt;a href=&quot;https://github.com/saumya/wintersmithThemes/tree/master/elegant&quot;&gt;theme&lt;/a&gt; at github in my &lt;a href=&quot;https://github.com/saumya/wintersmithThemes&quot;&gt;Wintersmith Themes&lt;/a&gt; repository. It adds some typography to the plain theme &lt;a href=&quot;https://github.com/saumya/wintersmithThemes/tree/master/simple&quot;&gt;Simple&lt;/a&gt;.      &lt;/p&gt;
 &lt;p&gt;Its a free as in air, theme, and encourage you to take it, hack it and use it, for whatever reason you may want it to use.     &lt;/p&gt;
@@ -1994,9 +1994,9 @@ Here is a detailed example of an utility class for &lt;a href=&quot;http://backb
     </item>
     <item>
       <title>Theme, Simple.</title>
-      <link>http://localhost:1234/articles/19/</link>
+      <link>https://saumya.github.io/ray/articles/19/</link>
       <pubDate>Tue, 28 Jan 2014 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/19/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/19/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;In order to get rid of the dependencies and make the site pure static, I re-wrote some of the CSS and font dependencies in the &lt;a href=&quot;https://github.com/jnordberg/wintersmith&quot;&gt;Wintesmith&lt;/a&gt;. I am releasing this &lt;a href=&quot;https://github.com/saumya/wintersmithThemes/tree/master/simple&quot;&gt;theme&lt;/a&gt; at github in my &lt;a href=&quot;https://github.com/saumya/wintersmithThemes&quot;&gt;Wintersmith Themes&lt;/a&gt; repository. The name of the theme is &lt;code&gt;Simple&lt;/code&gt;.      
 Its a free as in air theme, and encourage you to take it, hack it and use it, for whatever reason you may want it to use.&lt;br&gt;This blog today is using &lt;code&gt;Simple&lt;/code&gt; theme as an example of, what it looks like to use this theme.&lt;/p&gt;
@@ -2005,9 +2005,9 @@ Its a free as in air theme, and encourage you to take it, hack it and use it, fo
     </item>
     <item>
       <title>Git commit throws fatal error for line endings.</title>
-      <link>http://localhost:1234/articles/18/</link>
+      <link>https://saumya.github.io/ray/articles/18/</link>
       <pubDate>Mon, 27 Jan 2014 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/18/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/18/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;This comes to me in a regular basis, thought it would be nice, to keep a note to me and anyone else dealing with same.     &lt;/p&gt;
 &lt;p&gt;The short answer to fix this is&lt;/p&gt;
@@ -2017,9 +2017,9 @@ Its a free as in air theme, and encourage you to take it, hack it and use it, fo
     </item>
     <item>
       <title>A theme for Indian republic day</title>
-      <link>http://localhost:1234/articles/17/</link>
+      <link>https://saumya.github.io/ray/articles/17/</link>
       <pubDate>Sun, 26 Jan 2014 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/17/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/17/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;Since I have the know how to theme my blog, here is the &lt;code&gt;Indian Republic Day&lt;/code&gt; theme. Its &lt;code&gt;Open source&lt;/code&gt; and available &lt;code&gt;at my github repository&lt;/code&gt; &lt;a href=&quot;https://github.com/saumya/wintersmithThemes/tree/master/indianRepublicDay&quot;&gt;here&lt;/a&gt;. I will be &lt;code&gt;sharing my themes&lt;/code&gt; for &lt;a href=&quot;https://github.com/jnordberg/wintersmith&quot;&gt;Wintersmith&lt;/a&gt; at &lt;a href=&quot;https://github.com/saumya/wintersmithThemes&quot;&gt;this&lt;/a&gt; repository.&lt;/p&gt;
 &lt;p&gt;Happy republic day.&lt;/p&gt;
@@ -2027,9 +2027,9 @@ Its a free as in air theme, and encourage you to take it, hack it and use it, fo
     </item>
     <item>
       <title>Getting started with Wintersmith themes</title>
-      <link>http://localhost:1234/articles/16/</link>
+      <link>https://saumya.github.io/ray/articles/16/</link>
       <pubDate>Sat, 25 Jan 2014 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/16/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/16/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;I am getting more and more conversant with the &lt;a href=&quot;http://jade-lang.com&quot;&gt;Jade&lt;/a&gt; templating engine and &lt;a href=&quot;https://github.com/jnordberg/wintersmith&quot;&gt;Wintersmith&lt;/a&gt;. Which I hope, is, what was one of the intentions, of moving from &lt;a href=&quot;http://wordpress.org&quot;&gt;Wordpress&lt;/a&gt; to &lt;a href=&quot;https://github.com/jnordberg/wintersmith&quot;&gt;Wintersmith&lt;/a&gt;. Well, trying my hands on to customise the theme, I found its extemely easy to just add another CSS to the &lt;code&gt;layout&lt;/code&gt; template ie; &lt;code&gt;layout.jade&lt;/code&gt; and start putting in the styles there. It can not be simpler than this. The base style is taken from the style definition at &lt;code&gt;main.css&lt;/code&gt;. If you look at the &lt;code&gt;layout.jade&lt;/code&gt;, it will look something as this.&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;link(rel=&lt;span class=&quot;string&quot;&gt;'stylesheet'&lt;/span&gt;, href=&lt;span class=&quot;string&quot;&gt;'/css/main.css'&lt;/span&gt;)&lt;/code&gt;&lt;/pre&gt;
@@ -2049,9 +2049,9 @@ link(rel=&lt;span class=&quot;string&quot;&gt;'stylesheet'&lt;/span&gt;, href=lo
     </item>
     <item>
       <title>Want excitement, work with Freshers or even younger.</title>
-      <link>http://localhost:1234/articles/15/</link>
+      <link>https://saumya.github.io/ray/articles/15/</link>
       <pubDate>Fri, 24 Jan 2014 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/15/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/15/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;It is exciting to work with juniours and if you have never had an experience, try this. Which is highly recommended.&lt;br&gt;They can bring one or all of below.&lt;/p&gt;
 &lt;ul&gt;
@@ -2071,9 +2071,9 @@ link(rel=&lt;span class=&quot;string&quot;&gt;'stylesheet'&lt;/span&gt;, href=lo
     </item>
     <item>
       <title>Phonegap, jQuery, jQueryMobile and AJAX caching</title>
-      <link>http://localhost:1234/articles/14/</link>
+      <link>https://saumya.github.io/ray/articles/14/</link>
       <pubDate>Thu, 23 Jan 2014 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/14/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/14/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;Developing for a fragmented landscape is not easy. Its even difficult, if you choose to use, a library or framework, which says &lt;code&gt;develop once and run everywhere&lt;/code&gt; or something like &lt;code&gt;it makes your application look like native&lt;/code&gt;.    
 First thing first. With every new release, we have another step addition to test. Contrary to the belief that, the new Operating System is obviously capable of running the old running application, it adds one more fragment to the already fragmented landscape. So if you are a mobile developer, keep this in mind that &lt;code&gt;new OS, is a new test step&lt;/code&gt;. Well, lets add one more device to this equation. Lets just focus on &lt;code&gt;Apple&lt;/code&gt; devices, considering there &lt;code&gt;so called, minimum number of device types&lt;/code&gt;. An iDevice is suppose to run the latest vesion of the iOS. But in the development environment, you might not able to keep up with new device types or OS updates. And only this can break your application. So make sure, you have &lt;code&gt;latest device and latest OS&lt;/code&gt;. Ok, then test your application in this device, chances are your application &lt;code&gt;may run&lt;/code&gt; but chances are &lt;code&gt;it might not&lt;/code&gt; too. So the point is &lt;code&gt;search arround&lt;/code&gt; the internet from the beginning itself, if there are known problems with the exact &lt;code&gt;device and OS&lt;/code&gt; combination.&lt;span class=&quot;more&quot;&gt;           &lt;/p&gt;
@@ -2109,9 +2109,9 @@ It goes on and on. The matter of fact is, you can not ignore testing it in all t
     </item>
     <item>
       <title>Author details on Wintersmith</title>
-      <link>http://localhost:1234/articles/13/</link>
+      <link>https://saumya.github.io/ray/articles/13/</link>
       <pubDate>Wed, 22 Jan 2014 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/13/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/13/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;This is probably exciting and why I moved, to &lt;a href=&quot;https://github.com/jnordberg/wintersmith&quot;&gt;Wintersmith&lt;/a&gt;. Part of the blogging itself, is learning the engine and the &lt;a href=&quot;http://jade-lang.com/&quot;&gt;Jade template engine&lt;/a&gt;.      &lt;/p&gt;
 &lt;p&gt;Here is a tip to configure the author name.      &lt;/p&gt;
@@ -2122,18 +2122,18 @@ It goes on and on. The matter of fact is, you can not ignore testing it in all t
     </item>
     <item>
       <title>Experience with Parse</title>
-      <link>http://localhost:1234/articles/12/</link>
+      <link>https://saumya.github.io/ray/articles/12/</link>
       <pubDate>Tue, 21 Jan 2014 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/12/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/12/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;This is the &lt;code&gt;first time&lt;/code&gt;, I worked with &lt;a href=&quot;https://parse.com/&quot;&gt;Parse&lt;/a&gt; and must say its a nice to have tool for any web developer. &lt;a href=&quot;https://parse.com/&quot;&gt;Parse&lt;/a&gt; minimises the task a lot in terms of backend and hosting.&lt;br&gt;&lt;a href=&quot;https://parse.com/&quot;&gt;Parse&lt;/a&gt; has a lot of options to choose from and one can choose to use the only required ones.&lt;br&gt;Well, I started of with hosting only, for one of my &lt;a href=&quot;http://facebook.com/&quot;&gt;Facebook&lt;/a&gt; applications. They even have a SDK to integrate the &lt;a href=&quot;http://facebook.com/&quot;&gt;Facebook&lt;/a&gt; SDK with them. I have not yet implemented their SDK yet, but docs show its simplicity of use.&lt;br&gt;I have started working on a &lt;a href=&quot;http://backbonejs.org/&quot;&gt;BackboneJS&lt;/a&gt; application integrating &lt;a href=&quot;http://facebook.com/&quot;&gt;Facebook&lt;/a&gt; and hosting in &lt;a href=&quot;https://parse.com/&quot;&gt;Parse&lt;/a&gt;. That went quite smooth. Actually &lt;a href=&quot;https://parse.com/&quot;&gt;Parse&lt;/a&gt; &lt;code&gt;has extended&lt;/code&gt; &lt;a href=&quot;http://backbonejs.org/&quot;&gt;BackboneJS&lt;/a&gt; to provide another SDK of their own to create frontend applications.&lt;br&gt;Happy coding.      &lt;/p&gt;
 </description>
     </item>
     <item>
       <title>BackboneJS, view and its events</title>
-      <link>http://localhost:1234/articles/11/</link>
+      <link>https://saumya.github.io/ray/articles/11/</link>
       <pubDate>Mon, 20 Jan 2014 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/11/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/11/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;Working in &lt;a href=&quot;http://backbonejs.org/&quot;&gt;BackboneJS&lt;/a&gt; is fun and easy to begin with. Slowly but steadily it gets complicated as we move on and add more to the project. Being said that, &lt;a href=&quot;http://backbonejs.org/&quot;&gt;BackboneJS&lt;/a&gt; is not at all opinionated. So there is no rightway of doing something. If your solution works for your project, then its good to go. Well, then there are certain things, which may help you, better organise your code. One of such things is &lt;code&gt;View Events&lt;/code&gt;.     
 In a Backbone view, to listen to events and handle them, the general syntax is as this.&lt;/p&gt;
@@ -2162,9 +2162,9 @@ In a Backbone view, to listen to events and handle them, the general syntax is a
     </item>
     <item>
       <title>Distribute iOS app on your web site</title>
-      <link>http://localhost:1234/articles/10/</link>
+      <link>https://saumya.github.io/ray/articles/10/</link>
       <pubDate>Wed, 15 Jan 2014 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/10/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/10/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;Its not that difficult as it sounds.&lt;br&gt;First of all, there are distribution services out there. I am not going to name them here, but they are available. A simple web search will show you that. 
 Now, the question is, how do they do it, or the more significant question is, can we do it ourselves. The answer is yes.
@@ -2183,9 +2183,9 @@ There are 3 basic things required for distribution.&lt;/p&gt;
     </item>
     <item>
       <title>HTML5, requestAnimationFrame</title>
-      <link>http://localhost:1234/articles/9/</link>
+      <link>https://saumya.github.io/ray/articles/9/</link>
       <pubDate>Tue, 14 Jan 2014 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/9/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/9/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;Making a javascript application, at somepoint, involves use of &lt;code&gt;setTimeout&lt;/code&gt; and &lt;code&gt;setInterval&lt;/code&gt; functions. Well, the possibility increases even more, when one needs to animate elements. So we know what it means to use these two functions.&lt;br&gt;Fortunately we have a new method, called &lt;code&gt;requestAnimationFrame()&lt;/code&gt;, which is elegant and effective. Now animations will not eat up mobile battery life, but still be smooth. This is optimised to takecare of the host environment, such as mobile browser, desktop browser etc. It even minimises the repeat call, if the application using it, is not visible or scrolled out of view, sweet.&lt;br&gt;&lt;a href=&quot;http://caniuse.com/requestanimationframe&quot;&gt;Check, which browsers and versions support this function,&lt;/a&gt; just to make yourself clear.&lt;br&gt;Here are few links which explain &lt;code&gt;requestAnimationFrame&lt;/code&gt; function in more detail.    &lt;/p&gt;
 &lt;ul&gt;
@@ -2199,9 +2199,9 @@ Happy Animating.&lt;/p&gt;
     </item>
     <item>
       <title>Native Android development and getting Key Hash for Facebook</title>
-      <link>http://localhost:1234/articles/8/</link>
+      <link>https://saumya.github.io/ray/articles/8/</link>
       <pubDate>Mon, 13 Jan 2014 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/8/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/8/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;If you are developing for native Android, and creating a Facebook login, then the fist thing which will come to you, is a setting on Facebook console called “Key Hashes”.&lt;/p&gt;
 &lt;span class=&quot;more&quot;&gt;
@@ -2215,9 +2215,9 @@ Happy Animating.&lt;/p&gt;
     </item>
     <item>
       <title>Wintersmith configuration</title>
-      <link>http://localhost:1234/articles/7/</link>
+      <link>https://saumya.github.io/ray/articles/7/</link>
       <pubDate>Sun, 12 Jan 2014 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/7/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/7/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;&lt;a href=&quot;https://github.com/jnordberg/wintersmith&quot;&gt;Wintersmith&lt;/a&gt; is perfect on creating a static site, but the problem arises when one needs to configure it to meet a particular need. I think, thats true for any framework.&lt;br&gt;The problem I encountered is, putting the static blog in any domain or sub-domain. &lt;a href=&quot;https://github.com/jnordberg/wintersmith&quot;&gt;Wintersmith&lt;/a&gt; generates urls which are default to root &lt;code&gt;/&lt;/code&gt; and to change it to any domain means one has to change it to the domain one wishes to put the site on. Thats as simple as that. Well, for most parts. Then, there are places where it creates a relative URL.    &lt;/p&gt;
 &lt;p&gt;To solve this, I looked inside the templates and configuration. &lt;a href=&quot;https://github.com/jnordberg/wintersmith&quot;&gt;Wintersmith&lt;/a&gt; reads from the &lt;code&gt;config.json&lt;/code&gt; file to get the base URL and make the other URLs. So I changed the &lt;code&gt;url&lt;/code&gt; to my desired URL and added another parameter to the &lt;code&gt;locals&lt;/code&gt; object of the &lt;code&gt;config.json&lt;/code&gt; named &lt;code&gt;folder&lt;/code&gt;, Then changed the URL in templates, from &lt;code&gt;/&lt;/code&gt; to &lt;code&gt;locals.url&lt;/code&gt; and at some places to &lt;code&gt;locals.url+&amp;#39;/&amp;#39;+locals.folder&lt;/code&gt; and thats it. Its now perfectly alright to take my site to wherever I want. All I need to do is change these variables and build the site again with &lt;a href=&quot;https://github.com/jnordberg/wintersmith&quot;&gt;Wintersmith&lt;/a&gt; build command.&lt;br&gt;Is this the rightway? Well, seriously I do not know, but it works.   &lt;/p&gt;
@@ -2226,9 +2226,9 @@ Happy Animating.&lt;/p&gt;
     </item>
     <item>
       <title>Finally added Disqus</title>
-      <link>http://localhost:1234/articles/5/</link>
+      <link>https://saumya.github.io/ray/articles/5/</link>
       <pubDate>Sat, 11 Jan 2014 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/5/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/5/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;The final technical integration to &lt;code&gt;make the blog a conversation&lt;/code&gt; engine, is done. Can not imagine how far the blogging has come and how easy now it is to setup things. Yes can feel the new internet now. Remembering the back days, when I created a static HTML page and served through internet. Its a full circle now. Though the generation of the static pages are automated, but the thing is we are back to decentralised internet.&lt;/p&gt;
 &lt;p&gt;Cheers.&lt;/p&gt;
@@ -2236,9 +2236,9 @@ Happy Animating.&lt;/p&gt;
     </item>
     <item>
       <title>The technology choice of the blog.</title>
-      <link>http://localhost:1234/articles/6/</link>
+      <link>https://saumya.github.io/ray/articles/6/</link>
       <pubDate>Sat, 11 Jan 2014 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/6/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/6/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;First question to answer is &lt;code&gt;why I moved to a static page solution?&lt;/code&gt;, there are a lot of answers to this.
 Here is a nice writeup by David Tucker. &lt;a href=&quot;http://davidtucker.net/articles/move-to-static-site-generator/&quot;&gt;The Need for a Static Site Generator.&lt;/a&gt;&lt;br&gt;Now, since we know a static page site is the need of the time, the technology choice is important too. Obviously the first thing, that comes to mind is &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;, yeah, its simple and just works. Being in MAC, its even tempting to use &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;, as &lt;a href=&quot;https://www.ruby-lang.org/en/&quot;&gt;Ruby&lt;/a&gt; comes installed with the OS. Further more &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; support is in-built with &lt;a href=&quot;https://help.github.com/articles/using-jekyll-with-pages&quot;&gt;GitHub Pages&lt;/a&gt;. It could have been as simple as that.&lt;br&gt;I choose Javascript as the language of choice, since its exciting now, what we could do with it, so this blog would be one of my playgrounds for the work I do. I have already getting more and more familiar with &lt;a href=&quot;http://jade-lang.com/&quot;&gt;Jade&lt;/a&gt; templating engine and &lt;a href=&quot;http://nodejs.org/&quot;&gt;nodeJS&lt;/a&gt; workflows, &lt;a href=&quot;https://github.com/jnordberg/wintersmith&quot;&gt;wintersmith&lt;/a&gt; is such a nice engine which works on &lt;a href=&quot;http://nodejs.org/&quot;&gt;nodeJS&lt;/a&gt;. Just the matter of time, as how far Javascript has come!   &lt;/p&gt;
@@ -2247,9 +2247,9 @@ Here is a nice writeup by David Tucker. &lt;a href=&quot;http://davidtucker.net/
     </item>
     <item>
       <title>The wait is over.</title>
-      <link>http://localhost:1234/articles/3/</link>
+      <link>https://saumya.github.io/ray/articles/3/</link>
       <pubDate>Fri, 10 Jan 2014 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/3/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/3/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;After a week of searching, studying and re-searching things, finally landed up with this.
 Well, there is not much to &lt;a href=&quot;https://github.com/jnordberg/wintersmith&quot;&gt;wintersmith&lt;/a&gt;, it 10 mins job at max if someone has a little experience in NodeJS.The main delay for me was to trying to produce a static site out of my old blog, which was running in &lt;a href=&quot;http://wordpress.org/&quot;&gt;WordPress&lt;/a&gt; eninge.&lt;/p&gt;
@@ -2258,9 +2258,9 @@ Well, there is not much to &lt;a href=&quot;https://github.com/jnordberg/winters
     </item>
     <item>
       <title>Its moved to github now.</title>
-      <link>http://localhost:1234/articles/4/</link>
+      <link>https://saumya.github.io/ray/articles/4/</link>
       <pubDate>Fri, 10 Jan 2014 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/4/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/4/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;Do you notice ?! Now this blog is served from Github itself. The publishing was never excicting as this.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;How it works?&lt;/code&gt; Git commit and the post is out there.&lt;/p&gt;
@@ -2268,9 +2268,9 @@ Well, there is not much to &lt;a href=&quot;https://github.com/jnordberg/winters
     </item>
     <item>
       <title>Finally, a static site !</title>
-      <link>http://localhost:1234/articles/1/</link>
+      <link>https://saumya.github.io/ray/articles/1/</link>
       <pubDate>Tue, 07 Jan 2014 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/1/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/1/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;&lt;code&gt;Why?&lt;/code&gt; Thats for learning.&lt;/p&gt;
 &lt;span class=&quot;more&quot;&gt;
@@ -2285,9 +2285,9 @@ Well, there is not much to &lt;a href=&quot;https://github.com/jnordberg/winters
     </item>
     <item>
       <title>Thanking wordpress.</title>
-      <link>http://localhost:1234/articles/2/</link>
+      <link>https://saumya.github.io/ray/articles/2/</link>
       <pubDate>Tue, 07 Jan 2014 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">http://localhost:1234/articles/2/</guid>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/2/</guid>
       <author>Saumya</author>
       <description>&lt;p&gt;&lt;code&gt;Why?&lt;/code&gt; Thats for being there as a very solid option for blogging.&lt;/p&gt;
 &lt;span class=&quot;more&quot;&gt;
