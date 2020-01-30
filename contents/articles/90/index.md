@@ -1,7 +1,7 @@
 ---
 title: Let's JAMstack.
 author: saumya
-date: 2020-01-29
+date: 2020-01-30
 template: article.pug
 ---
 
