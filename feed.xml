@@ -24,6 +24,20 @@
 </description>
     </item>
     <item>
+      <title>OOP Functional React!</title>
+      <link>https://saumya.github.io/ray/articles/91/</link>
+      <pubDate>Thu, 30 Jan 2020 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/91/</guid>
+      <author>Saumya</author>
+      <description>&lt;p&gt;Developing with &lt;a href=&quot;https://reactjs.org/&quot;&gt;React&lt;/a&gt; is pleasant enough. I have worked with &lt;a href=&quot;https://reactjs.org/&quot;&gt;React&lt;/a&gt; from its beginning. When started it was as simple as a script tag in HTML file. And then create the components and it worked! It was so simple that I was thinking why other frameworks were so so complecated to start with!&lt;span class=&quot;more&quot;&gt; &lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://reactjs.org/&quot;&gt;React&lt;/a&gt; got complicated soon. Toolchains came up and different frameworks around &lt;a href=&quot;https://reactjs.org/&quot;&gt;React&lt;/a&gt; came up. Companies were slow to adapt but then got momentum. &lt;a href=&quot;https://reactjs.org/&quot;&gt;React&lt;/a&gt; changed its licensing and probably that was the turning point for the coporates. But whatever that may be the thing is it got complicated very soon. It was expected, when corporates were into the game. The same thing had happened when Flash became Flex and started pleasing corporates. Ultimately this made me think of switching to other frameworks.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://reactjs.org/&quot;&gt;React&lt;/a&gt; came up with &lt;code&gt;Class&lt;/code&gt; and all the other OOP concepts. It started implementing them. The other frameworks around &lt;a href=&quot;https://reactjs.org/&quot;&gt;React&lt;/a&gt; also started doing the same. As an application developer it felt good at one level. But the fear was there, that the way it is moving. My applications also started using OOP concepts and developed some applicatioins like that. Somewhere I was thinking why it came this way!&lt;/p&gt;
+&lt;p&gt;Developing for a new application today, I took &lt;a href=&quot;https://reactjs.org/&quot;&gt;React&lt;/a&gt; for a test now. I am surprised that &lt;a href=&quot;https://reactjs.org/&quot;&gt;React&lt;/a&gt; has made some changes again. The fun part is with the new toolchains also one can write simple &lt;a href=&quot;https://reactjs.org/&quot;&gt;React&lt;/a&gt; applications. I have tested the new release of the framework in my old application and it worked! That is a big thing for adapting a framework. Even if it matures, it keeps the old applications running. With the new release, now &lt;a href=&quot;https://reactjs.org/&quot;&gt;React&lt;/a&gt; is promoting &lt;code&gt;Funcational&lt;/code&gt; approach rather than the &lt;code&gt;Classical&lt;/code&gt; OOP. Well, learning may be a thing. But then once I know the new approach, it made sense to me. Tried developing simple components and made an application to know whether it works fine! I found it did.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;hooks&lt;/code&gt; are actually simpler to understand and maintain than the &lt;code&gt;lifecycle&lt;/code&gt; methods. I could made a &lt;code&gt;Functional&lt;/code&gt; component with &lt;code&gt;states&lt;/code&gt; with very few lines of code and still know what is happening where. First I thought, it might be difficult to understand the concepts of functional approach. Now it seems fine. Overall, I found it is interesting to work with &lt;a href=&quot;https://reactjs.org/&quot;&gt;React&lt;/a&gt; again.&lt;/p&gt;
+&lt;p&gt;Happy Coding.&lt;/p&gt;
+</description>
+    </item>
+    <item>
       <title>The 2019.</title>
       <link>https://saumya.github.io/ray/articles/89/</link>
       <pubDate>Wed, 29 Jan 2020 05:30:00 +0630</pubDate>
