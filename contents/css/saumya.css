@@ -51,6 +51,14 @@ footer .about a{
   /*color: #ff3d01;*/
 }
 
+footer .about .nav a{
+  /*color: #4141A0;*/
+  font-family: tgd-regular;
+  background-color: #e4e4e4;
+  margin: 0.2em;
+  width: 80px;
+}
+
 .archive .year-label,.archive .month-label{
   /*color: #ff3d01;*/
 }
