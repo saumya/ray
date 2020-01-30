@@ -5,9 +5,24 @@
     <atom:link href="https://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>https://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Wed, 29 Jan 2020 05:30:00 +0630</pubDate>
+    <pubDate>Thu, 30 Jan 2020 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Let's JAMstack.</title>
+      <link>https://saumya.github.io/ray/articles/90/</link>
+      <pubDate>Thu, 30 Jan 2020 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/90/</guid>
+      <author>Saumya</author>
+      <description>&lt;p&gt;First project of 2020. A conversion of a portal from LAMP (Linux-Apache-MySQL-PHP) stack to &lt;a href=&quot;https://jamstack.org/&quot;&gt;JAM stack&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I have been doing static site development for a long time (this blog itself is an example), however the complexities of the project was a little more complex than this blog. &lt;span class=&quot;more&quot;&gt; &lt;/p&gt;
+&lt;p&gt;The project was not very complex in terms of the content and application. The only trick is to get the content from database to the Markdown and deploy it to the server. Once this is done, the whole project is just about moving the deployment from a full stack web server to a static site web server. &lt;/p&gt;
+&lt;p&gt;The code is committed to a &lt;a href=&quot;https://git-scm.com/&quot;&gt;GIT repository&lt;/a&gt;. Next is to configure a &lt;a href=&quot;https://en.wikipedia.org/wiki/Continuous_integration&quot;&gt;Continous Integration&lt;/a&gt; engine for &lt;a href=&quot;https://en.wikipedia.org/wiki/Continuous_delivery&quot;&gt;Continuous Deployment&lt;/a&gt;. Once this is done, all that is left is commit my content and code to the repository.&lt;/p&gt;
+&lt;p&gt;The frontend is developed with &lt;a href=&quot;https://reactjs.org/&quot;&gt;React JS&lt;/a&gt; and built with &lt;a href=&quot;https://en.wikipedia.org/wiki/Serverless_computing&quot;&gt;serverless architecture&lt;/a&gt;. The blog engine is done with &lt;a href=&quot;https://gohugo.io/&quot;&gt;Hugo&lt;/a&gt; and &lt;a href=&quot;https://www.markdownguide.org/&quot;&gt;Markdown&lt;/a&gt;. Made the APIs with &lt;a href=&quot;https://expressjs.com/&quot;&gt;Express&lt;/a&gt; and datastorage is done with a cloud storage service. The authentication is done with one from the many authentication services available to use. And we have a running JAMStack application.&lt;/p&gt;
+&lt;p&gt;There could be serverless functions used, however for the time being it is not. I am happy to see that I could do it. The whole process took me arround 45 days.&lt;/p&gt;
+&lt;p&gt;Happy JAMStack-ing. &lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>The 2019.</title>
       <link>https://saumya.github.io/ray/articles/89/</link>
@@ -36,21 +51,6 @@
 &lt;p&gt;There were tears with people whom I never thought I would talk to. There were smiles with people who are completly strangers. There were activity all around the year, yet I was home all the time. Some were thinking I was doing nothing sitting at home, at the same time there were people who thought “how are you doing all this?!”. That is fascinating to see. I have visited so many places, some alone and some with friends. Met a lot of new people and interacted with them. A lot of bike ride, in and arround the city. There was cyclone and the city devastated. I went through that with ease. No electricity, very little water for alomst more than a month.&lt;/p&gt;
 &lt;p&gt;It gave me a foundation to build upon. &lt;/p&gt;
 &lt;p&gt;Happy living. &lt;/p&gt;
-</description>
-    </item>
-    <item>
-      <title>Let's JAMstack.</title>
-      <link>https://saumya.github.io/ray/articles/90/</link>
-      <pubDate>Wed, 29 Jan 2020 05:30:00 +0630</pubDate>
-      <guid isPermaLink="true">https://saumya.github.io/ray/articles/90/</guid>
-      <author>Saumya</author>
-      <description>&lt;p&gt;First project of 2020. A conversion of a portal from LAMP (Linux-Apache-MySQL-PHP) stack to &lt;a href=&quot;https://jamstack.org/&quot;&gt;JAM stack&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;I have been doing static site development for a long time (this blog itself is an example), however the complexities of the project was a little more complex than this blog. &lt;span class=&quot;more&quot;&gt; &lt;/p&gt;
-&lt;p&gt;The project was not very complex in terms of the content and application. The only trick is to get the content from database to the Markdown and deploy it to the server. Once this is done, the whole project is just about moving the deployment from a full stack web server to a static site web server. &lt;/p&gt;
-&lt;p&gt;The code is committed to a &lt;a href=&quot;https://git-scm.com/&quot;&gt;GIT repository&lt;/a&gt;. Next is to configure a &lt;a href=&quot;https://en.wikipedia.org/wiki/Continuous_integration&quot;&gt;Continous Integration&lt;/a&gt; engine for &lt;a href=&quot;https://en.wikipedia.org/wiki/Continuous_delivery&quot;&gt;Continuous Deployment&lt;/a&gt;. Once this is done, all that is left is commit my content and code to the repository.&lt;/p&gt;
-&lt;p&gt;The frontend is developed with &lt;a href=&quot;https://reactjs.org/&quot;&gt;React JS&lt;/a&gt; and built with &lt;a href=&quot;https://en.wikipedia.org/wiki/Serverless_computing&quot;&gt;serverless architecture&lt;/a&gt;. The blog engine is done with &lt;a href=&quot;https://gohugo.io/&quot;&gt;Hugo&lt;/a&gt; and &lt;a href=&quot;https://www.markdownguide.org/&quot;&gt;Markdown&lt;/a&gt;. Made the APIs with &lt;a href=&quot;https://expressjs.com/&quot;&gt;Express&lt;/a&gt; and datastorage is done with a cloud storage service. The authentication is done with one from the many authentication services available to use. And we have a running JAMStack application.&lt;/p&gt;
-&lt;p&gt;There could be serverless functions used, however for the time being it is not. I am happy to see that I could do it. The whole process took me arround 45 days.&lt;/p&gt;
-&lt;p&gt;Happy JAMStack-ing. &lt;/p&gt;
 </description>
     </item>
     <item>
