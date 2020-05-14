@@ -5,9 +5,47 @@
     <atom:link href="https://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>https://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Thu, 30 Jan 2020 05:30:00 +0630</pubDate>
+    <pubDate>Thu, 14 May 2020 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Sequelize way to UPDATE a model</title>
+      <link>https://saumya.github.io/ray/articles/92/</link>
+      <pubDate>Thu, 14 May 2020 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/92/</guid>
+      <author>Saumya</author>
+      <description>&lt;p&gt;Working with &lt;a href=&quot;https://sequelize.org/&quot;&gt;Sequelize ORM&lt;/a&gt; is just sweet. It makes working with RDBMS as if one is working in NoSQL. And the APIs are simple and on the spot. It just works. While making an API for the CRUD operations the work just gets faster and cleaner.&lt;span class=&quot;more&quot;&gt; &lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://sequelize.org/&quot;&gt;Sequelize ORM&lt;/a&gt; provides two APIs for an UPDATE call to a Model. One is a &lt;em&gt;Static&lt;/em&gt; method and the other one is an &lt;em&gt;Instance&lt;/em&gt; method.&lt;/p&gt;
+&lt;h3 id=&quot;static-method-on-the-model&quot;&gt;Static method on the Model&lt;/h3&gt;
+&lt;p&gt;This is called in the Model itself and not on the instance of the Model. Suppose we want to update one &lt;code&gt;PersonModel&lt;/code&gt;, we can directly call &lt;code&gt;update&lt;/code&gt; on Model.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;PersonModel.update({
+        name: person_name ,
+        phone: person_phone ,
+        email: person_email,
+        address: person_address
+    },{ where:{ id : person_id } })
+    .then((result)=&amp;gt;{
+        console.log(&amp;#39;Number of rows updated=&amp;#39;, result[0]); 
+        })
+    .catch((error)=&amp;gt;{});&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;instance-method-on-the-model-instance-object&quot;&gt;Instance method on the Model Instance (Object)&lt;/h3&gt;
+&lt;p&gt;There may be a reason to call &lt;code&gt;UPDATE&lt;/code&gt; on an instance of the MODEL. This is done by first getting the instance from database and then calling &lt;code&gt;UPDATE&lt;/code&gt; on it.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;PersonModel.findOne({ where:{id : person_id} })
+.then((personInstanceFromDB)=&amp;gt;{
+        personInstanceFromDB.update({
+                name: person_name ,
+                phone: person_phone ,
+                email: person_email,
+                address: person_address
+            })
+        .then((result)=&amp;gt;{
+            console.log(&amp;#39;The new Model Object=&amp;#39;, result.toJSON());
+            })
+        .catch((error2)=&amp;gt;{});
+    })
+.catch((error1)=&amp;gt;{});&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;That is simple, is not it? As you can see the &lt;code&gt;static&lt;/code&gt; method call on the Model is a little less code. However the &lt;code&gt;return&lt;/code&gt; of the calls are different. The &lt;code&gt;static&lt;/code&gt; method is returning the &lt;code&gt;number of rows&lt;/code&gt; that has been updated, however the instance method returns &lt;code&gt;the whole object&lt;/code&gt; itself.&lt;/p&gt;
+&lt;p&gt;Happy Coding.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>Let's JAMstack.</title>
       <link>https://saumya.github.io/ray/articles/90/</link>

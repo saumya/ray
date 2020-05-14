@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <title>Sequelize way to UPDATE a model - Saumya
+    </title>
+    <link rel="alternate" href="https://saumya.github.io/ray/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
+    <link rel="stylesheet" href="https://saumya.github.io/ray/css/main.css">
+    <link rel="stylesheet" href="https://saumya.github.io/ray/css/saumya.css">
+  </head>
+  <body class="article-detail">
+    <header class="header">
+      <div class="content-wrap">
+        <h1>Sequelize way to UPDATE a model</h1>
+        <p class="author">Written by - <span class="author"><a href="mailto:2saumyaray@gmail.com">Saumya</a></span>
+          <p class="date">14 May 2020</p>
+        </p>
+      </div>
+    </header>
+    <div id="content">
+      <div class="content-wrap">
+        <article class="article">
+          <section class="content"><p>Working with <a href="https://sequelize.org/">Sequelize <span class="caps">ORM</span></a> is just sweet. It makes working with <span class="caps">RDBMS</span> as if one is working in NoSQL. And the APIs are simple and on the spot. It just works. While making an <span class="caps">API</span> for the <span class="caps">CRUD</span> operations the work just gets faster and cleaner.<span class="more"> </p>
+<p><a href="https://sequelize.org/">Sequelize <span class="caps">ORM</span></a> provides two APIs for an <span class="caps">UPDATE</span> call to a Model. One is a <em>Static</em> method and the other one is an <em>Instance</em><span class="widont">&nbsp;</span>method.</p>
+<h3 id="static-method-on-the-model">Static method on the<span class="widont">&nbsp;</span>Model</h3>
+<p>This is called in the Model itself and not on the instance of the Model. Suppose we want to update one <code>PersonModel</code>, we can directly call <code>update</code> on Model.</p>
+<pre><code>PersonModel.update({
+        name: person_name ,
+        phone: person_phone ,
+        email: person_email,
+        address: person_address
+    },{ where:{ id : person_id } })
+    .then((result)=&gt;{
+        console.log(&#39;Number of rows updated=&#39;, result[0]); 
+        })
+    .catch((error)=&gt;{});</code></pre><h3 id="instance-method-on-the-model-instance-object">Instance method on the Model Instance<span class="widont">&nbsp;</span>(Object)</h3>
+<p>There may be a reason to call <code>UPDATE</code> on an instance of the <span class="caps">MODEL</span>. This is done by first getting the instance from database and then calling <code>UPDATE</code> on it.</p>
+<pre><code>PersonModel.findOne({ where:{id : person_id} })
+.then((personInstanceFromDB)=&gt;{
+        personInstanceFromDB.update({
+                name: person_name ,
+                phone: person_phone ,
+                email: person_email,
+                address: person_address
+            })
+        .then((result)=&gt;{
+            console.log(&#39;The new Model Object=&#39;, result.toJSON());
+            })
+        .catch((error2)=&gt;{});
+    })
+.catch((error1)=&gt;{});</code></pre><p>That is simple, is not it? As you can see the <code>static</code> method call on the Model is a little less code. However the <code>return</code> of the calls are different. The <code>static</code> method is returning the <code>number of rows</code> that has been updated, however the instance method returns <code>the whole object</code> itself.</p>
+<p>Happy Coding.</p>
+</section>
+        </article>
+      </div>
+    </div>
+    <footer>
+      <div class="content-wrap">
+        <div class="nav"><a href="https://saumya.github.io/ray/">&laquo; Home</a></div>
+        <section class="about"><p><a href="https://saumya.github.io/">Saumya</a> is an iternal seeker.</p>
+<p>A maker of things and curious about everything. Continuous learning is, what fuels him. This blog itself, reflects one of many things he is trying at all the time.</p>
+<p>Talk to <a href="https://twitter.com/saumya">@saumya</a> on Twitter. </p>
+<span class="nav"><a href="https://saumya.github.io/ray/">Home</a><a href="https://saumya.github.io/ray/archive.html">Blog List</a><a href="https://saumya.github.io/ray/feed.xml">Feed</a></span>
+        </section>
+        <section class="copy">
+          <p>&copy; 2020 Saumya Ray &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>
+            <p><a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
+          </p>
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>
