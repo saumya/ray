@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <title>Database and doing things without the 'for' Loop - Saumya
+    </title>
+    <link rel="alternate" href="https://saumya.github.io/ray/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
+    <link rel="stylesheet" href="https://saumya.github.io/ray/css/main.css">
+    <link rel="stylesheet" href="https://saumya.github.io/ray/css/saumya.css">
+  </head>
+  <body class="article-detail">
+    <header class="header">
+      <div class="content-wrap">
+        <h1>Database and doing things without the 'for' Loop</h1>
+        <p class="author">Written by - <span class="author"><a href="mailto:2saumyaray@gmail.com">Saumya</a></span>
+          <p class="date">08 June 2020</p>
+        </p>
+      </div>
+    </header>
+    <div id="content">
+      <div class="content-wrap">
+        <article class="article">
+          <section class="content"><p>This is valid for all the languages and database engines.
+The thing is to create / read / update / delete somethings in database. So it is about multiple actions in a table inserts / reads / updates / deletes. The quick and easy solution is to put the actions in a ‘for loop’ and then try to solve the problems created by the loop itself! There are better<span class="widont">&nbsp;</span>ways. </p>
+<span class="more">
+
+<p>This is problem is generic. However I will be talking about <a href="https://nodejs.org/en/about/">Node.js</a>, <a href="http://expressjs.com/">Express</a> and <a href="https://sequelize.org/">Sequelize</a>. </p>
+<h3 id="recursion--make-your-own-loop">Recursion / Make your own<span class="widont">&nbsp;</span>loop</h3>
+<p>I was developing an <span class="caps">API</span> where a call with an array of ids is expecting an array of objects. All that is needed is get the individual ‘id’ from the array and then process the database to find information about the ‘id’ and store it in another array. Finally return the resulting array. As I told you, in this case ‘for loop’ will create more problems than solving one. Whatever language you work with, in this case avoid ‘for<span class="widont">&nbsp;</span>loop’.</p>
+<p>The best way is to create your own loop and deal with the loop manually with<span class="widont">&nbsp;</span>events.</p>
+<p>First make a <code>counter</code>, access the ‘id’ from the loop. Move to database, do your data manipulatioin, listen for the events and get the data from it. Then move to the next by increasing the<span class="widont">&nbsp;</span>counter.</p>
+<p>Here is the code for<span class="widont">&nbsp;</span>it.</p>
+<pre><code>router.get(&#39;/getAllDoctorsByGroup/:groupId&#39;, (request,response) =&gt; {
+
+    const onCallbackFromDB = function(dbResult){
+        // Call the API to get the Doctors from the IDs we got in &#39;dbResult&#39;
+        var aDoctors = [];
+        var ai = 0;
+        var onGotDoctorFromDB = function(result_doctor){
+            aDoctors.push(result_doctor);
+            ai++;
+            getNextDoctor();
+        }
+        var getNextDoctor = function(){
+            if(ai&lt;dbResult.length){
+                modelFactory.getDoctorWithId(onGotDoctorFromDB, dbResult[ai] );    
+            }else{
+                response.send(aDoctors);
+            }
+        }
+        // initiate the loop
+        getNextDoctor();
+    }
+    // first call to get the array of ids
+    modelFactory.getAllDoctorIdsByGroupId( onCallbackFromDB, request.params.groupId );
+});</code></pre><p>This is basically the <span class="caps">API</span> <span class="caps">GET</span> call ‘getAllDoctorsByGroup’ and passed in a ‘groupId’. I have a table here with mapping for GroupId and DoctorId. So the first callback returns an array of ‘ids’ for the doctors. I have another table here with ‘doctorId’ and all the details for that ‘id’. So initiating a loop with a call to the next table for getting data for one particular ‘id’ and once got the callback, the counter ‘ai’ is incremented and then moved to the same call for the next ‘id’. Finally we got an array of all the ‘details’ for the<span class="widont">&nbsp;</span>‘doctors’.</p>
+<p>This is straight forward and elegant. You could do the error checking and other things in the recursion and the flow is under your control. Rather than fixing the errors created by the ‘for loop’ and ‘synchronous’<span class="widont">&nbsp;</span>methods.</p>
+<p>Happy Coding.</p>
+</section>
+        </article>
+      </div>
+    </div>
+    <footer>
+      <div class="content-wrap">
+        <div class="nav"><a href="https://saumya.github.io/ray/">&laquo; Home</a></div>
+        <section class="about"><p><a href="https://saumya.github.io/">Saumya</a> is an iternal seeker.</p>
+<p>A maker of things and curious about everything. Continuous learning is, what fuels him. This blog itself, reflects one of many things he is trying at all the time.</p>
+<p>Talk to <a href="https://twitter.com/saumya">@saumya</a> on Twitter. </p>
+<span class="nav"><a href="https://saumya.github.io/ray/">Home</a><a href="https://saumya.github.io/ray/archive.html">Blog List</a><a href="https://saumya.github.io/ray/feed.xml">Feed</a></span>
+        </section>
+        <section class="copy">
+          <p>&copy; 2020 Saumya Ray &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>
+            <p><a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
+          </p>
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>

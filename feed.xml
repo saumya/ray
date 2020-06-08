@@ -5,9 +5,53 @@
     <atom:link href="https://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>https://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Thu, 14 May 2020 05:30:00 +0630</pubDate>
+    <pubDate>Mon, 08 Jun 2020 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Database and doing things without the 'for' Loop</title>
+      <link>https://saumya.github.io/ray/articles/93/</link>
+      <pubDate>Mon, 08 Jun 2020 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/93/</guid>
+      <author>Saumya</author>
+      <description>&lt;p&gt;This is valid for all the languages and database engines.
+The thing is to create / read / update / delete somethings in database. So it is about multiple actions in a table inserts / reads / updates / deletes. The quick and easy solution is to put the actions in a ‘for loop’ and then try to solve the problems created by the loop itself! There are better ways. &lt;/p&gt;
+&lt;span class=&quot;more&quot;&gt;
+
+&lt;p&gt;This is problem is generic. However I will be talking about &lt;a href=&quot;https://nodejs.org/en/about/&quot;&gt;Node.js&lt;/a&gt;, &lt;a href=&quot;http://expressjs.com/&quot;&gt;Express&lt;/a&gt; and &lt;a href=&quot;https://sequelize.org/&quot;&gt;Sequelize&lt;/a&gt;. &lt;/p&gt;
+&lt;h3 id=&quot;recursion--make-your-own-loop&quot;&gt;Recursion / Make your own loop&lt;/h3&gt;
+&lt;p&gt;I was developing an API where a call with an array of ids is expecting an array of objects. All that is needed is get the individual ‘id’ from the array and then process the database to find information about the ‘id’ and store it in another array. Finally return the resulting array. As I told you, in this case ‘for loop’ will create more problems than solving one. Whatever language you work with, in this case avoid ‘for loop’.&lt;/p&gt;
+&lt;p&gt;The best way is to create your own loop and deal with the loop manually with events.&lt;/p&gt;
+&lt;p&gt;First make a &lt;code&gt;counter&lt;/code&gt;, access the ‘id’ from the loop. Move to database, do your data manipulatioin, listen for the events and get the data from it. Then move to the next by increasing the counter.&lt;/p&gt;
+&lt;p&gt;Here is the code for it.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;router.get(&amp;#39;/getAllDoctorsByGroup/:groupId&amp;#39;, (request,response) =&amp;gt; {
+
+    const onCallbackFromDB = function(dbResult){
+        // Call the API to get the Doctors from the IDs we got in &amp;#39;dbResult&amp;#39;
+        var aDoctors = [];
+        var ai = 0;
+        var onGotDoctorFromDB = function(result_doctor){
+            aDoctors.push(result_doctor);
+            ai++;
+            getNextDoctor();
+        }
+        var getNextDoctor = function(){
+            if(ai&amp;lt;dbResult.length){
+                modelFactory.getDoctorWithId(onGotDoctorFromDB, dbResult[ai] );    
+            }else{
+                response.send(aDoctors);
+            }
+        }
+        // initiate the loop
+        getNextDoctor();
+    }
+    // first call to get the array of ids
+    modelFactory.getAllDoctorIdsByGroupId( onCallbackFromDB, request.params.groupId );
+});&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This is basically the API GET call ‘getAllDoctorsByGroup’ and passed in a ‘groupId’. I have a table here with mapping for GroupId and DoctorId. So the first callback returns an array of ‘ids’ for the doctors. I have another table here with ‘doctorId’ and all the details for that ‘id’. So initiating a loop with a call to the next table for getting data for one particular ‘id’ and once got the callback, the counter ‘ai’ is incremented and then moved to the same call for the next ‘id’. Finally we got an array of all the ‘details’ for the ‘doctors’.&lt;/p&gt;
+&lt;p&gt;This is straight forward and elegant. You could do the error checking and other things in the recursion and the flow is under your control. Rather than fixing the errors created by the ‘for loop’ and ‘synchronous’ methods.&lt;/p&gt;
+&lt;p&gt;Happy Coding.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>Sequelize UPDATE call</title>
       <link>https://saumya.github.io/ray/articles/92/</link>

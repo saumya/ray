@@ -23,6 +23,23 @@
       <div class="content-wrap">
         <article class="article intro">
           <header>
+            <p class="date"><span>11. February 2014</span></p>
+            <h2><a href="https://saumya.github.io/ray/articles/24/">jQuerymobile, changePage is deprecated as of 1.4.0, will be removed in 1.5.0.</a></h2>
+          </header>
+          <section class="content"><p>This is really going to break things, if someone is updating the library to latest version. This is a very frequently used function and chances are, that, in a mobile web application its being used everywhere. Lets remind ourselves again that <code>jQuery.mobile.changePage</code> is <code>deprecated as of 1.4.0</code> and <code>will be removed in 1.5.0</code>.      
+Now there are vaious ways to change page in a <a href="http://jquerymobile.com">jQuerymobile</a> application. Here are the 3 options to do the page change in the new<span class="widont">&nbsp;</span><span class="caps">API</span>.</p>
+<pre><code class="language-javascript">$(<span class="string">":mobile-pagecontainer"</span>).pagecontainer(<span class="string">"change"</span>, <span class="string">"target"</span>, { options });
+<span class="comment">//or</span>
+$.mobile.pageContainer.pagecontainer(<span class="string">"change"</span>, <span class="string">"target"</span>, { options });
+<span class="comment">//or</span>
+$(<span class="string">"body"</span>).pagecontainer(<span class="string">"change"</span>, <span class="string">"target"</span>, { options });</code></pre>
+<p><a href="http://api.jquerymobile.com/jQuery.mobile.changePage/">Here is the official document for<span class="widont">&nbsp;</span>reference</a>     </p>
+<p>Happy coding.</p>
+
+          </section>
+        </article>
+        <article class="article intro">
+          <header>
             <p class="date"><span>10. February 2014</span></p>
             <h2><a href="https://saumya.github.io/ray/articles/23/">Making desktop applications, using NodeJS.</a></h2>
           </header>
@@ -52,19 +69,6 @@ Here is a detailed example of an utility class for <a href="http://backbonejs.or
 
 
 <p>Happy coding.</p>
-
-          </section>
-        </article>
-        <article class="article intro">
-          <header>
-            <p class="date"><span>31. January 2014</span></p>
-            <h2><a href="https://saumya.github.io/ray/articles/21/">Typography.</a></h2>
-          </header>
-          <section class="content"><p>Like many other things, there are a lot of nice typography available, which are free to use. There is no hidden spying on you or hidden charges or anything hidden, in the name of free.<br>I would like to mention, the two types, which are used in the theme <a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Elegant</a> for <a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>.     </p>
-<p><a href="http://www.fontsquirrel.com/fonts/kaushan-script">Kaushan Script</a> and <a href="http://www.fontsquirrel.com/fonts/TeX-Gyre-Adventor">TeX Gyre<span class="widont">&nbsp;</span>Adventor</a></p>
-<p>I found these fonts at <a href="http://www.fontsquirrel.com/">fontsquirrel</a>.</p>
-<p><a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Elegant</a> is a free as in air, theme, and encourage you to take it, hack it and use it, for whatever reason you may want it to<span class="widont">&nbsp;</span>use.     </p>
-<p>Happy hacking.</p>
 
           </section>
         </article>
