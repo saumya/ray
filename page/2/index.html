@@ -32,47 +32,21 @@
         </article>
         <article class="article intro">
           <header>
+            <p class="date"><span>30. January 2020</span></p>
+            <h2><a href="https://saumya.github.io/ray/articles/90/">Let's JAMstack.</a></h2>
+          </header>
+          <section class="content"><p>First project of 2020. A conversion of a portal from <span class="caps">LAMP</span> (Linux-Apache-MySQL-<span class="caps">PHP</span>) stack to <a href="https://jamstack.org/"><span class="caps">JAM</span><span class="widont">&nbsp;</span>stack</a>.</p>
+<p>I have been doing static site development for a long time (this blog itself is an example), however the complexities of the project was a little more complex than this blog. 
+            <p class="more"><a href="https://saumya.github.io/ray/articles/90/">more</a></p>
+          </section>
+        </article>
+        <article class="article intro">
+          <header>
             <p class="date"><span>29. January 2020</span></p>
             <h2><a href="https://saumya.github.io/ray/articles/89/">The 2019.</a></h2>
           </header>
           <section class="content"><p>Happy new year! I am late about the post. But can not miss it. The reflection about the past year. 
             <p class="more"><a href="https://saumya.github.io/ray/articles/89/">more</a></p>
-          </section>
-        </article>
-        <article class="article intro">
-          <header>
-            <p class="date"><span>25. December 2019</span></p>
-            <h2><a href="https://saumya.github.io/ray/articles/88/">Node, MongoDB and Express.</a></h2>
-          </header>
-          <section class="content"><p>Working with databases from <a href="https://nodejs.org/en/">Node</a> is easy. But then working with a support from <span class="caps">ORM</span>/<span class="caps">ODM</span> makes it more interesting. <a href="https://saumya.github.io/ray/articles/87/">Last time</a> we saw <code>how we can work with SQL servers?</code>, this post is about NoSQL servers, specifically <a href="https://www.mongodb.com/">MongoDB</a>. There is a nice <span class="caps">ODM</span> for <a href="https://www.mongodb.com/">MongoDB</a> known as <a href="https://mongoosejs.com/">mongoose</a>. </p>
-<p>This <a href="https://mongoosejs.com/">mongoose</a> makes the database calls as simple as it could be. The concepts here<span class="widont">&nbsp;</span>are </p>
-<ul>
-<li>Define a schema</li>
-<li>Get the Model from the<span class="widont">&nbsp;</span>Schema</li>
-<li>Do the database operations on the<span class="widont">&nbsp;</span>Model</li>
-</ul>
-<p>The <a href="https://github.com/saumya/NodeOrmApi_103">sample project is here</a> in <code>Github</code>.</p>
-<p>The first call to <a href="https://mongoosejs.com/">mongoose</a> is a connection to <a href="https://www.mongodb.com/">MongoDB</a>.</p>
-<pre><code>var mongoose = require(&#39;mongoose&#39;);
-mongoose.connect( mongoURL , {useUnifiedTopology: true,useNewUrlParser: true},function(error){
-        if(error){
-            throw error
-        }
-        console.log(&#39;Connection : SUCCESS : &#39;);
-
-        // Go ahead with Database modifications
-        //
-    });</code></pre><p>There are two ways to call <code>connect</code> function. The way it is shown above will give <code>error</code> object if there is an error in connection. One has to check for the availability of this object and do things accordingly. If not present, then we have a successful connection. Once that is done, one can call the <span class="caps">CRUD</span> methods of the model for modifying the<span class="widont">&nbsp;</span>database.</p>
-<p>A model file(example: <code>dog.model.js</code>) will look as<span class="widont">&nbsp;</span>below.</p>
-<pre><code>const mongoose = require(&#39;mongoose&#39;);
-const DogSchema = mongoose.Schema({
-    name: String,
-    description: String
-});
-const DogModel = mongoose.model(&#39;MyDog&#39;, DogSchema);
-module.exports = DogModel;</code></pre><p>This is how to get the model and from there on, you can use the <a href="https://mongoosejs.com/">mongoose</a> <span class="caps">API</span> to modify the database through the model<span class="widont">&nbsp;</span>Object.</p>
-<p>Happy Coding.</p>
-
           </section>
         </article>
       </div>

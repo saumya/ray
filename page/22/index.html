@@ -23,6 +23,42 @@
       <div class="content-wrap">
         <article class="article intro">
           <header>
+            <p class="date"><span>27. February 2014</span></p>
+            <h2><a href="https://saumya.github.io/ray/articles/31/">Migration checklist for Cordova(Phonegap) application from version 2.x to 3.x</a></h2>
+          </header>
+          <section class="content"><p>There might be chances that you are re-writing a project or simply maintainig an old codebase of a <a href="https://cordova.apache.org/">Cordova</a>(phonegap) application. In both the cases, its ideal to go for the lastest version of the library. Being said that, its not that straight forward to migrate a phonegap 2.x application to Phonegap 3.x. And if, the project uses a 1.x version of <a href="http://jquery.com">jQuery</a> with <a href="https://jqueryui.com/">jQuerymobile</a>, you might want to update that to 2.x too, which adds up to more confusion and work, than solution. I will be focusing on <a href="https://cordova.apache.org/">Cordova</a> rather than <a href="http://phonegap.com/">Phonegap</a> here. Yes, they are different! They are supposed to be the same but there are<span class="widont">&nbsp;</span>differences.      </p>
+<h3 id="here-is-a-checklist-to-keep-things-in-perspective">Here is a checklist to keep things in<span class="widont">&nbsp;</span>perspective.</h3>
+<h3 id="cordova">Cordova</h3>
+<ul>
+<li>Get used to <a href="http://nodejs.org/">NodeJS</a>. Yes, thats now mandatory to<span class="widont">&nbsp;</span>use.</li>
+<li>Get used to <a href="https://cordova.apache.org/">Cordova</a> and <a href="http://phonegap.com/">Phonegap</a>, they are<span class="widont">&nbsp;</span>different.</li>
+<li>Know the difference between <a href="https://cordova.apache.org/">Cordova</a> and <a href="http://phonegap.com/">Phonegap</a>, at-least what they do<span class="widont">&nbsp;</span>internally.</li>
+<li><a href="http://cordova.apache.org/docs/en/3.4.0/guide_overview_index.md.html#Overview">Read completely the getting started</a> with <a href="https://cordova.apache.org/">Cordova</a>.</li>
+<li>Do not confuse with <a href="http://cordova.apache.org/docs/en/3.4.0/guide_overview_index.md.html#Overview_development_paths">Web Project Dev</a> work flow, if possible avoid it<span class="widont">&nbsp;</span>altogether.</li>
+<li>Start with <a href="http://cordova.apache.org/docs/en/3.4.0/guide_overview_index.md.html#Overview_development_paths">Native Platform Dev</a> workflow. This is the one, which is closer to the older version<span class="widont">&nbsp;</span>workflow.</li>
+<li>Do not use <a href="http://cordova.apache.org/docs/en/3.4.0/guide_cli_index.md.html#The%20Command-Line%20Interface"><span class="caps">CLI</span></a> for creating project. You can download the <a href="http://archive.apache.org/dist/cordova/">whole archive for a version</a> as you used to in the previous versions and still can create project with<span class="widont">&nbsp;</span>it.</li>
+<li>Get used to <a href="http://cordova.apache.org/docs/en/3.4.0/plugin_ref_plugman.md.html#Using%20Plugman%20to%20Manage%20Plugins">Plugman</a> to manage plugins. Everything is now a plugin. That means, a default project created, is nothing more than a website. If you need to interact with a device, you have to add plugin. In <a href="http://cordova.apache.org/docs/en/3.4.0/guide_overview_index.md.html#Overview_development_paths">Native Platform Dev</a>, these are managed by <a href="http://cordova.apache.org/docs/en/3.4.0/plugin_ref_plugman.md.html#Using%20Plugman%20to%20Manage%20Plugins">Plugman</a>.</li>
+<li>For the first couple of trials, <a href="http://cordova.apache.org/docs/en/3.4.0/plugin_ref_plugman.md.html#Using%20Plugman%20to%20Manage%20Plugins_installing_core_plugins">add all the plugins</a>. That will make the project, behave as the older version projects, where everything is set by default. The document to install plugin is<span class="widont">&nbsp;</span>misleading.     </li>
+</ul>
+<p><code>Instead</code> of</p>
+<pre><code>plugman --platform --project --plugin org.apache.cordova.battery-status</code></pre><p><code>Use</code>, the commands as below. The document is missing <code>--install</code> from the<span class="widont">&nbsp;</span>command!</p>
+<pre><code>plugman --install --platform --project --plugin org.apache.cordova.battery-status</code></pre><p>The actual code will look<span class="widont">&nbsp;</span>as</p>
+<pre><code>plugman --install --ios --path/to/project/folder --plugin org.apache.cordova.battery-status</code></pre><ul>
+<li>Get used to <code>config.xml</code>, <a href="http://cordova.apache.org/docs/en/3.4.0/config_ref_index.md.html#The%2520config.xml%2520File">for configuring the whole<span class="widont">&nbsp;</span>project</a></li>
+</ul>
+<h3 id="jquery-and-jquerymobile">jQuery and jQueryMobile</h3>
+<ul>
+<li>Update the <a href="http://api.jquerymobile.com/jQuery.mobile.changePage/">page change code</a> to remove the deprecated one and use the new<span class="widont">&nbsp;</span>one.</li>
+<li>Update the event listener code from deprecated <a href="http://api.jquery.com/live/">live()</a> to <a href="http://api.jquery.com/on/">on()</a>.</li>
+<li>Keep an eye on all the <a href="http://api.jquery.com/category/deprecated/">deprecated</a> APIs of<span class="widont">&nbsp;</span>jQuery</li>
+</ul>
+<p>That should make you compile your old project in the new<span class="widont">&nbsp;</span>code.</p>
+<p>Happy transitioning.</p>
+
+          </section>
+        </article>
+        <article class="article intro">
+          <header>
             <p class="date"><span>22. February 2014</span></p>
             <h2><a href="https://saumya.github.io/ray/articles/30/">Book Review, jQuery UI 1.10-The User Interface Library for jQuery.</a></h2>
           </header>
@@ -37,18 +73,6 @@
             <h2><a href="https://saumya.github.io/ray/articles/29/">Amazon S3, file system.</a></h2>
           </header>
           <section class="content"><p>I had my hands dirty for the first time, in last couple of days, with Amazon Simple Storage Service (S3). I was playing with the javascript <span class="caps">SDK</span> and getting to know the environment in general. The first impression is, it just stores the files and folders. But, digging deep inside and playing with its APIs, made me realise that its different than the traditional storage.<br><code>Everything is just a pointer</code>, well thats how I see it.<br>Amazon says, everything is a file. So that means a folder is a file with a different naming convention. Thats it, if you get that, then the <span class="caps">API</span> is straight forward. And I must say from the beginning of the computer era, one thing has been consistent and that is file system. Now, the way, new storage solutions are emerging, it’s not actually different from others’ offers, but definitely different from traditional file systems. The new era of the file systems or more generally we can say data storage systems are emerging and Amazon is no different in that regard. So, all in all, a new storage system with a very simple <span class="caps">SDK</span> is<span class="widont">&nbsp;</span>exciting.</p>
-<p>Happy coding.</p>
-
-          </section>
-        </article>
-        <article class="article intro">
-          <header>
-            <p class="date"><span>15. February 2014</span></p>
-            <h2><a href="https://saumya.github.io/ray/articles/28/">jQuery Mobile, making change page work.</a></h2>
-          </header>
-          <section class="content"><p>The <a href="http://saumya.github.io/ray/articles/24/">last post</a> about the <a href="http://saumya.github.io/ray/articles/24/">change page</a> <span class="caps">API</span> change of <a href="http://jquerymobile.com">jQuery Mobile</a> tells you as to, how to change a page, in the <a href="http://api.jquerymobile.com/jQuery.mobile.changePage/">new <span class="caps">API</span></a>. I was hoping thats the only change, but there seems, some kind of fix necessary to make a page, change properly. I mean, there is this bug, where the page change actually does this. It goes to the page mentioned by the change page and then it comes back to the page again, from where it was moved. So the effect is, the page is not chaged at all and the user looks at a screen, where the application simply moves to another screen and comesback to the original screen.<br>For me the fix that worked is send <code>changeHash:true</code> in the options object of the<span class="widont">&nbsp;</span><span class="caps">API</span>.     </p>
-<script src="https://gist.github.com/saumya/9015917.js"></script>
-
 <p>Happy coding.</p>
 
           </section>

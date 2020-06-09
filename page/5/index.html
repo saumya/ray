@@ -23,6 +23,17 @@
       <div class="content-wrap">
         <article class="article intro">
           <header>
+            <p class="date"><span>27. January 2019</span></p>
+            <h2><a href="https://saumya.github.io/ray/articles/82/">Cake &amp; Slim</a></h2>
+          </header>
+          <section class="content"><p><span class="caps">PHP</span> frameworks have really taken up some new concepts from other technology such as NodeJS and Ruby. On my search for an easy deployable framework to server, I found both <a href="https://cakephp.org/">CakePHP</a> and <a href="https://www.slimframework.com/">Slim</a> are good<span class="widont">&nbsp;</span>enough.</p>
+<p>For getting started with development <a href="https://cakephp.org/">CakePHP</a> seems like old school as one just needs to download the package and put it on a server and get into coding. While <a href="https://www.slimframework.com/">Slim</a> seems to be a little more learning as one needs to get used to <a href="https://getcomposer.org/">Composer</a>. <a href="https://cakephp.org/">CakePHP</a> also has an option to get started using <a href="https://getcomposer.org/">Composer</a>.</p>
+<p><a href="https://cakephp.org/">CakePHP</a> is a full framework having everything to get an application running on server. <a href="https://www.slimframework.com/">Slim</a> seems to be a better option to get upto speed with <span class="caps">API</span><span class="widont">&nbsp;</span>development.</p>
+
+          </section>
+        </article>
+        <article class="article intro">
+          <header>
             <p class="date"><span>11. January 2019</span></p>
             <h2><a href="https://saumya.github.io/ray/articles/81/">The 2018.</a></h2>
           </header>
@@ -51,20 +62,6 @@
 <p><img src="https://farm1.staticflickr.com/925/42219127815_65f2abf192_b.jpg" alt="Gate View"></p>
 <p>Here is a link where there are descriptions and discussions to download <a href="https://forums.sketchup.com/t/link-to-download-sketchup-2015-make/24281/2">SketchUp 2015</a> and <a href="http://getvisualizer.com/">Visualizer</a> is already available for<span class="widont">&nbsp;</span>2015.</p>
 <p>Happy rendering.</p>
-
-          </section>
-        </article>
-        <article class="article intro">
-          <header>
-            <p class="date"><span>28. June 2018</span></p>
-            <h2><a href="https://saumya.github.io/ray/articles/79/">Firebase Cloud FireStore and checking existence of a Document</a></h2>
-          </header>
-          <section class="content"><p>The thing is <a href="https://firebase.google.com/products/firestore/">Cloud FireStore</a> is still in beta. However, I find it quite stable to run my applications. It has got all the things to run a serverless<span class="widont">&nbsp;</span>application.</p>
-<p>While this is a NoSQL database, there are <code>Documents</code> and <code>Collections</code>. I was suppose to check the existence of a <code>Document</code> before adding some values into it. There is an <span class="caps">API</span> which gives us exactly the same thing, <a href="https://firebase.google.com/docs/reference/js/firebase.firestore.DocumentSnapshot#~exists">exists</a>.</p>
-<pre><code>docSnapshot.exists</code></pre><p>The trick here is, if there is no <code>Document</code> creation involved before but still there are data inside that <code>Document</code> path (its possible) then the <code>exists</code> will always return <code>false</code>. To know whether the <code>Document</code> is actually created or not Firebase <code>Console</code> is a good help. In the <code>Console</code> the <code>Documents</code> which are not created will be shown as <em>italics</em>. Its a subtle but very informative visual<span class="widont">&nbsp;</span>separation.</p>
-<p>Just make sure, you created your <code>Document</code> before checking it with <code>exists</code>.</p>
-<p>Here is <a href="https://stackoverflow.com/questions/48068581/firebase-doc-exists-but-doc-exists-returns-false?answertab=active#tab-top">stackoverflow answer</a>, which helped me in this<span class="widont">&nbsp;</span>regard.</p>
-<p>Happy Coding.</p>
 
           </section>
         </article>

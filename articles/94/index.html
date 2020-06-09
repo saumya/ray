@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <title>Vue {{ it }} - Saumya
+    </title>
+    <link rel="alternate" href="https://saumya.github.io/ray/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
+    <link rel="stylesheet" href="https://saumya.github.io/ray/css/main.css">
+    <link rel="stylesheet" href="https://saumya.github.io/ray/css/saumya.css">
+  </head>
+  <body class="article-detail">
+    <header class="header">
+      <div class="content-wrap">
+        <h1>Vue {{ it }}</h1>
+        <p class="author">Written by - <span class="author"><a href="mailto:2saumyaray@gmail.com">Saumya</a></span>
+          <p class="date">09 June 2020</p>
+        </p>
+      </div>
+    </header>
+    <div id="content">
+      <div class="content-wrap">
+        <article class="article">
+          <section class="content"><p>Working with <a href="https://vuejs.org/">Vue</a> is just sweet. 
+The most important thing for me is less noise in the<span class="widont">&nbsp;</span>web.</p>
+<blockquote>
+<p>While the community is active, very active, no one is making a loud noise throughout the internet. I think that is because, no one is trying to please the corporates they are working for and they are targetting to. Which is a very good sign as far as the framework<span class="widont">&nbsp;</span>goes.</p>
+</blockquote>
+<p>Appart from that, the documentation is just spot on. There is no way anyone will get to a wrong place and search for answers somewhere<span class="widont">&nbsp;</span>else. </p>
+<p>The eco-system for the framework is also just spot on and their documentation is as sweet. It all just<span class="widont">&nbsp;</span>works.</p>
+<p><span class="more"></span></p>
+<h3 id="vue--basics-">Vue {{ Basics<span class="widont">&nbsp;</span>}}</h3>
+<p>The base of a <a href="https://vuejs.org/">Vue</a> application is a <a href="https://vuejs.org/">Vue</a> file. Yes, the extension is <code>.vue</code> so the file is<span class="widont">&nbsp;</span>‘filename.vue’. </p>
+<p>It has three<span class="widont">&nbsp;</span>parts.</p>
+<ul>
+<li>template</li>
+<li>script</li>
+<li>style</li>
+</ul>
+<p>Those are self explanatory. The <code>template</code> contains the ‘html’, <code>script</code> contains ‘javascript’ and <code>style</code> has the ‘css’. Here is a basic <a href="https://vuejs.org/">Vue</a> file. Generally every <a href="https://vuejs.org/">Vue</a> file is a <a href="https://vuejs.org/">Vue</a><span class="widont">&nbsp;</span>Component.</p>
+<pre><code>&lt;template&gt;
+  &lt;div class=&quot;one&quot;&gt;
+    &lt;h1&gt;One&lt;/h1&gt;
+    &lt;h2&gt;Home.&lt;/h2&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  name: &#39;One&#39;
+}
+&lt;/script&gt;
+
+&lt;!-- Add &quot;scoped&quot; attribute to limit CSS to this component only --&gt;
+&lt;style scoped&gt;
+a {
+  color: #42b983;
+}
+&lt;/style&gt;
+</code></pre><p>There are two main things one will need from the eco-system, <a href="https://router.vuejs.org/">Vue Router</a> and <a href="https://vuex.vuejs.org/">VueX</a>.</p>
+<ul>
+<li><a href="https://router.vuejs.org/">Vue Router</a> is for making our URLs and mapping the URLs to respective<span class="widont">&nbsp;</span>components.</li>
+<li><a href="https://vuex.vuejs.org/">Vuex</a> is for using a global store / state / data, whatever you call<span class="widont">&nbsp;</span>it.</li>
+</ul>
+<h3 id="router--example-">Router {{ Example<span class="widont">&nbsp;</span>}}</h3>
+<pre><code>export default new Router({
+    routes: [
+                { path: &#39;/home&#39;, component: HomeComponent },
+                { path: &#39;/about&#39;, component: AboutComponent },
+            ]</code></pre><p>Inside the first <a href="https://vuejs.org/">Vue</a> component of the application, that is the initial view of the application just have <code>router-view</code>, where the routing components will be<span class="widont">&nbsp;</span>rendered.</p>
+<pre><code>&lt;div class=&quot;app_container&quot;&gt;
+    &lt;router-view&gt;&lt;/router-view&gt; 
+&lt;/div&gt;</code></pre><h3 id="vuex--example-">VueX {{ Example<span class="widont">&nbsp;</span>}}</h3>
+<p>A basic store / state / data file is like<span class="widont">&nbsp;</span>this.</p>
+<pre><code>//myData.js
+
+const state = {};
+const getters = {};
+const actions = {};
+const mutations = {};
+export default { state, getters, actions, mutations }</code></pre><p>Example with a basic working<span class="widont">&nbsp;</span>file. </p>
+<pre><code>const state = {
+    user_message : &#39;Nothing yet!&#39;,
+};
+const getters = {
+    getUserMessage: state =&gt; {
+        return state.user_message
+    }
+};
+const actions = {
+    doSomethingWithData: ({state,commit},payload) =&gt; {
+            //payload is someDataObject that is explained below
+            fetch( url_1, fetch_data ).then(function(result){}).catch(function(error){});
+            commit(&#39;UPDATE_MESSAGE&#39;, &#39;Doing something&#39;);
+        },
+};
+const mutations = {
+    UPDATE_MESSAGE:  (state, message) =&gt; {
+        state.user_message = message;
+    }
+};
+export default { state, getters, actions, mutations }</code></pre><p>From the <a href="https://vuejs.org/">Vue</a> file one just needs to dispatch actions like<span class="widont">&nbsp;</span>this.</p>
+<pre><code>this.$store.dispatch(&#39;doSomethingWithData&#39;, someDataObject);</code></pre><p>In this example, <code>someDataObject</code> will be the <code>payload</code> inside the actions call. Inside the <code>action</code> one may need to call the <code>commit</code> if it is needed to change the store / state. Like we are calling <code>commit(&#39;UPDATE_MESSAGE&#39;, &#39;Doing something&#39;)</code>. That will go inside the <code>mutation</code> and run the respective function to change the state / store /<span class="widont">&nbsp;</span>data.</p>
+<p>To get the data inside <a href="https://vuejs.org/">Vue</a> file, we have to do something like<span class="widont">&nbsp;</span>this.</p>
+<pre><code>&lt;div&gt; {{ getUserMessage }} &lt;/div&gt;</code></pre><p>The <code>{{ }}</code> is the thing that will convert the variable inside it to the value of it. Basically running javascript inside the template<span class="widont">&nbsp;</span>tags. </p>
+<p>The <code>most important</code> of all, is to add <code>store</code> and <code>router</code> to the initial part, where the Vue Application is<span class="widont">&nbsp;</span>initiated.</p>
+<pre><code>import Vue from &#39;vue&#39;
+import App from &#39;./App.vue&#39;
+
+import router from &#39;./router&#39;
+import store from &#39;./store&#39;
+
+new Vue({
+  el: &#39;#app&#39;,
+  router: router,
+  store: store,
+  render: function(createElement){
+    return createElement(App)
+  }
+})</code></pre><p>As I have mentioned above, add the <code>router-view</code> component in the first <a href="https://vuejs.org/">Vue</a> file. In this case it is the ‘App.vue’. Example is as mentioned<span class="widont">&nbsp;</span>here.</p>
+<pre><code>&lt;template&gt;
+    &lt;div class=&quot;app_container&quot;&gt;
+        &lt;router-view&gt;&lt;/router-view&gt; 
+    &lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;
+export default {
+  name: &#39;app&#39;,
+}
+&lt;/script&gt;</code></pre><p>Happy {{Vue}} coding.</p>
+</section>
+        </article>
+      </div>
+    </div>
+    <footer>
+      <div class="content-wrap">
+        <div class="nav"><a href="https://saumya.github.io/ray/">&laquo; Home</a></div>
+        <section class="about"><p><a href="https://saumya.github.io/">Saumya</a> is an iternal seeker.</p>
+<p>A maker of things and curious about everything. Continuous learning is, what fuels him. This blog itself, reflects one of many things he is trying at all the time.</p>
+<p>Talk to <a href="https://twitter.com/saumya">@saumya</a> on Twitter. </p>
+<span class="nav"><a href="https://saumya.github.io/ray/">Home</a><a href="https://saumya.github.io/ray/archive.html">Blog List</a><a href="https://saumya.github.io/ray/feed.xml">Feed</a></span>
+        </section>
+        <section class="copy">
+          <p>&copy; 2020 Saumya Ray &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>
+            <p><a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
+          </p>
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>

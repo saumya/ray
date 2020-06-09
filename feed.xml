@@ -5,9 +5,124 @@
     <atom:link href="https://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>https://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Mon, 08 Jun 2020 05:30:00 +0630</pubDate>
+    <pubDate>Tue, 09 Jun 2020 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Vue {{ it }}</title>
+      <link>https://saumya.github.io/ray/articles/94/</link>
+      <pubDate>Tue, 09 Jun 2020 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/94/</guid>
+      <author>Saumya</author>
+      <description>&lt;p&gt;Working with &lt;a href=&quot;https://vuejs.org/&quot;&gt;Vue&lt;/a&gt; is just sweet. 
+The most important thing for me is less noise in the web.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;While the community is active, very active, no one is making a loud noise throughout the internet. I think that is because, no one is trying to please the corporates they are working for and they are targetting to. Which is a very good sign as far as the framework goes.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Appart from that, the documentation is just spot on. There is no way anyone will get to a wrong place and search for answers somewhere else. &lt;/p&gt;
+&lt;p&gt;The eco-system for the framework is also just spot on and their documentation is as sweet. It all just works.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3 id=&quot;vue--basics-&quot;&gt;Vue {{ Basics }}&lt;/h3&gt;
+&lt;p&gt;The base of a &lt;a href=&quot;https://vuejs.org/&quot;&gt;Vue&lt;/a&gt; application is a &lt;a href=&quot;https://vuejs.org/&quot;&gt;Vue&lt;/a&gt; file. Yes, the extension is &lt;code&gt;.vue&lt;/code&gt; so the file is ‘filename.vue’. &lt;/p&gt;
+&lt;p&gt;It has three parts.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;template&lt;/li&gt;
+&lt;li&gt;script&lt;/li&gt;
+&lt;li&gt;style&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Those are self explanatory. The &lt;code&gt;template&lt;/code&gt; contains the ‘html’, &lt;code&gt;script&lt;/code&gt; contains ‘javascript’ and &lt;code&gt;style&lt;/code&gt; has the ‘css’. Here is a basic &lt;a href=&quot;https://vuejs.org/&quot;&gt;Vue&lt;/a&gt; file. Generally every &lt;a href=&quot;https://vuejs.org/&quot;&gt;Vue&lt;/a&gt; file is a &lt;a href=&quot;https://vuejs.org/&quot;&gt;Vue&lt;/a&gt; Component.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;template&amp;gt;
+  &amp;lt;div class=&amp;quot;one&amp;quot;&amp;gt;
+    &amp;lt;h1&amp;gt;One&amp;lt;/h1&amp;gt;
+    &amp;lt;h2&amp;gt;Home.&amp;lt;/h2&amp;gt;
+  &amp;lt;/div&amp;gt;
+&amp;lt;/template&amp;gt;
+
+&amp;lt;script&amp;gt;
+export default {
+  name: &amp;#39;One&amp;#39;
+}
+&amp;lt;/script&amp;gt;
+
+&amp;lt;!-- Add &amp;quot;scoped&amp;quot; attribute to limit CSS to this component only --&amp;gt;
+&amp;lt;style scoped&amp;gt;
+a {
+  color: #42b983;
+}
+&amp;lt;/style&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;There are two main things one will need from the eco-system, &lt;a href=&quot;https://router.vuejs.org/&quot;&gt;Vue Router&lt;/a&gt; and &lt;a href=&quot;https://vuex.vuejs.org/&quot;&gt;VueX&lt;/a&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://router.vuejs.org/&quot;&gt;Vue Router&lt;/a&gt; is for making our URLs and mapping the URLs to respective components.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://vuex.vuejs.org/&quot;&gt;Vuex&lt;/a&gt; is for using a global store / state / data, whatever you call it.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;router--example-&quot;&gt;Router {{ Example }}&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;export default new Router({
+    routes: [
+                { path: &amp;#39;/home&amp;#39;, component: HomeComponent },
+                { path: &amp;#39;/about&amp;#39;, component: AboutComponent },
+            ]&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Inside the first &lt;a href=&quot;https://vuejs.org/&quot;&gt;Vue&lt;/a&gt; component of the application, that is the initial view of the application just have &lt;code&gt;router-view&lt;/code&gt;, where the routing components will be rendered.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;div class=&amp;quot;app_container&amp;quot;&amp;gt;
+    &amp;lt;router-view&amp;gt;&amp;lt;/router-view&amp;gt; 
+&amp;lt;/div&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;vuex--example-&quot;&gt;VueX {{ Example }}&lt;/h3&gt;
+&lt;p&gt;A basic store / state / data file is like this.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;//myData.js
+
+const state = {};
+const getters = {};
+const actions = {};
+const mutations = {};
+export default { state, getters, actions, mutations }&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Example with a basic working file. &lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;const state = {
+    user_message : &amp;#39;Nothing yet!&amp;#39;,
+};
+const getters = {
+    getUserMessage: state =&amp;gt; {
+        return state.user_message
+    }
+};
+const actions = {
+    doSomethingWithData: ({state,commit},payload) =&amp;gt; {
+            //payload is someDataObject that is explained below
+            fetch( url_1, fetch_data ).then(function(result){}).catch(function(error){});
+            commit(&amp;#39;UPDATE_MESSAGE&amp;#39;, &amp;#39;Doing something&amp;#39;);
+        },
+};
+const mutations = {
+    UPDATE_MESSAGE:  (state, message) =&amp;gt; {
+        state.user_message = message;
+    }
+};
+export default { state, getters, actions, mutations }&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;From the &lt;a href=&quot;https://vuejs.org/&quot;&gt;Vue&lt;/a&gt; file one just needs to dispatch actions like this.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;this.$store.dispatch(&amp;#39;doSomethingWithData&amp;#39;, someDataObject);&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;In this example, &lt;code&gt;someDataObject&lt;/code&gt; will be the &lt;code&gt;payload&lt;/code&gt; inside the actions call. Inside the &lt;code&gt;action&lt;/code&gt; one may need to call the &lt;code&gt;commit&lt;/code&gt; if it is needed to change the store / state. Like we are calling &lt;code&gt;commit(&amp;#39;UPDATE_MESSAGE&amp;#39;, &amp;#39;Doing something&amp;#39;)&lt;/code&gt;. That will go inside the &lt;code&gt;mutation&lt;/code&gt; and run the respective function to change the state / store / data.&lt;/p&gt;
+&lt;p&gt;To get the data inside &lt;a href=&quot;https://vuejs.org/&quot;&gt;Vue&lt;/a&gt; file, we have to do something like this.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;div&amp;gt; {{ getUserMessage }} &amp;lt;/div&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The &lt;code&gt;{{ }}&lt;/code&gt; is the thing that will convert the variable inside it to the value of it. Basically running javascript inside the template tags. &lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;most important&lt;/code&gt; of all, is to add &lt;code&gt;store&lt;/code&gt; and &lt;code&gt;router&lt;/code&gt; to the initial part, where the Vue Application is initiated.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;import Vue from &amp;#39;vue&amp;#39;
+import App from &amp;#39;./App.vue&amp;#39;
+
+import router from &amp;#39;./router&amp;#39;
+import store from &amp;#39;./store&amp;#39;
+
+new Vue({
+  el: &amp;#39;#app&amp;#39;,
+  router: router,
+  store: store,
+  render: function(createElement){
+    return createElement(App)
+  }
+})&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;As I have mentioned above, add the &lt;code&gt;router-view&lt;/code&gt; component in the first &lt;a href=&quot;https://vuejs.org/&quot;&gt;Vue&lt;/a&gt; file. In this case it is the ‘App.vue’. Example is as mentioned here.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;template&amp;gt;
+    &amp;lt;div class=&amp;quot;app_container&amp;quot;&amp;gt;
+        &amp;lt;router-view&amp;gt;&amp;lt;/router-view&amp;gt; 
+    &amp;lt;/div&amp;gt;
+&amp;lt;/template&amp;gt;
+&amp;lt;script&amp;gt;
+export default {
+  name: &amp;#39;app&amp;#39;,
+}
+&amp;lt;/script&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Happy {{Vue}} coding.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>Database and doing things without the 'for' Loop</title>
       <link>https://saumya.github.io/ray/articles/93/</link>
