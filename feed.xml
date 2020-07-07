@@ -5,9 +5,182 @@
     <atom:link href="https://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>https://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Tue, 09 Jun 2020 05:30:00 +0630</pubDate>
+    <pubDate>Tue, 07 Jul 2020 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Setting up Thunk with Redux and React</title>
+      <link>https://saumya.github.io/ray/articles/95/</link>
+      <pubDate>Tue, 07 Jul 2020 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/95/</guid>
+      <author>Saumya</author>
+      <description>&lt;p&gt;This is one of the reasons why getting up and running with &lt;a href=&quot;https://redux.js.org/&quot;&gt;Redux&lt;/a&gt; may take sometime. The setting up of the whole thing takes time. And it may take more time, if you want to setup this after you have a working &lt;a href=&quot;https://reactjs.org/&quot;&gt;React&lt;/a&gt; project. To start a &lt;a href=&quot;https://reactjs.org/&quot;&gt;React&lt;/a&gt; project today, it is easy to get up and running with &lt;a href=&quot;https://create-react-app.dev/&quot;&gt;Create-React-App&lt;/a&gt;. But gluing up &lt;a href=&quot;https://redux.js.org/&quot;&gt;Redux&lt;/a&gt; after that point is a very difficult and confusing process. And then comes &lt;a href=&quot;https://github.com/reduxjs/redux-thunk&quot;&gt;Thunk&lt;/a&gt; which will take some more involvement into it.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Do not be carried away by the words. &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The simple meaning of the words are as follows.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://redux.js.org/&quot;&gt;Redux&lt;/a&gt; allows the application to use a single central Data Object(ususally called Store)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/reduxjs/redux-thunk&quot;&gt;Thunk&lt;/a&gt; is an addition to &lt;a href=&quot;https://redux.js.org/&quot;&gt;Redux&lt;/a&gt; for Asynchronous calls ( The API calls )&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For working with &lt;a href=&quot;https://redux.js.org/&quot;&gt;Redux&lt;/a&gt; inside &lt;a href=&quot;https://reactjs.org/&quot;&gt;React&lt;/a&gt; we need two things.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://redux.js.org/&quot;&gt;Redux&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://react-redux.js.org/&quot;&gt;React-Redux&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;While &lt;a href=&quot;https://redux.js.org/&quot;&gt;Redux&lt;/a&gt; manages the data in the central data object (Root Store), the &lt;a href=&quot;https://react-redux.js.org/&quot;&gt;React-Redux&lt;/a&gt; helps wiring-up &lt;a href=&quot;https://reactjs.org/&quot;&gt;React&lt;/a&gt; with &lt;a href=&quot;https://redux.js.org/&quot;&gt;Redux&lt;/a&gt;. The point is, &lt;a href=&quot;https://redux.js.org/&quot;&gt;Redux&lt;/a&gt; could be used in any project where we need a central data management functionality. It is a general purpose library. To use it easily inside &lt;a href=&quot;https://reactjs.org/&quot;&gt;React&lt;/a&gt; applications we need &lt;a href=&quot;https://react-redux.js.org/&quot;&gt;React-Redux&lt;/a&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;npm install redux
+npm install react-redux&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;That is all for setting up the &lt;a href=&quot;https://redux.js.org/&quot;&gt;Redux&lt;/a&gt; in our application. The &lt;code&gt;Code&lt;/code&gt; looks like this.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;//index.js
+//The application entry file
+
+import { createStore } from &amp;#39;redux&amp;#39;
+import { Provider } from &amp;#39;react-redux&amp;#39;
+
+import allInOneReducer from &amp;#39;./reducers&amp;#39;
+
+const theAppStore = createStore( allInOneReducer )
+
+ReactDOM.render(
+  &amp;lt;Provider store={ theAppStore }&amp;gt;
+  &amp;lt;React.Fragment&amp;gt;
+    &amp;lt;AppContainer /&amp;gt;
+  &amp;lt;/React.Fragment&amp;gt;
+  &amp;lt;/Provider&amp;gt;,
+  document.getElementById(&amp;#39;root&amp;#39;)
+);&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Now to interact with the central Store we need to &lt;code&gt;dispatch&lt;/code&gt; actions from our components and &lt;code&gt;useSelector&lt;/code&gt; to get data to our component. These are provided by &lt;a href=&quot;https://react-redux.js.org/&quot;&gt;React-Redux&lt;/a&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;//AppContainer.js
+
+import { useDispatch, useSelector } from &amp;#39;react-redux&amp;#39;
+
+let AppContainer = ()=&amp;gt;{
+    const dispatch = useDispatch()
+    dispatch( changeStatusMessage(&amp;#39;Inside AppContainer&amp;#39;) )
+
+    const appMessages = useSelector( state=&amp;gt; state.messages )
+    return( &amp;lt;div&amp;gt; My Component &amp;lt;/div&amp;gt; )
+}
+export default AppContainer&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The central Store is stored inside &lt;code&gt;Reducers&lt;/code&gt; folder in ‘index.js’. One of the stores in the central store is ‘message’. This is like dividing the central store into small stores of their own.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;//messages.js inside &amp;#39;reducers&amp;#39; folder
+
+const initialState = {
+    message_string: &amp;#39;Nothing&amp;#39;
+}
+const messages = (state = initialState, action )=&amp;gt;{
+    switch(action.type){
+        case &amp;#39;NEW_MESSAGE&amp;#39; :
+            return { ...state, message_string: action.payload}
+        default :
+            return state
+    }
+}
+
+export default messages&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;To complete the Store setup, we need one more thing inside ‘reducers’ folder, the ‘index.js’.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;//index.js inside &amp;#39;reducers&amp;#39; folder
+
+import { combineReducers } from &amp;#39;redux&amp;#39;
+
+import messages from &amp;#39;./messages&amp;#39;
+import loginReducer from &amp;#39;./login_reducer&amp;#39;
+
+
+const theReducer = combineReducers({
+    messages: messages,
+    loginData: loginReducer
+})
+export default theReducer&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The actions looks like this.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;//index.js inside &amp;#39;actions&amp;#39; folder
+
+export const changeStatusMessage = message=&amp;gt; {
+    return ({
+        type: &amp;#39;NEW_MESSAGE&amp;#39;,
+        payload: message
+    })
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;We are done with &lt;a href=&quot;https://reactjs.org/&quot;&gt;React&lt;/a&gt;, &lt;a href=&quot;https://redux.js.org/&quot;&gt;Redux&lt;/a&gt; and &lt;a href=&quot;https://react-redux.js.org/&quot;&gt;React-Redux&lt;/a&gt;. :) I know.&lt;/p&gt;
+&lt;h3 id=&quot;thunk&quot;&gt;Thunk&lt;/h3&gt;
+&lt;p&gt;As it is called the middleware of Redux, we need to initialise it where we are initialising the Redux store. That is the main application entry file.&lt;/p&gt;
+&lt;p&gt;First install the library in the project.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;npm install redux-thunk&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Now setting up the Store in the application entry is modified as this. Notice the use of &lt;code&gt;applyMiddleware&lt;/code&gt; from ‘redux’ here.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;//index.js
+//The application entry file
+
+//import { createStore } from &amp;#39;redux&amp;#39;
+import { createStore, applyMiddleware } from &amp;#39;redux&amp;#39;
+import { Provider } from &amp;#39;react-redux&amp;#39;
+import thunk from &amp;#39;redux-thunk&amp;#39;;
+
+import allInOneReducer from &amp;#39;./reducers&amp;#39;
+
+//const theAppStore = createStore( allInOneReducer )
+const theAppStore = createStore( allInOneReducer, applyMiddleware(thunk) )
+
+ReactDOM.render(
+  &amp;lt;Provider store={ theAppStore }&amp;gt;
+  &amp;lt;React.Fragment&amp;gt;
+    &amp;lt;AppContainer /&amp;gt;
+  &amp;lt;/React.Fragment&amp;gt;
+  &amp;lt;/Provider&amp;gt;,
+  document.getElementById(&amp;#39;root&amp;#39;)
+);&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The components in the application have to be updated as this. Notice the use of &lt;code&gt;connect&lt;/code&gt; from ‘react-redux’ while exporting the component.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;//AppContainer.js
+
+//import { useDispatch, useSelector } from &amp;#39;react-redux&amp;#39;
+import { connect, useDispatch, useSelector } from &amp;#39;react-redux&amp;#39;
+
+let AppContainer = ()=&amp;gt;{
+    const dispatch = useDispatch()
+    dispatch( changeStatusMessage(&amp;#39;Inside AppContainer&amp;#39;) )
+
+    // This action will use Thunk
+    dispatch( someAsyncCall(&amp;#39;data&amp;#39;) )
+
+    const appMessages = useSelector( state=&amp;gt; state.messages )
+    return( &amp;lt;div&amp;gt; My Component &amp;lt;/div&amp;gt; )
+}
+
+//export default AppContainer
+export default connect()(AppContainer)&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Now we can write Async calls inside our actions. Here is an example.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;//index.js inside &amp;#39;actions&amp;#39; folder
+
+export const changeStatusMessage = data=&amp;gt; {
+    return ({
+        type: &amp;#39;NEW_MESSAGE&amp;#39;,
+        payload: data
+    })
+}
+
+
+// This is possible because of Thunk.
+// Calling an API and changing the state depending upon Success or Fail
+
+export const someAsyncCall = data=&amp;gt;{
+    return function (dispatch) {
+        call_RestAPI(data).then( 
+                function(success){
+                        dispatch( changeStatusMessage(&amp;#39;API call Success&amp;#39;) )
+                    }, 
+                function(error){
+                        dispatch( changeStatusMessage(&amp;#39;API call Fail&amp;#39;) )
+                } 
+            )
+    }
+}
+
+const call_RestAPI = (data) =&amp;gt; {
+  const url_1 = &amp;#39;https://some_api_endpoint&amp;#39;
+  const fetch_data = {
+    method: &amp;#39;POST&amp;#39;, 
+    mode: &amp;#39;cors&amp;#39;, 
+    headers: new Headers({ &amp;#39;Content-Type&amp;#39;: &amp;#39;application/json&amp;#39; }),
+    body: JSON.stringify(data)
+  }
+  return fetch(url_1, fetch_data)
+}&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Most important things to remember here are to use &lt;code&gt;applyMiddleware&lt;/code&gt;, &lt;code&gt;connect&lt;/code&gt;. One is used while setting up the Store and one is used inside the components. And finally keep an eye on how to write an Async action and call the APIs.&lt;/p&gt;
+&lt;p&gt;Happy coding.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>Vue {{ it }}</title>
       <link>https://saumya.github.io/ray/articles/94/</link>

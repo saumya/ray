@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <title>Setting up Thunk with Redux and React - Saumya
+    </title>
+    <link rel="alternate" href="https://saumya.github.io/ray/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
+    <link rel="stylesheet" href="https://saumya.github.io/ray/css/main.css">
+    <link rel="stylesheet" href="https://saumya.github.io/ray/css/saumya.css">
+  </head>
+  <body class="article-detail">
+    <header class="header">
+      <div class="content-wrap">
+        <h1>Setting up Thunk with Redux and React</h1>
+        <p class="author">Written by - <span class="author"><a href="mailto:2saumyaray@gmail.com">Saumya</a></span>
+          <p class="date">07 July 2020</p>
+        </p>
+      </div>
+    </header>
+    <div id="content">
+      <div class="content-wrap">
+        <article class="article">
+          <section class="content"><p>This is one of the reasons why getting up and running with <a href="https://redux.js.org/">Redux</a> may take sometime. The setting up of the whole thing takes time. And it may take more time, if you want to setup this after you have a working <a href="https://reactjs.org/">React</a> project. To start a <a href="https://reactjs.org/">React</a> project today, it is easy to get up and running with <a href="https://create-react-app.dev/">Create-React-App</a>. But gluing up <a href="https://redux.js.org/">Redux</a> after that point is a very difficult and confusing process. And then comes <a href="https://github.com/reduxjs/redux-thunk">Thunk</a> which will take some more involvement into<span class="widont">&nbsp;</span>it.</p>
+<p><span class="more"></span></p>
+<blockquote>
+<p>Do not be carried away by the<span class="widont">&nbsp;</span>words. </p>
+</blockquote>
+<p>The simple meaning of the words are as<span class="widont">&nbsp;</span>follows.</p>
+<ul>
+<li><a href="https://redux.js.org/">Redux</a> allows the application to use a single central Data Object(ususally called<span class="widont">&nbsp;</span>Store)</li>
+<li><a href="https://github.com/reduxjs/redux-thunk">Thunk</a> is an addition to <a href="https://redux.js.org/">Redux</a> for Asynchronous calls ( The <span class="caps">API</span> calls<span class="widont">&nbsp;</span>)</li>
+</ul>
+<p>For working with <a href="https://redux.js.org/">Redux</a> inside <a href="https://reactjs.org/">React</a> we need two<span class="widont">&nbsp;</span>things.</p>
+<ul>
+<li><a href="https://redux.js.org/">Redux</a></li>
+<li><a href="https://react-redux.js.org/">React-Redux</a></li>
+</ul>
+<p>While <a href="https://redux.js.org/">Redux</a> manages the data in the central data object (Root Store), the <a href="https://react-redux.js.org/">React-Redux</a> helps wiring-up <a href="https://reactjs.org/">React</a> with <a href="https://redux.js.org/">Redux</a>. The point is, <a href="https://redux.js.org/">Redux</a> could be used in any project where we need a central data management functionality. It is a general purpose library. To use it easily inside <a href="https://reactjs.org/">React</a> applications we need <a href="https://react-redux.js.org/">React-Redux</a>.</p>
+<pre><code>npm install redux
+npm install react-redux</code></pre><p>That is all for setting up the <a href="https://redux.js.org/">Redux</a> in our application. The <code>Code</code> looks like<span class="widont">&nbsp;</span>this.</p>
+<pre><code>//index.js
+//The application entry file
+
+import { createStore } from &#39;redux&#39;
+import { Provider } from &#39;react-redux&#39;
+
+import allInOneReducer from &#39;./reducers&#39;
+
+const theAppStore = createStore( allInOneReducer )
+
+ReactDOM.render(
+  &lt;Provider store={ theAppStore }&gt;
+  &lt;React.Fragment&gt;
+    &lt;AppContainer /&gt;
+  &lt;/React.Fragment&gt;
+  &lt;/Provider&gt;,
+  document.getElementById(&#39;root&#39;)
+);</code></pre><p>Now to interact with the central Store we need to <code>dispatch</code> actions from our components and <code>useSelector</code> to get data to our component. These are provided by <a href="https://react-redux.js.org/">React-Redux</a></p>
+<pre><code>//AppContainer.js
+
+import { useDispatch, useSelector } from &#39;react-redux&#39;
+
+let AppContainer = ()=&gt;{
+    const dispatch = useDispatch()
+    dispatch( changeStatusMessage(&#39;Inside AppContainer&#39;) )
+
+    const appMessages = useSelector( state=&gt; state.messages )
+    return( &lt;div&gt; My Component &lt;/div&gt; )
+}
+export default AppContainer</code></pre><p>The central Store is stored inside <code>Reducers</code> folder in ‘index.js’. One of the stores in the central store is ‘message’. This is like dividing the central store into small stores of their<span class="widont">&nbsp;</span>own.</p>
+<pre><code>//messages.js inside &#39;reducers&#39; folder
+
+const initialState = {
+    message_string: &#39;Nothing&#39;
+}
+const messages = (state = initialState, action )=&gt;{
+    switch(action.type){
+        case &#39;NEW_MESSAGE&#39; :
+            return { ...state, message_string: action.payload}
+        default :
+            return state
+    }
+}
+
+export default messages</code></pre><p>To complete the Store setup, we need one more thing inside ‘reducers’ folder, the<span class="widont">&nbsp;</span>‘index.js’.</p>
+<pre><code>//index.js inside &#39;reducers&#39; folder
+
+import { combineReducers } from &#39;redux&#39;
+
+import messages from &#39;./messages&#39;
+import loginReducer from &#39;./login_reducer&#39;
+
+
+const theReducer = combineReducers({
+    messages: messages,
+    loginData: loginReducer
+})
+export default theReducer</code></pre><p>The actions looks like<span class="widont">&nbsp;</span>this.</p>
+<pre><code>//index.js inside &#39;actions&#39; folder
+
+export const changeStatusMessage = message=&gt; {
+    return ({
+        type: &#39;NEW_MESSAGE&#39;,
+        payload: message
+    })
+}
+</code></pre><p>We are done with <a href="https://reactjs.org/">React</a>, <a href="https://redux.js.org/">Redux</a> and <a href="https://react-redux.js.org/">React-Redux</a>. :) I<span class="widont">&nbsp;</span>know.</p>
+<h3 id="thunk">Thunk</h3>
+<p>As it is called the middleware of Redux, we need to initialise it where we are initialising the Redux store. That is the main application entry<span class="widont">&nbsp;</span>file.</p>
+<p>First install the library in the<span class="widont">&nbsp;</span>project.</p>
+<pre><code>npm install redux-thunk</code></pre><p>Now setting up the Store in the application entry is modified as this. Notice the use of <code>applyMiddleware</code> from ‘redux’<span class="widont">&nbsp;</span>here.</p>
+<pre><code>//index.js
+//The application entry file
+
+//import { createStore } from &#39;redux&#39;
+import { createStore, applyMiddleware } from &#39;redux&#39;
+import { Provider } from &#39;react-redux&#39;
+import thunk from &#39;redux-thunk&#39;;
+
+import allInOneReducer from &#39;./reducers&#39;
+
+//const theAppStore = createStore( allInOneReducer )
+const theAppStore = createStore( allInOneReducer, applyMiddleware(thunk) )
+
+ReactDOM.render(
+  &lt;Provider store={ theAppStore }&gt;
+  &lt;React.Fragment&gt;
+    &lt;AppContainer /&gt;
+  &lt;/React.Fragment&gt;
+  &lt;/Provider&gt;,
+  document.getElementById(&#39;root&#39;)
+);</code></pre><p>The components in the application have to be updated as this. Notice the use of <code>connect</code> from ‘react-redux’ while exporting the<span class="widont">&nbsp;</span>component.</p>
+<pre><code>//AppContainer.js
+
+//import { useDispatch, useSelector } from &#39;react-redux&#39;
+import { connect, useDispatch, useSelector } from &#39;react-redux&#39;
+
+let AppContainer = ()=&gt;{
+    const dispatch = useDispatch()
+    dispatch( changeStatusMessage(&#39;Inside AppContainer&#39;) )
+
+    // This action will use Thunk
+    dispatch( someAsyncCall(&#39;data&#39;) )
+
+    const appMessages = useSelector( state=&gt; state.messages )
+    return( &lt;div&gt; My Component &lt;/div&gt; )
+}
+
+//export default AppContainer
+export default connect()(AppContainer)</code></pre><p>Now we can write Async calls inside our actions. Here is an<span class="widont">&nbsp;</span>example.</p>
+<pre><code>//index.js inside &#39;actions&#39; folder
+
+export const changeStatusMessage = data=&gt; {
+    return ({
+        type: &#39;NEW_MESSAGE&#39;,
+        payload: data
+    })
+}
+
+
+// This is possible because of Thunk.
+// Calling an API and changing the state depending upon Success or Fail
+
+export const someAsyncCall = data=&gt;{
+    return function (dispatch) {
+        call_RestAPI(data).then( 
+                function(success){
+                        dispatch( changeStatusMessage(&#39;API call Success&#39;) )
+                    }, 
+                function(error){
+                        dispatch( changeStatusMessage(&#39;API call Fail&#39;) )
+                } 
+            )
+    }
+}
+
+const call_RestAPI = (data) =&gt; {
+  const url_1 = &#39;https://some_api_endpoint&#39;
+  const fetch_data = {
+    method: &#39;POST&#39;, 
+    mode: &#39;cors&#39;, 
+    headers: new Headers({ &#39;Content-Type&#39;: &#39;application/json&#39; }),
+    body: JSON.stringify(data)
+  }
+  return fetch(url_1, fetch_data)
+}</code></pre><p>Most important things to remember here are to use <code>applyMiddleware</code>, <code>connect</code>. One is used while setting up the Store and one is used inside the components. And finally keep an eye on how to write an Async action and call the<span class="widont">&nbsp;</span>APIs.</p>
+<p>Happy coding.</p>
+</section>
+        </article>
+      </div>
+    </div>
+    <footer>
+      <div class="content-wrap">
+        <div class="nav"><a href="https://saumya.github.io/ray/">&laquo; Home</a></div>
+        <section class="about"><p><a href="https://saumya.github.io/">Saumya</a> is an iternal seeker.</p>
+<p>A maker of things and curious about everything. Continuous learning is, what fuels him. This blog itself, reflects one of many things he is trying at all the time.</p>
+<p>Talk to <a href="https://twitter.com/saumya">@saumya</a> on Twitter. </p>
+<span class="nav"><a href="https://saumya.github.io/ray/">Home</a><a href="https://saumya.github.io/ray/archive.html">Blog List</a><a href="https://saumya.github.io/ray/feed.xml">Feed</a></span>
+        </section>
+        <section class="copy">
+          <p>&copy; 2020 Saumya Ray &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>
+            <p><a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
+          </p>
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>
