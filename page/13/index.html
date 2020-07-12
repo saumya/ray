@@ -23,6 +23,28 @@
       <div class="content-wrap">
         <article class="article intro">
           <header>
+            <p class="date"><span>08. December 2015</span></p>
+            <h2><a href="https://saumya.github.io/ray/articles/60/">What is Socket.IO ?</a></h2>
+          </header>
+          <section class="content"><p>Once one starts working on <a href="https://nodejs.org/">NodeJS</a>, very soon will come across a term called <a href="http://socket.io">Socket.<span class="caps">IO</span></a>. It may feel as if just another <a href="https://nodejs.org/">NodeJS</a> module available through <a href="https://www.npmjs.com"><span class="caps">NPM</span></a>. Then it may feel like just another way to write a Javascript application for the browser. Then it may seem something<span class="widont">&nbsp;</span>else.          </p>
+<p>So lets know what is<span class="widont">&nbsp;</span>it?          </p>
+<ul>
+<li>Its two things, a server framework and client<span class="widont">&nbsp;</span>framework.</li>
+<li>Its a <a href="https://nodejs.org/">NodeJS</a> module ( install it from a <a href="https://www.npmjs.com"><span class="caps">NPM</span></a><span class="widont">&nbsp;</span>) </li>
+<li>Its a client library ( .js file<span class="widont">&nbsp;</span>)</li>
+</ul>
+<p>Now, lets understand a little more in<span class="widont">&nbsp;</span>detail.          </p>
+<p><a href="http://socket.io">Socket.<span class="caps">IO</span></a> is built to take advantage of <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API">WebSockets</a> for a two way communication between server and<span class="widont">&nbsp;</span>client.</p>
+<p>Server Framework          </p>
+<p>When you work on <a href="https://nodejs.org/">NodeJS</a> to implement a socket server, <a href="http://socket.io">Socket.<span class="caps">IO</span></a> makes your life easier by providing a <a href="https://www.npmjs.com/package/socket.io">NodeJS module</a>. That means, without <a href="http://socket.io">Socket.<span class="caps">IO</span></a> <a href="https://www.npmjs.com/package/socket.io">server module</a> also, you can write a socket server with only <a href="https://nodejs.org/">NodeJS</a>. That also means, you have to write and test your own socket server using <a href="https://nodejs.org/">NodeJS</a>. This is possible with <a href="https://nodejs.org/">NodeJS</a> provided built in modules but only take time and effort. In that sense we can say <a href="http://socket.io">Socket.<span class="caps">IO</span></a> is a <code>server framework</code> for <a href="https://nodejs.org/">NodeJS</a> to write socket<span class="widont">&nbsp;</span>servers.          </p>
+<p>Client Framework</p>
+<p>Now to write a client (basically a web application) we can incorporate <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API">WebSockets</a> <span class="caps">API</span>. Well, its possible in the same manner that we can write a Socket server by our own using <a href="https://nodejs.org/">NodeJS</a> as explained above. But then <a href="http://socket.io">Socket.<span class="caps">IO</span></a> provides us a ‘.js’ file with exposed APIs to use, which is cross-platform. That means <a href="http://socket.io">Socket.<span class="caps">IO</span></a> gives a <code>frontend framework</code> too, to write our frontend Javascript<span class="widont">&nbsp;</span>applications.          </p>
+<p>Happy Noding.</p>
+
+          </section>
+        </article>
+        <article class="article intro">
+          <header>
             <p class="date"><span>05. December 2015</span></p>
             <h2><a href="https://saumya.github.io/ray/articles/59/">RequireJS is not require()</a></h2>
           </header>
@@ -113,22 +135,6 @@
 <p>Now, if you run this from a server and view the page in the browser. You can see our compent is rendered in the <code>div</code> and it displays the text as ‘I am a <span class="caps">REACT</span> Component<span class="widont">&nbsp;</span>Span’.          </p>
 <p>Thats all is there to <a href="http://facebook.github.io/react/">React</a>. After this point all that <code>remains</code> is the <code>APIs for Component</code> development. But as you can see, <a href="http://facebook.github.io/react/">React</a> is not telling or expecting anything else. It just makes reusable <span class="caps">HTML</span> components. The architecture of the application is upon the<span class="widont">&nbsp;</span>developers.</p>
 <p>Happy Reacting.</p>
-
-          </section>
-        </article>
-        <article class="article intro">
-          <header>
-            <p class="date"><span>27. November 2015</span></p>
-            <h2><a href="https://saumya.github.io/ray/articles/57/">React</a></h2>
-          </header>
-          <section class="content"><p><a href="http://facebook.github.io/react/">React</a> is a library from the famous social networking <a href="https://www.facebook.com/">facebook</a>.          </p>
-<p>Another Javascript Library ! Yes, lets face it. Now we can not escape the fact that every other day there is someone, somwhere making a new Javascript<span class="widont">&nbsp;</span>library.           </p>
-<p><a href="http://facebook.github.io/react/">React</a> is not a competition with the huge frameworks like <a href="https://angularjs.org/">AngularJS</a> or <a href="http://backbonejs.org/">BackboneJS</a>. It neither is competing with the <span class="caps">DOM</span> manipulation libraries like <a href="http://jquery.com">jQuery</a>. But for some reason for me, it seems like, <a href="http://facebook.github.io/react/">React</a> is making a standard for itself. Like <a href="http://jquery.com">jQuery</a> did it for <span class="caps">DOM</span> manipulation, becoming a go to library, <a href="http://facebook.github.io/react/">React</a> is making a place for<span class="widont">&nbsp;</span>itself.          </p>
-<p><a href="http://facebook.github.io/react/">React</a> is a library to <code>write components</code> for <span class="caps">DOM</span>.         </p>
-<p>Well, so what does it do ?! It allows us to write reusable <code>component</code> to be used in our <span class="caps">HTML</span>. With <a href="http://facebook.github.io/react/">React</a>, its possible to combine one or more <span class="caps">HTML</span> tag/tags and add some javascript to add functionality. Then we can take that component as a whole and reuse it as many times as we want. Thats all that is to<span class="widont">&nbsp;</span>it.           </p>
-<p>There is <code>JSX</code> in <code>React</code>. <a href="https://facebook.github.io/react/docs/jsx-in-depth.html"><span class="caps">JSX</span></a> in simple words, would be writing Javascript as if we are writing <span class="caps">HTML</span>. Well, that might not be the case if you already know what <a href="https://facebook.github.io/react/docs/jsx-in-depth.html"><span class="caps">JSX</span></a> is, but for a first timer its easier to understand like that. The <a href="https://facebook.github.io/react/docs/jsx-in-depth.html">official document</a> is very good resource to understand <a href="https://facebook.github.io/react/docs/jsx-in-depth.html"><span class="caps">JSX</span></a>. You are not bound to use it but then, it obviously is an<span class="widont">&nbsp;</span>option.          </p>
-<p>So, <a href="http://facebook.github.io/react/">React</a> is <code>not a</code> <span class="caps">MVC</span> or <span class="caps">MVVM</span> or <span class="caps">MV</span>* framework ? No, its not. But it just is a library to write reusable <span class="caps">HTML</span> visual compoents. Take this library wherever you want and use it. That means, we can use this library in other frameworks, if we want to. This is like taking <a href="http://jquery.com">jQuery</a> and adding it to the places we like to use<span class="widont">&nbsp;</span>it.          </p>
-<p>Happy React -<span class="widont">&nbsp;</span>ing.</p>
 
           </section>
         </article>

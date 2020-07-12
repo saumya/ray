@@ -5,9 +5,47 @@
     <atom:link href="https://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>https://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Tue, 07 Jul 2020 05:30:00 +0630</pubDate>
+    <pubDate>Sun, 12 Jul 2020 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>CORS for multiple Domains in Node and Express</title>
+      <link>https://saumya.github.io/ray/articles/96/</link>
+      <pubDate>Sun, 12 Jul 2020 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/96/</guid>
+      <author>Saumya</author>
+      <description>&lt;p&gt;Cross-Origin Resource Sharing (&lt;a href=&quot;https://en.wikipedia.org/wiki/Cross-origin_resource_sharing&quot;&gt;CORS&lt;/a&gt;) is a way / specification / standard, whatever you call it. It allows to use resources from one server in another server. Well simply said it enables to call, APIs on one server, from another server.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://enable-cors.org/&quot;&gt;Enable-CORS&lt;/a&gt; is a nice place to get information about the subject.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;While working in &lt;a href=&quot;https://nodejs.org/en/&quot;&gt;Node&lt;/a&gt; and &lt;a href=&quot;http://expressjs.com/&quot;&gt;Express&lt;/a&gt; it is easy to enable this with a middleware. However, we can do it without them also.&lt;/p&gt;
+&lt;p&gt;Write a middleware function to enable CORS.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;app.use(function (req, res, next) {
+  res.setHeader(&amp;#39;Access-Control-Allow-Origin&amp;#39;, &amp;#39;http://localhost:3001&amp;#39;); 
+  res.setHeader(&amp;#39;Access-Control-Allow-Methods&amp;#39;, &amp;#39;GET, POST, OPTIONS, PUT, PATCH, DELETE&amp;#39;);
+  res.setHeader(&amp;#39;Access-Control-Allow-Headers&amp;#39;, &amp;#39;X-Requested-With,content-type, Accept&amp;#39;);
+  res.setHeader(&amp;#39;Access-Control-Allow-Credentials&amp;#39;, true);
+  next();
+})&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This is very much a case where, API servers were running somewhere and give special permission to use their services to particular domains(example- localhost:3001). &lt;/p&gt;
+&lt;p&gt;What if our API is going to be used by many endpoints. Hoe to enable them. Will the simplest is to use a &lt;code&gt;*&lt;/code&gt; instead of a particular domain. That will allow any server to access the service. While it is open to all, it could be abused by anybody.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;res.setHeader(&amp;#39;Access-Control-Allow-Origin&amp;#39;, &amp;#39;*&amp;#39;); &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;To enable the service for only few domains, use an array of domains.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;app.use(function (req, res, next) {
+
+  var allowedDomains = [&amp;#39;http://localhost:3001&amp;#39;,&amp;#39;http://localhost:8080&amp;#39; ];
+  var origin = req.headers.origin;
+  if(allowedDomains.indexOf(origin) &amp;gt; -1){
+    res.setHeader(&amp;#39;Access-Control-Allow-Origin&amp;#39;, origin);
+  }
+
+  res.setHeader(&amp;#39;Access-Control-Allow-Methods&amp;#39;, &amp;#39;GET, POST, OPTIONS, PUT, PATCH, DELETE&amp;#39;);
+  res.setHeader(&amp;#39;Access-Control-Allow-Headers&amp;#39;, &amp;#39;X-Requested-With,content-type, Accept&amp;#39;);
+  res.setHeader(&amp;#39;Access-Control-Allow-Credentials&amp;#39;, true);
+
+  next();
+})&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Happy coding.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>Setting up Thunk with Redux and React</title>
       <link>https://saumya.github.io/ray/articles/95/</link>
