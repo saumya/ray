@@ -7,7 +7,7 @@
   "private": true,
   "repository": "https://github.com/saumya/ray",
   "scripts": {
-    "preview-test": "../node_modules/wintersmith/bin/wintersmith preview -p 1234",
+    "preview-test": "./node_modules/wintersmith/bin/wintersmith preview -p 1234",
     "preview": "./node_modules/wintersmith/bin/wintersmith preview",
     "build": "./node_modules/wintersmith/bin/wintersmith build"
   },
