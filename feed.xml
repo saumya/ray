@@ -5,9 +5,46 @@
     <atom:link href="https://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>https://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Sun, 12 Jul 2020 05:30:00 +0630</pubDate>
+    <pubDate>Sat, 25 Jul 2020 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Ansible! The basics.</title>
+      <link>https://saumya.github.io/ray/articles/97/</link>
+      <pubDate>Sat, 25 Jul 2020 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/97/</guid>
+      <author>Saumya</author>
+      <description>&lt;p&gt;Ansible is simpler than it sounds. For a long time I used to avoid it, even to know it. Then the time came to make an automated build for one of my opensource projects. I wrote down the automation and finally the build runs upon each &lt;code&gt;git push&lt;/code&gt; to the repository. Then I knew that I have written an &lt;code&gt;Ansible playbook&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Ansible is automation.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Now that does not sound anything to me unless I work in Dev-Ops or operations in an enterprise! &lt;/p&gt;
+&lt;p&gt;There are things like &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;installing a specific server&lt;/li&gt;
+&lt;li&gt;installing specific softwares in that server&lt;/li&gt;
+&lt;li&gt;getting the source-code from somewhere (download from another server)&lt;/li&gt;
+&lt;li&gt;install the code in the server and configure the source and machine to run properly&lt;/li&gt;
+&lt;li&gt;build some software (may be Android App or API service)&lt;/li&gt;
+&lt;li&gt;release these builds (upload the build to some other server)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;All these things can be done from a single file. That file is either &lt;code&gt;.yaml&lt;/code&gt; or &lt;code&gt;.yml&lt;/code&gt;. Each of this &lt;code&gt;.yml&lt;/code&gt; file is called an &lt;code&gt;Ansible Playbook&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Now a days there are enterprises and companies providing infrastructure at a very low cost or almost free. That makes things very different in terms of building softwares, whether in my own machine or building in these servers. This is just one example of many things which one could do in some other’s server(or infrastructure). &lt;/p&gt;
+&lt;p&gt;All these are &lt;code&gt;Ansible&lt;/code&gt; and the way one does it, is with &lt;code&gt;Ansible Playbook&lt;/code&gt; that means with &lt;code&gt;.yml&lt;/code&gt; file.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Know more about &lt;a href=&quot;https://www.ansible.com&quot;&gt;Ansible&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;Read the &lt;a href=&quot;https://docs.ansible.com/ansible/latest/index.html&quot;&gt;Docs about Ansible&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;More about &lt;a href=&quot;https://yaml.org/&quot;&gt;YAML&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The &lt;code&gt;.yml&lt;/code&gt; file is more simpler than one thinks. It feels like working with &lt;code&gt;.xml&lt;/code&gt; or &lt;code&gt;.json&lt;/code&gt;. It is that simple. So the whole infrastructure and deployment thing is almost came to the developer’s side of the  job. We listen a lot of Dev-Ops jobs now a days because of that.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Ansible automates the development and deployment infrastructure with the ease of a developer.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;One can code inside the &lt;code&gt;.yml&lt;/code&gt; file(the Ansible Playbook) like one does in other programming languages. &lt;/p&gt;
+&lt;p&gt;Happy coding.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>CORS for multiple Domains in Node and Express</title>
       <link>https://saumya.github.io/ray/articles/96/</link>
