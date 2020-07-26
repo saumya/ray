@@ -5,9 +5,28 @@
     <atom:link href="https://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>https://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Sat, 25 Jul 2020 05:30:00 +0630</pubDate>
+    <pubDate>Sun, 26 Jul 2020 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Desktop {{Vue}} Application</title>
+      <link>https://saumya.github.io/ray/articles/98/</link>
+      <pubDate>Sun, 26 Jul 2020 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/98/</guid>
+      <author>Saumya</author>
+      <description>&lt;p&gt;Writing &lt;a href=&quot;https://vuejs.org/&quot;&gt;Vue.js&lt;/a&gt; application is a pleasure to do. It is simple and developer experience(DX) is just too good. There are times when web application is the way to go.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;There are times when a Desktop application is better than a web application. In the &lt;a href=&quot;https://vuejs.org/&quot;&gt;Vue.js&lt;/a&gt; eco-system there are many utilities available.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt; &lt;a href=&quot;https://nklayman.github.io/vue-cli-plugin-electron-builder/&quot;&gt;Vue CLI Plugin Electron Builder&lt;/a&gt; &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This &lt;a href=&quot;https://nklayman.github.io/vue-cli-plugin-electron-builder/&quot;&gt;Vue CLI Plugin&lt;/a&gt; is the simplest one. All one has to do is, &lt;code&gt;install&lt;/code&gt; it as a &lt;code&gt;npm&lt;/code&gt; package and you are ready to go. Though this project recommends to use &lt;code&gt;Yarn&lt;/code&gt;, but &lt;code&gt;npm&lt;/code&gt; also works. To add the plugin to the already build &lt;a href=&quot;https://vuejs.org/&quot;&gt;VueJS&lt;/a&gt; web application project, use the &lt;code&gt;vue cli&lt;/code&gt; as below.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;vue add electron-builder&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;That is all. The next is to run the desktop application.&lt;/p&gt;
+&lt;p&gt;In development mode it is like this.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;npm run electron:serve&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The last is to build the application and that is done with this.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;npm run electron:build&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Happy coding.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>Ansible! The basics.</title>
       <link>https://saumya.github.io/ray/articles/97/</link>
