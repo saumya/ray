@@ -87,7 +87,7 @@ Happy coding.
 [2]: https://nklayman.github.io/vue-cli-plugin-electron-builder/
 [vuex]: https://vuex.vuejs.org/guide/actions.html
 
-[ref1]: /articles/94/
+[ref1]: https://saumya.github.io/ray/articles/94
 
 
 
