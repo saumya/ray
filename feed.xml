@@ -14,7 +14,7 @@
       <pubDate>Mon, 27 Jul 2020 05:30:00 +0630</pubDate>
       <guid isPermaLink="true">https://saumya.github.io/ray/articles/99/</guid>
       <author>Saumya</author>
-      <description>&lt;p&gt;Vuex Actions in &lt;a href=&quot;https://vuejs.org/&quot;&gt;Vue&lt;/a&gt; are part of the &lt;a href=&quot;https://saumya.github.io/articles/94/&quot;&gt;Store&lt;/a&gt; as we have seen in the &lt;a href=&quot;https://saumya.github.io/articles/94/&quot;&gt;Vue basics&lt;/a&gt;.&lt;/p&gt;
+      <description>&lt;p&gt;Vuex Actions in &lt;a href=&quot;https://vuejs.org/&quot;&gt;Vue&lt;/a&gt; are part of the &lt;a href=&quot;https://saumya.github.io/ray/articles/94&quot;&gt;Store&lt;/a&gt; as we have seen in the &lt;a href=&quot;https://saumya.github.io/ray/articles/94&quot;&gt;Vue basics&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;From a &lt;a href=&quot;https://vuejs.org/&quot;&gt;Vue&lt;/a&gt; component in order to dispatch actions, it is as simple as this.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;this.$store.dispatch(&amp;#39;auth/login_action&amp;#39;, user)&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;However, &lt;a href=&quot;https://vuex.vuejs.org/guide/actions.html&quot;&gt;Vuex&lt;/a&gt; provides helper and utilities to do it even in more readable manner. First of all, one has to get the &lt;a href=&quot;https://vuex.vuejs.org/guide/actions.html&quot;&gt;Vuex&lt;/a&gt; into the component.&lt;/p&gt;
