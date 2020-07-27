@@ -5,9 +5,33 @@
     <atom:link href="https://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>https://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Sun, 26 Jul 2020 05:30:00 +0630</pubDate>
+    <pubDate>Mon, 27 Jul 2020 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Vuex Actions in Vue</title>
+      <link>https://saumya.github.io/ray/articles/99/</link>
+      <pubDate>Mon, 27 Jul 2020 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/99/</guid>
+      <author>Saumya</author>
+      <description>&lt;p&gt;Vuex Actions in &lt;a href=&quot;https://vuejs.org/&quot;&gt;Vue&lt;/a&gt; are part of the &lt;a href=&quot;https://saumya.github.io/articles/94/&quot;&gt;Store&lt;/a&gt; as we have seen in the &lt;a href=&quot;https://saumya.github.io/articles/94/&quot;&gt;Vue basics&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;From a &lt;a href=&quot;https://vuejs.org/&quot;&gt;Vue&lt;/a&gt; component in order to dispatch actions, it is as simple as this.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;this.$store.dispatch(&amp;#39;auth/login_action&amp;#39;, user)&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;However, &lt;a href=&quot;https://vuex.vuejs.org/guide/actions.html&quot;&gt;Vuex&lt;/a&gt; provides helper and utilities to do it even in more readable manner. First of all, one has to get the &lt;a href=&quot;https://vuex.vuejs.org/guide/actions.html&quot;&gt;Vuex&lt;/a&gt; into the component.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;import { mapActions } from &amp;#39;vuex&amp;#39;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Next is the actual map of the dispatch code to a function call.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;methods : {
+    ...mapActions({ 
+        login : &amp;#39;auth/login_action&amp;#39;
+    })
+}&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Now, wherever necessary one can call &lt;code&gt;login()&lt;/code&gt; which will dispatch the action. The code will look something like calling a function.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;login(user)&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;What is done by &lt;code&gt;mapActions&lt;/code&gt; from &lt;a href=&quot;https://vuex.vuejs.org/guide/actions.html&quot;&gt;Vuex&lt;/a&gt; is a mapping of &lt;code&gt;login&lt;/code&gt; function to &lt;code&gt;this.$store.dispatch( &amp;#39;auth/login_action&amp;#39;, user )&lt;/code&gt;. Wherever the &lt;code&gt;login(user)&lt;/code&gt; is called, it is actually doing &lt;code&gt;this.$store.dispatch( &amp;#39;auth/login_action&amp;#39;, user )&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;// Now both are same
+
+login(user)
+
+this.$store.dispatch(&amp;#39;auth/login_action&amp;#39;, user)&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Happy coding.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>Desktop {{Vue}} Application</title>
       <link>https://saumya.github.io/ray/articles/98/</link>
