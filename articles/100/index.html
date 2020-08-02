@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <title>Refering Global variables and DOM Nodes in {{Vue}} application - Saumya
+    </title>
+    <link rel="alternate" href="https://saumya.github.io/ray/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
+    <link rel="stylesheet" href="https://saumya.github.io/ray/css/main.css">
+    <link rel="stylesheet" href="https://saumya.github.io/ray/css/saumya.css">
+  </head>
+  <body class="article-detail">
+    <header class="header">
+      <div class="content-wrap">
+        <h1>Refering Global variables and DOM Nodes in {{Vue}} application</h1>
+        <p class="author">Written by - <span class="author"><a href="mailto:2saumyaray@gmail.com">Saumya</a></span>
+          <p class="date">02 August 2020</p>
+        </p>
+      </div>
+    </header>
+    <div id="content">
+      <div class="content-wrap">
+        <article class="article">
+          <section class="content"><p>We know <a href="https://saumya.github.io/ray/articles/94">Vue basics</a> and how it works.
+However there are times when in a <a href="https://vuejs.org/">Vue</a> application we need to refer to some global variables. May be these are loaded in the <code>script</code> tag in the <code>.html</code> file or defined somewhere<span class="widont">&nbsp;</span>else.</p>
+<p><span class="more"></span></p>
+<h3 id="global-variables">Global Variables</h3>
+<p>If we directly refer them, then the compiler will throw error and will not compile<span class="widont">&nbsp;</span>forward.</p>
+<p>The way is to declare them initially while initialising the <a href="https://vuejs.org/">Vue</a> application itself. This is the <code>main.js</code> which is generally the entry point to the application. However to clear it further, let’s say this is the file where we have this<span class="widont">&nbsp;</span>code.</p>
+<pre><code>new Vue({
+  el: &#39;#app&#39;,
+  router: router,
+  store: store,
+  render: (h) =&gt; h(AppContainer)
+})</code></pre><p>Any <code>Gloabl</code> variable which need to be accessed inside the <a href="https://vuejs.org/">Vue</a> application has to be added just before this <code>new Vue()</code> call.</p>
+<pre><code>Vue.prototype.GloablVar = window.GloablVar;
+//
+new Vue({
+  el: &#39;#app&#39;,
+  router: router,
+  store: store,
+  render: (h) =&gt; h(AppContainer)
+})</code></pre><p>Now this <code>GlobalVar</code> is available inside the <a href="https://vuejs.org/">Vue</a><span class="widont">&nbsp;</span>application.</p>
+<pre><code>const GloablVar = window.GloablVar</code></pre><p>Even this can be written and executed without any<span class="widont">&nbsp;</span>errors.</p>
+<pre><code>
+&lt;div&gt;{{ GloablVar.someBooleanVar ? &quot;Yes&quot; : &quot;No&quot; }}&lt;/div&gt;</code></pre><h3 id="dom-nodes"><span class="caps">DOM</span> Nodes</h3>
+<p>There are times when some <span class="caps">DOM</span> nodes from inside the <code>&lt;template&gt;</code> is required to be addressed inside the <code>methods</code>. This is done with <code>refs</code>. </p>
+<p>In template it looks like<span class="widont">&nbsp;</span>this.</p>
+<pre><code>&lt;div ref=&quot;appContainer&quot;&gt;
+&lt;/div&gt;</code></pre><p>In the methods it can be referred with <code>this.$refs</code>.</p>
+<pre><code>onSomeMethod: function(){
+    console.log( this.$refs.appContainer )
+}</code></pre><p>Happy coding.</p>
+</section>
+        </article>
+      </div>
+    </div>
+    <footer>
+      <div class="content-wrap">
+        <div class="nav"><a href="https://saumya.github.io/ray/">&laquo; Home</a></div>
+        <section class="about"><p><a href="https://saumya.github.io/">Saumya</a> is an iternal seeker.</p>
+<p>A maker of things and curious about everything. Continuous learning is, what fuels him. This blog itself, reflects one of many things he is trying at all the time.</p>
+<p>Talk to <a href="https://twitter.com/saumya">@saumya</a> on Twitter. </p>
+<span class="nav"><a href="https://saumya.github.io/ray/">Home</a><a href="https://saumya.github.io/ray/archive.html">Blog List</a><a href="https://saumya.github.io/ray/feed.xml">Feed</a></span>
+        </section>
+        <section class="copy">
+          <p>&copy; 2020 Saumya Ray &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>
+            <p><a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
+          </p>
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>

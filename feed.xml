@@ -5,9 +5,47 @@
     <atom:link href="https://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>https://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Mon, 27 Jul 2020 05:30:00 +0630</pubDate>
+    <pubDate>Sun, 02  Aug 2020 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Refering Global variables and DOM Nodes in {{Vue}} application</title>
+      <link>https://saumya.github.io/ray/articles/100/</link>
+      <pubDate>Sun, 02  Aug 2020 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/100/</guid>
+      <author>Saumya</author>
+      <description>&lt;p&gt;We know &lt;a href=&quot;https://saumya.github.io/ray/articles/94&quot;&gt;Vue basics&lt;/a&gt; and how it works.
+However there are times when in a &lt;a href=&quot;https://vuejs.org/&quot;&gt;Vue&lt;/a&gt; application we need to refer to some global variables. May be these are loaded in the &lt;code&gt;script&lt;/code&gt; tag in the &lt;code&gt;.html&lt;/code&gt; file or defined somewhere else.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3 id=&quot;global-variables&quot;&gt;Global Variables&lt;/h3&gt;
+&lt;p&gt;If we directly refer them, then the compiler will throw error and will not compile forward.&lt;/p&gt;
+&lt;p&gt;The way is to declare them initially while initialising the &lt;a href=&quot;https://vuejs.org/&quot;&gt;Vue&lt;/a&gt; application itself. This is the &lt;code&gt;main.js&lt;/code&gt; which is generally the entry point to the application. However to clear it further, let’s say this is the file where we have this code.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;new Vue({
+  el: &amp;#39;#app&amp;#39;,
+  router: router,
+  store: store,
+  render: (h) =&amp;gt; h(AppContainer)
+})&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Any &lt;code&gt;Gloabl&lt;/code&gt; variable which need to be accessed inside the &lt;a href=&quot;https://vuejs.org/&quot;&gt;Vue&lt;/a&gt; application has to be added just before this &lt;code&gt;new Vue()&lt;/code&gt; call.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Vue.prototype.GloablVar = window.GloablVar;
+//
+new Vue({
+  el: &amp;#39;#app&amp;#39;,
+  router: router,
+  store: store,
+  render: (h) =&amp;gt; h(AppContainer)
+})&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Now this &lt;code&gt;GlobalVar&lt;/code&gt; is available inside the &lt;a href=&quot;https://vuejs.org/&quot;&gt;Vue&lt;/a&gt; application.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;const GloablVar = window.GloablVar&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Even this can be written and executed without any errors.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;
+&amp;lt;div&amp;gt;{{ GloablVar.someBooleanVar ? &amp;quot;Yes&amp;quot; : &amp;quot;No&amp;quot; }}&amp;lt;/div&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;dom-nodes&quot;&gt;DOM Nodes&lt;/h3&gt;
+&lt;p&gt;There are times when some DOM nodes from inside the &lt;code&gt;&amp;lt;template&amp;gt;&lt;/code&gt; is required to be addressed inside the &lt;code&gt;methods&lt;/code&gt;. This is done with &lt;code&gt;refs&lt;/code&gt;. &lt;/p&gt;
+&lt;p&gt;In template it looks like this.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;div ref=&amp;quot;appContainer&amp;quot;&amp;gt;
+&amp;lt;/div&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;In the methods it can be referred with &lt;code&gt;this.$refs&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;onSomeMethod: function(){
+    console.log( this.$refs.appContainer )
+}&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Happy coding.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>Vuex Actions in Vue</title>
       <link>https://saumya.github.io/ray/articles/99/</link>
