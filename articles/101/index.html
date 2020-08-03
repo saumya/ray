@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <title>Putting Icons in Electron{{Vue}} application - Saumya
+    </title>
+    <link rel="alternate" href="https://saumya.github.io/ray/feed.xml" type="application/rss+xml" title="Where there is a will, there is a way.">
+    <link rel="stylesheet" href="https://saumya.github.io/ray/css/main.css">
+    <link rel="stylesheet" href="https://saumya.github.io/ray/css/saumya.css">
+  </head>
+  <body class="article-detail">
+    <header class="header">
+      <div class="content-wrap">
+        <h1>Putting Icons in Electron{{Vue}} application</h1>
+        <p class="author">Written by - <span class="author"><a href="mailto:2saumyaray@gmail.com">Saumya</a></span>
+          <p class="date">03 August 2020</p>
+        </p>
+      </div>
+    </header>
+    <div id="content">
+      <div class="content-wrap">
+        <article class="article">
+          <section class="content"><p>This is the next step once there is a basic <a href="https://www.electronjs.org/">Electron</a> application in<span class="widont">&nbsp;</span>place.</p>
+<ul>
+<li>Basics of <a href="https://saumya.github.io/ray/articles/94">Vue</a></li>
+<li><a href="https://saumya.github.io/ray/articles/98/">Desktop Application</a> in <a href="https://saumya.github.io/ray/articles/94">Vue</a></li>
+<li><a href="https://nklayman.github.io/vue-cli-plugin-electron-builder/">Vue <span class="caps">CLI</span> Plugin Electron<span class="widont">&nbsp;</span>Builder</a></li>
+</ul>
+<p><span class="more"></span></p>
+<h3 id="setting-icons">Setting Icons</h3>
+<p>Install <code>electron-icon-builder</code>, <a href="https://www.npmjs.com/package/electron-icon-builder">which creates all the icons</a> for all the platforms from a single file. Here is the documentation of <a href="https://nklayman.github.io/vue-cli-plugin-electron-builder/guide/recipes.html#icons">electron-icon-builder</a> at <a href="https://nklayman.github.io/vue-cli-plugin-electron-builder/guide/recipes.html#icons">Vue ClI Plugin Electron<span class="widont">&nbsp;</span>Builder</a></p>
+<ul>
+<li>Install electron-icon-builder<pre><code>npm install --save-dev electron-icon-builder</code></pre></li>
+<li>Place an image file with name ‘icon.png’ inside ‘public’ folder (public/icon.png). This file should be 1024px x 1024px or larger and 1 to 1 aspect ratio on width to<span class="widont">&nbsp;</span>height.</li>
+<li>Add the ‘npm’ script<pre><code>&quot;electron:generate-icons&quot;: &quot;electron-icon-builder --input=./public/icon.png --output=build --flatten&quot;</code></pre></li>
+<li>Run the script<pre><code>npm run electron:generate-icons</code></pre></li>
+<li>That is all to create the icons. The icons will be put inside the folder named<span class="widont">&nbsp;</span>‘build’</li>
+<li>Next is to build the project<pre><code>npm run electron:build</code></pre></li>
+<li>That is all</li>
+</ul>
+<p>Read more about it at the <a href="https://nklayman.github.io/vue-cli-plugin-electron-builder/guide/recipes.html#icons">Vue <span class="caps">CLI</span> Plugin Electron Builder</a><span class="widont">&nbsp;</span>documentation.</p>
+<p>Happy coding.</p>
+</section>
+        </article>
+      </div>
+    </div>
+    <footer>
+      <div class="content-wrap">
+        <div class="nav"><a href="https://saumya.github.io/ray/">&laquo; Home</a></div>
+        <section class="about"><p><a href="https://saumya.github.io/">Saumya</a> is an iternal seeker.</p>
+<p>A maker of things and curious about everything. Continuous learning is, what fuels him. This blog itself, reflects one of many things he is trying at all the time.</p>
+<p>Talk to <a href="https://twitter.com/saumya">@saumya</a> on Twitter. </p>
+<span class="nav"><a href="https://saumya.github.io/ray/">Home</a><a href="https://saumya.github.io/ray/archive.html">Blog List</a><a href="https://saumya.github.io/ray/feed.xml">Feed</a></span>
+        </section>
+        <section class="copy">
+          <p>&copy; 2020 Saumya Ray &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>
+            <p><a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
+          </p>
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>

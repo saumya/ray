@@ -5,9 +5,37 @@
     <atom:link href="https://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>https://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Sun, 02  Aug 2020 05:30:00 +0630</pubDate>
+    <pubDate>Mon, 03  Aug 2020 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Putting Icons in Electron{{Vue}} application</title>
+      <link>https://saumya.github.io/ray/articles/101/</link>
+      <pubDate>Mon, 03  Aug 2020 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/101/</guid>
+      <author>Saumya</author>
+      <description>&lt;p&gt;This is the next step once there is a basic &lt;a href=&quot;https://www.electronjs.org/&quot;&gt;Electron&lt;/a&gt; application in place.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Basics of &lt;a href=&quot;https://saumya.github.io/ray/articles/94&quot;&gt;Vue&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://saumya.github.io/ray/articles/98/&quot;&gt;Desktop Application&lt;/a&gt; in &lt;a href=&quot;https://saumya.github.io/ray/articles/94&quot;&gt;Vue&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://nklayman.github.io/vue-cli-plugin-electron-builder/&quot;&gt;Vue CLI Plugin Electron Builder&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3 id=&quot;setting-icons&quot;&gt;Setting Icons&lt;/h3&gt;
+&lt;p&gt;Install &lt;code&gt;electron-icon-builder&lt;/code&gt;, &lt;a href=&quot;https://www.npmjs.com/package/electron-icon-builder&quot;&gt;which creates all the icons&lt;/a&gt; for all the platforms from a single file. Here is the documentation of &lt;a href=&quot;https://nklayman.github.io/vue-cli-plugin-electron-builder/guide/recipes.html#icons&quot;&gt;electron-icon-builder&lt;/a&gt; at &lt;a href=&quot;https://nklayman.github.io/vue-cli-plugin-electron-builder/guide/recipes.html#icons&quot;&gt;Vue ClI Plugin Electron Builder&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Install electron-icon-builder&lt;pre&gt;&lt;code&gt;npm install --save-dev electron-icon-builder&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;Place an image file with name ‘icon.png’ inside ‘public’ folder (public/icon.png). This file should be 1024px x 1024px or larger and 1 to 1 aspect ratio on width to height.&lt;/li&gt;
+&lt;li&gt;Add the ‘npm’ script&lt;pre&gt;&lt;code&gt;&amp;quot;electron:generate-icons&amp;quot;: &amp;quot;electron-icon-builder --input=./public/icon.png --output=build --flatten&amp;quot;&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;Run the script&lt;pre&gt;&lt;code&gt;npm run electron:generate-icons&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;That is all to create the icons. The icons will be put inside the folder named ‘build’&lt;/li&gt;
+&lt;li&gt;Next is to build the project&lt;pre&gt;&lt;code&gt;npm run electron:build&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;That is all&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Read more about it at the &lt;a href=&quot;https://nklayman.github.io/vue-cli-plugin-electron-builder/guide/recipes.html#icons&quot;&gt;Vue CLI Plugin Electron Builder&lt;/a&gt; documentation.&lt;/p&gt;
+&lt;p&gt;Happy coding.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>Referring Global variables and DOM Nodes in {{Vue}} application</title>
       <link>https://saumya.github.io/ray/articles/100/</link>
