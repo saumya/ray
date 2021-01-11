@@ -23,6 +23,34 @@
       <div class="content-wrap">
         <article class="article intro">
           <header>
+            <p class="date"><span>11. January 2015</span></p>
+            <h2><a href="https://saumya.github.io/ray/articles/48/">HAXE JS 102</a></h2>
+          </header>
+          <section class="content"><p>We are going good with <a href="http://haxe.org/"><span class="caps">HAXE</span></a>, take a moment to go through the official <a href="http://haxe.org/"><span class="caps">HAXE</span></a> documentation.<br>This is a follow-up post to the <a href="http://saumya.github.io/ray/articles/47/">Haxe <span class="caps">JS</span> 101</a>. Its all about setting up the expectations from the language and the tool chain. Lets make some more things clear about the tooling and how the language<span class="widont">&nbsp;</span>works.          </p>
+<ul>
+<li><a href="http://haxe.org/"><span class="caps">HAXE</span></a> will produce one single <span class="caps">JS</span><span class="widont">&nbsp;</span>file</li>
+<li>We can force it to create one <span class="caps">JS</span> file for one .hx<span class="widont">&nbsp;</span>file</li>
+<li>The created <span class="caps">JS</span> file, is by no means is a module <span class="caps">JS</span> file as in CommonJS or<span class="widont">&nbsp;</span><span class="caps">AMD</span>          </li>
+</ul>
+<p>The contents of <code>.hxml</code> or the build file generally looks<span class="widont">&nbsp;</span>as        </p>
+<pre><code class="language-haxe">-main ApplicationEntry
+-js app.js</code></pre>
+<p>While forcing each <code>.hx</code> file for an individual <code>.js</code> file, the build file would contain something<span class="widont">&nbsp;</span>as         </p>
+<pre><code class="language-haxe">-js com/jungle/Tree.js 
+-cp src 
+com.jungle.Tree
+--next
+-js com/jungle/Animal.js 
+-cp src 
+com.jungle.Animal</code></pre>
+<p>For a sample project and the options, have a look at <a href="https://github.com/saumya/HAXE-JS101">this repo</a> and the <a href="https://github.com/saumya/HAXE-JS101/blob/master/compile.hxml">sample .hxml</a> file is here with all the possible options for <code>.js</code> output.          </p>
+<p>The important thing is to remember that finally every <span class="caps">JS</span> project is compiled to a single <span class="caps">JS</span> file and <a href="http://haxe.org/"><span class="caps">HAXE</span></a> does it in one go. It does not provide module export or any fancy things that other <span class="caps">JS</span> frameworks do to support <span class="caps">JS</span> look like a classical programming language. <a href="http://haxe.org/"><span class="caps">HAXE</span></a> works with its own tool chain and provides well made <span class="caps">JS</span> output. Do not fight it to mock <span class="caps">JS</span> libraries, <a href="http://haxe.org/"><span class="caps">HAXE</span></a> is more powerful than that. Even for NodeJS output, <a href="http://haxe.org/"><span class="caps">HAXE</span></a> produces the final <span class="caps">JS</span> output, just a single <code>.js</code> file. Work with <a href="http://haxe.org/"><span class="caps">HAXE</span></a> packages and classes and then compile it to make the final output, no nothing in<span class="widont">&nbsp;</span>between.</p>
+<p>Happy Haxing.</p>
+
+          </section>
+        </article>
+        <article class="article intro">
+          <header>
             <p class="date"><span>04. January 2015</span></p>
             <h2><a href="https://saumya.github.io/ray/articles/47/">HAXE JS 101</a></h2>
           </header>
@@ -67,36 +95,6 @@ Generally other languages, which compile to <span class="caps">JS</span>, actual
 
           </section>
         </article>
-        <article class="article intro">
-          <header>
-            <p class="date"><span>31. December 2014</span></p>
-            <h2><a href="https://saumya.github.io/ray/articles/46/">Cake and Coffee</a></h2>
-          </header>
-          <section class="content"><p>While working with <a href="http://coffeescript.org/#top">CoffeeScript</a>, we generally tend to do the<span class="widont">&nbsp;</span>following,</p>
-<ul>
-<li>write something in a .coffee<span class="widont">&nbsp;</span>file</li>
-<li>compile that file with coffee compiler to .js<span class="widont">&nbsp;</span>file         </li>
-</ul>
-<p>Well, if we are a little smarter, then use the following command to compile all the .coffee files in a particular folder to respective .js file in another<span class="widont">&nbsp;</span>folder.</p>
-<pre><code class="language-coffeescript">coffee --compile --output outputFolder/ inputFolder/</code></pre>
-<p>That may seem enough now, but actually there are a lot of things we could automate. The native way to do this in <a href="http://coffeescript.org/#top">CoffeeScript</a> is called <code>Cake</code>. We can look at it as a build system. Nice thing about this is, we can write every instruction in <a href="http://coffeescript.org/#top">CoffeeScript</a><span class="widont">&nbsp;</span>itself.         </p>
-<ul>
-<li>Cake is an utility comes with <a href="http://coffeescript.org/#top">CoffeeScript</a></li>
-<li>its a task runner or build<span class="widont">&nbsp;</span>system</li>
-<li>all the instructions are saved in a file with name <code>Cakefile</code></li>
-<li><code>Cakefile</code> is the file name and there is no extension to<span class="widont">&nbsp;</span>it</li>
-<li>Everything inside the <code>Cakefile</code> is a <a href="http://coffeescript.org/#top">CoffeeScript</a><span class="widont">&nbsp;</span>expression         </li>
-</ul>
-<p>To run the <code>Cake</code> task runner, navigate to the folder, where our <code>Cakefile</code> is residing and fire up the command as<span class="widont">&nbsp;</span>below.        </p>
-<pre><code class="language-coffeescript">cake</code></pre>
-<p>That will display all the tasks available in that file to be run. To run a specific task,<span class="widont">&nbsp;</span>run</p>
-<pre><code class="language-coffeescript">cake taskName</code></pre>
-<p>While defining tasks, we can make a relation between tasks. That means we can say taskOne is dependent on taskTwo. The <a href="https://github.com/saumya/CoffeeScript101">basics of CoffeeScript project</a> has a Cakefile for<span class="widont">&nbsp;</span>reference.        </p>
-<p>The direct link to the sample <code>Cakefile</code> <a href="https://github.com/saumya/CoffeeScript101/blob/master/Cakefile">is here</a>. All the code are commented for easy<span class="widont">&nbsp;</span>reference.       </p>
-<p>Happy Coding.</p>
-
-          </section>
-        </article>
       </div>
     </div>
     <footer>
@@ -109,7 +107,7 @@ Generally other languages, which compile to <span class="caps">JS</span>, actual
 <span class="nav"><a href="https://saumya.github.io/ray/">Home</a><a href="https://saumya.github.io/ray/archive.html">Blog List</a><a href="https://saumya.github.io/ray/feed.xml">Feed</a></span>
         </section>
         <section class="copy">
-          <p>&copy; 2020 Saumya Ray &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>
+          <p>&copy; 2021 Saumya Ray &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>
             <p><a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
           </p>
         </section>

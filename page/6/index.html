@@ -23,6 +23,39 @@
       <div class="content-wrap">
         <article class="article intro">
           <header>
+            <p class="date"><span>16. December 2019</span></p>
+            <h2><a href="https://saumya.github.io/ray/articles/87/">Node, SQL and ORM.</a></h2>
+          </header>
+          <section class="content"><p>Finished a project having database, <a href="https://nodejs.org/en/">Node</a> and web <span class="caps">UI</span>. While connecting the database from <code>Node</code> server is easy, there are as usual a lot of options here. First I used <a href="https://github.com/mysqljs/mysql#install">mysql</a> but soon after realised there is an updated package to it called <a href="https://github.com/sidorares/node-mysql2#installation">mysql2</a>. So I have shifted to <a href="https://github.com/sidorares/node-mysql2#installation">mysql2</a>. Once its installed, it is straight forward to connect to any database. The docs are very helpful to get<span class="widont">&nbsp;</span>going.</p>
+<p>Once database connection is done and one get used to the workflow, the need for an <code>ORM</code> arises. There are many options for this in <code>Node</code> land. After looking into different options, I started using <a href="https://sequelize.org/">Sequelize</a>. It is as nice as <code>Node</code> itself and the docs of this library is very helpful and<span class="widont">&nbsp;</span>welcoming.</p>
+<p>These two things makes life a lot easier, while working with database from a <a href="https://nodejs.org/en/">Node</a> server. Next comes the time to write APIs for the frontend. I used <a href="https://expressjs.com/">Express</a> to get things done for the APIs. There is one thing to keep in mind while working with <span class="caps">JSON</span> for the APIs in <a href="https://expressjs.com/">Express</a>. The thing is one has to initialise <a href="https://expressjs.com/">Express</a> application like<span class="widont">&nbsp;</span>below.</p>
+<pre><code>    const express = require(&#39;express&#39;);
+    const app = express();
+    const port = 3000;
+    app.use(express.json());
+    app.use(express.urlencoded({ extended: false }));</code></pre><p>Once this is done, we are ready to take/give <span class="caps">JSON</span> from/to <span class="caps">UI</span>. If you are trying to host it on Heroku, then the following line is<span class="widont">&nbsp;</span>important.</p>
+<pre><code> app.listen( process.env.PORT || port , () =&gt; console.log(`My App listening!`) );</code></pre><p>This is required because, Heroku does not listen on port 3000 as we are trying to make it. But Heroku port is available for us at <code>process.env.PORT</code>. So we are using it<span class="widont">&nbsp;</span>here.</p>
+<p>Next is making the APIs <span class="caps">CORS</span> enabled. Which is done as<span class="widont">&nbsp;</span>below.</p>
+<pre><code>    app.use(function (req, res, next) {
+        res.setHeader(&#39;Access-Control-Allow-Origin&#39;, &#39;http://localhost:1234&#39;);
+        res.setHeader(&#39;Access-Control-Allow-Methods&#39;, &#39;GET, POST, OPTIONS, PUT, PATCH, DELETE&#39;);
+        res.setHeader(&#39;Access-Control-Allow-Headers&#39;, &#39;X-Requested-With,content-type, Accept&#39;);
+        res.setHeader(&#39;Access-Control-Allow-Credentials&#39;, true);
+        next();
+    });</code></pre><p>Now we are ready to write the<span class="widont">&nbsp;</span>APIs. </p>
+<h3 id="front-end">Front End</h3>
+<p>The frontend I have done, is using <a href="https://bulma.io/">bulma</a> for <span class="caps">CSS</span> and <a href="https://jquery.com/">jQuery</a> for <span class="caps">DOM</span> manipulation. Well yes, I hava avoided all the frameworks and new toys of today. And still could do the project and finish it. I have iterated it a lot and it is all fun to see how time could be saved even if one does not use a<span class="widont">&nbsp;</span>framework! </p>
+<p>Here are the code repositories to have a look for frontend and<span class="widont">&nbsp;</span>backend.  </p>
+<ul>
+<li><a href="https://github.com/saumya/attendance_ui">Frontend</a></li>
+<li><a href="https://github.com/saumya/NodeOrmApi_102">Backend</a></li>
+</ul>
+<p>It is a very nice experience to see Javascript in all sides and almost no framework on frontend and still having a decent project<span class="widont">&nbsp;</span>running.</p>
+
+          </section>
+        </article>
+        <article class="article intro">
+          <header>
             <p class="date"><span>16. October 2019</span></p>
             <h2><a href="https://saumya.github.io/ray/articles/86/">Fundraising</a></h2>
           </header>
@@ -43,16 +76,6 @@
 
           </section>
         </article>
-        <article class="article intro">
-          <header>
-            <p class="date"><span>17. June 2019</span></p>
-            <h2><a href="https://saumya.github.io/ray/articles/84/">Building HTML Email Newsletter</a></h2>
-          </header>
-          <section class="content"><p>This came to me as a surprise that, in today’s world for web related work one has to work with <code>tables</code> as if its 1999. Well, I am talking about designing and developing for email newsletters. Here is a <a href="https://www.smashingmagazine.com/2010/01/design-and-build-an-email-newsletter-without-losing-your-mind/">tutorial from 2010</a> which still is relevant. So yes, if you have gone through the above tutorial you have already known, for the reference I will mention it again<span class="widont">&nbsp;</span>here. </p>
-
-            <p class="more"><a href="https://saumya.github.io/ray/articles/84/">more</a></p>
-          </section>
-        </article>
       </div>
     </div>
     <footer>
@@ -65,7 +88,7 @@
 <span class="nav"><a href="https://saumya.github.io/ray/">Home</a><a href="https://saumya.github.io/ray/archive.html">Blog List</a><a href="https://saumya.github.io/ray/feed.xml">Feed</a></span>
         </section>
         <section class="copy">
-          <p>&copy; 2020 Saumya Ray &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>
+          <p>&copy; 2021 Saumya Ray &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>
             <p><a href="https://github.com/saumya/wintersmithThemes/tree/master/elegant">Theme Elegant</a></p>
           </p>
         </section>
