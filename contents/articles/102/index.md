@@ -8,7 +8,8 @@ template: article.pug
 
 Android application development has come a long way since its beginning. There are different ways to do things now and new capabilities are coming in.<span class="more">
 
-![Reflection](../89/saumya_2019_review.jpg)
+![Reflection](../../ray/articles/89/saumya_2019_review.jpg)
+
 
 While talking about the ways it was done, the major thing that changed is the language itself from Java to Kotlin. Then the IDE has moved to IDEA instead of Eclipse. AndroidStudio is matured enough and the process seems a lot easier than dealing with Eclipse. 
 
