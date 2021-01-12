@@ -5,9 +5,30 @@
     <atom:link href="https://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>https://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Mon, 11 Jan 2021 05:30:00 +0630</pubDate>
+    <pubDate>Tue, 12 Jan 2021 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Go Python Deno</title>
+      <link>https://saumya.github.io/ray/articles/103/</link>
+      <pubDate>Tue, 12 Jan 2021 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/103/</guid>
+      <author>Saumya</author>
+      <description>&lt;p&gt;As a programmer, there are a lot of good things out there. It is the best time to make a choice when you have a lot of choices to make from. There might just be the language of your choice, may be a framework of your choice, may be a toolchain of your choice.&lt;span class=&quot;more&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://saumya.github.io/ray/ray/articles/89/saumya_2019_review.jpg&quot; alt=&quot;Reflection&quot;&gt;&lt;/p&gt;
+&lt;p&gt;It is a pity that people suffer choices. They always wanted to choose, but in the end they go with the masses and convince themselves that “they want it”. However as I see it, the programming languages have really matured. &lt;code&gt;There is a language of that kind.&lt;/code&gt; No matter if you are a OOP person or a Functional person, in the backend or frontend, there is a language to your choice.&lt;/p&gt;
+&lt;p&gt;Towards the later part of the last year &lt;code&gt;2020&lt;/code&gt;, I was thinking of diving into some new programming languages. I went through a lot of online documents, videos and code samples. The things that interest me were&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://golang.org/&quot;&gt;Go&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.python.org/&quot;&gt;Python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://deno.land/&quot;&gt;Deno&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These three seemed to me as a nice team. After learning the basics and done some quick applications with &lt;a href=&quot;https://golang.org/&quot;&gt;Go&lt;/a&gt;. I am kind of thinking, why I did not found the language earlier! It is small and does the job. With &lt;a href=&quot;https://www.python.org/&quot;&gt;Python&lt;/a&gt; it is similar feeling. A lot could be done with the kind of simplicity and roboustness these langugages provide. On the frontend &lt;a href=&quot;https://deno.land/&quot;&gt;Deno&lt;/a&gt; is a nice tool to experiment with.&lt;/p&gt;
+&lt;p&gt;Done some &lt;a href=&quot;https://kotlinlang.org/&quot;&gt;Kotlin&lt;/a&gt; and &lt;a href=&quot;https://www.php.net/&quot;&gt;Php&lt;/a&gt; for an Android development project. I did a small project to see, how it works. Seems &lt;a href=&quot;https://www.php.net/&quot;&gt;Php&lt;/a&gt; has come a long way. One can write pure Functional programming in &lt;a href=&quot;https://www.php.net/&quot;&gt;Php&lt;/a&gt;. This is just amazing as &lt;code&gt;how simple&lt;/code&gt; it all has become to achieve the complex of things.&lt;/p&gt;
+&lt;p&gt;Though there is a lot of noise around &lt;a href=&quot;https://www.rust-lang.org/&quot;&gt;Rust&lt;/a&gt;, I do not think it can be handled at the same time. But that does not keep me away from that. Whenever I could, will jump into &lt;a href=&quot;https://www.rust-lang.org/&quot;&gt;Rust&lt;/a&gt; to see how far I could swim in there.&lt;/p&gt;
+&lt;p&gt;Happy Coding.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>Andriod App Icons and Web apps with Back button.</title>
       <link>https://saumya.github.io/ray/articles/102/</link>

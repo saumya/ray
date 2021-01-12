@@ -23,6 +23,55 @@
       <div class="content-wrap">
         <article class="article intro">
           <header>
+            <p class="date"><span>18. April 2014</span></p>
+            <h2><a href="https://saumya.github.io/ray/articles/34/">Understanding BackboneJS View Event, jQuery Event and trigger()</a></h2>
+          </header>
+          <section class="content"><p>The fun in working with <a href="http://backbonejs.org/">BackboneJS</a> is freedom. The library is so decoupled that, one can really do any kind of architecture for an application. This freedom will come in your way if you do not know what is happening behind. We will be focusing on ‘Event’ here.<br>Working with <a href="http://backbonejs.org/">BackboneJS</a> often involves working with <a href="http://jquery.com/">jQuery</a> too as a <span class="caps">DOM</span> manupilation library. When we work on <span class="caps">HTML</span> and <span class="caps">DOM</span>, in terms of <a href="http://backbonejs.org/">BackboneJS</a> we are working on View. At this point we must understand, that this BackboneView can dispatch event and the <span class="caps">DOM</span> we are dealing with also is capable of dispatching event. The point to note here is event dispatched through <a href="http://backbonejs.org/">BackboneJS</a> framework, does not bubble. Where as the default <span class="caps">DOM</span> events bubble. Well, since we generally work with <a href="http://jquery.com/">jQuery</a> for <span class="caps">DOM</span> manupilation, events fired through <a href="http://jquery.com/">jQuery</a> also has the same effect as <span class="caps">DOM</span> events, they bubble. Working with a <a href="http://backbonejs.org/">BackboneJS</a> ViewObject, we deal with <code>el</code> of the ViewObject. <a href="http://backbonejs.org/">BackboneJS</a> also provides a <code>$el</code> on each view. Take a note of this <code>$el</code>, which is a <a href="http://jquery.com/">jQuery</a> object.<br>Dispatching an Event in <a href="http://backbonejs.org/">BackboneJS</a> is done<span class="widont">&nbsp;</span>as</p>
+<pre><code class="language-javascript"><span class="comment">//somewhere inside the View</span>
+<span class="keyword">this</span>.trigger(<span class="string">'myEvent'</span>,{<span class="string">'data'</span>:<span class="string">'myValue'</span>});</code></pre>
+<p>The basic syntax for <a href="http://backbonejs.org/#Events-trigger">dispatching an event in BackboneJS</a><span class="widont">&nbsp;</span>is</p>
+<pre><code class="language-javascript">object.trigger(event, [*args]) </code></pre>
+<p>Remember that the <code>second parameter</code> in the <code>trigger</code> is <code>data</code> to be passed to the event-handler. Registering the listener for the event will be<span class="widont">&nbsp;</span>as </p>
+<pre><code class="language-javascript"><span class="keyword">this</span>.listenTo(<span class="keyword">this</span>.viewObject, <span class="string">'myEvent'</span>, <span class="keyword">this</span>.onMyEvent);</code></pre>
+<p>Now writing a handler for this event will look<span class="widont">&nbsp;</span>as</p>
+<pre><code class="language-javascript"><span class="comment">//handler</span>
+onMyEvent: <span class="function"><span class="keyword">function</span>(<span class="params">eventdata</span>)</span>{
+    <span class="built_in">console</span>.log(eventdata);<span class="comment">//example: getting data from the event</span>
+}</code></pre>
+<p>So, we get the whole <code>data</code> ( passed to the <code>trigger()</code> method as second parameter ) , as the arguement to the<span class="widont">&nbsp;</span>handler. </p>
+<p>Now lets focus on the <span class="caps">DOM</span> event for the same scenario.
+The dispatcher code will look<span class="widont">&nbsp;</span>as</p>
+<pre><code class="language-javascript"><span class="keyword">this</span>.$el.trigger(<span class="string">'myEvent'</span>,{<span class="string">'data'</span>:<span class="string">'myValue'</span>});</code></pre>
+<p>Here, actually it seems that we are using <a href="http://backbonejs.org/">BackboneJS</a> Event, but since we are dealing with <code>$el</code>, we are actually <a href="http://api.jquery.com/trigger/">triggering a <span class="caps">DOM</span> event through jQuery</a>. Since this is a <span class="caps">DOM</span> event, it has all the three phases in its life cycle; capture, target and bubble. So, we can really catch this event on a parent view of <a href="http://backbonejs.org/">BackboneJS</a> and the code would be<span class="widont">&nbsp;</span>like </p>
+<pre><code class="language-javascript">events: {
+    <span class="string">'myEvent'</span>: <span class="string">'onMyEvent'</span> <span class="comment">//this is actually listening to <span class="caps">DOM</span> event</span>
+}</code></pre>
+<p>The handler code will look<span class="widont">&nbsp;</span>as </p>
+<pre><code class="language-javascript">onMyEvent : <span class="function"><span class="keyword">function</span>(<span class="params">event,data</span>)</span>{
+    event.preventDefault();
+    <span class="comment">//code as required by application</span>
+    <span class="comment">//But, see the second arguement is actually 'data', passed to 'trigger()'</span>
+    <span class="keyword">return</span> <span class="literal">false</span>;
+}</code></pre>
+<p>Note the difference in event handler here. We have now two arguements and the second arguement is the <code>data</code> that is passed in to <code>trigger()</code> call above.
+All that is to it is, how you <code>trigger</code> the event, from the two ways<span class="widont">&nbsp;</span>below.</p>
+<ol>
+<li>From the [BackboneJS]<span class="widont">&nbsp;</span>View</li>
+<li>From the <span class="caps">DOM</span><span class="widont">&nbsp;</span>element     </li>
+</ol>
+<p>And then, writing a proper event-handler for the respective<span class="widont">&nbsp;</span>Event.     </p>
+<p>In <a href="http://backbonejs.org/">BackboneJS</a>, sometimes you need to deal with situations, where you just want to listen for events without knowing the other Views. That way de-coupling the application. There is Mediator design pattern to do a central event dispatching system for the whole <a href="http://backbonejs.org/">BackboneJS</a> application. Then there is this little but powerful thing, called bubbling, already available to native<span class="widont">&nbsp;</span><span class="caps">DOM</span>.      </p>
+<p>Here are the links to the two trigger<span class="widont">&nbsp;</span>methods;</p>
+<ol>
+<li><a href="http://api.jquery.com/trigger/">jQuery trigger</a></li>
+<li><a href="http://backbonejs.org/#Events-trigger">BackboneJS trigger</a></li>
+</ol>
+<p>Happy Bubbling.</p>
+
+          </section>
+        </article>
+        <article class="article intro">
+          <header>
             <p class="date"><span>03. April 2014</span></p>
             <h2><a href="https://saumya.github.io/ray/articles/33/">jQuery and fixing AJAX cache for GET calls</a></h2>
           </header>
@@ -66,42 +115,6 @@ $.ajax({
 <pre><code>haxelib run openfl test neko
 haxelib run lime test neko</code></pre><p>This is just as simple as calling directly as<span class="widont">&nbsp;</span>below.</p>
 <pre><code>lime test neko</code></pre><p>Yeah. Thats good start. I thought to document it here, as I have used to the commands on <code>mac</code> and suddenly its changed (though changed for good), a note would be a point of reference in the future to refer<span class="widont">&nbsp;</span>to.</p>
-
-          </section>
-        </article>
-        <article class="article intro">
-          <header>
-            <p class="date"><span>27. February 2014</span></p>
-            <h2><a href="https://saumya.github.io/ray/articles/31/">Migration checklist for Cordova(Phonegap) application from version 2.x to 3.x</a></h2>
-          </header>
-          <section class="content"><p>There might be chances that you are re-writing a project or simply maintainig an old codebase of a <a href="https://cordova.apache.org/">Cordova</a>(phonegap) application. In both the cases, its ideal to go for the lastest version of the library. Being said that, its not that straight forward to migrate a phonegap 2.x application to Phonegap 3.x. And if, the project uses a 1.x version of <a href="http://jquery.com">jQuery</a> with <a href="https://jqueryui.com/">jQuerymobile</a>, you might want to update that to 2.x too, which adds up to more confusion and work, than solution. I will be focusing on <a href="https://cordova.apache.org/">Cordova</a> rather than <a href="http://phonegap.com/">Phonegap</a> here. Yes, they are different! They are supposed to be the same but there are<span class="widont">&nbsp;</span>differences.      </p>
-<h3 id="here-is-a-checklist-to-keep-things-in-perspective">Here is a checklist to keep things in<span class="widont">&nbsp;</span>perspective.</h3>
-<h3 id="cordova">Cordova</h3>
-<ul>
-<li>Get used to <a href="http://nodejs.org/">NodeJS</a>. Yes, thats now mandatory to<span class="widont">&nbsp;</span>use.</li>
-<li>Get used to <a href="https://cordova.apache.org/">Cordova</a> and <a href="http://phonegap.com/">Phonegap</a>, they are<span class="widont">&nbsp;</span>different.</li>
-<li>Know the difference between <a href="https://cordova.apache.org/">Cordova</a> and <a href="http://phonegap.com/">Phonegap</a>, at-least what they do<span class="widont">&nbsp;</span>internally.</li>
-<li><a href="http://cordova.apache.org/docs/en/3.4.0/guide_overview_index.md.html#Overview">Read completely the getting started</a> with <a href="https://cordova.apache.org/">Cordova</a>.</li>
-<li>Do not confuse with <a href="http://cordova.apache.org/docs/en/3.4.0/guide_overview_index.md.html#Overview_development_paths">Web Project Dev</a> work flow, if possible avoid it<span class="widont">&nbsp;</span>altogether.</li>
-<li>Start with <a href="http://cordova.apache.org/docs/en/3.4.0/guide_overview_index.md.html#Overview_development_paths">Native Platform Dev</a> workflow. This is the one, which is closer to the older version<span class="widont">&nbsp;</span>workflow.</li>
-<li>Do not use <a href="http://cordova.apache.org/docs/en/3.4.0/guide_cli_index.md.html#The%20Command-Line%20Interface"><span class="caps">CLI</span></a> for creating project. You can download the <a href="http://archive.apache.org/dist/cordova/">whole archive for a version</a> as you used to in the previous versions and still can create project with<span class="widont">&nbsp;</span>it.</li>
-<li>Get used to <a href="http://cordova.apache.org/docs/en/3.4.0/plugin_ref_plugman.md.html#Using%20Plugman%20to%20Manage%20Plugins">Plugman</a> to manage plugins. Everything is now a plugin. That means, a default project created, is nothing more than a website. If you need to interact with a device, you have to add plugin. In <a href="http://cordova.apache.org/docs/en/3.4.0/guide_overview_index.md.html#Overview_development_paths">Native Platform Dev</a>, these are managed by <a href="http://cordova.apache.org/docs/en/3.4.0/plugin_ref_plugman.md.html#Using%20Plugman%20to%20Manage%20Plugins">Plugman</a>.</li>
-<li>For the first couple of trials, <a href="http://cordova.apache.org/docs/en/3.4.0/plugin_ref_plugman.md.html#Using%20Plugman%20to%20Manage%20Plugins_installing_core_plugins">add all the plugins</a>. That will make the project, behave as the older version projects, where everything is set by default. The document to install plugin is<span class="widont">&nbsp;</span>misleading.     </li>
-</ul>
-<p><code>Instead</code> of</p>
-<pre><code>plugman --platform --project --plugin org.apache.cordova.battery-status</code></pre><p><code>Use</code>, the commands as below. The document is missing <code>--install</code> from the<span class="widont">&nbsp;</span>command!</p>
-<pre><code>plugman --install --platform --project --plugin org.apache.cordova.battery-status</code></pre><p>The actual code will look<span class="widont">&nbsp;</span>as</p>
-<pre><code>plugman --install --ios --path/to/project/folder --plugin org.apache.cordova.battery-status</code></pre><ul>
-<li>Get used to <code>config.xml</code>, <a href="http://cordova.apache.org/docs/en/3.4.0/config_ref_index.md.html#The%2520config.xml%2520File">for configuring the whole<span class="widont">&nbsp;</span>project</a></li>
-</ul>
-<h3 id="jquery-and-jquerymobile">jQuery and jQueryMobile</h3>
-<ul>
-<li>Update the <a href="http://api.jquerymobile.com/jQuery.mobile.changePage/">page change code</a> to remove the deprecated one and use the new<span class="widont">&nbsp;</span>one.</li>
-<li>Update the event listener code from deprecated <a href="http://api.jquery.com/live/">live()</a> to <a href="http://api.jquery.com/on/">on()</a>.</li>
-<li>Keep an eye on all the <a href="http://api.jquery.com/category/deprecated/">deprecated</a> APIs of<span class="widont">&nbsp;</span>jQuery</li>
-</ul>
-<p>That should make you compile your old project in the new<span class="widont">&nbsp;</span>code.</p>
-<p>Happy transitioning.</p>
 
           </section>
         </article>

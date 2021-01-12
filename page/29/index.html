@@ -23,6 +23,17 @@
       <div class="content-wrap">
         <article class="article intro">
           <header>
+            <p class="date"><span>28. January 2014</span></p>
+            <h2><a href="https://saumya.github.io/ray/articles/19/">Theme, Simple.</a></h2>
+          </header>
+          <section class="content"><p>In order to get rid of the dependencies and make the site pure static, I re-wrote some of the <span class="caps">CSS</span> and font dependencies in the <a href="https://github.com/jnordberg/wintersmith">Wintesmith</a>. I am releasing this <a href="https://github.com/saumya/wintersmithThemes/tree/master/simple">theme</a> at github in my <a href="https://github.com/saumya/wintersmithThemes">Wintersmith Themes</a> repository. The name of the theme is <code>Simple</code>.      
+Its a free as in air theme, and encourage you to take it, hack it and use it, for whatever reason you may want it to use.<br>This blog today is using <code>Simple</code> theme as an example of, what it looks like to use this<span class="widont">&nbsp;</span>theme.</p>
+<p>Happy hacking.</p>
+
+          </section>
+        </article>
+        <article class="article intro">
+          <header>
             <p class="date"><span>27. January 2014</span></p>
             <h2><a href="https://saumya.github.io/ray/articles/18/">Git commit throws fatal error for line endings.</a></h2>
           </header>
@@ -40,28 +51,6 @@
           </header>
           <section class="content"><p>Since I have the know how to theme my blog, here is the <code>Indian Republic Day</code> theme. Its <code>Open source</code> and available <code>at my github repository</code> <a href="https://github.com/saumya/wintersmithThemes/tree/master/indianRepublicDay">here</a>. I will be <code>sharing my themes</code> for <a href="https://github.com/jnordberg/wintersmith">Wintersmith</a> at <a href="https://github.com/saumya/wintersmithThemes">this</a><span class="widont">&nbsp;</span>repository.</p>
 <p>Happy republic day.</p>
-
-          </section>
-        </article>
-        <article class="article intro">
-          <header>
-            <p class="date"><span>25. January 2014</span></p>
-            <h2><a href="https://saumya.github.io/ray/articles/16/">Getting started with Wintersmith themes</a></h2>
-          </header>
-          <section class="content"><p>I am getting more and more conversant with the <a href="http://jade-lang.com">Jade</a> templating engine and <a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>. Which I hope, is, what was one of the intentions, of moving from <a href="http://wordpress.org">Wordpress</a> to <a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>. Well, trying my hands on to customise the theme, I found its extemely easy to just add another <span class="caps">CSS</span> to the <code>layout</code> template ie; <code>layout.jade</code> and start putting in the styles there. It can not be simpler than this. The base style is taken from the style definition at <code>main.css</code>. If you look at the <code>layout.jade</code>, it will look something as<span class="widont">&nbsp;</span>this.</p>
-<pre><code class="language-javascript">link(rel=<span class="string">'stylesheet'</span>, href=<span class="string">'/css/main.css'</span>)</code></pre>
-<p>If you are following this blog, I have mentioned previously how to configure <a href="https://github.com/jnordberg/wintersmith">Wintersmith</a> so as to make it working from any domain or subdomain. So the <code>layout.jade</code> in my case, looks as<span class="widont">&nbsp;</span>below.</p>
-<pre><code class="language-javascript">link(rel=<span class="string">'stylesheet'</span>, href=locals.url+<span class="string">'/css/main.css'</span>)</code></pre>
-<p>Whatever the condition may be, whether you are using default settings or my settings, the point is, just add another <span class="caps">CSS</span> file(<code>theme.css</code>) below the default <span class="caps">CSS</span>.
-So the default setting will be as<span class="widont">&nbsp;</span>this.</p>
-<pre><code class="language-javascript">link(rel=<span class="string">'stylesheet'</span>, href=<span class="string">'/css/main.css'</span>)
-link(rel=<span class="string">'stylesheet'</span>, href=<span class="string">'/css/theme.css'</span>)</code></pre>
-<p>In my case, I am using a theme <span class="caps">CSS</span> file as <code>saumya.css</code> and with my configuration change, it looks as<span class="widont">&nbsp;</span>this.</p>
-<pre><code class="language-javascript">link(rel=<span class="string">'stylesheet'</span>, href=locals.url+<span class="string">'/css/main.css'</span>)
-link(rel=<span class="string">'stylesheet'</span>, href=locals.url+<span class="string">'/css/saumya.css'</span>)</code></pre>
-<p>Now do the customisation in the <code>theme.css</code>.     </p>
-<p>Hope you understand <code>the best practice of overriding styles</code> than manipulating directly the original <span class="caps">CSS</span><span class="widont">&nbsp;</span>file.</p>
-<p>Happy theming.</p>
 
           </section>
         </article>
