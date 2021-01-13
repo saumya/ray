@@ -5,9 +5,33 @@
     <atom:link href="https://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>https://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Tue, 12 Jan 2021 05:30:00 +0630</pubDate>
+    <pubDate>Wed, 13 Jan 2021 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Minstagram.</title>
+      <link>https://saumya.github.io/ray/articles/104/</link>
+      <pubDate>Wed, 13 Jan 2021 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/104/</guid>
+      <author>Saumya</author>
+      <description>&lt;ul&gt;
+&lt;li&gt;Free and OpenSource. &lt;/li&gt;
+&lt;li&gt;Image sharing application made with JS-PHP-SQLite.&lt;/li&gt;
+&lt;li&gt;Simple Deployment (just upload the folder)&lt;/li&gt;
+&lt;li&gt;Requires PHP version 7 and higher&lt;/li&gt;
+&lt;li&gt;No Javascript framework&lt;/li&gt;
+&lt;li&gt;No PHP Framework&lt;span class=&quot;more&quot;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;https://saumya.github.io/ray/ray/articles/89/saumya_2019_review.jpg&quot; alt=&quot;Reflection&quot;&gt;&lt;/p&gt;
+&lt;p&gt;It is becoming obvious that we need tools for people. Read that again. &lt;/p&gt;
+&lt;p&gt;Currently the situation is, we make tools for organisations / corporates and may be government. But the root is people and somewhere in this busy train, the importance of &lt;code&gt;individual people&lt;/code&gt; are lost. Fortunately the world has a lot of passionate people who care about people. Everyday there are better softwares made for the people. &lt;/p&gt;
+&lt;p&gt;Here is a software to make people host there own &lt;code&gt;Instagram&lt;/code&gt; kind of photo sharing application in their own server. This is simple. It requires to upload the folder to the server and done. No server configuration, no database setup.&lt;/p&gt;
+&lt;p&gt;I call it &lt;code&gt;Minstagram&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The code is as simple as it can be. Where I can see a lot of features are possible arround it, focused on simplicity and usability. Many does require an option to host their images. There are a lot of options available. However every option seems to grown out of its original goal and made things complex.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/saumya/Minstagram&quot;&gt;Minstagram&lt;/a&gt; is free from any kind of frameworks till now. Neither serverside not client side. No PHP framweork, no javascript framework. Works on all modern browsers including mobile browsers. However, frontend code and backend code are separate. There is always a call from the javascript to the PHP for doing something in the server. Which means, one can simply re-write the frontend or re-write the backend without really breaking the other one. That said, Frameworks may be get added in future.&lt;/p&gt;
+&lt;p&gt;Happy Sharing.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>Go Python Deno</title>
       <link>https://saumya.github.io/ray/articles/103/</link>
