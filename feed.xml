@@ -5,9 +5,45 @@
     <atom:link href="https://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>https://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Wed, 13 Jan 2021 05:30:00 +0630</pubDate>
+    <pubDate>Thu, 14 Jan 2021 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Go Modules.</title>
+      <link>https://saumya.github.io/ray/articles/105/</link>
+      <pubDate>Thu, 14 Jan 2021 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/105/</guid>
+      <author>Saumya</author>
+      <description>&lt;p&gt;Writing &lt;a href=&quot;https://golang.org/&quot;&gt;Go&lt;/a&gt; Modules is as simple as writing code in a file inside a folder. The folder is known as the &lt;code&gt;module&lt;/code&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;A module is a folder&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;There could be more than one &lt;code&gt;.go&lt;/code&gt; files in the module with module declaration at top &lt;code&gt;package gomodule&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Any function from any of the &lt;code&gt;.go&lt;/code&gt; file inside a module can be called from any other file in the same module.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;File names does not matter inside a module as far as importing a module is concerned.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;While importing a module, the whole of the module is imported. That means all the &lt;code&gt;.go&lt;/code&gt; files in that module is available, to call their &lt;code&gt;functions&lt;/code&gt; from. The functions are called with the module name, not the file name.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;While declaring a module the &lt;code&gt;.mod&lt;/code&gt; file holds the key. It declares the URL and module name as &lt;code&gt;module saumya.learning/gomodule&lt;/code&gt;.  The respective &lt;code&gt;.go&lt;/code&gt; files in that module, must declare the package declaration as &lt;code&gt;package gomodule&lt;/code&gt; and the URL must be a live URL.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Example of a &lt;code&gt;module&lt;/code&gt; declaration in a &lt;code&gt;.mod&lt;/code&gt; file&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;module saumya.learning/gomodule&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The &lt;code&gt;.go&lt;/code&gt; files in that module must declare the package declaration as below.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;package gomodule&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Just remember that these declarations are must be the first line in the respective files.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The URL in the module declaration &lt;code&gt;saumya.learning/gomodule&lt;/code&gt; must be a valid URL. Because while importing the module in another module, the &lt;a href=&quot;https://golang.org/&quot;&gt;Go&lt;/a&gt; is going to import the module from that URL. In this example, the URL is &lt;code&gt;saumya.learning&lt;/code&gt; which must exist in the internet.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Well, there is a way to work with local modules. That is, importing modules from local file system. It has to be specifically declared in the &lt;code&gt;.mod&lt;/code&gt; file as below.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;replace saumya.learning/gomodule =&amp;gt; ../2_ago&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;In this example, it is importing a &lt;code&gt;Go Module&lt;/code&gt; from a folder, relative to our working folder.&lt;/p&gt;
+&lt;h3 id=&quot;the-mod-command&quot;&gt;The &lt;code&gt;mod&lt;/code&gt; Command&lt;/h3&gt;
+&lt;p&gt;Creation of a &lt;code&gt;Go module&lt;/code&gt; is done with &lt;code&gt;mod&lt;/code&gt; command.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;go mod init saumya.learning/hello
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Here it is creating a &lt;code&gt;.mod&lt;/code&gt; file with module declaration as &lt;code&gt;module saumya.learning/hello&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Happy &lt;a href=&quot;https://golang.org/&quot;&gt;Go&lt;/a&gt;ing.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>Minstagram.</title>
       <link>https://saumya.github.io/ray/articles/104/</link>
