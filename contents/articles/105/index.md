@@ -6,7 +6,7 @@ template: article.pug
 ---
 
 
-Writing [Go][go] Modules is as simple as writing code in a file inside a folder. The folder is known as the `module`.
+Writing [Go][go] Modules is as simple as writing code in a file inside a folder. The folder is known as the `module`.<span class="more">
 
 
  - A module is a folder
@@ -37,12 +37,36 @@ package gomodule
 
 Just remember that these declarations are must be the first line in the respective files.
 
+> The URL in the module declaration `saumya.learning/gomodule` must be a valid URL. Because while importing the module in another module, the [Go][go] is going to import the module from that URL. In this example, the URL is `saumya.learning` which must exist in the internet.
+
+Well, there is a way to work with local modules. That is, importing modules from local file system. It has to be specifically declared in the `.mod` file as below.
+
+```
+replace saumya.learning/gomodule => ../2_ago
+```
+
+In this example, it is importing a `Go Module` from a folder, relative to our working folder.
+
+
+### The `mod` Command
+
+Creation of a `Go module` is done with `mod` command.
+
+```
+go mod init saumya.learning/hello
+
+```
+
+Here it is creating a `.mod` file with module declaration as `module saumya.learning/hello`.
 
 
 
 
 
-Happy Coding.
+
+
+
+Happy [Go][go]ing.
 
 
 
