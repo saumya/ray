@@ -26,35 +26,8 @@
             <p class="date"><span>14. January 2021</span></p>
             <h2><a href="https://saumya.github.io/ray/articles/105/">Go Modules.</a></h2>
           </header>
-          <section class="content"><p>Writing <a href="https://golang.org/">Go</a> Modules is as simple as writing code in a file inside a folder. The folder is known as the <code>module</code>.</p>
-<ul>
-<li><p>A module is a<span class="widont">&nbsp;</span>folder</p>
-</li>
-<li><p>There could be more than one <code>.go</code> files in the module with module declaration at top <code>package gomodule</code></p>
-</li>
-<li><p>Any function from any of the <code>.go</code> file inside a module can be called from any other file in the same<span class="widont">&nbsp;</span>module.</p>
-</li>
-<li><p>File names does not matter inside a module as far as importing a module is<span class="widont">&nbsp;</span>concerned.</p>
-</li>
-<li><p>While importing a module, the whole of the module is imported. That means all the <code>.go</code> files in that module is available, to call their <code>functions</code> from. The functions are called with the module name, not the file<span class="widont">&nbsp;</span>name.</p>
-</li>
-<li><p>While declaring a module the <code>.mod</code> file holds the key. It declares the <span class="caps">URL</span> and module name as <code>module saumya.learning/gomodule</code>.  The respective <code>.go</code> files in that module, must declare the package declaration as <code>package gomodule</code> and the <span class="caps">URL</span> must be a live<span class="widont">&nbsp;</span><span class="caps">URL</span>.</p>
-</li>
-</ul>
-<p>Example of a <code>module</code> declaration in a <code>.mod</code> file</p>
-<pre><code>module saumya.learning/gomodule</code></pre><p>The <code>.go</code> files in that module must declare the package declaration as<span class="widont">&nbsp;</span>below.</p>
-<pre><code>package gomodule</code></pre><p>Just remember that these declarations are must be the first line in the respective<span class="widont">&nbsp;</span>files.</p>
-<blockquote>
-<p>The <span class="caps">URL</span> in the module declaration <code>saumya.learning/gomodule</code> must be a valid <span class="caps">URL</span>. Because while importing the module in another module, the <a href="https://golang.org/">Go</a> is going to import the module from that <span class="caps">URL</span>. In this example, the <span class="caps">URL</span> is <code>saumya.learning</code> which must exist in the<span class="widont">&nbsp;</span>internet.</p>
-</blockquote>
-<p>Well, there is a way to work with local modules. That is, importing modules from local file system. It has to be specifically declared in the <code>.mod</code> file as<span class="widont">&nbsp;</span>below.</p>
-<pre><code>replace saumya.learning/gomodule =&gt; ../2_ago</code></pre><p>In this example, it is importing a <code>Go Module</code> from a folder, relative to our working<span class="widont">&nbsp;</span>folder.</p>
-<h3 id="the-mod-command">The <code>mod</code> Command</h3>
-<p>Creation of a <code>Go module</code> is done with <code>mod</code> command.</p>
-<pre><code>go mod init saumya.learning/hello
-</code></pre><p>Here it is creating a <code>.mod</code> file with module declaration as <code>module saumya.learning/hello</code>.</p>
-<p>Happy <a href="https://golang.org/">Go</a>ing.</p>
-
+          <section class="content"><p>Writing <a href="https://golang.org/">Go</a> Modules is as simple as writing code in a file inside a folder. The folder is known as the <code>module</code>.
+            <p class="more"><a href="https://saumya.github.io/ray/articles/105/">more</a></p>
           </section>
         </article>
         <article class="article intro">

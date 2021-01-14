@@ -14,7 +14,7 @@
       <pubDate>Thu, 14 Jan 2021 05:30:00 +0630</pubDate>
       <guid isPermaLink="true">https://saumya.github.io/ray/articles/105/</guid>
       <author>Saumya</author>
-      <description>&lt;p&gt;Writing &lt;a href=&quot;https://golang.org/&quot;&gt;Go&lt;/a&gt; Modules is as simple as writing code in a file inside a folder. The folder is known as the &lt;code&gt;module&lt;/code&gt;.&lt;/p&gt;
+      <description>&lt;p&gt;Writing &lt;a href=&quot;https://golang.org/&quot;&gt;Go&lt;/a&gt; Modules is as simple as writing code in a file inside a folder. The folder is known as the &lt;code&gt;module&lt;/code&gt;.&lt;span class=&quot;more&quot;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;A module is a folder&lt;/p&gt;
 &lt;/li&gt;
