@@ -5,9 +5,30 @@
     <atom:link href="https://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>https://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Thu, 14 Jan 2021 05:30:00 +0630</pubDate>
+    <pubDate>Wed, 03 Feb 2021 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Distributed Web is here. ClientServer to ClientClient. IPFS.</title>
+      <link>https://saumya.github.io/ray/articles/106/</link>
+      <pubDate>Wed, 03 Feb 2021 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/106/</guid>
+      <author>Saumya</author>
+      <description>&lt;p&gt;It is here and happening now. I was predicting it will take some more time, but it is here now.&lt;/p&gt;
+&lt;p&gt;The &lt;a href=&quot;https://ipfs.io&quot;&gt;IPFS&lt;/a&gt; is making its presence felt.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A peer-to-peer hypermedia protocol designed to make the web a faster, safer, and more open.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;One of the major browsers, &lt;a href=&quot;https://brave.com&quot;&gt;Brave&lt;/a&gt; has &lt;a href=&quot;https://brave.com/brave-integrates-ipfs/&quot;&gt;implemented IPFS&lt;/a&gt; into it.&lt;/p&gt;
+&lt;p&gt;That actually means the way the softwares are developed today, is going to change. Whether you like it or not. It is going to be.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;From Server-Client to Client-Client&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;It is going to be exciting to see the distributed web flourish. The marketing and the buzz about the &lt;code&gt;scaling the product&lt;/code&gt; is going to be obsolete. Why?! Because the applications are going to be decentralized. No central server and scaling required. Each visitor(client) is a host(a server) in itself. So the &lt;code&gt;scaling&lt;/code&gt; is in-built. More the visitors, better the experiences.&lt;/p&gt;
+&lt;p&gt;Seems 2021 is beginning a new era in itself.&lt;/p&gt;
+&lt;p&gt;Happy Coding.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>Go Modules.</title>
       <link>https://saumya.github.io/ray/articles/105/</link>
