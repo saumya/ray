@@ -15,7 +15,7 @@ Being an entrepreneur is same as being in life. Nothing is fixed. It changes eve
 
 > Journey is important and it is the only thing. 
 
-There is no destination as such. Somehow we plan for somthing and move on with it. Whether it is achieved or not, does not matter. By the time with reach there, the whole plan is different.
+There is no destination as such. Somehow we plan for somthing and move on with it. Whether it is achieved or not, does not matter. By the time we reach there, the whole plan is different.
 
 > Today is a major turn in the journey. 
 
