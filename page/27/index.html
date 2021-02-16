@@ -23,6 +23,16 @@
       <div class="content-wrap">
         <article class="article intro">
           <header>
+            <p class="date"><span>19. February 2014</span></p>
+            <h2><a href="https://saumya.github.io/ray/articles/29/">Amazon S3, file system.</a></h2>
+          </header>
+          <section class="content"><p>I had my hands dirty for the first time, in last couple of days, with Amazon Simple Storage Service (S3). I was playing with the javascript <span class="caps">SDK</span> and getting to know the environment in general. The first impression is, it just stores the files and folders. But, digging deep inside and playing with its APIs, made me realise that its different than the traditional storage.<br><code>Everything is just a pointer</code>, well thats how I see it.<br>Amazon says, everything is a file. So that means a folder is a file with a different naming convention. Thats it, if you get that, then the <span class="caps">API</span> is straight forward. And I must say from the beginning of the computer era, one thing has been consistent and that is file system. Now, the way, new storage solutions are emerging, it’s not actually different from others’ offers, but definitely different from traditional file systems. The new era of the file systems or more generally we can say data storage systems are emerging and Amazon is no different in that regard. So, all in all, a new storage system with a very simple <span class="caps">SDK</span> is<span class="widont">&nbsp;</span>exciting.</p>
+<p>Happy coding.</p>
+
+          </section>
+        </article>
+        <article class="article intro">
+          <header>
             <p class="date"><span>15. February 2014</span></p>
             <h2><a href="https://saumya.github.io/ray/articles/28/">jQuery Mobile, making change page work.</a></h2>
           </header>
@@ -47,27 +57,6 @@
 <p>The <a href="https://github.com/saumya/AmazonS3Sync">source code</a> is available here and to run it, get a copy of the <a href="https://github.com/rogerwang/node-webkit">node-webkit</a> for your environment. And that makes a cross-platform application on <a href="http://nodejs.org/">NodeJS</a>.     </p>
 <p>Currently the application keeps an eye on a folder, you specify. Once a file is changed in that folder, is automatically uploaded to the ‘bucket’ you specify in the beginning of the application. Note, currently it just uploads the files, which are changed. It does not upload a new file in the folder or any existing<span class="widont">&nbsp;</span>file.</p>
 <p>Happy synching.</p>
-
-          </section>
-        </article>
-        <article class="article intro">
-          <header>
-            <p class="date"><span>13. February 2014</span></p>
-            <h2><a href="https://saumya.github.io/ray/articles/26/">iOS, customising top and bottom bar inside UINavigationController</a></h2>
-          </header>
-          <section class="content"><p>This may seem a difficult or simple task, depending upon what and how you want to do it.<br><a href="https://developer.apple.com/library/ios/documentation/uikit/reference/UINavigationController_Class/Reference/Reference.html">UINavigationController</a> is simply a controller to manage all the UIViewControllers inside it. Now, customising each and every <a href="https://developer.apple.com/library/ios/documentation/uikit/reference/UIViewController_Class/Reference/Reference.html#//apple_ref/doc/c_ref/UIViewController">UIViewController</a> could be done by code or InterfaceBuilder, depending upon what you want to achieve. We will be seeing here, as to how, to customise the Navigation bar (top bar) and the Tab bar (bottom bar) of the respective <a href="https://developer.apple.com/library/ios/documentation/uikit/reference/UIViewController_Class/Reference/Reference.html#//apple_ref/doc/c_ref/UIViewController">UIViewController</a>.     
-These are the references to look for while customising <a href="https://developer.apple.com/library/ios/documentation/uikit/reference/UIViewController_Class/Reference/Reference.html#//apple_ref/doc/c_ref/UIViewController">UIViewController</a> through InterfaceBuilder.<br>Hide the Tab bar (bottom<span class="widont">&nbsp;</span>bar)     </p>
-<iframe src="http://www.flickr.com/photos/saumyaray/12479138795/player/" width="408" height="477" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>     
-The above setting is on the same [UIViewController][2].         
-To display custom text on the back button in a UIViewController, look for the setting as below     
-<iframe src="http://www.flickr.com/photos/saumyaray/12476698994/player/" width="500" height="408" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>     
-Just remember that the above setting is done on the `previous` [UIViewController][2] for the next [UIViewController][2], `its tricky` that way.     
-Now the code reference for [UIViewController][2] is as below.          
-<script src="https://gist.github.com/saumya/8969920.js"></script>     
-
-
-
-<p>Happy customising.</p>
 
           </section>
         </article>

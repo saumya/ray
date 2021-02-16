@@ -5,9 +5,30 @@
     <atom:link href="https://saumya.github.io/ray/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>https://saumya.github.io/ray</link>
     <description>Where there is a will, there is a way.</description>
-    <pubDate>Wed, 03 Feb 2021 05:30:00 +0630</pubDate>
+    <pubDate>Tue, 16 Feb 2021 05:30:00 +0630</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Whoa!!</title>
+      <link>https://saumya.github.io/ray/articles/107/</link>
+      <pubDate>Tue, 16 Feb 2021 05:30:00 +0630</pubDate>
+      <guid isPermaLink="true">https://saumya.github.io/ray/articles/107/</guid>
+      <author>Saumya</author>
+      <description>&lt;p&gt;Whatever you write, it can not make upto the real experience that one has.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Sometimes, no, all the time, if the experience is real, there are no words to express it.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Being an entrepreneur is same as being in life. Nothing is fixed. It changes every moment. And that is beautiful.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Journey is important and it is the only thing. &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;There is no destination as such. Somehow we plan for somthing and move on with it. Whether it is achieved or not, does not matter. By the time we reach there, the whole plan is different.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Today is a major turn in the journey. &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Happy Life.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>Distributed Web is here. ClientServer to ClientClient. IPFS.</title>
       <link>https://saumya.github.io/ray/articles/106/</link>
